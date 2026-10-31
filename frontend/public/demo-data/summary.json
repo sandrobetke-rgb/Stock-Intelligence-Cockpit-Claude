@@ -1,0 +1,192 @@
+{
+ "generated_at": "2026-10-31T13:11:09Z",
+ "schema_version": "1.1.0",
+ "mode": "demo",
+ "universe": {
+  "active": 38,
+  "archived": 2,
+  "index_positions": 49,
+  "indexes": [
+   {
+    "code": "NDX",
+    "name": "Nasdaq 100",
+    "source": "DEMO",
+    "checked_at": "2026-10-31T13:11:09Z",
+    "members": 11,
+    "status": "ok",
+    "message": null,
+    "limitation": null
+   },
+   {
+    "code": "SPX",
+    "name": "S&P 500",
+    "source": "DEMO",
+    "checked_at": "2026-10-31T13:11:09Z",
+    "members": 14,
+    "status": "ok",
+    "message": null,
+    "limitation": null
+   },
+   {
+    "code": "RUT",
+    "name": "Russell 2000",
+    "source": "DEMO",
+    "checked_at": "2026-10-31T13:11:09Z",
+    "members": 16,
+    "status": "error",
+    "message": "DEMO: Plausibilitätsprüfung fehlgeschlagen – letzter gültiger Stand bleibt",
+    "limitation": "Proxy über iShares-IWM-Bestand; Nutzungsbedingungen von BlackRock prüfen."
+   },
+   {
+    "code": "DAX",
+    "name": "DAX 40",
+    "source": "DEMO",
+    "checked_at": "2026-10-31T13:11:09Z",
+    "members": 8,
+    "status": "ok",
+    "message": null,
+    "limitation": null
+   }
+  ],
+  "upcoming_changes": [
+   {
+    "index": "SPX",
+    "symbol": "DM05",
+    "action": "add",
+    "effective_date": "2026-11-12",
+    "source": "DEMO",
+    "name": "Sundial AG (DEMO)"
+   }
+  ],
+  "built_at": "2026-10-31T13:11:09Z"
+ },
+ "coverage": {
+  "prices_pct": 100,
+  "fundamentals_pct": 97,
+  "quality_scored_pct": 97,
+  "avg_quality_coverage_pct": 92,
+  "data_errors": 0
+ },
+ "quality_distribution": {
+  "0-39": 2,
+  "40-59": 23,
+  "60-79": 11,
+  "80-100": 1
+ },
+ "freshness": {
+  "latest_price_date": "2026-10-30",
+  "signals_24h": 4,
+  "trump_bonus_active": 2,
+  "upcoming_events": 10
+ },
+ "verification_counts": {
+  "Verified": 56,
+  "Partially Verified": 42,
+  "Unverified": 42,
+  "Disputed": 0,
+  "False": 0,
+  "Outdated": 0
+ },
+ "sources": [
+  {
+   "area": "Kurse/Fundamentaldaten",
+   "source": "Yahoo Finance (yfinance)",
+   "status": "connected",
+   "limitation": "Inoffizieller Zugang; Limits/Bedingungen prüfen; Daten ggf. verzögert"
+  },
+  {
+   "area": "Indexzusammensetzung",
+   "source": "Wikipedia (CC BY-SA), iShares IWM (Russell-2000-Proxy)",
+   "status": "connected",
+   "limitation": "Kein offizielles Wirksamkeitsdatum; angekündigte Änderungen per index_changes.csv"
+  },
+  {
+   "area": "Nachrichten",
+   "source": "Yahoo-Finance-RSS je Ticker, CSV-Import",
+   "status": "connected",
+   "limitation": "Nur Schlagzeilen; rotierende Abfrage wegen Rate-Limits"
+  },
+  {
+   "area": "Trump-Aussagen",
+   "source": "whitehouse.gov RSS, CSV-Import (z. B. Truth Social)",
+   "status": "limited",
+   "limitation": "Truth Social ohne kostenlose API -> CSV mit Original-URL"
+  },
+  {
+   "area": "Wirtschaftsticker",
+   "source": "Fed, EZB, BLS, Destatis RSS; market_calendar.csv",
+   "status": "connected",
+   "limitation": "Termine aus offiziellen Kalendern per CSV gepflegt"
+  },
+  {
+   "area": "Insider USA",
+   "source": "SEC EDGAR Form 4",
+   "status": "connected",
+   "limitation": "Rotierende Abfrage; User-Agent mit Kontakt (SIC_USER_AGENT) nötig"
+  },
+  {
+   "area": "Insider DE / Institutionen / Politiker",
+   "source": "CSV-Import (BaFin, 13F, Offenlegungsstellen)",
+   "status": "limited",
+   "limitation": "Keine kostenlose strukturierte API eingebunden"
+  },
+  {
+   "area": "Social Media",
+   "source": "CSV-Import; Reddit-RSS optional (standardmäßig aus)",
+   "status": "limited",
+   "limitation": "X-API nicht kostenlos; Reddit-Bedingungen vor Aktivierung prüfen"
+  }
+ ],
+ "steps": [
+  {
+   "step": "universe",
+   "status": "ok",
+   "seconds": 36.0
+  },
+  {
+   "step": "prices",
+   "status": "ok",
+   "seconds": 0.8
+  },
+  {
+   "step": "fundamentals",
+   "status": "ok",
+   "seconds": 11.8
+  },
+  {
+   "step": "news_rss",
+   "status": "ok",
+   "seconds": 14.7
+  },
+  {
+   "step": "trump",
+   "status": "ok",
+   "seconds": 11.6
+  },
+  {
+   "step": "insider_sec",
+   "status": "ok",
+   "seconds": 30.6
+  },
+  {
+   "step": "market_events",
+   "status": "ok",
+   "seconds": 6.1
+  },
+  {
+   "step": "social",
+   "status": "error",
+   "seconds": 0.2,
+   "message": "DEMO: Beispiel für protokollierten Fehler"
+  }
+ ],
+ "errors": [
+  {
+   "step": "social",
+   "status": "error",
+   "seconds": 0.2,
+   "message": "DEMO: Beispiel für protokollierten Fehler"
+  }
+ ],
+ "disclaimer": "Informations- und Analyseplattform. Keine Anlageberatung, keine Kauf-/Verkaufsempfehlung."
+}

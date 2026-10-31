@@ -1,0 +1,98 @@
+name: Daten-Pipeline & Deployment
+
+on:
+  schedule:
+    # Boersentage nach US-Boersenschluss: 16:00 ET = 20:00 UTC (Sommerzeit) bzw. 21:00 UTC (Winterzeit).
+    # 21:40 UTC liegt in beiden Faellen nach Handelsschluss.
+    - cron: "40 21 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "full | no-fetch (nur CSV/Zustand neu auswerten)"
+        default: full
+  push:
+    branches: [main]
+    paths: ["frontend/**", "backend/data/imports/**"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pipeline
+  cancel-in-progress: false
+
+jobs:
+  data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: backend/requirements.txt
+      - name: Abhaengigkeiten
+        run: pip install -r backend/requirements.txt
+      - name: Tests (Abnahmekriterien)
+        working-directory: backend
+        run: python -m pytest -q
+      - name: Cache fuer Fundamentaldaten
+        uses: actions/cache@v4
+        with:
+          path: backend/data/cache
+          key: sic-cache-${{ github.run_id }}
+          restore-keys: sic-cache-
+      - name: Pipeline
+        working-directory: backend
+        env:
+          SIC_USER_AGENT: ${{ secrets.SIC_USER_AGENT }}
+        run: |
+          ARGS=""
+          if [ "${{ github.event_name }}" = "push" ] || [ "${{ github.event.inputs.mode }}" = "no-fetch" ]; then ARGS="--no-fetch"; fi
+          python -m sic.run $ARGS
+      - name: Zustand und Daten committen
+        run: |
+          git config user.name "sic-bot"
+          git config user.email "sic-bot@users.noreply.github.com"
+          git add backend/data/state frontend/public/data
+          git diff --cached --quiet || git commit -m "Daten-Update $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
+      - name: Logs bei Fehler sichern
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-state
+          path: backend/data/state
+
+  deploy:
+    needs: data
+    if: always() && needs.data.result != 'cancelled'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Build
+        working-directory: frontend
+        env:
+          VITE_BASE: /${{ github.event.repository.name }}/
+        run: |
+          npm ci
+          npm run build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend/dist
+      - id: deployment
+        uses: actions/deploy-pages@v4

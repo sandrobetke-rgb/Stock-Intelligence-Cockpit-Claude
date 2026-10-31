@@ -1,0 +1,331 @@
+"""Abnahmekriterien aus Lastenheft Kap. 16 als automatisierte Tests (ohne Netzwerk)."""
+from __future__ import annotations
+
+from datetime import date, datetime, timedelta, timezone
+
+import numpy as np
+import pandas as pd
+import pytest
+
+from sic import config
+
+
+@pytest.fixture(autouse=True)
+def isolated_dirs(tmp_path, monkeypatch):
+    for name in ("STATE_DIR", "CACHE_DIR", "IMPORT_DIR"):
+        d = tmp_path / name.lower()
+        d.mkdir()
+        monkeypatch.setattr(config, name, d)
+    from sic import universe
+    monkeypatch.setattr(universe, "STATE_FILE", tmp_path / "state_dir" / "universe.json")
+    # Plausibilitaetsgrenzen fuer Mini-Indizes
+    monkeypatch.setattr(config, "INDEXES", {
+        "NDX": {**config.INDEXES["NDX"], "min_members": 3, "max_members": 5},
+        "SPX": {**config.INDEXES["SPX"], "min_members": 4, "max_members": 6},
+        "RUT": {**config.INDEXES["RUT"], "min_members": 2, "max_members": 4},
+        "DAX": {**config.INDEXES["DAX"], "min_members": 2, "max_members": 3},
+    })
+    yield tmp_path
+
+
+NOW = datetime(2026, 10, 31, 12, 0, tzinfo=timezone.utc)
+
+
+# ------------------------------------------------------------- Universum --
+def _m(*syms):
+    from sic.universe import Member
+    return [Member(s, f"{s} Corp") for s in syms]
+
+
+def test_universe_dedup_and_exit_rules():
+    from sic.universe import active_symbols, build_universe, index_positions
+    ov = {"NDX": _m("AAPL", "MSFT", "NVDA"), "SPX": _m("AAPL", "MSFT", "NVDA", "XOM"),
+          "RUT": _m("SMAL", "TINY"), "DAX": _m("SAP.DE", "BMW.DE")}
+    st = build_universe(date(2026, 10, 1), fetch=False, overrides=ov)
+    assert len(active_symbols(st)) == 8                     # dedupliziert
+    assert index_positions(st) == 11                        # alle Zugehoerigkeiten gespeichert
+    assert sorted(m["index"] for m in st["securities"]["AAPL"]["memberships"]) == ["NDX", "SPX"]
+
+    # NVDA verlaesst NDX, bleibt aber im SPX -> aktiv; TINY verlaesst RUT -> archiviert
+    ov2 = {"NDX": _m("AAPL", "MSFT", "AMD"), "SPX": _m("AAPL", "MSFT", "NVDA", "XOM"),
+           "RUT": _m("SMAL", "NEWS"), "DAX": _m("SAP.DE", "BMW.DE")}
+    st = build_universe(date(2026, 10, 15), fetch=False, overrides=ov2)
+    nvda = st["securities"]["NVDA"]
+    assert nvda["status"] == "active"
+    assert any(m["index"] == "NDX" and m["until"] == "2026-10-15" for m in nvda["memberships"])
+    assert st["securities"]["TINY"]["status"] == "archived"
+    assert st["securities"]["TINY"]["status_reason"] == "no_target_index"
+    assert "TINY" in st["securities"]                       # historisch erhalten
+    assert st["securities"]["AMD"]["status"] == "active"
+
+
+def test_failed_index_does_not_overwrite_valid_list():
+    from sic.universe import build_universe
+    good = {"NDX": _m("A1", "A2", "A3"), "SPX": _m("A1", "A2", "A3", "A4"), "RUT": _m("R1", "R2"), "DAX": _m("D1.DE", "D2.DE")}
+    build_universe(date(2026, 10, 1), fetch=False, overrides=good)
+    bad = {**good, "SPX": _m("A1")}                          # Abruf unvollstaendig
+    st = build_universe(date(2026, 10, 2), fetch=False, overrides=bad)
+    assert st["indexes"]["SPX"]["status"] == "error"
+    assert st["securities"]["A4"]["status"] == "active"     # nicht faelschlich entfernt
+
+
+def test_data_error_is_not_exclusion_but_csv_exclusion_is():
+    from sic.universe import build_universe
+    ov = {"NDX": _m("A1", "A2", "A3"), "SPX": _m("A1", "A2", "A3", "A4"), "RUT": _m("R1", "R2"), "DAX": _m("D1.DE", "D2.DE")}
+    (config.IMPORT_DIR / "exclusions.csv").write_text("symbol,reason,source,date\nR1,delisted,https://x,2026-10-01\n")
+    st = build_universe(date(2026, 10, 1), fetch=False, overrides=ov)
+    assert st["securities"]["R1"]["status"] == "archived" and st["securities"]["R1"]["status_reason"] == "delisted"
+
+
+def test_scheduled_index_change_marked_upcoming_then_applied():
+    from sic.universe import build_universe
+    ov = {"NDX": _m("A1", "A2", "A3"), "SPX": _m("A1", "A2", "A3", "A4"), "RUT": _m("R1", "R2"), "DAX": _m("D1.DE", "D2.DE")}
+    (config.IMPORT_DIR / "index_changes.csv").write_text(
+        "index,symbol,action,effective_date,source,name\nSPX,NEWCO,add,2026-11-20,https://spglobal.example,NewCo\n")
+    st = build_universe(date(2026, 11, 1), fetch=False, overrides=ov)
+    assert st["upcoming_changes"][0]["symbol"] == "NEWCO" and "NEWCO" not in st["securities"]
+    st = build_universe(date(2026, 11, 20), fetch=False, overrides={k: v for k, v in ov.items() if k != "SPX"})
+    assert st["securities"]["NEWCO"]["status"] == "active"
+
+
+# --------------------------------------------------------- Quality/Risk --
+def test_quality_unknown_not_negative_and_coverage():
+    from sic.quality import score_quality
+    full = {"revenue_cagr": 10, "revenue_growth_yoy": 10, "operating_margin": 20, "net_margin": 12,
+            "debt_to_equity": 0.5, "current_ratio": 1.8, "interest_coverage": 12, "fcf_margin": 10,
+            "operating_cashflow": 1e9, "gross_margin": 50, "revenue_growth_forward": 12, "rnd_intensity": 10,
+            "capex_intensity": 5, "roe": 18, "share_change_yoy": -1}
+    a = score_quality("X", full, "Technology")
+    partial = {k: v for k, v in full.items() if k not in ("gross_margin", "interest_coverage")}
+    b = score_quality("X", partial, "Technology")
+    assert a["coverage_pct"] == 100 and b["coverage_pct"] < 100
+    mp = next(d for d in b["dimensions"] if d["key"] == "market_position")
+    assert mp["score"] is None and mp["basis"] == "unknown"
+    # Fehlende Werte ziehen den Score nicht automatisch nach unten
+    assert abs(a["score"] - b["score"]) < 10
+    assert score_quality("X", {}, "Technology")["score"] is None
+
+
+def test_quality_ignores_attention_inputs():
+    """Company Quality darf durch News/Social/Trump/Technik nicht beeinflusst werden."""
+    import inspect
+    from sic import quality
+    src = inspect.getsource(quality)
+    for forbidden in ("politics", "social", "intelligence", "signals", "market import", "trump"):
+        assert f"from .{forbidden.split()[0]}" not in src
+    f = {"revenue_cagr": 5, "operating_margin": 10}
+    assert quality.score_quality("X", {**f, "trump_bonus": 30, "rvol": 9, "mentions_7d": 999}, None)["score"] == \
+        quality.score_quality("X", f, None)["score"]
+
+
+def test_financial_model_marks_not_applicable():
+    from sic.quality import score_quality
+    q = score_quality("JPM", {"net_margin": 25, "roe": 15, "revenue_cagr": 6, "revenue_growth_yoy": 5,
+                              "share_change_yoy": -2, "revenue_growth_forward": 4}, "Financial Services")
+    assert q["model"] == "financial"
+    cf = next(d for d in q["dimensions"] if d["key"] == "cashflow")
+    assert cf["basis"] == "not_applicable"
+    assert q["coverage_pct"] >= 90
+
+
+def test_positive_attention_never_lowers_risk():
+    from sic.risk import score_risk
+    f = {"debt_to_equity": 2.5, "current_ratio": 0.8, "fcf_margin": -5}
+    a = score_risk(f, {"volatility_ann": 60}, {"covered": True, "negative_signals_30d": 0})
+    b = score_risk(f, {"volatility_ann": 60}, {"covered": True, "negative_signals_30d": 0, "positive_signals_30d": 50})
+    c = score_risk(f, {"volatility_ann": 60}, {"covered": True, "negative_signals_30d": 3})
+    assert a["score"] == b["score"] and c["score"] > a["score"]
+
+
+def test_market_metrics():
+    from sic.market import compute_metrics
+    idx = pd.bdate_range(end="2026-10-30", periods=230)
+    close = pd.Series(np.linspace(100, 150, 230), index=idx)
+    df = pd.DataFrame({"Open": close, "High": close * 1.02, "Low": close * 0.98, "Close": close,
+                       "Volume": [1e6] * 229 + [3e6]}, index=idx)
+    m = compute_metrics(df)
+    assert m["sma200"] is not None and m["ema10"] > m["sma50"]
+    assert round(m["rvol"], 1) == 3.0
+    assert 3.9 < m["adr20"] < 4.2
+    assert compute_metrics(df.head(30))["sma200"] is None    # unknown, nicht 0
+
+
+# --------------------------------------------------------------- Trump ----
+def _securities():
+    return {"ACME": {"name": "Acme Robotics Inc."}, "TGT": {"name": "Target Corporation"},
+            "CHIP": {"name": "Chipworks Corp"}}
+
+
+def _rows(**kw):
+    base = {"statement_at": (NOW - timedelta(days=1)).isoformat(), "quote": "Acme Robotics is a great company, big investment!",
+            "source_name": "Truth Social", "source_url": "https://truthsocial.com/@x/posts/1",
+            "original_url": "https://truthsocial.com/@x/posts/1", "verification": "", "direction_override": "",
+            "symbols_override": "", "context": ""}
+    base.update(kw)
+    return [base]
+
+
+def _process(rows):
+    from sic.politics import build_alias_index, process_trump
+    secs = _securities()
+    return process_trump(rows, build_alias_index(secs), set(secs), NOW)
+
+
+def test_trump_direct_mention_within_five_days_gets_highest_bonus():
+    r = _process(_rows())
+    assert r[0]["symbol"] == "ACME" and r[0]["mention_type"] == "direct"
+    assert r[0]["bonus"]["active"] and r[0]["bonus"]["value"] == config.TRUMP_BONUS["direct"]
+    assert r[0]["direction"] == "positive"
+
+
+@pytest.mark.parametrize("age_days, active", [(4.9, True), (5.0, True), (5.01, False), (12, False)])
+def test_trump_bonus_expires_after_five_calendar_days(age_days, active):
+    r = _process(_rows(statement_at=(NOW - timedelta(days=age_days)).isoformat()))
+    assert r[0]["bonus"]["active"] is active
+    if not active:
+        assert r[0]["quote"]            # Meldung bleibt in der Historie sichtbar
+
+
+def test_trump_deadline_counts_from_original_not_republication():
+    # Original vor 9 Tagen, Wiederveroeffentlichung gestern -> statement_at = Original
+    r = _process(_rows(statement_at=(NOW - timedelta(days=9)).isoformat(), context="Repost vom Vortag"))
+    assert not r[0]["bonus"]["active"]
+
+
+def test_trump_no_bonus_without_date_or_verified_source():
+    assert not _process(_rows(statement_at=""))[0]["bonus"]["active"]
+    r = _process(_rows(source_url="https://random-blog.example/x", original_url="https://random-blog.example/x"))
+    assert r[0]["verification"] == "Unverified" and not r[0]["bonus"]["active"]
+
+
+def test_trump_negative_statement_not_positive():
+    r = _process(_rows(quote="We will put massive tariffs on Acme Robotics, terrible!"))
+    assert r[0]["direction"] == "negative" and r[0]["bonus"]["active"]   # relevant, aber negativ
+
+
+def test_trump_sector_statement_gives_no_company_bonus():
+    r = _process(_rows(quote="Semiconductors must be made in America!"))
+    assert all(x["symbol"] is None and x["mention_type"] == "sector" and not x["bonus"]["active"] for x in r)
+    assert "Halbleiter" in r[0]["sectors"]
+
+
+def test_trump_ambiguous_name_needs_review():
+    r = _process(_rows(quote="I went to Target yesterday, great"))
+    tgt = [x for x in r if x["symbol"] == "TGT"]
+    assert tgt and not tgt[0]["mapping_verified"] and not tgt[0]["bonus"]["active"]
+
+
+def test_trump_indirect_requires_documented_rationale():
+    (config.IMPORT_DIR / "aliases.csv").write_text(
+        "symbol,alias,kind,rationale,source\nACME,the robot maker,indirect,,x\nCHIP,the chip giant,indirect,eindeutig belegt,https://x\n")
+    r = _process(_rows(quote="The robot maker and the chip giant are doing great"))
+    syms = {x["symbol"]: x for x in r}
+    assert "ACME" not in syms                                    # ohne Begruendung keine Zuordnung
+    assert syms["CHIP"]["mention_type"] == "indirect"
+    assert syms["CHIP"]["bonus"]["value"] == config.TRUMP_BONUS["indirect"] < config.TRUMP_BONUS["direct"]
+
+
+def test_trump_date_only_flagged():
+    r = _process(_rows(statement_at=(NOW - timedelta(days=2)).date().isoformat()))
+    assert r[0]["date_only"] is True
+
+
+# ----------------------------------------------------- Signale/Duplikate --
+def test_syndication_not_counted_as_independent():
+    from sic.intelligence import market_intelligence
+    from sic.signals import cluster_signals, make_signal, verify
+    t = (NOW - timedelta(hours=3)).isoformat()
+    sigs = [make_signal(symbols=["ACME"], category="m", signal_type="news", title="Acme Robotics raises full-year guidance after strong quarter",
+                        url=f"https://site{i}.example/a", source=f"site{i}", published=t, summary="(Reuters)") for i in range(5)]
+    sigs.append(make_signal(symbols=["ACME"], category="m", signal_type="news", title="Acme hires new chief financial officer",
+                            url="https://other.example/b", source="other", published=t))
+    cluster_signals(sigs)
+    verify(sigs)
+    assert sum(1 for s in sigs if s["independence"] == "original") == 2
+    assert sum(1 for s in sigs if s["independence"] == "syndicated") == 4
+    assert all(s["verification"] == "Unverified" for s in sigs[:5])   # gleicher Agenturtext != Bestaetigung
+
+
+def test_primary_source_verified():
+    from sic.signals import cluster_signals, make_signal, verify
+    s = [make_signal(symbols=["ACME"], category="m", signal_type="company_news", title="Acme 8-K filing",
+                     url="https://www.sec.gov/Archives/x", source="SEC", published=NOW.isoformat())]
+    cluster_signals(s)
+    verify(s)
+    assert s[0]["verification"] == "Verified"
+
+
+# ------------------------------------------------------ Insider/Ticker ----
+FORM4 = """<?xml version="1.0"?><ownershipDocument>
+<reportingOwner><reportingOwnerId><rptOwnerName>DOE JOHN</rptOwnerName></reportingOwnerId>
+<reportingOwnerRelationship><isOfficer>1</isOfficer><officerTitle>CEO</officerTitle></reportingOwnerRelationship></reportingOwner>
+<nonDerivativeTable>
+<nonDerivativeTransaction><transactionDate><value>2026-10-20</value></transactionDate>
+<transactionCoding><transactionCode>P</transactionCode></transactionCoding>
+<transactionAmounts><transactionShares><value>1000</value></transactionShares><transactionPricePerShare><value>50</value></transactionPricePerShare></transactionAmounts></nonDerivativeTransaction>
+<nonDerivativeTransaction><transactionDate><value>2026-10-20</value></transactionDate>
+<transactionCoding><transactionCode>M</transactionCode></transactionCoding>
+<transactionAmounts><transactionShares><value>5000</value></transactionShares></transactionAmounts></nonDerivativeTransaction>
+</nonDerivativeTable></ownershipDocument>"""
+
+
+def test_form4_separates_open_market_from_exercise():
+    from sic.insider import insider_summary, parse_form4
+    tx = parse_form4(FORM4, "ACME", "https://www.sec.gov/x", "2026-10-22")
+    assert [t["transaction_kind"] for t in tx] == ["buy", "option_exercise"]
+    assert tx[0]["open_market"] and not tx[1]["open_market"]
+    assert tx[0]["value"] == 50000 and tx[0]["reporting_delay_days"] == 2
+    s = insider_summary("ACME", tx, days=10_000)
+    assert s["open_market_buys"] == 1 and s["other_transactions"] == 1
+
+
+def test_calendar_events_planned_with_timezone_and_postponement(monkeypatch):
+    from sic import events
+    monkeypatch.setattr(events, "STATE", config.STATE_DIR / "events.json")
+    p = config.IMPORT_DIR / "market_calendar.csv"
+    hdr = "event_time,timezone,title,category,markets,sectors,tickers,relevance_level,status,source_name,source_url,note\n"
+    p.write_text(hdr + "2026-12-09T14:00:00,America/New_York,FOMC,Zentralbank,USA,,,high,planned,Fed,https://www.federalreserve.gov/x,\n")
+    out = events.build_market_events(fetch=False, now=NOW)
+    ev = out["upcoming"][0]
+    assert ev["status"] == "planned" and ev["timezone"] == "America/New_York" and ev["time"] == "2026-12-09T19:00:00Z"
+    p.write_text(hdr + "2026-12-16T14:00:00,America/New_York,FOMC,Zentralbank,USA,,,high,planned,Fed,https://www.federalreserve.gov/x,\n")
+    ev = events.build_market_events(fetch=False, now=NOW)["upcoming"][0]
+    assert ev["status"] == "postponed" and ev["changes"][0]["from"] == "2026-12-09T19:00:00Z"
+    out = events.build_market_events(fetch=False, now=datetime(2026, 12, 20, tzinfo=timezone.utc))
+    assert out["upcoming"] == [] and out["current"][0]["status"] == "occurred"
+
+
+def test_calendar_requires_source():
+    from sic import events
+    (config.IMPORT_DIR / "market_calendar.csv").write_text(
+        "event_time,timezone,title,category,markets,sectors,tickers,relevance_level,status,source_name,source_url,note\n"
+        "2026-12-09T14:00:00,UTC,Ohne Quelle,X,USA,,,high,planned,,,\n")
+    assert events.load_calendar(NOW) == []
+
+
+# ------------------------------------------------------------- Export -----
+def test_export_rejects_invalid_and_keeps_previous(tmp_path):
+    from sic.export import publish
+    out = tmp_path / "out"
+    out.mkdir()
+    (out / "summary.json").write_text('{"old": true}')
+    res = publish({"summary.json": {"generated_at": "x"}}, {}, out)
+    assert not res["published"]
+    assert (out / "summary.json").read_text() == '{"old": true}'
+
+
+def test_social_manipulation_flags():
+    from sic.social import analyze
+    posts = [{"id": str(i), "platform": "reddit", "author": "bot", "posted_at": (NOW - timedelta(hours=i)).isoformat(),
+              "url": "", "text": "$ACME to the moon 100x load up", "engagement": 1, "symbols": ["ACME"]} for i in range(10)]
+    r = analyze(posts, NOW)["ACME"]
+    assert r["manipulation_risk"] == "hoch" and r["sentiment_basis"].startswith("algorithmisch")
+
+
+def test_demo_pipeline_end_to_end(tmp_path):
+    from sic.demo import build_demo
+    res = build_demo(tmp_path / "demo")
+    assert res["published"], res
+    import json
+    s = json.loads((tmp_path / "demo" / "summary.json").read_text())
+    assert s["mode"] == "demo"
