@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T13:54:04Z",
+ "generated_at": "2026-10-31T14:07:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -7,17 +7,15 @@
   "name": "Block, Inc.",
   "region": "US",
   "currency": "USD",
-  "sector": "Financials",
-  "industry": null,
+  "sector": "Technology",
+  "industry": "Software - Infrastructure",
   "indexes": [
    "SPX"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 76.22000122070312,
    "price_date": "2026-10-30",
@@ -30,34 +28,36 @@
    "sma50": 77.98839981079101,
    "sma200": 71.13884965896607
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 45792595968.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
-   "model": "financial",
+   "score": 60.1,
+   "coverage_pct": 96,
+   "model": "standard",
    "dimensions": {
-    "revenue_growth": null,
-    "profitability": null,
-    "financial_stability": null,
-    "cashflow": null,
-    "market_position": null,
-    "growth_potential": null,
-    "management": null
+    "revenue_growth": 54.5,
+    "profitability": 41.8,
+    "financial_stability": 95.8,
+    "cashflow": 76.1,
+    "market_position": 63.1,
+    "growth_potential": 52.3,
+    "management": 53.3
    }
   },
   "risk": {
-   "score": 13.0,
+   "score": 8.2,
    "level": "niedrig",
-   "coverage_pct": 45,
+   "coverage_pct": 92,
    "top_factors": []
   },
   "market_intelligence": {
-   "score": 2.8,
+   "score": 58.0,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "analyst_activity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 19,
    "independent_24h": 0
   },
   "political": {
@@ -80,7 +80,7 @@
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -107,34 +107,34 @@
   "move_zscore": -0.4149801413617527
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
-  "model": "financial",
+  "score": 60.1,
+  "status": "ok",
+  "coverage_pct": 96,
+  "model": "standard",
   "dimensions": [
    {
     "key": "revenue_growth",
     "label": "Umsatzwachstum",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 54.5,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_cagr",
       "label": "Umsatz-CAGR (mehrjährig)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 11.334,
+      "points": 65.3,
+      "status": "ok"
      },
      {
       "key": "revenue_growth_yoy",
       "label": "Umsatzwachstum Vorjahr",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.301,
+      "points": 29.4,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -143,25 +143,25 @@
     "key": "profitability",
     "label": "Profitabilität/Margen",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 41.8,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
+     {
+      "key": "operating_margin",
+      "label": "Operative Marge",
+      "unit": "%",
+      "value": 12.589,
+      "points": 42.0,
+      "status": "ok"
+     },
      {
       "key": "net_margin",
       "label": "Nettomarge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     },
-     {
-      "key": "roe",
-      "label": "Eigenkapitalrendite",
-      "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 5.397,
+      "points": 41.6,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -170,14 +170,30 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 95.8,
+    "basis": "data",
+    "coverage": 70,
     "metrics": [
      {
-      "key": "share_change_yoy",
-      "label": "Aktienanzahl Veränderung",
-      "unit": "%",
+      "key": "debt_to_equity",
+      "label": "Verschuldung (Debt/Equity)",
+      "unit": "x",
+      "value": 0.404,
+      "points": 92.7,
+      "status": "ok"
+     },
+     {
+      "key": "current_ratio",
+      "label": "Liquidität (Current Ratio)",
+      "unit": "x",
+      "value": 2.201,
+      "points": 100.0,
+      "status": "ok"
+     },
+     {
+      "key": "interest_coverage",
+      "label": "Zinsdeckung (EBIT/Zinsen)",
+      "unit": "x",
       "value": null,
       "points": null,
       "status": "unknown"
@@ -189,37 +205,71 @@
     "key": "cashflow",
     "label": "Cashflow",
     "weight": 0.1,
-    "score": null,
-    "basis": "not_applicable",
-    "coverage": null,
-    "metrics": [],
+    "score": 76.1,
+    "basis": "data",
+    "coverage": 100,
+    "metrics": [
+     {
+      "key": "fcf_margin",
+      "label": "Free-Cashflow-Marge",
+      "unit": "%",
+      "value": 10.022,
+      "points": 60.1,
+      "status": "ok"
+     },
+     {
+      "key": "ocf_positive",
+      "label": "Operativer Cashflow positiv",
+      "unit": "bool",
+      "value": 1.0,
+      "points": 100.0,
+      "status": "ok"
+     }
+    ],
     "manual": null
    },
    {
     "key": "market_position",
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
-    "score": null,
-    "basis": "not_applicable",
-    "coverage": null,
-    "metrics": [],
+    "score": 63.1,
+    "basis": "proxy",
+    "coverage": 100,
+    "metrics": [
+     {
+      "key": "gross_margin",
+      "label": "Bruttomarge (Proxy Preissetzungsmacht)",
+      "unit": "%",
+      "value": 46.572,
+      "points": 63.1,
+      "status": "ok"
+     }
+    ],
     "manual": null
    },
    {
     "key": "growth_potential",
     "label": "Wachstumspotenzial",
     "weight": 0.2,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 52.3,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_growth_forward",
       "label": "Erwartetes Umsatzwachstum (Yahoo)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 9.3,
+      "points": 47.7,
+      "status": "ok"
+     },
+     {
+      "key": "reinvestment",
+      "label": "Reinvestition (F&E + Capex in % Umsatz)",
+      "unit": "%",
+      "value": 12.66,
+      "points": 59.2,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -228,59 +278,95 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 53.3,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 5.88,
+      "points": 23.5,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -2.84,
+      "points": 98.0,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/XYZ/financials",
+  "as_of": "2026-10-31T14:07:29Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": 13.0,
+  "score": 8.2,
   "level": "niedrig",
-  "coverage_pct": 45,
+  "coverage_pct": 92,
   "factors": [
    {
-    "key": "margin_trend",
-    "label": "Margenentwicklung (Vorjahr, Pp.)",
+    "key": "leverage",
+    "label": "Verschuldung (Debt/Equity)",
+    "value": 0.4,
+    "unit": "x",
+    "severity": 3.8,
+    "weight": 0.15,
+    "status": "ok"
+   },
+   {
+    "key": "liquidity",
+    "label": "Liquidität (Current Ratio)",
+    "value": 2.2,
+    "unit": "x",
+    "severity": 0.0,
+    "weight": 0.1,
+    "status": "ok"
+   },
+   {
+    "key": "interest",
+    "label": "Zinsdeckung",
     "value": null,
-    "unit": "Pp",
+    "unit": "x",
     "severity": null,
     "weight": 0.08,
     "status": "unknown"
    },
    {
+    "key": "cashflow",
+    "label": "Free-Cashflow-Marge",
+    "value": 10.02,
+    "unit": "%",
+    "severity": 19.9,
+    "weight": 0.12,
+    "status": "ok"
+   },
+   {
+    "key": "margin_trend",
+    "label": "Margenentwicklung (Vorjahr, Pp.)",
+    "value": 5.6,
+    "unit": "Pp",
+    "severity": 0.0,
+    "weight": 0.08,
+    "status": "ok"
+   },
+   {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": -2.84,
     "unit": "%",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -303,20 +389,20 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 14.64,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 4.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 33.3,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -335,13 +421,13 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.8,
+  "score": 58.0,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 80,
    "primary_sources": 0,
-   "analyst_activity": 0,
+   "analyst_activity": 100.0,
    "price_volume_anomaly": 15.6,
    "social_attention": null,
    "insider_activity": null
@@ -357,26 +443,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 19,
+    "independent": 19,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 3,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 19,
+    "independent": 19,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 3,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "analyst_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -394,7 +482,427 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "6e4e99c7b6f46139",
+   "symbols": [
+    "XYZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "4 Software Stocks Likely to Deliver an Earnings Beat This Season",
+   "summary": "Affirm Holdings, Paylocity, Block and BILL Holdings gear up for quarterly earnings, with AI and cloud growth supporting potential beats.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/4-software-stocks-likely-deliver-102300253.html?.tsrc=rss",
+   "published_at": "2026-10-30T10:23:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:42Z",
+   "fingerprint": "e8b841721bef44c6",
+   "primary_source": false,
+   "cluster_id": "6e4e99c7b6f46139",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0db5305e9ec89164",
+   "symbols": [
+    "XYZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Toast to Report Q3 Earnings: What to Expect From Its Release?",
+   "summary": "Toast's Q3 2026 earnings are expected to have risen on customer growth, higher payment volumes and software adoption, but rising costs could have pressured margins.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/toast-report-q3-earnings-expect-154000812.html?.tsrc=rss",
+   "published_at": "2026-10-29T15:40:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:42Z",
+   "fingerprint": "8c46ce3566bc362d",
+   "primary_source": false,
+   "cluster_id": "0db5305e9ec89164",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "532b6be82ae4fbe6",
+   "symbols": [
+    "XYZ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Visa vs. Block: Which Digital Payments Stock Has More Upside?",
+   "summary": "XYZ outshines V with stronger growth prospects, a more attractive valuation and expanding Square and Cash App ecosystems that support its upside potential.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/visa-vs-block-digital-payments-145600100.html?.tsrc=rss",
+   "published_at": "2026-10-29T14:56:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:42Z",
+   "fingerprint": "5dcfb772aacfb729",
+   "primary_source": false,
+   "cluster_id": "532b6be82ae4fbe6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d0e5c875beebd49a",
+   "symbols": [
+    "XYZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Exploring Analyst Estimates for Block (XYZ) Q3 Earnings, Beyond Revenue and EPS",
+   "summary": "Besides Wall Street's top-and-bottom-line estimates for Block (XYZ), review projections for some of its key metrics to gain a deeper understanding of how the company might have fared during the quarter ended September 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/exploring-analyst-estimates-block-xyz-121508192.html?.tsrc=rss",
+   "published_at": "2026-10-29T12:15:08Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:42Z",
+   "fingerprint": "f163154daa053411",
+   "primary_source": false,
+   "cluster_id": "d0e5c875beebd49a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2a4964f35053f9a9",
+   "symbols": [
+    "XYZ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Companies laying off staff this year include Meta, Amazon, and Dropbox — see the list",
+   "summary": "Layoffs have hit over 35 companies in 2026, including Meta, Walmart, and American Express, as AI and economic conditions reshape the business landscape.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "businessinsider.com",
+   "url": "https://www.businessinsider.com/recent-company-layoffs-laying-off-workers-2026?.tsrc=rss",
+   "published_at": "2026-10-28T16:52:08Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:42Z",
+   "fingerprint": "68fb6734564b0b69",
+   "primary_source": false,
+   "cluster_id": "2a4964f35053f9a9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "205c9b2bbda6e1b1",
+   "symbols": [
+    "XYZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Will Block (XYZ) Beat Estimates Again in Its Next Earnings Report?",
+   "summary": "Block (XYZ) has an impressive earnings surprise history and currently possesses the right combination of the two key ingredients for a likely beat in its next quarterly report.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/block-xyz-beat-estimates-again-151003452.html?.tsrc=rss",
+   "published_at": "2026-10-28T15:10:03Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:42Z",
+   "fingerprint": "167b8db7e4ab07b2",
+   "primary_source": false,
+   "cluster_id": "205c9b2bbda6e1b1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6157271533c8ebbb",
+   "symbols": [
+    "XYZ"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Block Sinks 3% as Morgan Stanley Downgrade Warns “Bullish Expectations” Raise Risk Ahead of Q3",
+   "summary": "Key TakeawaysBlock shares fell [3%] today after Morgan Stanley downgraded the stock to Equal Weight and cut its price target to $80 from $90. Morgan Stanley’s concerns are fair, but Block’s valuation already reflects plenty of doubt ahead of its report.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/block-sinks-3-as-morgan-stanley-downgrade-warns-bullish-expectations-raise-risk-ahead-of-q3?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-28T14:36:24Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:42Z",
+   "fingerprint": "237e51c80b038ee6",
+   "primary_source": false,
+   "cluster_id": "6157271533c8ebbb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2a87eb9c68c3f035",
+   "symbols": [
+    "XYZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Paycom Software (PAYC) Earnings Expected to Grow: Should You Buy?",
+   "summary": "Paycom (PAYC) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/paycom-software-payc-earnings-expected-130010704.html?.tsrc=rss",
+   "published_at": "2026-10-28T13:00:10Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:42Z",
+   "fingerprint": "b026679de295487e",
+   "primary_source": false,
+   "cluster_id": "2a87eb9c68c3f035",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9dd24dc885a2fea1",
+   "symbols": [
+    "XYZ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Block (SQ) Stock Looks Undervalued With Fair Value 25% Higher",
+   "summary": "Block has had a bumpy ride, with a strong 3 year gain sitting alongside weaker recent returns. That mix puts fresh focus on whether the current share price is supported by the returns the business earns on its capital. With new AI products like Dessa and an AI powered Square Kios",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/block-sq-stock-looks-undervalued-131844983.html?.tsrc=rss",
+   "published_at": "2026-10-27T13:18:44Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:42Z",
+   "fingerprint": "4e2ca0c07e199555",
+   "primary_source": false,
+   "cluster_id": "9dd24dc885a2fea1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "43c9575e91bb2442",
+   "symbols": [
+    "XYZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Block (XYZ) Earnings Expected to Grow: Should You Buy?",
+   "summary": "Block (XYZ) possesses the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/block-xyz-earnings-expected-grow-130012179.html?.tsrc=rss",
+   "published_at": "2026-10-27T13:00:12Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:42Z",
+   "fingerprint": "136a7ce9da5d0932",
+   "primary_source": false,
+   "cluster_id": "43c9575e91bb2442",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9b3bfa7a5efeec85",
+   "symbols": [
+    "XYZ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Block (XYZ) A Bargain As Square Spotlights Salumerie?",
+   "summary": "Block (XYZ) is back in focus after Square highlighted Salumerie, a fast-growing Sydney focaccia chain, as a case study for its restaurant tools, hardware, and loyalty software integration across five busy city locations. Recent headlines around Square Kiosk, Cash App partnerships",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/block-xyz-bargain-square-spotlights-120655963.html?.tsrc=rss",
+   "published_at": "2026-10-27T12:06:55Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:42Z",
+   "fingerprint": "938d19dab9efe040",
+   "primary_source": false,
+   "cluster_id": "9b3bfa7a5efeec85",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6fcbd1f7b6381e48",
+   "symbols": [
+    "XYZ"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "How Analyst Upgrades At Block Stock Have Changed Its Investment Story",
+   "summary": "Block is in focus after Square highlighted Salumerie’s multi site rollout on Square hardware and software in Sydney, and Finix announced an integration that lets eligible U.S. businesses accept Cash App Pay and Afterpay alongside existing payment flows. The combination of new Squ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/analyst-upgrades-block-stock-changed-110737699.html?.tsrc=rss",
+   "published_at": "2026-10-27T11:07:37Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:42Z",
+   "fingerprint": "3b39384034a22366",
+   "primary_source": false,
+   "cluster_id": "6fcbd1f7b6381e48",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "91377cd4c8e29914",
+   "symbols": [
+    "XYZ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Block Stock Is Cheaper Than at the End of 2025 Despite Higher Profit Forecasts. Here’s Where It Could Go by 2030",
+   "summary": "Key Stats for Block StockCurrent Price: $76. 46Target Price (Mid): ~$137Street Target: ~$98Potential Total Return: ~80%Annualized IRR: ~15% / year__Now Live: Discover how much upside your favorite stocks could have using TIKR’s new Valuation Model (It’s free)__ >>> What Happened?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/block-stock-is-cheaper-than-at-the-end-of-2025-despite-higher-profit-forecasts-heres-where-it-could-go-by-2030?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-26T21:00:08Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:42Z",
+   "fingerprint": "602dba891e732567",
+   "primary_source": false,
+   "cluster_id": "91377cd4c8e29914",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "52e3f91d3a579e7f",
+   "symbols": [
+    "XYZ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Fintech for SMEs: Pipe CEO Claurelle Rakipovic, Live from Money 20/20 2026",
+   "summary": "Tech Edge hosted a fireside chat on at Money20/20 USA 2026 in Las Vegas, Nevada, with Claurelle Rakipovic, Chief Executive Officer at Pipe. The in-person interview was joined by Editor-at-Large Jarrett Banks and they discussed how the company is leveraging AI-powered credit under",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/fintech-smes-pipe-ceo-claurelle-201625082.html?.tsrc=rss",
+   "published_at": "2026-10-26T20:16:25Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:42Z",
+   "fingerprint": "122579b8b12ee89f",
+   "primary_source": false,
+   "cluster_id": "52e3f91d3a579e7f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bd7d7561cd52e2c3",
+   "symbols": [
+    "XYZ"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Block Falls On Morgan Stanley Downgrade Amid Cash App Shift",
+   "summary": "Block stock fell after Morgan Stanley downgraded the company amid a strategic shift at its Cash App Borrow segment.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/63cc4147-7b13-3b26-8c03-e1fb03b08481/block-falls-on-morgan-stanley.html?.tsrc=rss",
+   "published_at": "2026-10-26T19:26:53Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:42Z",
+   "fingerprint": "7230598a63771987",
+   "primary_source": false,
+   "cluster_id": "bd7d7561cd52e2c3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "56974c7d9d2f7249",
+   "symbols": [
+    "XYZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Roundtable 100 analysts boost Block's ranking ahead of Q3 earnings",
+   "summary": "The Roundtable 100 analysts lift Jack Dorsey’s Block 45 places higher to No. 32 this week.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "thestreet.com",
+   "url": "https://www.thestreet.com/crypto/markets/roundtable-100-analysts-boost-blocks-ranking-ahead-of-q3-earnings?.tsrc=rss",
+   "published_at": "2026-10-26T18:51:43Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:42Z",
+   "fingerprint": "9c48d0ef9d78760f",
+   "primary_source": false,
+   "cluster_id": "56974c7d9d2f7249",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "857811b6575e3107",
+   "symbols": [
+    "XYZ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "2 cash-heavy stocks with impressive fundamentals and 1 that underwhelm",
+   "summary": "Companies with more cash than debt can be financially resilient, but that doesn’t mean they’re all strong investments. Some lack leverage because they struggle to grow or generate consistent profits, making them unattractive borrowers.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/2-cash-heavy-stocks-impressive-184647234.html?.tsrc=rss",
+   "published_at": "2026-10-26T18:46:47Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:42Z",
+   "fingerprint": "72954e76a2a010d2",
+   "primary_source": false,
+   "cluster_id": "857811b6575e3107",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c084c184d4e7f9ae",
+   "symbols": [
+    "SYF",
+    "XYZ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "AI-Powered Credit: ChargeAfter CEO & Founder Meidad Sharon, Live from Money 20/20 2026",
+   "summary": "Tech Edge hosted a fireside chat on at Money20/20 USA 2026 in Las Vegas, Nevada, with Meidad Sharon, Chief Executive Officer and Founder at ChargeAfter. The in-person interview was joined by Editor-at-Large Jarrett Banks and they discussed how the company is transforming embedded",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/ai-powered-credit-chargeafter-ceo-155249318.html?.tsrc=rss",
+   "published_at": "2026-10-26T15:52:49Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:03Z",
+   "fingerprint": "172f5c5256928d5b",
+   "primary_source": false,
+   "cluster_id": "c084c184d4e7f9ae",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "456deb44537a0321",
+   "symbols": [
+    "XYZ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Morgan Stanley sees limited upside for Block as credit risks rise",
+   "summary": "Investing.com -- Morgan Stanley cut Block to Equal-weight from Overweight and lowered its price target for the stock to $80 from $90 per share in a note on Monday.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-sees-limited-upside-141705654.html?.tsrc=rss",
+   "published_at": "2026-10-26T14:17:05Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:42Z",
+   "fingerprint": "12514f58dae62a18",
+   "primary_source": false,
+   "cluster_id": "456deb44537a0321",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

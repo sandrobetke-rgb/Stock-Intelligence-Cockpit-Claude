@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T13:54:04Z",
+ "generated_at": "2026-10-31T14:07:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "universe": {
@@ -13,14 +13,14 @@
     "source": "https://en.wikipedia.org/wiki/Nasdaq-100",
     "members": 0,
     "status": "error",
-    "message": "keine passende Tabelle gefunden",
-    "last_attempt": "2026-10-31T13:54:04Z"
+    "message": "ValueError: keine passende Tabelle gefunden (Kandidaten: 11 Zeilen: ['0', '1']; 2 Zeilen: ['category', 'all-time highs', 'all-time highs.1']; 41 Zeilen: ['year', 'closing level', 'change in index in points', 'change in index in\\xa0%']; 31 Zeilen: ['milestone (closing)', 'date of record (closing)')",
+    "last_attempt": "2026-10-31T14:07:04Z"
    },
    {
     "code": "SPX",
     "name": "S&P 500",
     "source": "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies",
-    "checked_at": "2026-10-31T13:54:04Z",
+    "checked_at": "2026-10-31T14:07:04Z",
     "members": 503,
     "status": "ok",
     "message": null,
@@ -32,14 +32,14 @@
     "source": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf/1467271812596.ajax?fileType=csv&fileName=IWM_holdings&dataType=fund",
     "members": 0,
     "status": "error",
-    "message": "",
-    "last_attempt": "2026-10-31T13:54:05Z"
+    "message": "ValueError: Kopfzeile 'Ticker' nicht gefunden; Antwortbeginn: '<!DOCTYPE html>\\n<html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\" lang=\"en-US\" xml:lang=\"en-US\">'",
+    "last_attempt": "2026-10-31T14:07:05Z"
    },
    {
     "code": "DAX",
     "name": "DAX 40",
     "source": "https://en.wikipedia.org/wiki/DAX",
-    "checked_at": "2026-10-31T13:54:05Z",
+    "checked_at": "2026-10-31T14:07:05Z",
     "members": 40,
     "status": "ok",
     "message": null,
@@ -47,34 +47,34 @@
    }
   ],
   "upcoming_changes": [],
-  "built_at": "2026-10-31T13:54:05Z"
+  "built_at": "2026-10-31T14:07:05Z"
  },
  "coverage": {
   "prices_pct": 100,
-  "fundamentals_pct": 74,
-  "quality_scored_pct": 74,
-  "avg_quality_coverage_pct": 72,
+  "fundamentals_pct": 100,
+  "quality_scored_pct": 100,
+  "avg_quality_coverage_pct": 98,
   "data_errors": 0
  },
  "quality_distribution": {
-  "0-39": 61,
-  "40-59": 153,
-  "60-79": 145,
-  "80-100": 41
+  "0-39": 77,
+  "40-59": 205,
+  "60-79": 204,
+  "80-100": 56
  },
  "freshness": {
   "latest_price_date": "2026-10-30",
-  "signals_24h": 638,
+  "signals_24h": 989,
   "trump_bonus_active": 0,
   "upcoming_events": 10
  },
  "verification_counts": {
   "Verified": 0,
   "Partially Verified": 2,
-  "Unverified": 4352,
+  "Unverified": 7236,
   "Disputed": 0,
   "False": 0,
-  "Outdated": 258
+  "Outdated": 464
  },
  "sources": [
   {
@@ -130,17 +130,17 @@
   {
    "step": "universe",
    "status": "ok",
-   "seconds": 1.0
+   "seconds": 0.9
   },
   {
    "step": "prices",
    "status": "ok",
-   "seconds": 45.5
+   "seconds": 24.1
   },
   {
    "step": "fundamentals",
    "status": "ok",
-   "seconds": 299.3
+   "seconds": 74.1
   },
   {
    "step": "news_csv",
@@ -150,12 +150,12 @@
   {
    "step": "news_rss",
    "status": "ok",
-   "seconds": 149.6
+   "seconds": 149.7
   },
   {
    "step": "trump_feeds",
    "status": "ok",
-   "seconds": 0.5
+   "seconds": 0.8
   },
   {
    "step": "trump",
@@ -185,7 +185,7 @@
   {
    "step": "insider_sec",
    "status": "ok",
-   "seconds": 83.3
+   "seconds": 97.6
   },
   {
    "step": "institutions",
@@ -195,7 +195,7 @@
   {
    "step": "market_events",
    "status": "ok",
-   "seconds": 16.4
+   "seconds": 16.9
   }
  ],
  "errors": [],

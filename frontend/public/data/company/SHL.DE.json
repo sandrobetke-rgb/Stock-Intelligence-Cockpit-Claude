@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-10-31T13:54:04Z",
+ "generated_at": "2026-10-31T14:07:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "SHL.DE",
-  "name": "Siemens Healthineers",
+  "name": "Siemens Healthineers AG",
   "region": "DE",
   "currency": "EUR",
-  "sector": "Medical Equipment",
-  "industry": null,
+  "sector": "Healthcare",
+  "industry": "Medical Devices",
   "indexes": [
    "DAX"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 42.88999938964844,
    "price_date": "2026-10-30",
@@ -30,34 +28,36 @@
    "sma50": 39.42579978942871,
    "sma200": 37.80510845184326
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 48002445312.0,
+  "market_cap_currency": "EUR",
   "quality": {
    "score": null,
-   "coverage_pct": 0,
+   "coverage_pct": 31,
    "model": "standard",
    "dimensions": {
     "revenue_growth": null,
     "profitability": null,
     "financial_stability": null,
     "cashflow": null,
-    "market_position": null,
-    "growth_potential": null,
-    "management": null
+    "market_position": 48.0,
+    "growth_potential": 22.7,
+    "management": 65.3
    }
   },
   "risk": {
-   "score": null,
-   "level": "unbekannt",
-   "coverage_pct": 25,
+   "score": 4.9,
+   "level": "niedrig",
+   "coverage_pct": 47,
    "top_factors": []
   },
   "market_intelligence": {
-   "score": 1.5,
+   "score": 25.1,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -80,7 +80,7 @@
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "Germany"
  },
  "memberships": [
   {
@@ -109,7 +109,7 @@
  "quality_detail": {
   "score": null,
   "status": "insufficient_data",
-  "coverage_pct": 0,
+  "coverage_pct": 31,
   "model": "standard",
   "dimensions": [
    {
@@ -232,17 +232,17 @@
     "key": "market_position",
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 48.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "gross_margin",
       "label": "Bruttomarge (Proxy Preissetzungsmacht)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 39.019,
+      "points": 48.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -251,17 +251,17 @@
     "key": "growth_potential",
     "label": "Wachstumspotenzial",
     "weight": 0.2,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 22.7,
+    "basis": "proxy",
+    "coverage": 60,
     "metrics": [
      {
       "key": "revenue_growth_forward",
       "label": "Erwartetes Umsatzwachstum (Yahoo)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 1.8,
+      "points": 22.7,
+      "status": "ok"
      },
      {
       "key": "reinvestment",
@@ -278,9 +278,9 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 65.3,
+    "basis": "proxy",
+    "coverage": 40,
     "metrics": [
      {
       "key": "roe",
@@ -294,25 +294,25 @@
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -0.22,
+      "points": 65.3,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/SHL.DE/financials",
+  "as_of": "2026-10-31T14:07:29Z",
+  "fiscal_year_end": "2025-09-30",
+  "currency": "EUR",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": null,
-  "level": "unbekannt",
-  "coverage_pct": 25,
+  "score": 4.9,
+  "level": "niedrig",
+  "coverage_pct": 47,
   "factors": [
    {
     "key": "leverage",
@@ -362,11 +362,11 @@
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": -0.22,
     "unit": "%",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -389,20 +389,20 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 18.04,
     "unit": "x",
-    "severity": null,
+    "severity": 4.7,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 1.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -421,11 +421,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 1.5,
+  "score": 25.1,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 8.7,
@@ -443,25 +443,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 15,
+    "independent": 15,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -480,7 +482,450 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "7db2895c75d542b9",
+   "symbols": [
+    "SHL.DE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Profound Medical and Cook Medical’s iMRI Division Partner to Expand U.S. TULSA-PRO® Sales Channels and Drive Recurring Revenue Growth",
+   "summary": "New distribution agreement positions TULSA-PRO within the iMRI Suite offering through Cook Medical’s Copernicus™ program, expanding Profound’s commercial reach Profound retains direct TULSA-PRO recurring treatment kit and service revenue relationships for systems sold through Coo",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/profound-medical-cook-medical-imri-120000362.html?.tsrc=rss",
+   "published_at": "2026-10-30T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:51Z",
+   "fingerprint": "011c9875961011be",
+   "primary_source": false,
+   "cluster_id": "7db2895c75d542b9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dc12f42a4a8effe1",
+   "symbols": [
+    "MBG.DE",
+    "SHL.DE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xunce TokenOS Expands Deep into Germany, the Heart of Europe, Marking Further Progress in Its Internationalization Layout",
+   "summary": "HONG KONG, Oct. 26, 2026 (GLOBE NEWSWIRE) -- Recently, Berlin Global Dialogue (BGD) 2026 and the Invest in Germany Summit were held concurrently in Berlin, Germany. Xunce (3317.HK) was invited to attend as a strategic partner. The company’s management and representatives particip",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/xunce-tokenos-expands-deep-germany-093900295.html?.tsrc=rss",
+   "published_at": "2026-10-26T09:39:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:54Z",
+   "fingerprint": "888b1028c48426a6",
+   "primary_source": false,
+   "cluster_id": "dc12f42a4a8effe1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1ff3ad1b420337de",
+   "symbols": [
+    "SHL.DE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Global Computed Tomography (CT) Market by Application, Technology, Care Setting, and Product: Five-Year Forecast | Photon-Counting Scanners and AI Breathe New Life Into a Mature CT Market",
+   "summary": "Mobile imaging, photon-counting technology and AI integration are reshaping the computed tomography market despite market maturity and coverage hurdles, a new 192-page Research and Markets report finds; GE Healthcare, Siemens Healthineers, Philips and Canon Medical Systems are am",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/global-computed-tomography-ct-market-140000857.html?.tsrc=rss",
+   "published_at": "2026-10-23T14:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:51Z",
+   "fingerprint": "8c7bf94343180558",
+   "primary_source": false,
+   "cluster_id": "1ff3ad1b420337de",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a88b288d3989b250",
+   "symbols": [
+    "SHL.DE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Global Breast Cancer Screening and Diagnostics Market, 2026-2036 | AI Imaging and Wider Screening Push Breast-Cancer Diagnostics Toward $12 Billion",
+   "summary": "The global breast cancer screening and diagnostics market is projected to roughly double from $5.9 billion in 2026 to $12.15 billion by 2036, a new Research and Markets report finds, as GE HealthCare, Hologic and Siemens Healthineers roll out new imaging and AI tools despite high",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/global-breast-cancer-screening-diagnostics-134300583.html?.tsrc=rss",
+   "published_at": "2026-10-23T13:43:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:51Z",
+   "fingerprint": "ee666708c0737afe",
+   "primary_source": false,
+   "cluster_id": "a88b288d3989b250",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "89bb72d47dce97a0",
+   "symbols": [
+    "SHL.DE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Healthcare and Life Sciences Leaders Build on NVIDIA to Advance Drug Discovery and Expand Patient Care",
+   "summary": "Healthcare and Life Sciences Leader Build on NVIDIA NVIDIA today announced collaborations with leading global healthcare and research organizations to advance protein design — including through a newly released open model, RFD4-Proteina — accelerate drug discovery and bring great",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/healthcare-life-sciences-leaders-build-101300420.html?.tsrc=rss",
+   "published_at": "2026-10-21T10:13:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:51Z",
+   "fingerprint": "d1c6b8ac5fc06b65",
+   "primary_source": false,
+   "cluster_id": "89bb72d47dce97a0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6d5151e2864cf90c",
+   "symbols": [
+    "SHL.DE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Global Medical Devices Market Size, Share, and Growth Forecast to 2031 | Aging Populations Push the Global Medical Devices Market Toward $818 Billion",
+   "summary": "The global medical devices market is projected to grow from $580.79 billion in 2026 to $817.78 billion by 2031, a new report finds, as chronic disease and hospital investment rise, though lengthy approvals and staff shortages weigh; Medtronic, Johnson & Johnson, Abbott and Siemen",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/global-medical-devices-market-size-090300658.html?.tsrc=rss",
+   "published_at": "2026-10-21T09:03:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:51Z",
+   "fingerprint": "df5546e8214dfe73",
+   "primary_source": false,
+   "cluster_id": "6d5151e2864cf90c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dea72e0a8a32f1cd",
+   "symbols": [
+    "MRK.DE",
+    "SHL.DE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Eurozone Defensive Stocks With Low Debt And Steady Cash Flow",
+   "summary": "French bond yields near 4.9% and a wider France to Germany spread have pushed eurozone risk back into the spotlight. Yet that same stress can shine a light on quieter businesses with low debt and steadier cash flows. When market focus swings to sovereign risk and discount rates, ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-eurozone-defensive-stocks-low-021031157.html?.tsrc=rss",
+   "published_at": "2026-10-20T02:10:31Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:03Z",
+   "fingerprint": "ea634b80c639223f",
+   "primary_source": false,
+   "cluster_id": "dea72e0a8a32f1cd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c64f2d8e52e5d186",
+   "symbols": [
+    "SHL.DE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Prostate Cancer Foundation Expands Radiopharmaceutical Think Tank as Field Enters Pivotal Growth Phase",
+   "summary": "LOS ANGELES, October 17, 2026--The Prostate Cancer Foundation (PCF) today announced the expansion of its Radiopharmaceutical Think Tank, adding new members and establishing its 2026-2027 agenda, which is focused on accelerating development and patient access of novel radiopharmac",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/prostate-cancer-foundation-expands-radiopharmaceutical-123000697.html?.tsrc=rss",
+   "published_at": "2026-10-17T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:51Z",
+   "fingerprint": "2e76f6dc848e4996",
+   "primary_source": false,
+   "cluster_id": "c64f2d8e52e5d186",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "30d5c20865b786a8",
+   "symbols": [
+    "SHL.DE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Siemens Healthineers to stop selling general ultrasound systems",
+   "summary": "In a strategy shift, the company will invest in its procedural ultrasound business, supporting cardiovascular surgeries",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "medtechdive.com",
+   "url": "https://www.medtechdive.com/news/siemens-healthineers-to-stop-selling-general-ultrasound-systems/832976/?.tsrc=rss",
+   "published_at": "2026-10-14T14:53:19Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:51Z",
+   "fingerprint": "e79af059ef26f4fe",
+   "primary_source": false,
+   "cluster_id": "30d5c20865b786a8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "21e0f7863fbbf132",
+   "symbols": [
+    "SHL.DE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Magneto-Deoxyribonucleic Acid (DNA) Biosensors Global Market Report 2026 | Capitalize on 12.9% CAGR and AI Diagnostics with Roche, Thermo Fisher, Siemens Healthineers and Danaher",
+   "summary": "Magneto-DNA Biosensors Market Set to Reach $2.66 Billion by 2030 as Precision Diagnostics AdvanceDublin, Oct. 13, 2026 (GLOBE NEWSWIRE) -- \"Magneto-Deoxyribonucleic Acid (DNA) Biosensors Global Market Report 2026\" has been added to ResearchAndMarkets.com's offering. The global ma",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/magneto-deoxyribonucleic-acid-dna-biosensors-080200336.html?.tsrc=rss",
+   "published_at": "2026-10-13T08:02:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:51Z",
+   "fingerprint": "bbee6684ae178319",
+   "primary_source": false,
+   "cluster_id": "21e0f7863fbbf132",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1646a07a86f87ba2",
+   "symbols": [
+    "SHL.DE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "European Defensive Dividend Stocks Investors May Be Missing Right Now",
+   "summary": "Government bond yields in Europe are climbing, headlines are full of debt worries, and volatility is nudging investors to rethink what feels “defensive” in a portfolio. This kind of stress test can expose weaker balance sheets, yet it can also spotlight high quality dividend stoc",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/european-defensive-dividend-stocks-investors-151119645.html?.tsrc=rss",
+   "published_at": "2026-10-10T15:11:19Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:51Z",
+   "fingerprint": "49179c23bfb99957",
+   "primary_source": false,
+   "cluster_id": "1646a07a86f87ba2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2f8e3facf0de36e1",
+   "symbols": [
+    "SHL.DE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Point-of-Care Testing, Falling Prices and PCR Threaten the Immunoassay Lab Model: What Diagnostics Leaders Must Do Next",
+   "summary": "Forecasts by application, technology and care setting show where hospital and outpatient lab spending is shifting, with strategies from 64 players including Roche, Abbott and Siemens Healthineers.Dublin, Oct. 08, 2026 (GLOBE NEWSWIRE) -- \"Immunoassay Markets. Strategies and Trend",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/point-care-testing-falling-prices-105200493.html?.tsrc=rss",
+   "published_at": "2026-10-08T10:52:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:51Z",
+   "fingerprint": "5089463cc9962656",
+   "primary_source": false,
+   "cluster_id": "2f8e3facf0de36e1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c3f71ac9c484f5e5",
+   "symbols": [
+    "SHL.DE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How Siemens Healthineers is helping its international staff feel at home",
+   "summary": "Liza Follert, head of people attraction for Europe, the Middle East, and Africa, explains how employee feedback has shaped Siemens Healthineers’ approach to inclusion, retention, and recruitment.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/siemens-healthineers-helping-international-staff-043344625.html?.tsrc=rss",
+   "published_at": "2026-10-08T04:33:44Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:51Z",
+   "fingerprint": "666aa0fdfd4d7700",
+   "primary_source": false,
+   "cluster_id": "c3f71ac9c484f5e5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c941b5562c795a65",
+   "symbols": [
+    "SHL.DE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Medtronic names Felicia Kurz as cardiac ablation VP, GM",
+   "summary": "Kurz’s appointment comes as Medtronic enjoys strong growth in electrophysiology therapies thanks to demand for its pulsed field ablation devices.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "medtechdive.com",
+   "url": "https://www.medtechdive.com/news/medtronic-names-felicia-kurz-as-cardiac-ablation-vp-gm/832420/?.tsrc=rss",
+   "published_at": "2026-10-07T19:27:36Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:51Z",
+   "fingerprint": "ebc1987d99e617c6",
+   "primary_source": false,
+   "cluster_id": "c941b5562c795a65",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ba21153b1aea29af",
+   "symbols": [
+    "SHL.DE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Artificial Intelligence in Healthcare Market Forecasts Growth from $36.67B (2026) to $194.79B by 2031, Profiling Philips, Microsoft, Siemens Healthineers & NVIDIA",
+   "summary": "The global AI in healthcare market is projected to grow from USD 36.67 billion in 2026 to USD 194.79 billion by 2031, registering a 39.7% CAGR. Growth is driven by rising hospital adoption, demand for clinical efficiency, personalized care, accurate diagnostics and reduced physic",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/artificial-intelligence-healthcare-market-forecasts-080500135.html?.tsrc=rss",
+   "published_at": "2026-10-02T08:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:51Z",
+   "fingerprint": "9840bc9546ce3892",
+   "primary_source": false,
+   "cluster_id": "ba21153b1aea29af",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6dfbe620090b550f",
+   "symbols": [
+    "SHL.DE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Truvian Health Announces Strategic Alliance with Siemens Healthineers to Advance the TruVerus™ Blood Testing Platform",
+   "summary": "SAN DIEGO, October 01, 2026--Truvian Health Announces Strategic Alliance with Siemens Healthineers to Advance the TruVerus™ Blood Testing Platform",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/truvian-health-announces-strategic-alliance-110000423.html?.tsrc=rss",
+   "published_at": "2026-10-01T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:51Z",
+   "fingerprint": "c2aebea2656dfcfa",
+   "primary_source": false,
+   "cluster_id": "6dfbe620090b550f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d0879c8c39ef43b7",
+   "symbols": [
+    "SHL.DE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "D-Wave Quantum vs. QuantumScape: Which Moonshot Tech Stock Is a Better Buy in 2026?",
+   "summary": "Both companies are years from commercial scale and burning cash to get there. The difference is in how long each can keep going.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/coverage/better-buy/2026/09/26/d-wave-quantum-vs-quantumscape-which-moonshot-tech-stock-is-a-better-buy-in-2026/?.tsrc=rss",
+   "published_at": "2026-09-26T14:29:51Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:51Z",
+   "fingerprint": "fed318d22bf0935e",
+   "primary_source": false,
+   "cluster_id": "d0879c8c39ef43b7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c3de781e23561abc",
+   "symbols": [
+    "SHL.DE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "TDM Reagent Kit Market Forecasts Growth from $2.87B (2026) to $6.96B by 2032, Profiling Abbott, Roche, Danaher, Siemens Healthineers & Thermo Fisher",
+   "summary": "Opportunities center on automated, standardized TDM kits integrated with AI dosing tools for antimicrobial stewardship, transplant care and precision medicine, especially in Asia-Pacific.Dublin, Sept. 24, 2026 (GLOBE NEWSWIRE) -- \"TDM Reagent Kit Market - Global Forecast 2026-203",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/tdm-reagent-kit-market-forecasts-125900728.html?.tsrc=rss",
+   "published_at": "2026-09-24T12:59:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:51Z",
+   "fingerprint": "caf634d16dbee398",
+   "primary_source": false,
+   "cluster_id": "c3de781e23561abc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1a137dd6de9bfe92",
+   "symbols": [
+    "SHL.DE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What Does Siemens Healthineers (XTRA:SHL) New Liver Disease Collaboration Mean?",
+   "summary": "Siemens Healthineers (XTRA:SHL) and Novo announced a new collaboration to address MASLD and MASH using non-invasive diagnostics. The partnership focuses on expanding disease awareness and clinical use of less invasive tools for assessing liver health and progression risk. Both gr",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/does-siemens-healthineers-xtra-shl-151751164.html?.tsrc=rss",
+   "published_at": "2026-09-23T15:17:51Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:51Z",
+   "fingerprint": "6bf69cb27777c652",
+   "primary_source": false,
+   "cluster_id": "1a137dd6de9bfe92",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5021a9f78fd9d5e9",
+   "symbols": [
+    "SHL.DE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Capitalize on the Therapeutic Drug Monitoring Shift: Benchmark Roche, Abbott, Siemens Healthineers, Thermo Fisher and Bio-Rad to Accelerate Revenue and Defend Market Share",
+   "summary": "Personalized medicine and chronic disease care are driving demand for TDM, with opportunities in consumables, automation, point-of-care devices, AI software and pharmacogenomics.Dublin, Sept. 23, 2026 (GLOBE NEWSWIRE) -- \"Therapeutic Drug Monitoring - Global Strategic Business Re",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/capitalize-therapeutic-drug-monitoring-shift-081100417.html?.tsrc=rss",
+   "published_at": "2026-09-23T08:11:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:51Z",
+   "fingerprint": "d52e1050ec466a54",
+   "primary_source": false,
+   "cluster_id": "5021a9f78fd9d5e9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T13:54:04Z",
+ "generated_at": "2026-10-31T14:07:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,7 +24,7 @@
    "adr20": 1.7176363603778935,
    "rvol": 0.7989047574597841,
    "ema10": 335.16649177216584,
-   "ema21": 329.6790851395555,
+   "ema21": 329.67908513954376,
    "sma50": 326.36059997558596,
    "sma200": 313.65439849853516
   },
@@ -54,12 +54,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 0.6,
+   "score": 55.9,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 10,
+   "independent_24h": 3
   },
   "political": {
    "relevance": 0,
@@ -100,7 +102,7 @@
   "adr20": 1.7176363603778935,
   "rvol": 0.7989047574597841,
   "ema10": 335.16649177216584,
-  "ema21": 329.6790851395555,
+  "ema21": 329.67908513954376,
   "sma50": 326.36059997558596,
   "sma200": 313.65439849853516,
   "volatility_ann": 18.06354293805031,
@@ -425,11 +427,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 0.6,
+  "score": 55.9,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 80,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 3.5,
@@ -438,35 +440,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 11,
+    "independent": 10,
+    "duplicates": 1,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 14,
+    "independent": 13,
+    "duplicates": 1,
+    "sources": 6,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -484,7 +488,332 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "3bb3d4c775012747",
+   "symbols": [
+    "NSC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What Schneider National (SNDR) Said on Its Q3 Earnings Call",
+   "summary": "Schneider National (NYSE:SNDR) reported higher third-quarter earnings as pricing gains, productivity improvements and cost-control efforts helped offset uneven freight demand and lower equipment counts in parts of its truckload operation. Adjusted income from operations rose 66% ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-schneider-national-sndr-said-on-its-q3-earnings-call-2026-10-31/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-31T05:13:52Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:15Z",
+   "fingerprint": "f96c35e3faa23618",
+   "primary_source": false,
+   "cluster_id": "3bb3d4c775012747",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "43baa7fd3fe0ff7d",
+   "symbols": [
+    "NSC",
+    "UNP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Rail Rivalry: Schneider’s Bold Move to Norfolk Southern from CSX",
+   "summary": "Schneider is making a monumental shift in its intermodal operations, moving all eastern rail business from CSX to Norfolk Southern. This strategic partnership aims to unlock significant growth, enhance capacity flexibility, and drive more freight off the roads and onto rail. Disc",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/rail-rivalry-schneider-bold-move-184239568.html?.tsrc=rss",
+   "published_at": "2026-10-30T18:42:39Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:15Z",
+   "fingerprint": "5280892e6c1a9b12",
+   "primary_source": false,
+   "cluster_id": "43baa7fd3fe0ff7d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b6002efdaa809c7a",
+   "symbols": [
+    "NSC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Norfolk Southern: 3 Key Takeaways for Long-Term Investors",
+   "summary": "Cost savings and pricing power are funding a $200 million capex increase, signaling management confidence in sustained freight demand.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/takeaways/2026/10/30/norfolk-southern-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+   "published_at": "2026-10-30T17:20:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:15Z",
+   "fingerprint": "bca174651d0d0b7e",
+   "primary_source": false,
+   "cluster_id": "b6002efdaa809c7a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "eedb67ef10004102",
+   "symbols": [
+    "NSC",
+    "UNP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Schneider partners with Norfolk Southern; raises outlook despite Q3 miss",
+   "summary": "Alongside its slightly worse-than-expected third-quarter report on Thursday, Schneider National announced a deal to utilize Norfolk Southern’s rail network in the East. The post Schneider partners with Norfolk Southern; raises outlook despite Q3 miss appeared first on FreightWave",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/schneider-partners-norfolk-southern-raises-135520405.html?.tsrc=rss",
+   "published_at": "2026-10-30T13:55:20Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:15Z",
+   "fingerprint": "e06075d0b9a3269e",
+   "primary_source": false,
+   "cluster_id": "eedb67ef10004102",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "31562440bc83a8db",
+   "symbols": [
+    "CSX",
+    "NSC",
+    "UNP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Schneider to shift eastern rail business to Norfolk Southern from CSX",
+   "summary": "Schneider National will make Norfolk Southern its primary eastern rail provider as the railroad pursues a merger with Union Pacific. The post Schneider to shift eastern rail business to Norfolk Southern from CSX appeared first on FreightWaves.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/economy/policy/articles/schneider-shift-eastern-rail-business-124028597.html?.tsrc=rss",
+   "published_at": "2026-10-30T12:40:28Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:54Z",
+   "fingerprint": "01c06a386372a1fa",
+   "primary_source": false,
+   "cluster_id": "31562440bc83a8db",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "825b8f54d2952272",
+   "symbols": [
+    "NSC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "New Georgia hub aims to take 26,000 containers off the road",
+   "summary": "The state of Georgia officially opens an inland rail hub with plans to take tens of thousands of containers off the roads. The post New Georgia hub aims to take 26,000 containers off the road appeared first on FreightWaves.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/economy/policy/articles/georgia-hub-aims-26-000-112000863.html?.tsrc=rss",
+   "published_at": "2026-10-30T11:20:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:15Z",
+   "fingerprint": "d46c9dc41f16179f",
+   "primary_source": false,
+   "cluster_id": "825b8f54d2952272",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fb7e1b629747f5c5",
+   "symbols": [
+    "CSX",
+    "JBHT",
+    "NSC",
+    "UNP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Should You Think About CSX Differently Now?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/csx/articles/621250/why-should-you-think-about-csx-differently-now/2026-10-29?.tsrc=rss",
+   "published_at": "2026-10-30T00:50:59Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:54Z",
+   "fingerprint": "4f7d121c174829dc",
+   "primary_source": false,
+   "cluster_id": "fb7e1b629747f5c5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9d8fb9aac682b599",
+   "symbols": [
+    "NSC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Schneider and Norfolk Southern partner to expand domestic intermodal capacity across the eastern U.S.",
+   "summary": "GREEN BAY, Wis. & ATLANTA, October 29, 2026--Schneider National, Inc. (NYSE: SNDR), a premier multimodal provider of transportation, intermodal and logistics services, and Norfolk Southern Corporation (NYSE: NSC) today announced a strategic agreement that combines Schneider’s 35 ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/economy/articles/schneider-norfolk-southern-partner-expand-200600937.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:06:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:15Z",
+   "fingerprint": "0c47567f712ab75a",
+   "primary_source": false,
+   "cluster_id": "c991a21dd3587293",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c991a21dd3587293",
+   "symbols": [
+    "NSC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Norfolk Southern and Schneider partner to expand domestic intermodal capacity across the eastern U.S.",
+   "summary": "Norfolk Southern Corporation (NYSE: NSC) and Schneider National, Inc. (NYSE: SNDR), a premier multimodal provider of transportation, intermodal and logistics services, today announced a strategic agreement that combines Schneider's 35 years of intermodal expertise, professional c",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/articles/norfolk-southern-schneider-partner-expand-200500549.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:15Z",
+   "fingerprint": "0c47567f712ab75a",
+   "primary_source": false,
+   "cluster_id": "c991a21dd3587293",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a7dac870083ab153",
+   "symbols": [
+    "CSX",
+    "JBHT",
+    "NSC",
+    "UNP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is CSX Stock Riskier Than It Looks?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/csx/articles/620762/is-csx-stock-riskier-than-it-looks/2026-10-27?.tsrc=rss",
+   "published_at": "2026-10-27T20:21:39Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:54Z",
+   "fingerprint": "c3e6715a9971ec2c",
+   "primary_source": false,
+   "cluster_id": "a7dac870083ab153",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3bd7272a53762b58",
+   "symbols": [
+    "CSX",
+    "NSC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Does CSX Stock's Q3 Earnings Beat Justify a Buy Decision Today?",
+   "summary": "We assess the investment worthiness of CSX stock post its third-quarter 2026 earnings release.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/does-csx-stocks-q3-earnings-173900879.html?.tsrc=rss",
+   "published_at": "2026-10-27T17:39:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:54Z",
+   "fingerprint": "89e4084e69a50876",
+   "primary_source": false,
+   "cluster_id": "3bd7272a53762b58",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a67b3ef6a653dfbf",
+   "symbols": [
+    "CSX",
+    "JBHT",
+    "NSC",
+    "UNP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Will CSX Stock's Jump After Earnings Last?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/620217/will-csx-stocks-jump-after-earnings-last/2026-10-23?.tsrc=rss",
+   "published_at": "2026-10-23T13:49:05Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:54Z",
+   "fingerprint": "25c337f368d4d33b",
+   "primary_source": false,
+   "cluster_id": "a67b3ef6a653dfbf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e2b205c4950b75e4",
+   "symbols": [
+    "CSX",
+    "NSC",
+    "UNP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Union Pacific’s Dividend After Earnings: What the Numbers Say for Income Investors",
+   "summary": "Union Pacific just beat earnings and raised its dividend for the 20th straight year, but a looming merger is redirecting billions away from shareholders. Here is what income investors need to know before the deal closes in 2027.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/23/union-pacifics-dividend-after-earnings-what-the-numbers-say-for-income-investors/?.tsrc=rss",
+   "published_at": "2026-10-23T12:15:32Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:54Z",
+   "fingerprint": "8dec0734c2c0aa88",
+   "primary_source": false,
+   "cluster_id": "e2b205c4950b75e4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d63163b7d0f74b17",
+   "symbols": [
+    "NSC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Three Railroads, One Record Quarter Courtesy of Diesel Fuel",
+   "summary": "All-time high diesel prices pushed freight from trucking to rail in third quarter, lifting CSX, Union Pacific and Norfolk Southern to record revenue.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "wwd.com",
+   "url": "https://wwd.com/sourcing-journal/logistics/csx-union-pacific-norfolk-southern-q3-rail-earnings-diesel-fuel-1239382029/?.tsrc=rss",
+   "published_at": "2026-10-23T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:15Z",
+   "fingerprint": "75e7b0caed3d136e",
+   "primary_source": false,
+   "cluster_id": "d63163b7d0f74b17",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

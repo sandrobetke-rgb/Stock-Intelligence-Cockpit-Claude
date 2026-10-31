@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T13:54:04Z",
+ "generated_at": "2026-10-31T14:07:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -8,16 +8,14 @@
   "region": "US",
   "currency": "USD",
   "sector": "Real Estate",
-  "industry": null,
+  "industry": "REIT - Industrial",
   "indexes": [
    "SPX"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 324.7699890136719,
    "price_date": "2026-10-30",
@@ -26,39 +24,44 @@
    "adr20": 2.005650747192634,
    "rvol": 1.1022591475559096,
    "ema10": 309.8104861593945,
-   "ema21": 302.9570631793049,
+   "ema21": 302.9570631792574,
    "sma50": 297.7933288574219,
-   "sma200": 298.32080841064453
+   "sma200": 298.32080764770507
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 60681146368.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
+   "score": 67.0,
+   "coverage_pct": 100,
    "model": "standard",
    "dimensions": {
-    "revenue_growth": null,
-    "profitability": null,
-    "financial_stability": null,
-    "cashflow": null,
-    "market_position": null,
-    "growth_potential": null,
-    "management": null
+    "revenue_growth": 38.6,
+    "profitability": 100.0,
+    "financial_stability": 40.1,
+    "cashflow": 100.0,
+    "market_position": 100.0,
+    "growth_potential": 40.5,
+    "management": 71.0
    }
   },
   "risk": {
-   "score": null,
-   "level": "unbekannt",
-   "coverage_pct": 25,
-   "top_factors": []
+   "score": 24.1,
+   "level": "niedrig",
+   "coverage_pct": 100,
+   "top_factors": [
+    "Liquidität (Current Ratio)",
+    "Zinsdeckung"
+   ]
   },
   "market_intelligence": {
-   "score": 10.1,
+   "score": 63.1,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 17,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -80,7 +83,7 @@
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -99,42 +102,42 @@
   "adr20": 2.005650747192634,
   "rvol": 1.1022591475559096,
   "ema10": 309.8104861593945,
-  "ema21": 302.9570631793049,
+  "ema21": 302.9570631792574,
   "sma50": 297.7933288574219,
-  "sma200": 298.32080841064453,
+  "sma200": 298.32080764770507,
   "volatility_ann": 20.15495768456845,
   "avg_dollar_volume_20d": 264202384.30648804,
   "move_zscore": 1.9152736091094344
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
+  "score": 67.0,
+  "status": "ok",
+  "coverage_pct": 100,
   "model": "standard",
   "dimensions": [
    {
     "key": "revenue_growth",
     "label": "Umsatzwachstum",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 38.6,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_cagr",
       "label": "Umsatz-CAGR (mehrjährig)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 4.875,
+      "points": 39.5,
+      "status": "ok"
      },
      {
       "key": "revenue_growth_yoy",
       "label": "Umsatzwachstum Vorjahr",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 2.737,
+      "points": 36.4,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -143,25 +146,25 @@
     "key": "profitability",
     "label": "Profitabilität/Margen",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 100.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "operating_margin",
       "label": "Operative Marge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 46.858,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "net_margin",
       "label": "Nettomarge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 36.988,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -170,33 +173,33 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 40.1,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "debt_to_equity",
       "label": "Verschuldung (Debt/Equity)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 1.109,
+      "points": 67.5,
+      "status": "ok"
      },
      {
       "key": "current_ratio",
       "label": "Liquidität (Current Ratio)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.751,
+      "points": 3.9,
+      "status": "ok"
      },
      {
       "key": "interest_coverage",
       "label": "Zinsdeckung (EBIT/Zinsen)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 6.878,
+      "points": 39.8,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -205,25 +208,25 @@
     "key": "cashflow",
     "label": "Cashflow",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 100.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "fcf_margin",
       "label": "Free-Cashflow-Marge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 60.054,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "ocf_positive",
       "label": "Operativer Cashflow positiv",
       "unit": "bool",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 1.0,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -232,17 +235,17 @@
     "key": "market_position",
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 100.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "gross_margin",
       "label": "Bruttomarge (Proxy Preissetzungsmacht)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 74.286,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -251,25 +254,25 @@
     "key": "growth_potential",
     "label": "Wachstumspotenzial",
     "weight": 0.2,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 40.5,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_growth_forward",
       "label": "Erwartetes Umsatzwachstum (Yahoo)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 10.8,
+      "points": 52.7,
+      "status": "ok"
      },
      {
       "key": "reinvestment",
       "label": "Reinvestition (F&E + Capex in % Umsatz)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 5.999,
+      "points": 22.2,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -278,95 +281,95 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 71.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 19.294,
+      "points": 77.2,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.052,
+      "points": 61.8,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/PSA/financials",
+  "as_of": "2026-10-31T14:07:29Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": null,
-  "level": "unbekannt",
-  "coverage_pct": 25,
+  "score": 24.1,
+  "level": "niedrig",
+  "coverage_pct": 100,
   "factors": [
    {
     "key": "leverage",
     "label": "Verschuldung (Debt/Equity)",
-    "value": null,
+    "value": 1.11,
     "unit": "x",
-    "severity": null,
+    "severity": 30.0,
     "weight": 0.15,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "liquidity",
     "label": "Liquidität (Current Ratio)",
-    "value": null,
+    "value": 0.75,
     "unit": "x",
-    "severity": null,
+    "severity": 96.1,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "interest",
     "label": "Zinsdeckung",
-    "value": null,
+    "value": 6.88,
     "unit": "x",
-    "severity": null,
+    "severity": 58.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "cashflow",
     "label": "Free-Cashflow-Marge",
-    "value": null,
+    "value": 60.05,
     "unit": "%",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.12,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "margin_trend",
     "label": "Margenentwicklung (Vorjahr, Pp.)",
-    "value": null,
+    "value": -0.02,
     "unit": "Pp",
-    "severity": null,
+    "severity": 27.4,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": 0.05,
     "unit": "%",
-    "severity": null,
+    "severity": 0.5,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -389,20 +392,20 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 32.75,
     "unit": "x",
-    "severity": null,
+    "severity": 27.3,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 3.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 22.2,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -414,18 +417,21 @@
     "status": "ok"
    }
   ],
-  "top_factors": [],
+  "top_factors": [
+   "Liquidität (Current Ratio)",
+   "Zinsdeckung"
+  ],
   "unknown_factors": [
    "Kunden- und Branchenabhängigkeit",
    "Rechtsstreitigkeiten"
   ]
  },
  "intelligence_detail": {
-  "score": 10.1,
+  "score": 63.1,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 100.0,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 57.5,
@@ -434,34 +440,36 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 17,
+    "independent": 17,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 5,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 18,
+    "independent": 18,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 6,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -480,7 +488,410 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "60c9706086fa3c5c",
+   "symbols": [
+    "MCD",
+    "PG",
+    "PSA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "3 Dividend Stocks With Yields Up To 4%",
+   "summary": "Higher inflation readings from the Bank of Japan and a more hawkish tone from Governor Ueda keep interest rates and income on everyone’s mind. Cash rates pay something again, but they do not grow. Investors looking for rising paycheques from their portfolios are paying closer att",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-dividend-stocks-yields-4-211004095.html?.tsrc=rss",
+   "published_at": "2026-10-30T21:10:04Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:54Z",
+   "fingerprint": "d7bf494ab45f58bc",
+   "primary_source": false,
+   "cluster_id": "60c9706086fa3c5c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4e9049425f756c18",
+   "symbols": [
+    "CCI",
+    "DLR",
+    "PSA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "DLR Q3 FFO & Revenues Beat Estimates on Rental Growth, '26 View Raised",
+   "summary": "Digital Realty's record bookings, rising occupancy and stronger rental rates drive double-digit core FFO growth as the company raises its 2026 outlook.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/dlr-q3-ffo-revenues-beat-132600918.html?.tsrc=rss",
+   "published_at": "2026-10-30T13:26:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:35Z",
+   "fingerprint": "855bd68fb263a508",
+   "primary_source": false,
+   "cluster_id": "4e9049425f756c18",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d7dfc13ab54a493c",
+   "symbols": [
+    "PSA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Public Storage Prices Public Offering of $500 Million of Senior Notes at an Effective Interest Rate of 5.200%",
+   "summary": "FRISCO, Texas, October 29, 2026--Public Storage (NYSE:PSA, the \"Company\") announced today that it has priced a public offering of $500 million aggregate principal amount of fixed rate senior notes due 2036 (the \"Notes\"). The Notes will be issued by Public Storage Operating Compan",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/public-storage-prices-public-offering-215700272.html?.tsrc=rss",
+   "published_at": "2026-10-29T21:57:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:37Z",
+   "fingerprint": "269cfc4b19a7b605",
+   "primary_source": false,
+   "cluster_id": "d7dfc13ab54a493c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5327bcd5350271ce",
+   "symbols": [
+    "PSA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Public Storage (PSA) Q3 Results Lift FFO Outlook As Synergies Lag",
+   "summary": "Public Storage stock is up 1.8% in the first trading session after its Q3 2026 report, a calm move for earnings that quietly reset the bar. Core funds from operations, or core FFO, came in at US$4.34 per share and management lifted full year core FFO guidance to a midpoint of US$",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/public-storage-psa-q3-results-120803056.html?.tsrc=rss",
+   "published_at": "2026-10-28T12:08:03Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:37Z",
+   "fingerprint": "836e0d0a733f3071",
+   "primary_source": false,
+   "cluster_id": "5327bcd5350271ce",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "de039358d9142fbd",
+   "symbols": [
+    "EXR",
+    "PSA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "3 Self-Storage REITs With Steady Rent Checks and Very Different Dividend Risks",
+   "summary": "Self-storage REITs are stabilizing after years of oversupply, but the three biggest names offer yields ranging from under 4% to over 5% and carry very different risks hiding behind those rent checks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/28/3-self-storage-reits-with-steady-rent-checks-and-very-different-dividend-risks/?.tsrc=rss",
+   "published_at": "2026-10-28T11:18:22Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:26Z",
+   "fingerprint": "5e13205c8c6bbc51",
+   "primary_source": false,
+   "cluster_id": "de039358d9142fbd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "40444fa14e36eb35",
+   "symbols": [
+    "PSA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Public Storage Q3 Earnings Call Highlights",
+   "summary": "Public Storage (NYSE:PSA) raised its 2026 outlook for the second time this year after reporting third-quarter operating results that exceeded its expectations, citing stronger customer retention, improved new-customer pricing and a slowing pace of new self-storage supply. Core fu",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-public-storage-q3-earnings-call-highlights-2026-10-27/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-27T22:04:35Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:37Z",
+   "fingerprint": "9b7c2384fd1488c6",
+   "primary_source": false,
+   "cluster_id": "40444fa14e36eb35",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c64d45cbe594b688",
+   "symbols": [
+    "PSA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Public Storage: 3 Key Takeaways for Long-Term Investors",
+   "summary": "Faster deal execution and recent acquisitions position the REIT to convert industry tailwinds into sustained earnings growth.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/takeaways/2026/10/27/public-storage-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+   "published_at": "2026-10-27T19:29:18Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:37Z",
+   "fingerprint": "c0775cf26e989d86",
+   "primary_source": false,
+   "cluster_id": "c64d45cbe594b688",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0e8903e744dcb623",
+   "symbols": [
+    "PSA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Public Storage (PSA) Q3 2026 Earnings Call Transcript",
+   "summary": "Major acquisitions and AI integration drive upward guidance revision for full-year 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/public-storage-psa-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-27T18:59:40Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:37Z",
+   "fingerprint": "0e1a93cda15075cd",
+   "primary_source": false,
+   "cluster_id": "0e8903e744dcb623",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dbff72cf2f2111b9",
+   "symbols": [
+    "PSA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Is Public Storage (PSA) A Bargain After Its Earnings Beat And Raised Outlook?",
+   "summary": "Public Storage (PSA) just posted third quarter 2026 results that topped earnings expectations, lifted its full year outlook, and highlighted recent acquisitions in the US and Canada that expanded its self storage footprint. Public Storage shares trade at US$306.97 after a 6.6% 1 ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/public-storage-psa-bargain-earnings-140734994.html?.tsrc=rss",
+   "published_at": "2026-10-27T14:07:34Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:37Z",
+   "fingerprint": "002855b2e081be3b",
+   "primary_source": false,
+   "cluster_id": "dbff72cf2f2111b9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "78ce883a71cbd578",
+   "symbols": [
+    "PSA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Public Storage Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Public Storage's Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-public-storage-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-27T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:37Z",
+   "fingerprint": "d61a5f9da490cfa1",
+   "primary_source": false,
+   "cluster_id": "78ce883a71cbd578",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "db5f08caaad3afff",
+   "symbols": [
+    "CCI",
+    "PSA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Public Storage Q3 FFO Rises, Same-Store NOI Grows, 2026 Outlook Raised",
+   "summary": "PSA's Q3 results top estimates as same-store NOI returns to growth, acquisitions and ancillary operations boost results, and 2026 core FFO guidance is increased.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/public-storage-q3-ffo-rises-121800780.html?.tsrc=rss",
+   "published_at": "2026-10-27T12:18:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:35Z",
+   "fingerprint": "414912e3af48da12",
+   "primary_source": false,
+   "cluster_id": "db5f08caaad3afff",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b41c960fee1e5c78",
+   "symbols": [
+    "PSA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Should Earnings Beat Require Action From Public Storage (PSA) Investors?",
+   "summary": "Public Storage reported third quarter 2026 revenue of US$1.37b and funds from operations of US$4.34 per share, both above analyst expectations, alongside past-period acquisitions of National Storage Affiliates and Public Storage Canada. The combination of stronger funds from oper",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/earnings-beat-require-action-public-120908431.html?.tsrc=rss",
+   "published_at": "2026-10-27T12:09:08Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:37Z",
+   "fingerprint": "34ded51043316396",
+   "primary_source": false,
+   "cluster_id": "b41c960fee1e5c78",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2bbb612dfa31cf91",
+   "symbols": [
+    "PSA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Public Storage (PSA) Stock Looks Below Fair Value Despite Its 45% Run",
+   "summary": "Public Storage has delivered a solid run in recent years, and that kind of track record naturally raises a valuation question. Are investors paying a price today that its underlying cash flows can reasonably support, based on what the business generates rather than how the share ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/public-storage-psa-stock-looks-101508953.html?.tsrc=rss",
+   "published_at": "2026-10-27T10:15:08Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:37Z",
+   "fingerprint": "a16cace44a481b2c",
+   "primary_source": false,
+   "cluster_id": "2bbb612dfa31cf91",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2ee70b211c60fb29",
+   "symbols": [
+    "PSA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compared to Estimates, Public Storage (PSA) Q3 Earnings: A Look at Key Metrics",
+   "summary": "The headline numbers for Public Storage (PSA) give insight into how the company performed in the quarter ended September 2026, but it may be worthwhile to compare some of its key metrics to Wall Street estimates and the year-ago actuals.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/compared-estimates-public-storage-psa-203001356.html?.tsrc=rss",
+   "published_at": "2026-10-26T20:30:01Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:37Z",
+   "fingerprint": "443dda1be744006f",
+   "primary_source": false,
+   "cluster_id": "2ee70b211c60fb29",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1b33e0b7e1098157",
+   "symbols": [
+    "PSA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Public Storage (PSA) Surpasses Q3 FFO and Revenue Estimates",
+   "summary": "Public Storage (PSA) delivered FFO and revenue surprises of +1.64% and +7.95%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/public-storage-psa-surpasses-q3-202002020.html?.tsrc=rss",
+   "published_at": "2026-10-26T20:20:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:37Z",
+   "fingerprint": "c153d21e6b82475e",
+   "primary_source": false,
+   "cluster_id": "1b33e0b7e1098157",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1f8e4e38f230c3c5",
+   "symbols": [
+    "PSA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Public Storage: Q3 Earnings Snapshot",
+   "summary": "FRISCO, Texas (AP) — FRISCO, Texas (AP) — Public Storage (PSA) on Monday reported a key measure of profitability in its third quarter. The results topped Wall Street expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/public-storage-q3-earnings-snapshot-201740374.html?.tsrc=rss",
+   "published_at": "2026-10-26T20:17:40Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:37Z",
+   "fingerprint": "4e31ff4f1235b155",
+   "primary_source": false,
+   "cluster_id": "1f8e4e38f230c3c5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fe05151c785f2deb",
+   "symbols": [
+    "PSA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Public Storage Reports Third Quarter 2026 Results and Raises Guidance",
+   "summary": "FRISCO, Texas, October 26, 2026--Public Storage (the \"Company\") (NYSE: PSA) announced today its results for the quarter ended September 30, 2026, and its increased outlook for full-year 2026. Net income and core funds from operations (\"Core FFO\") per share for the quarter are pre",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/public-storage-reports-third-quarter-200500160.html?.tsrc=rss",
+   "published_at": "2026-10-26T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:37Z",
+   "fingerprint": "f86c952176c81dec",
+   "primary_source": false,
+   "cluster_id": "fe05151c785f2deb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "918de4b45ad41894",
+   "symbols": [
+    "PSA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Public Storage’s Q3 2026 Earnings: What to Expect",
+   "summary": "Public Storage is gearing up to report its third-quarter results, and Wall Street expects FFO per share to come in slightly below the year-ago level.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "barchart.com",
+   "url": "https://www.barchart.com/story/news/8406472/public-storages-q3-2026-earnings-what-to-expect?.tsrc=rss",
+   "published_at": "2026-10-24T11:47:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:37Z",
+   "fingerprint": "fecef6a51a6ba754",
+   "primary_source": false,
+   "cluster_id": "918de4b45ad41894",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

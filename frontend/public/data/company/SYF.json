@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T13:54:04Z",
+ "generated_at": "2026-10-31T14:07:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -7,17 +7,15 @@
   "name": "Synchrony Financial",
   "region": "US",
   "currency": "USD",
-  "sector": "Financials",
-  "industry": null,
+  "sector": "Financial Services",
+  "industry": "Credit Services",
   "indexes": [
    "SPX"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 75.3499984741211,
    "price_date": "2026-10-30",
@@ -26,39 +24,43 @@
    "adr20": 2.3613947659605996,
    "rvol": 0.870997288016254,
    "ema10": 74.91428429134338,
-   "ema21": 74.35921540283492,
+   "ema21": 74.35921540283691,
    "sma50": 75.01860000610351,
    "sma200": 73.26203161239624
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 24516691968.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
+   "score": 59.7,
+   "coverage_pct": 100,
    "model": "financial",
    "dimensions": {
-    "revenue_growth": null,
-    "profitability": null,
-    "financial_stability": null,
+    "revenue_growth": 46.4,
+    "profitability": 89.5,
+    "financial_stability": 100.0,
     "cashflow": null,
     "market_position": null,
-    "growth_potential": null,
-    "management": null
+    "growth_potential": 1.5,
+    "management": 90.8
    }
   },
   "risk": {
-   "score": 3.4,
+   "score": 6.5,
    "level": "niedrig",
-   "coverage_pct": 45,
-   "top_factors": []
+   "coverage_pct": 85,
+   "top_factors": [
+    "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)"
+   ]
   },
   "market_intelligence": {
-   "score": 7.3,
+   "score": 46.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 6,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -80,7 +82,7 @@
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -99,7 +101,7 @@
   "adr20": 2.3613947659605996,
   "rvol": 0.870997288016254,
   "ema10": 74.91428429134338,
-  "ema21": 74.35921540283492,
+  "ema21": 74.35921540283691,
   "sma50": 75.01860000610351,
   "sma200": 73.26203161239624,
   "volatility_ann": 24.265558768394225,
@@ -107,34 +109,34 @@
   "move_zscore": -1.3769058066612512
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
+  "score": 59.7,
+  "status": "ok",
+  "coverage_pct": 100,
   "model": "financial",
   "dimensions": [
    {
     "key": "revenue_growth",
     "label": "Umsatzwachstum",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 46.4,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_cagr",
       "label": "Umsatz-CAGR (mehrjährig)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 8.669,
+      "points": 54.7,
+      "status": "ok"
      },
      {
       "key": "revenue_growth_yoy",
       "label": "Umsatzwachstum Vorjahr",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -0.498,
+      "points": 27.1,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -143,25 +145,25 @@
     "key": "profitability",
     "label": "Profitabilität/Margen",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 89.5,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "net_margin",
       "label": "Nettomarge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 23.71,
+      "points": 79.0,
+      "status": "ok"
      },
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 21.186,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -170,17 +172,17 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 100.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -10.524,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -209,17 +211,17 @@
     "key": "growth_potential",
     "label": "Wachstumspotenzial",
     "weight": 0.2,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 1.5,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_growth_forward",
       "label": "Erwartetes Umsatzwachstum (Yahoo)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -4.7,
+      "points": 1.5,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -228,41 +230,41 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 90.8,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 21.186,
+      "points": 84.7,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -10.524,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/SYF/financials",
+  "as_of": "2026-10-31T14:07:29Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": 3.4,
+  "score": 6.5,
   "level": "niedrig",
-  "coverage_pct": 45,
+  "coverage_pct": 85,
   "factors": [
    {
     "key": "margin_trend",
@@ -276,11 +278,11 @@
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": -10.52,
     "unit": "%",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -303,20 +305,20 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 7.18,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 6.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 55.6,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -328,18 +330,20 @@
     "status": "ok"
    }
   ],
-  "top_factors": [],
+  "top_factors": [
+   "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)"
+  ],
   "unknown_factors": [
    "Kunden- und Branchenabhängigkeit",
    "Rechtsstreitigkeiten"
   ]
  },
  "intelligence_detail": {
-  "score": 7.3,
+  "score": 46.1,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 41.3,
@@ -348,35 +352,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 6,
+    "independent": 6,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 19,
+    "independent": 19,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -394,7 +400,433 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "45f1430a535187b7",
+   "symbols": [
+    "AXP",
+    "BX",
+    "COIN",
+    "SYF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "COIN Q3 Earnings Beat on Prediction Markets, Lower Costs",
+   "summary": "Coinbase topped Q3 earnings estimates as prediction markets surged and lower costs restored operating profit, even as crypto trading slowed and revenues fell 35%.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/crypto/articles/coin-q3-earnings-beat-prediction-173400583.html?.tsrc=rss",
+   "published_at": "2026-10-30T17:34:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:16Z",
+   "fingerprint": "47129140d5b67f55",
+   "primary_source": false,
+   "cluster_id": "45f1430a535187b7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6f030f1864af664e",
+   "symbols": [
+    "BNY",
+    "SYF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "2 financials stocks worth your attention and 1 we find risky",
+   "summary": "Financial providers use their expertise in capital allocation and risk assessment to help facilitate economic growth while offering consumers and businesses essential financial services. But uncertainty about fiscal and monetary policy has tempered enthusiasm, limiting the indust",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/2-financials-stocks-worth-attention-125929860.html?.tsrc=rss",
+   "published_at": "2026-10-30T12:59:29Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:27Z",
+   "fingerprint": "4bdc0af16ff30240",
+   "primary_source": false,
+   "cluster_id": "6f030f1864af664e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "179deeaf4cf06cb5",
+   "symbols": [
+    "AXP",
+    "FIS",
+    "SYF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "FIS Q3 Earnings: Can Banking Solutions Growth Offset Rising Costs?",
+   "summary": "Fidelity National nears Q3 earnings with Banking Solutions growth, driven by an acquisition, but rising costs may squeeze profitability. Can revenue gains offset the pressure?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/fis-q3-earnings-banking-solutions-123800433.html?.tsrc=rss",
+   "published_at": "2026-10-29T12:38:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:16Z",
+   "fingerprint": "f282d01e133ff5e7",
+   "primary_source": false,
+   "cluster_id": "179deeaf4cf06cb5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "817a84f3ce067cd5",
+   "symbols": [
+    "SYF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 value stock on our watchlist and 2 we question",
+   "summary": "Value stocks typically trade at discounts to the broader market, offering patient investors the opportunity to buy businesses when they’re out of favor. The key risk, however, is that these stocks are usually cheap for a reason, and a low valuation can reflect underlying business",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-value-stock-watchlist-2-084325663.html?.tsrc=rss",
+   "published_at": "2026-10-29T08:43:25Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:03Z",
+   "fingerprint": "cc70ff010b48cb47",
+   "primary_source": false,
+   "cluster_id": "817a84f3ce067cd5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "82c395c8fd9fc568",
+   "symbols": [
+    "SYF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "CareCredit and Clarus Make Checkout Simpler for Veterinary Practices with Real-Time Eligibility Insights for Insurance and Financing Options",
+   "summary": "Synchrony (NYSE: SYF), a premier consumer financial services company and provider of the CareCredit health and wellness credit card, today announced the official launch of its strategic partnership with Clarus Technology (Clarus), a next-generation veterinary practice technology ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/carecredit-clarus-checkout-simpler-veterinary-130000297.html?.tsrc=rss",
+   "published_at": "2026-10-28T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:03Z",
+   "fingerprint": "e72442aca0c71d11",
+   "primary_source": false,
+   "cluster_id": "82c395c8fd9fc568",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c084c184d4e7f9ae",
+   "symbols": [
+    "SYF",
+    "XYZ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "AI-Powered Credit: ChargeAfter CEO & Founder Meidad Sharon, Live from Money 20/20 2026",
+   "summary": "Tech Edge hosted a fireside chat on at Money20/20 USA 2026 in Las Vegas, Nevada, with Meidad Sharon, Chief Executive Officer and Founder at ChargeAfter. The in-person interview was joined by Editor-at-Large Jarrett Banks and they discussed how the company is transforming embedded",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/ai-powered-credit-chargeafter-ceo-155249318.html?.tsrc=rss",
+   "published_at": "2026-10-26T15:52:49Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:03Z",
+   "fingerprint": "172f5c5256928d5b",
+   "primary_source": false,
+   "cluster_id": "c084c184d4e7f9ae",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3f65018ad8d967d3",
+   "symbols": [
+    "SYF"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Synchrony (SYF) Upgraded to Buy: What Does It Mean for the Stock?",
+   "summary": "Synchrony (SYF) has been upgraded to a Zacks Rank #2 (Buy), reflecting growing optimism about the company's earnings prospects. This might drive the stock higher in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/synchrony-syf-upgraded-buy-does-150003786.html?.tsrc=rss",
+   "published_at": "2026-10-22T15:00:03Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:03Z",
+   "fingerprint": "0399b60159e898f3",
+   "primary_source": false,
+   "cluster_id": "3f65018ad8d967d3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "51122ab18da8889c",
+   "symbols": [
+    "SYF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "SYF or FUTU: Which Is the Better Value Stock Right Now?",
+   "summary": "SYF vs. FUTU: Which Stock Is the Better Value Option?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/syf-futu-better-value-stock-144002146.html?.tsrc=rss",
+   "published_at": "2026-10-22T14:40:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:03Z",
+   "fingerprint": "72641b943af7cae2",
+   "primary_source": false,
+   "cluster_id": "51122ab18da8889c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4c5bde4432fbf659",
+   "symbols": [
+    "SYF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Should Value Investors Buy Synchrony Financial (SYF) Stock?",
+   "summary": "Here at Zacks, our focus is on the proven Zacks Rank system, which emphasizes earnings estimates and estimate revisions to find great stocks. Nevertheless, we are always paying attention to the latest value, growth, and momentum trends to underscore strong picks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/value-investors-buy-synchrony-financial-124002846.html?.tsrc=rss",
+   "published_at": "2026-10-22T12:40:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:03Z",
+   "fingerprint": "911f933e70620ad7",
+   "primary_source": false,
+   "cluster_id": "4c5bde4432fbf659",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a79fa13d953d12e0",
+   "symbols": [
+    "SYF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Profitable Stocks Walking a Fine Line",
+   "summary": "Not all profitable companies are built to last - some rely on outdated models or unsustainable advantages. Just because a business is in the green today doesn’t mean it will thrive tomorrow.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-profitable-stocks-walking-fine-135039750.html?.tsrc=rss",
+   "published_at": "2026-10-21T13:50:39Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:03Z",
+   "fingerprint": "eddfe28b38158fe6",
+   "primary_source": false,
+   "cluster_id": "a79fa13d953d12e0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "68a4f3d12f6dd4c7",
+   "symbols": [
+    "SYF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "With a Fed Decision a Week Away, Lenders Show How Borrowers Are Handling Higher Rates",
+   "summary": "The Federal Reserve's next interest rate decision is one week away, and the record of its last meeting shows where most officials were leaning. According to the minutes of the September meeting, released on October 7, most participants assessed that another increase in the target",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/economy/policy/articles/fed-decision-week-away-lenders-131600670.html?.tsrc=rss",
+   "published_at": "2026-10-21T13:16:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:03Z",
+   "fingerprint": "d02ebb0d916a3cae",
+   "primary_source": false,
+   "cluster_id": "68a4f3d12f6dd4c7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d6c29ec80ff063ef",
+   "symbols": [
+    "SYF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "CareCredit Introduces CareCredit Pay Later, Offering Consumers Another Way to Plan and Pay for Health and Wellness Care",
+   "summary": "CareCredit, a Synchrony (NYSE: SYF) solution, today launched CareCredit Pay Later, its enhanced and rebranded installment loan product that provides health and wellness consumers with a clear payment plan and defined payoff timeline to help budget for products and elective health",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/carecredit-introduces-carecredit-pay-later-130000567.html?.tsrc=rss",
+   "published_at": "2026-10-21T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:03Z",
+   "fingerprint": "efea3ce63c6dbc4c",
+   "primary_source": false,
+   "cluster_id": "d6c29ec80ff063ef",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d5089919d9d34d99",
+   "symbols": [
+    "SYF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "SYF Q3 Deep Dive: Consumer Strength and Digital Strategy Shape Outlook",
+   "summary": "Consumer financial services company Synchrony Financial (NYSE:SYF) met Wall Street’s revenue expectations in Q3 2026, but sales were flat year on year at $3.82 billion. Its non-GAAP profit of $2.68 per share was 11.4% above analysts’ consensus estimates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/syf-q3-deep-dive-consumer-094239622.html?.tsrc=rss",
+   "published_at": "2026-10-21T09:42:39Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:03Z",
+   "fingerprint": "dd2df4ab523e272b",
+   "primary_source": false,
+   "cluster_id": "d5089919d9d34d99",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3492ff57794366c1",
+   "symbols": [
+    "SYF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Synchrony Financial (SYF) Stock Slips Despite Lifted Q3 Earnings Outlook",
+   "summary": "Synchrony Financial came into its Q3 2026 report with a low bar on sentiment and a low P/E multiple, yet the stock still slipped about 1.2% to US$73.36 on the day. That reaction jars with the headline print. The lender delivered US$892 million in net income and roughly US$2.74 in",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/synchrony-financial-syf-stock-slips-001821475.html?.tsrc=rss",
+   "published_at": "2026-10-21T00:18:21Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:03Z",
+   "fingerprint": "fa300a17ab74b809",
+   "primary_source": false,
+   "cluster_id": "3492ff57794366c1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3da88e75e4f3ba7c",
+   "symbols": [
+    "SYF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Synchrony: 3 Key Takeaways for Long-Term Investors",
+   "summary": "AI partnerships and proprietary data tools position Synchrony at the center of how shopping evolves, protecting competitive moats long-term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/takeaways/2026/10/20/synchrony-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+   "published_at": "2026-10-20T21:50:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:03Z",
+   "fingerprint": "b3c2c6390fa2a66d",
+   "primary_source": false,
+   "cluster_id": "3da88e75e4f3ba7c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ab65e07c1949311b",
+   "symbols": [
+    "SYF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Synchrony (SYF) Q3 2026 Earnings Call Transcript",
+   "summary": "Record purchase volume and full-year guidance at high end signal strong momentum.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/20/synchrony-syf-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-20T17:13:52Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:03Z",
+   "fingerprint": "b626d5a63cfe5ed5",
+   "primary_source": false,
+   "cluster_id": "ab65e07c1949311b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "25a85e549c9b4cc9",
+   "symbols": [
+    "SYF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Synchrony Financial Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Synchrony Financial's Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-synchrony-financial-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-20T17:07:12Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:03Z",
+   "fingerprint": "0f3be56319f8ebd7",
+   "primary_source": false,
+   "cluster_id": "25a85e549c9b4cc9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0a8be543a125ed55",
+   "symbols": [
+    "SYF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What Synchrony Financial (SYF) Said on Its Q3 Earnings Call",
+   "summary": "Synchrony Financial (NYSE:SYF) reported third-quarter net earnings of $892 million, or $2.68 per diluted share, as purchase volume reached nearly $50 billion and rose across each of the company’s five sales platforms. The consumer finance company said total purchase volume increa",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-synchrony-financial-syf-said-on-its-q3-earnings-call-2026-10-20/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-20T15:04:50Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:03Z",
+   "fingerprint": "60d8998c92af9e37",
+   "primary_source": false,
+   "cluster_id": "0a8be543a125ed55",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d3032d65b5a47666",
+   "symbols": [
+    "SYF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Synchrony Q3 Earnings Beat Estimates on Improved Purchase Volume",
+   "summary": "SYF's Q3 2026 earnings beat estimates, fueled by stronger purchase volume and improved credit performance, as rising expenses weighed on results.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/synchrony-q3-earnings-beat-estimates-141500026.html?.tsrc=rss",
+   "published_at": "2026-10-20T14:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:03Z",
+   "fingerprint": "8c6d2b450df75c3f",
+   "primary_source": false,
+   "cluster_id": "d3032d65b5a47666",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

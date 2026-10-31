@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T13:54:04Z",
+ "generated_at": "2026-10-31T14:07:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,7 +24,7 @@
    "adr20": 2.001203164913762,
    "rvol": 0.829755299845429,
    "ema10": 248.32563805869174,
-   "ema21": 242.78878658373606,
+   "ema21": 242.78878658391795,
    "sma50": 236.8636117553711,
    "sma200": 227.1911848449707
   },
@@ -53,12 +53,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 3.5,
+   "score": 55.2,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "freshness",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 7,
+   "independent_24h": 2
   },
   "political": {
    "relevance": 0,
@@ -99,7 +101,7 @@
   "adr20": 2.001203164913762,
   "rvol": 0.829755299845429,
   "ema10": 248.32563805869174,
-  "ema21": 242.78878658373606,
+  "ema21": 242.78878658391795,
   "sma50": 236.8636117553711,
   "sma200": 227.1911848449707,
   "volatility_ann": 21.89719731280106,
@@ -423,11 +425,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 3.5,
+  "score": 55.2,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 60,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 19.6,
@@ -436,35 +438,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 7,
+    "independent": 7,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 19,
+    "independent": 19,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 7,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "freshness",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -482,7 +486,439 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "a9924ec3691035bb",
+   "symbols": [
+    "IP",
+    "PKG",
+    "SW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "International Paper Yields 5.5%, but Free Cash Flow Just Turned Negative",
+   "summary": "International Paper's 5.5% yield looks attractive until you examine where the dividend money is actually coming from. With free cash flow negative and capital spending elevated for years ahead, the math behind the payout deserves a closer look.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/31/international-paper-yields-5-5-but-free-cash-flow-just-turned-negative/?.tsrc=rss",
+   "published_at": "2026-10-31T10:47:31Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:02:06Z",
+   "fingerprint": "ec12de1c9255aebb",
+   "primary_source": false,
+   "cluster_id": "a9924ec3691035bb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8a3848056664bbf4",
+   "symbols": [
+    "AVY",
+    "BALL",
+    "PKG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ball Corp Gears Up to Report Q3 Earnings: What's in Store?",
+   "summary": "BALL heads into the Q3 earnings release with higher shipment volumes across all regions, but tariff pressures and a negative Earnings ESP pose challenges.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ball-corp-gears-report-q3-143600611.html?.tsrc=rss",
+   "published_at": "2026-10-30T14:36:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:14Z",
+   "fingerprint": "b79af0270bb8eb9e",
+   "primary_source": false,
+   "cluster_id": "8a3848056664bbf4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0dfb74c26e91a51f",
+   "symbols": [
+    "IP",
+    "PKG",
+    "SW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Is Smurfit WestRock Stock Falling?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/sw/articles/621381/why-is-smurfit-westrock-stock-falling/2026-10-29?.tsrc=rss",
+   "published_at": "2026-10-29T18:21:07Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:02:06Z",
+   "fingerprint": "71f2bd48b1febbbe",
+   "primary_source": false,
+   "cluster_id": "0dfb74c26e91a51f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "630b748bf1ec37a8",
+   "symbols": [
+    "AVY",
+    "BALL",
+    "PKG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Avery Dennison Earnings Beat Estimates in Q3 on Productivity",
+   "summary": "AVY beats Q3 earnings and sales estimates on productivity gains and pricing, while margin pressure and customer destocking shape its 2026 outlook.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/avery-dennison-earnings-beat-estimates-142700907.html?.tsrc=rss",
+   "published_at": "2026-10-29T14:27:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:14Z",
+   "fingerprint": "1196a257aaaa74ff",
+   "primary_source": false,
+   "cluster_id": "630b748bf1ec37a8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b16d1ea231f7ba5c",
+   "symbols": [
+    "IP",
+    "PKG",
+    "SW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "IP Q3 Earnings Beat Estimates, Sales Miss on Lower Volumes",
+   "summary": "International Paper beats Q3 earnings estimates as North American profits rebound, but lower volumes, EMEA weakness and negative free cash flow weigh on results.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ip-q3-earnings-beat-estimates-151700613.html?.tsrc=rss",
+   "published_at": "2026-10-28T15:17:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:02:06Z",
+   "fingerprint": "aa401fc1c812dcfa",
+   "primary_source": false,
+   "cluster_id": "b16d1ea231f7ba5c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "aab1eeb93d446ef1",
+   "symbols": [
+    "IP",
+    "PKG",
+    "SW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "SW Q3 Earnings Miss Estimates on Higher Costs, Weak Volumes",
+   "summary": "Smurfit Westrock misses Q3 on earnings as higher freight, energy and raw material costs, plus weak volumes, pressure margins and lower its 2026 EBITDA outlook.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/sw-q3-earnings-miss-estimates-141900324.html?.tsrc=rss",
+   "published_at": "2026-10-28T14:19:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:02:06Z",
+   "fingerprint": "638c1e554b01521c",
+   "primary_source": false,
+   "cluster_id": "aab1eeb93d446ef1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "43cec6ca13422657",
+   "symbols": [
+    "PKG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "2 surging  stocks with exciting potential and 1 we ignore",
+   "summary": "The stocks featured in this article have all approached their 52-week highs. When these price levels hit, it typically signals strong business execution, positive market sentiment, or significant industry tailwinds.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/2-surging-stocks-exciting-potential-201447937.html?.tsrc=rss",
+   "published_at": "2026-10-26T20:14:47Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:31Z",
+   "fingerprint": "c124ca33f297430c",
+   "primary_source": false,
+   "cluster_id": "43cec6ca13422657",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7876e5dfc2bba1a3",
+   "symbols": [
+    "PKG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "PKG Q3 deep dive: higher volumes and price realization drive strong performance, cost headwinds persist",
+   "summary": "Packaging Corporation of America (NYSE:PKG) met Wall Street’s revenue expectations in Q3 2026, with sales up 12.5% year on year to $2.60 billion. Its non-GAAP profit of $3.04 per share was 4.3% above analysts’ consensus estimates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/pkg-q3-deep-dive-higher-224039368.html?.tsrc=rss",
+   "published_at": "2026-10-23T22:40:39Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:31Z",
+   "fingerprint": "d88159dc111eabbf",
+   "primary_source": false,
+   "cluster_id": "7876e5dfc2bba1a3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "39727689a8c3e8ea",
+   "symbols": [
+    "PKG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Pricing is PCA’s ‘supreme focus’ right now",
+   "summary": "Product price increases helped to offset some demand declines and higher input costs during Q3, said Packaging Corporation of America executives during Thursday’s earnings call. They also credited recent mill upgrades.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "packagingdive.com",
+   "url": "https://www.packagingdive.com/news/pricing-is-pcas-supreme-focus-right-now/833677/?.tsrc=rss",
+   "published_at": "2026-10-23T16:57:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:31Z",
+   "fingerprint": "b0028c40943af633",
+   "primary_source": false,
+   "cluster_id": "39727689a8c3e8ea",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4fda3c9458e3284c",
+   "symbols": [
+    "PKG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "5 insightful analyst questions from Packaging Corporation of America’s Q3 earnings call",
+   "summary": "Packaging Corporation of America’s Q3 results were met with a positive market response, reflecting robust year-on-year sales growth and solid operational execution. Management attributed the strong quarter to a combination of higher sales volumes, successful price realization, an",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/5-insightful-analyst-questions-packaging-084839595.html?.tsrc=rss",
+   "published_at": "2026-10-23T08:48:39Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:31Z",
+   "fingerprint": "05fe9fa2626b1a98",
+   "primary_source": false,
+   "cluster_id": "4fda3c9458e3284c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "521fbcb7877de7bd",
+   "symbols": [
+    "PKG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Packaging Corp Of America (PKG) Q3 Earnings Beat Meets Rising Cost Risk",
+   "summary": "Packaging Corporation of America just put Q3 2026 on the table with a clean beat in the metric that matters most for a box maker. The stock jumped 4.1% to US$248.81 the first trading day after the release, yet the real story sits in the earnings power behind that move. Core packa",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/packaging-corp-america-pkg-q3-221445512.html?.tsrc=rss",
+   "published_at": "2026-10-22T22:14:45Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:31Z",
+   "fingerprint": "8b707cef7ab7d52d",
+   "primary_source": false,
+   "cluster_id": "521fbcb7877de7bd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3236fc791a4ece2a",
+   "symbols": [
+    "PKG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Packaging Corporation of America Q3 Earnings Call Highlights",
+   "summary": "Packaging Corporation of America (NYSE:PKG) reported third-quarter 2026 net income of $262 million, or $2.93 per share, while adjusted net income excluding special items totaled $272 million, or $3.04 per share. Adjusted earnings rose from $2.73 per share in the third quarter of ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-packaging-corporation-of-america-q3-earnings-call-highlights-2026-10-22/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-22T22:04:18Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:31Z",
+   "fingerprint": "6a531e6e672776a3",
+   "primary_source": false,
+   "cluster_id": "3236fc791a4ece2a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4b38084a0b58f952",
+   "symbols": [
+    "PKG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "PCA (PKG) Q3 2026 Earnings Call Transcript",
+   "summary": "Net sales hit $2.6B on strong pricing, while Greif integration synergies exceeded targets.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/22/pca-pkg-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-22T18:10:42Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:31Z",
+   "fingerprint": "28b5bb2142336448",
+   "primary_source": false,
+   "cluster_id": "4b38084a0b58f952",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ac333a48a0c7781b",
+   "symbols": [
+    "BALL",
+    "PKG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Packaging Corp Q3 Earnings Beat Estimates on Favorable Price & Mix",
+   "summary": "PKG Q3'26 earnings beat estimates, driven by favorable price and mix, higher shipments, and contributions from Greif operations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/packaging-corp-q3-earnings-beat-134100565.html?.tsrc=rss",
+   "published_at": "2026-10-22T13:41:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:18Z",
+   "fingerprint": "08acc8ef136b1eac",
+   "primary_source": false,
+   "cluster_id": "ac333a48a0c7781b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fe198e9d53aa4326",
+   "symbols": [
+    "PKG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Packaging Corporation of America Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Packaging Corporation of America's Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-packaging-corporation-of-america-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-22T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:31Z",
+   "fingerprint": "63ba1a8e66199400",
+   "primary_source": false,
+   "cluster_id": "fe198e9d53aa4326",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4e04b1b370e66f73",
+   "symbols": [
+    "PKG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Packaging Corp. (PKG) Tops Q3 Earnings and Revenue Estimates",
+   "summary": "Packaging Corp. (PKG) delivered earnings and revenue surprises of +3.05% and +1.46%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/packaging-corp-pkg-tops-q3-225004619.html?.tsrc=rss",
+   "published_at": "2026-10-21T22:50:04Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:31Z",
+   "fingerprint": "8d11efd6e65e5a7e",
+   "primary_source": false,
+   "cluster_id": "4e04b1b370e66f73",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5de9f16614fe79de",
+   "symbols": [
+    "PKG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compared to Estimates, Packaging Corp. (PKG) Q3 Earnings: A Look at Key Metrics",
+   "summary": "Although the revenue and EPS for Packaging Corp. (PKG) give a sense of how its business performed in the quarter ended September 2026, it might be worth considering how some key metrics compare with Wall Street estimates and the year-ago numbers.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/compared-estimates-packaging-corp-pkg-220005550.html?.tsrc=rss",
+   "published_at": "2026-10-21T22:00:05Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:31Z",
+   "fingerprint": "cc2c95e3f434ce66",
+   "primary_source": false,
+   "cluster_id": "5de9f16614fe79de",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6d80bfcdaa0ea02c",
+   "symbols": [
+    "PKG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Packaging Corp.: Q3 Earnings Snapshot",
+   "summary": "of America (PKG) on Wednesday reported third-quarter profit of $262.The Lake Forest, Illinois-based company said it had net income of $2.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/packaging-corp-q3-earnings-snapshot-213846917.html?.tsrc=rss",
+   "published_at": "2026-10-21T21:38:46Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:31Z",
+   "fingerprint": "c3b8a05ccd283482",
+   "primary_source": false,
+   "cluster_id": "6d80bfcdaa0ea02c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "872b1bf58e64a225",
+   "symbols": [
+    "PKG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Packaging Corporation of America’s (NYSE:PKG) Q3 2026 earnings results: revenue in line with expectations",
+   "summary": "Packaging Corporation of America (NYSE:PKG) met Wall Street’s revenue expectations in Q3 2026, with sales up 12.5% year on year to $2.60 billion. Its non-GAAP profit of $3.04 per share was 4.3% above analysts’ consensus estimates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/packaging-corporation-america-nyse-pkg-213550538.html?.tsrc=rss",
+   "published_at": "2026-10-21T21:35:50Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:31Z",
+   "fingerprint": "06442fbdade36368",
+   "primary_source": false,
+   "cluster_id": "872b1bf58e64a225",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

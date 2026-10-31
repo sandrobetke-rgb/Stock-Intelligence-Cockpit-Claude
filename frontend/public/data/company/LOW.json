@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T13:54:04Z",
+ "generated_at": "2026-10-31T14:07:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 2.349911702963853,
    "rvol": 1.3722998318980344,
    "ema10": 200.42681598646453,
-   "ema21": 196.52448921404184,
+   "ema21": 196.5244892147354,
    "sma50": 195.15160766601562,
-   "sma200": 223.2257349395752
+   "sma200": 223.2257364654541
   },
   "market_cap": 117299568640.0,
   "market_cap_currency": "USD",
@@ -54,12 +54,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 3.3,
+   "score": 62.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 17,
+   "independent_24h": 3
   },
   "political": {
    "relevance": 0,
@@ -100,9 +102,9 @@
   "adr20": 2.349911702963853,
   "rvol": 1.3722998318980344,
   "ema10": 200.42681598646453,
-  "ema21": 196.52448921404184,
+  "ema21": 196.5244892147354,
   "sma50": 195.15160766601562,
-  "sma200": 223.2257349395752,
+  "sma200": 223.2257364654541,
   "volatility_ann": 26.721519906658,
   "avg_dollar_volume_20d": 615332577.3336029,
   "move_zscore": 0.5130229813481518
@@ -425,11 +427,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 3.3,
+  "score": 62.1,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 100.0,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 18.6,
@@ -438,35 +440,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 17,
+    "independent": 17,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 6,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 20,
+    "independent": 20,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 8,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -484,7 +488,463 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "9b45a389edd9fda9",
+   "symbols": [
+    "LOW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Lowe's (LOW) Stock May Be Fully Priced As Cash Flow Holds Up",
+   "summary": "Lowe's Companies has climbed in recent weeks, yet the stock is still down over the current year, which puts fresh focus on whether the current share price lines up with the cash the business can generate over time. With the valuation lens squarely on its cash flows rather than sh",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/lowes-low-stock-may-fully-011448304.html?.tsrc=rss",
+   "published_at": "2026-10-31T01:14:48Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:48Z",
+   "fingerprint": "83c9df17d750ec7f",
+   "primary_source": false,
+   "cluster_id": "9b45a389edd9fda9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7470ef77488dde5a",
+   "symbols": [
+    "HD",
+    "LOW",
+    "WSM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are Smaller Home Projects Sustaining Home Depot's Sales Growth?",
+   "summary": "HD's sales growth is supported by steady demand for smaller home projects and digital gains, even as larger renovations face persistent pressure.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/smaller-home-projects-sustaining-home-144300327.html?.tsrc=rss",
+   "published_at": "2026-10-30T14:43:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:51Z",
+   "fingerprint": "68fb85ad00141f17",
+   "primary_source": false,
+   "cluster_id": "7470ef77488dde5a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a597c457b46667eb",
+   "symbols": [
+    "JNJ",
+    "KO",
+    "LOW",
+    "PG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "4 Dividend Kings With 50-Plus Years of Payout Increases for Retirement Income",
+   "summary": "Four companies have raised their dividends every single year for at least half a century, but not all of them carry the same risks heading into retirement. Here is what separates the safest income from the shakiest streak in this elite group.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/30/4-dividend-kings-with-50-plus-years-of-payout-increases-for-retirement-income/?.tsrc=rss",
+   "published_at": "2026-10-30T14:17:01Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:02:13Z",
+   "fingerprint": "1663da5c9692118b",
+   "primary_source": false,
+   "cluster_id": "a597c457b46667eb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cc40bbdbf966ada2",
+   "symbols": [
+    "LOW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Traeger (COOK) Moves 6.9% Higher: Will This Strength Last?",
+   "summary": "Traeger (COOK) saw its shares surge in the last session with trading volume being higher than average. The latest trend in earnings estimate revisions may not translate into further price increase in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/traeger-cook-moves-6-9-104700915.html?.tsrc=rss",
+   "published_at": "2026-10-30T10:47:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:48Z",
+   "fingerprint": "3be382c2f9a89ce5",
+   "primary_source": false,
+   "cluster_id": "cc40bbdbf966ada2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bd1276bc9652035e",
+   "symbols": [
+    "LOW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Floor & Dcor (FND) Q3 Earnings Beat Estimates",
+   "summary": "Floor & Dcor (FND) delivered earnings and revenue surprises of +7.02% and -0.31%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/floor-dcor-fnd-q3-earnings-220506865.html?.tsrc=rss",
+   "published_at": "2026-10-29T22:05:06Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:48Z",
+   "fingerprint": "d87d783a645182b5",
+   "primary_source": false,
+   "cluster_id": "bd1276bc9652035e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6eebf4b69a69f4f0",
+   "symbols": [
+    "HD",
+    "LOW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Home Improvement Stocks That Are Going to Heat Up",
+   "summary": "Home Depot, Lowe’s, and Floor & Decor stand to benefit from America’s aging housing stock. Renos and new decor can’t be put off forever.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/a0702c2a-3214-3b28-8444-b0776864ba87/3-home-improvement-stocks.html?.tsrc=rss",
+   "published_at": "2026-10-28T20:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:51Z",
+   "fingerprint": "376d31b028fc9277",
+   "primary_source": false,
+   "cluster_id": "6eebf4b69a69f4f0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "98b44c19eeef3adb",
+   "symbols": [
+    "HD",
+    "LOW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are You Overpaying For Home Depot Stock Versus Its Rivals?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/hd/articles/620980/are-you-overpaying-for-home-depot-stock-versus-its-rivals/2026-10-28?.tsrc=rss",
+   "published_at": "2026-10-28T15:52:21Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:51Z",
+   "fingerprint": "69c50b14006a71c0",
+   "primary_source": false,
+   "cluster_id": "98b44c19eeef3adb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d1f31e3d5b8b0104",
+   "symbols": [
+    "HD",
+    "LOW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Home Depot vs. Lowe's: Which Retail Giant Is Worth Betting On?",
+   "summary": "Home Depot's Pro investments, sales growth and digital gains contrast with Lowe's contractor expansion, margin improvement and lower valuation.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/home-depot-vs-lowes-retail-142100007.html?.tsrc=rss",
+   "published_at": "2026-10-28T14:21:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:51Z",
+   "fingerprint": "87ad2e8febfcf7bd",
+   "primary_source": false,
+   "cluster_id": "d1f31e3d5b8b0104",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "acc0768b68323e68",
+   "symbols": [
+    "LOW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Lowe's Earnings Preview: What to Expect",
+   "summary": "Lowe's is set to report its third-quarter results in November, and analysts expect a single-digit earnings decline.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "barchart.com",
+   "url": "https://www.barchart.com/story/news/8501773/lowe-s-earnings-preview-what-to-expect?.tsrc=rss",
+   "published_at": "2026-10-28T13:15:58Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:48Z",
+   "fingerprint": "cd30fc29d2f14ab9",
+   "primary_source": false,
+   "cluster_id": "acc0768b68323e68",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b602a8e62d2d76d1",
+   "symbols": [
+    "LOW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Brokers Suggest Investing in Lowe's (LOW): Read This Before Placing a Bet",
+   "summary": "According to the average brokerage recommendation (ABR), one should invest in Lowe's (LOW). It is debatable whether this highly sought-after metric is effective because Wall Street analysts' recommendations tend to be overly optimistic. Would it be worth investing in the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/brokers-suggest-investing-lowes-low-123002045.html?.tsrc=rss",
+   "published_at": "2026-10-28T12:30:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:48Z",
+   "fingerprint": "ef41184f0c47dba3",
+   "primary_source": false,
+   "cluster_id": "b602a8e62d2d76d1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b4cd8c254121be55",
+   "symbols": [
+    "HD",
+    "LOW",
+    "SHW",
+    "TSCO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Should You Buy Lowe's Stock For Its Cash?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/low/articles/620971/should-you-buy-lowes-stock-for-its-cash-2/2026-10-28?.tsrc=rss",
+   "published_at": "2026-10-28T08:22:40Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:51Z",
+   "fingerprint": "e9474ee649bd4ee2",
+   "primary_source": false,
+   "cluster_id": "b4cd8c254121be55",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "168f738ba14e6f20",
+   "symbols": [
+    "BBY",
+    "LOW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Best Buy offers a price match policy Target dropped",
+   "summary": "Amazon and Walmart don’t offer the same benefit, giving Best Buy an edge you may not know about.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "thestreet.com",
+   "url": "https://www.thestreet.com/retail/best-buy-keeps-price-matching-customer-perk-target-dropped?.tsrc=rss",
+   "published_at": "2026-10-27T23:17:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:20Z",
+   "fingerprint": "019fd395e48e37de",
+   "primary_source": false,
+   "cluster_id": "168f738ba14e6f20",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5db763bec9e620d2",
+   "symbols": [
+    "LOW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Don't let AI distract you from earnings! Takeaways from UPS, Hilton, & more",
+   "summary": "Yahoo Finance Executive Editor Brian Sozzi takes a closer look at some of this quarter's most recent earnings results: Coca-Cola (KO), Hilton (HLT), Whirlpool (WHR), and UPS (UPS).",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/video/dont-let-ai-distract-earnings-150000539.html?.tsrc=rss",
+   "published_at": "2026-10-27T15:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:48Z",
+   "fingerprint": "2a6d2fa3173fa974",
+   "primary_source": false,
+   "cluster_id": "5db763bec9e620d2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "25b37b32a7814358",
+   "symbols": [
+    "LOW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Earnings season, Anthropic IPO, and decoding the Microsoft buyouts",
+   "summary": "Yahoo Finance Executive Editor Brian Sozzi takes a deeper look at upcoming earnings reports, the connection between SpaceX (SPCX) and Anthropic (ANTH.PVT), and what it means for Microsoft (MSFT) as it begins voluntary layoffs. Sozzi also sits down with The Connor Group Managing P",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/video/earnings-season-anthropic-ipo-and-decoding-the-microsoft-buyouts-140247088.html?.tsrc=rss",
+   "published_at": "2026-10-27T14:02:47Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:48Z",
+   "fingerprint": "4ea28e3bd5a65b22",
+   "primary_source": false,
+   "cluster_id": "25b37b32a7814358",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "14756e49d6ea1ef5",
+   "symbols": [
+    "HD",
+    "LOW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Lowe's Is Down 30%, and Home Depot Is Down 18%. Here's the Housing Stock I'd Buy Even With 30-Year Mortgage Rates at 7.3%.",
+   "summary": "The housing market has hit a wall, which is a problem for housing-related stocks, but Lowe's may have a valuation edge over Home Depot.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/10/26/lowes-is-down-30-and-home-depot-is-down-18-heres-t/?.tsrc=rss",
+   "published_at": "2026-10-27T02:35:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:51Z",
+   "fingerprint": "2448abcc7b0988b3",
+   "primary_source": false,
+   "cluster_id": "14756e49d6ea1ef5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "03a31e26c33b38ff",
+   "symbols": [
+    "HD",
+    "LOW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "All It Takes Is 1,073 Shares of Home Depot to Generate $10,000 in Yearly Dividends. Here's Whether the Payout Is Safe.",
+   "summary": "The home improvement giant's operations have been under pressure in recent years.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/10/26/shares-home-depot-generate-10000-yearly-dividends/?.tsrc=rss",
+   "published_at": "2026-10-26T12:50:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:51Z",
+   "fingerprint": "d1c34a55a784e22c",
+   "primary_source": false,
+   "cluster_id": "03a31e26c33b38ff",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "306f07606c2f6892",
+   "symbols": [
+    "CINF",
+    "LOW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Forget Chasing High Yields: These 4 Dividend Kings Play the Long Game",
+   "summary": "Fifty-plus years of unbroken dividend raises sounds impressive until you ask whether the cash flow actually backs it up. Four Dividend Kings with half-century track records face that test right now, and the answers reveal which ones retirement income can depend on.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/26/forget-chasing-high-yields-these-4-dividend-kings-play-the-long-game/?.tsrc=rss",
+   "published_at": "2026-10-26T12:45:32Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:41Z",
+   "fingerprint": "19eedd1b145ac3bd",
+   "primary_source": false,
+   "cluster_id": "306f07606c2f6892",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "41149aa46d4b7f2f",
+   "symbols": [
+    "LOW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Amex Stock Slides on Job Cuts, But the Real Story Is Macro",
+   "summary": "American Express posted record Q3 2026 revenue, raised EPS guidance, and improved credit metrics, yet AXP stock fell as investors weighed job cuts and macro concerns.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/articles/amex-stock-slides-on-job-cuts-but-the-real-story-is-macro/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-24T12:35:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:48Z",
+   "fingerprint": "572998c9f3091e07",
+   "primary_source": false,
+   "cluster_id": "41149aa46d4b7f2f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4716e7e77f164600",
+   "symbols": [
+    "LOW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Alpine Income Property Trust, Inc. Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Alpine Income Property Trust, Inc.'s Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-alpine-income-property-trust-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-23T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:48Z",
+   "fingerprint": "952c6d0660bd1700",
+   "primary_source": false,
+   "cluster_id": "4716e7e77f164600",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "34ce489222716d27",
+   "symbols": [
+    "LOW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "One Number That Makes Home Depot A Buy",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/619949/one-number-that-makes-home-depot-a-buy/2026-10-22?.tsrc=rss",
+   "published_at": "2026-10-22T19:19:30Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:48Z",
+   "fingerprint": "e5e7ce4ff02bb334",
+   "primary_source": false,
+   "cluster_id": "34ce489222716d27",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T13:54:04Z",
+ "generated_at": "2026-10-31T14:07:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -54,12 +54,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 3.7,
+   "score": 62.5,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 16,
+   "independent_24h": 2
   },
   "political": {
    "relevance": 0,
@@ -77,7 +79,7 @@
    "buy_value": 0,
    "sell_value": 0,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 1
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
@@ -425,11 +427,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 3.7,
+  "score": 62.5,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 100.0,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 20.8,
@@ -438,35 +440,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 16,
+    "independent": 16,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 6,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 16,
+    "independent": 16,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 6,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -484,8 +488,397 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
- "insiders": [],
+ "signals": [
+  {
+   "id": "f159258fdfb786ad",
+   "symbols": [
+    "LULU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Lululemon (LULU) Dips More Than Broader Market: What You Should Know",
+   "summary": "In the latest trading session, Lululemon (LULU) closed at $107.24, marking a -2.35% move from the previous day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/lululemon-lulu-dips-more-broader-204503075.html?.tsrc=rss",
+   "published_at": "2026-10-30T20:45:03Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:49Z",
+   "fingerprint": "c00fa9845ad7ec09",
+   "primary_source": false,
+   "cluster_id": "f159258fdfb786ad",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "35d4927d05c7e13f",
+   "symbols": [
+    "COST",
+    "LULU",
+    "NKE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Levi Strauss Faces Class Action Lawsuit Over Tariff Refunds",
+   "summary": "LS&amp;Co. is the latest apparel giant to face a class-action lawsuit related to President Donald Trump’s tariff policies and subsequent refunds",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "wwd.com",
+   "url": "https://wwd.com/sourcing-journal/sj-denim/levi-strauss-class-action-lawsuit-over-tariff-refunds-1239392635/?.tsrc=rss",
+   "published_at": "2026-10-30T18:30:32Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:49Z",
+   "fingerprint": "40a344d8b33428e3",
+   "primary_source": false,
+   "cluster_id": "35d4927d05c7e13f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a7751d0a4ee5bd53",
+   "symbols": [
+    "LULU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What You Need to Know Ahead of lululemon athletica’s Earnings Release",
+   "summary": "lululemon athletica is set to report its Q3 results, with analysts anticipating a sharp double-digit decline in EPS year over year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "barchart.com",
+   "url": "https://www.barchart.com/story/news/8552629/what-you-need-to-know-ahead-of-lululemon-athleticas-earnings-release?.tsrc=rss",
+   "published_at": "2026-10-30T12:26:53Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:49Z",
+   "fingerprint": "6967a52cd91cedda",
+   "primary_source": false,
+   "cluster_id": "a7751d0a4ee5bd53",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c92eecb9cd5b86a4",
+   "symbols": [
+    "LULU",
+    "SPG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "University Village Agrees To Be Acquired by Simon",
+   "summary": "Simon®, a real estate investment trust engaged in the ownership of premier shopping, dining, entertainment and mixed-use destinations, today announced that a Simon subsidiary has entered into an agreement to acquire University Village, an open-air retail center in Seattle, Washin",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/university-village-agrees-acquired-simon-120000205.html?.tsrc=rss",
+   "published_at": "2026-10-30T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:49Z",
+   "fingerprint": "2d72c39cfb816d7a",
+   "primary_source": false,
+   "cluster_id": "c92eecb9cd5b86a4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0c56ab51ae43aefb",
+   "symbols": [
+    "LULU",
+    "NKE",
+    "RL",
+    "TPR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Nike Stock A Real Bargain?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/nke/articles/621511/is-nike-stock-a-real-bargain/2026-10-30?.tsrc=rss",
+   "published_at": "2026-10-30T09:56:49Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:49Z",
+   "fingerprint": "7b4e58353e80a6cb",
+   "primary_source": false,
+   "cluster_id": "0c56ab51ae43aefb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a41f8036cd27f2fd",
+   "symbols": [
+    "DECK",
+    "LULU",
+    "NKE",
+    "RL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Lululemon Stock Worth More Than Its Competitors?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/lulu/articles/621273/is-lululemon-stock-worth-more-than-its-competitors/2026-10-29?.tsrc=rss",
+   "published_at": "2026-10-29T14:24:04Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:01Z",
+   "fingerprint": "7bded00085ac3836",
+   "primary_source": false,
+   "cluster_id": "a41f8036cd27f2fd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "15770cda1104e10a",
+   "symbols": [
+    "LULU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "2 Reasons to watch LULU and 1 to stay cautious",
+   "summary": "Lululemon’s stock price has taken a beating over the past six months, shedding 26.8% of its value and falling to $104.24 per share. This was partly due to its softer quarterly results and may have investors wondering how to approach the situation.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/2-reasons-watch-lulu-1-214234142.html?.tsrc=rss",
+   "published_at": "2026-10-28T21:42:34Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:49Z",
+   "fingerprint": "37c4717448907e32",
+   "primary_source": false,
+   "cluster_id": "15770cda1104e10a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a392a0c6cc0a7eeb",
+   "symbols": [
+    "LULU",
+    "NKE",
+    "RL",
+    "TPR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Nike Stock Riskier Than It Looks?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/nke/articles/620956/is-nike-stock-riskier-than-it-looks/2026-10-28?.tsrc=rss",
+   "published_at": "2026-10-28T14:19:32Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:49Z",
+   "fingerprint": "9ee000053c26868a",
+   "primary_source": false,
+   "cluster_id": "a392a0c6cc0a7eeb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "13369e5f579f9689",
+   "symbols": [
+    "LULU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Does Lowered Revenue Outlook Change The Bull Case For Lululemon Stock (LULU)?",
+   "summary": "Lululemon athletica recently cut its fiscal third quarter revenue outlook and is overhauling leadership, including a new CEO, chief product officer, and the board appointment of former product head Tara Poseley. The combination of softer guidance, a refreshed product leadership b",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/does-lowered-revenue-outlook-change-120629334.html?.tsrc=rss",
+   "published_at": "2026-10-28T12:06:29Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:49Z",
+   "fingerprint": "adad88d3441f4d28",
+   "primary_source": false,
+   "cluster_id": "13369e5f579f9689",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cee5c76767667b86",
+   "symbols": [
+    "LULU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Lululemon vs. McDonald's: Can a Beaten-Down Growth Stock Outshine a Dividend Giant?",
+   "summary": "Lululemon and McDonald's are two recognizable consumer brands with very different financial profiles, but the cheaper stock isn't necessarily the better long-term investment.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/coverage/better-buy/2026/10/28/lululemon-vs-mcdonald-s-can-a-beaten-down-growth-stock-outshine-a-dividend-giant/?.tsrc=rss",
+   "published_at": "2026-10-28T09:20:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:49Z",
+   "fingerprint": "e36e3f4835ce2eaf",
+   "primary_source": false,
+   "cluster_id": "cee5c76767667b86",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c9c5940ac01145db",
+   "symbols": [
+    "LULU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Nike’s Dividend Now Pays Like a Treasury. Here’s What Could Put It at Risk",
+   "summary": "Nike's stock has fallen so far that its dividend now rivals government bonds, but the payout is already consuming more cash than the company generates. Whether that streak survives the next few months depends on three specific signals worth watching now.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/27/nikes-dividend-now-pays-like-a-treasury-heres-what-could-put-it-at-risk/?.tsrc=rss",
+   "published_at": "2026-10-27T19:47:43Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:49Z",
+   "fingerprint": "d30e2acb1bfb16f5",
+   "primary_source": false,
+   "cluster_id": "c9c5940ac01145db",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9727c3c22f8c9b32",
+   "symbols": [
+    "DECK",
+    "LULU",
+    "RL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Should You Wait Before Buying Lululemon Stock?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/lulu/articles/620797/should-you-wait-before-buying-lululemon-stock/2026-10-27?.tsrc=rss",
+   "published_at": "2026-10-27T17:22:22Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:01Z",
+   "fingerprint": "8f57d4ca40f89a05",
+   "primary_source": false,
+   "cluster_id": "9727c3c22f8c9b32",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "55897e0960ca389b",
+   "symbols": [
+    "ADS.DE",
+    "LULU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can NIKE's Pace Transformation Reshape Its Cost Structure?",
+   "summary": "NKE's Pace Transformation targets $2.5 billion in savings through fiscal 2031, aiming to streamline operations, cut costs and strengthen profitability.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nikes-pace-transformation-reshape-cost-171500211.html?.tsrc=rss",
+   "published_at": "2026-10-27T17:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T13:59:56Z",
+   "fingerprint": "847a2d152aca53fe",
+   "primary_source": false,
+   "cluster_id": "55897e0960ca389b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8e53bba587e25fba",
+   "symbols": [
+    "LULU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Lululemon Reaches Deal With Texas Over ‘Forever Chemicals’ Probe",
+   "summary": "The three-year agreement sets chemical safety obligations for the activewear brand, which says the state found no PFAS in its products and imposed no financial penalty.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "wwd.com",
+   "url": "https://wwd.com/sourcing-journal/sustainability/lululemon-texas-ken-paxton-pfas-1239386488/?.tsrc=rss",
+   "published_at": "2026-10-27T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:49Z",
+   "fingerprint": "dd490801fdca04f1",
+   "primary_source": false,
+   "cluster_id": "8e53bba587e25fba",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b40c08076aa58afd",
+   "symbols": [
+    "LULU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Amer Sports Leads Athletic Footwear This Holiday Season as Others Struggle, Bank of America Says",
+   "summary": "Nike and Lululemon will see challenges this holiday season, while Amer Sports and off-price are the big winners, says Bank of America.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "wwd.com",
+   "url": "https://wwd.com/footwear-news/shoe-industry-news/nike-lululemon-athletic-footwear-holiday-off-price-salomon-1239385565/?.tsrc=rss",
+   "published_at": "2026-10-26T18:57:21Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:49Z",
+   "fingerprint": "76abda2e8b9d7c30",
+   "primary_source": false,
+   "cluster_id": "b40c08076aa58afd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "48322ef15729994d",
+   "symbols": [
+    "LULU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Dutch Bros vs. Lululemon: Which Stock Is a Better Buy in 2026?",
+   "summary": "Dutch Bros is growing revenue at higher rates, while Lululemon trades at a lower earnings multiple.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/coverage/better-buy/2026/10/26/dutch-bros-vs-lululemon-which-stock-is-a-better-buy-in-2026/?.tsrc=rss",
+   "published_at": "2026-10-26T13:27:01Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:49Z",
+   "fingerprint": "e408f74a2f91f5c3",
+   "primary_source": false,
+   "cluster_id": "48322ef15729994d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
+ "insiders": [
+  {
+   "id": "2bf9df9f5ba14642",
+   "symbol": "LULU",
+   "insider": "Frank Meghan",
+   "role": "Chief Financial Officer",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-09",
+   "filed_at": "2026-10-13",
+   "reporting_delay_days": 4,
+   "shares": 42328.0,
+   "price": 0.0,
+   "value": null,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000133/xslF345X06/form4.xml"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "social_detail": null,

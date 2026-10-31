@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T13:54:04Z",
+ "generated_at": "2026-10-31T14:07:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -7,17 +7,15 @@
   "name": "W. R. Berkley Corporation",
   "region": "US",
   "currency": "USD",
-  "sector": "Financials",
-  "industry": null,
+  "sector": "Financial Services",
+  "industry": "Insurance - Property & Casualty",
   "indexes": [
    "SPX"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 73.86000061035156,
    "price_date": "2026-10-30",
@@ -28,36 +26,40 @@
    "ema10": 73.21478894360425,
    "ema21": 72.56204069984597,
    "sma50": 70.44219207763672,
-   "sma200": 68.79760829925537
+   "sma200": 68.79760822296143
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 27418865664.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
+   "score": 54.7,
+   "coverage_pct": 100,
    "model": "financial",
    "dimensions": {
-    "revenue_growth": null,
-    "profitability": null,
-    "financial_stability": null,
+    "revenue_growth": 54.5,
+    "profitability": 70.2,
+    "financial_stability": 72.1,
     "cashflow": null,
     "market_position": null,
-    "growth_potential": null,
-    "management": null
+    "growth_potential": 21.0,
+    "management": 72.9
    }
   },
   "risk": {
-   "score": 0.0,
+   "score": 8.6,
    "level": "niedrig",
-   "coverage_pct": 45,
-   "top_factors": []
+   "coverage_pct": 85,
+   "top_factors": [
+    "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)"
+   ]
   },
   "market_intelligence": {
-   "score": 4.6,
+   "score": 37.5,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 7,
    "independent_24h": 0
   },
   "political": {
@@ -80,7 +82,7 @@
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -101,40 +103,40 @@
   "ema10": 73.21478894360425,
   "ema21": 72.56204069984597,
   "sma50": 70.44219207763672,
-  "sma200": 68.79760829925537,
+  "sma200": 68.79760822296143,
   "volatility_ann": 18.968684996101924,
   "avg_dollar_volume_20d": 175179045.7669449,
   "move_zscore": 0.8700826147370533
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
+  "score": 54.7,
+  "status": "ok",
+  "coverage_pct": 100,
   "model": "financial",
   "dimensions": [
    {
     "key": "revenue_growth",
     "label": "Umsatzwachstum",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 54.5,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_cagr",
       "label": "Umsatz-CAGR (mehrjährig)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 9.282,
+      "points": 57.1,
+      "status": "ok"
      },
      {
       "key": "revenue_growth_yoy",
       "label": "Umsatzwachstum Vorjahr",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 6.929,
+      "points": 48.4,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -143,25 +145,25 @@
     "key": "profitability",
     "label": "Profitabilität/Margen",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 70.2,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "net_margin",
       "label": "Nettomarge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 12.155,
+      "points": 40.5,
+      "status": "ok"
      },
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 18.343,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -170,17 +172,17 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 72.1,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -0.766,
+      "points": 72.1,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -209,17 +211,17 @@
     "key": "growth_potential",
     "label": "Wachstumspotenzial",
     "weight": 0.2,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 21.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_growth_forward",
       "label": "Erwartetes Umsatzwachstum (Yahoo)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -0.8,
+      "points": 21.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -228,41 +230,41 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 72.9,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 18.343,
+      "points": 73.4,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -0.766,
+      "points": 72.1,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/WRB/financials",
+  "as_of": "2026-10-31T14:07:29Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": 0.0,
+  "score": 8.6,
   "level": "niedrig",
-  "coverage_pct": 45,
+  "coverage_pct": 85,
   "factors": [
    {
     "key": "margin_trend",
@@ -276,11 +278,11 @@
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": -0.77,
     "unit": "%",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -303,20 +305,20 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 15.22,
     "unit": "x",
-    "severity": null,
+    "severity": 0.3,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 10.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -328,18 +330,20 @@
     "status": "ok"
    }
   ],
-  "top_factors": [],
+  "top_factors": [
+   "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)"
+  ],
   "unknown_factors": [
    "Kunden- und Branchenabhängigkeit",
    "Rechtsstreitigkeiten"
   ]
  },
  "intelligence_detail": {
-  "score": 4.6,
+  "score": 37.5,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 26.1,
@@ -357,26 +361,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 7,
+    "independent": 7,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 18,
+    "independent": 18,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -394,7 +400,429 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "fdfb540fd9806f12",
+   "symbols": [
+    "WRB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "William R. Berkley Named 2026 Insurance Hall of Fame Laureate",
+   "summary": "NEW YORK, October 29, 2026--The International Insurance Society has named William R. Berkley, founder of W. R. Berkley Corporation, the 2026 Insurance Hall of Fame Laureate.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/william-r-berkley-named-2026-163700461.html?.tsrc=rss",
+   "published_at": "2026-10-29T16:37:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:37Z",
+   "fingerprint": "62d20fd506b19fdc",
+   "primary_source": false,
+   "cluster_id": "fdfb540fd9806f12",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0c1ef169361d12ba",
+   "symbols": [
+    "BRO",
+    "CB",
+    "WRB",
+    "WTW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WTW Q3 Earnings Beat Estimates on Margin Gains, Revenues Miss",
+   "summary": "Willis Towers Watson beats Q3 earnings estimates as organic growth, expanding margins and strong cash flow support its 2026 outlook and AI-driven savings plan.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wtw-q3-earnings-beat-estimates-141000987.html?.tsrc=rss",
+   "published_at": "2026-10-29T14:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:28Z",
+   "fingerprint": "7a068fd2849a12bf",
+   "primary_source": false,
+   "cluster_id": "0c1ef169361d12ba",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6eb78c0c6952e401",
+   "symbols": [
+    "ACGL",
+    "CB",
+    "TRV",
+    "WRB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Arch Capital Q3 Earnings Beat Estimates on Higher Investment Income",
+   "summary": "ACGL's Q3 2026 earnings beat estimates on higher investment income, but lower premiums, rising catastrophe losses and weaker underwriting weighed on results.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/arch-capital-q3-earnings-beat-161400810.html?.tsrc=rss",
+   "published_at": "2026-10-28T16:14:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T13:59:53Z",
+   "fingerprint": "6747062112af9834",
+   "primary_source": false,
+   "cluster_id": "6eb78c0c6952e401",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "affe0f52e449f648",
+   "symbols": [
+    "AON",
+    "PGR",
+    "TRV",
+    "WRB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Aon Q3 Earnings Beat Estimates on Strong Organic Growth, Margin Expansion",
+   "summary": "Aon beat Q3 earnings estimates with 6% organic revenue growth and a 70-basis-point margin gain, reaffirming its 2026 outlook ahead of the planned USI deal.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/aon-q3-earnings-beat-estimates-132800197.html?.tsrc=rss",
+   "published_at": "2026-10-28T13:28:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:08Z",
+   "fingerprint": "09d28e1bcc54e9dd",
+   "primary_source": false,
+   "cluster_id": "affe0f52e449f648",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "47a7827977d9caac",
+   "symbols": [
+    "CB",
+    "PFG",
+    "WRB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "PFG Q3 Earnings Miss Estimates on Lower Investment Income",
+   "summary": "Principal Financial's Q3 earnings missed estimates despite higher revenues, as lower investment income, rising expenses and net cash outflows weighed on results.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/pfg-q3-earnings-miss-estimates-141900895.html?.tsrc=rss",
+   "published_at": "2026-10-27T14:19:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:33Z",
+   "fingerprint": "29bc5cb336539163",
+   "primary_source": false,
+   "cluster_id": "47a7827977d9caac",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "166627c97d7512c4",
+   "symbols": [
+    "CB",
+    "CINF",
+    "TRV",
+    "WRB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "CINF Q3 Earnings Beat Estimates on Premium Growth, Investment Income",
+   "summary": "Cincinnati Financial's Q3 earnings beat estimates by 43.7%, fueled by premium growth and investment income, despite higher catastrophe losses and expenses.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cinf-q3-earnings-beat-estimates-141500601.html?.tsrc=rss",
+   "published_at": "2026-10-27T14:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:33Z",
+   "fingerprint": "5709ce0ba443aac1",
+   "primary_source": false,
+   "cluster_id": "166627c97d7512c4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d5b383efc7d2ef84",
+   "symbols": [
+    "BRO",
+    "CB",
+    "TRV",
+    "WRB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "BRO Q3 Earnings Miss Estimates on Weak Growth, Margin Pressure",
+   "summary": "Brown & Brown's Q3 revenue growth is supported by acquisitions, but weak organic growth, softer specialty markets and margin pressure weigh on results.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/bro-q3-earnings-miss-estimates-141100706.html?.tsrc=rss",
+   "published_at": "2026-10-27T14:11:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:28Z",
+   "fingerprint": "5bb4705b16dc6cdd",
+   "primary_source": false,
+   "cluster_id": "d5b383efc7d2ef84",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "48b1a643c0c4956d",
+   "symbols": [
+    "CB",
+    "TRV",
+    "WRB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "KNSL Q3 Earnings Beat Estimates on Strong Investment Income",
+   "summary": "Kinsale Capital's Q3 2026 earnings beat estimates by 15.15%, fueled by higher investment income and earned premiums, despite lower revenues and rising expenses.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/knsl-q3-earnings-beat-estimates-144600228.html?.tsrc=rss",
+   "published_at": "2026-10-23T14:46:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:33Z",
+   "fingerprint": "6b886cafa5ebce09",
+   "primary_source": false,
+   "cluster_id": "48b1a643c0c4956d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "87f7d5da8d571f8b",
+   "symbols": [
+    "CB",
+    "TRV",
+    "WRB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "UVE Q3 Earnings Beat Estimates on Lower Losses & Premium Growth",
+   "summary": "Universal Insurance's Q3 earnings surge 41.9% as improved underwriting results, higher earned premiums and investment income fuel a 44% earnings beat.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/uve-q3-earnings-beat-estimates-124500693.html?.tsrc=rss",
+   "published_at": "2026-10-23T12:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:33Z",
+   "fingerprint": "420f28eff1abccf8",
+   "primary_source": false,
+   "cluster_id": "87f7d5da8d571f8b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6a6786c9aa5d3ab0",
+   "symbols": [
+    "GL",
+    "PGR",
+    "WRB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Globe Life Q3 Earnings Miss Estimates on Weak Underwriting Income",
+   "summary": "GL's Q3 2026 earnings miss estimates as weaker underwriting income and rising expenses offset higher premiums and investment income.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/globe-life-q3-earnings-miss-151800860.html?.tsrc=rss",
+   "published_at": "2026-10-22T15:18:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:43Z",
+   "fingerprint": "924a1745f0c3b1e5",
+   "primary_source": false,
+   "cluster_id": "6a6786c9aa5d3ab0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "eed2f52eea85fd50",
+   "symbols": [
+    "PGR",
+    "WRB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Chubb Q3 Earnings Beat Estimates on Investment and Life Income Growth",
+   "summary": "CB's Q3 earnings beat estimates, fueled by record investment income and higher life insurance income, despite rising catastrophe losses pressuring underwriting.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/chubb-q3-earnings-beat-estimates-124000904.html?.tsrc=rss",
+   "published_at": "2026-10-21T12:40:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:30Z",
+   "fingerprint": "641104f80f0ba86a",
+   "primary_source": false,
+   "cluster_id": "eed2f52eea85fd50",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "48221f8d493a5db0",
+   "symbols": [
+    "WRB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "W. R. Berkley (WRB) Stock Slips As Q3 Earnings Lean On Underwriting Quality",
+   "summary": "W. R. Berkley entered this Q3 2026 report with a strong reputation as a disciplined specialty insurer and a stock that had already outpaced the broader insurance group on valuation metrics. After the release, however, the share price slipped about 1% to US$73.16, a muted reaction",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/w-r-berkley-wrb-stock-221045006.html?.tsrc=rss",
+   "published_at": "2026-10-20T22:10:45Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:37Z",
+   "fingerprint": "3dbf8a1c4fe057d9",
+   "primary_source": false,
+   "cluster_id": "48221f8d493a5db0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cc32548bb4e81687",
+   "symbols": [
+    "WRB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WRB Q3 Deep Dive: Technology Efficiency Offsets Margin Pressures, Reinsurance Shrinks",
+   "summary": "Property casualty insurer W. R. Berkley (NYSE:WRB) missed Wall Street’s revenue expectations in Q3 2026, with sales flat year on year at $3.74 billion. Its non-GAAP profit of $1.17 per share was in line with analysts’ consensus estimates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wrb-q3-deep-dive-technology-182150476.html?.tsrc=rss",
+   "published_at": "2026-10-20T18:21:50Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:37Z",
+   "fingerprint": "2c3fec45ca72f8be",
+   "primary_source": false,
+   "cluster_id": "cc32548bb4e81687",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7f6a09309016f208",
+   "symbols": [
+    "WRB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "W. R. Berkley: 3 Key Takeaways for Long-Term Investors",
+   "summary": "Rising bond yields are expanding the company's investment income while underwriting discipline protects margins in a competitive market.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/takeaways/2026/10/20/w-r-berkley-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+   "published_at": "2026-10-20T16:54:33Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:37Z",
+   "fingerprint": "9fdea4e39b54893b",
+   "primary_source": false,
+   "cluster_id": "7f6a09309016f208",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b295720d6c900a7e",
+   "symbols": [
+    "WRB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "W. R. Berkley's Q3 EPS Beat Driven by Stronger Underlying Loss Ratio, UBS Says",
+   "summary": "W. R. Berkley's (WRB) Q3 EPS beat was driven by a stronger underlying loss ratio in Insurance, parti",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/w-r-berkley-apos-q3-155137064.html?.tsrc=rss",
+   "published_at": "2026-10-20T15:51:37Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:37Z",
+   "fingerprint": "0ef5e3fca409ae80",
+   "primary_source": false,
+   "cluster_id": "b295720d6c900a7e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "61186cd959f6ee81",
+   "symbols": [
+    "WRB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "W. R. Berkley (WRB) Q3 2026 Earnings Call Transcript",
+   "summary": "Operating ROE hit 18.8% as underwriting discipline drove gains across specialty insurance.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/20/w-r-berkley-wrb-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-20T14:28:44Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:37Z",
+   "fingerprint": "e9956b2c31161309",
+   "primary_source": false,
+   "cluster_id": "61186cd959f6ee81",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "433fab68926fd9f0",
+   "symbols": [
+    "WRB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "W. R. Berkley Corporation Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of W. R. Berkley Corporation's Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-w-r-berkley-corporation-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-20T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:37Z",
+   "fingerprint": "9ce4931d656b6081",
+   "primary_source": false,
+   "cluster_id": "433fab68926fd9f0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1ebf860c6524e8a4",
+   "symbols": [
+    "PGR",
+    "WRB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "W.R. Berkley Q3 Earnings Beat, Revenues Miss, Premiums Rise Y/Y",
+   "summary": "W.R. Berkley's Q3 2026 earnings beat estimates, while revenues miss despite higher premiums and investment income. Catastrophe losses and expenses rise.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/w-r-berkley-q3-earnings-114100667.html?.tsrc=rss",
+   "published_at": "2026-10-20T11:41:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:30Z",
+   "fingerprint": "8e74235ca944a01c",
+   "primary_source": false,
+   "cluster_id": "1ebf860c6524e8a4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

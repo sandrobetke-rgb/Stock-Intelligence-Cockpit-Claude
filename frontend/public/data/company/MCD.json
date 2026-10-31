@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T13:54:04Z",
+ "generated_at": "2026-10-31T14:07:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 1.7081108106065923,
    "rvol": 1.1990479488736419,
    "ema10": 250.58379251855519,
-   "ema21": 246.94135086732203,
+   "ema21": 246.94135086732177,
    "sma50": 248.01244842529297,
-   "sma200": 280.3167874908447
+   "sma200": 280.31678733825686
   },
   "market_cap": 182656434176.0,
   "market_cap_currency": "USD",
@@ -55,12 +55,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 1.8,
+   "score": 60.6,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 18,
+   "independent_24h": 2
   },
   "political": {
    "relevance": 0,
@@ -101,9 +103,9 @@
   "adr20": 1.7081108106065923,
   "rvol": 1.1990479488736419,
   "ema10": 250.58379251855519,
-  "ema21": 246.94135086732203,
+  "ema21": 246.94135086732177,
   "sma50": 248.01244842529297,
-  "sma200": 280.3167874908447,
+  "sma200": 280.31678733825686,
   "volatility_ann": 20.722266100391142,
   "avg_dollar_volume_20d": 1322632520.6328583,
   "move_zscore": 0.22024913310228644
@@ -427,11 +429,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 1.8,
+  "score": 60.6,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 100.0,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 10.0,
@@ -440,35 +442,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 18,
+    "independent": 18,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 7,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 18,
+    "independent": 18,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 7,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -486,7 +490,425 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "5af11e60da7ca9c8",
+   "symbols": [
+    "AAPL",
+    "AMD",
+    "DD",
+    "EXPE",
+    "MCD",
+    "MU",
+    "PLTR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Strong Growth Momentum and Rising Revisions Fuel Bright Earnings Outlook",
+   "summary": "The Q3 results we have already seen from 60% of S&amp;P 500 members through Friday, October 30th, reconfirm the broad-based growth momentum we have become used to in the last few reporting cycles. Upcoming notable reports include Tech bellwethers like Apple, Advanced Micro Device",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/strong-growth-momentum-rising-revisions-221400708.html?.tsrc=rss",
+   "published_at": "2026-10-30T22:14:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T13:59:51Z",
+   "fingerprint": "3d2130e832a0c5d7",
+   "primary_source": false,
+   "cluster_id": "5af11e60da7ca9c8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "60c9706086fa3c5c",
+   "symbols": [
+    "MCD",
+    "PG",
+    "PSA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "3 Dividend Stocks With Yields Up To 4%",
+   "summary": "Higher inflation readings from the Bank of Japan and a more hawkish tone from Governor Ueda keep interest rates and income on everyone’s mind. Cash rates pay something again, but they do not grow. Investors looking for rising paycheques from their portfolios are paying closer att",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-dividend-stocks-yields-4-211004095.html?.tsrc=rss",
+   "published_at": "2026-10-30T21:10:04Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:54Z",
+   "fingerprint": "d7bf494ab45f58bc",
+   "primary_source": false,
+   "cluster_id": "60c9706086fa3c5c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bdf4b15cfa99f948",
+   "symbols": [
+    "MCD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Green Trail Fuels makes 25-store acquisition",
+   "summary": "The joint venture, which began operating earlier this year, bought Littlefield Retail Group’s c-store arm, with locations in Arkansas and Oklahoma.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "cstoredive.com",
+   "url": "https://www.cstoredive.com/news/green-trail-fuels-makes-25-store-acquisition/873259/?.tsrc=rss",
+   "published_at": "2026-10-30T14:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:54Z",
+   "fingerprint": "7a530941e63a5844",
+   "primary_source": false,
+   "cluster_id": "bdf4b15cfa99f948",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1885d453dd11d1f2",
+   "symbols": [
+    "MCD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Unveiling McDonald's (MCD) Q3 Outlook: Wall Street Estimates for Key Metrics",
+   "summary": "Besides Wall Street's top-and-bottom-line estimates for McDonald's (MCD), review projections for some of its key metrics to gain a deeper understanding of how the company might have fared during the quarter ended September 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/unveiling-mcdonalds-mcd-q3-outlook-121504296.html?.tsrc=rss",
+   "published_at": "2026-10-30T12:15:04Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:54Z",
+   "fingerprint": "6eaf8c66fb4a64a9",
+   "primary_source": false,
+   "cluster_id": "1885d453dd11d1f2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "60c7da14b8f10738",
+   "symbols": [
+    "MCD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "McDonald's (MCD) Stock Could Be Trading At A Premium",
+   "summary": "McDonald's has seen its share price recover in recent weeks after a rough start to the year, which puts fresh focus on whether the current market value lines up with the cash the business is expected to generate. With the stock still down over the year to date, investors are aski",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/mcdonalds-mcd-stock-could-trading-120818449.html?.tsrc=rss",
+   "published_at": "2026-10-30T12:08:18Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:54Z",
+   "fingerprint": "e07ec2ff7af6c6ef",
+   "primary_source": false,
+   "cluster_id": "60c7da14b8f10738",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c1eda145a23d2e7d",
+   "symbols": [
+    "CMG",
+    "MCD",
+    "YUM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Did Chipotle Stock Jump?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/cmg/articles/621580/why-did-chipotle-stock-jump/2026-10-30?.tsrc=rss",
+   "published_at": "2026-10-30T11:15:58Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:43Z",
+   "fingerprint": "104d9f9570e0335d",
+   "primary_source": false,
+   "cluster_id": "c1eda145a23d2e7d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "146355be89dab3f1",
+   "symbols": [
+    "MCD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "McDonald's (MCD) Rises As Market Takes a Dip: Key Facts",
+   "summary": "McDonald's (MCD) closed the most recent trading day at $257.38, moving +2.75% from the previous trading session.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/mcdonalds-mcd-rises-market-takes-204503249.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:45:03Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:54Z",
+   "fingerprint": "153fed392a641974",
+   "primary_source": false,
+   "cluster_id": "146355be89dab3f1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8edaff1bbda23ce8",
+   "symbols": [
+    "CMG",
+    "MCD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Chipotle Jumps 9% as Same-Store Sales Top Estimates; McDonald’s Climbs 2%, Starbucks Edges Higher",
+   "summary": "Chipotle's latest quarter handed Wall Street a mixed bag, with traffic beating expectations while margins took a visible hit from heavy promotions. Whether that tradeoff can sustain a rally in a stock still deep in the red this year is the question investors are now wrestling wit",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/29/chipotle-jumps-9-as-same-store-sales-top-estimates-mcdonalds-climbs-2-starbucks-edges-higher/?.tsrc=rss",
+   "published_at": "2026-10-29T18:08:50Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:43Z",
+   "fingerprint": "0a1d19c9ed6a78fe",
+   "primary_source": false,
+   "cluster_id": "8edaff1bbda23ce8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b52cf0fad37eb1b4",
+   "symbols": [
+    "CCL",
+    "CI",
+    "ICE",
+    "JPM",
+    "MCD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Walmart, Eli Lilly Join 38 Companies Opposing OKX-ICE Tokenized Stocks",
+   "summary": "Walmart (NYSE: $WMT), Eli Lilly (NYSE: $LLY), Cigna Group (NYSE: $CI), Carnival (NYSE: $CCL) and Arcos Dorados (NYS...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "cryptoprowl.com",
+   "url": "https://www.cryptoprowl.com/releases/walmart-eli-lilly-join-38-companies-opposing-okx-ice-tokenized-stocks-7539?.tsrc=rss",
+   "published_at": "2026-10-29T15:27:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:35Z",
+   "fingerprint": "73fcfe37177592b2",
+   "primary_source": false,
+   "cluster_id": "b52cf0fad37eb1b4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d2edc48e2bfc4944",
+   "symbols": [
+    "CMG",
+    "MCD"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Chipotle Soars 8% on Third Straight Quarter of Traffic Growth: “Lower Income Cohort Outperformed”",
+   "summary": "Key TakeawaysChipotle jumped about 8% after a third straight quarter of transaction growth, despite an earnings miss. Lower-income diners led the gain, which matters more than the miss.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/chipotle-soars-8-on-third-straight-quarter-of-traffic-growth-lower-income-cohort-outperformed?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-29T15:22:18Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:43Z",
+   "fingerprint": "af626a8ab628b4a2",
+   "primary_source": false,
+   "cluster_id": "d2edc48e2bfc4944",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "80910b19de1d13c1",
+   "symbols": [
+    "CI",
+    "MCD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Walmart Blocks Its Stock From OKX-ICE Tokenized Trading Venue",
+   "summary": "Walmart, Eli Lilly, Cigna, Carniva,l and Arcos Dorados objected to trading of their shares on the planned OKX-ICE tokenized stock venue, bringing the total to 38.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "decrypt.co",
+   "url": "https://decrypt.co/382145/walmart-blocks-stock-okx-ice-tokenized-trading-venue?.tsrc=rss",
+   "published_at": "2026-10-29T15:07:15Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:40Z",
+   "fingerprint": "163d2cfe6d5e21f8",
+   "primary_source": false,
+   "cluster_id": "80910b19de1d13c1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "34071c078fcee68f",
+   "symbols": [
+    "MCD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Dine Brands (DIN) Moves 8.3% Higher: Will This Strength Last?",
+   "summary": "Dine Brands (DIN) witnessed a jump in share price last session on above-average trading volume. The latest trend in earnings estimate revisions for the stock doesn't suggest further strength down the road.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dine-brands-din-moves-8-142800113.html?.tsrc=rss",
+   "published_at": "2026-10-29T14:28:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:54Z",
+   "fingerprint": "4d17a261d3a5714f",
+   "primary_source": false,
+   "cluster_id": "34071c078fcee68f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5becda3c6727df29",
+   "symbols": [
+    "HD",
+    "MCD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "$300,000 in Home Depot, IBM and McDonald’s Could Pay Over $8,500 a Year",
+   "summary": "Three household names have paid dividends for decades, and a closer look at their current yields reveals how much passive income a fixed lump sum can quietly generate each quarter without selling a single share.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/29/300000-in-home-depot-ibm-and-mcdonalds-could-pay-over-8500-a-year/?.tsrc=rss",
+   "published_at": "2026-10-29T13:47:06Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:51Z",
+   "fingerprint": "c9434583f4692458",
+   "primary_source": false,
+   "cluster_id": "5becda3c6727df29",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "09333bf42b9cf160",
+   "symbols": [
+    "MCD"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Kura Sushi (KRUS) Earnings Expected to Grow: What to Know Ahead of Next Week's Release",
+   "summary": "Kura Sushi (KRUS) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/kura-sushi-krus-earnings-expected-130032757.html?.tsrc=rss",
+   "published_at": "2026-10-29T13:00:32Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:54Z",
+   "fingerprint": "397c254a66ee5056",
+   "primary_source": false,
+   "cluster_id": "09333bf42b9cf160",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c23424600785af01",
+   "symbols": [
+    "MCD"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "PC Connection (CNXN) Q3 Earnings and Revenues Top Estimates",
+   "summary": "PC Connection (CNXN) delivered earnings and revenue surprises of +19.23% and +13.00%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/pc-connection-cnxn-q3-earnings-223005870.html?.tsrc=rss",
+   "published_at": "2026-10-28T22:30:05Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:54Z",
+   "fingerprint": "cfc2a29c73a5eb83",
+   "primary_source": false,
+   "cluster_id": "c23424600785af01",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e278c9db5f999bab",
+   "symbols": [
+    "MCD",
+    "YUM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wendy’s Surges 14% on Trian-Led $1.4B Take-Private Offer; McDonald’s Edges Higher, Yum Brands Stays Put",
+   "summary": "Trian Fund Management wants to pull Wendy's off the public market, but the burger chain's board has gone silent and some shareholders are already calling the price too cheap.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/28/wendys-surges-14-on-trian-led-1-4b-take-private-offer-mcdonalds-edges-higher-yum-brands-stays-put/?.tsrc=rss",
+   "published_at": "2026-10-28T15:02:29Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:54Z",
+   "fingerprint": "c577410ab81f4dd9",
+   "primary_source": false,
+   "cluster_id": "e278c9db5f999bab",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "84551631ae79f75e",
+   "symbols": [
+    "MCD",
+    "YUM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Trian Says It Can Revive Wendy’s. Nelson Peltz Offers $1.4 Billion for the Fast-Food Chain.",
+   "summary": "Wendy’s has struggled in recent years. Trian Fund Management says a buyout could revive its business.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/3d4406be-3638-3667-8ba0-ea48019c0860/trian-says-it-can-revive.html?.tsrc=rss",
+   "published_at": "2026-10-28T14:53:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:54Z",
+   "fingerprint": "45bffe94ce7841ea",
+   "primary_source": false,
+   "cluster_id": "84551631ae79f75e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6ea5a5c410c5d81c",
+   "symbols": [
+    "MCD",
+    "YUM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What's Going To Happen With McDonald's Stock Soon?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/mcd/articles/621025/whats-going-to-happen-with-mcdonalds-stock-soon/2026-10-28?.tsrc=rss",
+   "published_at": "2026-10-28T13:11:07Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:54Z",
+   "fingerprint": "79478124f612a334",
+   "primary_source": false,
+   "cluster_id": "6ea5a5c410c5d81c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

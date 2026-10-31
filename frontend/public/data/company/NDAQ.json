@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T13:54:04Z",
+ "generated_at": "2026-10-31T14:07:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 2.17653435442309,
    "rvol": 1.4896118813019916,
    "ema10": 102.31635264517988,
-   "ema21": 99.02547486046052,
+   "ema21": 99.02547486046087,
    "sma50": 95.61738311767579,
-   "sma200": 90.13875545501709
+   "sma200": 90.13875549316407
   },
   "market_cap": 59380166656.0,
   "market_cap_currency": "USD",
@@ -51,12 +51,14 @@
    "top_factors": []
   },
   "market_intelligence": {
-   "score": 4.3,
+   "score": 50.8,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 12,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -97,9 +99,9 @@
   "adr20": 2.17653435442309,
   "rvol": 1.4896118813019916,
   "ema10": 102.31635264517988,
-  "ema21": 99.02547486046052,
+  "ema21": 99.02547486046087,
   "sma50": 95.61738311767579,
-  "sma200": 90.13875545501709,
+  "sma200": 90.13875549316407,
   "volatility_ann": 24.52592628812024,
   "avg_dollar_volume_20d": 332889998.0892563,
   "move_zscore": 0.3861489473105518
@@ -333,48 +335,50 @@
   ]
  },
  "intelligence_detail": {
-  "score": 4.3,
+  "score": 50.8,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 40,
    "primary_sources": 0,
-   "analyst_activity": 0,
+   "analyst_activity": 35,
    "price_volume_anomaly": 24.5,
    "social_attention": null,
    "insider_activity": null
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 12,
+    "independent": 12,
+    "duplicates": 1,
+    "sources": 2,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 19,
+    "independent": 19,
+    "duplicates": 1,
+    "sources": 3,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -392,7 +396,442 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "1387dc8e045e762d",
+   "symbols": [
+    "CBOE",
+    "CME",
+    "ICE",
+    "NDAQ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "CBOE Q3 Earnings Beat Estimates on Strong Options Volumes",
+   "summary": "Cboe Global's Q3 earnings surge 36% as record options activity and Data Vantage revenue growth drive results and lift its 2026 outlook.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/options/articles/cboe-q3-earnings-beat-estimates-155700354.html?.tsrc=rss",
+   "published_at": "2026-10-30T15:57:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:34Z",
+   "fingerprint": "a98ce6d9dc1fb3f4",
+   "primary_source": false,
+   "cluster_id": "1387dc8e045e762d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "df807a8df4827344",
+   "symbols": [
+    "DASH",
+    "F",
+    "FSLR",
+    "INCY",
+    "MPWR",
+    "NDAQ"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Reddit downgraded, Rivian upgraded: Wall Street's top analyst calls",
+   "summary": "Reddit downgraded, Rivian upgraded: Wall Street's top analyst calls",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/netflix-initiated-instacart-upgraded-wall-134150525.html?.tsrc=rss",
+   "published_at": "2026-10-30T13:45:17Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:58Z",
+   "fingerprint": "e10c77dddb225c82",
+   "primary_source": false,
+   "cluster_id": "df807a8df4827344",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "11783325e098706d",
+   "symbols": [
+    "NDAQ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Charming Medical Limited Notified of Anticipated Delisting from The Nasdaq Stock Market",
+   "summary": "NEW YORK, Oct. 29, 2026 (GLOBE NEWSWIRE) -- The Nasdaq Stock Market (Nasdaq: NDAQ) announced today that it has notified Charming Medical Limited (Nasdaq: MCTA) that its securities will be delisted from the Nasdaq Stock Market LLC on November 9, 2026, unless the company appeals to",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/charming-medical-limited-notified-anticipated-200500470.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:10Z",
+   "fingerprint": "811c548c21bfe9fc",
+   "primary_source": false,
+   "cluster_id": "11783325e098706d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "21a68247884eab1a",
+   "symbols": [
+    "CBOE",
+    "CME",
+    "ICE",
+    "NDAQ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Intercontinental Q3 Earnings Beat on Exchanges and Data Growth",
+   "summary": "Intercontinental Exchange beats Q3 earnings estimates as trading and data grow, with higher recurring revenue forecasts and a faster MarketAxess deal timeline.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/intercontinental-q3-earnings-beat-exchanges-172000317.html?.tsrc=rss",
+   "published_at": "2026-10-29T17:20:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:34Z",
+   "fingerprint": "3e9cdfa3f5bc9051",
+   "primary_source": false,
+   "cluster_id": "21a68247884eab1a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d24963e549e5a6ef",
+   "symbols": [
+    "NDAQ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Nasdaq Halts TJGC Group Limited",
+   "summary": "NEW YORK, Oct. 29, 2026 (GLOBE NEWSWIRE) -- The Nasdaq Stock Market® (Nasdaq: NDAQ) announced that trading is halted in TJGC Group Limited (Nasdaq: TJGC) for additional information requested from the company. Previously, the Securities and Exchange Commission effected a trading s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-halts-tjgc-group-limited-120000876.html?.tsrc=rss",
+   "published_at": "2026-10-29T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:10Z",
+   "fingerprint": "415aef007d877991",
+   "primary_source": false,
+   "cluster_id": "d24963e549e5a6ef",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9785bf2496896d77",
+   "symbols": [
+    "CBOE",
+    "CME",
+    "MCO",
+    "NDAQ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cboe Global Markets Earnings Ahead: What Past Reactions Say About The Stock",
+   "summary": "Cboe Global Markets (BATS:CBOE) is scheduled to report its earnings on Friday, October 30, 2026. The company has a market value of about $33.5 billion. Over the last twelve months it generated $5.1 billion in revenue and $1.8 billion in operating profit, with net income of $1.4 b",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/cboe/articles/621224/cboe-global-markets-earnings-ahead-what-past-reactions-say-about-the-stock/2026-10-29?.tsrc=rss",
+   "published_at": "2026-10-29T10:39:18Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:34Z",
+   "fingerprint": "652c474b7a14b07d",
+   "primary_source": false,
+   "cluster_id": "4166cccf55957449",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "65cc4f8fe18aa0bc",
+   "symbols": [
+    "NDAQ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What Is Behind The Move In GM Stock?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/gm/articles/621068/what-is-behind-the-move-in-gm-stock/2026-10-28?.tsrc=rss",
+   "published_at": "2026-10-28T10:11:34Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:10Z",
+   "fingerprint": "ebed34e7569b6fa3",
+   "primary_source": false,
+   "cluster_id": "65cc4f8fe18aa0bc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "201a5d2d41c8ac24",
+   "symbols": [
+    "NDAQ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What GM’s Move to the Nasdaq Means for the Stock",
+   "summary": "General Motors is switching its stock listing to the Nasdaq. It’s leaving the 234-year-old NYSE.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/5f1b2531-fd81-326a-aafa-824671023a45/what-gm%E2%80%99s-move-to-the-nasdaq.html?.tsrc=rss",
+   "published_at": "2026-10-27T14:47:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:10Z",
+   "fingerprint": "9c5e8e204ad373b3",
+   "primary_source": false,
+   "cluster_id": "201a5d2d41c8ac24",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "aefaf6ca5a7f8be5",
+   "symbols": [
+    "NDAQ",
+    "NTRS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 U.S. Treasury ETFs Facing Pressure From Higher Long Term Yields",
+   "summary": "Money is moving again as investors weigh steady Fed rates, sticky inflation and higher long-term yields that pull cash toward government-bond ETFs and away from crowded trades. That tug of war creates real openings for anyone willing to rethink where safety, income and interest r",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/options/articles/3-u-treasury-etfs-facing-141137150.html?.tsrc=rss",
+   "published_at": "2026-10-27T14:11:37Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:10Z",
+   "fingerprint": "0cdfcc38ba643091",
+   "primary_source": false,
+   "cluster_id": "aefaf6ca5a7f8be5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "812cdadef18e5513",
+   "symbols": [
+    "NDAQ",
+    "TRMB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Nasdaq Appoints Börje Ekholm to its Board of Directors; Holden Spaht to Step Down from Board at Year-End",
+   "summary": "NEW YORK, Oct. 26, 2026 (GLOBE NEWSWIRE) -- Nasdaq, Inc. (Nasdaq: NDAQ) today announced the appointment of Börje Ekholm to its Board of Directors. Ekholm is the former President and CEO of Ericsson, the former President and CEO of Investor AB, and a previous Chair of the Nasdaq B",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-appoints-b-rje-ekholm-200500528.html?.tsrc=rss",
+   "published_at": "2026-10-26T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:10Z",
+   "fingerprint": "e106ef02b2d7d080",
+   "primary_source": false,
+   "cluster_id": "812cdadef18e5513",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "620f9406ff298771",
+   "symbols": [
+    "NDAQ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Nasdaq Announces Mid-Month Open Short Interest Positions in Nasdaq Stocks as of Settlement Date October 15, 2026",
+   "summary": "NEW YORK, Oct. 26, 2026 (GLOBE NEWSWIRE) -- At the end of the settlement date of October 15, 2026, short interest in 3,885 Nasdaq Global MarketSM securities totaled 18,609,329,855 shares compared with 18,657,486,300 shares in 3,885 Global Market issues reported for the prior sett",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-announces-mid-month-open-200500872.html?.tsrc=rss",
+   "published_at": "2026-10-26T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:10Z",
+   "fingerprint": "3596780f3f84d790",
+   "primary_source": false,
+   "cluster_id": "620f9406ff298771",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ba56054ab4ada6ff",
+   "symbols": [
+    "NDAQ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Nasdaq Strengthens Asia-Pacific Leadership Team",
+   "summary": "Andrew Murray joins as Senior Vice President to deepen Nasdaq’s Financial Technology client partnerships across Asia-Pacific as the region enters a defining era of market evolution Bob McCooey, Vice Chairman and Head of International Listings, relocates to Singapore to broaden ac",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-strengthens-asia-pacific-leadership-010000833.html?.tsrc=rss",
+   "published_at": "2026-10-26T01:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:10Z",
+   "fingerprint": "d75730330282f23d",
+   "primary_source": false,
+   "cluster_id": "ba56054ab4ada6ff",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6f7e91154e767137",
+   "symbols": [
+    "NDAQ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Franklin Templeton Prepares Nasdaq Debut For ETFs That Turn Stock Dividends Into Bitcoin",
+   "summary": "Franklin Templeton’s funds start with 95% in U.S. stocks and 5% in Bitcoin.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/franklin-templeton-bitcoin-dividend-etfs/cZUGoCLRBUK?.tsrc=rss",
+   "published_at": "2026-10-24T14:06:34Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:10Z",
+   "fingerprint": "81163d7c180b1690",
+   "primary_source": false,
+   "cluster_id": "6f7e91154e767137",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4c0f74ff22f66d54",
+   "symbols": [
+    "NDAQ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Nasdaq CEO Says Markets Are Heading Toward An AI-Driven, 'Always-On' Future",
+   "summary": "Nasdaq Inc. reported better-than-expected third-quarter earnings and revenue Thursday, driven by strong growth in its financial technology and index businesses. The exchange operator reported adjusted earnings of $1.04 per share, beating analysts’ consensus estimate of $1.02 and ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-ceo-says-markets-heading-023008462.html?.tsrc=rss",
+   "published_at": "2026-10-24T02:30:08Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:10Z",
+   "fingerprint": "89a33de7cedd164b",
+   "primary_source": false,
+   "cluster_id": "4c0f74ff22f66d54",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9c6e1462720a9c53",
+   "symbols": [
+    "NDAQ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Learn Why The Bull Case For Nasdaq (NDAQ) Could Change Following Earnings Beat",
+   "summary": "Nasdaq reported third quarter 2026 revenue of US$1.48b and net income of US$540m, with basic EPS from continuing operations at US$0.97 and diluted EPS at US$0.96, alongside a regular quarterly dividend of US$0.31 per share payable on December 18, 2026 to shareholders of record on",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/learn-why-bull-case-nasdaq-201250357.html?.tsrc=rss",
+   "published_at": "2026-10-23T20:12:50Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:10Z",
+   "fingerprint": "6ea7e9068bffc4a5",
+   "primary_source": false,
+   "cluster_id": "9c6e1462720a9c53",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "89c8472d2ff07c96",
+   "symbols": [
+    "NDAQ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "2 profitable stocks to keep an eye on and 1 facing headwinds",
+   "summary": "While profitability is essential, it doesn’t guarantee long-term success. Some companies that rest on their margins will lose ground as competition intensifies — as Jeff Bezos said, “Your margin is my opportunity”.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/2-profitable-stocks-keep-eye-180839558.html?.tsrc=rss",
+   "published_at": "2026-10-23T18:08:39Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:10Z",
+   "fingerprint": "987d8426def63447",
+   "primary_source": false,
+   "cluster_id": "89c8472d2ff07c96",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e464a3b81822a22f",
+   "symbols": [
+    "NDAQ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Nasdaq's FinTech Growth, Index Strength Support Longer-Term Upside, Morgan Stanley Says",
+   "summary": "Nasdaq's (NDAQ) record FinTech growth, expanding artificial intelligence monetization and strong \"in",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-apos-fintech-growth-index-144732840.html?.tsrc=rss",
+   "published_at": "2026-10-23T14:47:32Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:10Z",
+   "fingerprint": "7dd60eaded26ba72",
+   "primary_source": false,
+   "cluster_id": "e464a3b81822a22f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1b782f33c672fd51",
+   "symbols": [
+    "NDAQ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "NDAQ Q3 deep dive: AI solutions, tokenization, and recurring revenue drive robust growth",
+   "summary": "Global exchange operator Nasdaq (NASDAQ:NDAQ) reported revenue ahead of Wall Street’s expectations in Q3 2026, with sales up 12.6% year on year to $1.48 billion. Its non-GAAP profit of $1.04 per share was 2.3% above analysts’ consensus estimates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ndaq-q3-deep-dive-ai-105639843.html?.tsrc=rss",
+   "published_at": "2026-10-23T10:56:39Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:10Z",
+   "fingerprint": "88fdab261d193eca",
+   "primary_source": false,
+   "cluster_id": "1b782f33c672fd51",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1abb4c5743e6b0e6",
+   "symbols": [
+    "NDAQ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Here's What Key Metrics Tell Us About Nasdaq (NDAQ) Q3 Earnings (Revised)",
+   "summary": "The headline numbers for Nasdaq (NDAQ) give insight into how the company performed in the quarter ended September 2026, but it may be worthwhile to compare some of its key metrics to Wall Street estimates and the year-ago actuals.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/heres-key-metrics-tell-us-064800400.html?.tsrc=rss",
+   "published_at": "2026-10-23T06:48:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:10Z",
+   "fingerprint": "7bf7b45a1093518d",
+   "primary_source": false,
+   "cluster_id": "1abb4c5743e6b0e6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],
