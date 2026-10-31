@@ -33,6 +33,8 @@ INDEXES = {
         "name": "Nasdaq 100",
         "source": "https://en.wikipedia.org/wiki/Nasdaq-100",
         "kind": "wikipedia",
+        # Ausweichquelle: offizielle Nasdaq-Indexliste (kostenlos, JSON)
+        "fallbacks": [{"kind": "nasdaq_api", "source": "https://api.nasdaq.com/api/quote/list-type/nasdaq100"}],
         "min_members": 95, "max_members": 105, "region": "US", "currency": "USD", "suffix": "",
     },
     "SPX": {
@@ -43,8 +45,9 @@ INDEXES = {
     },
     "RUT": {
         "name": "Russell 2000",
-        "source": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf/1467271812596.ajax?fileType=csv&fileName=IWM_holdings&dataType=fund",
+        "source": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf/latest-holdings.csv",
         "kind": "ishares_csv",
+        "fallbacks": [{"kind": "ishares_csv", "source": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf/1467271812596.ajax?fileType=csv&fileName=IWM_holdings&dataType=fund"}],
         "min_members": 1800, "max_members": 2100, "region": "US", "currency": "USD", "suffix": "",
         "limitation": "Proxy über iShares-IWM-Bestand; Nutzungsbedingungen von BlackRock prüfen.",
     },
@@ -108,11 +111,10 @@ MARKET_NEWS_FEEDS = [
      "url": "https://www.ecb.europa.eu/rss/press.html", "markets": ["Europa"], "category": "Zentralbank"},
     {"id": "bls-news", "name": "U.S. BLS – Latest Releases",
      "url": "https://www.bls.gov/feed/bls_latest.rss", "markets": ["USA"], "category": "Konjunkturdaten"},
-    {"id": "destatis", "name": "Destatis – Pressemitteilungen",
-     "url": "https://www.destatis.de/SiteGlobals/Functions/RSSFeed/DE/RSSNewsfeed/RSSNewsfeed.xml",
-     # Fallback: Feed-Adresse automatisch auf der Presseseite suchen (RSS-Autodiscovery)
-     "page": "https://www.destatis.de/DE/Presse/_inhalt.html",
-     "markets": ["Europa"], "category": "Konjunkturdaten"},
+    # Destatis: alte RSS-Adresse liefert 404, keine neue gefunden (Stand 31.10.2026).
+    # Bei gefundener Adresse hier wieder eintragen; "page" aktiviert die RSS-Autodiscovery.
+    # {"id": "destatis", "name": "Destatis – Pressemitteilungen", "url": "...",
+    #  "page": "https://www.destatis.de/DE/Presse/_inhalt.html", "markets": ["Europa"], "category": "Konjunkturdaten"},
 ]
 # Relevanzfilter: nur Eintraege mit plausibler Markt-/Wirtschaftsrelevanz
 MARKET_KEYWORDS = {

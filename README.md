@@ -89,10 +89,10 @@ werden rotierend abgefragt (300 bzw. 150 Ticker je Lauf). Über Umgebungsvariabl
 | Bereich | Quelle | Hinweis |
 |---|---|---|
 | Kurse/Fundamentaldaten | Yahoo Finance via yfinance | inoffiziell, Limits/Bedingungen prüfen |
-| Indizes | Wikipedia (CC BY-SA), iShares IWM-Bestand | IWM ist Russell-2000-*Proxy*; BlackRock-Bedingungen prüfen |
+| Indizes | Wikipedia (CC BY-SA), Nasdaq-API als Ausweichquelle, iShares IWM-Bestand | IWM ist Russell-2000-*Proxy*; BlackRock-Bedingungen prüfen |
 | Nachrichten | Yahoo-Finance-RSS | nur Schlagzeile, Link, Datum |
 | Trump | whitehouse.gov-RSS, `trump_statements.csv` | Truth Social hat keine kostenlose API → CSV mit Original-URL |
-| Wirtschaftsticker | Fed, EZB, BLS, Destatis (RSS), `market_calendar.csv` | Termine Stand 31.10.2026, vor Nutzung prüfen |
+| Wirtschaftsticker | Fed, EZB, BLS (RSS), `market_calendar.csv` (Destatis-Feed derzeit ohne gültige Adresse) | Termine Stand 31.10.2026, vor Nutzung prüfen |
 | Insider USA | SEC EDGAR Form 4 | max. 10 Anfragen/s |
 | Insider DE, 13F, Politiker | CSV-Importe | keine kostenlose strukturierte API eingebunden |
 | Social Media | `social_mentions.csv`, Reddit-RSS optional (`SIC_ENABLE_REDDIT_RSS=1`) | X-API kostenpflichtig; Reddit-Bedingungen prüfen |

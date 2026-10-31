@@ -207,7 +207,7 @@ SOURCES = [
      "limitation": "Nur Schlagzeilen; rotierende Abfrage wegen Rate-Limits"},
     {"area": "Trump-Aussagen", "source": "whitehouse.gov RSS, CSV-Import (z. B. Truth Social)", "status": "limited",
      "limitation": "Truth Social ohne kostenlose API -> CSV mit Original-URL"},
-    {"area": "Wirtschaftsticker", "source": "Fed, EZB, BLS, Destatis RSS; market_calendar.csv", "status": "connected",
+    {"area": "Wirtschaftsticker", "source": "Fed, EZB, BLS (RSS); market_calendar.csv", "status": "connected",
      "limitation": "Termine aus offiziellen Kalendern per CSV gepflegt"},
     {"area": "Insider USA", "source": "SEC EDGAR Form 4", "status": "connected",
      "limitation": "Rotierende Abfrage; User-Agent mit Kontakt (SIC_USER_AGENT) nötig"},

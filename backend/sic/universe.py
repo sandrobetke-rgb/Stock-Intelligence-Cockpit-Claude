@@ -57,9 +57,14 @@ def _pick_table(tables: list[pd.DataFrame], symbol_cols: tuple[str, ...], min_ro
     for t in tables:
         cols = {_norm_col(c): c for c in t.columns}
         seen.append(f"{len(t)} Zeilen: {list(cols)[:6]}")
+        if len(t) < min_rows:
+            continue
         for sc in wanted:
-            if sc in cols and len(t) >= min_rows:
+            if sc in cols:
                 return t, cols[sc]
+        for name, orig in cols.items():
+            if any(w in name for w in ("ticker", "symbol")):
+                return t, orig
     raise ValueError(f"keine passende Tabelle gefunden (Kandidaten: {'; '.join(s for s in seen if not s.startswith('0 '))[:240]})")
 
 
@@ -72,9 +77,9 @@ def _first_col(t: pd.DataFrame, names: tuple[str, ...]):
     return None
 
 
-def fetch_wikipedia(code: str) -> list[Member]:
+def fetch_wikipedia(code: str, source: str | None = None) -> list[Member]:
     cfg = config.INDEXES[code]
-    html = http_get(cfg["source"]).text
+    html = http_get(source or cfg["source"]).text
     tables = pd.read_html(io.StringIO(html))
     t, sym_col = _pick_table(tables, ("Ticker", "Symbol", "Ticker symbol"), int(cfg["min_members"] * 0.9))
     name_col = _first_col(t, ("Company", "Security", "Name"))
@@ -92,10 +97,21 @@ def fetch_wikipedia(code: str) -> list[Member]:
     return out
 
 
-def fetch_ishares_csv(code: str) -> list[Member]:
+def fetch_nasdaq_api(code: str, source: str | None = None) -> list[Member]:
+    """Offizielle Nasdaq-100-Liste (api.nasdaq.com), nur mit browserueblichen Headern erreichbar."""
+    cfg = config.INDEXES[code]
+    data = http_get(source or cfg["source"], headers={
+        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) StockIntelligenceCockpit/1.1",
+        "Accept": "application/json, text/plain, */*"}).json()
+    rows = ((data.get("data") or {}).get("data") or {}).get("rows") or []
+    return [Member(_yahoo_symbol(r["symbol"], ""), r.get("companyName") or r["symbol"], None)
+            for r in rows if r.get("symbol")]
+
+
+def fetch_ishares_csv(code: str, source: str | None = None) -> list[Member]:
     cfg = config.INDEXES[code]
     # Oeffentliche Download-Datei; iShares liefert sie nur mit browserueblichen Headern aus
-    text = http_get(cfg["source"], headers={
+    text = http_get(source or cfg["source"], headers={
         "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) StockIntelligenceCockpit/1.1",
         "Accept": "text/csv,application/octet-stream,*/*"}).text.lstrip("\ufeff")
     lines = text.splitlines()
@@ -115,7 +131,25 @@ def fetch_ishares_csv(code: str) -> list[Member]:
     return out
 
 
-FETCHERS: dict[str, Callable[[str], list[Member]]] = {"wikipedia": fetch_wikipedia, "ishares_csv": fetch_ishares_csv}
+FETCHERS: dict[str, Callable[..., list[Member]]] = {
+    "wikipedia": fetch_wikipedia, "ishares_csv": fetch_ishares_csv, "nasdaq_api": fetch_nasdaq_api}
+
+
+def fetch_with_fallbacks(code: str) -> tuple[list[Member], str]:
+    """Primaerquelle, dann Ausweichquellen. Erste plausible Liste gewinnt."""
+    cfg = config.INDEXES[code]
+    attempts = [{"kind": cfg["kind"], "source": cfg["source"]}, *cfg.get("fallbacks", [])]
+    errors = []
+    for a in attempts:
+        try:
+            members = FETCHERS[a["kind"]](code, a["source"])
+            ok, msg = plausible(code, members)
+            if ok:
+                return members, a["source"]
+            errors.append(f"{a['kind']}: Plausibilitätsprüfung fehlgeschlagen: {msg}")
+        except Exception as exc:  # noqa: BLE001
+            errors.append(f"{a['kind']}: {type(exc).__name__}: {exc}"[:220])
+    raise ValueError(" | ".join(errors))
 
 
 # --------------------------------------------------------- Plausibilität --
@@ -245,19 +279,21 @@ def build_universe(today: date | None = None, fetch: bool = True,
         try:
             if overrides and code in overrides:
                 members = overrides[code]
+                used = cfg["source"]
+                ok, msg = plausible(code, members)
+                if not ok:
+                    raise ValueError(f"Plausibilitätsprüfung fehlgeschlagen: {msg}")
             elif fetch:
-                members = FETCHERS[cfg["kind"]](code)
+                members, used = fetch_with_fallbacks(code)
             else:
                 continue
-            ok, msg = plausible(code, members)
-            if not ok:
-                raise ValueError(f"Plausibilitätsprüfung fehlgeschlagen: {msg}")
             report["indexes"][code] = apply_index(state, code, members, today)
+            state["indexes"][code]["source"] = used
         except Exception as exc:  # gültige Liste wird NICHT ueberschrieben
             exc = f"{type(exc).__name__}: {exc}" if str(exc) else type(exc).__name__
             log.error("Index %s nicht aktualisiert: %s", code, exc)
             prev = state["indexes"].get(code, {"code": code, "name": cfg["name"], "source": cfg["source"], "members": 0})
-            prev.update({"status": "error", "message": str(exc)[:300], "last_attempt": iso(utcnow())})
+            prev.update({"status": "error", "message": str(exc)[:600], "last_attempt": iso(utcnow())})
             state["indexes"][code] = prev
             report["indexes"][code] = {"error": str(exc)[:300]}
     report["upcoming"] = apply_scheduled_changes(state, today)
