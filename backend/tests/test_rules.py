@@ -329,3 +329,17 @@ def test_demo_pipeline_end_to_end(tmp_path):
     import json
     s = json.loads((tmp_path / "demo" / "summary.json").read_text())
     assert s["mode"] == "demo"
+
+
+def test_index_parsers_handle_footnotes_and_quoted_csv(monkeypatch):
+    from unittest import mock
+    from sic import universe
+    monkeypatch.setitem(config.INDEXES, "NDX", {**config.INDEXES["NDX"], "min_members": 2})
+    t = pd.DataFrame({"Company": ["A", "B"], "Ticker[7]": ["AAPL", "BRK.B"], "GICS Sector[8]": ["IT", "Fin"]})
+    with mock.patch.object(universe, "http_get") as g:
+        g.return_value.text = t.to_html(index=False)
+        assert [m.symbol for m in universe.fetch_wikipedia("NDX")] == ["AAPL", "BRK-B"]
+        g.return_value.text = ('﻿iShares Russell 2000 ETF\n"Fund Holdings as of","Oct 30, 2026"\n\n'
+                               '"Ticker","Name","Sector","Asset Class"\n"SMCI","SUPER MICRO","IT","Equity"\n'
+                               '"XTSLA","CASH","Cash","Money Market"\n')
+        assert [m.symbol for m in universe.fetch_ishares_csv("RUT")] == ["SMCI"]

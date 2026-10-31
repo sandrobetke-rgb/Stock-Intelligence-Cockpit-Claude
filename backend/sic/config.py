@@ -110,6 +110,8 @@ MARKET_NEWS_FEEDS = [
      "url": "https://www.bls.gov/feed/bls_latest.rss", "markets": ["USA"], "category": "Konjunkturdaten"},
     {"id": "destatis", "name": "Destatis – Pressemitteilungen",
      "url": "https://www.destatis.de/SiteGlobals/Functions/RSSFeed/DE/RSSNewsfeed/RSSNewsfeed.xml",
+     # Fallback: Feed-Adresse automatisch auf der Presseseite suchen (RSS-Autodiscovery)
+     "page": "https://www.destatis.de/DE/Presse/_inhalt.html",
      "markets": ["Europa"], "category": "Konjunkturdaten"},
 ]
 # Relevanzfilter: nur Eintraege mit plausibler Markt-/Wirtschaftsrelevanz

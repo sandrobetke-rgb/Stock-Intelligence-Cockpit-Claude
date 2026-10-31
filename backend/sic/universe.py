@@ -44,19 +44,31 @@ def _yahoo_symbol(raw: str, suffix: str) -> str:
     return f"{s}{suffix}"
 
 
-def _pick_table(tables: list[pd.DataFrame], symbol_cols: tuple[str, ...], min_rows: int) -> tuple[pd.DataFrame, str]:
+def _norm_col(c) -> str:
+    """Spaltenname normalisieren: MultiIndex -> letzte Ebene, Fussnoten [14] entfernen, klein."""
+    if isinstance(c, tuple):
+        c = c[-1]
+    return re.sub(r"\[[^\]]*\]", "", str(c)).strip().lower()
+
+
+def _pick_table(tables: list[pd.DataFrame], symbol_cols: tuple[str, ...], min_rows: int) -> tuple[pd.DataFrame, object]:
+    wanted = [x.lower() for x in symbol_cols]
+    seen = []
     for t in tables:
-        cols = {str(c).strip(): c for c in t.columns}
-        for sc in symbol_cols:
+        cols = {_norm_col(c): c for c in t.columns}
+        seen.append(f"{len(t)} Zeilen: {list(cols)[:6]}")
+        for sc in wanted:
             if sc in cols and len(t) >= min_rows:
                 return t, cols[sc]
-    raise ValueError("keine passende Tabelle gefunden")
+    raise ValueError(f"keine passende Tabelle gefunden (Kandidaten: {'; '.join(s for s in seen if not s.startswith('0 '))[:240]})")
 
 
-def _first_col(t: pd.DataFrame, names: tuple[str, ...]) -> str | None:
-    for c in t.columns:
-        if str(c).strip() in names:
-            return c
+def _first_col(t: pd.DataFrame, names: tuple[str, ...]):
+    wanted = [n.lower() for n in names]
+    cols = {_norm_col(c): c for c in t.columns}
+    for n in wanted:
+        if n in cols:
+            return cols[n]
     return None
 
 
@@ -66,7 +78,7 @@ def fetch_wikipedia(code: str) -> list[Member]:
     tables = pd.read_html(io.StringIO(html))
     t, sym_col = _pick_table(tables, ("Ticker", "Symbol", "Ticker symbol"), int(cfg["min_members"] * 0.9))
     name_col = _first_col(t, ("Company", "Security", "Name"))
-    sector_col = _first_col(t, ("GICS Sector", "ICB Industry[14]", "Prime Standard Sector", "Sector", "Industry"))
+    sector_col = _first_col(t, ("GICS Sector", "ICB Industry", "Prime Standard Sector", "Sector", "Industry"))
     out = []
     for _, row in t.iterrows():
         sym = row[sym_col]
@@ -82,18 +94,24 @@ def fetch_wikipedia(code: str) -> list[Member]:
 
 def fetch_ishares_csv(code: str) -> list[Member]:
     cfg = config.INDEXES[code]
-    text = http_get(cfg["source"]).text
+    # Oeffentliche Download-Datei; iShares liefert sie nur mit browserueblichen Headern aus
+    text = http_get(cfg["source"], headers={
+        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) StockIntelligenceCockpit/1.1",
+        "Accept": "text/csv,application/octet-stream,*/*"}).text.lstrip("\ufeff")
     lines = text.splitlines()
-    start = next(i for i, ln in enumerate(lines) if ln.startswith("Ticker,"))
+    start = next((i for i, ln in enumerate(lines) if ln.replace('"', "").strip().lower().startswith("ticker,")), None)
+    if start is None:
+        raise ValueError(f"Kopfzeile 'Ticker' nicht gefunden; Antwortbeginn: {text[:120]!r}")
     reader = csv.DictReader(lines[start:])
     out = []
-    for row in reader:
-        if (row.get("Asset Class") or "").strip() != "Equity":
+    for raw in reader:
+        row = {(k or "").strip(): (v or "").strip() for k, v in raw.items() if k}
+        if row.get("Asset Class") != "Equity":
             continue
-        sym = (row.get("Ticker") or "").strip()
+        sym = row.get("Ticker", "")
         if not sym or not re.fullmatch(r"[A-Z0-9.\-]+", sym):
             continue
-        out.append(Member(_yahoo_symbol(sym, ""), (row.get("Name") or sym).strip().title(), (row.get("Sector") or None)))
+        out.append(Member(_yahoo_symbol(sym, ""), (row.get("Name") or sym).title(), row.get("Sector") or None))
     return out
 
 
@@ -236,6 +254,7 @@ def build_universe(today: date | None = None, fetch: bool = True,
                 raise ValueError(f"Plausibilitätsprüfung fehlgeschlagen: {msg}")
             report["indexes"][code] = apply_index(state, code, members, today)
         except Exception as exc:  # gültige Liste wird NICHT ueberschrieben
+            exc = f"{type(exc).__name__}: {exc}" if str(exc) else type(exc).__name__
             log.error("Index %s nicht aktualisiert: %s", code, exc)
             prev = state["indexes"].get(code, {"code": code, "name": cfg["name"], "source": cfg["source"], "members": 0})
             prev.update({"status": "error", "message": str(exc)[:300], "last_attempt": iso(utcnow())})

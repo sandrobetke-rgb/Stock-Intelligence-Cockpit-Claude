@@ -28,6 +28,39 @@ def relevance_categories(text: str) -> list[str]:
     return [cat for cat, kws in config.MARKET_KEYWORDS.items() if any(k in t for k in kws)]
 
 
+def _discover_feed(page_url: str) -> str | None:
+    """RSS-Autodiscovery: <link rel="alternate" type="application/rss+xml" href=...> auf einer Seite."""
+    from urllib.parse import urljoin
+    from .util import http_get
+
+    html = http_get(page_url).text
+    for tag in re.findall(r"<link[^>]+>", html, flags=re.I):
+        if re.search(r"application/(rss|atom)\+xml", tag, re.I):
+            m = re.search(r'href=["\']([^"\']+)', tag, re.I)
+            if m:
+                return urljoin(page_url, m.group(1).replace("&amp;", "&"))
+    return None
+
+
+def _load_feed(src: dict):
+    import feedparser
+    from .util import http_get
+
+    try:
+        feed = feedparser.parse(http_get(src["url"]).content)
+        if feed.entries:
+            return feed
+        err: Exception = ValueError("Feed ohne Eintraege")
+    except Exception as exc:  # noqa: BLE001
+        err = exc
+    if src.get("page"):
+        found = _discover_feed(src["page"])
+        if found:
+            log.info("Feed %s gefunden ueber Autodiscovery: %s", src["id"], found)
+            return feedparser.parse(http_get(found).content)
+    raise err
+
+
 def fetch_market_news(now: datetime | None = None) -> tuple[list[dict], list[dict]]:
     import feedparser
     from .util import http_get
@@ -36,7 +69,7 @@ def fetch_market_news(now: datetime | None = None) -> tuple[list[dict], list[dic
     items, status = [], []
     for src in config.MARKET_NEWS_FEEDS:
         try:
-            feed = feedparser.parse(http_get(src["url"]).content)
+            feed = _load_feed(src)
             status.append({"id": src["id"], "name": src["name"], "status": "ok", "entries": len(feed.entries)})
         except Exception as exc:  # noqa: BLE001
             status.append({"id": src["id"], "name": src["name"], "status": "error", "message": str(exc)[:200]})
