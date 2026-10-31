@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-10-31T14:32:28Z",
+ "generated_at": "2026-10-31T14:37:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "CRML",
-  "name": "Critical Metals Corp",
+  "name": "Critical Metals Corp.",
   "region": "US",
   "currency": "USD",
-  "sector": "Materials",
-  "industry": null,
+  "sector": "Basic Materials",
+  "industry": "Other Industrial Metals & Mining",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 7.159999847412109,
    "price_date": "2026-10-30",
@@ -30,37 +28,41 @@
    "sma50": 7.166200027465821,
    "sma200": 9.2777250123024
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 1060430784.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
+   "score": 64.6,
+   "coverage_pct": 52,
    "model": "standard",
    "dimensions": {
     "revenue_growth": null,
     "profitability": null,
-    "financial_stability": null,
-    "cashflow": null,
-    "market_position": null,
-    "growth_potential": null,
-    "management": null
+    "financial_stability": 44.0,
+    "cashflow": 0.0,
+    "market_position": 100.0,
+    "growth_potential": 100.0,
+    "management": 0.0
    }
   },
   "risk": {
-   "score": null,
-   "level": "unbekannt",
-   "coverage_pct": 25,
+   "score": 56.7,
+   "level": "erhoeht",
+   "coverage_pct": 66,
    "top_factors": [
-    "Volatilität (63T, annualisiert)"
+    "Volatilität (63T, annualisiert)",
+    "Liquidität (Current Ratio)",
+    "Zinsdeckung"
    ]
   },
   "market_intelligence": {
-   "score": 6.2,
+   "score": 48.5,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 9,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -82,7 +84,7 @@
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -109,9 +111,9 @@
   "move_zscore": -1.165868029720442
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
+  "score": 64.6,
+  "status": "ok",
+  "coverage_pct": 52,
   "model": "standard",
   "dimensions": [
    {
@@ -172,33 +174,33 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 44.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "debt_to_equity",
       "label": "Verschuldung (Debt/Equity)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.0,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "current_ratio",
       "label": "Liquidität (Current Ratio)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.871,
+      "points": 13.2,
+      "status": "ok"
      },
      {
       "key": "interest_coverage",
       "label": "Zinsdeckung (EBIT/Zinsen)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -1211.373,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -207,9 +209,9 @@
     "key": "cashflow",
     "label": "Cashflow",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "data",
+    "coverage": 40,
     "metrics": [
      {
       "key": "fcf_margin",
@@ -223,9 +225,9 @@
       "key": "ocf_positive",
       "label": "Operativer Cashflow positiv",
       "unit": "bool",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.0,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -234,17 +236,17 @@
     "key": "market_position",
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 100.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "gross_margin",
       "label": "Bruttomarge (Proxy Preissetzungsmacht)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 100.0,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -253,17 +255,17 @@
     "key": "growth_potential",
     "label": "Wachstumspotenzial",
     "weight": 0.2,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 100.0,
+    "basis": "proxy",
+    "coverage": 60,
     "metrics": [
      {
       "key": "revenue_growth_forward",
       "label": "Erwartetes Umsatzwachstum (Yahoo)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 557.7,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "reinvestment",
@@ -280,17 +282,17 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "proxy",
+    "coverage": 60,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -66.353,
+      "points": 0.0,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
@@ -305,43 +307,43 @@
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/CRML/financials",
+  "as_of": "2026-10-31T14:40:52Z",
+  "fiscal_year_end": "2026-06-30",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": null,
-  "level": "unbekannt",
-  "coverage_pct": 25,
+  "score": 56.7,
+  "level": "erhoeht",
+  "coverage_pct": 66,
   "factors": [
    {
     "key": "leverage",
     "label": "Verschuldung (Debt/Equity)",
-    "value": null,
+    "value": 0.0,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.15,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "liquidity",
     "label": "Liquidität (Current Ratio)",
-    "value": null,
+    "value": 0.87,
     "unit": "x",
-    "severity": null,
+    "severity": 86.8,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "interest",
     "label": "Zinsdeckung",
-    "value": null,
+    "value": -1211.37,
     "unit": "x",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "cashflow",
@@ -391,11 +393,11 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 561.63,
     "unit": "x",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
@@ -417,7 +419,9 @@
    }
   ],
   "top_factors": [
-   "Volatilität (63T, annualisiert)"
+   "Volatilität (63T, annualisiert)",
+   "Liquidität (Current Ratio)",
+   "Zinsdeckung"
   ],
   "unknown_factors": [
    "Kunden- und Branchenabhängigkeit",
@@ -425,11 +429,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.2,
+  "score": 48.5,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 35.0,
@@ -438,34 +442,36 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 9,
+    "independent": 9,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 17,
+    "independent": 17,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -484,7 +490,386 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "b134954ec5b178ce",
+   "symbols": [
+    "CRML"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Critical Metals Sinks 11% as European Lithium Deal Nears New Share Issuance; USA Rare Earth Tumbles 10%, MP Materials Falls 6%",
+   "summary": "New shares from Critical Metals' European Lithium acquisition are days away from hitting Nasdaq, and traders are already heading for the exits. Find out what the company stands to gain in Greenland and Austria, and whether the incoming share flood spells more pain ahead.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/30/critical-metals-sinks-11-as-european-lithium-deal-nears-new-share-issuance-usa-rare-earth-tumbles-10-mp-materials-falls-6/?.tsrc=rss",
+   "published_at": "2026-10-30T18:08:24Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:21Z",
+   "fingerprint": "385570165e9a058b",
+   "primary_source": false,
+   "cluster_id": "b134954ec5b178ce",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Kritische Metalle sinken um 11%, da der europäische Lithium-Deal sich der neuen Aktienemission nähert; USA Seltene Erden fallen um 10%, MP-Materialien fallen um 6%"
+  },
+  {
+   "id": "0386a04f1dc266d8",
+   "symbols": [
+    "CRML"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Critical Metals And 2 Other Top Lithium Stocks",
+   "summary": "AI related spending has helped push US economic growth to a 3.4% annual pace, which tells you one thing: big projects are still getting funded. When money flows into data centers, electric vehicles and new energy systems, it quietly pulls lithium into the spotlight. This piece lo",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/critical-metals-2-other-top-191517219.html?.tsrc=rss",
+   "published_at": "2026-10-29T19:15:17Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:21Z",
+   "fingerprint": "7f55b9566a28f7ad",
+   "primary_source": false,
+   "cluster_id": "0386a04f1dc266d8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Kritische Metalle und 2 andere Top-Lithium-Aktien"
+  },
+  {
+   "id": "405102f166cde2dc",
+   "symbols": [
+    "CRML"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Rare Earth Stocks With Market Caps Over $1 Billion",
+   "summary": "Shell just reported quarterly profit that was almost twice last year’s level as oil and refined fuel markets tightened, underlining how critical access to raw materials can be when supply is strained. That same scramble for secure resources is playing out in rare earth elements u",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-rare-earth-stocks-market-161357115.html?.tsrc=rss",
+   "published_at": "2026-10-29T16:13:57Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:21Z",
+   "fingerprint": "13c75e07674fd0ec",
+   "primary_source": false,
+   "cluster_id": "405102f166cde2dc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "3 Seltene Erden-Aktien Mit Marktkapitalisierung Über 1 Milliarde Dollar"
+  },
+  {
+   "id": "b0c970e6fe497b36",
+   "symbols": [
+    "CRML"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Critical Metals Drops 7% as European Lithium Deal Sets Up New Share Issuance; United States Antimony and USA Rare Earth Decline 3%, MP Materials Eases",
+   "summary": "Critical Metals is sliding as newly issued shares from its European Lithium acquisition prepare to hit Nasdaq, and the question now is whether incoming sellers and a looming Fed decision pile on before the company has earned a single dollar from its flagship projects.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/28/critical-metals-drops-7-as-european-lithium-deal-sets-up-new-share-issuance-united-states-antimony-and-usa-rare-earth-decline-3-mp-materials-eases/?.tsrc=rss",
+   "published_at": "2026-10-28T14:09:05Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:21Z",
+   "fingerprint": "1e2bee38f8451c05",
+   "primary_source": false,
+   "cluster_id": "b0c970e6fe497b36",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "10d49b7484ea0b01",
+   "symbols": [
+    "CRML"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Critical Metals Corp. Confirms Option Scheme Consideration for European Lithium Acquisition",
+   "summary": "Schemes became effective October 27, 2026; new Critical Metals Corp shares expected to begin trading on Nasdaq November 6, 2026NEW YORK, Oct. 28, 2026 (GLOBE NEWSWIRE) -- Critical Metals Corp. (Nasdaq: CRML) (“Critical Metals Corp” or the “Company”), a leading critical minerals e",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/critical-metals-corp-confirms-option-130000453.html?.tsrc=rss",
+   "published_at": "2026-10-28T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:21Z",
+   "fingerprint": "e1e4b6d7ab3c9dff",
+   "primary_source": false,
+   "cluster_id": "10d49b7484ea0b01",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "080276466142cfe2",
+   "symbols": [
+    "CRML"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Critical Metals (CRML) Stock Looks Fully Priced After Mining Approval",
+   "summary": "Critical Metals has bounced around in recent months, with a sharp 1 year share price decline now sitting alongside a brisk 7 day rebound. That mix raises a clear question about how firmly its current market value is anchored to the book value on its balance sheet. With fresh news",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/critical-metals-crml-stock-looks-092052050.html?.tsrc=rss",
+   "published_at": "2026-10-28T09:20:52Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:21Z",
+   "fingerprint": "f554f74d205fe713",
+   "primary_source": false,
+   "cluster_id": "080276466142cfe2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d921b586dd33de73",
+   "symbols": [
+    "CRML"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Critical Minerals Stocks Rally as Sector Bid Broadens: United States Antimony and USA Rare Earth Jump 11%, Critical Metals Climbs 8%",
+   "summary": "A fresh Alaska resource report, a completed European acquisition, and a sector-wide surge are converging on critical minerals stocks at once, but the gains come with going-concern warnings and year-to-date losses that tell a different story beneath the surface.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/27/critical-minerals-stocks-rally-as-sector-bid-broadens-united-states-antimony-and-usa-rare-earth-jump-11-critical-metals-climbs-8/?.tsrc=rss",
+   "published_at": "2026-10-27T15:49:33Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:21Z",
+   "fingerprint": "144f2468a2efb31c",
+   "primary_source": false,
+   "cluster_id": "d921b586dd33de73",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d4d12b60c8a0a789",
+   "symbols": [
+    "CRML"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Critical Metals Corp. Acquisition of European Lithium Becomes Effective",
+   "summary": "Implementation expected November 5, 2026; new Critical Metals Corp shares expected to begin trading on Nasdaq November 6, 2026NEW YORK, Oct. 27, 2026 (GLOBE NEWSWIRE) -- Critical Metals Corp. (Nasdaq: CRML) (“Critical Metals Corp” or the “Company”), a leading critical minerals ex",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/critical-metals-corp-acquisition-european-123300475.html?.tsrc=rss",
+   "published_at": "2026-10-27T12:33:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:21Z",
+   "fingerprint": "b38695f13f135bdf",
+   "primary_source": false,
+   "cluster_id": "d4d12b60c8a0a789",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "044656dc05290ea1",
+   "symbols": [
+    "CRML"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Critical Metals Corp. Acquisition of European Lithium Approved by Supreme Court of Western Australia",
+   "summary": "Schemes expected to become effective October 27, 2026; new Critical Metals Corp shares expected to begin trading on Nasdaq November 6, 2026NEW YORK, Oct. 26, 2026 (GLOBE NEWSWIRE) -- Critical Metals Corp. (Nasdaq: CRML) (“Critical Metals Corp” or the “Company”), a leading critica",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/critical-metals-corp-acquisition-european-123000957.html?.tsrc=rss",
+   "published_at": "2026-10-26T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:21Z",
+   "fingerprint": "4dfe26c5c1e47fe6",
+   "primary_source": false,
+   "cluster_id": "044656dc05290ea1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cd229b49d3885472",
+   "symbols": [
+    "CRML"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Critical Metals And 2 Other Lithium Stocks To Watch",
+   "summary": "Oil prices recently moved above $110 per barrel after fresh attacks on Saudi energy facilities, pushing energy security back into the spotlight. Higher fuel costs can sharpen interest in alternative supply chains, storage technologies, and electric transport, all of which depend ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/critical-metals-2-other-lithium-181451235.html?.tsrc=rss",
+   "published_at": "2026-10-22T18:14:51Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:21Z",
+   "fingerprint": "8c05c6ab152bfb18",
+   "primary_source": false,
+   "cluster_id": "cd229b49d3885472",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3118c86458bfca88",
+   "symbols": [
+    "CRML"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Critical Metals Sinks 7% Despite Shareholder Approval of European Lithium Deal; USA Rare Earth Drops 5%, United States Antimony Falls 3%",
+   "summary": "European Lithium shareholders just handed Critical Metals full control of a prized Greenland rare earth project, yet the market is punishing the buyer harder than almost anything else in the sector. Here is what the deal terms reveal about why.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/22/critical-metals-sinks-7-despite-shareholder-approval-of-european-lithium-deal-usa-rare-earth-drops-5-united-states-antimony-falls-3/?.tsrc=rss",
+   "published_at": "2026-10-22T17:05:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:21Z",
+   "fingerprint": "ee01791df8f2a42e",
+   "primary_source": false,
+   "cluster_id": "3118c86458bfca88",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5a6a9541557f3bae",
+   "symbols": [
+    "CRML"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Critical Metals’ Merger Gets Strong Backing From European Lithium Shareholders – Here’s What Comes Next",
+   "summary": "Under the proposed all-stock transaction, Critical Metals will acquire 100% of European Lithium’s issued shares and listed options",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/critical-metals-merger-gets-strong-backing-from-european-lithium-shareholders/cZxwQV0RBDc?.tsrc=rss",
+   "published_at": "2026-10-22T15:19:24Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:21Z",
+   "fingerprint": "9e42343c9a21683e",
+   "primary_source": false,
+   "cluster_id": "5a6a9541557f3bae",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "622d0a49c1764d57",
+   "symbols": [
+    "CRML"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Critical Metals And 2 Rare Earth Stocks To Watch",
+   "summary": "Global governments are pouring fresh money into critical materials, with the US recently earmarking US$389 million for research on power semiconductors and key minerals. That kind of focus puts rare earth producers directly in the policy spotlight and can attract serious capital.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/critical-metals-2-rare-earth-151441195.html?.tsrc=rss",
+   "published_at": "2026-10-22T15:14:41Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:21Z",
+   "fingerprint": "7dab3bc9089cac8c",
+   "primary_source": false,
+   "cluster_id": "622d0a49c1764d57",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6aa3b183adcafb82",
+   "symbols": [
+    "CRML"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Critical Metals Corp. Merger with European Lithium Approved by European Lithium Securityholders",
+   "summary": "Final Court hearing scheduled for October 26, 2026; implementation expected November 5, 2026NEW YORK, Oct. 22, 2026 (GLOBE NEWSWIRE) -- Critical Metals Corp. (Nasdaq: CRML) (“Critical Metals Corp” or the “Company”), a leading critical minerals exploration and mining company, toda",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/critical-metals-corp-merger-european-123000196.html?.tsrc=rss",
+   "published_at": "2026-10-22T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:21Z",
+   "fingerprint": "e07abc74d57159eb",
+   "primary_source": false,
+   "cluster_id": "6aa3b183adcafb82",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0056d85e2f0ff01c",
+   "symbols": [
+    "CRML"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Critical Metals Corp. Announces Share Scheme Transaction Ratio for Acquisition of European Lithium",
+   "summary": "European Lithium securityholders to vote on the Schemes on October 22, 2026NEW YORK, Oct. 21, 2026 (GLOBE NEWSWIRE) -- Critical Metals Corp. (Nasdaq: CRML) (“Critical Metals Corp” or the “Company”), a leading critical minerals exploration and mining company, today provided an upd",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/critical-metals-corp-announces-share-123000438.html?.tsrc=rss",
+   "published_at": "2026-10-21T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:21Z",
+   "fingerprint": "88c34f3e144e5adf",
+   "primary_source": false,
+   "cluster_id": "0056d85e2f0ff01c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "15b1307bd22607ac",
+   "symbols": [
+    "ALB",
+    "CRML"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Leverage Shares Is Shutting Down 13 Single-Stock Leveraged ETFs. None Drew Enough Money to Survive",
+   "summary": "Thirteen single-stock leveraged ETFs from Leverage Shares are closing, and holders are about to find out what it costs when a niche fund shuts down on the issuer's schedule instead of yours.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/etf/2026/10/20/leverage-shares-is-shutting-down-13-single-stock-leveraged-etfs-none-drew-enough-money-to-survive/?.tsrc=rss",
+   "published_at": "2026-10-20T20:03:25Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:01Z",
+   "fingerprint": "1c620f074ad67446",
+   "primary_source": false,
+   "cluster_id": "15b1307bd22607ac",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c90884a89b82939f",
+   "symbols": [
+    "CRML"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cleveland-Cliffs Declines 6% as Profit Taking Follows Strongest Quarter in Three Years; Critical Metals Slips 2%, Nucor Holds Steady",
+   "summary": "Cleveland-Cliffs just posted its best quarter in three years, yet traders are fleeing the stock this morning while the broader steel sector sits nearly flat. Whether this selloff is a buying opportunity or a warning sign depends on one looming question.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/20/cleveland-cliffs-declines-6-as-profit-taking-follows-strongest-quarter-in-three-years-critical-metals-slips-2-nucor-holds-steady/?.tsrc=rss",
+   "published_at": "2026-10-20T14:45:25Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:21Z",
+   "fingerprint": "1ca121088245c969",
+   "primary_source": false,
+   "cluster_id": "c90884a89b82939f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

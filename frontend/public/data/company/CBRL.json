@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T14:32:28Z",
+ "generated_at": "2026-10-31T14:37:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 4.203969796167226,
    "rvol": 0.8022916453128625,
    "ema10": 68.3468032863635,
-   "ema21": 64.50731710114259,
+   "ema21": 64.50731710114235,
    "sma50": 56.69223419189453,
-   "sma200": 42.39593091011047
+   "sma200": 42.39593086242676
   },
   "market_cap": 1565787776.0,
   "market_cap_currency": "USD",
@@ -55,13 +55,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 5.6,
+   "score": 42.3,
    "drivers": [
-    "price_volume_anomaly",
-    "insider_activity"
+    "news_flow",
+    "freshness",
+    "price_volume_anomaly"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 9,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -102,9 +103,9 @@
   "adr20": 4.203969796167226,
   "rvol": 0.8022916453128625,
   "ema10": 68.3468032863635,
-  "ema21": 64.50731710114259,
+  "ema21": 64.50731710114235,
   "sma50": 56.69223419189453,
-  "sma200": 42.39593091011047,
+  "sma200": 42.39593086242676,
   "volatility_ann": 51.699444728951946,
   "avg_dollar_volume_20d": 58950252.62666702,
   "move_zscore": -1.0171527028746368
@@ -428,11 +429,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 5.6,
+  "score": 42.3,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 30.5,
@@ -441,36 +442,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 9,
+    "independent": 9,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 20,
+    "independent": 20,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly",
-   "insider_activity"
+   "news_flow",
+   "freshness",
+   "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -488,7 +490,461 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "aa82b7200f1c6c73",
+   "symbols": [
+    "CBRL",
+    "YUM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "YUM Set to Report Q3 Earnings: KFC Growth & Taco Bell Trends in Focus",
+   "summary": "Yum! Brands heads into Q3 earnings with KFC expansion and international growth in focus, while Taco Bell U.S. faces sales and margin pressures.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/yum-set-report-q3-earnings-152300036.html?.tsrc=rss",
+   "published_at": "2026-10-30T15:23:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:42Z",
+   "fingerprint": "04468208fdd3f690",
+   "primary_source": false,
+   "cluster_id": "aa82b7200f1c6c73",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "YUM wird Ergebnis des dritten Quartals berichten: KFC Growth & Taco Bell Trends im Fokus"
+  },
+  {
+   "id": "0dfc6f7c3bf29891",
+   "symbols": [
+    "CBRL",
+    "SBUX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Starbucks Q4 Earnings Beat Estimates on Sales Leverage, Revenues Miss",
+   "summary": "SBUX beats Q4 earnings estimates as sales leverage and lower costs lift margins, but China's licensing shift hurts revenues despite 7.2% global comps.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/starbucks-q4-earnings-beat-estimates-141300035.html?.tsrc=rss",
+   "published_at": "2026-10-30T14:13:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:50Z",
+   "fingerprint": "e016c30572b3a4e5",
+   "primary_source": false,
+   "cluster_id": "0dfc6f7c3bf29891",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Starbucks Q4-Ergebnisse schlagen Schätzungen auf Umsatz Leverage, Einnahmen Miss"
+  },
+  {
+   "id": "5ada5c5a33ae84d8",
+   "symbols": [
+    "CBRL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are Retail-Wholesale Stocks Lagging  Cracker Barrel Old Country Store (CBRL) This Year?",
+   "summary": "Here is how Cracker Barrel Old Country Store (CBRL) and ASOS PLS (ASOMY) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/retail-wholesale-stocks-lagging-cracker-124002328.html?.tsrc=rss",
+   "published_at": "2026-10-30T12:40:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:07Z",
+   "fingerprint": "0e2c98c72db84763",
+   "primary_source": false,
+   "cluster_id": "5ada5c5a33ae84d8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Sind Einzelhandels-Großhandelsaktien in diesem Jahr Cracker Barrel Old Country Store (CBRL)?"
+  },
+  {
+   "id": "87c7d720f24559e1",
+   "symbols": [
+    "CBRL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Cracker Barrel Old Country Store, Inc. (CBRL) Hits Fresh High: Is There Still Room to Run?",
+   "summary": "Cracker Barrel (CBRL) is at a 52-week high, but can investors hope for more gains in the future? We take a look at the company's fundamentals for clues.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cracker-barrel-old-country-store-121502551.html?.tsrc=rss",
+   "published_at": "2026-10-30T12:15:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:07Z",
+   "fingerprint": "afc699fcd8ebadcd",
+   "primary_source": false,
+   "cluster_id": "87c7d720f24559e1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Cracker Barrel Old Country Store, Inc. (CBRL) trifft frisch hoch: Gibt es noch Platz zum Laufen?"
+  },
+  {
+   "id": "003e4ee7355f729b",
+   "symbols": [
+    "CBRL",
+    "CMG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Chipotle Q3 Earnings Miss Estimates, Revenues Top, Stock Up",
+   "summary": "CMG's third-quarter results reflect benefits from restaurant expansion, positive comparable sales and digital engagement, offset by higher operating costs.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/chipotle-q3-earnings-miss-estimates-152400638.html?.tsrc=rss",
+   "published_at": "2026-10-29T15:24:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:43Z",
+   "fingerprint": "182679ab32d23a23",
+   "primary_source": false,
+   "cluster_id": "003e4ee7355f729b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Chipotle Q3 Einnahmen Miss Schätzungen, Einnahmen Top, Lager Up"
+  },
+  {
+   "id": "883bb11e5b7745a9",
+   "symbols": [
+    "BLMN",
+    "CBRL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "CBRL vs. BLMN: Which Restaurant Stock Is the Better Buy Now?",
+   "summary": "Cracker Barrel's stronger earnings outlook, upward estimate revisions and improving operations give it an edge over Bloomin' Brands despite the higher valuation.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cbrl-vs-blmn-restaurant-stock-151100005.html?.tsrc=rss",
+   "published_at": "2026-10-28T15:11:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:28:40Z",
+   "fingerprint": "14167d1bdf09bc28",
+   "primary_source": false,
+   "cluster_id": "883bb11e5b7745a9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "753f5fb982bf70bc",
+   "symbols": [
+    "CBRL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Starbucks to Post Q4 Earnings: What's in the Cards for the Stock?",
+   "summary": "SBUX's fiscal fourth-quarter results are likely to reflect China's shift to a licensed model, stronger U.S. comparable sales and cost-saving initiatives supporting earnings.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/starbucks-post-q4-earnings-whats-153600757.html?.tsrc=rss",
+   "published_at": "2026-10-27T15:36:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:07Z",
+   "fingerprint": "7bdecf05e1543b7c",
+   "primary_source": false,
+   "cluster_id": "753f5fb982bf70bc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "41700c4e546c3361",
+   "symbols": [
+    "CBRL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Cracker Barrel (CBRL) Stock May Look Reasonable Despite Margin Improvement Plans",
+   "summary": "Cracker Barrel Old Country Store has seen its share price move sharply in 2024, and the question now is whether the recent rally is supported by the cash the business can realistically generate. With investors refocusing on fundamentals, the spotlight is on what the company’s cur",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cracker-barrel-cbrl-stock-may-190730923.html?.tsrc=rss",
+   "published_at": "2026-10-24T19:07:30Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:07Z",
+   "fingerprint": "f616ea194f56628f",
+   "primary_source": false,
+   "cluster_id": "41700c4e546c3361",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e489e3552b2b9db2",
+   "symbols": [
+    "CBRL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What Does Cracker Barrel Old Country Store (CBRL) Holiday Menu Push Mean For Traffic?",
+   "summary": "Cracker Barrel Old Country Store (NasdaqGS: CBRL) has rolled out new festive menu items, including Cinnamon Swirl Pancakes and a Country Fried Turkey Sandwich. The restaurant chain has also expanded its Thanksgiving Heat & Serve lineup, adding more at home holiday meal options fo",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/does-cracker-barrel-old-country-181106479.html?.tsrc=rss",
+   "published_at": "2026-10-24T18:11:06Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:07Z",
+   "fingerprint": "1dab002b24a306c8",
+   "primary_source": false,
+   "cluster_id": "e489e3552b2b9db2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "701be29dabcfee7e",
+   "symbols": [
+    "CBRL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cracker Barrel (CBRL) Up 29.8% Since Last Earnings Report: Can It Continue?",
+   "summary": "Cracker Barrel (CBRL) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cracker-barrel-cbrl-29-8-143002894.html?.tsrc=rss",
+   "published_at": "2026-10-23T14:30:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:07Z",
+   "fingerprint": "5ef3ee275e7ce969",
+   "primary_source": false,
+   "cluster_id": "701be29dabcfee7e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "abbfae5ed1b7a7ab",
+   "symbols": [
+    "CBRL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "13 Press Releases You Need to See This Week",
+   "summary": "With thousands of press releases published each week, it can be difficult to keep up with everything on PR Newswire. To help journalists and consumers stay on top of the week's most newsworthy and popular releases, here's a recap of some major stories from the week that shouldn't",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/13-press-releases-see-week-100200968.html?.tsrc=rss",
+   "published_at": "2026-10-23T10:02:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:07Z",
+   "fingerprint": "d307d421adad755c",
+   "primary_source": false,
+   "cluster_id": "abbfae5ed1b7a7ab",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8b12d69a3ccb543c",
+   "symbols": [
+    "CBRL",
+    "CWH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Russell 2000 stock on our watchlist and 2 we turn down",
+   "summary": "The Russell 2000 (^RUT) is packed with potential breakout stocks, thanks to its focus on smaller companies with high growth potential. However, smaller size also means these businesses often lack the resilience and financial flexibility of large-cap firms, making careful selectio",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-russell-2000-stock-watchlist-172553997.html?.tsrc=rss",
+   "published_at": "2026-10-22T17:25:53Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:07Z",
+   "fingerprint": "4576c8f2055a6449",
+   "primary_source": false,
+   "cluster_id": "8b12d69a3ccb543c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3c9b523d69e54054",
+   "symbols": [
+    "CBRL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Lactalis Canada Opens New R&D Centre in Ingleside, Ontario, Strengthening Canada’s Food Manufacturing and Agrifood Sector",
+   "summary": "New Canadian state-of-the-art facility will support Lactalis’ North American R&amp;D activities and is expected to become a Lactalis global expertise centre for cheddar cheeseINGLESIDE, Ontario, Oct. 21, 2026 (GLOBE NEWSWIRE) -- Lactalis Canada, the Canadian dairy leader behind e",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/lactalis-canada-opens-r-d-184900740.html?.tsrc=rss",
+   "published_at": "2026-10-21T18:49:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:07Z",
+   "fingerprint": "3715fcf5d2b5eb66",
+   "primary_source": false,
+   "cluster_id": "3c9b523d69e54054",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2b0a52915fcaa7c5",
+   "symbols": [
+    "CBRL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Stock Is in the Spotlight for All the Right Reasons. Here's Why It's a Buy Now.",
+   "summary": "Cracker Barrel's stock has nearly tripled from its low, and new management's cost savings could push it higher.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/10/19/1-stock-spotlight-for-right-reasons-why-buy-now/?.tsrc=rss",
+   "published_at": "2026-10-20T00:50:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:07Z",
+   "fingerprint": "ec5be6ff70d9f193",
+   "primary_source": false,
+   "cluster_id": "2b0a52915fcaa7c5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "35cb962f5961fa02",
+   "symbols": [
+    "CBRL",
+    "NDSN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Unpopular Stocks with Open Questions",
+   "summary": "Wall Street’s bearish price targets for the stocks in this article signal serious concerns. Such forecasts are uncommon in an industry where maintaining cordial corporate relationships often trumps delivering the hard truth.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-unpopular-stocks-open-questions-145655143.html?.tsrc=rss",
+   "published_at": "2026-10-19T14:56:55Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:11Z",
+   "fingerprint": "687cfcd9c4329e10",
+   "primary_source": false,
+   "cluster_id": "35cb962f5961fa02",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a768c1273a8f6639",
+   "symbols": [
+    "BJRI",
+    "CBRL",
+    "DRI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can Cracker Barrel Reverse Its 6.1% Traffic Decline in FY27?",
+   "summary": "CBRL aims to reverse its 6.1% traffic decline in fiscal 2027 through dinner menu upgrades, loyalty initiatives and value offerings amid consumer pressures.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cracker-barrel-reverse-6-1-140000549.html?.tsrc=rss",
+   "published_at": "2026-10-19T14:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:08Z",
+   "fingerprint": "8df70273111535f2",
+   "primary_source": false,
+   "cluster_id": "a768c1273a8f6639",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ed24874b77d37280",
+   "symbols": [
+    "CBRL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "The Cheesecake Factory Incorporated (CAKE) Hits Fresh High: Is There Still Room to Run?",
+   "summary": "Cheesecake Factory (CAKE) is at a 52-week high, but can investors hope for more gains in the future? We take a look at the company's fundamentals for clues.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cheesecake-factory-incorporated-cake-hits-121502054.html?.tsrc=rss",
+   "published_at": "2026-10-19T12:15:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:07Z",
+   "fingerprint": "1cae2c24a1c41512",
+   "primary_source": false,
+   "cluster_id": "ed24874b77d37280",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fa0eafe29641ddc6",
+   "symbols": [
+    "CBRL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Stocktwits Retail Therapy: Staples Defy Market Rout In Best Week Since February — Cracker Barrel, Signet And VF Steal The Show",
+   "summary": "Consumer staples posted their strongest week in eight months as tech-led selling hit the broader market, while Cracker Barrel, Signet and VF Corp. rallied on a turnaround, deal talk and analyst upgrades.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/stocktwits-retail-therapy-staples-defy-market-rout-in-best-week-since-february-cracker-barrel-signet-and-vf-steal-the-show/cZx8i3jRBMB?.tsrc=rss",
+   "published_at": "2026-10-19T07:49:30Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:07Z",
+   "fingerprint": "7b04acf764a19132",
+   "primary_source": false,
+   "cluster_id": "fa0eafe29641ddc6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2313933aacadda76",
+   "symbols": [
+    "CBRL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Cracker Barrel Old Country Store (CBRL) Is Up 3.05% in One Week: What You Should Know",
+   "summary": "Does Cracker Barrel Old Country Store (CBRL) have what it takes to be a top stock pick for momentum investors? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cracker-barrel-old-country-store-150002678.html?.tsrc=rss",
+   "published_at": "2026-10-16T15:00:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:07Z",
+   "fingerprint": "c23bf8b694d0d7ef",
+   "primary_source": false,
+   "cluster_id": "2313933aacadda76",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e19e27d947524962",
+   "symbols": [
+    "CBRL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Q2 Earnings Outperformers: Cracker Barrel (NASDAQ:CBRL) And The Rest Of The Sit-Down Dining Stocks",
+   "summary": "Looking back on sit-down dining stocks’ Q2 earnings, we examine this quarter’s best and worst performers, including Cracker Barrel (NASDAQ:CBRL) and its peers.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/q2-earnings-outperformers-cracker-barrel-161627143.html?.tsrc=rss",
+   "published_at": "2026-10-15T16:16:27Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:07Z",
+   "fingerprint": "2568deed960939b1",
+   "primary_source": false,
+   "cluster_id": "e19e27d947524962",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "54d220811c5897b1",

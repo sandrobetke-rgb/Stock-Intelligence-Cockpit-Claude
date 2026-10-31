@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-10-31T14:32:28Z",
+ "generated_at": "2026-10-31T14:37:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "CMTG",
-  "name": "Claros Mortgage Trust Inc",
+  "name": "Claros Mortgage Trust, Inc.",
   "region": "US",
   "currency": "USD",
-  "sector": "Financials",
-  "industry": null,
+  "sector": "Real Estate",
+  "industry": "REIT - Mortgage",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 1.149999976158142,
    "price_date": "2026-10-30",
@@ -30,27 +28,28 @@
    "sma50": 1.3644000005722046,
    "sma200": 2.1311499959230424
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 162246832.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
-   "model": "financial",
+   "score": 11.2,
+   "coverage_pct": 70,
+   "model": "standard",
    "dimensions": {
-    "revenue_growth": null,
-    "profitability": null,
-    "financial_stability": null,
-    "cashflow": null,
-    "market_position": null,
-    "growth_potential": null,
-    "management": null
+    "revenue_growth": 3.8,
+    "profitability": 0.0,
+    "financial_stability": 77.1,
+    "cashflow": 0.0,
+    "market_position": 0.0,
+    "growth_potential": 5.3,
+    "management": 21.9
    }
   },
   "risk": {
-   "score": 57.8,
-   "level": "erhoeht",
-   "coverage_pct": 45,
+   "score": 44.2,
+   "level": "moderat",
+   "coverage_pct": 74,
    "top_factors": [
+    "Free-Cashflow-Marge",
     "Volatilität (63T, annualisiert)",
     "Handelsliquidität (Umsatz 20T)"
    ]
@@ -83,7 +82,7 @@
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -110,34 +109,34 @@
   "move_zscore": -0.7048972058487485
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
-  "model": "financial",
+  "score": 11.2,
+  "status": "ok",
+  "coverage_pct": 70,
+  "model": "standard",
   "dimensions": [
    {
     "key": "revenue_growth",
     "label": "Umsatzwachstum",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 3.8,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_cagr",
       "label": "Umsatz-CAGR (mehrjährig)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -30.087,
+      "points": 0.0,
+      "status": "ok"
      },
      {
       "key": "revenue_growth_yoy",
       "label": "Umsatzwachstum Vorjahr",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -5.569,
+      "points": 12.7,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -146,25 +145,25 @@
     "key": "profitability",
     "label": "Profitabilität/Margen",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "data",
+    "coverage": 40,
     "metrics": [
      {
-      "key": "net_margin",
-      "label": "Nettomarge",
+      "key": "operating_margin",
+      "label": "Operative Marge",
       "unit": "%",
       "value": null,
       "points": null,
       "status": "unknown"
      },
      {
-      "key": "roe",
-      "label": "Eigenkapitalrendite",
+      "key": "net_margin",
+      "label": "Nettomarge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -529.691,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -173,14 +172,30 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 77.1,
+    "basis": "data",
+    "coverage": 40,
     "metrics": [
      {
-      "key": "share_change_yoy",
-      "label": "Aktienanzahl Veränderung",
-      "unit": "%",
+      "key": "debt_to_equity",
+      "label": "Verschuldung (Debt/Equity)",
+      "unit": "x",
+      "value": 0.84,
+      "points": 77.1,
+      "status": "ok"
+     },
+     {
+      "key": "current_ratio",
+      "label": "Liquidität (Current Ratio)",
+      "unit": "x",
+      "value": null,
+      "points": null,
+      "status": "unknown"
+     },
+     {
+      "key": "interest_coverage",
+      "label": "Zinsdeckung (EBIT/Zinsen)",
+      "unit": "x",
       "value": null,
       "points": null,
       "status": "unknown"
@@ -192,29 +207,55 @@
     "key": "cashflow",
     "label": "Cashflow",
     "weight": 0.1,
-    "score": null,
-    "basis": "not_applicable",
-    "coverage": null,
-    "metrics": [],
+    "score": 0.0,
+    "basis": "data",
+    "coverage": 100,
+    "metrics": [
+     {
+      "key": "fcf_margin",
+      "label": "Free-Cashflow-Marge",
+      "unit": "%",
+      "value": -35.938,
+      "points": 0.0,
+      "status": "ok"
+     },
+     {
+      "key": "ocf_positive",
+      "label": "Operativer Cashflow positiv",
+      "unit": "bool",
+      "value": 0.0,
+      "points": 0.0,
+      "status": "ok"
+     }
+    ],
     "manual": null
    },
    {
     "key": "market_position",
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
-    "score": null,
-    "basis": "not_applicable",
-    "coverage": null,
-    "metrics": [],
+    "score": 0.0,
+    "basis": "proxy",
+    "coverage": 100,
+    "metrics": [
+     {
+      "key": "gross_margin",
+      "label": "Bruttomarge (Proxy Preissetzungsmacht)",
+      "unit": "%",
+      "value": 0.0,
+      "points": 0.0,
+      "status": "ok"
+     }
+    ],
     "manual": null
    },
    {
     "key": "growth_potential",
     "label": "Wachstumspotenzial",
     "weight": 0.2,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 5.3,
+    "basis": "proxy",
+    "coverage": 40,
     "metrics": [
      {
       "key": "revenue_growth_forward",
@@ -223,6 +264,14 @@
       "value": null,
       "points": null,
       "status": "unknown"
+     },
+     {
+      "key": "reinvestment",
+      "label": "Reinvestition (F&E + Capex in % Umsatz)",
+      "unit": "%",
+      "value": 2.948,
+      "points": 5.3,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -231,42 +280,78 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 21.9,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -31.926,
+      "points": 0.0,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.614,
+      "points": 54.8,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/CMTG/financials",
+  "as_of": "2026-10-31T14:40:52Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": 57.8,
-  "level": "erhoeht",
-  "coverage_pct": 45,
+  "score": 44.2,
+  "level": "moderat",
+  "coverage_pct": 74,
   "factors": [
+   {
+    "key": "leverage",
+    "label": "Verschuldung (Debt/Equity)",
+    "value": 0.84,
+    "unit": "x",
+    "severity": 20.0,
+    "weight": 0.15,
+    "status": "ok"
+   },
+   {
+    "key": "liquidity",
+    "label": "Liquidität (Current Ratio)",
+    "value": null,
+    "unit": "x",
+    "severity": null,
+    "weight": 0.1,
+    "status": "unknown"
+   },
+   {
+    "key": "interest",
+    "label": "Zinsdeckung",
+    "value": null,
+    "unit": "x",
+    "severity": null,
+    "weight": 0.08,
+    "status": "unknown"
+   },
+   {
+    "key": "cashflow",
+    "label": "Free-Cashflow-Marge",
+    "value": -35.94,
+    "unit": "%",
+    "severity": 100.0,
+    "weight": 0.12,
+    "status": "ok"
+   },
    {
     "key": "margin_trend",
     "label": "Margenentwicklung (Vorjahr, Pp.)",
@@ -279,11 +364,11 @@
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": 0.61,
     "unit": "%",
-    "severity": null,
+    "severity": 6.1,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -306,20 +391,20 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": -0.45,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 7.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 66.7,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -332,6 +417,7 @@
    }
   ],
   "top_factors": [
+   "Free-Cashflow-Marge",
    "Volatilität (63T, annualisiert)",
    "Handelsliquidität (Umsatz 20T)"
   ],
@@ -372,10 +458,10 @@
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 2,
+    "independent": 2,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -400,7 +486,338 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "d59d6acc69e7ef41",
+   "symbols": [
+    "CMTG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Claros Mortgage Trust, Inc. Announces Dates for Third Quarter 2026 Earnings Release and Conference Call",
+   "summary": "NEW YORK, October 20, 2026--Claros Mortgage Trust, Inc. (NYSE: CMTG) (the \"Company\" or \"CMTG\") today announced that it will release its third quarter 2026 financial results after the closing of trading on the New York Stock Exchange on Tuesday, November 3, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/claros-mortgage-trust-inc-announces-203000738.html?.tsrc=rss",
+   "published_at": "2026-10-20T20:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:51Z",
+   "fingerprint": "3f59bdb07a09cd31",
+   "primary_source": false,
+   "cluster_id": "4a49963c10b2176c",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c143b24a98164f88",
+   "symbols": [
+    "CMTG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Claros Mortgage Trust (CMTG) Stock Fair Value Moves Lower After Analyst Target Revisions",
+   "summary": "The latest update on Claros Mortgage Trust centers on a reset in expectations, with one modelled fair value estimate moving from US$2.50 to about US$2.08 and a separate price target shifting from US$2.50 to US$2.15. Analysts now frame Claros Mortgage Trust as a balance sheet and ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/claros-mortgage-trust-cmtg-stock-011440857.html?.tsrc=rss",
+   "published_at": "2026-10-11T01:14:40Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:51Z",
+   "fingerprint": "4685e0d2d953161f",
+   "primary_source": false,
+   "cluster_id": "c143b24a98164f88",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4f72ca110bc8b6dc",
+   "symbols": [
+    "CMTG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Claros Mortgage Trust Q2 Earnings Call Highlights",
+   "summary": "Claros Mortgage Trust (NYSE:CMTG) reported a second-quarter net loss as it continued to reduce watchlist exposure, sell or resolve loans and real estate-owned assets, and deleverage its balance sheet in preparation for eventually resuming new loan originations. The commercial mor",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/claros-mortgage-trust-q2-earnings-call-highlights-2026-07-31/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-07-31T05:03:49Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:51Z",
+   "fingerprint": "0c84701c52eeacb2",
+   "primary_source": false,
+   "cluster_id": "4f72ca110bc8b6dc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e59c8529ee8438ea",
+   "symbols": [
+    "CMTG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Claros Mortgage Trust Inc (CMTG) (Q2 2026) Earnings Call Highlights: Navigating Credit ...",
+   "summary": "Despite a GAAP net loss of $1.81 per share, the company completed $482 million in resolutions and reduced watch list loans to $1.1 billion.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/claros-mortgage-trust-inc-cmtg-230312693.html?.tsrc=rss",
+   "published_at": "2026-07-30T23:03:12Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:51Z",
+   "fingerprint": "bfc3ef3d7646a2e2",
+   "primary_source": false,
+   "cluster_id": "e59c8529ee8438ea",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1f7f318dca43ac08",
+   "symbols": [
+    "CMTG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Claros Mortgage Trust, Inc. Reports Second Quarter 2026 Results",
+   "summary": "NEW YORK, July 29, 2026--Claros Mortgage Trust, Inc. (NYSE: CMTG) (the \"Company\" or \"CMTG\") today reported its financial results for the quarter ended June 30, 2026. The Company reported GAAP net loss of $255.4 million, or $1.81 per share, for the quarter ended June 30, 2026. Dis",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/claros-mortgage-trust-inc-reports-201500271.html?.tsrc=rss",
+   "published_at": "2026-07-29T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:51Z",
+   "fingerprint": "275feb23c0df29aa",
+   "primary_source": false,
+   "cluster_id": "1f7f318dca43ac08",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4a49963c10b2176c",
+   "symbols": [
+    "CMTG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Claros Mortgage Trust, Inc. Announces Dates for Second Quarter 2026 Earnings Release and Conference Call",
+   "summary": "NEW YORK, July 15, 2026--Claros Mortgage Trust, Inc. (NYSE: CMTG) (the \"Company\" or \"CMTG\") today announced that it will release its second quarter 2026 financial results after the closing of trading on the New York Stock Exchange on Wednesday, July 29, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/claros-mortgage-trust-inc-announces-201000835.html?.tsrc=rss",
+   "published_at": "2026-07-15T20:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:51Z",
+   "fingerprint": "f646f697261b8120",
+   "primary_source": false,
+   "cluster_id": "4a49963c10b2176c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a8f369e1e3c858b1",
+   "symbols": [
+    "CMTG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Mack Real Estate Group Announces Senior Leadership Promotions and Transitions",
+   "summary": "NEW YORK, July 15, 2026--Mack Real Estate Group (MREG) today announced a series of leadership transitions designed to position the firm for its next chapter of growth. Priyanka Garg, who most recently served as Managing Director and Head of Credit Strategies, has been named Presi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/mack-real-estate-group-announces-170000594.html?.tsrc=rss",
+   "published_at": "2026-07-15T17:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:51Z",
+   "fingerprint": "954d47531a0f29e0",
+   "primary_source": false,
+   "cluster_id": "a8f369e1e3c858b1",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d5d4524d668d67b9",
+   "symbols": [
+    "CMTG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Claros Mortgage Trust Q1 Earnings Call Highlights",
+   "summary": "Claros Mortgage Trust (NYSE:CMTG) reported a first-quarter loss as management said it continued to focus on reducing risk in its loan book, resolving watchlist assets and lowering leverage. The company posted a GAAP net loss of $0.39 per share for the first quarter of 2026, while",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/claros-mortgage-trust-q1-earnings-call-highlights-2026-05-09/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-05-09T20:04:30Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:51Z",
+   "fingerprint": "1877c799acfb2b10",
+   "primary_source": false,
+   "cluster_id": "d5d4524d668d67b9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8f33819534e300dc",
+   "symbols": [
+    "CMTG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How The Claros Mortgage Trust (CMTG) Narrative Is Shifting After The US$2.50 Target Reset",
+   "summary": "Analysts have reset their price target for Claros Mortgage Trust to US$2.50 from US$3, while keeping the fair value estimate anchored at US$2.50. That change lines up with more cautious commentary around earnings visibility, asset quality and the view that current trading levels ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/claros-mortgage-trust-cmtg-narrative-060752123.html?.tsrc=rss",
+   "published_at": "2026-05-04T06:07:52Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:51Z",
+   "fingerprint": "deeecec3c5e33461",
+   "primary_source": false,
+   "cluster_id": "8f33819534e300dc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e546084b1fdd7993",
+   "symbols": [
+    "CMTG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How The Claros Mortgage Trust (CMTG) Story Is Shifting With New Targets And Term Loan Funding",
+   "summary": "The analyst price target on Claros Mortgage Trust has moved from US$3.25 to US$3.00 and now to US$2.50, giving you a clearer sense of where research desks currently see equity value. That series of moves, paired with an Underperform rating, underlines how analysts are weighing ex",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/claros-mortgage-trust-cmtg-story-021027309.html?.tsrc=rss",
+   "published_at": "2026-04-06T02:10:27Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:51Z",
+   "fingerprint": "e22736365fbe5a31",
+   "primary_source": false,
+   "cluster_id": "e546084b1fdd7993",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1346c7151a93a20c",
+   "symbols": [
+    "CMTG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How The Claros Mortgage Trust (CMTG) Narrative Is Resetting After Repeated Target Cuts",
+   "summary": "The latest analyst update for Claros Mortgage Trust trims the price target from US$3.25 to US$2.50, marking a clear reset in where the Street sees fair value today. Recent commentary highlights that this move follows an earlier step from US$3.25 to US$3, with the rating held at t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/claros-mortgage-trust-cmtg-narrative-231857103.html?.tsrc=rss",
+   "published_at": "2026-03-05T23:18:57Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:51Z",
+   "fingerprint": "af6a5f613800abe6",
+   "primary_source": false,
+   "cluster_id": "1346c7151a93a20c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b1960f8e3eefe17b",
+   "symbols": [
+    "CMTG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Claros Mortgage Trust Q4 Earnings Call Highlights",
+   "summary": "Claros Mortgage Trust (NYSE:CMTG) executives said the company made “meaningful” progress in 2025 and into early 2026 as it worked to resolve watch list loans, generate liquidity, and deleverage the balance sheet, while acknowledging that earnings power has been pressured as the l",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/claros-mortgage-trust-q4-earnings-call-highlights-2026-02-19/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-02-20T00:08:08Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:51Z",
+   "fingerprint": "6f4b5b41f0659442",
+   "primary_source": false,
+   "cluster_id": "b1960f8e3eefe17b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8009eca2ecde4f10",
+   "symbols": [
+    "CMTG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Claros Mortgage Trust Inc (CMTG) Q4 2025 Earnings Call Highlights: Navigating Challenges with ...",
+   "summary": "Despite reporting a net loss, Claros Mortgage Trust Inc (CMTG) exceeded its resolution targets and strengthened its financial position with strategic debt management.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/claros-mortgage-trust-inc-cmtg-210344584.html?.tsrc=rss",
+   "published_at": "2026-02-19T21:03:44Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:51Z",
+   "fingerprint": "4d93dc725ed203ed",
+   "primary_source": false,
+   "cluster_id": "8009eca2ecde4f10",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d163a17303e3ed3c",
+   "symbols": [
+    "CMTG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Claros Mortgage Trust CMTG Earnings Transcript",
+   "summary": "Anne Wynn: And John Michael McGillis, President, Chief Financial Officer, and Director of Claros Mortgage Trust, Inc. We also have Priyanka Garg, Vice President who leads credit strategies for Mack Real Estate Group.  Prior to this call, we distributed CMTG's earnings release and",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/02/19/claros-mortgage-trust-cmtg-earnings-transcript/?.tsrc=rss",
+   "published_at": "2026-02-19T16:20:51Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:51Z",
+   "fingerprint": "551e50c380237965",
+   "primary_source": false,
+   "cluster_id": "d163a17303e3ed3c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "edb66c5d2bc4b7f5",
+   "symbols": [
+    "CMTG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Claros Mortgage Trust, Inc. Q4 2025 Earnings Call Summary",
+   "summary": "Moby summary of Claros Mortgage Trust, Inc.'s Q4 2025 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-claros-mortgage-trust-inc-q4-2025-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-02-19T13:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:51Z",
+   "fingerprint": "1faa09cb607466bb",
+   "primary_source": false,
+   "cluster_id": "edb66c5d2bc4b7f5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

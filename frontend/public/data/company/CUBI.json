@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-10-31T14:32:28Z",
+ "generated_at": "2026-10-31T14:37:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "CUBI",
-  "name": "Customers Bancorp",
+  "name": "Customers Bancorp, Inc.",
   "region": "US",
   "currency": "USD",
-  "sector": "Financials",
-  "industry": null,
+  "sector": "Financial Services",
+  "industry": "Banks - Regional",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 84.16000366210938,
    "price_date": "2026-10-30",
@@ -30,34 +28,38 @@
    "sma50": 77.99040023803711,
    "sma200": 75.90015029907227
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 2843244800.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
+   "score": 42.6,
+   "coverage_pct": 100,
    "model": "financial",
    "dimensions": {
-    "revenue_growth": null,
-    "profitability": null,
-    "financial_stability": null,
+    "revenue_growth": 59.6,
+    "profitability": 76.0,
+    "financial_stability": 0.0,
     "cashflow": null,
     "market_position": null,
-    "growth_potential": null,
-    "management": null
+    "growth_potential": 45.5,
+    "management": 25.4
    }
   },
   "risk": {
-   "score": 19.2,
-   "level": "niedrig",
-   "coverage_pct": 45,
-   "top_factors": []
+   "score": 31.4,
+   "level": "moderat",
+   "coverage_pct": 85,
+   "top_factors": [
+    "Verwässerung (Aktienanzahl yoy)"
+   ]
   },
   "market_intelligence": {
-   "score": 12.0,
+   "score": 44.3,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 3,
    "independent_24h": 0
   },
   "political": {
@@ -76,11 +78,11 @@
    "buy_value": 0,
    "sell_value": 0,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 1
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -107,34 +109,34 @@
   "move_zscore": -2.2636075823458612
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
+  "score": 42.6,
+  "status": "ok",
+  "coverage_pct": 100,
   "model": "financial",
   "dimensions": [
    {
     "key": "revenue_growth",
     "label": "Umsatzwachstum",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 59.6,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_cagr",
       "label": "Umsatz-CAGR (mehrjährig)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 8.155,
+      "points": 52.6,
+      "status": "ok"
      },
      {
       "key": "revenue_growth_yoy",
       "label": "Umsatzwachstum Vorjahr",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 16.569,
+      "points": 75.9,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -143,25 +145,25 @@
     "key": "profitability",
     "label": "Profitabilität/Margen",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 76.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "net_margin",
       "label": "Nettomarge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 27.962,
+      "points": 93.2,
+      "status": "ok"
      },
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 10.593,
+      "points": 58.8,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -170,17 +172,17 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 9.075,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -209,17 +211,17 @@
     "key": "growth_potential",
     "label": "Wachstumspotenzial",
     "weight": 0.2,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 45.5,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_growth_forward",
       "label": "Erwartetes Umsatzwachstum (Yahoo)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 4.1,
+      "points": 45.5,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -228,41 +230,41 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 25.4,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 10.593,
+      "points": 42.4,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 9.075,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/CUBI/financials",
+  "as_of": "2026-10-31T14:40:52Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": 19.2,
-  "level": "niedrig",
-  "coverage_pct": 45,
+  "score": 31.4,
+  "level": "moderat",
+  "coverage_pct": 85,
   "factors": [
    {
     "key": "margin_trend",
@@ -276,11 +278,11 @@
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": 9.08,
     "unit": "%",
-    "severity": null,
+    "severity": 90.8,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -303,20 +305,20 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 8.56,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 3.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 22.2,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -328,18 +330,20 @@
     "status": "ok"
    }
   ],
-  "top_factors": [],
+  "top_factors": [
+   "Verwässerung (Aktienanzahl yoy)"
+  ],
   "unknown_factors": [
    "Kunden- und Branchenabhängigkeit",
    "Rechtsstreitigkeiten"
   ]
  },
  "intelligence_detail": {
-  "score": 12.0,
+  "score": 44.3,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 86.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 67.9,
@@ -357,26 +361,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 19,
+    "independent": 19,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -394,8 +400,448 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
- "insiders": [],
+ "signals": [
+  {
+   "id": "a4a61f16931378bd",
+   "symbols": [
+    "CUBI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "CUBI Q3 deep dive: AI-driven efficiency and diversified deposit growth highlight quarter",
+   "summary": "Regional banking company Customers Bancorp (NYSE:CUBI) announced better-than-expected revenue in Q3 2026, with sales up 3.7% year on year to $240.2 million. Its non-GAAP profit of $2.27 per share was 6.5% above analysts’ consensus estimates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cubi-q3-deep-dive-ai-163047957.html?.tsrc=rss",
+   "published_at": "2026-10-26T16:30:47Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:37Z",
+   "fingerprint": "49edd0295a54d69b",
+   "primary_source": false,
+   "cluster_id": "a4a61f16931378bd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "905466fc0c61ef03",
+   "symbols": [
+    "CUBI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "5 revealing analyst questions from Customers Bancorp’s Q3 earnings call",
+   "summary": "Customers Bancorp’s third quarter results were positively received by the market, driven by notable progress in deposit and loan growth, as well as operational efficiencies. Management pointed to the expansion of noninterest-bearing deposits and the successful integration of AI-d",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/5-revealing-analyst-questions-customers-131847146.html?.tsrc=rss",
+   "published_at": "2026-10-26T13:18:47Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:37Z",
+   "fingerprint": "5fa52da5db98d82f",
+   "primary_source": false,
+   "cluster_id": "905466fc0c61ef03",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4db2b63bf9d3fedc",
+   "symbols": [
+    "CUBI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Customers Bancorp: 3 Key Takeaways for Long-Term Investors",
+   "summary": "AI-driven loan processing cuts cycle times by 95%, freeing staff to handle higher volume without hiring—a rare path to profitability gains.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/takeaways/2026/10/26/customers-bancorp-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+   "published_at": "2026-10-26T11:35:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:37Z",
+   "fingerprint": "0723868fc9a04fa5",
+   "primary_source": false,
+   "cluster_id": "4db2b63bf9d3fedc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "656c1968844e89be",
+   "symbols": [
+    "CUBI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Is Customers Bancorp (CUBI) Still A Bargain After Record Q3 Results?",
+   "summary": "Customers Bancorp has been on a strong multi year run, which puts a spotlight on whether the current share price is still aligned with the earnings the bank is producing today. With fresh headlines around growth and technology gains, the key issue for you is how much earnings pow",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/customers-bancorp-cubi-still-bargain-010859444.html?.tsrc=rss",
+   "published_at": "2026-10-24T01:08:59Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:37Z",
+   "fingerprint": "865b799d29dea197",
+   "primary_source": false,
+   "cluster_id": "656c1968844e89be",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "96a2c84272bbf8bf",
+   "symbols": [
+    "CUBI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Customers Bancorp (CUBI) Stock Climbs On Q3 Earnings Strength And AI Gains",
+   "summary": "Customers Bancorp walked into its Q3 2026 report with a stock that had already quietly re-rated higher over the past few months. Then the release hit, and the shares jumped another 7.45% on Friday to about US$84.60 in regular trading. The market cheered, but the real story sits i",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/customers-bancorp-cubi-stock-climbs-220922488.html?.tsrc=rss",
+   "published_at": "2026-10-23T22:09:22Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:37Z",
+   "fingerprint": "3fcdb9a2f2a0a7c9",
+   "primary_source": false,
+   "cluster_id": "96a2c84272bbf8bf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6627bcf7018fa1c9",
+   "symbols": [
+    "CUBI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Is Customers Bancorp (CUBI) Undervalued As Earnings Beat And 2026 Guidance Rise?",
+   "summary": "Customers Bancorp (CUBI) just delivered third quarter results that topped analyst expectations on both earnings and revenue, raised its 2026 net interest income outlook, and highlighted record deposit and loan balances supported by new AI driven efficiency gains. The earnings bea",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/customers-bancorp-cubi-undervalued-earnings-201439105.html?.tsrc=rss",
+   "published_at": "2026-10-23T20:14:39Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:37Z",
+   "fingerprint": "7f5c4c3741e53229",
+   "primary_source": false,
+   "cluster_id": "6627bcf7018fa1c9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "05c1a71e26ea2171",
+   "symbols": [
+    "CUBI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Customers Bancorp (CUBI) Q3 2026 Earnings Call Transcript",
+   "summary": "Record deposits and loans hit new highs as AI automation boosts efficiency and profitability.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/23/customers-bancorp-cubi-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-23T17:28:18Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:37Z",
+   "fingerprint": "3fb0c9b0072bad57",
+   "primary_source": false,
+   "cluster_id": "05c1a71e26ea2171",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8237949f935f40ee",
+   "symbols": [
+    "CUBI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Customers Bancorp Stock Is Up 7.6% What’s Changed",
+   "summary": "Customers Bancorp reported third quarter 2026 net interest income of US$208.08 million and net income of US$78.38 million, with EPS from continuing operations modestly higher than a year earlier and full year 2026 net interest income guidance set at US$805 million to US$810 milli",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/customers-bancorp-stock-7-6-171920528.html?.tsrc=rss",
+   "published_at": "2026-10-23T17:19:20Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:37Z",
+   "fingerprint": "5ef17cb63c044643",
+   "primary_source": false,
+   "cluster_id": "8237949f935f40ee",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "af1c5f94242475f6",
+   "symbols": [
+    "CUBI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What Customers Bancorp (CUBI) Said on Its Q3 Earnings Call",
+   "summary": "Customers Bancorp (NYSE:CUBI) reported third-quarter earnings per share of $2.25, up about 10% from the prior quarter, as loan and deposit growth, higher net interest income and productivity initiatives supported profitability. Chief Financial Officer Mark McCollom said the bank ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-customers-bancorp-cubi-said-on-its-q3-earnings-call-2026-10-23/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-23T16:06:09Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:37Z",
+   "fingerprint": "df8095f369c4db7d",
+   "primary_source": false,
+   "cluster_id": "af1c5f94242475f6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4ae75c15bf15eeed",
+   "symbols": [
+    "CUBI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Customers Bancorp, Inc. Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Customers Bancorp, Inc.'s Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-customers-bancorp-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-23T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:37Z",
+   "fingerprint": "5d98c0249736f29a",
+   "primary_source": false,
+   "cluster_id": "4ae75c15bf15eeed",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "794ab45d93e10096",
+   "symbols": [
+    "CUBI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Customers Bancorp (CUBI) Tops Q3 Earnings and Revenue Estimates",
+   "summary": "Customers Bancorp (CUBI) delivered earnings and revenue surprises of +5.58% and +1.29%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/customers-bancorp-cubi-tops-q3-225502198.html?.tsrc=rss",
+   "published_at": "2026-10-22T22:55:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:37Z",
+   "fingerprint": "16933b27c8a87c22",
+   "primary_source": false,
+   "cluster_id": "794ab45d93e10096",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9fd9941327223c2b",
+   "symbols": [
+    "CUBI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Here's What Key Metrics Tell Us About Customers Bancorp (CUBI) Q3 Earnings",
+   "summary": "While the top- and bottom-line numbers for Customers Bancorp (CUBI) give a sense of how the business performed in the quarter ended September 2026, it could be worth looking at how some of its key metrics compare to Wall Street estimates and year-ago values.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/heres-key-metrics-tell-us-220002256.html?.tsrc=rss",
+   "published_at": "2026-10-22T22:00:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:37Z",
+   "fingerprint": "0e8f2c0fc18529c2",
+   "primary_source": false,
+   "cluster_id": "9fd9941327223c2b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "aca321f332520bd0",
+   "symbols": [
+    "CUBI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Customers Bancorp: Q3 Earnings Snapshot",
+   "summary": "(CUBI) on Thursday reported third-quarter earnings of $78.The bank, based in West Reading, Pennsylvania, said it had earnings of $2.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/customers-bancorp-q3-earnings-snapshot-205717869.html?.tsrc=rss",
+   "published_at": "2026-10-22T20:57:17Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:37Z",
+   "fingerprint": "60225d0fdb4d1554",
+   "primary_source": false,
+   "cluster_id": "aca321f332520bd0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5b6c48ecd59a0151",
+   "symbols": [
+    "CUBI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Gear Up for Customers Bancorp (CUBI) Q3 Earnings: Wall Street Estimates for Key Metrics",
+   "summary": "Besides Wall Street's top-and-bottom-line estimates for Customers Bancorp (CUBI), review projections for some of its key metrics to gain a deeper understanding of how the company might have fared during the quarter ended September 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gear-customers-bancorp-cubi-q3-184212359.html?.tsrc=rss",
+   "published_at": "2026-10-21T18:42:12Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:37Z",
+   "fingerprint": "6ee2bf41983d25fc",
+   "primary_source": false,
+   "cluster_id": "5b6c48ecd59a0151",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5717394962a03841",
+   "symbols": [
+    "CUBI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Customers Bancorp (CUBI) Q3 Earnings: What To Expect",
+   "summary": "Regional banking company Customers Bancorp (NYSE:CUBI) will be reporting results this Thursday afternoon. Here’s what to look for.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/customers-bancorp-cubi-q3-earnings-070239470.html?.tsrc=rss",
+   "published_at": "2026-10-21T07:02:39Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:37Z",
+   "fingerprint": "933548ef3f61e0e6",
+   "primary_source": false,
+   "cluster_id": "5717394962a03841",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "505d980bcaac9b0b",
+   "symbols": [
+    "CUBI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Renasant (RNST) Reports Next Week: Wall Street Expects Earnings Growth",
+   "summary": "Renasant (RNST) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/renasant-rnst-reports-next-week-130023936.html?.tsrc=rss",
+   "published_at": "2026-10-20T13:00:23Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:37Z",
+   "fingerprint": "1373222fcb4e43df",
+   "primary_source": false,
+   "cluster_id": "505d980bcaac9b0b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a6f58f1d9e7b89ec",
+   "symbols": [
+    "CUBI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Small-Cap Stock to Own for Decades and 2 We Avoid",
+   "summary": "Many small-cap stocks have limited Wall Street coverage, giving savvy investors the chance to act before everyone else catches on. But the flip side is that these businesses have increased downside risk because they lack the scale and staying power of their larger competitors.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-small-cap-stock-own-093939672.html?.tsrc=rss",
+   "published_at": "2026-10-16T09:39:39Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:37Z",
+   "fingerprint": "83e7d8c7a0bf80e2",
+   "primary_source": false,
+   "cluster_id": "a6f58f1d9e7b89ec",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "596a81c91d2da45f",
+   "symbols": [
+    "CUBI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Earnings Preview: Customers Bancorp (CUBI) Q3 Earnings Expected to Decline",
+   "summary": "Customers Bancorp (CUBI) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/earnings-preview-customers-bancorp-cubi-130022910.html?.tsrc=rss",
+   "published_at": "2026-10-15T13:00:22Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:37Z",
+   "fingerprint": "1ee2ab280a4b6337",
+   "primary_source": false,
+   "cluster_id": "596a81c91d2da45f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a81e153335269538",
+   "symbols": [
+    "CUBI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Customers Bank and Palantir Collaborate to Build an AI-Native Future for Banking",
+   "summary": "WEST READING, Pa. & MIAMI, October 15, 2026--Customers Bank (\"Bank\"), the subsidiary of Customers Bancorp, Inc. (NYSE: CUBI) and one of the nation's top-performing banking companies with nearly $27 billion in assets, today announced a collaboration with Palantir Technologies Inc.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/customers-bank-palantir-collaborate-build-123300844.html?.tsrc=rss",
+   "published_at": "2026-10-15T12:33:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:37Z",
+   "fingerprint": "bb0ab5e7693b0932",
+   "primary_source": false,
+   "cluster_id": "a81e153335269538",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
+ "insiders": [
+  {
+   "id": "9fe559e5a53e6970",
+   "symbol": "CUBI",
+   "insider": "Watkins Philip",
+   "role": "EVP, Head of Corp Development",
+   "transaction_code": "F",
+   "transaction_kind": "tax_withholding",
+   "transaction_label": "Steuereinbehalt bei Vergütung",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-24",
+   "filed_at": "2026-10-26",
+   "reporting_delay_days": 2,
+   "shares": 3332.0,
+   "price": 84.54,
+   "value": 281687.28,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1488813/000174992826000007/xslF345X06/primarydocument.xml"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "social_detail": null,

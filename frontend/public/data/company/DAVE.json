@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-10-31T14:32:28Z",
+ "generated_at": "2026-10-31T14:37:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "DAVE",
-  "name": "Dave Class A",
+  "name": "Dave Inc.",
   "region": "US",
   "currency": "USD",
-  "sector": "Financials",
-  "industry": null,
+  "sector": "Technology",
+  "industry": "Software - Application",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 316.7900085449219,
    "price_date": "2026-10-30",
@@ -30,36 +28,38 @@
    "sma50": 353.52770080566404,
    "sma200": 287.1444751739502
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 4040817152.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
-   "model": "financial",
+   "score": 88.4,
+   "coverage_pct": 100,
+   "model": "standard",
    "dimensions": {
-    "revenue_growth": null,
-    "profitability": null,
-    "financial_stability": null,
-    "cashflow": null,
-    "market_position": null,
-    "growth_potential": null,
-    "management": null
+    "revenue_growth": 100.0,
+    "profitability": 100.0,
+    "financial_stability": 99.8,
+    "cashflow": 100.0,
+    "market_position": 100.0,
+    "growth_potential": 60.0,
+    "management": 64.5
    }
   },
   "risk": {
-   "score": 42.7,
-   "level": "moderat",
-   "coverage_pct": 45,
+   "score": 16.6,
+   "level": "niedrig",
+   "coverage_pct": 100,
    "top_factors": [
     "Volatilität (63T, annualisiert)"
    ]
   },
   "market_intelligence": {
-   "score": 6.2,
+   "score": 39.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 8,
    "independent_24h": 0
   },
   "political": {
@@ -82,7 +82,7 @@
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -109,34 +109,34 @@
   "move_zscore": -1.1645210299304818
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
-  "model": "financial",
+  "score": 88.4,
+  "status": "ok",
+  "coverage_pct": 100,
+  "model": "standard",
   "dimensions": [
    {
     "key": "revenue_growth",
     "label": "Umsatzwachstum",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 100.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_cagr",
       "label": "Umsatz-CAGR (mehrjährig)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 39.342,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "revenue_growth_yoy",
       "label": "Umsatzwachstum Vorjahr",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 59.672,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -145,25 +145,25 @@
     "key": "profitability",
     "label": "Profitabilität/Margen",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 100.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
+     {
+      "key": "operating_margin",
+      "label": "Operative Marge",
+      "unit": "%",
+      "value": 33.675,
+      "points": 100.0,
+      "status": "ok"
+     },
      {
       "key": "net_margin",
       "label": "Nettomarge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     },
-     {
-      "key": "roe",
-      "label": "Eigenkapitalrendite",
-      "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 35.343,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -172,17 +172,33 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 99.8,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
-      "key": "share_change_yoy",
-      "label": "Aktienanzahl Veränderung",
-      "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "key": "debt_to_equity",
+      "label": "Verschuldung (Debt/Equity)",
+      "unit": "x",
+      "value": 0.213,
+      "points": 99.5,
+      "status": "ok"
+     },
+     {
+      "key": "current_ratio",
+      "label": "Liquidität (Current Ratio)",
+      "unit": "x",
+      "value": 3.831,
+      "points": 100.0,
+      "status": "ok"
+     },
+     {
+      "key": "interest_coverage",
+      "label": "Zinsdeckung (EBIT/Zinsen)",
+      "unit": "x",
+      "value": 24.857,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -191,37 +207,71 @@
     "key": "cashflow",
     "label": "Cashflow",
     "weight": 0.1,
-    "score": null,
-    "basis": "not_applicable",
-    "coverage": null,
-    "metrics": [],
+    "score": 100.0,
+    "basis": "data",
+    "coverage": 100,
+    "metrics": [
+     {
+      "key": "fcf_margin",
+      "label": "Free-Cashflow-Marge",
+      "unit": "%",
+      "value": 51.111,
+      "points": 100.0,
+      "status": "ok"
+     },
+     {
+      "key": "ocf_positive",
+      "label": "Operativer Cashflow positiv",
+      "unit": "bool",
+      "value": 1.0,
+      "points": 100.0,
+      "status": "ok"
+     }
+    ],
     "manual": null
    },
    {
     "key": "market_position",
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
-    "score": null,
-    "basis": "not_applicable",
-    "coverage": null,
-    "metrics": [],
+    "score": 100.0,
+    "basis": "proxy",
+    "coverage": 100,
+    "metrics": [
+     {
+      "key": "gross_margin",
+      "label": "Bruttomarge (Proxy Preissetzungsmacht)",
+      "unit": "%",
+      "value": 71.748,
+      "points": 100.0,
+      "status": "ok"
+     }
+    ],
     "manual": null
    },
    {
     "key": "growth_potential",
     "label": "Wachstumspotenzial",
     "weight": 0.2,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 60.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_growth_forward",
       "label": "Erwartetes Umsatzwachstum (Yahoo)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 29.6,
+      "points": 100.0,
+      "status": "ok"
+     },
+     {
+      "key": "reinvestment",
+      "label": "Reinvestition (F&E + Capex in % Umsatz)",
+      "unit": "%",
+      "value": 1.222,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -230,59 +280,95 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 64.5,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 55.529,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 4.107,
+      "points": 11.2,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/DAVE/financials",
+  "as_of": "2026-10-31T14:40:52Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": 42.7,
-  "level": "moderat",
-  "coverage_pct": 45,
+  "score": 16.6,
+  "level": "niedrig",
+  "coverage_pct": 100,
   "factors": [
+   {
+    "key": "leverage",
+    "label": "Verschuldung (Debt/Equity)",
+    "value": 0.21,
+    "unit": "x",
+    "severity": 0.0,
+    "weight": 0.15,
+    "status": "ok"
+   },
+   {
+    "key": "liquidity",
+    "label": "Liquidität (Current Ratio)",
+    "value": 3.83,
+    "unit": "x",
+    "severity": 0.0,
+    "weight": 0.1,
+    "status": "ok"
+   },
+   {
+    "key": "interest",
+    "label": "Zinsdeckung",
+    "value": 24.86,
+    "unit": "x",
+    "severity": 0.0,
+    "weight": 0.08,
+    "status": "ok"
+   },
+   {
+    "key": "cashflow",
+    "label": "Free-Cashflow-Marge",
+    "value": 51.11,
+    "unit": "%",
+    "severity": 0.0,
+    "weight": 0.12,
+    "status": "ok"
+   },
    {
     "key": "margin_trend",
     "label": "Margenentwicklung (Vorjahr, Pp.)",
-    "value": null,
+    "value": 23.7,
     "unit": "Pp",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": 4.11,
     "unit": "%",
-    "severity": null,
+    "severity": 41.1,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -305,20 +391,20 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 14.23,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 5.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 44.4,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -339,11 +425,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.2,
+  "score": 39.1,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 34.9,
@@ -361,26 +447,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 8,
+    "independent": 8,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 11,
+    "independent": 11,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -398,7 +486,433 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "3e63b15f3cceda0e",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ingram Micro (INGM) Q3 Earnings and Revenues Top Estimates",
+   "summary": "Ingram Micro (INGM) delivered earnings and revenue surprises of +16.67% and +10.06%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ingram-micro-ingm-q3-earnings-220507567.html?.tsrc=rss",
+   "published_at": "2026-10-29T22:05:07Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:56Z",
+   "fingerprint": "24ba63212be89574",
+   "primary_source": false,
+   "cluster_id": "3e63b15f3cceda0e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Ingram Micro (INGM) Q3 Ergebnisse und Einnahmen Top Schätzungen"
+  },
+  {
+   "id": "19e8c0ad33705a63",
+   "symbols": [
+    "CPAY",
+    "CRCT",
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cricut Gears Up to Report Q3 Earnings: What's in the Cards?",
+   "summary": "CRCT is set to report Q3'26 earnings as shares rise 30.5% in three months. AI-driven growth supports revenues despite margin pressures & the 70% EPS decline.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cricut-gears-report-q3-earnings-135200018.html?.tsrc=rss",
+   "published_at": "2026-10-29T13:52:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:50Z",
+   "fingerprint": "ab7e8553e2af7f14",
+   "primary_source": false,
+   "cluster_id": "19e8c0ad33705a63",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Cricut rüstet sich für den Bericht Q3 Einnahmen: Was ist in den Karten?"
+  },
+  {
+   "id": "032c7d6a9ca3dbdb",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Analysts Estimate QXO, Inc. (QXO) to Report a Decline in Earnings: What to Look Out for",
+   "summary": "QXO INC (QXO) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/analysts-estimate-qxo-inc-qxo-130019536.html?.tsrc=rss",
+   "published_at": "2026-10-29T13:00:19Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:56Z",
+   "fingerprint": "2ebde98c1089dba8",
+   "primary_source": false,
+   "cluster_id": "032c7d6a9ca3dbdb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Analysten schätzen, dass QXO, Inc. (QXO) einen Rückgang des Gewinns meldet: Worauf Sie achten sollten"
+  },
+  {
+   "id": "0e8bc9ca96dcf846",
+   "symbols": [
+    "APTV",
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Aptiv Gears Up to Report Q3 Earnings: What's in the Cards?",
+   "summary": "APTV's Q3 2026 earnings & revenues are expected to decline sharply amid its business spin-off and rising costs, despite ADAS growth and new partnerships.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/aptiv-gears-report-q3-earnings-135400575.html?.tsrc=rss",
+   "published_at": "2026-10-28T13:54:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:12Z",
+   "fingerprint": "fb4c9c130e660e08",
+   "primary_source": false,
+   "cluster_id": "0e8bc9ca96dcf846",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "536e6cdc6ee99ee9",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Dave Inc. (DAVE) Reports Next Week: Wall Street Expects Earnings Growth",
+   "summary": "DAVE INC (DAVE) possesses the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dave-inc-dave-reports-next-130027547.html?.tsrc=rss",
+   "published_at": "2026-10-28T13:00:27Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:56Z",
+   "fingerprint": "a17eac8523ba23ed",
+   "primary_source": false,
+   "cluster_id": "536e6cdc6ee99ee9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f00c07e8556da76f",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Nu Holdings vs. Dave: Which Fintech Stock Is the Better Buy Right Now?",
+   "summary": "NU and DAVE offer contrasting fintech growth stories, with differences in scale, profitability, valuation and stock performance shaping the investment debate.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nu-holdings-vs-dave-fintech-152300126.html?.tsrc=rss",
+   "published_at": "2026-10-27T15:23:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:56Z",
+   "fingerprint": "1bb2e12a614dce44",
+   "primary_source": false,
+   "cluster_id": "f00c07e8556da76f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "35a5d3378b50f4f3",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wall Street Analysts Think DAVE INC (DAVE) Could Surge 36.61%: Read This Before Placing a Bet",
+   "summary": "The average of price targets set by Wall Street analysts indicates a potential upside of 36.6% in DAVE INC (DAVE). While the effectiveness of this highly sought-after metric is questionable, the positive trend in earnings estimate revisions might translate into an upside in the s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-think-dave-125502585.html?.tsrc=rss",
+   "published_at": "2026-10-27T12:55:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:56Z",
+   "fingerprint": "73c93d96a040d507",
+   "primary_source": false,
+   "cluster_id": "35a5d3378b50f4f3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1b2f864683c9b103",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Dave (DAVE) Stock Looks Pricey Despite Its Huge Three Year Run",
+   "summary": "Dave has seen its stock price reshape dramatically in recent years, which puts a spotlight on whether the business now earns enough on its capital to back up that move. With the share price resetting after a strong multi year run, the core issue is how the company’s return on the",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dave-dave-stock-looks-pricey-002406570.html?.tsrc=rss",
+   "published_at": "2026-10-27T00:24:06Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:56Z",
+   "fingerprint": "2d29beecfd0813b0",
+   "primary_source": false,
+   "cluster_id": "1b2f864683c9b103",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5881d76073b36cf5",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Dave to Host Third Quarter 2026 Conference Call on November 4, 2026 at 4:30 p.m. ET",
+   "summary": "LOS ANGELES, CA, Oct. 23, 2026 (GLOBE NEWSWIRE) -- Dave Inc. (Nasdaq: DAVE) (“Dave” or the “Company”), one of the nation’s leading neobanks, will host a conference call on Wednesday, November 4, 2026, at 4:30 p.m. Eastern time to discuss its financial results for the third quarte",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dave-host-third-quarter-2026-124300520.html?.tsrc=rss",
+   "published_at": "2026-10-23T12:43:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:56Z",
+   "fingerprint": "4c853962d7e182bd",
+   "primary_source": false,
+   "cluster_id": "5881d76073b36cf5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "62366ce2bc9f6e97",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Will DAVE INC (DAVE) Beat Estimates Again in Its Next Earnings Report?",
+   "summary": "DAVE INC (DAVE) has an impressive earnings surprise history and currently possesses the right combination of the two key ingredients for a likely beat in its next quarterly report.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dave-inc-dave-beat-estimates-151005549.html?.tsrc=rss",
+   "published_at": "2026-10-15T15:10:05Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:56Z",
+   "fingerprint": "a67fccff4a048ccb",
+   "primary_source": false,
+   "cluster_id": "62366ce2bc9f6e97",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3d058e53b25d853e",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Is Dave (DAVE) Below Fair Value As Buy Ratings And Earnings Lift The Stock?",
+   "summary": "Dave (DAVE) attracted fresh attention after Barrington and Seaport Global reiterated positive views, following quarterly results that included US$170.79 million in revenue and US$6.69 million in net profit for the June quarter. At a recent share price of US$368.42, Dave has paire",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dave-dave-below-fair-value-221234917.html?.tsrc=rss",
+   "published_at": "2026-10-12T22:12:34Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:56Z",
+   "fingerprint": "d92d83b4293bbbf7",
+   "primary_source": false,
+   "cluster_id": "3d058e53b25d853e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b2270b0379ca9309",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "MarketBeat Week in Review – 09/21 - 09/25",
+   "summary": "A weekly roundup of MarketBeat analysis on volatile markets, oil, bond rates, AI stocks, dividend picks, and earnings outlooks, covering companies from NVIDIA to Tesla and Qualcomm.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/articles/marketbeat-week-in-review-09-21-09-25/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-09-26T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:56Z",
+   "fingerprint": "9a4a53284c131f9a",
+   "primary_source": false,
+   "cluster_id": "b2270b0379ca9309",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "61ec1f25237b84ec",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "SEZL vs. DAVE: Which Consumer Fintech Stock Is the Better Bet?",
+   "summary": "Sezzle and Dave scale digital finance through different growth engines, with product breadth, credit trends and monetization shaping the fintech face-off.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/sezl-vs-dave-consumer-fintech-125300592.html?.tsrc=rss",
+   "published_at": "2026-09-25T12:53:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:56Z",
+   "fingerprint": "f2295f51d4e80d8d",
+   "primary_source": false,
+   "cluster_id": "61ec1f25237b84ec",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a43c6e4cd1e824dd",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Dave’s Success Has Investors Split",
+   "summary": "Dave's stock fell on GAAP earnings despite strong revenue growth and margins, as analysts turn bullish while legal challenges over its fee structure remain unresolved.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/articles/daves-success-has-investors-split/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-09-25T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:56Z",
+   "fingerprint": "ba50a676e680b426",
+   "primary_source": false,
+   "cluster_id": "a43c6e4cd1e824dd",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ea57cd4a71f10147",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Consumer Credit Stocks Facing The Next Rate Shock",
+   "summary": "Bond yields are jumping, oil has pushed above $100, and rate expectations keep resetting, yet consumer credit keeps quietly humming in the background of all that noise. This tug of war between tighter money and everyday borrowing is where short duration lenders can either feel re",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-consumer-credit-stocks-facing-111203057.html?.tsrc=rss",
+   "published_at": "2026-09-25T11:12:03Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:56Z",
+   "fingerprint": "faf9378fe239c5e8",
+   "primary_source": false,
+   "cluster_id": "ea57cd4a71f10147",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "69e5ebaaccf0e8cb",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Dave (DAVE) Climbed, But What Is Drawing Fresh Attention?",
+   "summary": "Dave (DAVE) has drawn fresh attention after recent trading left the stock with a one-month return of 11.98% and a gain of 31.08% over the past three months, prompting closer inspection of the business. That recent move comes on top of a 70.71% year-to-date share price return and ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dave-dave-climbed-drawing-fresh-161619049.html?.tsrc=rss",
+   "published_at": "2026-09-16T16:16:19Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:56Z",
+   "fingerprint": "4c99bc9eef7255d4",
+   "primary_source": false,
+   "cluster_id": "69e5ebaaccf0e8cb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "221541072d2d040e",
+   "symbols": [
+    "AGL",
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Ulta Beauty, Etsy upgraded: Wall Street's top analyst calls",
+   "summary": "Ulta Beauty, Etsy upgraded: Wall Street's top analyst calls",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/qorvo-downgraded-ulta-beauty-upgraded-133354484.html?.tsrc=rss",
+   "published_at": "2026-09-15T13:35:39Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:26:27Z",
+   "fingerprint": "0327ab8195c88bb0",
+   "primary_source": false,
+   "cluster_id": "221541072d2d040e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "86382a9be60afdd0",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Coherent (COHR) Down 10.4% Since Last Earnings Report: Can It Rebound?",
+   "summary": "Coherent (COHR) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/coherent-cohr-down-10-4-153002899.html?.tsrc=rss",
+   "published_at": "2026-09-11T15:30:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:56Z",
+   "fingerprint": "e4881e372bf797b2",
+   "primary_source": false,
+   "cluster_id": "86382a9be60afdd0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "32f02d2c8ac86d04",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ServiceNow Leads Five Stocks To Watch Near Buy Points",
+   "summary": "Meanwhile, several stocks showed bullish signs, including software giant ServiceNow.  Digital bank Dave Inc., commodities trading platform Marex Group, senior living REIT Welltower and cancer treatment developer Exelixis round out the list of stocks to watch in or near buy zones.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/e86af097-8bdd-3d03-9d3f-71859be83f7d/servicenow-leads-five-stocks.html?.tsrc=rss",
+   "published_at": "2026-09-05T12:00:14Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:56Z",
+   "fingerprint": "34d197c14acc38c2",
+   "primary_source": false,
+   "cluster_id": "32f02d2c8ac86d04",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

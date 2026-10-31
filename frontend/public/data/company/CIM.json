@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T14:32:28Z",
+ "generated_at": "2026-10-31T14:37:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 2.8849307577762042,
    "rvol": 0.928844261724845,
    "ema10": 8.429349879966919,
-   "ema21": 8.725549706112472,
+   "ema21": 8.725549706112481,
    "sma50": 9.74956184387207,
-   "sma200": 11.459281301498413
+   "sma200": 11.459281258583069
   },
   "market_cap": 694261952.0,
   "market_cap_currency": "USD",
@@ -55,12 +55,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 7.0,
+   "score": 29.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 1,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -101,9 +103,9 @@
   "adr20": 2.8849307577762042,
   "rvol": 0.928844261724845,
   "ema10": 8.429349879966919,
-  "ema21": 8.725549706112472,
+  "ema21": 8.725549706112481,
   "sma50": 9.74956184387207,
-  "sma200": 11.459281301498413,
+  "sma200": 11.459281258583069,
   "volatility_ann": 25.47816223290261,
   "avg_dollar_volume_20d": 12821586.913428307,
   "move_zscore": -1.3225353324714557
@@ -427,11 +429,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 7.0,
+  "score": 29.1,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 43.0,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 39.7,
@@ -440,35 +442,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 2,
+    "independent": 2,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -486,7 +490,339 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "33f798bd1895af89",
+   "symbols": [
+    "CIM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Chimera Launches Securitization Program for HomeXpress-Originated Loans",
+   "summary": "NEW YORK, October 30, 2026--Chimera Investment Corporation (NYSE: CIM) today announced the closing of its inaugural HomeXpress securitization backed by residential non-qualified mortgage (\"NQM\") loans.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/chimera-launches-securitization-program-homexpress-160000685.html?.tsrc=rss",
+   "published_at": "2026-10-30T16:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:34Z",
+   "fingerprint": "199832c68c23682e",
+   "primary_source": false,
+   "cluster_id": "33f798bd1895af89",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Chimera startet Verbriefungsprogramm für HomeXpress-Originierte Kredite"
+  },
+  {
+   "id": "feceb220c9e4de84",
+   "symbols": [
+    "CIM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Chimera Investment Corporation Announces Third Quarter 2026 Earnings Release and Conference Call Date",
+   "summary": "NEW YORK, October 22, 2026--Chimera Investment Corporation (NYSE: CIM) announced today that it will release financial results for the third quarter ended September 30, 2026, before the market opens on Thursday, November 5, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/chimera-investment-corporation-announces-third-203000240.html?.tsrc=rss",
+   "published_at": "2026-10-22T20:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:34Z",
+   "fingerprint": "6649704f603b175c",
+   "primary_source": false,
+   "cluster_id": "8f5fd2020c20f64e",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2666b8a629756809",
+   "symbols": [
+    "CIM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Chimera Declares $0.45 Per Share Third Quarter 2026 Common Stock Dividend",
+   "summary": "NEW YORK, September 17, 2026--The Board of Directors of Chimera Investment Corporation (\"Chimera\") has declared its third quarter cash dividend of $0.45 per common share, consistent with dividends for the first and second quarters of 2026 and in line with the Board’s previously s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/chimera-declares-0-45-per-203000051.html?.tsrc=rss",
+   "published_at": "2026-09-17T20:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:34Z",
+   "fingerprint": "d9914f1ed8ea5f26",
+   "primary_source": false,
+   "cluster_id": "3abd1e2c614032ec",
+   "independence": "copy",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "41fa92c470232af9",
+   "symbols": [
+    "CIM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Chimera Investment (CIM) Q2 2026 Earnings Call Transcript",
+   "summary": "HomeXpress origination hit record volume amid interest rate headwinds.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/12/chimera-investment-cim-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-12T15:13:35Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:34Z",
+   "fingerprint": "3cbacd96be1d6cd2",
+   "primary_source": false,
+   "cluster_id": "41fa92c470232af9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9fea570a709dbd8c",
+   "symbols": [
+    "CIM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Will Weaker 2026 Profitability and Completed Buybacks Change Chimera Investment's (CIM) Capital Allocation Narrative?",
+   "summary": "In the second quarter of 2026, Chimera Investment Corporation reported net income of US$17.37 million and a basic loss per share from continuing operations of US$0.05, while also declaring third-quarter cash dividends on all four series of its preferred stock and confirming compl",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/weaker-2026-profitability-completed-buybacks-042629632.html?.tsrc=rss",
+   "published_at": "2026-08-09T04:26:29Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:34Z",
+   "fingerprint": "7a8a6f4d14cb3d53",
+   "primary_source": false,
+   "cluster_id": "9fea570a709dbd8c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "90d2265294f3cdd3",
+   "symbols": [
+    "CIM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Chimera Investment Q2 Earnings Call Highlights",
+   "summary": "Chimera Investment (NYSE:CIM) reported second-quarter 2026 earnings available for distribution, or EAD, of $39 million, or $0.46 per share, as the company continued to reposition its investment portfolio toward agency mortgage-backed securities and residential credit opportunitie",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/chimera-investment-q2-earnings-call-highlights-2026-08-06/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-06T11:04:13Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:34Z",
+   "fingerprint": "2fdac8b67c4f237b",
+   "primary_source": false,
+   "cluster_id": "90d2265294f3cdd3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3acb869ca12c2e7f",
+   "symbols": [
+    "CIM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Chimera Investment Corporation Q2 2026 Earnings Call Summary",
+   "summary": "Moby summary of Chimera Investment Corporation's Q2 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-chimera-investment-corporation-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-08-06T02:30:50Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:34Z",
+   "fingerprint": "27fc05c9729766ce",
+   "primary_source": false,
+   "cluster_id": "3acb869ca12c2e7f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2be5700cb9250534",
+   "symbols": [
+    "CIM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Chimera Investment Corp (CIM) (Q2 2026) Earnings Call Highlights: EAD Beats Dividend Amid ...",
+   "summary": "Record Home Express originations and strategic securitizations bolster earnings power despite market volatility and a 3.2% drop in book value per share.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/chimera-investment-corp-cim-q2-210503863.html?.tsrc=rss",
+   "published_at": "2026-08-05T21:05:03Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:34Z",
+   "fingerprint": "4bea4dcb60e0d29e",
+   "primary_source": false,
+   "cluster_id": "2be5700cb9250534",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c35954d64938a576",
+   "symbols": [
+    "CIM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Chimera Declares Third Quarter 2026 Preferred Stock Dividends",
+   "summary": "NEW YORK, August 05, 2026--The Board of Directors of Chimera Investment Corporation (\"Chimera\") announced the declaration of its third quarter cash dividend of $0.50 per share of 8.00% Series A Cumulative Redeemable Preferred Stock. The dividend is payable September 30, 2026 to p",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/chimera-declares-third-quarter-2026-104500298.html?.tsrc=rss",
+   "published_at": "2026-08-05T10:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:34Z",
+   "fingerprint": "da61825f2fe09d1b",
+   "primary_source": false,
+   "cluster_id": "c35954d64938a576",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1789d20e5026aa02",
+   "symbols": [
+    "CIM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "CHIMERA INVESTMENT CORPORATION'S SECOND QUARTER EARNINGS MAINTAIN SUPPORT FOR $0.45 DIVIDEND",
+   "summary": "NEW YORK, August 05, 2026--Chimera Investment Corporation (NYSE: CIM) today announced its financial results for the second quarter ended June 30, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/chimera-investment-corporations-second-quarter-104500413.html?.tsrc=rss",
+   "published_at": "2026-08-05T10:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:34Z",
+   "fingerprint": "4a78baa97ad161e0",
+   "primary_source": false,
+   "cluster_id": "1789d20e5026aa02",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8f5fd2020c20f64e",
+   "symbols": [
+    "CIM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Chimera Investment Corporation Announces Second Quarter 2026 Earnings Release and Conference Call Date",
+   "summary": "NEW YORK, July 24, 2026--Chimera Investment Corporation (NYSE: CIM) announced today that it will release financial results for the second quarter ended June 30, 2026, before the market opens on Wednesday, August 5, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/chimera-investment-corporation-announces-second-005400926.html?.tsrc=rss",
+   "published_at": "2026-07-24T00:54:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:34Z",
+   "fingerprint": "5c3c70d970a02a34",
+   "primary_source": false,
+   "cluster_id": "8f5fd2020c20f64e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3abd1e2c614032ec",
+   "symbols": [
+    "CIM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Chimera Declares $0.45 Per Share Second Quarter 2026 Common Stock Dividend",
+   "summary": "NEW YORK, June 11, 2026--The Board of Directors of Chimera Investment Corporation (\"Chimera\") has declared its second quarter cash dividend of $0.45 per common share, consistent with the first quarter 2026 dividend and in line with the Board’s previously stated expectation to mai",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/chimera-declares-0-45-per-201000134.html?.tsrc=rss",
+   "published_at": "2026-06-11T20:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:34Z",
+   "fingerprint": "e3c9cb50af08f05c",
+   "primary_source": false,
+   "cluster_id": "3abd1e2c614032ec",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d79c1e6ed5f59bd8",
+   "symbols": [
+    "CIM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Chimera (CIM) Q1 2026 Earnings Call Transcript",
+   "summary": "Phillip Kardis: Thank you, Tyra.  Joining me on the call are Subra Viswanathan, our Chief Financial Officer; Jack MacDowell, our Chief Investment Officer; and Kyle Walker, the President and CEO of HomeXpress Mortgage.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/06/01/chimera-cim-q1-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-06-01T21:12:38Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:34Z",
+   "fingerprint": "aff2e797519a826c",
+   "primary_source": false,
+   "cluster_id": "d79c1e6ed5f59bd8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e3da59c7efbdd114",
+   "symbols": [
+    "CIM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "How Net Losses, Dividend Coverage, and HomeXpress Growth At Chimera Investment (CIM) Has Changed Its Investment Story",
+   "summary": "Chimera Investment Corporation recently reported that it moved from a US$167.30 million net income in the prior year’s first quarter to a US$43.91 million net loss for the quarter ended March 31, 2026, alongside declaring second-quarter cash dividends for all four series of its p",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/net-losses-dividend-coverage-homexpress-170644936.html?.tsrc=rss",
+   "published_at": "2026-05-10T17:06:44Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:34Z",
+   "fingerprint": "1c61075b8253b91c",
+   "primary_source": false,
+   "cluster_id": "e3da59c7efbdd114",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "39c012947d27211f",
+   "symbols": [
+    "CIM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Chimera Investment Q1 Earnings Call Highlights",
+   "summary": "Chimera Investment (NYSE:CIM) executives said the company covered its dividend in the first quarter of 2026 while continuing to reposition its portfolio toward more liquid assets and expanding its HomeXpress Mortgage origination platform. President and Chief Executive Officer Phi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/chimera-investment-q1-earnings-call-highlights-2026-05-09/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-05-09T19:06:12Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:34Z",
+   "fingerprint": "91ddbbf6ed4393a5",
+   "primary_source": false,
+   "cluster_id": "39c012947d27211f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

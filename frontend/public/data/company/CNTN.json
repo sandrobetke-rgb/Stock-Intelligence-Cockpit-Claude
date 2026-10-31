@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-10-31T14:32:28Z",
+ "generated_at": "2026-10-31T14:37:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "CNTN",
-  "name": "Canton Strategic Holdings Inc",
+  "name": "Canton Strategic Holdings, Inc.",
   "region": "US",
   "currency": "USD",
-  "sector": "Health Care",
-  "industry": null,
+  "sector": "Healthcare",
+  "industry": "Biotechnology",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 1.9500000476837158,
    "price_date": "2026-10-30",
@@ -30,38 +28,41 @@
    "sma50": 2.1454999899864196,
    "sma200": 2.970174992084503
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 155378656.0,
+  "market_cap_currency": "USD",
   "quality": {
    "score": null,
-   "coverage_pct": 0,
+   "coverage_pct": 38,
    "model": "standard",
    "dimensions": {
     "revenue_growth": null,
     "profitability": null,
-    "financial_stability": null,
-    "cashflow": null,
-    "market_position": null,
+    "financial_stability": 50.0,
+    "cashflow": 0.0,
+    "market_position": 100.0,
     "growth_potential": null,
-    "management": null
+    "management": 0.0
    }
   },
   "risk": {
-   "score": null,
-   "level": "unbekannt",
-   "coverage_pct": 25,
+   "score": 73.5,
+   "level": "hoch",
+   "coverage_pct": 65,
    "top_factors": [
     "Volatilität (63T, annualisiert)",
-    "Handelsliquidität (Umsatz 20T)"
+    "Verwässerung (Aktienanzahl yoy)",
+    "Zinsdeckung"
    ]
   },
   "market_intelligence": {
-   "score": 5.2,
+   "score": 38.2,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 2,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -83,7 +84,7 @@
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -112,7 +113,7 @@
  "quality_detail": {
   "score": null,
   "status": "insufficient_data",
-  "coverage_pct": 0,
+  "coverage_pct": 38,
   "model": "standard",
   "dimensions": [
    {
@@ -173,9 +174,9 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 50.0,
+    "basis": "data",
+    "coverage": 60,
     "metrics": [
      {
       "key": "debt_to_equity",
@@ -189,17 +190,17 @@
       "key": "current_ratio",
       "label": "Liquidität (Current Ratio)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 5.29,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "interest_coverage",
       "label": "Zinsdeckung (EBIT/Zinsen)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -1484.389,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -208,9 +209,9 @@
     "key": "cashflow",
     "label": "Cashflow",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "data",
+    "coverage": 40,
     "metrics": [
      {
       "key": "fcf_margin",
@@ -224,9 +225,9 @@
       "key": "ocf_positive",
       "label": "Operativer Cashflow positiv",
       "unit": "bool",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.0,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -235,17 +236,17 @@
     "key": "market_position",
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 100.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "gross_margin",
       "label": "Bruttomarge (Proxy Preissetzungsmacht)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 100.0,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -281,41 +282,41 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -9.026,
+      "points": 0.0,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 1780.287,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/CNTN/financials",
+  "as_of": "2026-10-31T14:40:52Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": null,
-  "level": "unbekannt",
-  "coverage_pct": 25,
+  "score": 73.5,
+  "level": "hoch",
+  "coverage_pct": 65,
   "factors": [
    {
     "key": "leverage",
@@ -329,20 +330,20 @@
    {
     "key": "liquidity",
     "label": "Liquidität (Current Ratio)",
-    "value": null,
+    "value": 5.29,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "interest",
     "label": "Zinsdeckung",
-    "value": null,
+    "value": -1484.39,
     "unit": "x",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "cashflow",
@@ -365,11 +366,11 @@
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": 1780.29,
     "unit": "%",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -392,20 +393,20 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 103.87,
     "unit": "x",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 8.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 77.8,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -419,7 +420,8 @@
   ],
   "top_factors": [
    "Volatilität (63T, annualisiert)",
-   "Handelsliquidität (Umsatz 20T)"
+   "Verwässerung (Aktienanzahl yoy)",
+   "Zinsdeckung"
   ],
   "unknown_factors": [
    "Kunden- und Branchenabhängigkeit",
@@ -427,11 +429,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 5.2,
+  "score": 38.2,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 68.2,
+   "freshness": 50,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 29.5,
@@ -440,35 +442,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -486,7 +490,210 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "a3480ceb6292fd05",
+   "symbols": [
+    "CNTN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Canton Strategic Holdings Moves to Tokenize Its Own Shares Under the SEC’s New Exemption",
+   "summary": "With Fairmint set to mint the tokens for the company, tokenized CNTN shares could begin trading on TSV LLC's Canton venue, which has not yet opened, on Nov. 2 at the earliest.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "unchainedcrypto.com",
+   "url": "https://unchainedcrypto.com/canton-strategic-holdings-moves-to-tokenize-its-own-shares-under-the-secs-new-exemption/?.tsrc=rss",
+   "published_at": "2026-10-30T23:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:58Z",
+   "fingerprint": "2906d9dab833b45a",
+   "primary_source": false,
+   "cluster_id": "a3480ceb6292fd05",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Canton Strategic Holdings bewegt sich, um seine eigenen Aktien unter der neuen Befreiung der SEC zu tokenize"
+  },
+  {
+   "id": "25c1f07c8d969c7a",
+   "symbols": [
+    "CC",
+    "CNTN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Canton Strategic Holdings Plans Tokenized Trading of Its Own Shares on Canton Network",
+   "summary": "Canton Strategic Holdings (NASDAQ: $CNTN) plans to let its common shares trade in tokenized form on the Canton Netw...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "cryptoprowl.com",
+   "url": "https://www.cryptoprowl.com/releases/canton-strategic-holdings-plans-tokenized-trading-of-its-own-shares-on-canton-network-7541?.tsrc=rss",
+   "published_at": "2026-10-29T17:27:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:09Z",
+   "fingerprint": "e960a38c74a23910",
+   "primary_source": false,
+   "cluster_id": "25c1f07c8d969c7a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Canton Strategic Holdings plant tokenisierten Handel mit eigenen Aktien auf Canton Network"
+  },
+  {
+   "id": "60b74c0716542863",
+   "symbols": [
+    "BR",
+    "CNTN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Tharimmune Investor Update Spotlights Canton Network’s Tokenization Push",
+   "summary": "Canton Strategic Holdings President Mark Toomey said institutional participation in the Canton Network continued to expand during the third quarter as infrastructure providers, asset issuers and market participants prepared for a planned late-October rollout by the Depository Tru",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-tharimmune-investor-update-spotlights-canton-networks-tokenization-push-2026-10-24/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-24T14:02:08Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:27Z",
+   "fingerprint": "d4e0f7ad607eed03",
+   "primary_source": false,
+   "cluster_id": "60b74c0716542863",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f07a86598bbe78f2",
+   "symbols": [
+    "CNTN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Canton Strategic Holdings, Inc. Announces Sale of Gravitas Life Sciences, LLC",
+   "summary": "Canton Strategic Holdings, Inc., (NASDAQ: CNTN) (\"Canton Strategic Holdings\" or the \"Company\") the first publicly traded company to leverage Canton Coin to support the Canton Network's ability to digitize traditional financial markets, today announced the sale of its biotech rese",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/canton-strategic-holdings-inc-announces-120000259.html?.tsrc=rss",
+   "published_at": "2026-07-23T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:58Z",
+   "fingerprint": "f35479bb6d076a58",
+   "primary_source": false,
+   "cluster_id": "f07a86598bbe78f2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4fde83115b36feab",
+   "symbols": [
+    "CNTN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Tharimmune Stockholders Elect Board, Ratify Auditor at 2026 Annual Meeting",
+   "summary": "Canton Strategic Holdings held its 2026 Annual Meeting of Stockholders virtually at 2:00 p.m. Eastern Time, with Chief Executive Officer and Chairman Mark Wendland presiding over the proceedings. Wendland said the meeting had been called by the company’s board of directors and th",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/tharimmune-stockholders-elect-board-ratify-auditor-at-2026-annual-meeting-2026-07-13/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-07-14T02:01:57Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:58Z",
+   "fingerprint": "f221b586c20bdc12",
+   "primary_source": false,
+   "cluster_id": "4fde83115b36feab",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cadb4ba94dbe45fb",
+   "symbols": [
+    "CNTN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Canton Strategic Holdings, Inc. Announces Launch of Locking Service to Support Network Infrastructure Providers",
+   "summary": "Canton Strategic Holdings, Inc., (NASDAQ: CNTN) (\"Canton Strategic Holdings\" or the \"Company\") the first publicly traded company to leverage Canton Coin (\"CC\") to support the Canton Network's ability to digitize traditional financial markets, today announced that it will begin of",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/crypto/articles/canton-strategic-holdings-inc-announces-121500876.html?.tsrc=rss",
+   "published_at": "2026-06-23T12:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:58Z",
+   "fingerprint": "8aa61b0972c9095d",
+   "primary_source": false,
+   "cluster_id": "cadb4ba94dbe45fb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4f143ffe042105b4",
+   "symbols": [
+    "CNTN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "We're Not Very Worried About Canton Strategic Holdings' (NASDAQ:CNTN) Cash Burn Rate",
+   "summary": "Even when a business is losing money, it's possible for shareholders to make money if they buy a good business at the...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/were-not-very-worried-canton-120414399.html?.tsrc=rss",
+   "published_at": "2026-05-15T12:04:14Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:58Z",
+   "fingerprint": "aed9fed4c4e1710d",
+   "primary_source": false,
+   "cluster_id": "4f143ffe042105b4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3eac754121b9ea19",
+   "symbols": [
+    "CNTN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Tharimmune Highlights Canton Network Q1 Growth, Tokenomics Shift and Validator Locking in Webinar",
+   "summary": "Canton Strategic Holdings executives used the company’s first quarterly “Canton Network Ecosystem Update” webinar to highlight first-quarter network growth and to explain the tokenomics framework underlying the Canton Network, including recent governance changes and the network’s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/tharimmune-highlights-canton-network-q1-growth-tokenomics-shift-and-validator-locking-in-webinar-2026-04-25/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-04-26T02:02:15Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:58Z",
+   "fingerprint": "7278bf24f147a27d",
+   "primary_source": false,
+   "cluster_id": "3eac754121b9ea19",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "30f0c0f5cbd43306",
+   "symbols": [
+    "CNTN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Canton Strategic Holdings, Inc. Presents Quarterly Canton Network Ecosystem Update",
+   "summary": "Canton Strategic Holdings, Inc., (NASDAQ: CNTN) (\"Canton Strategic Holdings\" or the \"Company\") the first publicly traded company to leverage Canton Coin to support the Canton Network's ability to digitize traditional financial markets, today announced the launch of its quarterly ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/crypto/articles/canton-strategic-holdings-inc-presents-131500442.html?.tsrc=rss",
+   "published_at": "2026-04-20T13:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:58Z",
+   "fingerprint": "f1a9cd669205e9ae",
+   "primary_source": false,
+   "cluster_id": "30f0c0f5cbd43306",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-10-31T14:32:28Z",
+ "generated_at": "2026-10-31T14:37:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "COFS",
-  "name": "Choiceone Financial Services Inc",
+  "name": "ChoiceOne Financial Services, Inc.",
   "region": "US",
   "currency": "USD",
-  "sector": "Financials",
-  "industry": null,
+  "sector": "Financial Services",
+  "industry": "Banks - Regional",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 35.45000076293945,
    "price_date": "2026-10-30",
@@ -26,40 +24,44 @@
    "adr20": 2.4097372732898203,
    "rvol": 0.9239957180686236,
    "ema10": 34.35034840124143,
-   "ema21": 33.81679630545778,
+   "ema21": 33.81679630545772,
    "sma50": 33.3040860748291,
-   "sma200": 31.120531568527223
+   "sma200": 31.120531530380248
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 528866464.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
+   "score": 37.0,
+   "coverage_pct": 100,
    "model": "financial",
    "dimensions": {
-    "revenue_growth": null,
-    "profitability": null,
-    "financial_stability": null,
+    "revenue_growth": 100.0,
+    "profitability": 45.9,
+    "financial_stability": 0.0,
     "cashflow": null,
     "market_position": null,
-    "growth_potential": null,
-    "management": null
+    "growth_potential": 22.0,
+    "management": 14.5
    }
   },
   "risk": {
-   "score": 26.9,
+   "score": 42.2,
    "level": "moderat",
-   "coverage_pct": 45,
+   "coverage_pct": 85,
    "top_factors": [
-    "Handelsliquidität (Umsatz 20T)"
+    "Verwässerung (Aktienanzahl yoy)",
+    "Handelsliquidität (Umsatz 20T)",
+    "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)"
    ]
   },
   "market_intelligence": {
-   "score": 6.7,
+   "score": 30.3,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -78,11 +80,11 @@
    "buy_value": 0,
    "sell_value": 0,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 13
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -101,42 +103,42 @@
   "adr20": 2.4097372732898203,
   "rvol": 0.9239957180686236,
   "ema10": 34.35034840124143,
-  "ema21": 33.81679630545778,
+  "ema21": 33.81679630545772,
   "sma50": 33.3040860748291,
-  "sma200": 31.120531568527223,
+  "sma200": 31.120531530380248,
   "volatility_ann": 16.062898698738618,
   "avg_dollar_volume_20d": 2965537.5915527344,
   "move_zscore": 1.2706371701006918
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
+  "score": 37.0,
+  "status": "ok",
+  "coverage_pct": 100,
   "model": "financial",
   "dimensions": [
    {
     "key": "revenue_growth",
     "label": "Umsatzwachstum",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 100.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_cagr",
       "label": "Umsatz-CAGR (mehrjährig)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 25.724,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "revenue_growth_yoy",
       "label": "Umsatzwachstum Vorjahr",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 74.969,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -145,25 +147,25 @@
     "key": "profitability",
     "label": "Profitabilität/Margen",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 45.9,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "net_margin",
       "label": "Nettomarge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 17.421,
+      "points": 58.1,
+      "status": "ok"
      },
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 6.055,
+      "points": 33.6,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -172,17 +174,17 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 67.319,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -211,17 +213,17 @@
     "key": "growth_potential",
     "label": "Wachstumspotenzial",
     "weight": 0.2,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 22.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_growth_forward",
       "label": "Erwartetes Umsatzwachstum (Yahoo)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -0.6,
+      "points": 22.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -230,41 +232,41 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 14.5,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 6.055,
+      "points": 24.2,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 67.319,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/COFS/financials",
+  "as_of": "2026-10-31T14:40:52Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": 26.9,
+  "score": 42.2,
   "level": "moderat",
-  "coverage_pct": 45,
+  "coverage_pct": 85,
   "factors": [
    {
     "key": "margin_trend",
@@ -278,11 +280,11 @@
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": 67.32,
     "unit": "%",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -305,20 +307,20 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 9.52,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 8.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 77.8,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -331,7 +333,9 @@
    }
   ],
   "top_factors": [
-   "Handelsliquidität (Umsatz 20T)"
+   "Verwässerung (Aktienanzahl yoy)",
+   "Handelsliquidität (Umsatz 20T)",
+   "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)"
   ],
   "unknown_factors": [
    "Kunden- und Branchenabhängigkeit",
@@ -339,11 +343,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.7,
+  "score": 30.3,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 38.1,
@@ -361,26 +365,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -398,8 +404,646 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
- "insiders": [],
+ "signals": [
+  {
+   "id": "4ff84643bf073b7d",
+   "symbols": [
+    "COFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ChoiceOne Financial Services, Inc. (COFS) Q3 Earnings and Revenues Top Estimates",
+   "summary": "ChoiceOne Financial Services (COFS) delivered earnings and revenue surprises of +12.90% and +2.16%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/choiceone-financial-services-inc-cofs-112501568.html?.tsrc=rss",
+   "published_at": "2026-10-30T11:25:01Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:02Z",
+   "fingerprint": "e912b8edd1ad4fd5",
+   "primary_source": false,
+   "cluster_id": "4ff84643bf073b7d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "ChoiceOne Financial Services, Inc. (COFS) Q3 Einnahmen und Einnahmen Top Schätzungen"
+  },
+  {
+   "id": "2ad1fc4e564b2fdb",
+   "symbols": [
+    "COFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ChoiceOne Reports Third Quarter 2026 Results",
+   "summary": "ChoiceOne Financial Services, Inc. (\"ChoiceOne\", NASDAQ: COFS), the parent company for ChoiceOne Bank, reported financial results for the quarter ended September 30, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/choiceone-reports-third-quarter-2026-111500196.html?.tsrc=rss",
+   "published_at": "2026-10-30T11:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:02Z",
+   "fingerprint": "da3d3b8bb6dc7fad",
+   "primary_source": false,
+   "cluster_id": "2ad1fc4e564b2fdb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4ae8f510a380e358",
+   "symbols": [
+    "BFH",
+    "COFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Bread Financial Holdings (BFH) Surpasses Q3 Earnings and Revenue Estimates",
+   "summary": "Bread Financial (BFH) delivered earnings and revenue surprises of +17.79% and +0.32%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/bread-financial-holdings-bfh-surpasses-110002904.html?.tsrc=rss",
+   "published_at": "2026-10-22T11:00:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:28:25Z",
+   "fingerprint": "e66fd8d0df0e68b5",
+   "primary_source": false,
+   "cluster_id": "4ae8f510a380e358",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "964f1892a6786249",
+   "symbols": [
+    "COFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ChoiceOne Bank Announces Official Opening of ChoiceOne Bank Trail at Silver Lake Road and Jennings Road in Fenton",
+   "summary": "ChoiceOne Financial Services, Inc., and ChoiceOne Bank (NASDAQ: COFS) (\"ChoiceOne\") are pleased to announce the official opening of the ChoiceOne Bank Trail following a ribbon-cutting ceremony Tuesday, Sept. 29, at the corner of Silver Lake Road and Jennings Road in Fenton.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/choiceone-bank-announces-official-opening-163000938.html?.tsrc=rss",
+   "published_at": "2026-09-30T16:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:02Z",
+   "fingerprint": "a37957b46ceedcd4",
+   "primary_source": false,
+   "cluster_id": "964f1892a6786249",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "db43b0e4ad13faba",
+   "symbols": [
+    "COFS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ChoiceOne Bank Receives Habitat for Humanity of Kent County Opportunity Award",
+   "summary": "ChoiceOne Financial Services, Inc., and ChoiceOne Bank (NASDAQ: COFS) (\"ChoiceOne\") are proud to receive the 2026 Habitat for Humanity of Kent County Opportunity Award, recognizing ChoiceOne as a long-term supporter with deep community roots and a vision for building stronger com",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/choiceone-bank-receives-habitat-humanity-180000256.html?.tsrc=rss",
+   "published_at": "2026-09-11T18:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:02Z",
+   "fingerprint": "e4e3845ebca42106",
+   "primary_source": false,
+   "cluster_id": "db43b0e4ad13faba",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "51a535bb44782888",
+   "symbols": [
+    "COFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ChoiceOne Financial Announces Cash Dividends",
+   "summary": "ChoiceOne Financial Services, Inc. announced today that its Board of Directors has declared a cash dividend on the Corporation's common stock of $0.29 per share. The cash dividend is payable to shareholders of record as of September 15, 2026, and will be paid on September 30, 202",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/choiceone-financial-announces-cash-dividends-200100548.html?.tsrc=rss",
+   "published_at": "2026-08-26T20:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:02Z",
+   "fingerprint": "da3e13e838aca4bc",
+   "primary_source": false,
+   "cluster_id": "51a535bb44782888",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a2586690e0ad4746",
+   "symbols": [
+    "COFS"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "ChoiceOne Financial Services (COFS) Upgraded to Buy: Here's What You Should Know",
+   "summary": "ChoiceOne Financial Services (COFS) has been upgraded to a Zacks Rank #2 (Buy), reflecting growing optimism about the company's earnings prospects. This might drive the stock higher in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/choiceone-financial-services-cofs-upgraded-160003273.html?.tsrc=rss",
+   "published_at": "2026-07-29T16:00:03Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:02Z",
+   "fingerprint": "7e7b091f9fb986cf",
+   "primary_source": false,
+   "cluster_id": "a2586690e0ad4746",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fa52013f19d090a3",
+   "symbols": [
+    "COFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ChoiceOne Financial Services, Inc. (COFS) Q2 Earnings Surpass Estimates",
+   "summary": "ChoiceOne Financial Services (COFS) delivered earnings and revenue surprises of +5.68% and -3.40%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/choiceone-financial-services-inc-cofs-121502787.html?.tsrc=rss",
+   "published_at": "2026-07-24T12:15:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:02Z",
+   "fingerprint": "5502088bf1b1fd03",
+   "primary_source": false,
+   "cluster_id": "12eef615daab0d5a",
+   "independence": "copy",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c8ffc05f36675eb2",
+   "symbols": [
+    "COFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ChoiceOne Reports Second Quarter 2026 Results",
+   "summary": "ChoiceOne Financial Services, Inc. (\"ChoiceOne\", NASDAQ:COFS), the parent company for ChoiceOne Bank, reported financial results for the quarter ended June 30, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/choiceone-reports-second-quarter-2026-112000304.html?.tsrc=rss",
+   "published_at": "2026-07-24T11:20:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:02Z",
+   "fingerprint": "b38821aa988184cb",
+   "primary_source": false,
+   "cluster_id": "c8ffc05f36675eb2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "47f2c9878a944d9d",
+   "symbols": [
+    "COFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Earnings Preview: Rithm (RITM) Q2 Earnings Expected to Decline",
+   "summary": "Rithm (RITM) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/earnings-preview-rithm-ritm-q2-140021435.html?.tsrc=rss",
+   "published_at": "2026-07-21T14:00:21Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:02Z",
+   "fingerprint": "af5cfe4cf48951f4",
+   "primary_source": false,
+   "cluster_id": "47f2c9878a944d9d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b4822d323ae3eb30",
+   "symbols": [
+    "COFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Why ChoiceOne Financial Services (COFS) is Poised to Beat Earnings Estimates Again",
+   "summary": "ChoiceOne Financial Services (COFS) has an impressive earnings surprise history and currently possesses the right combination of the two key ingredients for a likely beat in its next quarterly report.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-choiceone-financial-services-cofs-161004465.html?.tsrc=rss",
+   "published_at": "2026-07-14T16:10:04Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:02Z",
+   "fingerprint": "108e40d8be1608ea",
+   "primary_source": false,
+   "cluster_id": "b4822d323ae3eb30",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d511c52e132f6808",
+   "symbols": [
+    "COFS"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "All You Need to Know About ChoiceOne Financial Services (COFS) Rating Upgrade to Buy",
+   "summary": "ChoiceOne Financial Services (COFS) might move higher on growing optimism about its earnings prospects, which is reflected by its upgrade to a Zacks Rank #2 (Buy).",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/know-choiceone-financial-services-cofs-160002071.html?.tsrc=rss",
+   "published_at": "2026-06-10T16:00:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:02Z",
+   "fingerprint": "8f19c99204bb5112",
+   "primary_source": false,
+   "cluster_id": "d511c52e132f6808",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8360740dd331b692",
+   "symbols": [
+    "COFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ChoiceOne Financial Services And 2 Other Top Dividend Stocks To Consider",
+   "summary": "The United States market has shown robust performance recently, with a 1.6% rise over the past week and a remarkable 28% increase in the last year, alongside an optimistic forecast for annual earnings growth of 17%. In such a thriving environment, dividend stocks like ChoiceOne F",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/choiceone-financial-services-2-other-173214487.html?.tsrc=rss",
+   "published_at": "2026-06-02T17:32:14Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:02Z",
+   "fingerprint": "08a90d59e5108233",
+   "primary_source": false,
+   "cluster_id": "8360740dd331b692",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "066ad4a7faf2cbe8",
+   "symbols": [
+    "COFS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Exploring May 2026's Undervalued Small Caps With Insider Buying",
+   "summary": "Over the last 7 days, the United States market has risen by 1.5%, contributing to a remarkable 26% increase over the past year, with earnings projected to grow by 17% annually in the coming years. In this context of robust market performance, identifying small-cap stocks that are",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/exploring-may-2026s-undervalued-small-113949483.html?.tsrc=rss",
+   "published_at": "2026-05-13T11:39:49Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:02Z",
+   "fingerprint": "79b7d6f03edf3ea1",
+   "primary_source": false,
+   "cluster_id": "066ad4a7faf2cbe8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a68201714f2f9efa",
+   "symbols": [
+    "COFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "3 Dividend Stocks With Yields Up To 4.3 For Your Portfolio",
+   "summary": "In the last week, the United States market has stayed flat, yet it is up 28% over the past year with earnings forecast to grow by 16% annually. In this environment, dividend stocks with attractive yields can offer a compelling opportunity for investors seeking income and stabilit",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-dividend-stocks-yields-4-113154826.html?.tsrc=rss",
+   "published_at": "2026-05-04T11:31:54Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:02Z",
+   "fingerprint": "11c4f18a8913bcc1",
+   "primary_source": false,
+   "cluster_id": "a68201714f2f9efa",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "12eef615daab0d5a",
+   "symbols": [
+    "COFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ChoiceOne Financial Services, Inc. (COFS) Q1 Earnings Surpass Estimates",
+   "summary": "ChoiceOne Financial Services (COFS) delivered earnings and revenue surprises of +7.06% and -0.57%, respectively, for the quarter ended March 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/choiceone-financial-services-inc-cofs-124001156.html?.tsrc=rss",
+   "published_at": "2026-04-24T12:40:01Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:02Z",
+   "fingerprint": "0932bb33dfb0d40a",
+   "primary_source": false,
+   "cluster_id": "12eef615daab0d5a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "07b7513905833f83",
+   "symbols": [
+    "COFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "April 2026's Standout Dividend Stocks",
+   "summary": "The United States market has remained flat over the last week, though it has seen a 16% increase over the past year with earnings projected to grow by 15% annually. In such a dynamic environment, identifying standout dividend stocks involves finding companies that not only offer ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/april-2026s-standout-dividend-stocks-173152798.html?.tsrc=rss",
+   "published_at": "2026-04-02T17:31:52Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:02Z",
+   "fingerprint": "fbdb3132b6d26fcd",
+   "primary_source": false,
+   "cluster_id": "07b7513905833f83",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
+ "insiders": [
+  {
+   "id": "64119a985cb7a15d",
+   "symbol": "COFS",
+   "insider": "Wendling Michelle M",
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 1,
+   "shares": 213.0,
+   "price": 32.31,
+   "value": 6882.03,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/803164/000090572926000165/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "aff384d52250e437",
+   "symbol": "COFS",
+   "insider": "Petty Brian P",
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 1,
+   "shares": 514.0,
+   "price": 32.31,
+   "value": 16607.34,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/803164/000090572926000164/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "4bca5ca6bbe50b36",
+   "symbol": "COFS",
+   "insider": "Page Roxanne M",
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 1,
+   "shares": 213.0,
+   "price": 32.31,
+   "value": 6882.03,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/803164/000090572926000163/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "dada44671d00d133",
+   "symbol": "COFS",
+   "insider": "Mcginnis Bradley F.",
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 1,
+   "shares": 514.0,
+   "price": 32.31,
+   "value": 16607.34,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/803164/000090572926000162/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "c0e5320565b16965",
+   "symbol": "COFS",
+   "insider": "Mcconnell Gregory A",
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 1,
+   "shares": 213.0,
+   "price": 32.31,
+   "value": 6882.03,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/803164/000090572926000161/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "553e0179467e9707",
+   "symbol": "COFS",
+   "insider": "Krause Steven Theodore",
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 1,
+   "shares": 514.0,
+   "price": 32.31,
+   "value": 16607.34,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/803164/000090572926000160/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "7737ad4fc8c7c866",
+   "symbol": "COFS",
+   "insider": "Hicks Randy D",
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 1,
+   "shares": 515.0,
+   "price": 32.31,
+   "value": 16639.65,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/803164/000090572926000159/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "6dccf5225699a195",
+   "symbol": "COFS",
+   "insider": "Essex Bruce John Jr",
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 1,
+   "shares": 213.0,
+   "price": 32.31,
+   "value": 6882.03,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/803164/000090572926000158/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "53e9f65125a85795",
+   "symbol": "COFS",
+   "insider": "Coulter Curt E",
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 1,
+   "shares": 213.0,
+   "price": 32.31,
+   "value": 6882.03,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/803164/000090572926000157/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "a05da099e5118ee2",
+   "symbol": "COFS",
+   "insider": "Burrough Eric E",
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 1,
+   "shares": 514.0,
+   "price": 32.31,
+   "value": 16607.34,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/803164/000090572926000156/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "1173cb0581271d53",
+   "symbol": "COFS",
+   "insider": "Burns Harold J",
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 1,
+   "shares": 515.0,
+   "price": 32.31,
+   "value": 16639.65,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/803164/000090572926000155/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "51126d99f553bc5b",
+   "symbol": "COFS",
+   "insider": "Brophy Keith D.",
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 1,
+   "shares": 364.0,
+   "price": 32.31,
+   "value": 11760.84,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/803164/000090572926000154/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "6ae1eac744dca464",
+   "symbol": "COFS",
+   "insider": "Armock Greg L.",
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 1,
+   "shares": 514.0,
+   "price": 32.31,
+   "value": 16607.34,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/803164/000090572926000153/xslF345X06/ownership.xml"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "social_detail": null,

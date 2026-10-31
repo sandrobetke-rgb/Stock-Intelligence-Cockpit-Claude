@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-10-31T14:32:28Z",
+ "generated_at": "2026-10-31T14:37:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "COUR",
-  "name": "Coursera",
+  "name": "Coursera, Inc.",
   "region": "US",
   "currency": "USD",
-  "sector": "Consumer Discretionary",
-  "industry": null,
+  "sector": "Consumer Defensive",
+  "industry": "Education & Training Services",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 3.4700000286102295,
    "price_date": "2026-10-30",
@@ -30,37 +28,39 @@
    "sma50": 5.271799988746643,
    "sma200": 5.687200003862381
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 993664448.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
+   "score": 60.7,
+   "coverage_pct": 90,
    "model": "standard",
    "dimensions": {
-    "revenue_growth": null,
-    "profitability": null,
-    "financial_stability": null,
-    "cashflow": null,
-    "market_position": null,
-    "growth_potential": null,
-    "management": null
+    "revenue_growth": 67.0,
+    "profitability": 0.0,
+    "financial_stability": 100.0,
+    "cashflow": 80.2,
+    "market_position": 81.8,
+    "growth_potential": 97.0,
+    "management": 0.5
    }
   },
   "risk": {
-   "score": null,
-   "level": "unbekannt",
-   "coverage_pct": 25,
+   "score": 24.0,
+   "level": "niedrig",
+   "coverage_pct": 77,
    "top_factors": [
     "Volatilität (63T, annualisiert)"
    ]
   },
   "market_intelligence": {
-   "score": 17.6,
+   "score": 66.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 11,
+   "independent_24h": 3
   },
   "political": {
    "relevance": 0,
@@ -74,15 +74,15 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 1,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 52643.99,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 1
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -109,34 +109,34 @@
   "move_zscore": -5.951897078381994
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
+  "score": 60.7,
+  "status": "ok",
+  "coverage_pct": 90,
   "model": "standard",
   "dimensions": [
    {
     "key": "revenue_growth",
     "label": "Umsatzwachstum",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 67.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_cagr",
       "label": "Umsatz-CAGR (mehrjährig)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 13.088,
+      "points": 72.4,
+      "status": "ok"
      },
      {
       "key": "revenue_growth_yoy",
       "label": "Umsatzwachstum Vorjahr",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 9.04,
+      "points": 54.4,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -145,25 +145,25 @@
     "key": "profitability",
     "label": "Profitabilität/Margen",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "operating_margin",
       "label": "Operative Marge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -10.337,
+      "points": 0.0,
+      "status": "ok"
      },
      {
       "key": "net_margin",
       "label": "Nettomarge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -6.733,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -172,9 +172,9 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 100.0,
+    "basis": "data",
+    "coverage": 30,
     "metrics": [
      {
       "key": "debt_to_equity",
@@ -188,9 +188,9 @@
       "key": "current_ratio",
       "label": "Liquidität (Current Ratio)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 2.509,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "interest_coverage",
@@ -207,25 +207,25 @@
     "key": "cashflow",
     "label": "Cashflow",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 80.2,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "fcf_margin",
       "label": "Free-Cashflow-Marge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 11.762,
+      "points": 67.0,
+      "status": "ok"
      },
      {
       "key": "ocf_positive",
       "label": "Operativer Cashflow positiv",
       "unit": "bool",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 1.0,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -234,17 +234,17 @@
     "key": "market_position",
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 81.8,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "gross_margin",
       "label": "Bruttomarge (Proxy Preissetzungsmacht)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 55.896,
+      "points": 81.8,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -253,25 +253,25 @@
     "key": "growth_potential",
     "label": "Wachstumspotenzial",
     "weight": 0.2,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 97.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_growth_forward",
       "label": "Erwartetes Umsatzwachstum (Yahoo)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 59.6,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "reinvestment",
       "label": "Reinvestition (F&E + Capex in % Umsatz)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 18.64,
+      "points": 92.4,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -280,41 +280,41 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.5,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -8.023,
+      "points": 0.0,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 4.897,
+      "points": 1.3,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/COUR/financials",
+  "as_of": "2026-10-31T14:40:52Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": null,
-  "level": "unbekannt",
-  "coverage_pct": 25,
+  "score": 24.0,
+  "level": "niedrig",
+  "coverage_pct": 77,
   "factors": [
    {
     "key": "leverage",
@@ -328,11 +328,11 @@
    {
     "key": "liquidity",
     "label": "Liquidität (Current Ratio)",
-    "value": null,
+    "value": 2.51,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "interest",
@@ -346,29 +346,29 @@
    {
     "key": "cashflow",
     "label": "Free-Cashflow-Marge",
-    "value": null,
+    "value": 11.76,
     "unit": "%",
-    "severity": null,
+    "severity": 13.0,
     "weight": 0.12,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "margin_trend",
     "label": "Margenentwicklung (Vorjahr, Pp.)",
-    "value": null,
+    "value": 4.68,
     "unit": "Pp",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": 4.9,
     "unit": "%",
-    "severity": null,
+    "severity": 49.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -391,20 +391,20 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 5.59,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 1.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -425,48 +425,50 @@
   ]
  },
  "intelligence_detail": {
-  "score": 17.6,
+  "score": 66.1,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 60,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 100.0,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 10
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 11,
+    "independent": 11,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 19,
+    "independent": 19,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -484,8 +486,475 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
- "insiders": [],
+ "signals": [
+  {
+   "id": "a90437b5204a505b",
+   "symbols": [
+    "COUR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "COUR Q3 deep dive: integration progress and Helix platform development shape outlook",
+   "summary": "Online learning platform Coursera (NYSE:COUR) reported revenue ahead of Wall Street’s expectations in Q3 2026, with sales up 94% year on year to $376.7 million. On the other hand, next quarter’s revenue guidance of $362 million was less impressive, coming in 2.7% below analysts’ ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cour-q3-deep-dive-integration-065929563.html?.tsrc=rss",
+   "published_at": "2026-10-31T06:59:29Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:10Z",
+   "fingerprint": "304d239e80b63a83",
+   "primary_source": false,
+   "cluster_id": "a90437b5204a505b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "COUR Q3 Deep Dive: Integrationsfortschritt und Helix-Plattformentwicklung prägen Ausblick"
+  },
+  {
+   "id": "78e0e914a561a8ac",
+   "symbols": [
+    "COUR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Coursera (COUR) Stock Slides As Q3 Earnings Expose Growth Strain",
+   "summary": "Coursera entered this Q3 2026 print already under pressure, with the stock down sharply over the past month and another 25% knocked off in the latest session. The company is still loss making, yet the headline this quarter is about operating muscle, not red ink. Revenue reached a",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/coursera-cour-stock-slides-q3-061830416.html?.tsrc=rss",
+   "published_at": "2026-10-31T06:18:30Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:10Z",
+   "fingerprint": "f635ba0d4d796e7a",
+   "primary_source": false,
+   "cluster_id": "78e0e914a561a8ac",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Coursera (COUR) Aktie rutscht als Q3-Ergebnis exponiert Wachstum Strain"
+  },
+  {
+   "id": "01224500f55f9415",
+   "symbols": [
+    "COUR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "2 Russell 2000 stocks with solid fundamentals and 1 we brush off",
+   "summary": "The Russell 2000 (^RUT) is home to many small-cap stocks, offering investors the chance to uncover hidden gems before the broader market catches on. However, these companies often come with higher volatility and risk, as their smaller size makes them more vulnerable to economic d",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/2-russell-2000-stocks-solid-173929171.html?.tsrc=rss",
+   "published_at": "2026-10-30T17:39:29Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:10Z",
+   "fingerprint": "f31fcbb2b0051a65",
+   "primary_source": false,
+   "cluster_id": "01224500f55f9415",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "2 Russell 2000 Aktien mit soliden Fundamentaldaten und 1 wir bürsten ab"
+  },
+  {
+   "id": "23adf62e1f7ff581",
+   "symbols": [
+    "COUR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Coursera, Inc. Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Coursera, Inc.'s Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-coursera-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-30T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:10Z",
+   "fingerprint": "9f3e550e8961cf57",
+   "primary_source": false,
+   "cluster_id": "23adf62e1f7ff581",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e098297170a588ec",
+   "symbols": [
+    "COUR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Coursera Q3 Earnings Call Highlights",
+   "summary": "Coursera (NYSE:COUR) reported third-quarter revenue of $377 million and adjusted EBITDA of nearly $62 million in its first full quarter as a combined company with Udemy, while executives said consumer demand remained below the company’s growth ambitions. Revenue increased 94% yea",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-coursera-q3-earnings-call-highlights-2026-10-29/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-30T04:14:07Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:10Z",
+   "fingerprint": "0fe2dbbc57bfc9e6",
+   "primary_source": false,
+   "cluster_id": "e098297170a588ec",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f15879e4800baa0e",
+   "symbols": [
+    "COUR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Coursera (COUR) Q3 Earnings and Revenues Beat Estimates",
+   "summary": "Coursera (COUR) delivered earnings and revenue surprises of +10.53% and +2.11%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/coursera-cour-q3-earnings-revenues-220505208.html?.tsrc=rss",
+   "published_at": "2026-10-29T22:05:05Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:10Z",
+   "fingerprint": "f0d073a45c0a8dcd",
+   "primary_source": false,
+   "cluster_id": "f15879e4800baa0e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Coursera (COUR) Q3 Einnahmen und Einnahmen schlagen Schätzungen"
+  },
+  {
+   "id": "23959f9ca8927a2f",
+   "symbols": [
+    "COUR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Coursera (COUR) Q3 Earnings: Taking a Look at Key Metrics Versus Estimates",
+   "summary": "The headline numbers for Coursera (COUR) give insight into how the company performed in the quarter ended September 2026, but it may be worthwhile to compare some of its key metrics to Wall Street estimates and the year-ago actuals.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/coursera-cour-q3-earnings-taking-220003260.html?.tsrc=rss",
+   "published_at": "2026-10-29T22:00:03Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:10Z",
+   "fingerprint": "c492717a01bd6284",
+   "primary_source": false,
+   "cluster_id": "23959f9ca8927a2f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Coursera (COUR) Q3 Einnahmen: Ein Blick auf wichtige Metriken versus Schätzungen"
+  },
+  {
+   "id": "5674b36080667e38",
+   "symbols": [
+    "COUR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Coursera (NYSE:COUR) exceeds Q3 2026 expectations but stock drops on weak guidance",
+   "summary": "Online learning platform Coursera (NYSE:COUR) announced better-than-expected revenue in Q3 2026, with revenue up 94% year on year to $376.7 million. On the other hand, next quarter’s revenue guidance of $362 million was less impressive, coming in 2.7% below analysts’ consensus es",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/coursera-nyse-cour-exceeds-q3-205437760.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:54:37Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:10Z",
+   "fingerprint": "fab685d45afbccb1",
+   "primary_source": false,
+   "cluster_id": "5674b36080667e38",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Coursera (NYSE: COUR) übertrifft die Erwartungen des dritten Quartals 2026, aber die Aktie sinkt aufgrund der schwachen Guidance"
+  },
+  {
+   "id": "23b5b380d888af72",
+   "symbols": [
+    "COUR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Coursera Reports Third Quarter 2026 Financial Results",
+   "summary": "MOUNTAIN VIEW, Calif., October 29, 2026--Coursera Reports Third Quarter 2026 Financial Results",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/coursera-reports-third-quarter-2026-201000665.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:10Z",
+   "fingerprint": "1faf693509082c9d",
+   "primary_source": false,
+   "cluster_id": "23b5b380d888af72",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "83ade37db0864928",
+   "symbols": [
+    "COUR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Coursera (COUR) reports earnings tomorrow: what to expect",
+   "summary": "Online learning platform Coursera (NYSE:COUR) will be announcing earnings results this Thursday after market close. Here’s what to expect.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/coursera-cour-reports-earnings-tomorrow-060634688.html?.tsrc=rss",
+   "published_at": "2026-10-28T06:06:34Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:10Z",
+   "fingerprint": "64ac0ed0b56e591f",
+   "primary_source": false,
+   "cluster_id": "83ade37db0864928",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "26a86b1012a089bb",
+   "symbols": [
+    "COUR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Coursera Appoints Amy Weisenbach as Chief Marketing Officer",
+   "summary": "MOUNTAIN VIEW, Calif., October 26, 2026--Coursera Appoints Amy Weisenbach as Chief Marketing Officer",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/coursera-appoints-amy-weisenbach-chief-130000689.html?.tsrc=rss",
+   "published_at": "2026-10-26T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:10Z",
+   "fingerprint": "edb238731f8281b1",
+   "primary_source": false,
+   "cluster_id": "26a86b1012a089bb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "57f94f61113a3f4b",
+   "symbols": [
+    "COUR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Duolingo's Expanding Marketing Reach Fuels Long-Term Growth Prospects",
+   "summary": "DUOL is expanding creator partnerships and paid advertising to boost global brand visibility and attract more language learners.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/duolingos-expanding-marketing-reach-fuels-122000278.html?.tsrc=rss",
+   "published_at": "2026-10-21T12:20:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:10Z",
+   "fingerprint": "4ebb9448c7d894ca",
+   "primary_source": false,
+   "cluster_id": "57f94f61113a3f4b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4fafb72c912911ca",
+   "symbols": [
+    "CABO",
+    "COUR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Unprofitable Stock Worth Investigating and 2 That Underwhelm",
+   "summary": "Unprofitable companies face headwinds as they struggle to keep operating expenses under control. Some may be investing heavily, but the majority fail to convert spending into sustainable growth.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-unprofitable-stock-worth-investigating-103255023.html?.tsrc=rss",
+   "published_at": "2026-10-19T10:32:55Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:47:50Z",
+   "fingerprint": "cad67e235dc46574",
+   "primary_source": false,
+   "cluster_id": "4fafb72c912911ca",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2b9a998efcdb40f1",
+   "symbols": [
+    "COUR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Coursera to Announce Third Quarter 2026 Financial Results",
+   "summary": "MOUNTAIN VIEW, Calif., October 15, 2026--Coursera to Announce Third Quarter 2026 Financial Results",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/coursera-announce-third-quarter-2026-201000213.html?.tsrc=rss",
+   "published_at": "2026-10-15T20:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:10Z",
+   "fingerprint": "a4de39a5913456a5",
+   "primary_source": false,
+   "cluster_id": "2b9a998efcdb40f1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1068cc20b4303b0b",
+   "symbols": [
+    "COUR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 US Stocks Riding The AI Retraining Boom",
+   "summary": "AI is starting to rewrite job descriptions faster than many workers can react, and that gap is where both risk and opportunity live. A huge retraining wave, with millions of Americans expected to switch occupations, is putting fresh attention on companies tied to workplace learni",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-us-stocks-riding-ai-170824433.html?.tsrc=rss",
+   "published_at": "2026-10-11T17:08:24Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:10Z",
+   "fingerprint": "769f7ffe964d75e3",
+   "primary_source": false,
+   "cluster_id": "1068cc20b4303b0b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "983fdd4824cc6669",
+   "symbols": [
+    "COUR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 of Wall Street’s Favorite Stocks for Long-Term Investors and 2 We Brush Off",
+   "summary": "Wall Street is overwhelmingly bullish on the stocks in this article, with price targets suggesting significant upside potential. However, it’s worth remembering that analysts rarely issue sell ratings, partly because their firms often seek other business from the same companies t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-wall-street-favorite-stocks-105609183.html?.tsrc=rss",
+   "published_at": "2026-10-08T10:56:09Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:10Z",
+   "fingerprint": "57d5643bc462a42a",
+   "primary_source": false,
+   "cluster_id": "983fdd4824cc6669",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "db1620e39557c813",
+   "symbols": [
+    "COUR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Coursera (COUR), Why Is Its Latest Update Drawing Fresh Attention?",
+   "summary": "Acadeum’s new partnership with Coursera (COUR) is putting professional certificates in front of students at hundreds of colleges by using Acadeum’s marketplace to plug Coursera’s catalog directly into existing campus systems. That Acadeum agreement lands at a tricky moment for Co",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/coursera-cour-why-latest-drawing-220801393.html?.tsrc=rss",
+   "published_at": "2026-10-06T22:08:01Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:10Z",
+   "fingerprint": "610b238d16dc912b",
+   "primary_source": false,
+   "cluster_id": "db1620e39557c813",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e2fa02625015dd7f",
+   "symbols": [
+    "COUR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "2 Value Stocks on Our Watchlist and 1 We Question",
+   "summary": "Value investing has produced some of the world’s most famous investing billionaires, including Warren Buffett, David Einhorn, and Seth Klarman, who built their fortunes by purchasing wonderful businesses at reasonable prices. But these hidden gems are few and far between - many s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/2-value-stocks-watchlist-1-125900984.html?.tsrc=rss",
+   "published_at": "2026-10-05T12:59:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:10Z",
+   "fingerprint": "eaa276ad4c28b3c3",
+   "primary_source": false,
+   "cluster_id": "e2fa02625015dd7f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "37ee0006de039343",
+   "symbols": [
+    "COUR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Coursera (COUR) Stock Looks Undervalued Against Its Sales Base",
+   "summary": "Coursera has seen a steep share price reset over recent years, which puts fresh focus on what investors are really paying for today. With the stock now trading near US$5, the key question is whether that valuation is adequately supported by the company’s sales base. Coursera’s sh",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/coursera-cour-stock-looks-undervalued-140914640.html?.tsrc=rss",
+   "published_at": "2026-10-02T14:09:14Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:10Z",
+   "fingerprint": "97532846219ad156",
+   "primary_source": false,
+   "cluster_id": "37ee0006de039343",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
+ "insiders": [
+  {
+   "id": "b18d178bec8f77dd",
+   "symbol": "COUR",
+   "insider": "Hart Gregory M.",
+   "role": "Director, President & CEO",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 1,
+   "shares": 10308.0,
+   "price": 5.1071,
+   "value": 52643.99,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1651562/000119312526412593/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "704a402cdabb221a",
+   "symbol": "COUR",
+   "insider": "Savage Thomas I.",
+   "role": "SVP, Chief Legal Officer",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-09-30",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 2,
+   "shares": 245000.0,
+   "price": 0.0,
+   "value": null,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1651562/000119312526412590/xslF345X06/ownership.xml"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "social_detail": null,

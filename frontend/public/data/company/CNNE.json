@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-10-31T14:32:28Z",
+ "generated_at": "2026-10-31T14:37:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "CNNE",
-  "name": "Cannae Holdings Inc",
+  "name": "Cannae Holdings, Inc.",
   "region": "US",
   "currency": "USD",
-  "sector": "Financials",
-  "industry": null,
+  "sector": "Consumer Cyclical",
+  "industry": "Restaurants",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 17.139999389648438,
    "price_date": "2026-10-30",
@@ -30,36 +28,40 @@
    "sma50": 15.699456157684326,
    "sma200": 13.973349585533143
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 743434240.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
-   "model": "financial",
+   "score": 15.2,
+   "coverage_pct": 100,
+   "model": "standard",
    "dimensions": {
-    "revenue_growth": null,
-    "profitability": null,
-    "financial_stability": null,
-    "cashflow": null,
-    "market_position": null,
-    "growth_potential": null,
-    "management": null
+    "revenue_growth": 3.1,
+    "profitability": 0.0,
+    "financial_stability": 70.0,
+    "cashflow": 0.0,
+    "market_position": 0.0,
+    "growth_potential": 1.0,
+    "management": 40.0
    }
   },
   "risk": {
-   "score": 28.9,
+   "score": 34.4,
    "level": "moderat",
-   "coverage_pct": 45,
+   "coverage_pct": 100,
    "top_factors": [
+    "Free-Cashflow-Marge",
+    "Zinsdeckung",
     "Handelsliquidität (Umsatz 20T)"
    ]
   },
   "market_intelligence": {
-   "score": 0.2,
+   "score": 16.4,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -78,11 +80,11 @@
    "buy_value": 0,
    "sell_value": 0,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 4
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -109,34 +111,34 @@
   "move_zscore": -0.03634138148331704
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
-  "model": "financial",
+  "score": 15.2,
+  "status": "ok",
+  "coverage_pct": 100,
+  "model": "standard",
   "dimensions": [
    {
     "key": "revenue_growth",
     "label": "Umsatzwachstum",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 3.1,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_cagr",
       "label": "Umsatz-CAGR (mehrjährig)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -13.832,
+      "points": 0.0,
+      "status": "ok"
      },
      {
       "key": "revenue_growth_yoy",
       "label": "Umsatzwachstum Vorjahr",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -6.387,
+      "points": 10.3,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -145,25 +147,25 @@
     "key": "profitability",
     "label": "Profitabilität/Margen",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
+     {
+      "key": "operating_margin",
+      "label": "Operative Marge",
+      "unit": "%",
+      "value": -28.234,
+      "points": 0.0,
+      "status": "ok"
+     },
      {
       "key": "net_margin",
       "label": "Nettomarge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     },
-     {
-      "key": "roe",
-      "label": "Eigenkapitalrendite",
-      "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -121.152,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -172,17 +174,33 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 70.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
-      "key": "share_change_yoy",
-      "label": "Aktienanzahl Veränderung",
-      "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "key": "debt_to_equity",
+      "label": "Verschuldung (Debt/Equity)",
+      "unit": "x",
+      "value": 0.204,
+      "points": 99.9,
+      "status": "ok"
+     },
+     {
+      "key": "current_ratio",
+      "label": "Liquidität (Current Ratio)",
+      "unit": "x",
+      "value": 2.069,
+      "points": 100.0,
+      "status": "ok"
+     },
+     {
+      "key": "interest_coverage",
+      "label": "Zinsdeckung (EBIT/Zinsen)",
+      "unit": "x",
+      "value": -15.008,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -191,37 +209,71 @@
     "key": "cashflow",
     "label": "Cashflow",
     "weight": 0.1,
-    "score": null,
-    "basis": "not_applicable",
-    "coverage": null,
-    "metrics": [],
+    "score": 0.0,
+    "basis": "data",
+    "coverage": 100,
+    "metrics": [
+     {
+      "key": "fcf_margin",
+      "label": "Free-Cashflow-Marge",
+      "unit": "%",
+      "value": -6.728,
+      "points": 0.0,
+      "status": "ok"
+     },
+     {
+      "key": "ocf_positive",
+      "label": "Operativer Cashflow positiv",
+      "unit": "bool",
+      "value": 0.0,
+      "points": 0.0,
+      "status": "ok"
+     }
+    ],
     "manual": null
    },
    {
     "key": "market_position",
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
-    "score": null,
-    "basis": "not_applicable",
-    "coverage": null,
-    "metrics": [],
+    "score": 0.0,
+    "basis": "proxy",
+    "coverage": 100,
+    "metrics": [
+     {
+      "key": "gross_margin",
+      "label": "Bruttomarge (Proxy Preissetzungsmacht)",
+      "unit": "%",
+      "value": 3.842,
+      "points": 0.0,
+      "status": "ok"
+     }
+    ],
     "manual": null
    },
    {
     "key": "growth_potential",
     "label": "Wachstumspotenzial",
     "weight": 0.2,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 1.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_growth_forward",
       "label": "Erwartetes Umsatzwachstum (Yahoo)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -7.3,
+      "points": 0.0,
+      "status": "ok"
+     },
+     {
+      "key": "reinvestment",
+      "label": "Reinvestition (F&E + Capex in % Umsatz)",
+      "unit": "%",
+      "value": 2.455,
+      "points": 2.5,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -230,59 +282,95 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 40.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -50.127,
+      "points": 0.0,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -25.619,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/CNNE/financials",
+  "as_of": "2026-10-31T14:40:52Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": 28.9,
+  "score": 34.4,
   "level": "moderat",
-  "coverage_pct": 45,
+  "coverage_pct": 100,
   "factors": [
+   {
+    "key": "leverage",
+    "label": "Verschuldung (Debt/Equity)",
+    "value": 0.2,
+    "unit": "x",
+    "severity": 0.0,
+    "weight": 0.15,
+    "status": "ok"
+   },
+   {
+    "key": "liquidity",
+    "label": "Liquidität (Current Ratio)",
+    "value": 2.07,
+    "unit": "x",
+    "severity": 0.0,
+    "weight": 0.1,
+    "status": "ok"
+   },
+   {
+    "key": "interest",
+    "label": "Zinsdeckung",
+    "value": -15.01,
+    "unit": "x",
+    "severity": 100.0,
+    "weight": 0.08,
+    "status": "ok"
+   },
+   {
+    "key": "cashflow",
+    "label": "Free-Cashflow-Marge",
+    "value": -6.73,
+    "unit": "%",
+    "severity": 86.9,
+    "weight": 0.12,
+    "status": "ok"
+   },
    {
     "key": "margin_trend",
     "label": "Margenentwicklung (Vorjahr, Pp.)",
-    "value": null,
+    "value": -5.32,
     "unit": "Pp",
-    "severity": null,
+    "severity": 75.6,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": -25.62,
     "unit": "%",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -305,20 +393,20 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 1.82,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 7.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 66.7,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -331,6 +419,8 @@
    }
   ],
   "top_factors": [
+   "Free-Cashflow-Marge",
+   "Zinsdeckung",
    "Handelsliquidität (Umsatz 20T)"
   ],
   "unknown_factors": [
@@ -339,11 +429,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 0.2,
+  "score": 16.4,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 1.1,
@@ -361,25 +451,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -398,8 +490,420 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
- "insiders": [],
+ "signals": [
+  {
+   "id": "159472669d5e2bc3",
+   "symbols": [
+    "CNNE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cannae Holdings, Inc. Announces Third Quarter 2026 Earnings Release Date and Conference Call",
+   "summary": "LAS VEGAS, October 26, 2026--Cannae Holdings, Inc. (NYSE: CNNE) (\"Cannae\" or the \"Company\") today announced that the Company will release its Third Quarter 2026 financial results after the market close on Monday, November 9, 2026. The Company will also hold a conference call to d",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cannae-holdings-inc-announces-third-201500972.html?.tsrc=rss",
+   "published_at": "2026-10-26T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:54Z",
+   "fingerprint": "49fd77021ff93d1c",
+   "primary_source": false,
+   "cluster_id": "159472669d5e2bc3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b914901ce74cda90",
+   "symbols": [
+    "CNNE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Ninety Nine Restaurants Could Be Headed for a Sale",
+   "summary": "Ninety Nine Restaurant & Pub could be headed for a change in ownership as Cannae Holdings reviews its restaurant business, according to The Boston Globe. Cannae has been weighing strategic alternatives for its two remaining restaurant chains, Ninety Nine and O’Charley’s. The latt",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fsrmagazine.com",
+   "url": "https://www.fsrmagazine.com/feature/ninety-nine-restaurants-could-be-headed-for-a-sale/?.tsrc=rss",
+   "published_at": "2026-09-22T20:27:43Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:54Z",
+   "fingerprint": "9062767bf5ba0097",
+   "primary_source": false,
+   "cluster_id": "b914901ce74cda90",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a0d93466d077da48",
+   "symbols": [
+    "CNNE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Ninety Nine Restaurants could soon be under new ownership",
+   "summary": "The rumors that the Cannae Holdings brand could be sold began shortly after sister brand O’Charley’s shuttered all corporate locations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "nrn.com",
+   "url": "https://www.nrn.com/casual-dining/ninety-nine-restaurants-could-soon-be-under-new-ownership?.tsrc=rss",
+   "published_at": "2026-09-21T16:06:01Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:54Z",
+   "fingerprint": "e901cbc53597f87a",
+   "primary_source": false,
+   "cluster_id": "a0d93466d077da48",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b99bb340ab566c81",
+   "symbols": [
+    "CNNE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cannae Holdings Inc's Dividend Analysis",
+   "summary": "This article first appeared on GuruFocus.  Cannae Holdings Inc (NYSE:CNNE) recently announced a total dividend of $0.15 per share, with the ex-dividend date set for 2026-09-16.  This amount consists of a $0.15 per share cash dividend payable on 2026-09-30.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cannae-holdings-incs-dividend-analysis-113230667.html?.tsrc=rss",
+   "published_at": "2026-09-16T11:32:30Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:54Z",
+   "fingerprint": "4194cca2a71a7d80",
+   "primary_source": false,
+   "cluster_id": "b99bb340ab566c81",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0b3a5ef55e377e86",
+   "symbols": [
+    "CNNE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "BUSINESS: O'Charley's closes all corporate-owned stores",
+   "summary": "O’Charley’s closed this week after 30 years on south Frederica Street. But it wasn’t just ours. Nation’s Restaurant News reported that “the Cannae Holdings-owned, Nashville-based casual-dining chain abruptly closed all corporate-owned locations on Wednesday.” It said, “At its pea",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "messenger-inquirer.com",
+   "url": "https://www.messenger-inquirer.com/features/business/business-ocharleys-closes-all-corporate-owned-stores/article_e29a2c1d-0843-52ee-9093-3fb2ceb4ef79.html?.tsrc=rss",
+   "published_at": "2026-09-13T03:59:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:54Z",
+   "fingerprint": "2e94e20cee99bc0d",
+   "primary_source": false,
+   "cluster_id": "0b3a5ef55e377e86",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8edccfc5ba9c048a",
+   "symbols": [
+    "CNNE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "O’Charley’s store closures: See a list of locations where the casual dining chain has shuttered restaurants",
+   "summary": "Founded in Nashville in 1971, the restaurant and bar brand had been operating in about a dozen states. Now it appears to have met a grim fate.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fastcompany.com",
+   "url": "https://www.fastcompany.com/91605930/ocharleys-restaurant-closures-list-where-locations-shuttered?.tsrc=rss",
+   "published_at": "2026-09-11T12:46:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:54Z",
+   "fingerprint": "2793582156b48f1d",
+   "primary_source": false,
+   "cluster_id": "8edccfc5ba9c048a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "674e6c953e655dcc",
+   "symbols": [
+    "CNNE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Popular restaurant chain closes all locations after 55 years",
+   "summary": "The chain has already closed all corporate-operated restaurants, with its remaining franchise locations expected to shut down soon.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "thestreet.com",
+   "url": "https://www.thestreet.com/restaurants/ocharleys-restaurant-closures?.tsrc=rss",
+   "published_at": "2026-09-10T21:33:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:54Z",
+   "fingerprint": "365dc48c374c8876",
+   "primary_source": false,
+   "cluster_id": "674e6c953e655dcc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5f805f0dd1fdcc96",
+   "symbols": [
+    "CNNE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "O’Charley’s closes all corporate restaurants after strategic review",
+   "summary": "The 55-year-old casual dining chain, which once had 250 units, has reportedly closed its remaining 49 company-owned locations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "restaurantdive.com",
+   "url": "https://www.restaurantdive.com/news/ocharleys-closes-corporate-restaurants/830030/?.tsrc=rss",
+   "published_at": "2026-09-10T14:55:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:54Z",
+   "fingerprint": "5f11677711874972",
+   "primary_source": false,
+   "cluster_id": "5f805f0dd1fdcc96",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "17fea11b1d4c72e3",
+   "symbols": [
+    "CNNE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "O’Charley’s is shutting down all corporate locations",
+   "summary": "The Nashville-based casual-dining chain abruptly closed all company-owned locations Wednesday, while franchised locations are hanging on.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "nrn.com",
+   "url": "https://www.nrn.com/casual-dining/o-charley-s-is-shutting-down-all-corporate-locations?.tsrc=rss",
+   "published_at": "2026-09-09T19:01:12Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:54Z",
+   "fingerprint": "6c304ca8432a7c43",
+   "primary_source": false,
+   "cluster_id": "17fea11b1d4c72e3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c013939990c26cc3",
+   "symbols": [
+    "CNNE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cannae Holdings (CNNE) Q2 2026 Earnings Call Transcript",
+   "summary": "CEO Ryan Caswell discusses asset sales, SpaceX gains, and sports portfolio expansion.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/19/cannae-holdings-cnne-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-19T13:25:25Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:54Z",
+   "fingerprint": "52e4bd9b9ead3c81",
+   "primary_source": false,
+   "cluster_id": "c013939990c26cc3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "04523bef705cafca",
+   "symbols": [
+    "CNNE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cannae Holdings, Inc. Q2 2026 Earnings Call Summary",
+   "summary": "Moby summary of Cannae Holdings, Inc.'s Q2 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-cannae-holdings-inc-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-08-11T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:54Z",
+   "fingerprint": "92e5efc772717ed1",
+   "primary_source": false,
+   "cluster_id": "04523bef705cafca",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7f0f7072c906d1a3",
+   "symbols": [
+    "CNNE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cannae Q2 Earnings Call Highlights",
+   "summary": "Cannae (NYSE:CNNE) outlined plans to continue repurchasing shares, monetize non-core assets and expand its sports and entertainment portfolio during its second-quarter 2026 earnings call, as the company reported lower operating revenue and significant impairment charges related t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/cannae-q2-earnings-call-highlights-2026-08-10/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-11T03:03:55Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:54Z",
+   "fingerprint": "b1ac8d31e501375f",
+   "primary_source": false,
+   "cluster_id": "7f0f7072c906d1a3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5f38540801da9a73",
+   "symbols": [
+    "CNNE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cannae Holdings, Inc. Announces Second Quarter 2026 Financial Results",
+   "summary": "LAS VEGAS, August 10, 2026--Cannae Holdings, Inc. (NYSE: CNNE) (\"Cannae\" or the \"Company\") has released its second quarter 2026 financial results by posting them to its website. Please visit the Cannae website at www.cannaeholdings.com to view the second quarter 2026 financial re",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cannae-holdings-inc-announces-second-201000942.html?.tsrc=rss",
+   "published_at": "2026-08-10T20:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:54Z",
+   "fingerprint": "a603b21f8475d751",
+   "primary_source": false,
+   "cluster_id": "5f38540801da9a73",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6671b85b7a21ece8",
+   "symbols": [
+    "CNNE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cannae Holdings, Inc. Announces Quarterly Cash Dividend of $0.15",
+   "summary": "LAS VEGAS, August 06, 2026--Cannae Holdings, Inc. (NYSE: CNNE) (\"Cannae\" or the \"Company\") today announced that its Board of Directors has declared a quarterly cash dividend of $0.15 per share. The dividend will be payable September 30, 2026, to shareholders of record as of Septe",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cannae-holdings-inc-announces-quarterly-210000537.html?.tsrc=rss",
+   "published_at": "2026-08-06T21:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:54Z",
+   "fingerprint": "2f469a87f2d0e257",
+   "primary_source": false,
+   "cluster_id": "6671b85b7a21ece8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ee849c320e40ae13",
+   "symbols": [
+    "CNNE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Capital Southwest (CSWC) Tops Q1 Earnings and Revenue Estimates",
+   "summary": "Capital Southwest (CSWC) delivered earnings and revenue surprises of +7.41% and +1.08%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/capital-southwest-cswc-tops-q1-212002599.html?.tsrc=rss",
+   "published_at": "2026-08-03T21:20:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:54Z",
+   "fingerprint": "dec6a293719b691b",
+   "primary_source": false,
+   "cluster_id": "ee849c320e40ae13",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
+ "insiders": [
+  {
+   "id": "133a023b57307ad7",
+   "symbol": "CNNE",
+   "insider": "Tyler Woodrow",
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-09-30",
+   "filed_at": "2026-10-01",
+   "reporting_delay_days": 1,
+   "shares": 1019.0,
+   "price": 15.34,
+   "value": 15631.46,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1704720/000170472026000167/xslF345X06/form4.xml"
+  },
+  {
+   "id": "6ac29bb7fe68bc14",
+   "symbol": "CNNE",
+   "insider": "Schaible Cherie L",
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-09-30",
+   "filed_at": "2026-10-01",
+   "reporting_delay_days": 1,
+   "shares": 2038.0,
+   "price": 15.34,
+   "value": 31262.92,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1704720/000170472026000166/xslF345X06/form4.xml"
+  },
+  {
+   "id": "a1d6271d928d7eb6",
+   "symbol": "CNNE",
+   "insider": "Harris Hugh R",
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-09-30",
+   "filed_at": "2026-10-01",
+   "reporting_delay_days": 1,
+   "shares": 1060.0,
+   "price": 15.34,
+   "value": 16260.4,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1704720/000170472026000165/xslF345X06/form4.xml"
+  },
+  {
+   "id": "5e6a809d1a69f070",
+   "symbol": "CNNE",
+   "insider": "Ammerman Douglas K",
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-09-30",
+   "filed_at": "2026-10-01",
+   "reporting_delay_days": 1,
+   "shares": 2853.0,
+   "price": 15.34,
+   "value": 43765.02,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1704720/000170472026000164/xslF345X06/form4.xml"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "social_detail": null,

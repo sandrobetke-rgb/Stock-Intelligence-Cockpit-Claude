@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-10-31T14:32:28Z",
+ "generated_at": "2026-10-31T14:37:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "CMPX",
-  "name": "Compass Therapeutics",
+  "name": "Compass Therapeutics, Inc.",
   "region": "US",
   "currency": "USD",
-  "sector": "Health Care",
-  "industry": null,
+  "sector": "Healthcare",
+  "industry": "Biotechnology",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 0.7870000004768372,
    "price_date": "2026-10-30",
@@ -30,35 +28,37 @@
    "sma50": 1.4624400103092194,
    "sma200": 3.1907599970698355
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 141639152.0,
+  "market_cap_currency": "USD",
   "quality": {
    "score": null,
-   "coverage_pct": 0,
+   "coverage_pct": 40,
    "model": "standard",
    "dimensions": {
     "revenue_growth": null,
     "profitability": null,
-    "financial_stability": null,
-    "cashflow": null,
-    "market_position": null,
+    "financial_stability": 100.0,
+    "cashflow": 0.0,
+    "market_position": 0.0,
     "growth_potential": null,
-    "management": null
+    "management": 0.0
    }
   },
   "risk": {
-   "score": null,
-   "level": "unbekannt",
-   "coverage_pct": 25,
+   "score": 48.2,
+   "level": "erhoeht",
+   "coverage_pct": 64,
    "top_factors": [
     "Volatilität (63T, annualisiert)",
+    "Verwässerung (Aktienanzahl yoy)",
     "Handelsliquidität (Umsatz 20T)"
    ]
   },
   "market_intelligence": {
-   "score": 3.7,
+   "score": 5.1,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -74,16 +74,16 @@
   "social": null,
   "insider": {
    "window_days": 90,
-   "open_market_buys": 0,
+   "open_market_buys": 1,
    "open_market_sells": 0,
-   "buy_value": 0,
+   "buy_value": 18400.0,
    "sell_value": 0,
-   "distinct_buyers": 0,
+   "distinct_buyers": 1,
    "other_transactions": 0
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -112,7 +112,7 @@
  "quality_detail": {
   "score": null,
   "status": "insufficient_data",
-  "coverage_pct": 0,
+  "coverage_pct": 40,
   "model": "standard",
   "dimensions": [
    {
@@ -173,25 +173,25 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 100.0,
+    "basis": "data",
+    "coverage": 70,
     "metrics": [
      {
       "key": "debt_to_equity",
       "label": "Verschuldung (Debt/Equity)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.05,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "current_ratio",
       "label": "Liquidität (Current Ratio)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 15.021,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "interest_coverage",
@@ -208,9 +208,9 @@
     "key": "cashflow",
     "label": "Cashflow",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "data",
+    "coverage": 40,
     "metrics": [
      {
       "key": "fcf_margin",
@@ -224,9 +224,9 @@
       "key": "ocf_positive",
       "label": "Operativer Cashflow positiv",
       "unit": "bool",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.0,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -235,17 +235,17 @@
     "key": "market_position",
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "gross_margin",
       "label": "Bruttomarge (Proxy Preissetzungsmacht)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.0,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -281,59 +281,59 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -33.787,
+      "points": 0.0,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 29.389,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/CMPX/financials",
+  "as_of": "2026-10-31T14:40:52Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": null,
-  "level": "unbekannt",
-  "coverage_pct": 25,
+  "score": 48.2,
+  "level": "erhoeht",
+  "coverage_pct": 64,
   "factors": [
    {
     "key": "leverage",
     "label": "Verschuldung (Debt/Equity)",
-    "value": null,
+    "value": 0.05,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.15,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "liquidity",
     "label": "Liquidität (Current Ratio)",
-    "value": null,
+    "value": 15.02,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "interest",
@@ -365,11 +365,11 @@
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": 29.39,
     "unit": "%",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -401,11 +401,11 @@
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 6.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 55.6,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -419,6 +419,7 @@
   ],
   "top_factors": [
    "Volatilität (63T, annualisiert)",
+   "Verwässerung (Aktienanzahl yoy)",
    "Handelsliquidität (Umsatz 20T)"
   ],
   "unknown_factors": [
@@ -427,7 +428,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 3.7,
+  "score": 5.1,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -436,7 +437,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 20.8,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 30
   },
   "windows": {
    "24h": {
@@ -458,17 +459,18 @@
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -486,8 +488,471 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
- "insiders": [],
+ "signals": [
+  {
+   "id": "6390962c82486b53",
+   "symbols": [
+    "CMPX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compass Therapeutics Announces Publication of Phase 2/3 COMPANION-002 Results for Tovecimig in the Journal of Clinical Oncology and Oral Presentation at ESMO 2026",
+   "summary": "As published in the Journal of Clinical Oncology (JCO) and presented at ESMO, COMPANION-002 met its primary endpoint of ORR and key secondary endpoint of PFS, with a 56% reduction in the risk of disease progression or death.Responses were durable, with a median duration of respon",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/compass-therapeutics-announces-publication-phase-081500472.html?.tsrc=rss",
+   "published_at": "2026-10-24T08:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:49Z",
+   "fingerprint": "a7e3d79e557eda05",
+   "primary_source": false,
+   "cluster_id": "6390962c82486b53",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d9754050cdf31425",
+   "symbols": [
+    "CMPX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Emergent BioSolutions stock falls as CFO plans retirement",
+   "summary": "Investing.com -- Emergent Biosolutions Inc (NYSE:EBS) shares dropped 1292% Friday after the company announced that Chief Financial Officer Richard Lindahl will retire at the end of 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/emergent-biosolutions-stock-falls-cfo-154113933.html?.tsrc=rss",
+   "published_at": "2026-10-16T15:41:13Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:49Z",
+   "fingerprint": "2ac16f60f465b985",
+   "primary_source": false,
+   "cluster_id": "d9754050cdf31425",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "21dc79c39d9fcc56",
+   "symbols": [
+    "CMPX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compass Announces Inducement Grants Under  Nasdaq Listing Rule 5635(c)(4)",
+   "summary": "BOSTON, Oct. 14, 2026 (GLOBE NEWSWIRE) -- Compass Therapeutics, Inc. (Nasdaq: CMPX), a clinical-stage, oncology-focused biopharmaceutical company developing proprietary antibody-based therapeutics to treat multiple human diseases, today announced it granted stock options to a new",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/compass-announces-inducement-grants-under-203000922.html?.tsrc=rss",
+   "published_at": "2026-10-14T20:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:49Z",
+   "fingerprint": "aa3c5d71f461b43b",
+   "primary_source": false,
+   "cluster_id": "21dc79c39d9fcc56",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "59c269e0eb1e7bdc",
+   "symbols": [
+    "CMPX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Compass Therapeutics (CMPX) Stock Fair Value Falls After Tovecimig Regulatory Concerns",
+   "summary": "The reset in analyst fair value estimates for Compass Therapeutics from about US$8.92 to roughly US$5.45 has become a key focus for investors trying to make sense of the recent price target cuts. Research commentary links these lower targets to a more cautious view on tovecimig’s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/compass-therapeutics-cmpx-stock-fair-021350040.html?.tsrc=rss",
+   "published_at": "2026-10-14T02:13:50Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:49Z",
+   "fingerprint": "5ef96b80f06a82d2",
+   "primary_source": false,
+   "cluster_id": "59c269e0eb1e7bdc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2409edf5f2f0e093",
+   "symbols": [
+    "CMPX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Compass Therapeutics’ FDA Setback Raises Concerns On Wall Street — H.C. Wainwright Calls Tovecimig Filing Strategy ‘Risky’",
+   "summary": "Several analysts slashed their price targets on Compass Therapeutics after the FDA requested an additional trial for its cancer drug.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/compass-therapeutics-fda-setback-raises-concerns-on-wall-street-h-c-wainwright-calls-tovecimig-filing-strategy-risky/cZMEwFSRBJl?.tsrc=rss",
+   "published_at": "2026-09-23T13:44:55Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:49Z",
+   "fingerprint": "f6c5911f809ccf3d",
+   "primary_source": false,
+   "cluster_id": "2409edf5f2f0e093",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "57a2e7ede0327dd2",
+   "symbols": [
+    "CMPX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "CMPX Plunge Wipes Out $104M After FDA Demands Fresh Trial For Cancer Drug — Wedbush Sees Another 19% Downside",
+   "summary": "Compass said on Tuesday that the FDA recommended a trial showing a survival benefit before the company files a biologics license application for tovecimig in previously treated advanced biliary tract cancer.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/cmpx-plunge-wipes-out-104-m-after-fda-demands-fresh-trial-for-cancer-drug-wedbush-sees-another-19-downside/cZM52k6RB71?.tsrc=rss",
+   "published_at": "2026-09-22T23:07:11Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:49Z",
+   "fingerprint": "4d759ee87fe057ff",
+   "primary_source": false,
+   "cluster_id": "57a2e7ede0327dd2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "47e487d2b625b6ad",
+   "symbols": [
+    "BBNX",
+    "CMPX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sector Update: Healthcare Stocks Rise Late Afternoon",
+   "summary": "Healthcare stocks rose late Tuesday afternoon, with the NYSE Healthcare Index adding 0.5% and the St",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/sector-healthcare-stocks-rise-afternoon-200355451.html?.tsrc=rss",
+   "published_at": "2026-09-22T20:03:55Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:28:11Z",
+   "fingerprint": "c8c508aadfedab22",
+   "primary_source": false,
+   "cluster_id": "47e487d2b625b6ad",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1eef13d96141079d",
+   "symbols": [
+    "CMPX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Compass Therapeutics Craters, FDA Pushes Survival-Trial Demand for Cancer Drug",
+   "summary": "Compass Therapeutics, Inc. (NASDAQ:CMPX) shares are trading lower on Tuesday as the FDA feedback raises new questions about the timing and requirements for its tovecimig program. The move is coming even as S&amp;P 500 futures are up 0.1%, pointing to stock-specific pressure rathe",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/compass-therapeutics-craters-fda-pushes-180226897.html?.tsrc=rss",
+   "published_at": "2026-09-22T18:02:26Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:49Z",
+   "fingerprint": "4935aeb4dd2f3708",
+   "primary_source": false,
+   "cluster_id": "1eef13d96141079d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f22eb8e4843d9c10",
+   "symbols": [
+    "CMPX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "CMPX Stock Crashes To Over 2-Year Lows — Why FDA Wants Another Cancer Therapy Trial Before Key Marketing Filing",
+   "summary": "The FDA wants Compass to conduct a trial showing Tovecimig can improve overall survival in patients with previously treated, advanced biliary tract cancer.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/cmpx-stock-crashes-to-over-2-year-lows-why-fda-wants-another-cancer-therapy-trial-before-key-marketing-filing/cZMPqcmRBew?.tsrc=rss",
+   "published_at": "2026-09-22T14:43:19Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:49Z",
+   "fingerprint": "7f762b088239b1aa",
+   "primary_source": false,
+   "cluster_id": "f22eb8e4843d9c10",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ed538538de7015de",
+   "symbols": [
+    "CMPX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Compass Therapeutics Provides Regulatory Update on Tovecimig in Biliary Tract Cancer Following FDA Feedback",
+   "summary": "The FDA recommended that Compass conduct a trial to demonstrate a survival benefit prior to submitting a BLA for tovecimig.Compass does not believe that a new trial is warranted prior to submitting a BLA based on the data from the Phase 2/3 COMPANION-002 study and the urgent unme",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/compass-therapeutics-provides-regulatory-tovecimig-123000467.html?.tsrc=rss",
+   "published_at": "2026-09-22T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:49Z",
+   "fingerprint": "f73614deae80dd8f",
+   "primary_source": false,
+   "cluster_id": "ed538538de7015de",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5a96518444ec6760",
+   "symbols": [
+    "CMPX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compass Therapeutics Reports 2026 Second Quarter Financial Results and Provides Corporate Update",
+   "summary": "The Company expects feedback from the FDA this quarter regarding the COMPANION-002 Phase 2/3 data for tovecimig (DLL4 x VEGF-A bispecific antibody) in patients with biliary tract cancer (BTC), prior to a potential BLA filing later this year. Tovecimig data from this study has als",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/compass-therapeutics-reports-2026-second-113000555.html?.tsrc=rss",
+   "published_at": "2026-08-06T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:49Z",
+   "fingerprint": "00d60503883bb2c2",
+   "primary_source": false,
+   "cluster_id": "5a96518444ec6760",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5cff6fd7828c9a49",
+   "symbols": [
+    "CMPX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compass Therapeutics Announces Tovecimig Data Accepted for an Oral Presentation at the ESMO Congress 2026",
+   "summary": "BOSTON, July 17, 2026 (GLOBE NEWSWIRE) -- Compass Therapeutics, Inc. (Nasdaq: CMPX), a clinical-stage, oncology-focused biopharmaceutical company developing proprietary antibody-based therapeutics to treat multiple human diseases, today announced that its abstract titled “A rando",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/compass-therapeutics-announces-tovecimig-data-144200340.html?.tsrc=rss",
+   "published_at": "2026-07-17T14:42:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:49Z",
+   "fingerprint": "93126a048c90a0a1",
+   "primary_source": false,
+   "cluster_id": "5cff6fd7828c9a49",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cd6e3a4c50c891d9",
+   "symbols": [
+    "CMPX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Here’s Why Citizens Maintains a Buy on Compass Therapeutics (CMPX)",
+   "summary": "Compass Therapeutics, Inc. (NASDAQ:CMPX) is one of the Best Small-Cap Growth Stocks to Invest In Now. ​Recently, on June 4, Citizens reiterated a Market Outperform rating on the stock with a price target of $10. The rating comes after the company presented new clinical data at th",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/why-citizens-maintains-buy-compass-131207648.html?.tsrc=rss",
+   "published_at": "2026-07-03T13:12:07Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:49Z",
+   "fingerprint": "1bc0e0fce43a6155",
+   "primary_source": false,
+   "cluster_id": "cd6e3a4c50c891d9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "699d0cd5438c92b8",
+   "symbols": [
+    "CMPX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How Compass Therapeutics (CMPX) Is Moving Tovecimig Toward a Potential Biliary Tract Cancer Filing",
+   "summary": "Compass Therapeutics, Inc. (NASDAQ:CMPX) is one of the small-cap stocks with potential to rise 1000 percent. The company’s main story is tovecimig, an experimental cancer treatment being developed for biliary tract cancer, which affects the bile ducts, gallbladder, or nearby dige",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/compass-therapeutics-cmpx-moving-tovecimig-151631098.html?.tsrc=rss",
+   "published_at": "2026-06-17T15:16:31Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:49Z",
+   "fingerprint": "2a507cb8ec8b51c9",
+   "primary_source": false,
+   "cluster_id": "699d0cd5438c92b8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d3fc8557d35ce97e",
+   "symbols": [
+    "CMPX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Compass Therapeutics Eyes FDA Path After Tovecimig Trial Win",
+   "summary": "Compass Therapeutics (NASDAQ:CMPX) Chief Executive Officer Tom Schuetz said the company is preparing for a key U.S. Food and Drug Administration meeting on tovecimig, its DLL4/VEGF bispecific antibody, after a randomized study in advanced biliary tract cancer met its primary endp",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/compass-therapeutics-eyes-fda-path-after-tovecimig-trial-win-2026-06-08/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-06-08T13:06:15Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:49Z",
+   "fingerprint": "857464147be43b17",
+   "primary_source": false,
+   "cluster_id": "d3fc8557d35ce97e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "afc8bc498687315c",
+   "symbols": [
+    "CMPX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Compass Therapeutics to Participate in Upcoming June Investor Events",
+   "summary": "BOSTON, May 28, 2026 (GLOBE NEWSWIRE) -- Compass Therapeutics, Inc. (Nasdaq: CMPX), a clinical-stage, oncology-focused biopharmaceutical company developing proprietary antibody-based therapeutics to treat multiple human diseases, today announced that the Company will participate ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/compass-therapeutics-participate-upcoming-june-113000218.html?.tsrc=rss",
+   "published_at": "2026-05-28T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:49Z",
+   "fingerprint": "ec1591eb89782ae7",
+   "primary_source": false,
+   "cluster_id": "afc8bc498687315c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "313699cc3da82e7d",
+   "symbols": [
+    "CMPX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Compass Therapeutics to Present Promising Phase 1 Clinical Data for CTX-8371 in Patients with Advanced Malignancies Treated in the Post-Checkpoint Inhibitor Setting at the 2026 ASCO Annual Meeting",
+   "summary": "CTX-8371, a novel dual checkpoint blocker that simultaneously targets the programmed death receptor PD-1 and its ligand PD-L1, demonstrated promising monotherapy clinical activity in patients with advanced malignancies resistant to prior immune checkpoint inhibitors.Deep and dura",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/compass-therapeutics-present-promising-phase-210000655.html?.tsrc=rss",
+   "published_at": "2026-05-21T21:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:49Z",
+   "fingerprint": "651a2d3d27ab5cc2",
+   "primary_source": false,
+   "cluster_id": "313699cc3da82e7d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d443f03e036560e2",
+   "symbols": [
+    "CMPX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compass Therapeutics (CMPX) Reports Q1 2026 Net Loss of $18.3M",
+   "summary": "Compass Therapeutics Inc. (NASDAQ:CMPX) is one of the best NASDAQ stocks under $5 to buy right now. On May 5, Compass Therapeutics reported a Q1 2026 net loss of $18.3 million, or $0.10 per share. R&amp;D expenses rose to $13.4 million, while G&amp;A expenses climbed 41% to $6.9 ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/compass-therapeutics-cmpx-reports-q1-045005286.html?.tsrc=rss",
+   "published_at": "2026-05-18T04:50:05Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:49Z",
+   "fingerprint": "d0c88cbfb1709440",
+   "primary_source": false,
+   "cluster_id": "d443f03e036560e2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "30a27d94eb2adc03",
+   "symbols": [
+    "CMPX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Compass Therapeutics to Participate in Upcoming May Investor Events",
+   "summary": "BOSTON, May 12, 2026 (GLOBE NEWSWIRE) -- Compass Therapeutics, Inc. (Nasdaq: CMPX), a clinical-stage, oncology-focused biopharmaceutical company developing proprietary antibody-based therapeutics to treat multiple human diseases, today announced that the Company will participate ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/compass-therapeutics-participate-upcoming-may-113000196.html?.tsrc=rss",
+   "published_at": "2026-05-12T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:49Z",
+   "fingerprint": "e18dd764ac755164",
+   "primary_source": false,
+   "cluster_id": "30a27d94eb2adc03",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "72eedfce0f4097dd",
+   "symbols": [
+    "CMPX"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Canaccord Maintains Buy Rating on Compass Therapeutics (CMPX)",
+   "summary": "Compass Therapeutics, Inc. (NASDAQ:CMPX) is one of the 10 Best Day Trading Penny Stocks to Buy. On April 28, 2026, Canaccord lowered its price target on Compass Therapeutics, Inc. (NASDAQ:CMPX) to $7 from $13 and maintained a Buy rating. The firm said Tovecimig+paclitaxel showed ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/canaccord-maintains-buy-rating-compass-121653644.html?.tsrc=rss",
+   "published_at": "2026-05-05T12:16:53Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:49Z",
+   "fingerprint": "ab3dbd6769a15b1e",
+   "primary_source": false,
+   "cluster_id": "72eedfce0f4097dd",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
+ "insiders": [
+  {
+   "id": "90a24489de9b182b",
+   "symbol": "CMPX",
+   "insider": "Lerner Neil",
+   "role": "Chief Accounting Officer",
+   "transaction_code": "P",
+   "transaction_kind": "buy",
+   "transaction_label": "Kauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 1,
+   "shares": 20000.0,
+   "price": 0.92,
+   "value": 18400.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1738021/000117184326006349/xslF345X06/ownership.xml"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "social_detail": null,

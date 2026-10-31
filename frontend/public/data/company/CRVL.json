@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-10-31T14:32:28Z",
+ "generated_at": "2026-10-31T14:37:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "CRVL",
-  "name": "Corvel",
+  "name": "CorVel Corporation",
   "region": "US",
   "currency": "USD",
-  "sector": "Health Care",
-  "industry": null,
+  "sector": "Financial Services",
+  "industry": "Insurance Brokers",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 82.22000122070312,
    "price_date": "2026-10-30",
@@ -30,26 +28,26 @@
    "sma50": 74.70580032348633,
    "sma200": 62.48210012435913
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 4153472512.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
-   "model": "standard",
+   "score": 72.8,
+   "coverage_pct": 100,
+   "model": "financial",
    "dimensions": {
-    "revenue_growth": null,
-    "profitability": null,
-    "financial_stability": null,
+    "revenue_growth": 56.8,
+    "profitability": 69.2,
+    "financial_stability": 73.5,
     "cashflow": null,
     "market_position": null,
-    "growth_potential": null,
-    "management": null
+    "growth_potential": 78.5,
+    "management": 89.4
    }
   },
   "risk": {
-   "score": null,
-   "level": "unbekannt",
-   "coverage_pct": 25,
+   "score": 20.6,
+   "level": "niedrig",
+   "coverage_pct": 100,
    "top_factors": [
     "Handelsliquidität (Umsatz 20T)"
    ]
@@ -78,11 +76,11 @@
    "buy_value": 0,
    "sell_value": 0,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 4
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -109,34 +107,34 @@
   "move_zscore": 0.02182310751352505
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
-  "model": "standard",
+  "score": 72.8,
+  "status": "ok",
+  "coverage_pct": 100,
+  "model": "financial",
   "dimensions": [
    {
     "key": "revenue_growth",
     "label": "Umsatzwachstum",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 56.8,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_cagr",
       "label": "Umsatz-CAGR (mehrjährig)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 10.081,
+      "points": 60.3,
+      "status": "ok"
      },
      {
       "key": "revenue_growth_yoy",
       "label": "Umsatzwachstum Vorjahr",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 7.028,
+      "points": 48.7,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -145,25 +143,25 @@
     "key": "profitability",
     "label": "Profitabilität/Margen",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 69.2,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
-     {
-      "key": "operating_margin",
-      "label": "Operative Marge",
-      "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     },
      {
       "key": "net_margin",
       "label": "Nettomarge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 11.512,
+      "points": 38.4,
+      "status": "ok"
+     },
+     {
+      "key": "roe",
+      "label": "Eigenkapitalrendite",
+      "unit": "%",
+      "value": 27.99,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -172,33 +170,17 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 73.5,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
-      "key": "debt_to_equity",
-      "label": "Verschuldung (Debt/Equity)",
-      "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     },
-     {
-      "key": "current_ratio",
-      "label": "Liquidität (Current Ratio)",
-      "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     },
-     {
-      "key": "interest_coverage",
-      "label": "Zinsdeckung (EBIT/Zinsen)",
-      "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "key": "share_change_yoy",
+      "label": "Aktienanzahl Veränderung",
+      "unit": "%",
+      "value": -0.877,
+      "points": 73.5,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -208,26 +190,9 @@
     "label": "Cashflow",
     "weight": 0.1,
     "score": null,
-    "basis": "unknown",
-    "coverage": 0,
-    "metrics": [
-     {
-      "key": "fcf_margin",
-      "label": "Free-Cashflow-Marge",
-      "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     },
-     {
-      "key": "ocf_positive",
-      "label": "Operativer Cashflow positiv",
-      "unit": "bool",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     }
-    ],
+    "basis": "not_applicable",
+    "coverage": null,
+    "metrics": [],
     "manual": null
    },
    {
@@ -235,43 +200,26 @@
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
     "score": null,
-    "basis": "unknown",
-    "coverage": 0,
-    "metrics": [
-     {
-      "key": "gross_margin",
-      "label": "Bruttomarge (Proxy Preissetzungsmacht)",
-      "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     }
-    ],
+    "basis": "not_applicable",
+    "coverage": null,
+    "metrics": [],
     "manual": null
    },
    {
     "key": "growth_potential",
     "label": "Wachstumspotenzial",
     "weight": 0.2,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 78.5,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_growth_forward",
       "label": "Erwartetes Umsatzwachstum (Yahoo)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     },
-     {
-      "key": "reinvestment",
-      "label": "Reinvestition (F&E + Capex in % Umsatz)",
-      "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 10.7,
+      "points": 78.5,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -280,95 +228,59 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 89.4,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 27.99,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -0.877,
+      "points": 73.5,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/CRVL/financials",
+  "as_of": "2026-10-31T14:40:52Z",
+  "fiscal_year_end": "2026-03-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": null,
-  "level": "unbekannt",
-  "coverage_pct": 25,
+  "score": 20.6,
+  "level": "niedrig",
+  "coverage_pct": 100,
   "factors": [
-   {
-    "key": "leverage",
-    "label": "Verschuldung (Debt/Equity)",
-    "value": null,
-    "unit": "x",
-    "severity": null,
-    "weight": 0.15,
-    "status": "unknown"
-   },
-   {
-    "key": "liquidity",
-    "label": "Liquidität (Current Ratio)",
-    "value": null,
-    "unit": "x",
-    "severity": null,
-    "weight": 0.1,
-    "status": "unknown"
-   },
-   {
-    "key": "interest",
-    "label": "Zinsdeckung",
-    "value": null,
-    "unit": "x",
-    "severity": null,
-    "weight": 0.08,
-    "status": "unknown"
-   },
-   {
-    "key": "cashflow",
-    "label": "Free-Cashflow-Marge",
-    "value": null,
-    "unit": "%",
-    "severity": null,
-    "weight": 0.12,
-    "status": "unknown"
-   },
    {
     "key": "margin_trend",
     "label": "Margenentwicklung (Vorjahr, Pp.)",
-    "value": null,
+    "value": 1.44,
     "unit": "Pp",
-    "severity": null,
+    "severity": 14.2,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": -0.88,
     "unit": "%",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -391,20 +303,20 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 36.71,
     "unit": "x",
-    "severity": null,
+    "severity": 33.4,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 3.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 22.2,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -456,10 +368,10 @@
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -484,8 +396,355 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
- "insiders": [],
+ "signals": [
+  {
+   "id": "eb66d47e9106e493",
+   "symbols": [
+    "CBLL",
+    "CRVL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 AI Healthcare Stocks To Own In October 2026",
+   "summary": "Anthropic recently suggested AI could lift the US economy by nearly 50% by 2030, which shows how much value smarter software might create. Healthcare is one of the clearest places where that shift becomes real for patients and for capital. This article unpacks three AI driven hea",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/3-ai-healthcare-stocks-own-210903270.html?.tsrc=rss",
+   "published_at": "2026-10-17T21:09:03Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:04Z",
+   "fingerprint": "4014090a487921f0",
+   "primary_source": false,
+   "cluster_id": "eb66d47e9106e493",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9a8ac3a885c735a1",
+   "symbols": [
+    "CRVL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Pfizer And 2 Other Top AI Healthcare Stocks",
+   "summary": "Big Tech is pouring an estimated US$700b into AI infrastructure this year, and healthcare is where that spending will really be tested. Hospitals and drugmakers are under pressure to prove that algorithms can cut costs, reduce burnout, and improve care, not just sound good in pit",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/pfizer-2-other-top-ai-181409395.html?.tsrc=rss",
+   "published_at": "2026-10-10T18:14:09Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:23Z",
+   "fingerprint": "f47bb1cf17345ca8",
+   "primary_source": false,
+   "cluster_id": "9a8ac3a885c735a1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b28f0b93f9017134",
+   "symbols": [
+    "CRVL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is CorVel (CRVL) Fairly Valued Following Its CareMC Accelerator Launch?",
+   "summary": "Why CorVel’s CareMC Accelerator Launch Matters For Investors CorVel (CRVL) has rolled out its CareMC Accelerator for Guidewire ClaimCenter, tying managed care tools directly into the claims workflow. For investors, the focus is on workflow efficiency and potential customer sticki",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/corvel-crvl-fairly-valued-following-160942359.html?.tsrc=rss",
+   "published_at": "2026-10-03T16:09:42Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:23Z",
+   "fingerprint": "97a6f805b4bcca80",
+   "primary_source": false,
+   "cluster_id": "b28f0b93f9017134",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3bff70ceb330fad1",
+   "symbols": [
+    "CRVL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is CorVel (CRVL) Wiring Itself Into the Heart of Insurance Claims?",
+   "summary": "CorVel Corporation (NASDAQ:CRVL) has quietly turned the unglamorous niche of risk management and healthcare cost containment into a relentless cash compounding machine. Backed by steady multi-year top-line growth that expanded annual revenue to nearly $$959 million in fiscal 2026",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/corvel-crvl-wiring-itself-heart-063406734.html?.tsrc=rss",
+   "published_at": "2026-09-28T06:34:06Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:23Z",
+   "fingerprint": "042a487bf36bafa7",
+   "primary_source": false,
+   "cluster_id": "3bff70ceb330fad1",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bc2cf3546bee526d",
+   "symbols": [
+    "CRVL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Could CorVel’s New Guidewire Integration Quietly Reshape Its Competitive Moat in Claims Management (CRVL)?",
+   "summary": "CorVel Corporation recently launched its CareMC Accelerator for Guidewire ClaimCenter, allowing insurers to initiate and manage Managed Care services directly within the claims workflow via secure Single Sign-On and structured data exchange. An interesting aspect of this launch i",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/could-corvel-guidewire-integration-quietly-001336801.html?.tsrc=rss",
+   "published_at": "2026-09-24T00:13:36Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:23Z",
+   "fingerprint": "e89ccbdc97489bc1",
+   "primary_source": false,
+   "cluster_id": "bc2cf3546bee526d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d2d235ea7eda3278",
+   "symbols": [
+    "CRVL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "CorVel Expands Managed Care Connectivity with the CareMC® Extension for Guidewire ClaimCenter",
+   "summary": "FORT WORTH, Texas, Sept. 22, 2026 (GLOBE NEWSWIRE) -- CorVel Corporation (NASDAQ: CRVL), a national provider of risk management and healthcare solutions, today announced the availability of its CareMC Accelerator for Guidewire ClaimCenter, enabling Managed Care services to be ini",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/corvel-expands-managed-care-connectivity-111800485.html?.tsrc=rss",
+   "published_at": "2026-09-22T11:18:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:23Z",
+   "fingerprint": "1c65839510953083",
+   "primary_source": false,
+   "cluster_id": "d2d235ea7eda3278",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "930de3d28ffa1ccc",
+   "symbols": [
+    "CRVL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "CorVel Corp (CRVL) (Q1 2027) Earnings Call Highlights: Revenue Surges 11% to $260M, EPS Up 22% ...",
+   "summary": "CorVel Corp (CRVL) reports robust quarterly results with record new customer sales, strategic AI expansion, and a debt-free balance sheet, despite one-time earnings boost.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/corvel-corp-crvl-q1-2027-230303253.html?.tsrc=rss",
+   "published_at": "2026-08-05T23:03:03Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:23Z",
+   "fingerprint": "f0654dd4583f3db8",
+   "primary_source": false,
+   "cluster_id": "930de3d28ffa1ccc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7872dd251af30e4d",
+   "symbols": [
+    "CRVL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "CorVel Q1 Earnings Call Highlights",
+   "summary": "CorVel (NASDAQ:CRVL) reported June-quarter revenue of $260 million, up 11% from $235 million in the June 2025 quarter, while earnings per share rose 22% to $0.63 from $0.52 a year earlier. Executive Chairman Michael Combs said the results reflected the company’s business strength",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/corvel-q1-earnings-call-highlights-2026-08-05/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-05T17:04:40Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:23Z",
+   "fingerprint": "fc63570494d88c27",
+   "primary_source": false,
+   "cluster_id": "7872dd251af30e4d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c9f4ffa9f9faa358",
+   "symbols": [
+    "CRVL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "CorVel Announces Revenues and Earnings",
+   "summary": "FORT WORTH, Texas, Aug. 05, 2026 (GLOBE NEWSWIRE) -- CorVel Corporation (NASDAQ: CRVL) announced the results for the quarter ended June 30, 2026. Revenues for the quarter were $260 million, an increase from $235 million in the June quarter of 2025. Earnings per share for the quar",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/corvel-announces-revenues-earnings-101300031.html?.tsrc=rss",
+   "published_at": "2026-08-05T10:13:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:23Z",
+   "fingerprint": "d1ec615eec1c7160",
+   "primary_source": false,
+   "cluster_id": "c9f4ffa9f9faa358",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3868c436fcb83c8e",
+   "symbols": [
+    "CRVL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "CorVel Corporation to Host Live Earnings Release Webcast",
+   "summary": "FORT WORTH, Texas, July 27, 2026 (GLOBE NEWSWIRE) -- CorVel Corporation (NASDAQ: CRVL), a leading provider of innovative risk management solutions, is pleased to announce that it will host a live webcast to discuss its upcoming quarterly earnings results on Wednesday, August 5, 2",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/corvel-corporation-host-live-earnings-102300396.html?.tsrc=rss",
+   "published_at": "2026-07-27T10:23:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:23Z",
+   "fingerprint": "a53f5e7dbeac883a",
+   "primary_source": false,
+   "cluster_id": "3868c436fcb83c8e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d5aa8b59e1e31a5d",
+   "symbols": [
+    "CRVL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "CorVel Named 2026 PropertyCasualty360 Insurance Luminaries Winner for Excellence in Claims Management",
+   "summary": "FORT WORTH, Texas, July 08, 2026 (GLOBE NEWSWIRE) -- CorVel Corporation (NASDAQ: CRVL), a national provider of risk management solutions, today announced it has been named a 2026 PropertyCasualty360 Insurance Luminaries winner in the Excellence in Claims Management category. The ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/corvel-named-2026-propertycasualty360-insurance-111400507.html?.tsrc=rss",
+   "published_at": "2026-07-08T11:14:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:23Z",
+   "fingerprint": "2ee228f2d02d91a2",
+   "primary_source": false,
+   "cluster_id": "d5aa8b59e1e31a5d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0641b9de172a48f0",
+   "symbols": [
+    "CRVL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "CorVel Launches Marketwise Repricing™ to Deliver Smarter, Market-Based Medical Cost Containment",
+   "summary": "A data-driven repricing solution that optimizes cost management and complements existing bill review workflowsFORT WORTH, Texas, June 17, 2026 (GLOBE NEWSWIRE) -- CorVel Corporation (Nasdaq: CRVL), a national provider of risk management solutions, today announced the launch of Co",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/corvel-launches-marketwise-repricing-deliver-111200289.html?.tsrc=rss",
+   "published_at": "2026-06-17T11:12:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:23Z",
+   "fingerprint": "babfaa93bd26fa07",
+   "primary_source": false,
+   "cluster_id": "0641b9de172a48f0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
+ "insiders": [
+  {
+   "id": "a63d266e7b8a19b6",
+   "symbol": "CRVL",
+   "insider": "Yoss Jennifer",
+   "role": "Vice President of Accounting",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-09-30",
+   "filed_at": "2026-10-01",
+   "reporting_delay_days": 1,
+   "shares": 36.0,
+   "price": 70.8225,
+   "value": 2549.61,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/874866/000175463226000011/xslF345X06/edgardoc.xml"
+  },
+  {
+   "id": "01a594279b0912ac",
+   "symbol": "CRVL",
+   "insider": "Bertels Mark E.",
+   "role": "EVP - Risk Management Services",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-09-30",
+   "filed_at": "2026-10-01",
+   "reporting_delay_days": 1,
+   "shares": 9.0,
+   "price": 70.8225,
+   "value": 637.4,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/874866/000192105126000014/xslF345X06/edgardoc.xml"
+  },
+  {
+   "id": "8b2ffc704e84097c",
+   "symbol": "CRVL",
+   "insider": "Nichols Brian S.",
+   "role": "Chief Financial Officer",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-09-30",
+   "filed_at": "2026-10-01",
+   "reporting_delay_days": 1,
+   "shares": 55.0,
+   "price": 70.8225,
+   "value": 3895.24,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/874866/000210044926000006/xslF345X06/edgardoc.xml"
+  },
+  {
+   "id": "2981bd31fb2a39fa",
+   "symbol": "CRVL",
+   "insider": "Combs Michael G",
+   "role": "CEO & President",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-09-30",
+   "filed_at": "2026-10-01",
+   "reporting_delay_days": 1,
+   "shares": 45.0,
+   "price": 70.8225,
+   "value": 3187.01,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/874866/000164124826000018/xslF345X06/edgardoc.xml"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "social_detail": null,

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T14:32:28Z",
+ "generated_at": "2026-10-31T14:37:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -7,17 +7,15 @@
   "name": "Dauch Corporation",
   "region": "US",
   "currency": "USD",
-  "sector": "Consumer Discretionary",
-  "industry": null,
+  "sector": "Consumer Cyclical",
+  "industry": "Auto Parts",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 4.78000020980835,
    "price_date": "2026-10-30",
@@ -30,37 +28,40 @@
    "sma50": 5.719799995422363,
    "sma200": 6.150750012397766
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 1135750016.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
+   "score": 30.6,
+   "coverage_pct": 100,
    "model": "standard",
    "dimensions": {
-    "revenue_growth": null,
-    "profitability": null,
-    "financial_stability": null,
-    "cashflow": null,
-    "market_position": null,
-    "growth_potential": null,
-    "management": null
+    "revenue_growth": 19.1,
+    "profitability": 15.4,
+    "financial_stability": 30.0,
+    "cashflow": 58.1,
+    "market_position": 0.0,
+    "growth_potential": 65.6,
+    "management": 20.2
    }
   },
   "risk": {
-   "score": null,
-   "level": "unbekannt",
-   "coverage_pct": 25,
+   "score": 44.6,
+   "level": "moderat",
+   "coverage_pct": 100,
    "top_factors": [
-    "Volatilität (63T, annualisiert)",
-    "Handelsliquidität (Umsatz 20T)"
+    "Verschuldung (Debt/Equity)",
+    "Zinsdeckung",
+    "Volatilität (63T, annualisiert)"
    ]
   },
   "market_intelligence": {
-   "score": 6.1,
+   "score": 35.0,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 3,
    "independent_24h": 0
   },
   "political": {
@@ -83,7 +84,7 @@
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -110,34 +111,34 @@
   "move_zscore": -1.1603147562740588
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
+  "score": 30.6,
+  "status": "ok",
+  "coverage_pct": 100,
   "model": "standard",
   "dimensions": [
    {
     "key": "revenue_growth",
     "label": "Umsatzwachstum",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 19.1,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_cagr",
       "label": "Umsatz-CAGR (mehrjährig)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.197,
+      "points": 20.8,
+      "status": "ok"
      },
      {
       "key": "revenue_growth_yoy",
       "label": "Umsatzwachstum Vorjahr",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -4.705,
+      "points": 15.1,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -146,25 +147,25 @@
     "key": "profitability",
     "label": "Profitabilität/Margen",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 15.4,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "operating_margin",
       "label": "Operative Marge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 4.004,
+      "points": 13.3,
+      "status": "ok"
      },
      {
       "key": "net_margin",
       "label": "Nettomarge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -0.338,
+      "points": 18.6,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -173,33 +174,33 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 30.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "debt_to_equity",
       "label": "Verschuldung (Debt/Equity)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 6.522,
+      "points": 0.0,
+      "status": "ok"
      },
      {
       "key": "current_ratio",
       "label": "Liquidität (Current Ratio)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 2.946,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "interest_coverage",
       "label": "Zinsdeckung (EBIT/Zinsen)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 1.007,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -208,25 +209,25 @@
     "key": "cashflow",
     "label": "Cashflow",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 58.1,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "fcf_margin",
       "label": "Free-Cashflow-Marge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 2.558,
+      "points": 30.2,
+      "status": "ok"
      },
      {
       "key": "ocf_positive",
       "label": "Operativer Cashflow positiv",
       "unit": "bool",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 1.0,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -235,17 +236,17 @@
     "key": "market_position",
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "gross_margin",
       "label": "Bruttomarge (Proxy Preissetzungsmacht)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 11.327,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -254,25 +255,25 @@
     "key": "growth_potential",
     "label": "Wachstumspotenzial",
     "weight": 0.2,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 65.6,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_growth_forward",
       "label": "Erwartetes Umsatzwachstum (Yahoo)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 92.4,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "reinvestment",
       "label": "Reinvestition (F&E + Capex in % Umsatz)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 4.494,
+      "points": 13.9,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -281,95 +282,95 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 20.2,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -3.078,
+      "points": 0.0,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.949,
+      "points": 50.6,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/DCH/financials",
+  "as_of": "2026-10-31T14:40:52Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": null,
-  "level": "unbekannt",
-  "coverage_pct": 25,
+  "score": 44.6,
+  "level": "moderat",
+  "coverage_pct": 100,
   "factors": [
    {
     "key": "leverage",
     "label": "Verschuldung (Debt/Equity)",
-    "value": null,
+    "value": 6.52,
     "unit": "x",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.15,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "liquidity",
     "label": "Liquidität (Current Ratio)",
-    "value": null,
+    "value": 2.95,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "interest",
     "label": "Zinsdeckung",
-    "value": null,
+    "value": 1.01,
     "unit": "x",
-    "severity": null,
+    "severity": 99.9,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "cashflow",
     "label": "Free-Cashflow-Marge",
-    "value": null,
+    "value": 2.56,
     "unit": "%",
-    "severity": null,
+    "severity": 49.8,
     "weight": 0.12,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "margin_trend",
     "label": "Margenentwicklung (Vorjahr, Pp.)",
-    "value": null,
+    "value": -0.43,
     "unit": "Pp",
-    "severity": null,
+    "severity": 31.2,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": 0.95,
     "unit": "%",
-    "severity": null,
+    "severity": 9.5,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -392,20 +393,20 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 4.2,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 3.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 22.2,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -418,8 +419,9 @@
    }
   ],
   "top_factors": [
-   "Volatilität (63T, annualisiert)",
-   "Handelsliquidität (Umsatz 20T)"
+   "Verschuldung (Debt/Equity)",
+   "Zinsdeckung",
+   "Volatilität (63T, annualisiert)"
   ],
   "unknown_factors": [
    "Kunden- und Branchenabhängigkeit",
@@ -427,11 +429,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.1,
+  "score": 35.0,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 86.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 34.8,
@@ -449,26 +451,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 8,
+    "independent": 8,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -486,7 +490,428 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "6268f27a3592c81b",
+   "symbols": [
+    "CPS",
+    "DCH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Earnings Preview: Dauch (DCH) Q3 Earnings Expected to Decline",
+   "summary": "Dauch (DCH) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/earnings-preview-dauch-dch-q3-130004695.html?.tsrc=rss",
+   "published_at": "2026-10-30T13:00:04Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:13Z",
+   "fingerprint": "72d0a5c5d27986b0",
+   "primary_source": false,
+   "cluster_id": "6268f27a3592c81b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Ergebnisvorschau: Dauch (DCH) Q3 Ergebnis voraussichtlich rückläufig"
+  },
+  {
+   "id": "693038a5a502da00",
+   "symbols": [
+    "DCH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Phinia (PHIN) Q3 Earnings Top Estimates",
+   "summary": "Phinia (PHIN) delivered earnings and revenue surprises of +5.17% and -2.37%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/phinia-phin-q3-earnings-top-133008560.html?.tsrc=rss",
+   "published_at": "2026-10-29T13:30:08Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:59Z",
+   "fingerprint": "a66fc19157e091f9",
+   "primary_source": false,
+   "cluster_id": "693038a5a502da00",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f8b5a65c987d324c",
+   "symbols": [
+    "DCH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Dauch (DCH) vs. LKQ and GPC: Can the Dowlais Acquisition Unlock a Hidden Auto Supplier Revaluation?",
+   "summary": "Is DCH a good stock to buy? We came across a bullish thesis on Dauch Corporation on One Idea Per Day’s Substack by Paul. The thesis was published on July 4th, when the stock was trading at $5.51, and DCH has lost 16.33% since then. The decline appears to reflect concerns that the",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dauch-dch-vs-lkq-gpc-145735407.html?.tsrc=rss",
+   "published_at": "2026-10-27T14:57:35Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:59Z",
+   "fingerprint": "9adf91fa0ac38d53",
+   "primary_source": false,
+   "cluster_id": "f8b5a65c987d324c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e126f821b5165d52",
+   "symbols": [
+    "DCH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can Dauch (DCH) Trade At A Discount Despite Cost Pressure?",
+   "summary": "Dauch has been under pressure for years, and with the share price now well below prior levels, the real question for you as an investor is how firmly its current valuation is supported by the revenue it generates. With sentiment swinging around production headwinds and cost infla",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dauch-dch-trade-discount-despite-021422027.html?.tsrc=rss",
+   "published_at": "2026-10-21T02:14:22Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:59Z",
+   "fingerprint": "1c0badd10b208947",
+   "primary_source": false,
+   "cluster_id": "e126f821b5165d52",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "72b043e5487aa1b2",
+   "symbols": [
+    "DCH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Dauch Facing Softer-Than-Expected Ram Heavy-Duty Production, Inflationary Cost Pressure, BofA Says",
+   "summary": "Dauch (DCH) is facing softer-than-expected Ram heavy-duty production and inflationary cost pressures",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dauch-facing-softer-expected-ram-150350275.html?.tsrc=rss",
+   "published_at": "2026-10-15T15:03:50Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:59Z",
+   "fingerprint": "27eb063f48a5ed80",
+   "primary_source": false,
+   "cluster_id": "72b043e5487aa1b2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fc628d59d624b498",
+   "symbols": [
+    "DCH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Dauch Corporation Announces Financial Leadership Succession Plan and Executive Realignment",
+   "summary": "Dauch Corporation (Dauch), (NYSE: DCH) today announced a structured succession plan and realignment of its executive leadership team to support the next phase of its long-term profitable growth.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dauch-corporation-announces-financial-leadership-120000876.html?.tsrc=rss",
+   "published_at": "2026-10-12T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:59Z",
+   "fingerprint": "48c8e32cfc3c72a0",
+   "primary_source": false,
+   "cluster_id": "fc628d59d624b498",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c079ccfee5bccb0c",
+   "symbols": [
+    "DCH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Dauch Has Lost 36% Since February: BWS Financial Sees 194% Upside",
+   "summary": "Key TakeawaysDauch closed at $5. 79 on Oct.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/dauch-has-lost-36-since-february-bws-financial-sees-194-upside?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-11T16:13:50Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:59Z",
+   "fingerprint": "71c4030478189e5c",
+   "primary_source": false,
+   "cluster_id": "c079ccfee5bccb0c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "45df6ebe053159af",
+   "symbols": [
+    "DCH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Dauch (DCH) Rebrand Keeps Undervaluation Talk Alive After A Sharp Pullback",
+   "summary": "Dauch (DCH) drew fresh attention after rebranding from American Axle & Manufacturing Holdings, Inc. This shift puts its driveline and metal forming focus in sharper relief for investors weighing the stock’s recent mixed returns. Short term momentum around Dauch has cooled, with t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dauch-dch-rebrand-keeps-undervaluation-231219485.html?.tsrc=rss",
+   "published_at": "2026-10-09T23:12:19Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:59Z",
+   "fingerprint": "6dc06dbcf8893245",
+   "primary_source": false,
+   "cluster_id": "45df6ebe053159af",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a2c2c19d9eee1cd2",
+   "symbols": [
+    "DCH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Dauch to Present at the 2026 Jefferies Global Industrials Conference on September 10",
+   "summary": "Dauch Corporation, (NYSE: DCH, LSE: DCH) announced that it will participate in the 2026 Jefferies Global Industrials Conference on September 10.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dauch-present-2026-jefferies-global-201500825.html?.tsrc=rss",
+   "published_at": "2026-09-04T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:59Z",
+   "fingerprint": "c00a0073fc44f8b1",
+   "primary_source": false,
+   "cluster_id": "a2c2c19d9eee1cd2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6a9ce4ea91279550",
+   "symbols": [
+    "DCH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Dauch Corporation’s (DCH) Costly Path To A Bigger Payoff",
+   "summary": "On August 7, Dauch Corporation (NYSE:DCH) walked investors through a second quarter defined by one word: integration. Five months into digesting its transformational Dowlais acquisition, the company posted sales of roughly $3 billion and lifted its full-year guidance, even as the",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dauch-corporation-dch-costly-path-113502027.html?.tsrc=rss",
+   "published_at": "2026-08-18T11:35:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:59Z",
+   "fingerprint": "536145c39656f166",
+   "primary_source": false,
+   "cluster_id": "6a9ce4ea91279550",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bc895cd481f86611",
+   "symbols": [
+    "DCH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Dauch (DCH) Q2 2026 Earnings Call Transcript",
+   "summary": "Dowlais acquisition drives $70M synergy run rate toward $300M three-year target.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/14/dauch-dch-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-14T13:30:43Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:59Z",
+   "fingerprint": "a14cf9bf00e3d7e6",
+   "primary_source": false,
+   "cluster_id": "bc895cd481f86611",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1d2b0d0581b0a33d",
+   "symbols": [
+    "DCH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Dauch to Present at the J.P. Morgan 2026 Auto Conference on August 12",
+   "summary": "Dauch Corporation, (NYSE: DCH, LSE: DCH) announced that it will participate in the J.P. Morgan 2026 Auto Conference on August 12.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dauch-present-j-p-morgan-130000275.html?.tsrc=rss",
+   "published_at": "2026-08-10T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:59Z",
+   "fingerprint": "e6bf5bf6bff1a371",
+   "primary_source": false,
+   "cluster_id": "1d2b0d0581b0a33d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "32d2c5b6c87350c7",
+   "symbols": [
+    "DCH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Dauch (DCH) After Earnings And Loss Guidance Is The Undervalued Case Still Open",
+   "summary": "What Dauch’s latest earnings mean for stock watchers Dauch (DCH) just released second quarter 2026 results that combined higher sales with much lower net income, along with updated full year guidance that still points to a loss for the year. See our latest analysis for Dauch. The",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dauch-dch-earnings-loss-guidance-111456423.html?.tsrc=rss",
+   "published_at": "2026-08-09T11:14:56Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:59Z",
+   "fingerprint": "f110a7ca59680530",
+   "primary_source": false,
+   "cluster_id": "32d2c5b6c87350c7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "11cd1924d33418f3",
+   "symbols": [
+    "DCH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "American Axle & Manufacturing Q2 Earnings Call Highlights",
+   "summary": "American Axle & Manufacturing (NYSE:DCH) reported second-quarter 2026 sales of approximately $3 billion, adjusted EBITDA of $389.6 million and adjusted free cash flow of $148.4 million, as the company continued integrating Dowlais and raised the low end of its full-year outlook. ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/american-axle-manufacturing-q2-earnings-call-highlights-2026-08-07/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-08T04:03:54Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:59Z",
+   "fingerprint": "022a7b394732de33",
+   "primary_source": false,
+   "cluster_id": "11cd1924d33418f3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4299cf31ab61f194",
+   "symbols": [
+    "DCH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Dauch Corp (DCH) (Q2 2026) Earnings Call Highlights: Strong Sales and Synergy Progress Drive ...",
+   "summary": "Dauch Corp (DCH) raises full-year outlook on robust Q2 performance, with adjusted EPS of $0.32 and $70 million in synergies achieved to date.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dauch-corp-dch-q2-2026-210611998.html?.tsrc=rss",
+   "published_at": "2026-08-07T21:06:11Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:59Z",
+   "fingerprint": "27be105ebb5399c3",
+   "primary_source": false,
+   "cluster_id": "4299cf31ab61f194",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9e812d1479428db3",
+   "symbols": [
+    "DCH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Dauch (DCH) Reports Q2 Earnings: What Key Metrics Have to Say",
+   "summary": "Although the revenue and EPS for Dauch (DCH) give a sense of how its business performed in the quarter ended June 2026, it might be worth considering how some key metrics compare with Wall Street estimates and the year-ago numbers.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dauch-dch-reports-q2-earnings-133004955.html?.tsrc=rss",
+   "published_at": "2026-08-07T13:30:04Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:59Z",
+   "fingerprint": "e184186da28f79d4",
+   "primary_source": false,
+   "cluster_id": "9e812d1479428db3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5b22da0c197b4c77",
+   "symbols": [
+    "DCH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Dauch (DCH) Beats Q2 Earnings and Revenue Estimates",
+   "summary": "Dauch (DCH) delivered earnings and revenue surprises of +128.57% and +6.07%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dauch-dch-beats-q2-earnings-131503701.html?.tsrc=rss",
+   "published_at": "2026-08-07T13:15:03Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:59Z",
+   "fingerprint": "2610d21547c52bc4",
+   "primary_source": false,
+   "cluster_id": "5b22da0c197b4c77",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "291a40ed157ac7b7",
+   "symbols": [
+    "DCH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Dauch Reports Second Quarter 2026 Financial Results",
+   "summary": "Dauch Corporation (\"Dauch\") (NYSE: DCH; LSE: DCH) today reported its financial results for the second quarter 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dauch-reports-second-quarter-2026-120000029.html?.tsrc=rss",
+   "published_at": "2026-08-07T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:59Z",
+   "fingerprint": "890cfe8abef75334",
+   "primary_source": false,
+   "cluster_id": "291a40ed157ac7b7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8e2fa44a359baa0b",
+   "symbols": [
+    "DCH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "LCI (LCII) Q2 Earnings Top Estimates",
+   "summary": "LCI (LCII) delivered earnings and revenue surprises of +2.66% and -14.21%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/lci-lcii-q2-earnings-top-130007518.html?.tsrc=rss",
+   "published_at": "2026-08-05T13:00:07Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:59Z",
+   "fingerprint": "33c80ddc03036373",
+   "primary_source": false,
+   "cluster_id": "8e2fa44a359baa0b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

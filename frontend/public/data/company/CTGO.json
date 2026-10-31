@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-10-31T14:32:28Z",
+ "generated_at": "2026-10-31T14:37:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "CTGO",
-  "name": "Contango Silver And Gold Inc",
+  "name": "Contango Silver & Gold Inc.",
   "region": "US",
   "currency": "USD",
-  "sector": "Materials",
-  "industry": null,
+  "sector": "Basic Materials",
+  "industry": "Gold",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 13.739999771118164,
    "price_date": "2026-10-30",
@@ -30,37 +28,40 @@
    "sma50": 17.489199962615967,
    "sma200": 20.692549967765807
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 459475104.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
+   "score": 18.7,
+   "coverage_pct": 44,
    "model": "standard",
    "dimensions": {
     "revenue_growth": null,
     "profitability": null,
-    "financial_stability": null,
-    "cashflow": null,
-    "market_position": null,
+    "financial_stability": 28.1,
+    "cashflow": 100.0,
+    "market_position": 0.0,
     "growth_potential": null,
-    "management": null
+    "management": 0.0
    }
   },
   "risk": {
-   "score": null,
-   "level": "unbekannt",
-   "coverage_pct": 25,
+   "score": 62.9,
+   "level": "erhoeht",
+   "coverage_pct": 80,
    "top_factors": [
-    "Volatilität (63T, annualisiert)",
-    "Handelsliquidität (Umsatz 20T)"
+    "Verwässerung (Aktienanzahl yoy)",
+    "Liquidität (Current Ratio)",
+    "Zinsdeckung"
    ]
   },
   "market_intelligence": {
-   "score": 10.5,
+   "score": 39.3,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 3,
    "independent_24h": 0
   },
   "political": {
@@ -83,7 +84,7 @@
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -110,9 +111,9 @@
   "move_zscore": -1.9811805936482654
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
+  "score": 18.7,
+  "status": "ok",
+  "coverage_pct": 44,
   "model": "standard",
   "dimensions": [
    {
@@ -173,33 +174,33 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 28.1,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "debt_to_equity",
       "label": "Verschuldung (Debt/Equity)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 1.349,
+      "points": 59.0,
+      "status": "ok"
      },
      {
       "key": "current_ratio",
       "label": "Liquidität (Current Ratio)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.896,
+      "points": 15.0,
+      "status": "ok"
      },
      {
       "key": "interest_coverage",
       "label": "Zinsdeckung (EBIT/Zinsen)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -3.709,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -208,9 +209,9 @@
     "key": "cashflow",
     "label": "Cashflow",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 100.0,
+    "basis": "data",
+    "coverage": 40,
     "metrics": [
      {
       "key": "fcf_margin",
@@ -224,9 +225,9 @@
       "key": "ocf_positive",
       "label": "Operativer Cashflow positiv",
       "unit": "bool",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 1.0,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -235,17 +236,17 @@
     "key": "market_position",
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "gross_margin",
       "label": "Bruttomarge (Proxy Preissetzungsmacht)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.0,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -281,68 +282,68 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -143.781,
+      "points": 0.0,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 22.39,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/CTGO/financials",
+  "as_of": "2026-10-31T14:40:52Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": null,
-  "level": "unbekannt",
-  "coverage_pct": 25,
+  "score": 62.9,
+  "level": "erhoeht",
+  "coverage_pct": 80,
   "factors": [
    {
     "key": "leverage",
     "label": "Verschuldung (Debt/Equity)",
-    "value": null,
+    "value": 1.35,
     "unit": "x",
-    "severity": null,
+    "severity": 38.9,
     "weight": 0.15,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "liquidity",
     "label": "Liquidität (Current Ratio)",
-    "value": null,
+    "value": 0.9,
     "unit": "x",
-    "severity": null,
+    "severity": 85.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "interest",
     "label": "Zinsdeckung",
-    "value": null,
+    "value": -3.71,
     "unit": "x",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "cashflow",
@@ -365,11 +366,11 @@
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": 22.39,
     "unit": "%",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -392,20 +393,20 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 3.67,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 9.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 88.9,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -418,8 +419,9 @@
    }
   ],
   "top_factors": [
-   "Volatilität (63T, annualisiert)",
-   "Handelsliquidität (Umsatz 20T)"
+   "Verwässerung (Aktienanzahl yoy)",
+   "Liquidität (Current Ratio)",
+   "Zinsdeckung"
   ],
   "unknown_factors": [
    "Kunden- und Branchenabhängigkeit",
@@ -427,11 +429,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 10.5,
+  "score": 39.3,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 86.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 59.4,
@@ -449,26 +451,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 6,
+    "independent": 6,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -486,7 +490,428 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "0a9c4ef2216077ee",
+   "symbols": [
+    "CTGO",
+    "DC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "5 Best Gold Stocks to Buy According to Analysts",
+   "summary": "Gold has experienced an extraordinary bull run followed by a sharp correction since the beginning of 2022, more than doubling in value overall. The precious metal started 2022 trading at around $1,800 per ounce and surged to an all-time high above $5,500 in January 2026 before pu",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/5-best-gold-stocks-buy-160204665.html?.tsrc=rss",
+   "published_at": "2026-10-28T16:02:04Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:32Z",
+   "fingerprint": "d03c283efa43d42c",
+   "primary_source": false,
+   "cluster_id": "0a9c4ef2216077ee",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ec5c2103865cee33",
+   "symbols": [
+    "CTGO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Contango Provides Corporate Update: Kitsault Drill Program Exceeds Target, Johnson Tract Infrastructure Ahead of Plan, Lucky Shot 2070 East Drift Drilling Underway",
+   "summary": "Fairbanks, Alaska--(Newsfile Corp. - October 28, 2026) - Contango Silver and Gold Inc. (NYSE American: CTGO) (TSX: CTGO) (\"Contango\" or the \"Company\") is pleased to provide a corporate update on its 2026 field season for all Projects. The Company completed 56,492 meters of drilli",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/contango-provides-corporate-kitsault-drill-120000493.html?.tsrc=rss",
+   "published_at": "2026-10-28T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:32Z",
+   "fingerprint": "ed7373a534d73677",
+   "primary_source": false,
+   "cluster_id": "ec5c2103865cee33",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5ba41a3f12d33a89",
+   "symbols": [
+    "CMCL",
+    "CTGO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Gold Mining Stocks Retail Investors May Watch as Inflation Heats Up",
+   "summary": "Inflation is heating up again, the Fed has just raised rates for the first time since 2023, and real wages are shrinking, which is a tough mix for most assets but a potential turning point for a small corner of the market. Some gold and precious metals miners in our screener appe",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/3-gold-mining-stocks-retail-210748654.html?.tsrc=rss",
+   "published_at": "2026-10-24T21:07:48Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:44Z",
+   "fingerprint": "ffda330c7a36c80a",
+   "primary_source": false,
+   "cluster_id": "5ba41a3f12d33a89",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ba426c2a6c95c404",
+   "symbols": [
+    "CTGO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Contango ORE Highlights 140 g/t Gold Hit, Targets Lucky Shot Resource Growth",
+   "summary": "Contango ORE (NYSEAMERICAN:CTGO) discussed new drilling results and development plans for its Lucky Shot gold project in Alaska, highlighting high-grade intercepts from the completed Coleman surface drilling program and outlining a path toward an updated mineral resource estimate",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-contango-ore-highlights-140-gt-gold-hit-targets-lucky-shot-resource-growth-2026-10-07/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-07T07:02:08Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:32Z",
+   "fingerprint": "e391203c1dccacd1",
+   "primary_source": false,
+   "cluster_id": "ba426c2a6c95c404",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "79c7e12aac40382c",
+   "symbols": [
+    "CTGO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Contango Intersects 140.23 g/t Gold over 0.63 Meters and 18.16 g/t Gold over 3.65 Meters at Lucky Shot and Advances KM Vein Drilling",
+   "summary": "Fairbanks, Alaska--(Newsfile Corp. - October 6, 2026) - Contango Silver and Gold Inc. (NYSE American: CTGO) (TSX: CTGO) (\"Contango\" or the \"Company\") announces additional gold assay results from its 2026 surface diamond drilling program at the Lucky Shot Project in Alaska. The Co",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/contango-intersects-140-23-g-120000636.html?.tsrc=rss",
+   "published_at": "2026-10-06T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:32Z",
+   "fingerprint": "72501f7ef92ea9a9",
+   "primary_source": false,
+   "cluster_id": "79c7e12aac40382c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0626b6a108cc7ce1",
+   "symbols": [
+    "CTGO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Contango ORE Maps Path to 200,000 Gold Ounces as Manh Choh Funds Growth",
+   "summary": "Contango ORE (NYSEAMERICAN:CTGO) outlined a five-year plan to increase its attributable production from approximately 60,000 ounces of gold to 200,000 ounces of gold and 5 million ounces of silver, with growth expected to come primarily from its Johnson Tract and Kitsault project",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-contango-ore-maps-path-to-200000-gold-ounces-as-manh-choh-funds-growth-2026-10-04/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-04T08:02:01Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:32Z",
+   "fingerprint": "35fbc8e4e777aa1f",
+   "primary_source": false,
+   "cluster_id": "0626b6a108cc7ce1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "de3739b1ceab4865",
+   "symbols": [
+    "CTGO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Contango Announces Updated Mineral Resource Estimate for Kitsault Valley Project; Indicated Resources Increase 93% to 89.5 Million Silver Equivalent Ounces",
+   "summary": "Fairbanks, Alaska--(Newsfile Corp. - September 22, 2026) - Contango Silver and Gold Inc. (NYSE American: CTGO) (TSX: CTGO) (\"Contango\" or the \"Company\") is pleased to announce an updated mineral resource estimate (\"MRE\") for its 100% owned Kitsault Valley Project located in North",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/contango-announces-updated-mineral-estimate-120000881.html?.tsrc=rss",
+   "published_at": "2026-09-22T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:32Z",
+   "fingerprint": "ebd521c1a837f171",
+   "primary_source": false,
+   "cluster_id": "de3739b1ceab4865",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8d6be2f312dc18e8",
+   "symbols": [
+    "CTGO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Contango Intersects 506 g/t AgEq over 13.90 Meters at Torbrit and 807 g/t AgEq over 4.96 Meters at North Star Infill and Expansion Drilling",
+   "summary": "Fairbanks, Alaska--(Newsfile Corp. - September 15, 2026) - Contango Silver and Gold Inc. (NYSE American: CTGO) (TSX: CTGO) (\"Contango\" or the \"Company\") is pleased to announce initial assay results from the Torbrit and North Star silver deposits as part of the ongoing 2026 infill",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/contango-intersects-506-g-t-120000302.html?.tsrc=rss",
+   "published_at": "2026-09-15T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:32Z",
+   "fingerprint": "69db3443ae4df9b6",
+   "primary_source": false,
+   "cluster_id": "8d6be2f312dc18e8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "53b04c8b3a2cb671",
+   "symbols": [
+    "CTGO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Contango Ore, Inc. Q4 2026 Earnings Call Summary",
+   "summary": "Moby summary of Contango Ore, Inc.'s Q4 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-contango-ore-inc-q4-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-09-09T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:32Z",
+   "fingerprint": "8e477dd5cb55a6e3",
+   "primary_source": false,
+   "cluster_id": "53b04c8b3a2cb671",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fbd9c0b208034c4a",
+   "symbols": [
+    "CTGO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Contango Silver & Gold Provides Project Updates",
+   "summary": "Fairbanks, Alaska--(Newsfile Corp. - September 8, 2026) - Contango Silver and Gold Inc. (NYSE American: CTGO) (TSX: CTGO) (\"Contango\" or the \"Company\") is pleased to provide updates on its 2026 field programs across the Contango Silver & Gold portfolio.Rick Van Nieuwenhuyse, the ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/contango-silver-gold-provides-project-214000578.html?.tsrc=rss",
+   "published_at": "2026-09-08T21:40:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:32Z",
+   "fingerprint": "5e2a825b2e737b98",
+   "primary_source": false,
+   "cluster_id": "fbd9c0b208034c4a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "554ac9891e6d54a3",
+   "symbols": [
+    "CTGO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Lake Victoria Gold Reports High-Grade Gold Intercepts at Imwelo as It Advances Metallurgical Testing",
+   "summary": "Lake Victoria Gold Ltd. (TSXV:LVG) (OTCQB:LVGLF) (FSE:E1K) reported high-grade, near-surface gold intercepts from drilling at its Imwelo Gold Project in Tanzania, adding new data to the company’s ongoing work to refine the project’s initial mining area and processing plans. The l",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/lake-victoria-gold-reports-high-161602054.html?.tsrc=rss",
+   "published_at": "2026-09-03T16:16:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:32Z",
+   "fingerprint": "f2297bc22c7c0e64",
+   "primary_source": false,
+   "cluster_id": "554ac9891e6d54a3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f09f657aa790512f",
+   "symbols": [
+    "CTGO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Contango Silver & Gold Intersects 2.45 Meters Grading 86.05 g/t Gold at Lucky Shot and Additional KM-Style Mineralization in West Drift Extension",
+   "summary": "Fairbanks, Alaska--(Newsfile Corp. - September 2, 2026) - Contango Silver and Gold Inc. (NYSE American: CTGO) (TSX: CTGO) (\"Contango\" or the \"Company\") is pleased to announce initial gold assay results from the 2026 surface diamond drilling program at the Lucky Shot Project in Al",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/contango-silver-gold-intersects-2-120000896.html?.tsrc=rss",
+   "published_at": "2026-09-02T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:32Z",
+   "fingerprint": "6eaba6ef17fbb8fd",
+   "primary_source": false,
+   "cluster_id": "f09f657aa790512f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "58768647c5dcb4c0",
+   "symbols": [
+    "CTGO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Contango Silver & Gold Inc (CTGO) (Q2 2026) Earnings Call Highlights: Unhedged and Poised ...",
+   "summary": "CEO Rick Nieuwenhuyse outlines a transformative quarter with full hedge removal, robust cash flow projections, and strategic progress across its three core projects.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/contango-silver-gold-inc-ctgo-010244657.html?.tsrc=rss",
+   "published_at": "2026-08-19T01:02:44Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:32Z",
+   "fingerprint": "6495fa9fd757c948",
+   "primary_source": false,
+   "cluster_id": "58768647c5dcb4c0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f8a01fae8e96581e",
+   "symbols": [
+    "CTGO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Contango ORE Q2 Earnings Call Highlights",
+   "summary": "Contango ORE (NYSEAMERICAN:CTGO), which management referred to during its quarterly update as Contango Silver & Gold, said it expects stronger production, lower costs and increased cash distributions in the second half of 2026 as mining advances into higher-grade material at the ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/contango-ore-q2-earnings-call-highlights-2026-08-14/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-14T21:02:18Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:32Z",
+   "fingerprint": "aa723fafdc1de304",
+   "primary_source": false,
+   "cluster_id": "f8a01fae8e96581e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "23d0295c4cee90a7",
+   "symbols": [
+    "CTGO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Contango Ore, Inc. Q2 2026 Earnings Call Summary",
+   "summary": "Moby summary of Contango Ore, Inc.'s Q2 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-contango-ore-inc-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-08-14T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:32Z",
+   "fingerprint": "db7152551f0bbf59",
+   "primary_source": false,
+   "cluster_id": "23d0295c4cee90a7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "92227e124cd2c140",
+   "symbols": [
+    "CTGO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Contango Announces Results for the Quarter Ended June 30, 2026",
+   "summary": "Fairbanks, Arkansas--(Newsfile Corp. - August 13, 2026) - Contango Silver and Gold Inc. (NYSE American: CTGO) (TSX: CTGO) (\"Contango\" or the \"Company\") announced today that it filed with the Securities and Exchange Commission its Form 10-Q for the quarter ended June 30, 2026 (\"Q2",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/contango-announces-results-quarter-ended-210000667.html?.tsrc=rss",
+   "published_at": "2026-08-13T21:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:32Z",
+   "fingerprint": "0ff64d468d938a02",
+   "primary_source": false,
+   "cluster_id": "92227e124cd2c140",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f0db0dc882af2e19",
+   "symbols": [
+    "CTGO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Contango ORE Fireside Chat: Metals Pullback Meets Defense, AI Demand Tailwinds",
+   "summary": "A panel of mining executives said recent volatility in precious and critical metals should be viewed in the context of still-elevated prices, while pointing to defense demand, artificial intelligence-related infrastructure and constrained project pipelines as key themes shaping t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/contango-ore-fireside-chat-metals-pullback-meets-defense-ai-demand-tailwinds-2026-07-19/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-07-20T04:02:12Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:32Z",
+   "fingerprint": "fbde70e42b09dc56",
+   "primary_source": false,
+   "cluster_id": "f0db0dc882af2e19",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "65231be421eabc47",
+   "symbols": [
+    "CTGO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Contango ORE Goes Hedge-Free, Eyes Full Gold Upside and Kitsault Silver Growth",
+   "summary": "Contango ORE (NYSEAMERICAN:CTGO) President and CEO and Director Rick Van Nieuwenhuyse said the company has eliminated its hedge book and is positioning shareholders for full exposure to gold prices, as speakers on a metals-focused webinar described the recent pullback in gold and",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/contango-ore-goes-hedge-free-eyes-full-gold-upside-and-kitsault-silver-growth-2026-07-14/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-07-14T06:02:09Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:32Z",
+   "fingerprint": "6c2cf5f4871cb513",
+   "primary_source": false,
+   "cluster_id": "65231be421eabc47",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "115942852de62517",
+   "symbols": [
+    "CTGO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Contango ORE Drops Gold Hedges to Boost Upside as Manh Choh Output Ramps",
+   "summary": "Contango ORE (NYSEAMERICAN:CTGO) executives said the company has eliminated its remaining gold hedge book by converting the last 15,000 ounces of hedged gold into debt, a move management framed as increasing shareholder exposure to gold prices while preserving equity. Speaking du",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/contango-ore-drops-gold-hedges-to-boost-upside-as-manh-choh-output-ramps-2026-07-12/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-07-13T03:02:08Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:32Z",
+   "fingerprint": "972bf8fd7f62c699",
+   "primary_source": false,
+   "cluster_id": "115942852de62517",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

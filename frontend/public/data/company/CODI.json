@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T14:32:28Z",
+ "generated_at": "2026-10-31T14:37:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -7,17 +7,15 @@
   "name": "Compass Diversified",
   "region": "US",
   "currency": "USD",
-  "sector": "Financials",
-  "industry": null,
+  "sector": "Industrials",
+  "industry": "Conglomerates",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 11.149999618530273,
    "price_date": "2026-10-30",
@@ -30,28 +28,30 @@
    "sma50": 11.038200073242187,
    "sma200": 9.7862500333786
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 838881024.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
-   "model": "financial",
+   "score": 21.8,
+   "coverage_pct": 100,
+   "model": "standard",
    "dimensions": {
-    "revenue_growth": null,
-    "profitability": null,
-    "financial_stability": null,
-    "cashflow": null,
-    "market_position": null,
-    "growth_potential": null,
-    "management": null
+    "revenue_growth": 32.8,
+    "profitability": 4.6,
+    "financial_stability": 30.0,
+    "cashflow": 5.5,
+    "market_position": 56.2,
+    "growth_potential": 0.8,
+    "management": 25.0
    }
   },
   "risk": {
-   "score": 40.1,
-   "level": "moderat",
-   "coverage_pct": 45,
+   "score": 46.0,
+   "level": "erhoeht",
+   "coverage_pct": 100,
    "top_factors": [
-    "Handelsliquidität (Umsatz 20T)"
+    "Verschuldung (Debt/Equity)",
+    "Free-Cashflow-Marge",
+    "Zinsdeckung"
    ]
   },
   "market_intelligence": {
@@ -82,7 +82,7 @@
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -109,34 +109,34 @@
   "move_zscore": -0.46645797070360195
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
-  "model": "financial",
+  "score": 21.8,
+  "status": "ok",
+  "coverage_pct": 100,
+  "model": "standard",
   "dimensions": [
    {
     "key": "revenue_growth",
     "label": "Umsatzwachstum",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 32.8,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_cagr",
       "label": "Umsatz-CAGR (mehrjährig)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 2.168,
+      "points": 28.7,
+      "status": "ok"
      },
      {
       "key": "revenue_growth_yoy",
       "label": "Umsatzwachstum Vorjahr",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 4.786,
+      "points": 42.2,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -145,25 +145,25 @@
     "key": "profitability",
     "label": "Profitabilität/Margen",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 4.6,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
+     {
+      "key": "operating_margin",
+      "label": "Operative Marge",
+      "unit": "%",
+      "value": 2.275,
+      "points": 7.6,
+      "status": "ok"
+     },
      {
       "key": "net_margin",
       "label": "Nettomarge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     },
-     {
-      "key": "roe",
-      "label": "Eigenkapitalrendite",
-      "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -12.085,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -172,17 +172,33 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 30.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
-      "key": "share_change_yoy",
-      "label": "Aktienanzahl Veränderung",
-      "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "key": "debt_to_equity",
+      "label": "Verschuldung (Debt/Equity)",
+      "unit": "x",
+      "value": 4.247,
+      "points": 0.0,
+      "status": "ok"
+     },
+     {
+      "key": "current_ratio",
+      "label": "Liquidität (Current Ratio)",
+      "unit": "x",
+      "value": 2.417,
+      "points": 100.0,
+      "status": "ok"
+     },
+     {
+      "key": "interest_coverage",
+      "label": "Zinsdeckung (EBIT/Zinsen)",
+      "unit": "x",
+      "value": -0.701,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -191,37 +207,71 @@
     "key": "cashflow",
     "label": "Cashflow",
     "weight": 0.1,
-    "score": null,
-    "basis": "not_applicable",
-    "coverage": null,
-    "metrics": [],
+    "score": 5.5,
+    "basis": "data",
+    "coverage": 100,
+    "metrics": [
+     {
+      "key": "fcf_margin",
+      "label": "Free-Cashflow-Marge",
+      "unit": "%",
+      "value": -2.73,
+      "points": 9.1,
+      "status": "ok"
+     },
+     {
+      "key": "ocf_positive",
+      "label": "Operativer Cashflow positiv",
+      "unit": "bool",
+      "value": 0.0,
+      "points": 0.0,
+      "status": "ok"
+     }
+    ],
     "manual": null
    },
    {
     "key": "market_position",
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
-    "score": null,
-    "basis": "not_applicable",
-    "coverage": null,
-    "metrics": [],
+    "score": 56.2,
+    "basis": "proxy",
+    "coverage": 100,
+    "metrics": [
+     {
+      "key": "gross_margin",
+      "label": "Bruttomarge (Proxy Preissetzungsmacht)",
+      "unit": "%",
+      "value": 43.088,
+      "points": 56.2,
+      "status": "ok"
+     }
+    ],
     "manual": null
    },
    {
     "key": "growth_potential",
     "label": "Wachstumspotenzial",
     "weight": 0.2,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.8,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_growth_forward",
       "label": "Erwartetes Umsatzwachstum (Yahoo)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -11.4,
+      "points": 0.0,
+      "status": "ok"
+     },
+     {
+      "key": "reinvestment",
+      "label": "Reinvestition (F&E + Capex in % Umsatz)",
+      "unit": "%",
+      "value": 2.365,
+      "points": 2.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -230,59 +280,95 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 25.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -51.222,
+      "points": 0.0,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -0.0,
+      "points": 62.5,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/CODI/financials",
+  "as_of": "2026-10-31T14:40:52Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": 40.1,
-  "level": "moderat",
-  "coverage_pct": 45,
+  "score": 46.0,
+  "level": "erhoeht",
+  "coverage_pct": 100,
   "factors": [
+   {
+    "key": "leverage",
+    "label": "Verschuldung (Debt/Equity)",
+    "value": 4.25,
+    "unit": "x",
+    "severity": 100.0,
+    "weight": 0.15,
+    "status": "ok"
+   },
+   {
+    "key": "liquidity",
+    "label": "Liquidität (Current Ratio)",
+    "value": 2.42,
+    "unit": "x",
+    "severity": 0.0,
+    "weight": 0.1,
+    "status": "ok"
+   },
+   {
+    "key": "interest",
+    "label": "Zinsdeckung",
+    "value": -0.7,
+    "unit": "x",
+    "severity": 100.0,
+    "weight": 0.08,
+    "status": "ok"
+   },
+   {
+    "key": "cashflow",
+    "label": "Free-Cashflow-Marge",
+    "value": -2.73,
+    "unit": "%",
+    "severity": 70.9,
+    "weight": 0.12,
+    "status": "ok"
+   },
    {
     "key": "margin_trend",
     "label": "Margenentwicklung (Vorjahr, Pp.)",
-    "value": null,
+    "value": 2.65,
     "unit": "Pp",
-    "severity": null,
+    "severity": 3.2,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": -0.0,
     "unit": "%",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -305,20 +391,20 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 16.64,
     "unit": "x",
-    "severity": null,
+    "severity": 2.5,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 10.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -331,7 +417,9 @@
    }
   ],
   "top_factors": [
-   "Handelsliquidität (Umsatz 20T)"
+   "Verschuldung (Debt/Equity)",
+   "Free-Cashflow-Marge",
+   "Zinsdeckung"
   ],
   "unknown_factors": [
    "Kunden- und Branchenabhängigkeit",
@@ -370,10 +458,10 @@
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 2,
+    "independent": 2,
+    "duplicates": 2,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -398,7 +486,426 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "2fa4f7fc60f9c2a5",
+   "symbols": [
+    "CODI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compass Diversified Announces Third Quarter 2026 Earnings and Conference Call Information",
+   "summary": "WESTPORT, Conn., Oct. 22, 2026 (GLOBE NEWSWIRE) -- Compass Diversified (NYSE: CODI) (“CODI” or the “Company”), an owner of leading middle-market branded consumer and industrial businesses, announced today that it plans to report financial results for the third quarter ended Septe",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/compass-diversified-announces-third-quarter-201000319.html?.tsrc=rss",
+   "published_at": "2026-10-22T20:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:01Z",
+   "fingerprint": "0edc694796f57d91",
+   "primary_source": false,
+   "cluster_id": "a8e0ba06034c78a3",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d4c23c8ccb5fd41b",
+   "symbols": [
+    "CODI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compass Diversified Declares Third Quarter 2026 Distributions on Series A, B and C Preferred Shares",
+   "summary": "WESTPORT, Conn., Oct. 01, 2026 (GLOBE NEWSWIRE) -- Compass Diversified (NYSE: CODI) (“CODI” or the “Company”), an owner of leading middle market businesses, announced today that its Board of Directors (the “Board”) has declared a quarterly cash distribution for each of its three ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/compass-diversified-declares-third-quarter-201000339.html?.tsrc=rss",
+   "published_at": "2026-10-01T20:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:01Z",
+   "fingerprint": "b9849741ff375e01",
+   "primary_source": false,
+   "cluster_id": "15e34840be182fa9",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "517aedc0fe26078f",
+   "symbols": [
+    "CODI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "MP Materials Stock Moved On The Theme, Not On Mountain Pass",
+   "summary": "A bid ran through the whole critical-resources complex on Friday, while the milestones that decide what this company earns sit on a slower calendar.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/612587/mp-materials-stock-moved-on-the-theme-not-on-mountain-pass/2026-08-24?.tsrc=rss",
+   "published_at": "2026-08-24T18:52:54Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:01Z",
+   "fingerprint": "8ca26a9eaedd0769",
+   "primary_source": false,
+   "cluster_id": "517aedc0fe26078f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "46628527a951b268",
+   "symbols": [
+    "CODI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Compass Diversified (CODI): Branded Consumer Growth Masks Industrial Drag in Q2",
+   "summary": "On August 10, Compass Diversified (NYSE:CODI) reported second-quarter results that told two very different stories at once. Every branded consumer business the company owns grew profits, total debt fell by hundreds of millions of dollars, and management struck a new pay deal that",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/compass-diversified-codi-branded-consumer-092314564.html?.tsrc=rss",
+   "published_at": "2026-08-20T09:23:14Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:01Z",
+   "fingerprint": "5ef05a93edcf0024",
+   "primary_source": false,
+   "cluster_id": "46628527a951b268",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e56a4f5f938116b3",
+   "symbols": [
+    "CODI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Compass Diversified (CODI): Buybacks Below Value Signal Multi Bagger Potential",
+   "summary": "Greenhaven Road Capital, an investment management company, released its second-quarter 2026 investor letter. A copy of the letter can be downloaded here. The fund achieved an approximate 11% net return in the second quarter, indicating progress from the first quarter. Key changes",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/compass-diversified-codi-buybacks-below-115236721.html?.tsrc=rss",
+   "published_at": "2026-08-18T11:52:36Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:01Z",
+   "fingerprint": "4a53404142e91cd6",
+   "primary_source": false,
+   "cluster_id": "e56a4f5f938116b3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b28c3947db9152ca",
+   "symbols": [
+    "CODI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compass Diversified (CODI) Q2 2026 Earnings Call Transcript",
+   "summary": "CEO Sabo retires year-end; Sawtelle takes helm as company pursues divestitures to cut debt.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/17/compass-diversified-codi-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-18T01:29:45Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:01Z",
+   "fingerprint": "d32242863076b0d6",
+   "primary_source": false,
+   "cluster_id": "b28c3947db9152ca",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b2b7fee07ff60db6",
+   "symbols": [
+    "CODI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Compass Diversified (CODI) Stock Gets Fair Value Boost After Q2 And Sterno Sale",
+   "summary": "The latest research on Compass Diversified now anchors fair value at US$16.00 per share, up from US$13.00, which points to a higher price target in analysts’ models. Bullish commentary links this move to Q2 results, recent transactions and an effort to clean up the balance sheet ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/compass-diversified-codi-stock-gets-043430986.html?.tsrc=rss",
+   "published_at": "2026-08-13T04:34:30Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:01Z",
+   "fingerprint": "41706554bd5dec9e",
+   "primary_source": false,
+   "cluster_id": "b2b7fee07ff60db6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e9c1e40d2183e9f4",
+   "symbols": [
+    "CODI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compass Diversified Q2 2026 Earnings Call Summary",
+   "summary": "Moby summary of Compass Diversified's Q2 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-compass-diversified-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-08-11T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:01Z",
+   "fingerprint": "1763b9d39de4c835",
+   "primary_source": false,
+   "cluster_id": "e9c1e40d2183e9f4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "22e1272f608b0b9e",
+   "symbols": [
+    "CODI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compass Diversified Holdings (CODI) (Q2 2026) Earnings Call Highlights: Double-Digit EBITDA ...",
+   "summary": "CODI delivers 12.6% subsidiary adjusted EBITDA growth, completes Sterno divestiture, and lowers leverage to 4.8x while maintaining full-year outlook.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/compass-diversified-holdings-codi-q2-050230957.html?.tsrc=rss",
+   "published_at": "2026-08-11T05:02:30Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:01Z",
+   "fingerprint": "900f0b22ce9c7bdf",
+   "primary_source": false,
+   "cluster_id": "22e1272f608b0b9e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b1557586d199b8f3",
+   "symbols": [
+    "CODI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compass Diversified Q2 Earnings Call Highlights",
+   "summary": "Compass Diversified (NYSE:CODI) reported second-quarter results marked by double-digit growth in subsidiary adjusted EBITDA, improved operating cash flow and lower debt following the sale of Sterno’s food service business, while maintaining its full-year 2026 outlook. GAAP net sa",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/compass-diversified-q2-earnings-call-highlights-2026-08-10/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-11T03:03:55Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:01Z",
+   "fingerprint": "5ccb2b99ecd065ee",
+   "primary_source": false,
+   "cluster_id": "b1557586d199b8f3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "aa40e597cbd3ccb2",
+   "symbols": [
+    "CODI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compass Diversified Reports Second Quarter 2026 Financial Results",
+   "summary": "WESTPORT, Conn., Aug. 10, 2026 (GLOBE NEWSWIRE) -- Compass Diversified (NYSE: CODI) (“CODI” or the “Company”), an owner of leading middle market businesses, announced today its consolidated operating results for the three and six months ended June 30, 2026 and filed its Quarterly",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/compass-diversified-reports-second-quarter-201000031.html?.tsrc=rss",
+   "published_at": "2026-08-10T20:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:01Z",
+   "fingerprint": "22b90a801df21259",
+   "primary_source": false,
+   "cluster_id": "aa40e597cbd3ccb2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a8e0ba06034c78a3",
+   "symbols": [
+    "CODI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compass Diversified Announces Second Quarter 2026 Earnings and Conference Call Information",
+   "summary": "WESTPORT, Conn., July 27, 2026 (GLOBE NEWSWIRE) -- Compass Diversified (NYSE: CODI) (“CODI” or the “Company”), an owner of leading middle-market branded consumer and industrial businesses, announced today that it plans to report financial results for the second quarter ended June",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/compass-diversified-announces-second-quarter-201000892.html?.tsrc=rss",
+   "published_at": "2026-07-27T20:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:01Z",
+   "fingerprint": "d5119dee26fcd649",
+   "primary_source": false,
+   "cluster_id": "a8e0ba06034c78a3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9cc09ed4ac668a94",
+   "symbols": [
+    "CODI"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "ADW Capital Management Sends Letter to Compass Diversified’s Board Reiterating its Call for an Immediate Strategic Review Process and Orderly Liquidation of the Company",
+   "summary": "Believes That Strategic Process is Required to Prevent Further Value Destruction ADW Capital Analysis Supports Potential Value Creation of $50 to $60 of Value per Share from Internalization of External Manager Letter Includes ADW Capital Findings on Board Member Relationships Ind",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adw-capital-management-sends-letter-171900294.html?.tsrc=rss",
+   "published_at": "2026-07-16T17:19:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:01Z",
+   "fingerprint": "99dbfbda86c867eb",
+   "primary_source": false,
+   "cluster_id": "9cc09ed4ac668a94",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dc3a74b928ebab63",
+   "symbols": [
+    "CODI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compass Diversified Announces Amendments to Management Services Agreement Reducing Management Costs and Further Strengthening Shareholder Alignment",
+   "summary": "Reduces fixed economics paid to CODI's external manager from the current 2.00% base management fee to 1.375% at current Adjusted Net Assets levels, with 1.25% paid as a base management fee and 0.125% paid as a Share Alignment Award intended to support increased CODI share ownersh",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/compass-diversified-announces-amendments-management-101000702.html?.tsrc=rss",
+   "published_at": "2026-07-13T10:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:01Z",
+   "fingerprint": "7f6aa9d16b4b865f",
+   "primary_source": false,
+   "cluster_id": "dc3a74b928ebab63",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "15e34840be182fa9",
+   "symbols": [
+    "CODI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compass Diversified Declares Second Quarter 2026 Distributions on Series A, B and C Preferred Shares",
+   "summary": "WESTPORT, Conn., July 01, 2026 (GLOBE NEWSWIRE) -- Compass Diversified (NYSE: CODI) (“CODI” or the “Company”), an owner of leading middle market businesses, announced today that its Board of Directors (the “Board”) has declared a quarterly cash distribution for each of its three ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/compass-diversified-declares-second-quarter-224300022.html?.tsrc=rss",
+   "published_at": "2026-07-01T22:43:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:01Z",
+   "fingerprint": "961dc996eb1ac268",
+   "primary_source": false,
+   "cluster_id": "15e34840be182fa9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4f0ae620c02a4f05",
+   "symbols": [
+    "CODI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compass Diversified Announces Settlement Advancing Lugano Plan of Liquidation",
+   "summary": "WESTPORT, Conn., June 24, 2026 (GLOBE NEWSWIRE) -- Compass Diversified (NYSE: CODI) (\"CODI\" or the \"Company\"), an owner of leading middle-market businesses, today announced that it has entered into a Settlement Agreement and Mutual Release and a related Plan Support Agreement (to",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/compass-diversified-announces-settlement-advancing-201500724.html?.tsrc=rss",
+   "published_at": "2026-06-24T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:01Z",
+   "fingerprint": "f318a5567ecb4c4f",
+   "primary_source": false,
+   "cluster_id": "4f0ae620c02a4f05",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3aeff751511e4084",
+   "symbols": [
+    "CODI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compass Diversified Announces CEO Succession Plan",
+   "summary": "Co-Founder and Chief Executive Officer Elias Sabo to Retire at Year End Zach Sawtelle Appointed Chief Operating Officer and Named CEO Successor Company Reaffirms Full-Year 2026 Outlook; Review of Management Services Agreement Progressing WESTPORT, Conn., June 11, 2026 (GLOBE NEWS",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/compass-diversified-announces-ceo-succession-103000285.html?.tsrc=rss",
+   "published_at": "2026-06-11T10:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:01Z",
+   "fingerprint": "ff83fe399614102e",
+   "primary_source": false,
+   "cluster_id": "3aeff751511e4084",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2ebf0ddd30b3d5a0",
+   "symbols": [
+    "CODI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How The Compass Diversified (CODI) Narrative Is Evolving After Restatement And Lugano Divestiture",
+   "summary": "The latest analyst update keeps Compass Diversified’s fair value and price target aligned at US$13.00 per share, framing the stock around a steady reference point after recent changes to its financial disclosures. Bullish analysts view this US$13.00 target as a sign that the mark",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/compass-diversified-codi-narrative-evolving-043337119.html?.tsrc=rss",
+   "published_at": "2026-06-09T04:33:37Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:01Z",
+   "fingerprint": "6c4cd64dd7c32edc",
+   "primary_source": false,
+   "cluster_id": "2ebf0ddd30b3d5a0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f92141717cc57836",
+   "symbols": [
+    "CODI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How The Compass Diversified (CODI) Story Is Shifting With Divestitures Accounting Repair And Valuation Debate",
+   "summary": "Compass Diversified is back in focus after one research house lifted its price target by US$2.50, reshaping the conversation around what the stock might be worth as portfolio changes unfold. Supporters point to this shift as a reflection of greater confidence in margin resilience",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/compass-diversified-codi-story-shifting-140929682.html?.tsrc=rss",
+   "published_at": "2026-05-25T14:09:29Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:01Z",
+   "fingerprint": "fe1b25514a8e98fc",
+   "primary_source": false,
+   "cluster_id": "f92141717cc57836",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

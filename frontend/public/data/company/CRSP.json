@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-10-31T14:32:28Z",
+ "generated_at": "2026-10-31T14:37:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "CRSP",
-  "name": "Crispr Therapeutics Ag",
+  "name": "CRISPR Therapeutics AG",
   "region": "US",
   "currency": "USD",
-  "sector": "Health Care",
-  "industry": null,
+  "sector": "Healthcare",
+  "industry": "Biotechnology",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 51.41999816894531,
    "price_date": "2026-10-30",
@@ -30,37 +28,41 @@
    "sma50": 54.18899993896484,
    "sma200": 52.88197505950928
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 4971936256.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
+   "score": 43.7,
+   "coverage_pct": 52,
    "model": "standard",
    "dimensions": {
     "revenue_growth": null,
     "profitability": null,
-    "financial_stability": null,
-    "cashflow": null,
-    "market_position": null,
-    "growth_potential": null,
-    "management": null
+    "financial_stability": 100.0,
+    "cashflow": 0.0,
+    "market_position": 0.0,
+    "growth_potential": 100.0,
+    "management": 0.0
    }
   },
   "risk": {
-   "score": null,
-   "level": "unbekannt",
-   "coverage_pct": 25,
+   "score": 39.2,
+   "level": "moderat",
+   "coverage_pct": 72,
    "top_factors": [
+    "Verwässerung (Aktienanzahl yoy)",
+    "Bewertung (KGV bzw. KUV)",
     "Volatilität (63T, annualisiert)"
    ]
   },
   "market_intelligence": {
-   "score": 7.9,
+   "score": 59.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "freshness",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 7,
+   "independent_24h": 2
   },
   "political": {
    "relevance": 0,
@@ -74,15 +76,15 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 5,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 3474278.29,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 5
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "Switzerland"
  },
  "memberships": [
   {
@@ -109,9 +111,9 @@
   "move_zscore": -1.4967973491076394
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
+  "score": 43.7,
+  "status": "ok",
+  "coverage_pct": 52,
   "model": "standard",
   "dimensions": [
    {
@@ -172,25 +174,25 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 100.0,
+    "basis": "data",
+    "coverage": 70,
     "metrics": [
      {
       "key": "debt_to_equity",
       "label": "Verschuldung (Debt/Equity)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.108,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "current_ratio",
       "label": "Liquidität (Current Ratio)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 13.316,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "interest_coverage",
@@ -207,9 +209,9 @@
     "key": "cashflow",
     "label": "Cashflow",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "data",
+    "coverage": 40,
     "metrics": [
      {
       "key": "fcf_margin",
@@ -223,9 +225,9 @@
       "key": "ocf_positive",
       "label": "Operativer Cashflow positiv",
       "unit": "bool",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.0,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -234,17 +236,17 @@
     "key": "market_position",
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "gross_margin",
       "label": "Bruttomarge (Proxy Preissetzungsmacht)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.0,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -253,17 +255,17 @@
     "key": "growth_potential",
     "label": "Wachstumspotenzial",
     "weight": 0.2,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 100.0,
+    "basis": "proxy",
+    "coverage": 60,
     "metrics": [
      {
       "key": "revenue_growth_forward",
       "label": "Erwartetes Umsatzwachstum (Yahoo)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 1041.4,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "reinvestment",
@@ -280,59 +282,59 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -30.263,
+      "points": 0.0,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 11.841,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/CRSP/financials",
+  "as_of": "2026-10-31T14:40:52Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": null,
-  "level": "unbekannt",
-  "coverage_pct": 25,
+  "score": 39.2,
+  "level": "moderat",
+  "coverage_pct": 72,
   "factors": [
    {
     "key": "leverage",
     "label": "Verschuldung (Debt/Equity)",
-    "value": null,
+    "value": 0.11,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.15,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "liquidity",
     "label": "Liquidität (Current Ratio)",
-    "value": null,
+    "value": 13.32,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "interest",
@@ -364,11 +366,11 @@
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": 11.84,
     "unit": "%",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -391,20 +393,20 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 371.26,
     "unit": "x",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 8.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 77.8,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -417,6 +419,8 @@
    }
   ],
   "top_factors": [
+   "Verwässerung (Aktienanzahl yoy)",
+   "Bewertung (KGV bzw. KUV)",
    "Volatilität (63T, annualisiert)"
   ],
   "unknown_factors": [
@@ -425,48 +429,50 @@
   ]
  },
  "intelligence_detail": {
-  "score": 7.9,
+  "score": 59.1,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 60,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 44.9,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 50
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 7,
+    "independent": 7,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 19,
+    "independent": 19,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "freshness",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -484,8 +490,636 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
- "insiders": [],
+ "signals": [
+  {
+   "id": "aad6678ce0733673",
+   "symbols": [
+    "CRSP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Here's Why CRISPR Therapeutics AG (CRSP) Fell More Than Broader Market",
+   "summary": "CRISPR Therapeutics AG (CRSP) closed the most recent trading day at $51.36, moving 5.34% from the previous trading session.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/heres-why-crispr-therapeutics-ag-205001325.html?.tsrc=rss",
+   "published_at": "2026-10-30T20:50:01Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:22Z",
+   "fingerprint": "da44d240f8cc7af8",
+   "primary_source": false,
+   "cluster_id": "aad6678ce0733673",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Hier ist der Grund, warum CRISPR Therapeutics AG (CRSP) mehr als ein breiterer Markt ist"
+  },
+  {
+   "id": "24ef1933811ffe6d",
+   "symbols": [
+    "CRSP",
+    "JNJ",
+    "LLY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Fidelity’s Health Care ETF Holds the Biotechs XLV Skips. Retirees Should Know the Difference",
+   "summary": "Two health care ETFs track the same sector but own very different slices of it, and for retirees building a portfolio, that gap in biotech exposure and concentration could matter more than the nearly identical returns suggest.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/etf/2026/10/30/fidelitys-health-care-etf-holds-the-biotechs-xlv-skips-retirees-should-know-the-difference/?.tsrc=rss",
+   "published_at": "2026-10-30T15:47:23Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:02:13Z",
+   "fingerprint": "2988886beada200e",
+   "primary_source": false,
+   "cluster_id": "24ef1933811ffe6d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Fidelity Health Care ETF hält die Biotechs XLV Skips. Rentner sollten den Unterschied kennen"
+  },
+  {
+   "id": "232bb94e4ce7b192",
+   "symbols": [
+    "BEAM",
+    "CRSP",
+    "ILMN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Promising Genomics Stocks to Add to Your Portfolio Now",
+   "summary": "Genomics and synthetic biology are transforming healthcare through precision medicine and gene editing, putting ILMN, QURE and TXG in focus as the markets expand.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/3-promising-genomics-stocks-add-130900369.html?.tsrc=rss",
+   "published_at": "2026-10-30T13:09:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:02:04Z",
+   "fingerprint": "20182e828e73c0bf",
+   "primary_source": false,
+   "cluster_id": "232bb94e4ce7b192",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "3 vielversprechende Genomik-Aktien, die Sie jetzt zu Ihrem Portfolio hinzufügen können"
+  },
+  {
+   "id": "b7a857c4b1b1db0f",
+   "symbols": [
+    "CRSP",
+    "VRTX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Vertex Gears Up to Report Q3 Earnings: Is a Beat in the Cards?",
+   "summary": "VRTX is poised for a Q3 earnings beat as strong demand for Trikafta, Alyftrek's growth and rising Casgevy and Journavx sales drive expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/vertex-gears-report-q3-earnings-141500320.html?.tsrc=rss",
+   "published_at": "2026-10-27T14:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:29Z",
+   "fingerprint": "e3e856fca63065b2",
+   "primary_source": false,
+   "cluster_id": "b7a857c4b1b1db0f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2a95c9231ee8418b",
+   "symbols": [
+    "CRSP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Learn Why The Bull Case For CRISPR Therapeutics Stock Could Change Following CFO Change",
+   "summary": "CRISPR Therapeutics appointed Andrew J. Silver as Chief Financial Officer and principal financial officer on October 19, 2026, following his tenure as Senior Vice President of Finance and a prior decade in assurance services at Ernst & Young. The shift from Raju Prasad to an inte",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/learn-why-bull-case-crispr-091039663.html?.tsrc=rss",
+   "published_at": "2026-10-25T09:10:39Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:22Z",
+   "fingerprint": "1440a442b23cc2c2",
+   "primary_source": false,
+   "cluster_id": "2a95c9231ee8418b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "87aadaabdf96b5bc",
+   "symbols": [
+    "CRSP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "CRISPR Therapeutics (CRSP) Promotes Andrew Silver To CFO As Raju Prasad Resigns",
+   "summary": "CRISPR Therapeutics (NasdaqGM:CRSP) has promoted Andrew J. Silver to Chief Financial Officer, effective October 19, 2026. Outgoing CFO Raju Prasad, Ph.D., has resigned from his role, also effective October 19, 2026. Silver steps into the finance chief role after serving within CR",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/crispr-therapeutics-crsp-promotes-andrew-081208931.html?.tsrc=rss",
+   "published_at": "2026-10-25T08:12:08Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:22Z",
+   "fingerprint": "37884aa3e07164f5",
+   "primary_source": false,
+   "cluster_id": "87aadaabdf96b5bc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "92c340854cf23dfb",
+   "symbols": [
+    "CRSP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Forget Casgevy: CRISPR Therapeutics' Heart-Disease Data Could Matter More",
+   "summary": "The company's gene-editing-focused platform looks promising.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/10/24/forget-casgevy-crispr-therapeutics-heart-disease-d/?.tsrc=rss",
+   "published_at": "2026-10-24T22:20:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:22Z",
+   "fingerprint": "1172323b40848ec5",
+   "primary_source": false,
+   "cluster_id": "92c340854cf23dfb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ee37644897b752a3",
+   "symbols": [
+    "CRSP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "CRISPR Therapeutics AG (CRSP) Dips More Than Broader Market: What You Should Know",
+   "summary": "In the latest trading session, CRISPR Therapeutics AG (CRSP) closed at $49.39, marking a -1.2% move from the previous day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/crispr-therapeutics-ag-crsp-dips-205003714.html?.tsrc=rss",
+   "published_at": "2026-10-23T20:50:03Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:22Z",
+   "fingerprint": "3d357463a529508d",
+   "primary_source": false,
+   "cluster_id": "ee37644897b752a3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e060f6b65c9e233d",
+   "symbols": [
+    "CRSP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Investors Heavily Search CRISPR Therapeutics AG (CRSP): Here is What You Need to Know",
+   "summary": "Recently, Zacks.com users have been paying close attention to CRISPR Therapeutics (CRSP). This makes it worthwhile to examine what the stock has in store.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/investors-heavily-search-crispr-therapeutics-120002884.html?.tsrc=rss",
+   "published_at": "2026-10-23T12:00:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:22Z",
+   "fingerprint": "2a7606eeaec35ae6",
+   "primary_source": false,
+   "cluster_id": "e060f6b65c9e233d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "040e2fe73ad18a0b",
+   "symbols": [
+    "CRSP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "The Outlook of CRISPR Therapeutics Stock Does Not Look Strong After Its CFO Resigns",
+   "summary": "The valuation of CRSP stock is high, and its pipeline is not advanced.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "barchart.com",
+   "url": "https://www.barchart.com/story/news/8361393/the-outlook-of-crispr-therapeutics-stock-does-not-look-strong-after-its-cfo-resigns?.tsrc=rss",
+   "published_at": "2026-10-23T11:14:15Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:22Z",
+   "fingerprint": "7bbe199fa2f48c3b",
+   "primary_source": false,
+   "cluster_id": "040e2fe73ad18a0b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "530d071c0ffd2a4f",
+   "symbols": [
+    "CRSP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "CRISPR Therapeutics AG (CRSP) Stock Moves -1.21%: What You Should Know",
+   "summary": "CRISPR Therapeutics AG (CRSP) closed the most recent trading day at $49.89, moving 1.21% from the previous trading session.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/crispr-therapeutics-ag-crsp-stock-210003182.html?.tsrc=rss",
+   "published_at": "2026-10-22T21:00:03Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:22Z",
+   "fingerprint": "ecb9dd3075e8500d",
+   "primary_source": false,
+   "cluster_id": "530d071c0ffd2a4f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9f7acffd25ed48ba",
+   "symbols": [
+    "CRSP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Brokers Suggest Investing in CRISPR Therapeutics (CRSP): Read This Before Placing a Bet",
+   "summary": "The average brokerage recommendation (ABR) for CRISPR Therapeutics (CRSP) is equivalent to a Buy. The overly optimistic recommendations of Wall Street analysts make the effectiveness of this highly sought-after metric questionable. So, is it worth buying the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/brokers-suggest-investing-crispr-therapeutics-123003874.html?.tsrc=rss",
+   "published_at": "2026-10-21T12:30:03Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:22Z",
+   "fingerprint": "6f472e5d5d998df4",
+   "primary_source": false,
+   "cluster_id": "9f7acffd25ed48ba",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9501b9547ad651b2",
+   "symbols": [
+    "CRSP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "CRISPR Therapeutics Announces Chief Financial Officer Transition",
+   "summary": "ZUG, Switzerland and BOSTON, Oct. 19, 2026 (GLOBE NEWSWIRE) -- CRISPR Therapeutics (Nasdaq: CRSP) today announced that its Chief Financial Officer, Raju Prasad, Ph.D., will be stepping down from the Company to pursue external opportunities, and A.J. Silver, the Company's Senior V",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/crispr-therapeutics-announces-chief-financial-200500576.html?.tsrc=rss",
+   "published_at": "2026-10-19T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:22Z",
+   "fingerprint": "406ef844e25205af",
+   "primary_source": false,
+   "cluster_id": "9501b9547ad651b2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dd8da5729d29fcd7",
+   "symbols": [
+    "CRSP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Where Will CRISPR Therapeutics Stock Be in 2030?",
+   "summary": "The company's expertise in gene editing could lead to more breakthroughs.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/10/18/where-will-crispr-therapeutics-stock-be-in-2030/?.tsrc=rss",
+   "published_at": "2026-10-18T21:33:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:22Z",
+   "fingerprint": "363328228cd7db78",
+   "primary_source": false,
+   "cluster_id": "dd8da5729d29fcd7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9425b763d747bee2",
+   "symbols": [
+    "CRSP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Cathie Wood Bought More CRISPR Therapeutics Stock 2 Days in a Row. Here's What She Sees in the Biotech Stock.",
+   "summary": "Billionaire investor Cathie Wood, through her ARK ETFs, made big buys of CRISPR Therapeutics on Friday, Oct. 9, and Monday, Oct. 12.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/10/18/cathie-wood-more-crispr-therapeutics-stock-biotech/?.tsrc=rss",
+   "published_at": "2026-10-18T11:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:22Z",
+   "fingerprint": "73a6c3602af551bb",
+   "primary_source": false,
+   "cluster_id": "9425b763d747bee2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fbce3711e9997b93",
+   "symbols": [
+    "CRSP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "CRISPR Therapeutics AG (CRSP) Falls More Steeply Than Broader Market: What Investors Need to Know",
+   "summary": "CRISPR Therapeutics AG (CRSP) concluded the recent trading session at $49.21, signifying a -4.48% move from its prior day's close.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/crispr-therapeutics-ag-crsp-falls-205005741.html?.tsrc=rss",
+   "published_at": "2026-10-16T20:50:05Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:22Z",
+   "fingerprint": "f93e9936ec05d6a4",
+   "primary_source": false,
+   "cluster_id": "fbce3711e9997b93",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5979b004d4608593",
+   "symbols": [
+    "CRSP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is CRISPR Therapeutics (CRSP) Undervalued As CASGEVY Hopes Face Market Doubts?",
+   "summary": "CRISPR Therapeutics (CRSP) recently saw its stock decline 3.45%, trailing the broader market, after fresh attention on expectations for an upcoming quarterly loss and a modest revenue base. Viewed over a longer stretch, CRISPR Therapeutics has seen the recent 7-day share price de",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/crispr-therapeutics-crsp-undervalued-casgevy-211550655.html?.tsrc=rss",
+   "published_at": "2026-10-14T21:15:50Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:22Z",
+   "fingerprint": "20493dd07a6bd0fd",
+   "primary_source": false,
+   "cluster_id": "5979b004d4608593",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4c579ff87ec390c0",
+   "symbols": [
+    "CRSP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "CRISPR Therapeutics (CRSP) Stock Looks Rich On Upcoming CTX310 Trial Data",
+   "summary": "CRISPR Therapeutics has seen its share price under pressure in recent years, even as fresh clinical data like the planned CTX310 presentation in November 2026 keeps interest in its gene editing pipeline alive. With the stock closing at US$50.10 and a long history of volatility, t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/crispr-therapeutics-crsp-stock-looks-201348201.html?.tsrc=rss",
+   "published_at": "2026-10-14T20:13:48Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:22Z",
+   "fingerprint": "9b19a3d9a7f8a900",
+   "primary_source": false,
+   "cluster_id": "4c579ff87ec390c0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5c352e24015d8032",
+   "symbols": [
+    "CRSP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Matchpoint Therapeutics Expands Leadership Team with Appointment of John O’Malley, M.D., Ph.D., as Chief Medical Officer",
+   "summary": "Dr. O’Malley brings deep immunology clinical development expertise, with previous leadership roles at CRISPR Therapeutics and Sanofi Appointment follows Matchpoint’s recent $150M Series B financing to advance pipeline of first-in-class oral small molecules into clinical developme",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/matchpoint-therapeutics-expands-leadership-team-110000271.html?.tsrc=rss",
+   "published_at": "2026-10-14T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:22Z",
+   "fingerprint": "3568d019c27842e0",
+   "primary_source": false,
+   "cluster_id": "5c352e24015d8032",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
+ "insiders": [
+  {
+   "id": "f4ac1df42b756c0a",
+   "symbol": "CRSP",
+   "insider": "Kulkarni Samarth",
+   "role": "Director, Chief Executive Officer",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-16",
+   "filed_at": "2026-10-20",
+   "reporting_delay_days": 4,
+   "shares": 100000.0,
+   "price": null,
+   "value": null,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1674416/000119312526426878/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "1706f07800106f74",
+   "symbol": "CRSP",
+   "insider": "Kulkarni Samarth",
+   "role": "Director, Chief Executive Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-19",
+   "filed_at": "2026-10-20",
+   "reporting_delay_days": 1,
+   "shares": 47837.0,
+   "price": 49.78,
+   "value": 2381325.86,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1674416/000119312526426878/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "ccca27a4c5876c5e",
+   "symbol": "CRSP",
+   "insider": "George Simeon",
+   "role": "Director",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-14",
+   "filed_at": "2026-10-16",
+   "reporting_delay_days": 2,
+   "shares": 30000.0,
+   "price": 14.0,
+   "value": 420000.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1674416/000119312526424317/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "2448c9acb184e942",
+   "symbol": "CRSP",
+   "insider": "George Simeon",
+   "role": "Director",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-14",
+   "filed_at": "2026-10-16",
+   "reporting_delay_days": 2,
+   "shares": 14514.0,
+   "price": 49.633,
+   "value": 720373.36,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1674416/000119312526424317/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "b496422817590132",
+   "symbol": "CRSP",
+   "insider": "Kasinger James R.",
+   "role": "General Counsel and Secretary",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-13",
+   "filed_at": "2026-10-15",
+   "reporting_delay_days": 2,
+   "shares": 2113.0,
+   "price": null,
+   "value": null,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1674416/000119312526423057/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "9a2b4990f7c23cee",
+   "symbol": "CRSP",
+   "insider": "Kasinger James R.",
+   "role": "General Counsel and Secretary",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-14",
+   "filed_at": "2026-10-15",
+   "reporting_delay_days": 1,
+   "shares": 1040.0,
+   "price": 49.26,
+   "value": 51230.4,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1674416/000119312526423057/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "00738d19e960766c",
+   "symbol": "CRSP",
+   "insider": "Kulkarni Samarth",
+   "role": "Director, Chief Executive Officer",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-13",
+   "filed_at": "2026-10-15",
+   "reporting_delay_days": 2,
+   "shares": 8333.0,
+   "price": null,
+   "value": null,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1674416/000119312526423056/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "ca5c186b3310fed5",
+   "symbol": "CRSP",
+   "insider": "Kulkarni Samarth",
+   "role": "Director, Chief Executive Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-14",
+   "filed_at": "2026-10-15",
+   "reporting_delay_days": 1,
+   "shares": 4098.0,
+   "price": 49.26,
+   "value": 201867.48,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1674416/000119312526423056/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "3ada7999a2ef5f78",
+   "symbol": "CRSP",
+   "insider": "Kasinger James R.",
+   "role": "General Counsel and Secretary",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-06",
+   "filed_at": "2026-10-08",
+   "reporting_delay_days": 2,
+   "shares": 1990.0,
+   "price": 13.62,
+   "value": 27103.8,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1674416/000119312526418101/xslF345X06/ownership.xml"
+  },
+  {
+   "id": "5665aaa81e1ee8f2",
+   "symbol": "CRSP",
+   "insider": "Kasinger James R.",
+   "role": "General Counsel and Secretary",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-06",
+   "filed_at": "2026-10-08",
+   "reporting_delay_days": 2,
+   "shares": 1990.0,
+   "price": 60.0408,
+   "value": 119481.19,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1674416/000119312526418101/xslF345X06/ownership.xml"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "social_detail": null,
