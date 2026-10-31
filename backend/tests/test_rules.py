@@ -343,3 +343,21 @@ def test_index_parsers_handle_footnotes_and_quoted_csv(monkeypatch):
                                '"Ticker","Name","Sector","Asset Class"\n"SMCI","SUPER MICRO","IT","Equity"\n'
                                '"XTSLA","CASH","Cash","Money Market"\n')
         assert [m.symbol for m in universe.fetch_ishares_csv("RUT")] == ["SMCI"]
+
+
+def test_translation_adds_german_fields_and_keeps_original():
+    from sic import translate
+    calls = []
+
+    def fake(texts):
+        calls.append(list(texts))
+        return [f"DE:{t}" for t in texts]
+
+    sigs = [{"title": "Apple raises guidance after strong quarter"}, {"title": "EZB belässt den Leitzins unverändert"}]
+    ev = [{"title": "Fed holds rates steady", "summary": ""}]
+    r = translate.translate_items([(sigs, ["title"]), (ev, ["title", "summary"])], translator=fake)
+    assert sigs[0]["title_de"].startswith("DE:") and sigs[0]["title"].startswith("Apple")
+    assert "title_de" not in sigs[1]                  # deutscher Text wird nicht übersetzt
+    assert r["new"] == 2
+    translate.translate_items([(sigs, ["title"])], translator=fake)   # zweiter Lauf: aus dem Cache
+    assert len(calls) == 1

@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { VERIFICATION_LABEL, fmt, useData } from "../data";
 import type { Meta, Signal } from "../types";
-import { CompanyLink, DataTable, Gate, Page, Panel, Src, Tag, Verif } from "../ui";
+import { CompanyLink, Translated, DataTable, Gate, Page, Panel, Src, Tag, Verif } from "../ui";
 
 type FC = Meta & { status_counts: Record<string, number>; rules: string[];
-  checks: (Pick<Signal, "id" | "symbols" | "title" | "url" | "source" | "published_at" | "verification" | "independence" | "primary_source" | "cluster_id" | "fact_check">)[] };
+  checks: (Pick<Signal, "id" | "symbols" | "title" | "title_de" | "url" | "source" | "published_at" | "verification" | "independence" | "primary_source" | "cluster_id" | "fact_check">)[] };
 
 export function FactCheck() {
   const s = useData<FC>("fact-checks.json");
@@ -28,7 +28,7 @@ export function FactCheck() {
               cols={[
                 { key: "d", label: "Datum", render: (r) => fmt.dt(r.published_at), sort: (r) => r.published_at },
                 { key: "s", label: "Aktie", render: (r) => r.symbols.map((x) => <CompanyLink key={x} symbol={x} />) },
-                { key: "t", label: "Meldung", render: (r) => <><a href={r.url} target="_blank" rel="noopener noreferrer">{r.title}</a>
+                { key: "t", label: "Meldung", render: (r) => <><Translated de={r.title_de} orig={r.title} href={r.url} />
                   {r.fact_check ? <div className="small">Prüfung: {r.fact_check.note} (<Src url={r.fact_check.source} />)</div> : null}</> },
                 { key: "v", label: "Status", render: (r) => <Verif v={r.verification} />, sort: (r) => r.verification },
                 { key: "i", label: "Herkunft", render: (r) => <>{r.primary_source ? <Tag tone="ok">Primärquelle</Tag> : null}

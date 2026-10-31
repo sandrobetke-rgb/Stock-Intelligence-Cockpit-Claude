@@ -1,6 +1,6 @@
 import { DRIVER_LABEL, INDEX_NAMES, MENTION_LABEL, fmt, useData } from "../data";
 import type { CompanyDetail } from "../types";
-import { Axes, DataTable, Direction, Empty, Gate, IndexTags, Page, Panel, Src, Tag, Verif, riskLabel, stockAxes } from "../ui";
+import { Axes, DataTable, Translated, Direction, Empty, Gate, IndexTags, Page, Panel, Src, Tag, Verif, riskLabel, stockAxes } from "../ui";
 
 const BASIS: Record<string, string> = { data: "Daten", proxy: "Proxy", manual: "Manuell belegt", unknown: "unbekannt", not_applicable: "nicht anwendbar" };
 
@@ -102,12 +102,12 @@ function CompanyView({ d }: { d: CompanyDetail }) {
         {d.trump_mentions.length ? (
           <ul className="plain">{d.trump_mentions.map((t) => (
             <li key={t.id}><Tag>{MENTION_LABEL[t.mention_type]}</Tag> <Direction d={t.direction} /> <Verif v={t.verification} /> {fmt.dt(t.statement_at, t.date_only)}:
-              „{t.quote}“ (<Src url={t.source_url} label={t.source_name} />) <span className="small muted">{t.bonus.reason}</span></li>
+              „{t.quote}“{t.quote_de ? <span className="orig"><span className="mt">maschinell übersetzt</span> {t.quote_de}</span> : null} (<Src url={t.source_url} label={t.source_name} />) <span className="small muted">{t.bonus.reason}</span></li>
           ))}</ul>
         ) : null}
         {d.political_events.length ? (
           <ul className="plain">{d.political_events.map((e) => (
-            <li key={e.id}><Tag>{e.category}</Tag> <Direction d={e.direction} /> {fmt.dt(e.event_at, e.date_only)}: {e.title} (<Src url={e.source_url} />)</li>
+            <li key={e.id}><Tag>{e.category}</Tag> <Direction d={e.direction} /> {fmt.dt(e.event_at, e.date_only)}: <Translated de={e.title_de} orig={e.title} /> (<Src url={e.source_url} />)</li>
           ))}</ul>
         ) : null}
         {!d.trump_mentions.length && !d.political_events.length ? <Empty>Keine belegten politischen Signale.</Empty> : null}
@@ -120,7 +120,7 @@ function CompanyView({ d }: { d: CompanyDetail }) {
               <div className="sig-head"><span className="muted">{fmt.dt(x.published_at, x.date_only)}</span><Verif v={x.verification} />
                 {x.independence !== "original" ? <Tag tone="warn">{x.independence === "syndicated" ? "Syndizierung" : "Kopie"}</Tag> : null}
                 {x.primary_source ? <Tag tone="ok">Primärquelle</Tag> : null}</div>
-              <a href={x.url} target="_blank" rel="noopener noreferrer" className="sig-title">{x.title}</a>
+              <Translated de={x.title_de} orig={x.title} href={x.url} className="sig-title" />
               <div className="small muted"><Src url={x.url} label={x.source_domain} /></div>
             </li>
           ))}</ul>

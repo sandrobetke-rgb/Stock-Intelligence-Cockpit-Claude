@@ -46,7 +46,7 @@ export interface Signal {
   id: string; symbols: string[]; category: string; signal_type: string; title: string; summary: string;
   source: string; source_domain: string; url: string; published_at: string | null; date_only: boolean;
   captured_at: string; fingerprint: string; primary_source: boolean; cluster_id: string;
-  independence: "original" | "syndicated" | "copy"; verification: Verification;
+  independence: "original" | "syndicated" | "copy"; verification: Verification; title_de?: string;
   fact_check?: { status: string; note: string; source: string };
 }
 
@@ -56,7 +56,7 @@ export interface RadarRow {
 }
 
 export interface TrumpMention {
-  id: string; statement_id: string; quote: string; source_name: string; source_url: string; statement_at: string | null;
+  id: string; statement_id: string; quote: string; quote_de?: string; source_name: string; source_url: string; statement_at: string | null;
   date_only: boolean; timezone: string; captured_at: string; verification: Verification; direction: Direction;
   direction_basis: string; direction_cues: string[]; context: string; sectors: string[];
   symbol: string | null; mention_type: "direct" | "indirect" | "sector" | "general"; mapping_verified: boolean;
@@ -65,7 +65,7 @@ export interface TrumpMention {
 }
 
 export interface MarketEvent {
-  id: string; kind: "news" | "event"; title: string; summary: string; time: string | null; local_time?: string;
+  id: string; kind: "news" | "event"; title: string; summary: string; title_de?: string; summary_de?: string; time: string | null; local_time?: string;
   timezone: string; date_only: boolean; source: string; url: string; relevance: string; relevance_level: string;
   categories: string[]; markets: string[]; sectors: string[]; tickers: string[]; direction: Direction;
   verification: Verification; status: "planned" | "published" | "occurred" | "postponed" | "cancelled";
@@ -89,7 +89,7 @@ export interface PoliticalTrade {
   amount_range: [number | null, number | null]; source_url: string; note: string;
 }
 export interface PoliticalEvent {
-  id: string; event_at: string | null; date_only: boolean; title: string; category: string; symbols: string[];
+  id: string; event_at: string | null; date_only: boolean; title: string; title_de?: string; category: string; symbols: string[];
   sectors: string[]; direction: Direction; source_url: string; verification: Verification; note: string;
 }
 

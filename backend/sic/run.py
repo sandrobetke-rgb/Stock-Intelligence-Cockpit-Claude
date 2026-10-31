@@ -16,7 +16,7 @@ import traceback
 from collections import Counter
 from datetime import datetime
 
-from . import config, events, insider, news, politics, social, universe
+from . import config, events, insider, news, politics, social, translate, universe
 from .export import publish
 from .intelligence import market_intelligence
 from .market import fetch_prices, load_fundamentals, refresh_fundamentals
@@ -181,7 +181,7 @@ def assemble(*, state: dict, prices: dict, fundamentals: dict[str, dict], signal
         "market-events.json": {**meta, **{k: v for k, v in market_events.items() if k != "generated_at"}},
         "social.json": {**meta, "stocks": social_stats, "note": "Sentiment = algorithmische Einschätzung."},
         "fact-checks.json": {**meta, "status_counts": {k: vstat.get(k, 0) for k in VERIFICATION},
-                             "checks": [{"id": s["id"], "symbols": s["symbols"], "title": s["title"], "url": s["url"],
+                             "checks": [{"id": s["id"], "symbols": s["symbols"], "title": s["title"], "title_de": s.get("title_de"), "url": s["url"],
                                          "source": s["source"], "published_at": s["published_at"],
                                          "verification": s["verification"], "independence": s["independence"],
                                          "primary_source": s["primary_source"], "cluster_id": s["cluster_id"],
@@ -270,6 +270,11 @@ def run(fetch: bool = True, skip_fundamentals: bool = False, skip_insider: bool 
     institutions = rl.step("institutions", insider.import_institutional) or []
 
     mev = rl.step("market_events", events.build_market_events, fetch=fetch, now=now) or {"current": [], "upcoming": [], "feeds": []}
+
+    # Englische Texte zusätzlich maschinell ins Deutsche übersetzen (Original bleibt maßgeblich)
+    rl.step("translate", translate.translate_items, [
+        (signals[:3000], ["title"]), (mev["current"] + mev["upcoming"], ["title", "summary"]),
+        (trump, ["quote"]), (pol_events, ["title"])])
 
     payloads, details = assemble(state=state, prices=prices, fundamentals=fundamentals, signals=signals, trump=trump,
                                  pol_events=pol_events, pol_trades=pol_trades, social_stats=social_stats,

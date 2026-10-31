@@ -54,6 +54,17 @@ export function Verif({ v }: { v: string }) {
   return <span className={`tag verif v-${v.replace(/\s/g, "")}`}>{VERIFICATION_LABEL[v] ?? v}</span>;
 }
 
+/** Deutsche Übersetzung mit englischem Original darunter (Original bleibt maßgeblich). */
+export function Translated({ de, orig, href, className }: { de?: string | null; orig: string; href?: string; className?: string }) {
+  const main = de || orig;
+  return (
+    <>
+      {href ? <a href={href} target="_blank" rel="noopener noreferrer" className={className}>{main}</a> : <span className={className}>{main}</span>}
+      {de ? <span className="orig" lang="en"><span className="mt">maschinell übersetzt</span> Original: {orig}</span> : null}
+    </>
+  );
+}
+
 export function Tag({ children, tone }: { children: ReactNode; tone?: string }) {
   return <span className={`tag ${tone ? "tone-" + tone : ""}`}>{children}</span>;
 }

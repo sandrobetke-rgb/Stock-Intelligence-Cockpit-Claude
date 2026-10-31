@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { STATUS_LABEL, fmt, useData } from "../data";
 import type { MarketEvent, Meta } from "../types";
-import { Direction, Empty, Gate, Page, Panel, Src, Tag, Verif } from "../ui";
+import { Direction, Empty, Translated, Gate, Page, Panel, Src, Tag, Verif } from "../ui";
 
 type ME = Meta & { current: MarketEvent[]; upcoming: MarketEvent[]; feeds: { id: string; name: string; status: string; message?: string }[]; timezone_note?: string };
 
@@ -14,8 +14,8 @@ function Row({ e }: { e: MarketEvent }) {
         {e.kind === "event" ? <span className="small muted">Zeitzone der Quelle: {e.timezone}</span> : <span className="small muted">{fmt.rel(e.time)}</span>}
       </div>
       <div className="ev-body">
-        <a href={e.url} target="_blank" rel="noopener noreferrer" className="ev-title">{e.title}</a>
-        {e.summary ? <p className="small">{e.summary}</p> : null}
+        <Translated de={e.title_de} orig={e.title} href={e.url} className="ev-title" />
+        {e.summary ? <p className="small">{e.summary_de || e.summary}</p> : null}
         <div className="ev-tags">
           {e.relevance_level === "high" ? <Tag tone="hi">hohe Relevanz</Tag> : null}
           <Tag>{e.relevance}</Tag>

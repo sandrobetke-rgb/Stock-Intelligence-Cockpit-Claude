@@ -49,7 +49,7 @@ function TickerBand() {
     <a key={e.id} href="#/ticker" className={`band-item ${e.kind === "event" ? "is-planned" : "is-news"} lvl-${e.relevance_level}`}>
       <span className="band-kind">{e.kind === "event" ? STATUS_LABEL[e.status] : fmt.rel(e.time)}</span>
       {e.kind === "event" ? <span className="band-time">{fmt.dt(e.time, e.date_only)}</span> : null}
-      <span className="band-title">{e.title}</span>
+      <span className="band-title">{e.title_de || e.title}</span>
     </a>
   ));
   return (

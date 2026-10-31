@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { DRIVER_LABEL, fmt, useData } from "../data";
 import type { Meta, RadarRow, Signal } from "../types";
-import { Axes, CompanyLink, DataTable, Gate, IndexTags, Page, Panel, Src, Tag, Verif, riskLabel } from "../ui";
+import { Axes, CompanyLink, Translated, DataTable, Gate, IndexTags, Page, Panel, Src, Tag, Verif, riskLabel } from "../ui";
 
 type Intel = Meta & { signals: Signal[]; radar: RadarRow[] };
 
@@ -61,7 +61,7 @@ function RadarView({ d, win, setWin, type, setType, onlyOriginal, setOnlyOrigina
                 {x.independence !== "original" ? <Tag tone="warn">{x.independence === "syndicated" ? "Syndizierung" : "Kopie"}</Tag> : null}
                 {x.primary_source ? <Tag tone="ok">Primärquelle</Tag> : null}
               </div>
-              <a href={x.url} target="_blank" rel="noopener noreferrer" className="sig-title">{x.title}</a>
+              <Translated de={x.title_de} orig={x.title} href={x.url} className="sig-title" />
               <div className="small muted">Quelle: <Src url={x.url} label={x.source_domain} />, erfasst {fmt.rel(x.captured_at)}</div>
             </li>
           ))}

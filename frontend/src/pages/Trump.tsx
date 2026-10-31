@@ -28,7 +28,7 @@ function MentionCard({ m, maxDays }: { m: TrumpMention; maxDays: number }) {
         <Verif v={m.verification} />
         {m.bonus.active ? <span className="bonus">Sonderbonus +{m.bonus.value}</span> : null}
       </header>
-      <blockquote>{m.quote}</blockquote>
+      <blockquote lang="en">{m.quote}{m.quote_de ? <span className="orig quote-de" lang="de"><span className="mt">maschinell übersetzt</span> {m.quote_de}</span> : null}</blockquote>
       <dl className="facts">
         <div><dt>Originalzeitpunkt</dt><dd>{fmt.dt(m.statement_at, m.date_only)}{m.date_only ? <span className="warn-text"> – Uhrzeit unsicher</span> : null}</dd></div>
         <div><dt>Quelle</dt><dd><Src url={m.source_url} label={m.source_name} /></dd></div>
