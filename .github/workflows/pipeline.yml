@@ -51,7 +51,8 @@ jobs:
           SIC_USER_AGENT: ${{ secrets.SIC_USER_AGENT }}
         run: |
           ARGS=""
-          if [ "${{ github.event_name }}" = "push" ] || [ "${{ github.event.inputs.mode }}" = "no-fetch" ]; then ARGS="--no-fetch"; fi
+          # Push/CSV-Aenderung: nur neu auswerten. Ohne vorhandenes Universum (erster Lauf) immer voll abrufen.
+          if [ -f data/state/universe.json ] && { [ "${{ github.event_name }}" = "push" ] || [ "${{ github.event.inputs.mode }}" = "no-fetch" ]; }; then ARGS="--no-fetch"; fi
           python -m sic.run $ARGS
       - name: Zustand und Daten committen
         run: |
