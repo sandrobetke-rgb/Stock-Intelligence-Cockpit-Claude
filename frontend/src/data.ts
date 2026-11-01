@@ -148,8 +148,10 @@ export function useWatchlist() {
   };
 }
 
-/** GitHub-Repo aus der Pages-Adresse ableiten (owner.github.io/repo/). */
+/** GitHub-Repo: beim Build gesetzt (VITE_REPO), sonst aus der Pages-Adresse (owner.github.io/repo/). */
 export function repoInfo() {
+  const fixed = (import.meta.env.VITE_REPO as string | undefined)?.split("/");
+  if (fixed?.length === 2) return { owner: fixed[0], repo: fixed[1] };
   const gh = location.hostname.endsWith(".github.io");
   return { owner: gh ? location.hostname.split(".")[0] : "sandrobetke-rgb", repo: gh ? location.pathname.split("/")[1] : "Stock-Intelligence-Cockpit-Claude" };
 }

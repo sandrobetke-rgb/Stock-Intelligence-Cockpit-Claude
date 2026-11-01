@@ -147,3 +147,17 @@ werden rotierend abgefragt (300 bzw. 150 Ticker je Lauf). Über Umgebungsvariabl
 | Social Media | `social_mentions.csv`, Reddit-RSS optional (`SIC_ENABLE_REDDIT_RSS=1`) | X-API kostenpflichtig; Reddit-Bedingungen prüfen |
 
 Alle Gewichte und Schwellen sind ein Startmodell und im Pflichtenheft zu validieren.
+
+## Zugriffsschutz mit Cloudflare Pages + Cloudflare Access
+
+Ist das Secret `CLOUDFLARE_API_TOKEN` gesetzt, veröffentlicht der Workflow das Cockpit auf Cloudflare Pages statt auf GitHub Pages.
+
+1. Cloudflare: **My Profile → API Tokens → Create Token → Custom token**, Berechtigung *Account → Cloudflare Pages → Edit*.
+2. GitHub **Settings → Secrets and variables → Actions**:
+   - Secrets: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID` (Cloudflare-Startseite → Account-ID).
+   - Variables (optional): `CF_PAGES_PROJECT` (Standard `sic-cockpit`), `COCKPIT_URL` (z. B. `https://sic-cockpit.pages.dev/`).
+3. Workflow starten. Das Cloudflare-Projekt wird automatisch angelegt.
+4. Cloudflare **Zero Trust → Access → Applications → Add → Self-hosted**: Domain `<projekt>.pages.dev` und `*.<projekt>.pages.dev`; Policy *Allow*, Include *Emails* = eigene Adresse; Login per *One-time PIN*.
+5. GitHub **Settings → Pages**: GitHub-Pages-Seite deaktivieren (Unpublish), sonst bleibt die alte öffentliche Adresse bestehen.
+
+Hinweis: Access schützt nur die Webseite. Solange das Repository öffentlich ist, sind die Rohdaten (JSON/CSV) auf GitHub einsehbar.
