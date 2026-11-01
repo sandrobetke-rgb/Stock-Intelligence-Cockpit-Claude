@@ -574,3 +574,65 @@ def test_big_stakes_from_daily_index():
     _collect_stakes(rows, {797468: "OXY"}, {1067983: "Warren Buffett"}, "2026-10-28")
     st = load_stakes(now=NOW)
     assert len(st) == 1 and st[0]["symbol"] == "OXY" and st[0]["activist"] and st[0]["amendment"]
+
+
+# --------------------------------------------------------------- Swing -----
+def _ohlc(closes, vol=2e6, last_vol=None):
+    idx = pd.bdate_range(end="2026-10-30", periods=len(closes))
+    c = pd.Series(closes, index=idx, dtype=float)
+    o = c.shift(1).fillna(c.iloc[0])
+    df = pd.DataFrame({"Open": o, "High": np.maximum(o, c) * 1.01, "Low": np.minimum(o, c) * 0.99, "Close": c,
+                       "Volume": [vol] * len(c)}, index=idx)
+    if last_vol:
+        df.iloc[-1, df.columns.get_loc("Volume")] = last_vol
+    return df
+
+
+def test_swing_breakout_and_plan():
+    from sic.setups import ENTRY, evaluate
+    closes = list(np.linspace(50, 100, 300)) + [98, 96, 95, 97, 100, 102.5]
+    r = evaluate(_ohlc(closes, last_vol=4e6), market_cap=5e9)
+    assert "S03" in r["hits"] and r["tech"]["rvol"] > 1.5
+    p = r["plan"]
+    assert abs(p["entry_max"] - p["trigger"] * 1.02) < 1e-6
+    assert abs((p["trigger"] - p["stop"]) - ENTRY["stop_atr"] * r["tech"]["atr14"]) < 1e-6
+    assert abs(p["target_1"] - (p["trigger"] + 2 * (p["trigger"] - p["stop"]))) < 1e-6
+
+
+def test_swing_s01_needs_reversal_candle():
+    from sic.setups import evaluate
+    down = list(np.linspace(100, 60, 120))
+    df = _ohlc(down)
+    r = evaluate(df)
+    assert r["criteria"]["S01"]["RSI zuletzt < 35"] and "S01" not in r["hits"]      # keine Umkehrkerze
+    i = df.index[-1] + pd.offsets.BDay(1)
+    df.loc[i] = {"Open": 59.0, "High": 61.5, "Low": 58.8, "Close": 61.2, "Volume": 3e6}
+    df.iloc[-2, df.columns.get_loc("Open")] = 60.8   # Vortag rot und vom heutigen Körper umschlossen
+    assert "S01" in evaluate(df)["hits"]
+
+
+def test_s02_market_cap_rechecked_in_assembly():
+    from sic.run import _swing
+    sw = {"criteria": {"S02": {"Marktkap. > 1 Mrd.": True, "Kurs > 10": True}}, "hits": ["S02"]}
+    assert _swing({"swing": sw}, 5e8)["hits"] == [] and _swing({"swing": sw}, 2e9)["hits"] == ["S02"]
+
+
+# ------------------------------------------------------------- Alarme ------
+def test_watchlist_newest_file_and_alert_dedup(monkeypatch):
+    from sic import alerts
+    d = config.IMPORT_DIR / "watchlist"
+    d.mkdir()
+    (d / "2026-10-01.csv").write_text("symbol\nOLD\n")
+    (d / "2026-11-01-0700.csv").write_text("symbol\nNVDA\nmsft\n")
+    wl, f = alerts.load_watchlist()
+    assert wl == ["MSFT", "NVDA"] and f == "2026-11-01-0700.csv"
+    stock = {"symbol": "NVDA", "status": "active", "market": {"price_date": "2026-10-30"},
+             "events": [{"type": "earnings", "date": "2026-11-02", "days_until": 1, "source_url": "x"}],
+             "swing": {"hits": ["S03"], "filter_pass": True, "tech": {"rvol": 2.0}, "plan": {"trigger": 100.0, "stop": 95.0}}}
+    gen = alerts.generate(stocks=[stock], insiders=[], clusters=[], superinv={"managers": []}, stakes=[], pol_trades=[],
+                          trump=[], social_stats={}, watchlist=wl, now=NOW)
+    assert sorted(a["kind"] for a in gen) == ["earnings", "setup"]   # kein Digest: Zahlen in < 5 Tagen
+    monkeypatch.delenv("NTFY_TOPIC", raising=False)
+    r1 = alerts.process(gen, wl, f, now=NOW)
+    r2 = alerts.process(gen, wl, f, now=NOW)
+    assert r1["new_count"] == 2 and r2["new_count"] == 0 and len(r2["history"]) == 2

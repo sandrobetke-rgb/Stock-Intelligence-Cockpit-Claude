@@ -246,6 +246,16 @@ def build_demo(out_dir: Path | None = None, n: int = 40, seed: int = 7) -> dict:
                                  pol_events=pol_events, pol_trades=pol_trades, social_stats=social_stats, insiders=insiders,
                                  institutions=institutions, market_events=mev, runlog=runlog, sources=SOURCES, mode="demo", now=now,
                                  superinv=superinv)
+    from .alerts import candidates
+    from .setups import ENTRY, FILTER, SETUP_INFO
+    meta = {"generated_at": iso(now), "schema_version": payloads["summary.json"]["schema_version"], "mode": "demo"}
+    payloads["swing.json"] = {**meta, "setups": SETUP_INFO, "filter": FILTER, "entry": ENTRY,
+                              "candidates": [x["symbol"] for x in candidates(payloads["stocks.json"]["stocks"])]}
+    payloads["alerts.json"] = {**meta, "watchlist": ["DM03", "DM07"], "watchlist_file": "DEMO", "new_count": 1,
+                               "channels": {"push": False, "email": False},
+                               "history": [{"key": "demo", "kind": "cluster", "kind_label": "Cluster-Kauf", "symbol": "DM03",
+                                            "title": "DM03: Cluster-Kauf", "text": "2 Insider kaufen (DEMO)", "url": None,
+                                            "priority": 1, "created_at": iso(now)}]}
     out_dir = out_dir or (Path(__file__).resolve().parents[2] / "frontend" / "public" / "demo-data")
     return publish(payloads, details, out_dir)
 

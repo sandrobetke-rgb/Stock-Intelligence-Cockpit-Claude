@@ -16,7 +16,7 @@ import traceback
 from collections import Counter
 from datetime import datetime
 
-from . import config, congress, corporate_events, events, insider, news, politics, social, superinvestors, translate, universe
+from . import alerts, config, congress, corporate_events, events, insider, news, politics, social, superinvestors, translate, universe
 from .export import publish
 from .intelligence import market_intelligence
 from .market import fetch_prices, load_fundamentals, refresh_fundamentals
@@ -50,6 +50,18 @@ class RunLog:
 
 def _memberships(sec: dict) -> list[str]:
     return sorted({m["index"] for m in sec["memberships"] if m.get("until") is None})
+
+
+def _swing(mkt: dict | None, market_cap: float | None) -> dict | None:
+    """Swing-Auswertung übernehmen; Marktkapitalisierung (S02) aus den Fundamentaldaten nachprüfen."""
+    sw = (mkt or {}).get("swing")
+    if not sw:
+        return None
+    sw = {**sw, "criteria": {k: dict(v) for k, v in sw["criteria"].items()}}
+    if market_cap is not None and "Marktkap. > 1 Mrd." in sw["criteria"].get("S02", {}):
+        sw["criteria"]["S02"]["Marktkap. > 1 Mrd."] = market_cap > 1e9
+        sw["hits"] = [h for h in sw["hits"] if h != "S02" or all(sw["criteria"]["S02"].values())]
+    return sw
 
 
 def assemble(*, state: dict, prices: dict, fundamentals: dict[str, dict], signals: list[dict],
@@ -103,6 +115,7 @@ def assemble(*, state: dict, prices: dict, fundamentals: dict[str, dict], signal
             "market": {k: (mkt or {}).get(k) for k in ("last_close", "price_date", "perf_20d", "perf_63d", "adr20",
                                                        "rvol", "ema10", "ema21", "sma50", "sma200")},
             "market_cap": (fund or {}).get("market_cap"), "market_cap_currency": (fund or {}).get("market_cap_currency"),
+            "swing": _swing(mkt, (fund or {}).get("market_cap")),
             "quality": {"score": q["score"], "coverage_pct": q["coverage_pct"], "model": q["model"],
                         "dimensions": {d["key"]: d["score"] for d in q["dimensions"]}},
             "risk": {"score": rk["score"], "level": rk["level"], "coverage_pct": rk["coverage_pct"], "top_factors": rk["top_factors"]},
@@ -333,6 +346,20 @@ def run(fetch: bool = True, skip_fundamentals: bool = False, skip_insider: bool 
                                          "unparsed_reports": cg["unparsed_reports"],
                                          "social_sources": sinfo.get("sources", []),
                                          "stocktwits_trending": sinfo.get("stocktwits_trending", [])})
+    # Watchlist-Alarme und tägliche Swing-Kandidaten
+    def _alerts():
+        wl, wl_file = alerts.load_watchlist()
+        gen = alerts.generate(stocks=payloads["stocks.json"]["stocks"], insiders=insiders,
+                              clusters=insider.cluster_buys(insiders, now=now), superinv=si, stakes=stakes,
+                              pol_trades=pol_trades, trump=trump, social_stats=social_stats, watchlist=wl, now=now)
+        return alerts.process(gen, wl, wl_file, notify=True, now=now)
+    al = rl.step("alerts", _alerts) or {"watchlist": [], "history": [], "channels": {}, "new_count": 0}
+    from .setups import ENTRY, FILTER, SETUP_INFO
+    payloads["alerts.json"] = {"generated_at": iso(now), "schema_version": SCHEMA_VERSION, "mode": "live", **al}
+    payloads["swing.json"] = {"generated_at": iso(now), "schema_version": SCHEMA_VERSION, "mode": "live",
+                              "setups": SETUP_INFO, "filter": FILTER, "entry": ENTRY,
+                              "candidates": [s["symbol"] for s in alerts.candidates(payloads["stocks.json"]["stocks"])]}
+    payloads["summary.json"]["steps"] = rl.steps
     result = publish(payloads, details)
     log.info("Veröffentlicht: %s | Fehler: %s", result["published"], [s for s in rl.steps if s["status"] == "error"])
     return result

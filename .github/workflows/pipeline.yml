@@ -53,6 +53,14 @@ jobs:
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
           OPENFIGI_API_KEY: ${{ secrets.OPENFIGI_API_KEY }}
+          # Alarme (optional): Push über ntfy.sh, E-Mail über SMTP
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          ALERT_EMAIL_TO: ${{ secrets.ALERT_EMAIL_TO }}
+          COCKPIT_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
         run: |
           ARGS=""
           # Push/CSV-Aenderung: nur neu auswerten. Ohne vorhandenes Universum (erster Lauf) immer voll abrufen.

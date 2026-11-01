@@ -66,6 +66,12 @@ def compute_metrics(df: pd.DataFrame) -> dict:
         ret_today = close.iloc[-1] / close.iloc[-2] - 1
         sd = rets.tail(63).std()
         out["move_zscore"] = clean_number(ret_today / sd) if sd and sd > 0 else None
+    if {"Open", "High", "Low", "Volume"} <= set(df.columns):
+        try:
+            from .setups import evaluate
+            out["swing"] = evaluate(df)
+        except Exception as exc:  # noqa: BLE001
+            log.debug("Swing-Auswertung: %s", exc)
     return out
 
 
@@ -77,7 +83,7 @@ def fetch_prices(symbols: list[str]) -> tuple[dict[str, dict], list[str]]:
     errors: list[str] = []
     for batch in chunked(symbols, config.PRICE_BATCH_SIZE):
         try:
-            data = yf.download(batch, period="1y", interval="1d", group_by="ticker",
+            data = yf.download(batch, period="2y", interval="1d", group_by="ticker",
                                auto_adjust=True, threads=True, progress=False)
         except Exception as exc:
             log.error("Kursbatch fehlgeschlagen: %s", exc)

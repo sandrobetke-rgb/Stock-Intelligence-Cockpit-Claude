@@ -1,5 +1,5 @@
 import { ReactNode, useMemo, useState } from "react";
-import { DIRECTION_LABEL, Loaded, VERIFICATION_LABEL, fmt } from "./data";
+import { DIRECTION_LABEL, Loaded, VERIFICATION_LABEL, fmt, useWatchlist } from "./data";
 import type { CorpEvent, StockRow } from "./types";
 
 // ---------------------------------------------------------------- Achsen --
@@ -91,11 +91,24 @@ export function IndexTags({ idx }: { idx: string[] }) {
   return <span className="idx-tags">{idx.map((i) => <span key={i} className="idx">{i}</span>)}</span>;
 }
 
-export function CompanyLink({ symbol, name }: { symbol: string; name?: string }) {
+export function WatchStar({ symbol }: { symbol: string }) {
+  const wl = useWatchlist();
+  const on = wl.has(symbol);
   return (
-    <a className="co-link" href={`#/company/${encodeURIComponent(symbol)}`}>
-      <strong>{symbol}</strong>{name ? <span className="co-name"> {name}</span> : null}
-    </a>
+    <button type="button" className={`star ${on ? "on" : ""}`} onClick={(e) => { e.preventDefault(); wl.toggle(symbol); }}
+      aria-pressed={on} aria-label={on ? `${symbol} von der Watchlist entfernen` : `${symbol} auf die Watchlist setzen`}
+      title={on ? "Auf der Watchlist" : "Auf die Watchlist"}>{on ? "★" : "☆"}</button>
+  );
+}
+
+export function CompanyLink({ symbol, name, star = true }: { symbol: string; name?: string; star?: boolean }) {
+  return (
+    <span className="co-wrap">
+      {star ? <WatchStar symbol={symbol} /> : null}
+      <a className="co-link" href={`#/company/${encodeURIComponent(symbol)}`}>
+        <strong>{symbol}</strong>{name ? <span className="co-name"> {name}</span> : null}
+      </a>
+    </span>
   );
 }
 

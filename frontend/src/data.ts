@@ -118,3 +118,46 @@ export function researchLinks(symbol: string, region: string) {
     { label: "Macrotrends", url: `https://www.macrotrends.net/stocks/charts/${encodeURIComponent(s)}/` },
   ].filter(Boolean) as { label: string; url: string }[];
 }
+
+// ------------------------------------------------------------- Watchlist --
+const WL_KEY = "sic-watchlist";
+
+function readWl(): string[] {
+  try { return JSON.parse(localStorage.getItem(WL_KEY) || "[]"); } catch { return []; }
+}
+
+export function useWatchlist() {
+  const [wl, setWl] = useState<string[]>(readWl);
+  useEffect(() => {
+    const h = () => setWl(readWl());
+    window.addEventListener("sic-watchlist", h);
+    window.addEventListener("storage", h);
+    return () => { window.removeEventListener("sic-watchlist", h); window.removeEventListener("storage", h); };
+  }, []);
+  const save = (next: string[]) => {
+    const v = [...new Set(next)].sort();
+    try { localStorage.setItem(WL_KEY, JSON.stringify(v)); } catch { /* privater Modus */ }
+    setWl(v);
+    window.dispatchEvent(new Event("sic-watchlist"));
+  };
+  return {
+    list: wl,
+    has: (s: string) => wl.includes(s),
+    toggle: (s: string) => save(wl.includes(s) ? wl.filter((x) => x !== s) : [...wl, s]),
+    replace: (l: string[]) => save(l),
+  };
+}
+
+/** GitHub-Repo aus der Pages-Adresse ableiten (owner.github.io/repo/). */
+export function repoInfo() {
+  const gh = location.hostname.endsWith(".github.io");
+  return { owner: gh ? location.hostname.split(".")[0] : "sandrobetke-rgb", repo: gh ? location.pathname.split("/")[1] : "Stock-Intelligence-Cockpit-Claude" };
+}
+
+/** Öffnet GitHub mit einer neuen, vorausgefüllten Watchlist-Datei (Speichern = 1 Klick auf "Commit"). */
+export function githubWatchlistUrl(symbols: string[]) {
+  const { owner, repo } = repoInfo();
+  const stamp = new Date().toISOString().slice(0, 16).replace(/[:T]/g, "-");
+  const content = ["symbol", ...symbols].join("\n") + "\n";
+  return `https://github.com/${owner}/${repo}/new/main?filename=${encodeURIComponent(`backend/data/imports/watchlist/${stamp}.csv`)}&value=${encodeURIComponent(content)}&message=${encodeURIComponent("Watchlist aktualisiert")}`;
+}

@@ -1,6 +1,6 @@
 import { DRIVER_LABEL, INDEX_NAMES, MENTION_LABEL, SI_ACTION, SI_TONE, fmt, researchLinks, useData } from "../data";
 import type { CompanyDetail } from "../types";
-import { Axes, EventBadges, DataTable, Translated, Direction, Empty, Gate, IndexTags, Page, Panel, Src, Tag, Verif, riskLabel, stockAxes } from "../ui";
+import { Axes, EventBadges, WatchStar, DataTable, Translated, Direction, Empty, Gate, IndexTags, Page, Panel, Src, Tag, Verif, riskLabel, stockAxes } from "../ui";
 
 const BASIS: Record<string, string> = { data: "Daten", proxy: "Proxy", manual: "Manuell belegt", unknown: "unbekannt", not_applicable: "nicht anwendbar" };
 
@@ -16,7 +16,7 @@ function CompanyView({ d }: { d: CompanyDetail }) {
     <Page title={`${p.symbol} ${p.name}`}
       intro={<>{p.sector ?? "Branche unbekannt"}{p.industry ? `, ${p.industry}` : ""}, {p.region}, {p.currency}. <IndexTags idx={p.indexes} /> <EventBadges events={p.events} max={3} />
         {p.status === "archived" ? <> <Tag tone="warn">archiviert seit {fmt.date(p.archived_at)} ({p.status_reason})</Tag></> : null}</>}
-      actions={<a className="back" href="#/quality">Zur Übersicht</a>}>
+      actions={<span className="head-actions"><WatchStar symbol={p.symbol} /> <a className="back" href="#/quality">Zur Übersicht</a></span>}>
       {p.data_flags.length ? <p className="state state-warn">Datenhinweise: {p.data_flags.join(", ")}</p> : null}
       <nav className="ext-links" aria-label="Weitere Recherche">
         <span className="muted small">Weiter recherchieren:</span>
@@ -66,6 +66,21 @@ function CompanyView({ d }: { d: CompanyDetail }) {
           </table>
         </Panel>
       </div>
+
+      {p.swing ? (
+        <Panel title="Swing-Setups (S01–S04)" note="Erfüllte Kriterien je Setup auf Tagesbasis. Einstieg erst nach deiner 1H-Regel im Chart.">
+          <div className="setup-grid">
+            {Object.entries(p.swing.criteria).map(([k, c]) => (
+              <div key={k} className={`setup ${p.swing!.hits.includes(k) ? "hit" : ""}`}>
+                <strong>{k}</strong> {p.swing!.hits.includes(k) ? <Tag tone="hi">erfüllt</Tag> : <span className="muted small">{Object.values(c).filter(Boolean).length}/{Object.keys(c).length}</span>}
+                <ul className="plain small">{Object.entries(c).map(([n, ok]) => <li key={n} className={ok ? "pos" : "muted"}>{ok ? "✓" : "✗"} {n}</li>)}</ul>
+              </div>
+            ))}
+          </div>
+          <p className="small">Abendfilter: {Object.entries(p.swing.filter).map(([n, ok]) => <Tag key={n} tone={ok ? "ok" : "err"}>{n}</Tag>)}</p>
+          <p className="small">Plan nächster Handelstag: Auslöser <strong>{fmt.num(p.swing.plan.trigger, 2)}</strong> ({p.swing.plan.trigger_basis}), Einstieg max. {fmt.num(p.swing.plan.entry_max, 2)}, Stopp <span className="neg">{fmt.num(p.swing.plan.stop, 2)}</span>, Ziel 1 <span className="pos">{fmt.num(p.swing.plan.target_1, 2)}</span>.</p>
+        </Panel>
+      ) : null}
 
       <div className="grid-2">
         <Panel title="Kurs- und Marktdaten" note="Markt-Kontext; fließt nicht in Company Quality ein.">

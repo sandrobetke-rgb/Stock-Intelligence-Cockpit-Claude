@@ -42,6 +42,7 @@ export interface StockRow {
   superinvestors: { holders: number; buyers: number; new_buyers: number; sellers: number; sold_out: number } | null;
   events?: CorpEvent[];
   politicians?: { buys: number; sells: number } | null;
+  swing?: Swing | null;
   insider: { open_market_buys: number; open_market_sells: number; buy_value: number; sell_value: number; distinct_buyers: number; other_transactions: number };
 }
 
@@ -152,3 +153,22 @@ export interface CorpEvent {
 }
 export interface BigStake { id: string; manager: string; manager_cik: number; symbol: string; form: string; filed_at: string; activist: boolean; amendment: boolean; url: string }
 export interface ClusterBuy { symbol: string; insiders: number; transactions: number; value: number; roles: string[]; first: string; last: string }
+
+export interface Swing {
+  tech: Record<string, number | boolean | null>;
+  criteria: Record<string, Record<string, boolean>>;
+  hits: string[]; near: Record<string, number>;
+  filter: Record<string, boolean>; filter_pass: boolean;
+  plan: { trigger: number; entry_max: number; stop: number; risk_per_share: number; target_1: number; trigger_basis: string };
+}
+export interface SwingMeta extends Meta {
+  setups: Record<string, { name: string; text: string }>;
+  filter: { rvol_min: number; rsi_max: number; atr_pct_min: number; atr_pct_max: number };
+  entry: { max_above_trigger_pct: number; stop_atr: number; rrr: number; risk_pct: number; max_positions: number };
+  candidates: string[];
+}
+export interface Alert { key: string; kind: string; kind_label: string; symbol: string | null; title: string; text: string; url: string | null; priority: number; created_at: string }
+export interface AlertsData extends Meta {
+  watchlist: string[]; watchlist_file: string | null; new_count: number; history: Alert[];
+  channels: { push?: boolean; email?: boolean }; sent?: { ntfy: boolean; email: boolean };
+}
