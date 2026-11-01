@@ -189,6 +189,33 @@ def compare(cur: list[dict], prev: list[dict] | None) -> list[dict]:
     return sorted(out, key=lambda x: -x["value"])
 
 
+def merge_same_symbol(pos: list[dict], cmap: dict, universe: dict, has_prev: bool) -> list[dict]:
+    """Mehrere CUSIP-Zeilen derselben Aktie (z. B. alte/neue CUSIP) je Investor zusammenführen."""
+    out: dict[str, dict] = {}
+    for p in pos:
+        p["symbol"] = cmap.get(p["cusip"])
+        p["in_universe"] = bool(p["symbol"] and p["symbol"] in universe)
+        k = p["symbol"] or p["cusip"]
+        if k not in out:
+            out[k] = dict(p)
+            continue
+        a = out[k]
+        for f in ("shares", "value", "weight_pct", "prev_shares"):
+            a[f] = round((a.get(f) or 0) + (p.get(f) or 0), 4)
+    for a in out.values():
+        if not has_prev:
+            continue
+        if a["shares"] == 0:
+            a["action"], a["shares_change_pct"] = "sold_out", -100.0
+        elif not a["prev_shares"]:
+            a["action"], a["shares_change_pct"] = "new", None
+        else:
+            chg = (a["shares"] / a["prev_shares"] - 1) * 100
+            a["shares_change_pct"] = round(chg, 1)
+            a["action"] = "increased" if chg > 1 else ("reduced" if chg < -1 else "unchanged")
+    return sorted(out.values(), key=lambda x: -x["value"])
+
+
 def build(universe: dict[str, dict], fetch: bool = True) -> dict:
     """Erzeugt superinvestors.json. Ohne Netzwerk (fetch=False) wird nur der Cache gelesen."""
     managers, errors = [], []
@@ -226,10 +253,7 @@ def build(universe: dict[str, dict], fetch: bool = True) -> dict:
         # Wer seit mehr als einem Quartal nicht mehr gemeldet hat (z. B. Fonds geschlossen), zählt
         # nicht in die Kauf-/Verkaufs-Ranglisten, bleibt aber mit Hinweis sichtbar.
         stale = f["report_date"] < stale_before
-        pos = compare(cur, prev)
-        for p in pos:
-            p["symbol"] = cmap.get(p["cusip"])
-            p["in_universe"] = bool(p["symbol"] and p["symbol"] in universe)
+        pos = merge_same_symbol(compare(cur, prev), cmap, universe, prev is not None)
         cur_val = sum(p["value"] for p in pos if p["action"] != "sold_out")
         acc = f["accession"]
         managers.append({

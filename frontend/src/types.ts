@@ -40,6 +40,8 @@ export interface StockRow {
     negative_signals_30d: number; positive_signals_30d: number };
   social: { mentions_7d: number; manipulation_risk: string } | null;
   superinvestors: { holders: number; buyers: number; new_buyers: number; sellers: number; sold_out: number } | null;
+  events?: CorpEvent[];
+  politicians?: { buys: number; sells: number } | null;
   insider: { open_market_buys: number; open_market_sells: number; buy_value: number; sell_value: number; distinct_buyers: number; other_transactions: number };
 }
 
@@ -77,7 +79,7 @@ export interface Insider {
   id: string; symbol: string; insider: string; role: string; transaction_kind: string; transaction_label: string;
   open_market: boolean; rule_10b5_1_plan: boolean; transaction_date: string | null; filed_at: string | null;
   reporting_delay_days: number | null; shares: number | null; price: number | null; value: number | null; currency: string;
-  source: string; source_url: string;
+  source: string; source_url: string; superinvestor?: string;
 }
 export interface Institution {
   id: string; institution: string; symbol: string; report_period: string; filed_at: string; publication_delay_days: number | null;
@@ -85,7 +87,8 @@ export interface Institution {
   source_url: string; note: string;
 }
 export interface PoliticalTrade {
-  id: string; politician: string; chamber: string; party: string; symbol: string; transaction_type: string;
+  id: string; politician: string; chamber: string; party: string | null; symbol: string; transaction_type: string;
+  state?: string | null; in_universe?: boolean; asset?: string; asset_type?: string; owner?: string;
   transaction_date: string | null; disclosure_date: string | null; reporting_delay_days: number | null;
   amount_range: [number | null, number | null]; source_url: string; note: string;
 }
@@ -96,9 +99,10 @@ export interface PoliticalEvent {
 
 export interface SocialStat {
   mentions_24h: number; mentions_7d: number; mentions_30d: number; change_vs_baseline_pct: number | null;
+  bullish_7d?: number; bearish_7d?: number; by_platform_7d?: Record<string, number>; communities_7d?: Record<string, number>;
   engagement_7d: number; sentiment_7d: number | null; sentiment_basis: string; platforms: string[];
   manipulation_flags: string[]; manipulation_risk: string;
-  top_posts: { platform: string; author: string; posted_at: string; url: string; text: string; engagement: number }[];
+  top_posts: { platform: string; community?: string; author: string; posted_at: string; url: string; text: string; engagement: number; sentiment_label?: string | null }[];
 }
 
 export interface QualityDim {
@@ -123,6 +127,7 @@ export interface CompanyDetail extends Meta {
   political_detail: StockRow["political"] & { mentions_total: number; events_30d: number; next_expiry: string | null };
   trump_mentions: TrumpMention[]; political_events: PoliticalEvent[]; signals: Signal[];
   insiders: Insider[]; institutions: Institution[]; political_trades: PoliticalTrade[]; superinvestors: SiHolder[];
+  big_stakes?: BigStake[];
   social_detail: SocialStat | null;
   history: { date: string; symbol: string; from: string; to: string; reason: string | null }[];
 }
@@ -139,6 +144,11 @@ export interface SiManager {
 export interface SiHolder { manager: string; fund: string; action: SiPosition["action"]; weight_pct: number; shares_change_pct: number | null; value: number; report_date: string }
 export interface SiStock {
   symbol: string | null; cusip: string; issuer: string; in_universe: boolean; holders: number; buyers: number;
-  new_buyers: number; sellers: number; sold_out: number; value: number; managers: SiHolder[];
+  new_buyers: number; sellers: number; sold_out: number; value: number; managers: SiHolder[]; events?: CorpEvent[];
 }
+export interface CorpEvent {
+  symbol: string; type: "earnings" | "ex_dividend"; date: string; days_until: number; time?: string; confirmed?: boolean;
+  eps_forecast?: number | null; fiscal_quarter?: string; amount?: number | null; payment_date?: string | null; source: string; source_url: string;
+}
+export interface BigStake { id: string; manager: string; manager_cik: number; symbol: string; form: string; filed_at: string; activist: boolean; amendment: boolean; url: string }
 export interface ClusterBuy { symbol: string; insiders: number; transactions: number; value: number; roles: string[]; first: string; last: string }

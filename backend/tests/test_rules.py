@@ -491,3 +491,86 @@ def test_13f_stale_manager_excluded_from_rankings(monkeypatch):
     r = superinvestors.build({}, fetch=False)
     assert [m["stale"] for m in r["managers"]] == [False, True]
     assert r["stocks"][0]["holders"] == 1
+
+
+# --------------------------------------------------------- Politiker-Trades --
+def test_house_index_and_ptr_text():
+    from sic.congress import parse_house_index, parse_house_ptr_text
+    xml = (b"<FinancialDisclosure><Member><Prefix>Hon.</Prefix><Last>Doe</Last><First>Jane</First><Suffix/>"
+           b"<FilingType>P</FilingType><StateDst>CA11</StateDst><Year>2026</Year><FilingDate>10/27/2026</FilingDate>"
+           b"<DocID>20031234</DocID></Member><Member><Last>X</Last><First>Y</First><FilingType>O</FilingType>"
+           b"<DocID>1</DocID></Member></FinancialDisclosure>")
+    idx = parse_house_index(xml)
+    assert idx == [{"doc_id": "20031234", "name": "Jane Doe", "state_district": "CA11", "year": "2026", "filed": "2026-10-27"}]
+    text = ("ID Owner Asset Transaction Type Date Notification Date Amount Cap. Gains > $200?\n"
+            "SP NVIDIA Corporation - Common Stock (NVDA) [ST] P 10/01/2026 10/02/2026 $250,001 -\n$500,000\n"
+            "F S : New\nApple Inc. (AAPL) [ST] S (partial) 09/15/2026 09/20/2026 $1,001 - $15,000\n"
+            "US Treasury Bill (912797) [GS] P 09/15/2026 09/20/2026 $1,001 - $15,000")
+    rows = parse_house_ptr_text(text)
+    assert [(r["ticker"], r["tx"], r["owner"]) for r in rows] == [("NVDA", "purchase", "Ehepartner"), ("AAPL", "sale_partial", "Selbst")]
+    assert rows[0]["amount_min"] == 250001 and rows[0]["amount_max"] == 500000
+
+
+def test_senate_ptr_html():
+    from sic.congress import parse_senate_ptr_html
+    html = ("<table><thead><tr><th>#</th><th>Transaction Date</th><th>Owner</th><th>Ticker</th><th>Asset Name</th>"
+            "<th>Asset Type</th><th>Type</th><th>Amount</th><th>Comment</th></tr></thead><tbody>"
+            "<tr><td>1</td><td>10/03/2026</td><td>Spouse</td><td><a href='x'>MSFT</a></td><td>Microsoft Corp</td>"
+            "<td>Stock</td><td>Purchase</td><td>$15,001 - $50,000</td><td>--</td></tr>"
+            "<tr><td>2</td><td>10/03/2026</td><td>Self</td><td>--</td><td>Muni Bond</td><td>Municipal Security</td>"
+            "<td>Purchase</td><td>$1,001 - $15,000</td><td>--</td></tr></tbody></table>")
+    rows = parse_senate_ptr_html(html)
+    assert len(rows) == 1 and rows[0]["ticker"] == "MSFT" and rows[0]["tx"] == "purchase" and rows[0]["owner"] == "Ehepartner"
+    assert rows[0]["transaction_date"] == "2026-10-03"
+
+
+# ------------------------------------------------------------- Termine -----
+def test_nasdaq_calendars():
+    from sic.corporate_events import parse_dividends, parse_earnings
+    e = parse_earnings({"data": {"rows": [{"symbol": "AAPL", "time": "time-after-hours", "epsForecast": "$1.60",
+                                           "noOfEsts": "12", "fiscalQuarterEnding": "Sep/2026"}]}}, "2026-11-05")
+    assert e[0]["time"] == "nach Börsenschluss" and e[0]["eps_forecast"] == 1.6 and e[0]["date"] == "2026-11-05"
+    v = parse_dividends({"data": {"calendar": {"rows": [{"symbol": "BRK.B", "dividend_Ex_Date": "11/07/2026",
+                                                        "payment_Date": "11/20/2026", "dividend_Rate": 0.26}]}}})
+    assert v[0]["symbol"] == "BRK-B" and v[0]["date"] == "2026-11-07" and v[0]["amount"] == 0.26
+
+
+def test_corporate_events_window(monkeypatch):
+    from sic import corporate_events
+    from sic.util import write_json_atomic
+    write_json_atomic(config.STATE_DIR / "corporate_events.json", {"days": {
+        "2026-11-03": [{"symbol": "AAPL", "type": "earnings", "date": "2026-11-03"}],
+        "2026-12-30": [{"symbol": "AAPL", "type": "earnings", "date": "2026-12-30"}]}})
+    out = corporate_events.build({"AAPL", "SAP.DE"}, {"SAP.DE": {"data": {"next_earnings_ts": NOW.timestamp() + 86400 * 4}}},
+                                 fetch=False, now=NOW)
+    assert [x["date"] for x in out["AAPL"]] == ["2026-11-03"] and out["AAPL"][0]["days_until"] == 3
+    assert out["SAP.DE"][0]["type"] == "earnings"
+
+
+# -------------------------------------------------------------- Social -----
+def test_symbol_resolver_avoids_common_words():
+    from sic.social import symbol_resolver
+    r = symbol_resolver({"NVDA", "AMD", "ALL", "IT", "ON", "SAP.DE", "GME"})
+    assert r("YOLO on NVDA and $AMD, ALL IN, IT is time") == ["AMD", "NVDA"]
+    assert r("SAP schlägt Erwartungen, $GME") == ["GME", "SAP.DE"]
+
+
+def test_stocktwits_labels_drive_sentiment():
+    from sic.social import analyze
+    t = (NOW - timedelta(hours=2)).isoformat()
+    posts = [{"id": str(i), "platform": "stocktwits", "author": f"u{i}", "posted_at": t, "url": "", "text": "x",
+              "engagement": 1, "symbols": ["NVDA"], "sentiment_label": lab} for i, lab in enumerate(["Bullish", "Bullish", "Bearish", None])]
+    a = analyze(posts, NOW)["NVDA"]
+    assert a["bullish_7d"] == 2 and a["bearish_7d"] == 1 and a["sentiment_7d"] == 0.25
+
+
+# ------------------------------------------------------- 13D/13G-Signale ----
+def test_big_stakes_from_daily_index():
+    from sic.insider import _collect_stakes, load_stakes, parse_daily_index, STAKE_FORMS
+    idx = ("SC 13D/A     OCCIDENTAL PETROLEUM CORP      797468   20261028   edgar/data/797468/0001-26-000009.txt\n"
+           "SC 13D/A     BERKSHIRE HATHAWAY INC         1067983  20261028   edgar/data/797468/0001-26-000009.txt\n"
+           "SC 13G       OTHER CO                       555      20261028   edgar/data/555/0001-26-000010.txt\n")
+    rows = parse_daily_index(idx, STAKE_FORMS)
+    _collect_stakes(rows, {797468: "OXY"}, {1067983: "Warren Buffett"}, "2026-10-28")
+    st = load_stakes(now=NOW)
+    assert len(st) == 1 and st[0]["symbol"] == "OXY" and st[0]["activist"] and st[0]["amendment"]

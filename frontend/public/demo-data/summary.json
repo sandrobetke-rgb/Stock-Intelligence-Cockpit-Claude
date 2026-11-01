@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:21:37Z",
+ "generated_at": "2026-11-01T05:50:06Z",
  "schema_version": "1.1.0",
  "mode": "demo",
  "universe": {
@@ -11,7 +11,7 @@
     "code": "NDX",
     "name": "Nasdaq 100",
     "source": "DEMO",
-    "checked_at": "2026-11-01T02:21:37Z",
+    "checked_at": "2026-11-01T05:50:06Z",
     "members": 11,
     "status": "ok",
     "message": null,
@@ -21,7 +21,7 @@
     "code": "SPX",
     "name": "S&P 500",
     "source": "DEMO",
-    "checked_at": "2026-11-01T02:21:37Z",
+    "checked_at": "2026-11-01T05:50:06Z",
     "members": 14,
     "status": "ok",
     "message": null,
@@ -31,7 +31,7 @@
     "code": "RUT",
     "name": "Russell 2000",
     "source": "DEMO",
-    "checked_at": "2026-11-01T02:21:37Z",
+    "checked_at": "2026-11-01T05:50:06Z",
     "members": 16,
     "status": "error",
     "message": "DEMO: Plausibilitätsprüfung fehlgeschlagen – letzter gültiger Stand bleibt",
@@ -41,7 +41,7 @@
     "code": "DAX",
     "name": "DAX 40",
     "source": "DEMO",
-    "checked_at": "2026-11-01T02:21:37Z",
+    "checked_at": "2026-11-01T05:50:06Z",
     "members": 8,
     "status": "ok",
     "message": null,
@@ -58,7 +58,7 @@
     "name": "Sundial AG (DEMO)"
    }
   ],
-  "built_at": "2026-11-01T02:21:37Z"
+  "built_at": "2026-11-01T05:50:06Z"
  },
  "coverage": {
   "prices_pct": 100,
@@ -137,10 +137,22 @@
    "limitation": "Keine kostenlose strukturierte API eingebunden"
   },
   {
+   "area": "Politiker-Trades (US-Kongress)",
+   "source": "House Clerk (PTR-PDFs), Senate eFD",
+   "status": "connected",
+   "limitation": "Bis 45 Tage Meldeverzug; Wertbandbreiten; gescannte Meldungen nur als Link; nur nicht-kommerzielle Nutzung"
+  },
+  {
+   "area": "Unternehmenstermine",
+   "source": "Nasdaq-Earnings-/Dividendenkalender, Yahoo (Nicht-US)",
+   "status": "connected",
+   "limitation": "Inoffizieller Zugang; Termine können sich verschieben"
+  },
+  {
    "area": "Social Media",
-   "source": "CSV-Import; Reddit-RSS optional (standardmäßig aus)",
-   "status": "limited",
-   "limitation": "X-API nicht kostenlos; Reddit-Bedingungen vor Aktivierung prüfen"
+   "source": "Reddit (13 Subreddits, API oder RSS), StockTwits, CSV-Import",
+   "status": "connected",
+   "limitation": "X-API nicht kostenlos (StockTwits als Ersatz); Reddit ohne eigenen Zugang oft gedrosselt; nur nicht-kommerziell"
   }
  ],
  "steps": [

@@ -16,7 +16,7 @@ import traceback
 from collections import Counter
 from datetime import datetime
 
-from . import config, events, insider, news, politics, social, superinvestors, translate, universe
+from . import config, congress, corporate_events, events, insider, news, politics, social, superinvestors, translate, universe
 from .export import publish
 from .intelligence import market_intelligence
 from .market import fetch_prices, load_fundamentals, refresh_fundamentals
@@ -56,7 +56,7 @@ def assemble(*, state: dict, prices: dict, fundamentals: dict[str, dict], signal
              trump: list[dict], pol_events: list[dict], pol_trades: list[dict], social_stats: dict,
              insiders: list[dict], institutions: list[dict], market_events: dict, runlog: list[dict],
              sources: list[dict], mode: str = "live", now: datetime | None = None,
-             superinv: dict | None = None) -> tuple[dict, dict]:
+             superinv: dict | None = None, corp_events: dict | None = None, extras: dict | None = None) -> tuple[dict, dict]:
     now = now or utcnow()
     meta = {"generated_at": iso(now), "schema_version": SCHEMA_VERSION, "mode": mode}
     manual_q, manual_r = load_manual_assessments(), load_manual_risks()
@@ -70,6 +70,14 @@ def assemble(*, state: dict, prices: dict, fundamentals: dict[str, dict], signal
     for x in insiders:
         ins_by.setdefault(x["symbol"], []).append(x)
     superinv = superinv or {"managers": [], "stocks": [], "errors": []}
+    corp_events = corp_events or {}
+    extras = extras or {}
+    for a in superinv["stocks"]:
+        if a.get("symbol") in corp_events:
+            a["events"] = corp_events[a["symbol"]]
+    pt_by: dict[str, list[dict]] = {}
+    for x in pol_trades:
+        pt_by.setdefault(x["symbol"], []).append(x)
     si_by = {a["symbol"]: a for a in superinv["stocks"] if a.get("symbol")}
     for sym, sec in sorted(state["securities"].items()):
         fc = fundamentals.get(sym)
@@ -106,6 +114,10 @@ def assemble(*, state: dict, prices: dict, fundamentals: dict[str, dict], signal
             "social": {"mentions_7d": soc["mentions_7d"], "manipulation_risk": soc["manipulation_risk"]} if soc else None,
             "insider": ins,
             "superinvestors": {k: si_by[sym][k] for k in ("holders", "buyers", "new_buyers", "sellers", "sold_out")} if sym in si_by else None,
+            "events": corp_events.get(sym, []),
+            "politicians": {"buys": sum(1 for x in pt_by.get(sym, []) if x["transaction_type"] == "purchase"),
+                            "sells": sum(1 for x in pt_by.get(sym, []) if x["transaction_type"] in ("sale", "sale_partial"))}
+            if sym in pt_by else None,
         }
         stocks.append(row)
         sym_signals = by_sym.get(sym, [])[:60]
@@ -120,7 +132,8 @@ def assemble(*, state: dict, prices: dict, fundamentals: dict[str, dict], signal
             "signals": sym_signals,
             "insiders": ins_by.get(sym, [])[:50],
             "institutions": [x for x in institutions if x["symbol"] == sym][:50],
-            "political_trades": [x for x in pol_trades if x["symbol"] == sym][:50],
+            "political_trades": pt_by.get(sym, [])[:50],
+            "big_stakes": [x for x in extras.get("stakes", []) if x["symbol"] == sym][:20],
             "superinvestors": si_by[sym]["managers"] if sym in si_by else [],
             "social_detail": soc,
             "history": [h for h in state.get("history", []) if h["symbol"] == sym][-20:],
@@ -176,6 +189,8 @@ def assemble(*, state: dict, prices: dict, fundamentals: dict[str, dict], signal
                                          "political": s["political"]["relevance"],
                                          "indexes": s["indexes"], "sector": s["sector"]} for s in radar]},
         "politics.json": {**meta, "events": pol_events, "trades": pol_trades,
+                          "congress_status": extras.get("congress_status", []),
+                          "unparsed_reports": extras.get("unparsed_reports", []),
                           "scores": {k: v for k, v in pol_scores.items() if v["relevance"] > 0}},
         "trump-mentions.json": {**meta, "rule": {"max_age_days": config.TRUMP_MAX_AGE_DAYS, "bonus_levels": config.TRUMP_BONUS,
                                                  "text": "Sonderbonus nur für verifizierte, direkte oder eindeutig indirekte "
@@ -184,7 +199,9 @@ def assemble(*, state: dict, prices: dict, fundamentals: dict[str, dict], signal
                                                          "Erhöht nie den Company Quality Score."},
                                 "mentions": trump},
         "market-events.json": {**meta, **{k: v for k, v in market_events.items() if k != "generated_at"}},
-        "social.json": {**meta, "stocks": social_stats, "note": "Sentiment = algorithmische Einschätzung."},
+        "social.json": {**meta, "stocks": social_stats, "sources": extras.get("social_sources", []),
+                        "stocktwits_trending": extras.get("stocktwits_trending", []),
+                        "note": "Sentiment = Einschätzung: Bullish/Bearish-Kennzeichnung der StockTwits-Nutzer, sonst Lexikon."},
         "fact-checks.json": {**meta, "status_counts": {k: vstat.get(k, 0) for k in VERIFICATION},
                              "checks": [{"id": s["id"], "symbols": s["symbols"], "title": s["title"], "title_de": s.get("title_de"), "url": s["url"],
                                          "source": s["source"], "published_at": s["published_at"],
@@ -194,7 +211,9 @@ def assemble(*, state: dict, prices: dict, fundamentals: dict[str, dict], signal
                              "rules": ["Primärquelle -> Verified", "mind. 2 unabhängige Portale -> Partially Verified",
                                        "Einzelquelle -> Unverified", "> 30 Tage ohne Primärquelle -> Outdated",
                                        "Disputed/False nur per dokumentiertem Fact-Check (fact_checks.csv)"]},
-        "superinvestors.json": {**meta, **{k: v for k, v in superinv.items() if k != "generated_at"}},
+        "superinvestors.json": {**meta, **{k: v for k, v in superinv.items() if k != "generated_at"},
+                                "stakes": extras.get("stakes", []),
+                                "insider_trades": [x for x in insiders if x.get("superinvestor")][:200]},
         "insider.json": {**meta, "insiders": insiders[:3000], "institutions": institutions[:3000],
                          "cluster_buys": insider.cluster_buys(insiders, now=now)[:100],
                          "political_trades": pol_trades,
@@ -222,8 +241,12 @@ SOURCES = [
      "limitation": "Quartalsstichtag, bis 45 Tage Verzug; nur US-Long-Positionen; Managerliste in superinvestors.csv"},
     {"area": "Insider DE / Institutionen / Politiker", "source": "CSV-Import (BaFin, 13F, Offenlegungsstellen)", "status": "limited",
      "limitation": "Keine kostenlose strukturierte API eingebunden"},
-    {"area": "Social Media", "source": "CSV-Import; Reddit-RSS optional (standardmäßig aus)", "status": "limited",
-     "limitation": "X-API nicht kostenlos; Reddit-Bedingungen vor Aktivierung prüfen"},
+    {"area": "Politiker-Trades (US-Kongress)", "source": "House Clerk (PTR-PDFs), Senate eFD", "status": "connected",
+     "limitation": "Bis 45 Tage Meldeverzug; Wertbandbreiten; gescannte Meldungen nur als Link; nur nicht-kommerzielle Nutzung"},
+    {"area": "Unternehmenstermine", "source": "Nasdaq-Earnings-/Dividendenkalender, Yahoo (Nicht-US)", "status": "connected",
+     "limitation": "Inoffizieller Zugang; Termine können sich verschieben"},
+    {"area": "Social Media", "source": "Reddit (13 Subreddits, API oder RSS), StockTwits, CSV-Import", "status": "connected",
+     "limitation": "X-API nicht kostenlos (StockTwits als Ersatz); Reddit ohne eigenen Zugang oft gedrosselt; nur nicht-kommerziell"},
 ]
 
 
@@ -266,13 +289,14 @@ def run(fetch: bool = True, skip_fundamentals: bool = False, skip_insider: bool 
     trump = rl.step("trump", politics.process_trump, rows, alias_idx, uni, now) or []
     pol_events = rl.step("political_events", politics.load_political_events) or []
     pol_trades = rl.step("political_trades", politics.load_political_trades) or []
-
-    posts = rl.step("social", social.load_posts, uni) or []
-    social_stats = social.analyze(posts, now)
+    cg = rl.step("congress", congress.build, uni, fetch=fetch) or {"trades": [], "status": [], "unparsed_reports": []}
+    pol_trades = pol_trades + cg["trades"]
 
     ins_new = rl.step("insider_csv", insider.import_csv_insiders) or []
     if fetch and not skip_insider:
-        res = rl.step("insider_sec", insider.fetch_form4_daily, [s for s in syms if state["securities"][s]["region"] == "US"])
+        watch = {m["cik"]: m["manager"] for m in superinvestors.load_managers()}
+        res = rl.step("insider_sec", insider.fetch_form4_daily, [s for s in syms if state["securities"][s]["region"] == "US"],
+                      None, watch)
         if res:
             ins_new += res[0]
     insiders = insider.merge_store(ins_new)
@@ -280,6 +304,19 @@ def run(fetch: bool = True, skip_fundamentals: bool = False, skip_insider: bool 
 
     si = rl.step("superinvestors", superinvestors.build, state["securities"], fetch=fetch and not skip_insider) \
         or {"managers": [], "stocks": [], "errors": []}
+    watch = {m["cik"]: m["manager"] for m in superinvestors.load_managers()}
+    for x in insiders:
+        if x.get("owner_cik") in watch:
+            x["superinvestor"] = watch[x["owner_cik"]]
+    stakes = insider.load_stakes(now=now)
+
+    corp = rl.step("corporate_events", corporate_events.build, uni, fundamentals, fetch=fetch, now=now) or {}
+
+    focus = [a["symbol"] for a in sorted(si["stocks"], key=lambda a: -a.get("buyers", 0)) if a.get("symbol")][:40]
+    focus += [c["symbol"] for c in insider.cluster_buys(insiders, now=now)][:20]
+    sres = rl.step("social", social.collect, uni, state["securities"], focus, fetch=fetch, now=now) or ([], {})
+    posts, sinfo = sres
+    social_stats = social.analyze(posts, now)
 
     mev = rl.step("market_events", events.build_market_events, fetch=fetch, now=now) or {"current": [], "upcoming": [], "feeds": []}
 
@@ -291,7 +328,11 @@ def run(fetch: bool = True, skip_fundamentals: bool = False, skip_insider: bool 
     payloads, details = assemble(state=state, prices=prices, fundamentals=fundamentals, signals=signals, trump=trump,
                                  pol_events=pol_events, pol_trades=pol_trades, social_stats=social_stats,
                                  insiders=insiders, institutions=institutions, market_events=mev,
-                                 runlog=rl.steps, sources=SOURCES, mode="live", now=now, superinv=si)
+                                 runlog=rl.steps, sources=SOURCES, mode="live", now=now, superinv=si, corp_events=corp,
+                                 extras={"stakes": stakes, "congress_status": cg["status"],
+                                         "unparsed_reports": cg["unparsed_reports"],
+                                         "social_sources": sinfo.get("sources", []),
+                                         "stocktwits_trending": sinfo.get("stocktwits_trending", [])})
     result = publish(payloads, details)
     log.info("Veröffentlicht: %s | Fehler: %s", result["published"], [s for s in rl.steps if s["status"] == "error"])
     return result

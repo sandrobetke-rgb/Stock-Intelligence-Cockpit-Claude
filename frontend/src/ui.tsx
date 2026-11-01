@@ -1,6 +1,6 @@
 import { ReactNode, useMemo, useState } from "react";
 import { DIRECTION_LABEL, Loaded, VERIFICATION_LABEL, fmt } from "./data";
-import type { StockRow } from "./types";
+import type { CorpEvent, StockRow } from "./types";
 
 // ---------------------------------------------------------------- Achsen --
 type AxisKey = "q" | "m" | "p" | "r";
@@ -62,6 +62,24 @@ export function Translated({ de, orig, href, className }: { de?: string | null; 
       {href ? <a href={href} target="_blank" rel="noopener noreferrer" className={className}>{main}</a> : <span className={className}>{main}</span>}
       {de ? <span className="orig" lang="en"><span className="mt">maschinell übersetzt</span> Original: {orig}</span> : null}
     </>
+  );
+}
+
+/** Hinweis auf anstehende Termine (Quartalszahlen, Ex-Dividende). */
+export function EventBadges({ events, max = 2 }: { events?: CorpEvent[]; max?: number }) {
+  const upcoming = (events ?? []).filter((e) => e.days_until >= -1).slice(0, max);
+  if (!upcoming.length) return null;
+  return (
+    <span className="ev-badges">
+      {upcoming.map((e) => {
+        const when = e.days_until === 0 ? "heute" : e.days_until === 1 ? "morgen" : e.days_until === -1 ? "gestern" : `in ${e.days_until} T.`;
+        const label = e.type === "earnings" ? `Zahlen ${when}` : `Ex-Div. ${when}`;
+        const title = `${e.type === "earnings" ? "Quartalszahlen" : "Ex-Dividende"} am ${new Date(e.date).toLocaleDateString("de-DE", { timeZone: "UTC" })}`
+          + (e.time ? `, ${e.time}` : "") + (e.confirmed === false ? " (geschätzt)" : "") + (e.amount ? `, ${e.amount} USD je Aktie` : "") + ` – Quelle: ${e.source}`;
+        return <a key={e.type + e.date} href={e.source_url} target="_blank" rel="noopener noreferrer"
+          className={`evb evb-${e.type} ${e.days_until <= 7 ? "soon" : ""}`} title={title}>{label}</a>;
+      })}
+    </span>
   );
 }
 

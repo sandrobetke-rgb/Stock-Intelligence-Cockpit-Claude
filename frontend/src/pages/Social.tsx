@@ -2,7 +2,9 @@ import { fmt, useData } from "../data";
 import type { Meta, SocialStat } from "../types";
 import { CompanyLink, DataTable, Empty, Gate, Page, Panel, Src, Tag } from "../ui";
 
-type So = Meta & { stocks: Record<string, SocialStat>; note: string };
+type So = Meta & { stocks: Record<string, SocialStat>; note: string;
+  sources?: { source: string; mode: string; posts: number; status: string; errors?: string[] }[];
+  stocktwits_trending?: { rank: number; symbol: string; title?: string; in_universe: boolean }[] };
 
 export function SocialPage() {
   const s = useData<So>("social.json");
@@ -13,6 +15,13 @@ export function SocialPage() {
         const flagged = rows.filter((r) => r.manipulation_flags.length);
         return (
           <Page title="Social Media" intro={<>Erwähnungen auf rechtlich zugänglichen Plattformen. {d.note} Social Media erhöht nie den Quality Score.</>}>
+            {d.stocktwits_trending?.length ? (
+              <Panel title="Gerade im Trend auf StockTwits">
+                <div className="trend">{d.stocktwits_trending.slice(0, 30).map((t) => (
+                  <span key={t.symbol}>{t.in_universe ? <CompanyLink symbol={t.symbol} /> : <strong>{t.symbol}</strong>}<span className="muted small"> {t.title}</span></span>
+                ))}</div>
+              </Panel>
+            ) : null}
             <Panel>
               <DataTable rows={rows} rowKey={(r) => r.symbol} initialSort={{ key: "m7", dir: -1 }}
                 empty="Keine Social-Media-Daten. Erwähnungen werden über social_mentions.csv importiert."
@@ -22,10 +31,15 @@ export function SocialPage() {
                   { key: "m7", label: "7 Tage", num: true, render: (r) => r.mentions_7d, sort: (r) => r.mentions_7d },
                   { key: "chg", label: "vs. Basis", num: true, render: (r) => fmt.pct(r.change_vs_baseline_pct, 0), sort: (r) => r.change_vs_baseline_pct },
                   { key: "eng", label: "Interaktionen 7 T.", num: true, render: (r) => fmt.num(r.engagement_7d, 0), sort: (r) => r.engagement_7d },
-                  { key: "sent", label: "Sentiment (algorithmisch)", num: true, render: (r) => fmt.num(r.sentiment_7d, 2), sort: (r) => r.sentiment_7d },
-                  { key: "pl", label: "Plattformen", render: (r) => r.platforms.join(", ") },
+                  { key: "sent", label: "Stimmung", num: true, render: (r) => <span className={(r.sentiment_7d ?? 0) > 0.15 ? "pos" : (r.sentiment_7d ?? 0) < -0.15 ? "neg" : ""}>{fmt.num(r.sentiment_7d, 2)}</span>, sort: (r) => r.sentiment_7d },
+                  { key: "bb", label: "Bullish / Bearish", num: true, render: (r) => r.bullish_7d || r.bearish_7d ? <><span className="pos">{r.bullish_7d}</span> / <span className="neg">{r.bearish_7d}</span></> : "–", sort: (r) => (r.bullish_7d ?? 0) - (r.bearish_7d ?? 0) },
+                  { key: "pl", label: "Wo", render: (r) => Object.entries(r.communities_7d ?? {}).slice(0, 3).map(([k, v]) => <Tag key={k}>{k} {v}</Tag>) },
                   { key: "man", label: "Manipulation", render: (r) => <Tag tone={r.manipulation_risk === "hoch" ? "err" : r.manipulation_risk === "auffaellig" ? "warn" : "ok"}>{r.manipulation_risk === "auffaellig" ? "auffällig" : r.manipulation_risk}</Tag>, sort: (r) => r.manipulation_flags.length },
                 ]} />
+            </Panel>
+            <Panel title="Quellen">
+              <ul className="plain small">{(d.sources ?? []).map((x) => <li key={x.source}>{x.source} ({x.mode}): {x.status === "ok" ? <Tag tone="ok">ok</Tag> : <Tag tone="err">Fehler</Tag>} {x.posts} neue Beiträge mit Aktienbezug{x.errors?.length ? <span className="muted"> – {x.errors.slice(0, 2).join("; ")}</span> : null}</li>)}</ul>
+              <p className="note">Stimmung: −1 = durchweg negativ, +1 = durchweg positiv. Bei StockTwits zählt die Bullish/Bearish-Angabe der Verfasser, sonst eine Wortliste. X (Twitter) ist nicht angebunden, weil die Schnittstelle kostenpflichtig ist.</p>
             </Panel>
             <Panel title="Manipulationshinweise" note="Verdachtsmuster, keine Feststellung. Koordinierte Wiederholungen, Konzentration auf wenige Accounts, Pump-Sprache und plötzliche Spitzen.">
               {flagged.length ? (

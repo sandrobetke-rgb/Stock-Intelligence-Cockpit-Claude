@@ -51,17 +51,8 @@ export function InsiderPage() {
                 { key: "src", label: "Quelle", render: (r) => <Src url={r.source_url} /> },
               ]} />
           </Panel>
-          <Panel title="Politische Aktiengeschäfte" note="Getrennt von Unternehmensinsidern. Beträge sind gemeldete Wertbandbreiten; Meldeverzug laut Offenlegung.">
-            <DataTable rows={d.political_trades} rowKey={(r) => r.id} initialSort={{ key: "disc", dir: -1 }} empty="Keine politischen Offenlegungen importiert."
-              cols={[
-                { key: "sym", label: "Aktie", render: (r) => <CompanyLink symbol={r.symbol} />, sort: (r) => r.symbol },
-                { key: "pol", label: "Person", render: (r) => <>{r.politician}<div className="small muted">{r.chamber} {r.party}</div></> },
-                { key: "t", label: "Art", render: (r) => r.transaction_type },
-                { key: "tx", label: "Transaktion", render: (r) => fmt.date(r.transaction_date), sort: (r) => r.transaction_date },
-                { key: "disc", label: "Offenlegung", render: (r) => <>{fmt.date(r.disclosure_date)}<div className="small muted">{r.reporting_delay_days ?? "?"} Tage Verzug</div></>, sort: (r) => r.disclosure_date },
-                { key: "amt", label: "Wertband", num: true, render: (r) => `${fmt.big(r.amount_range[0])} bis ${fmt.big(r.amount_range[1])} USD` },
-                { key: "src", label: "Quelle", render: (r) => <Src url={r.source_url} /> },
-              ]} />
+          <Panel title="Politische Aktiengeschäfte">
+            <p>Die Geschäfte von US-Kongressmitgliedern stehen auf einer eigenen Seite: <a href="#/politicians">Politiker-Trades</a>.</p>
           </Panel>
         </Page>
       )}

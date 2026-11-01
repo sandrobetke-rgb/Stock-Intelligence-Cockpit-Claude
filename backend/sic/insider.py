@@ -57,6 +57,7 @@ def _txt(node, path) -> str | None:
 def parse_form4(xml: str, symbol: str, filing_url: str, filed_at: str) -> list[dict]:
     root = ET.fromstring(xml)
     owner = _txt(root, "reportingOwner/reportingOwnerId/rptOwnerName") or "unbekannt"
+    owner_cik = _txt(root, "reportingOwner/reportingOwnerId/rptOwnerCik")
     rel = root.find("reportingOwner/reportingOwnerRelationship")
     roles = []
     if rel is not None:
@@ -77,7 +78,7 @@ def parse_form4(xml: str, symbol: str, filing_url: str, filed_at: str) -> list[d
         date = _txt(tx, "transactionDate/value")
         out.append({
             "id": stable_id(filing_url, date, code, shares),
-            "symbol": symbol, "insider": owner.title(), "role": ", ".join(roles) or "meldepflichtige Person",
+            "symbol": symbol, "insider": owner.title(), "owner_cik": int(owner_cik) if (owner_cik or "").isdigit() else None, "role": ", ".join(roles) or "meldepflichtige Person",
             "transaction_code": code, "transaction_kind": kind, "transaction_label": label,
             "open_market": open_market, "rule_10b5_1_plan": plan_10b5,
             "transaction_date": date, "filed_at": filed_at,
@@ -122,13 +123,17 @@ DAYS_STATE = config.STATE_DIR / "insider_days.json"
 MAX_DAYS_PER_RUN = int(__import__("os").environ.get("SIC_INSIDER_MAX_DAYS", "8"))
 
 
-def parse_daily_index(text: str) -> list[dict]:
+STAKE_FORMS = {"SC 13D", "SC 13D/A", "SC 13G", "SC 13G/A", "SCHEDULE 13D", "SCHEDULE 13D/A", "SCHEDULE 13G", "SCHEDULE 13G/A"}
+STAKES = config.STATE_DIR / "big_stakes.json"
+
+
+def parse_daily_index(text: str, forms: set[str] | None = None) -> list[dict]:
     """form.YYYYMMDD.idx: feste Spalten Form Type | Company Name | CIK | Date Filed | File Name.
     Eine Meldung erscheint je beteiligtem Filer (Emittent und meldende Person) -> nach Datei deduplizieren."""
     out, seen = [], set()
     for ln in text.splitlines():
         parts = re.split(r"\s{2,}", ln.strip())
-        if len(parts) < 5 or parts[0] != "4" or not parts[-1].startswith("edgar/"):
+        if len(parts) < 5 or parts[0] not in (forms or {"4"}) or not parts[-1].startswith("edgar/"):
             continue
         out.append({"form": parts[0], "company": parts[1], "cik": int(parts[-3]), "date": parts[-2], "file": parts[-1]})
     return out
@@ -139,7 +144,7 @@ def _extract_xml(txt: str) -> str | None:
     return m.group(1) if m else (txt if txt.lstrip().startswith("<?xml") or "<ownershipDocument" in txt else None)
 
 
-def fetch_form4_daily(symbols: list[str], now=None) -> tuple[list[dict], dict]:
+def fetch_form4_daily(symbols: list[str], now=None, watch: dict[int, str] | None = None) -> tuple[list[dict], dict]:
     """Marktweite Insider-Erfassung wie OpenInsider: alle Form-4-Meldungen eines Tages aus dem
     EDGAR-Tagesindex, gefiltert auf Emittenten im Universum. Bereits verarbeitete Tage werden gemerkt."""
     now = now or utcnow()
@@ -160,7 +165,10 @@ def fetch_form4_daily(symbols: list[str], now=None) -> tuple[list[dict], dict]:
     for d in days:
         url = DAILY_INDEX.format(y=d.year, q=(d.month - 1) // 3 + 1, d=d.strftime("%Y%m%d"))
         try:
-            rows = parse_daily_index(http_get(url, limiter=_rl).text)
+            idx_text = http_get(url, limiter=_rl).text
+            rows = parse_daily_index(idx_text)
+            if watch:
+                _collect_stakes(parse_daily_index(idx_text, STAKE_FORMS), cik2sym, watch, d.isoformat())
         except Exception as exc:  # noqa: BLE001
             if "404" in str(exc):          # Feiertag/kein Index
                 done.add(d.isoformat())
@@ -191,6 +199,34 @@ def fetch_form4_daily(symbols: list[str], now=None) -> tuple[list[dict], dict]:
                   if (now - timedelta(days=back)).date().weekday() < 5
                   and (now - timedelta(days=back)).date().isoformat() not in done)
     return out, {"days": [x.isoformat() for x in days], "filings": filings, "errors": errors, "days_pending": pending}
+
+
+def _collect_stakes(rows: list[dict], cik2sym: dict[int, str], watch: dict[int, str], day: str) -> None:
+    """13D/13G (Beteiligung > 5 %) von beobachteten Superinvestoren an Firmen im Universum."""
+    by_file: dict[str, set[int]] = {}
+    forms: dict[str, str] = {}
+    for r in rows:
+        by_file.setdefault(r["file"], set()).add(r["cik"])
+        forms[r["file"]] = r["form"]
+    store = {x["id"]: x for x in read_json(STAKES, [])}
+    for f, ciks in by_file.items():
+        mgr = [c for c in ciks if c in watch]
+        iss = [c for c in ciks if c in cik2sym]
+        if not mgr or not iss:
+            continue
+        acc = f.rsplit("/", 1)[-1].replace(".txt", "")
+        sid = acc
+        store[sid] = {"id": sid, "manager": watch[mgr[0]], "manager_cik": mgr[0], "symbol": cik2sym[iss[0]],
+                      "form": forms[f], "filed_at": day, "activist": "13D" in forms[f],
+                      "amendment": forms[f].endswith("/A"),
+                      "url": f"https://www.sec.gov/Archives/edgar/data/{iss[0]}/{acc.replace('-', '')}/{acc}-index.htm"}
+    write_json_atomic(STAKES, sorted(store.values(), key=lambda x: x["filed_at"], reverse=True)[:500])
+
+
+def load_stakes(days: int = 120, now=None) -> list[dict]:
+    now = now or utcnow()
+    cutoff = (now - timedelta(days=days)).date().isoformat()
+    return [x for x in read_json(STAKES, []) if x["filed_at"] >= cutoff]
 
 
 def cluster_buys(items: list[dict], days: int = 14, now=None) -> list[dict]:

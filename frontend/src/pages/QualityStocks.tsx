@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { fmt, useData } from "../data";
 import type { Meta, StockRow } from "../types";
-import { CompanyLink, DataTable, Gate, IndexTags, Page, Panel, StockFilters, Tag, applyFilter, emptyFilter, riskLabel } from "../ui";
+import { CompanyLink, EventBadges, DataTable, Gate, IndexTags, Page, Panel, StockFilters, Tag, applyFilter, emptyFilter, riskLabel } from "../ui";
 
 export type Stocks = Meta & { stocks: StockRow[] };
 
@@ -30,7 +30,7 @@ function QualityView({ rows, f, setF }: { rows: StockRow[]; f: typeof emptyFilte
         <p className="muted small">{filtered.length} von {rows.length} Titeln</p>
         <DataTable rows={filtered} rowKey={(r) => r.symbol} initialSort={{ key: "q", dir: -1 }} limit={100}
           cols={[
-            { key: "sym", label: "Aktie", render: (r) => <><CompanyLink symbol={r.symbol} name={r.name} /><div><IndexTags idx={r.indexes} /> {r.status === "archived" ? <Tag tone="warn">archiviert</Tag> : null}</div></>, sort: (r) => r.symbol },
+            { key: "sym", label: "Aktie", render: (r) => <><CompanyLink symbol={r.symbol} name={r.name} /><div><IndexTags idx={r.indexes} /> {r.status === "archived" ? <Tag tone="warn">archiviert</Tag> : null}<EventBadges events={r.events} /></div></>, sort: (r) => r.symbol },
             { key: "sector", label: "Branche", render: (r) => <span className="small">{r.sector ?? "–"}</span>, sort: (r) => r.sector },
             { key: "q", label: "Quality", num: true, render: (r) => <span className="score-q">{fmt.num(r.quality.score, 0)}</span>, sort: (r) => r.quality.score },
             { key: "cov", label: "Abdeckung", num: true, render: (r) => <span className={r.quality.coverage_pct < 60 ? "warn-text" : ""}>{r.quality.coverage_pct} %</span>, sort: (r) => r.quality.coverage_pct },

@@ -1,6 +1,6 @@
 import { DRIVER_LABEL, INDEX_NAMES, MENTION_LABEL, SI_ACTION, SI_TONE, fmt, researchLinks, useData } from "../data";
 import type { CompanyDetail } from "../types";
-import { Axes, DataTable, Translated, Direction, Empty, Gate, IndexTags, Page, Panel, Src, Tag, Verif, riskLabel, stockAxes } from "../ui";
+import { Axes, EventBadges, DataTable, Translated, Direction, Empty, Gate, IndexTags, Page, Panel, Src, Tag, Verif, riskLabel, stockAxes } from "../ui";
 
 const BASIS: Record<string, string> = { data: "Daten", proxy: "Proxy", manual: "Manuell belegt", unknown: "unbekannt", not_applicable: "nicht anwendbar" };
 
@@ -14,7 +14,7 @@ function CompanyView({ d }: { d: CompanyDetail }) {
   const m = d.market_detail;
   return (
     <Page title={`${p.symbol} ${p.name}`}
-      intro={<>{p.sector ?? "Branche unbekannt"}{p.industry ? `, ${p.industry}` : ""}, {p.region}, {p.currency}. <IndexTags idx={p.indexes} />
+      intro={<>{p.sector ?? "Branche unbekannt"}{p.industry ? `, ${p.industry}` : ""}, {p.region}, {p.currency}. <IndexTags idx={p.indexes} /> <EventBadges events={p.events} max={3} />
         {p.status === "archived" ? <> <Tag tone="warn">archiviert seit {fmt.date(p.archived_at)} ({p.status_reason})</Tag></> : null}</>}
       actions={<a className="back" href="#/quality">Zur Übersicht</a>}>
       {p.data_flags.length ? <p className="state state-warn">Datenhinweise: {p.data_flags.join(", ")}</p> : null}
@@ -130,6 +130,30 @@ function CompanyView({ d }: { d: CompanyDetail }) {
           ))}</ul>
         ) : <Empty>Keine Signale erfasst.</Empty>}
       </Panel>
+
+      {(d.political_trades?.length || d.big_stakes?.length) ? (
+        <div className="grid-2">
+          <Panel title="Politiker-Trades (US-Kongress)" note="Offizielle Meldungen, bis 45 Tage Verzug, Beträge als Bandbreite.">
+            <DataTable rows={d.political_trades ?? []} rowKey={(r) => r.id} initialSort={{ key: "d", dir: -1 }} limit={15} empty="Keine Meldungen."
+              cols={[
+                { key: "p", label: "Person", render: (r) => <><strong>{r.politician}</strong><div className="small muted">{r.chamber}</div></> },
+                { key: "t", label: "Art", render: (r) => <Tag tone={r.transaction_type === "purchase" ? "ok" : r.transaction_type.startsWith("sale") ? "err" : undefined}>{({ purchase: "Kauf", sale: "Verkauf", sale_partial: "Teilverkauf", exchange: "Tausch" } as Record<string, string>)[r.transaction_type] ?? r.transaction_type}</Tag> },
+                { key: "a", label: "Betrag", num: true, render: (r) => r.amount_range[1] ? `${fmt.big(r.amount_range[0])}–${fmt.big(r.amount_range[1])} $` : "–" },
+                { key: "d", label: "Gemeldet", render: (r) => fmt.date(r.disclosure_date), sort: (r) => r.disclosure_date },
+                { key: "q", label: "Quelle", render: (r) => <Src url={r.source_url} label="Meldung" /> },
+              ]} />
+          </Panel>
+          <Panel title="Großbeteiligungen (13D/13G)" note="Beteiligungen über 5 % der beobachteten Superinvestoren.">
+            <DataTable rows={d.big_stakes ?? []} rowKey={(r) => r.id} initialSort={{ key: "d", dir: -1 }} empty="Keine Meldungen."
+              cols={[
+                { key: "d", label: "Gemeldet", render: (r) => fmt.date(r.filed_at), sort: (r) => r.filed_at },
+                { key: "m", label: "Investor", render: (r) => r.manager },
+                { key: "f", label: "Art", render: (r) => <Tag>{r.form}</Tag> },
+                { key: "q", label: "Quelle", render: (r) => <Src url={r.url} label="SEC" /> },
+              ]} />
+          </Panel>
+        </div>
+      ) : null}
 
       <Panel title="Superinvestoren (13F)" note="Bestände laut SEC-Pflichtmeldung zum Quartalsende, bis zu 45 Tage verzögert. Veränderung gegenüber dem Vorquartal.">
         {d.superinvestors?.length ? (

@@ -11,6 +11,7 @@ import { QualityStocks } from "./pages/QualityStocks";
 import { Company } from "./pages/Company";
 import { InsiderPage } from "./pages/Insider";
 import { Superinvestors } from "./pages/Superinvestors";
+import { Politicians } from "./pages/Politicians";
 import { SocialPage } from "./pages/Social";
 import { FactCheck } from "./pages/FactCheck";
 import { RiskOverview } from "./pages/Risk";
@@ -22,6 +23,7 @@ const NAV = [
   ["ticker", "Markt- & Wirtschaftsticker"],
   ["quality", "Quality Stocks"],
   ["superinvestors", "Superinvestoren"],
+  ["politicians", "Politiker-Trades"],
   ["insider", "Insider & Institutionen"],
   ["social", "Social Media"],
   ["factcheck", "Fact-Checking"],
@@ -73,6 +75,7 @@ function App() {
     case "quality": page = <QualityStocks />; break;
     case "company": page = <Company symbol={decodeURIComponent(rest.join("/"))} />; break;
     case "insider": page = <InsiderPage />; break;
+    case "politicians": page = <Politicians />; break;
     case "superinvestors": page = <Superinvestors manager={rest.length ? decodeURIComponent(rest.join("/")) : undefined} />; break;
     case "social": page = <SocialPage />; break;
     case "factcheck": page = <FactCheck />; break;

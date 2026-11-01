@@ -177,6 +177,9 @@ def extract_fundamentals(info: dict, fin: pd.DataFrame | None, bs: pd.DataFrame 
         "long_name": info.get("longName") or info.get("shortName"),
         "fiscal_year_end": None,
         "audit_risk": clean_number(info.get("auditRisk")),
+        "next_earnings_ts": clean_number(info.get("earningsTimestampStart") or info.get("earningsTimestamp")),
+        "earnings_is_estimate": bool(info.get("isEarningsDateEstimate")),
+        "ex_dividend_ts": clean_number(info.get("exDividendDate")),
         "board_risk": clean_number(info.get("boardRisk")),
         "top_customer_share": None,  # nicht kostenlos verfügbar -> unknown / CSV-Import
     }

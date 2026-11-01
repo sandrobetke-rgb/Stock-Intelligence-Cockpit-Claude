@@ -49,6 +49,10 @@ jobs:
         working-directory: backend
         env:
           SIC_USER_AGENT: ${{ secrets.SIC_USER_AGENT }}
+          # optional (kostenlos): eigener Reddit-Zugang und OpenFIGI-Schlüssel
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          OPENFIGI_API_KEY: ${{ secrets.OPENFIGI_API_KEY }}
         run: |
           ARGS=""
           # Push/CSV-Aenderung: nur neu auswerten. Ohne vorhandenes Universum (erster Lauf) immer voll abrufen.
