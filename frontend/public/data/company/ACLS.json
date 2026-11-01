@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 106.37999725341797,
     "day_low": 95.7300033569336,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 6.104653305769219,
+    "adx14": 23.953035148025975,
+    "ema10": 110.93243084681804,
+    "sma200": 123.13494998931884,
+    "perf_63d": -23.6805953162312,
+    "adr20_pct": 4.8029941953049065,
+    "range10_pct": 14.75961391742413,
+    "high10_prev": 119.3499984741211,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -138,11 +172,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 14.3,
+   "score": 43.2,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 3,
    "independent_24h": 0
   },
   "political": {
@@ -241,7 +277,17 @@
     "green": false,
     "day_high": 106.37999725341797,
     "day_low": 95.7300033569336,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 6.104653305769219,
+    "adx14": 23.953035148025975,
+    "ema10": 110.93243084681804,
+    "sma200": 123.13494998931884,
+    "perf_63d": -23.6805953162312,
+    "adr20_pct": 4.8029941953049065,
+    "range10_pct": 14.75961391742413,
+    "high10_prev": 119.3499984741211,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -271,6 +317,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -278,7 +345,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -616,11 +686,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 14.3,
+  "score": 43.2,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 86.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 81.2,
@@ -638,26 +708,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 10,
+    "independent": 10,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -675,7 +747,406 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "0f2f4952a981fc84",
+   "symbols": [
+    "ACLS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Axcelis Technologies (ACLS) Dips More Than Broader Market: What You Should Know",
+   "summary": "Axcelis Technologies (ACLS) closed at $112.02 in the latest trading session, marking a -1.5% move from the prior day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/axcelis-technologies-acls-dips-more-211501887.html?.tsrc=rss",
+   "published_at": "2026-10-29T21:15:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "2cb5a3103220e6d8",
+   "primary_source": false,
+   "cluster_id": "0f2f4952a981fc84",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "88068e7f8d2c62bf",
+   "symbols": [
+    "ACLS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Axcelis Technologies Names Jeroen Delsman as Executive Vice President and Chief Financial Officer",
+   "summary": "Axcelis Technologies, Inc. (Nasdaq: ACLS), a leading supplier of enabling ion implantation solutions for the semiconductor industry, today announced the appointment of Jeroen Delsman as Executive Vice President and Chief Financial Officer effective November 12, 2026. David Ryzhik",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/axcelis-technologies-names-jeroen-delsman-120000582.html?.tsrc=rss",
+   "published_at": "2026-10-27T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "97499ef910d25e84",
+   "primary_source": false,
+   "cluster_id": "88068e7f8d2c62bf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "65b818f0697362db",
+   "symbols": [
+    "ACLS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Can Axcelis Technologies (ACLS) Support Its Price With Earnings?",
+   "summary": "Axcelis Technologies has delivered a powerful long term share price run. After a recent pullback, the key question is whether the current US$106.58 price still lines up with what its earnings can support. With investors watching both its track record and its construction plans in",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/axcelis-technologies-acls-support-price-150858803.html?.tsrc=rss",
+   "published_at": "2026-10-25T15:08:58Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "b2feb2adbb0a5031",
+   "primary_source": false,
+   "cluster_id": "65b818f0697362db",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "77e0f849de86426e",
+   "symbols": [
+    "ACLS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Axcelis Technologies (ACLS) Expands In Korea, Is The Stock A Bargain?",
+   "summary": "Axcelis Technologies (ACLS) has drawn fresh attention to its stock after announcing a $35 million ion implantation manufacturing facility in Pyeongtaek, Korea, intended to expand its global production capacity. Recent trading reflects that tension between short term skepticism an",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/axcelis-technologies-acls-expands-korea-081101453.html?.tsrc=rss",
+   "published_at": "2026-10-25T08:11:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "7b559c32d2541dfd",
+   "primary_source": false,
+   "cluster_id": "77e0f849de86426e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bf8efba9b76da6dc",
+   "symbols": [
+    "ACLS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Should Korea Factory Plans Require Action From Axcelis Technologies Stock Investors?",
+   "summary": "Axcelis Technologies has already broken ground on a new US$35 million ion implantation manufacturing facility in Pyeongtaek, Korea. The 200,000 square foot site extends its existing Asia Operations Center with warehousing, cleanrooms, and a training hub ahead of planned productio",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/korea-factory-plans-require-action-020720119.html?.tsrc=rss",
+   "published_at": "2026-10-25T02:07:20Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "aa19408b8b92b003",
+   "primary_source": false,
+   "cluster_id": "bf8efba9b76da6dc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9bbbe811462a7809",
+   "symbols": [
+    "ACLS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Axcelis Technologies (ACLS) Rises As Market Takes a Dip: Key Facts",
+   "summary": "The latest trading day saw Axcelis Technologies (ACLS) settling at $106.58, representing a +1.76% change from its previous close.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/axcelis-technologies-acls-rises-market-211503102.html?.tsrc=rss",
+   "published_at": "2026-10-23T21:15:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "8005c9a7950bcbba",
+   "primary_source": false,
+   "cluster_id": "9bbbe811462a7809",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2afa70cc7dc6672a",
+   "symbols": [
+    "ACLS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Should KLAC Stock Be in Your Portfolio Pre-Q1 Earnings Results?",
+   "summary": "KLA's fiscal Q1 earnings outlook is fueled by AI investments, HBM demand and advanced packaging growth, but premium valuation and margin pressures warrant attention.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/klac-stock-portfolio-pre-q1-131200205.html?.tsrc=rss",
+   "published_at": "2026-10-23T13:12:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "76ef088d447022c7",
+   "primary_source": false,
+   "cluster_id": "2afa70cc7dc6672a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "11819f417d0fc51b",
+   "symbols": [
+    "ACLS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Axcelis Announces Timing and Availability of Third Quarter 2026 Results and Conference Call",
+   "summary": "Axcelis Technologies, Inc. (Nasdaq: ACLS), a leading supplier of enabling ion implantation solutions for the semiconductor industry, will release financial results for the third quarter of 2026 before the opening of the market on Thursday, November 5, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/axcelis-announces-timing-availability-third-120000801.html?.tsrc=rss",
+   "published_at": "2026-10-21T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "9397e052090379be",
+   "primary_source": false,
+   "cluster_id": "11819f417d0fc51b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ab61758a79d89982",
+   "symbols": [
+    "ACLS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Axcelis to Begin Construction of New Manufacturing Facility in Pyeongtaek, Korea",
+   "summary": "Axcelis Technologies, Inc. (Nasdaq: ACLS), a leading supplier of enabling ion implantation solutions for the semiconductor industry, today announced that it will officially break ground on its new ion implantation equipment manufacturing facility in Pyeongtaek, Gyeonggi Province,",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/axcelis-begin-construction-manufacturing-facility-120000006.html?.tsrc=rss",
+   "published_at": "2026-10-20T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "fba8958148412c29",
+   "primary_source": false,
+   "cluster_id": "ab61758a79d89982",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6eb2a5884137d374",
+   "symbols": [
+    "ACLS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Axcelis Technologies (ACLS) Stock Slides as Market Rises: Facts to Know Before You Trade",
+   "summary": "In the closing of the recent trading day, Axcelis Technologies (ACLS) stood at $142.31, denoting a -3.69% move from the preceding trading day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/axcelis-technologies-acls-stock-slides-211502424.html?.tsrc=rss",
+   "published_at": "2026-10-05T21:15:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "8e431f43b5ea99b9",
+   "primary_source": false,
+   "cluster_id": "6eb2a5884137d374",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "85efd4a7d6109b2e",
+   "symbols": [
+    "ACLS"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Axcelis Technologies (ACLS) Capitalizes on Accelerating AI and Power Semiconductor CapEx",
+   "summary": "American Century Investments, an investment management company, released its second-quarter 2026 investor letter for the “American Century Investments Small Cap Value Fund.” The letter can be downloaded here. U.S. equities posted strong gains during the second quarter of 2026, wi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/axcelis-technologies-acls-capitalizes-accelerating-133448026.html?.tsrc=rss",
+   "published_at": "2026-09-30T13:34:48Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "682cbbcfc31d472b",
+   "primary_source": false,
+   "cluster_id": "85efd4a7d6109b2e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "83b1e6bbdfe527dd",
+   "symbols": [
+    "ACLS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Axcelis (ACLS) Building a Long-Term Winner?",
+   "summary": "Axcelis Technologies (NASDAQ:ACLS) has built an enviable niche in the semiconductor capital equipment market, but recent cyclical headwinds present an intriguing opportunity for value-oriented growth investors. Despite navigating a semiconductor digestion phase that pulled annual",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/axcelis-acls-building-long-term-061809665.html?.tsrc=rss",
+   "published_at": "2026-09-28T06:18:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "5261e683641468a2",
+   "primary_source": false,
+   "cluster_id": "83b1e6bbdfe527dd",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "40a550e2161e3139",
+   "symbols": [
+    "ACLS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Axcelis Technologies (ACLS) Stock Moves 2.29%: What You Should Know",
+   "summary": "In the closing of the recent trading day, Axcelis Technologies (ACLS) stood at $115.74, denoting a +2.29% move from the preceding trading day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/axcelis-technologies-acls-stock-moves-221502680.html?.tsrc=rss",
+   "published_at": "2026-09-22T22:15:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "57159586e557a7f6",
+   "primary_source": false,
+   "cluster_id": "40a550e2161e3139",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3542b63f17d0f7fe",
+   "symbols": [
+    "ACLS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Did Axcelis Technologies (ACLS) Shares Climb After Its Latest Update?",
+   "summary": "Axcelis Technologies (ACLS) has drawn fresh attention after announcing a planned US$35 million ion implantation manufacturing facility in Pyeongtaek, Korea. This capacity move puts the stock’s recent performance into sharper focus. The Axcelis Technologies share price has picked ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-did-axcelis-technologies-acls-211612763.html?.tsrc=rss",
+   "published_at": "2026-09-22T21:16:12Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "800c756c2d502fd2",
+   "primary_source": false,
+   "cluster_id": "3542b63f17d0f7fe",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "13322fc9f6ce988c",
+   "symbols": [
+    "ACLS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Axcelis Technologies (ACLS) Is Up 7.4% After Announcing Major Korean Manufacturing Expansion Plan - Has The Bull Case Changed?",
+   "summary": "Axcelis Technologies has announced plans to invest US$35,000,000 in a new 200,000-square-foot ion implantation equipment manufacturing facility in Pyeongtaek, Korea, with integrated cleanrooms, warehousing, and training capabilities, following an investment declaration ceremony w",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/axcelis-technologies-acls-7-4-131724331.html?.tsrc=rss",
+   "published_at": "2026-09-22T13:17:24Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "887ab737d387c3d3",
+   "primary_source": false,
+   "cluster_id": "13322fc9f6ce988c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4d39660e87580c64",
+   "symbols": [
+    "ACLS",
+    "KLIC",
+    "VECO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "KLIC Up 93.6% in a Year: Should Investors Bet on the Stock Now?",
+   "summary": "Kulicke & Soffa's 93.6% one-year surge is backed by AI demand, advanced packaging growth, robust earnings & rising estimates, with TCB adding another catalyst.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/klic-93-6-investors-bet-153400907.html?.tsrc=rss",
+   "published_at": "2026-09-21T15:34:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:12Z",
+   "fingerprint": "988190ef261e363f",
+   "primary_source": false,
+   "cluster_id": "4d39660e87580c64",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4e519e28abc90bd8",
+   "symbols": [
+    "ACLS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Axcelis Announces Sponsorship and Participation in the 23rd International Conference on Silicon Carbide and Related Materials (ICSCRM 2026)",
+   "summary": "Axcelis Technologies, Inc. (NASDAQ: ACLS), a leading supplier of enabling ion implantation solutions for the semiconductor industry, will be participating in the 23rd International Conference on Silicon Carbide and Related Materials (ICSCRM 2026) taking place September 28 - Octob",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/axcelis-announces-sponsorship-participation-23rd-120100577.html?.tsrc=rss",
+   "published_at": "2026-09-21T12:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "dec8dfb8f859737d",
+   "primary_source": false,
+   "cluster_id": "4e519e28abc90bd8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f9e40b0606448762",
+   "symbols": [
+    "ACLS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ASX Up 230.9% in the Past Year: Should You Capitalize on the Euphoria?",
+   "summary": "ASE Technology's 230.9% one-year surge is fueled by booming AI packaging demand, rising LEAP volumes, margin expansion and a $10.5 billion 2026 capex plan.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/asx-230-9-past-capitalize-160000402.html?.tsrc=rss",
+   "published_at": "2026-09-17T16:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "48c75be563cb8b98",
+   "primary_source": false,
+   "cluster_id": "f9e40b0606448762",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

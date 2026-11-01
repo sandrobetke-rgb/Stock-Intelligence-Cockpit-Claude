@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 3.175288437610486,
    "rvol": 1.0688836104513064,
    "ema10": 27.495896470937904,
-   "ema21": 27.20893377641779,
+   "ema21": 27.208933776417734,
    "sma50": 27.84015506744385,
-   "sma200": 25.676997079849244
+   "sma200": 25.676997060775758
   },
   "market_cap": 216690480.0,
   "market_cap_currency": "USD",
@@ -34,17 +34,17 @@
    "tech": {
     "close": 28.31999969482422,
     "change_pct": -0.03529907839310287,
-    "ema20": 27.211844685886504,
-    "ema50": 27.33847201647643,
-    "ema200": 27.311856505107446,
+    "ema20": 27.211844685886476,
+    "ema50": 27.33847201625685,
+    "ema200": 27.311856510527516,
     "sma50": 27.84015506744385,
-    "rsi14": 63.18732338393507,
-    "rsi_min5": 55.311977978981226,
-    "atr14": 0.8833506251887109,
-    "atr_pct": 3.119175970012996,
+    "rsi14": 63.18732338389133,
+    "rsi_min5": 55.31197797897199,
+    "atr14": 0.8833506251892533,
+    "atr_pct": 3.1191759700149113,
     "rvol": 1.0688836104513064,
     "vol30": 34320.0,
-    "dist_ema200_pct": 3.69122908041144,
+    "dist_ema200_pct": 3.6912290598338116,
     "dist_52w_high_pct": 11.258856336079814,
     "high_52w": 31.91304340417058,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 28.469999313354492,
     "day_low": 27.81999969482422,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 95.81760152436269,
+    "adx14": 13.272687049115632,
+    "ema10": 27.495896470937904,
+    "sma200": 25.676997060775758,
+    "perf_63d": 12.866316930263766,
+    "adr20_pct": 3.175288437610486,
+    "range10_pct": 14.211781749817675,
+    "high10_prev": 28.690000534057617,
+    "pullback_ema20": false,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.5,
     "S03": 0.6666666666666666,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 28.469999313354492,
     "entry_max": 29.039399299621582,
-    "stop": 27.144973375571425,
-    "risk_per_share": 1.3250259377830673,
-    "target_1": 31.120051188920627,
+    "stop": 27.14497337557061,
+    "risk_per_share": 1.325025937783881,
+    "target_1": 31.120051188922254,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -139,11 +173,11 @@
    ]
   },
   "market_intelligence": {
-   "score": 16.8,
+   "score": 17.6,
    "drivers": [
     "news_flow",
     "source_diversity",
-    "price_volume_anomaly"
+    "social_attention"
    ],
    "independent_7d": 1,
    "independent_24h": 0
@@ -156,7 +190,14 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 1,
+   "manipulation_risk": "unauffällig",
+   "mentions_24h": 0,
+   "sentiment_7d": 1.0,
+   "bullish_7d": 1,
+   "bearish_7d": 0
+  },
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
@@ -190,9 +231,9 @@
   "adr20": 3.175288437610486,
   "rvol": 1.0688836104513064,
   "ema10": 27.495896470937904,
-  "ema21": 27.20893377641779,
+  "ema21": 27.208933776417734,
   "sma50": 27.84015506744385,
-  "sma200": 25.676997079849244,
+  "sma200": 25.676997060775758,
   "volatility_ann": 32.72983905052336,
   "avg_dollar_volume_20d": 898594.8507022858,
   "move_zscore": -0.017120631016930767,
@@ -200,17 +241,17 @@
    "tech": {
     "close": 28.31999969482422,
     "change_pct": -0.03529907839310287,
-    "ema20": 27.211844685886504,
-    "ema50": 27.33847201647643,
-    "ema200": 27.311856505107446,
+    "ema20": 27.211844685886476,
+    "ema50": 27.33847201625685,
+    "ema200": 27.311856510527516,
     "sma50": 27.84015506744385,
-    "rsi14": 63.18732338393507,
-    "rsi_min5": 55.311977978981226,
-    "atr14": 0.8833506251887109,
-    "atr_pct": 3.119175970012996,
+    "rsi14": 63.18732338389133,
+    "rsi_min5": 55.31197797897199,
+    "atr14": 0.8833506251892533,
+    "atr_pct": 3.1191759700149113,
     "rvol": 1.0688836104513064,
     "vol30": 34320.0,
-    "dist_ema200_pct": 3.69122908041144,
+    "dist_ema200_pct": 3.6912290598338116,
     "dist_52w_high_pct": 11.258856336079814,
     "high_52w": 31.91304340417058,
     "macd_above_signal": true,
@@ -224,7 +265,17 @@
     "green": false,
     "day_high": 28.469999313354492,
     "day_low": 27.81999969482422,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 95.81760152436269,
+    "adx14": 13.272687049115632,
+    "ema10": 27.495896470937904,
+    "sma200": 25.676997060775758,
+    "perf_63d": 12.866316930263766,
+    "adr20_pct": 3.175288437610486,
+    "range10_pct": 14.211781749817675,
+    "high10_prev": 28.690000534057617,
+    "pullback_ema20": false,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -254,6 +305,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -261,7 +333,10 @@
     "S01": 0.5,
     "S02": 0.5,
     "S03": 0.6666666666666666,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -274,9 +349,9 @@
    "plan": {
     "trigger": 28.469999313354492,
     "entry_max": 29.039399299621582,
-    "stop": 27.144973375571425,
-    "risk_per_share": 1.3250259377830673,
-    "target_1": 31.120051188920627,
+    "stop": 27.14497337557061,
+    "risk_per_share": 1.325025937783881,
+    "target_1": 31.120051188922254,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -600,7 +675,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 16.8,
+  "score": 17.6,
   "components": {
    "news_flow": 43.0,
    "freshness": 0,
@@ -608,7 +683,7 @@
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 3.4,
-   "social_attention": null,
+   "social_attention": 25.0,
    "insider_activity": null
   },
   "windows": {
@@ -643,7 +718,7 @@
   "drivers": [
    "news_flow",
    "source_diversity",
-   "price_volume_anomaly"
+   "social_attention"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -1020,6 +1095,39 @@
  "political_trades": [],
  "big_stakes": [],
  "superinvestors": [],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 0,
+  "mentions_7d": 1,
+  "mentions_30d": 1,
+  "change_vs_baseline_pct": -100,
+  "engagement_7d": 2.0,
+  "sentiment_7d": 1.0,
+  "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
+  "bullish_7d": 1,
+  "bearish_7d": 0,
+  "by_platform_7d": {
+   "stocktwits": 1
+  },
+  "communities_7d": {
+   "StockTwits": 1
+  },
+  "platforms": [
+   "stocktwits"
+  ],
+  "manipulation_flags": [],
+  "manipulation_risk": "unauffällig",
+  "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "Orchard",
+    "posted_at": "2026-10-30T12:52:40Z",
+    "url": "https://stocktwits.com/Orchard/message/667748073",
+    "text": "$RICK So sector rotation is in effect. Out of AI despite the literal lowest PE and juiciest margins in history. $MU is a beast yet people think 40x $AAPL and $COST are “safe”. Let’s watch Strip Club RICK continue to compound as they soon resume shr buybacks and pay down debt. In less than 8 months they will shrink the shr count to 7.5 mil and EPS will be above $6.00+. Fair value is $72-78, if it t",
+    "engagement": 2.0,
+    "sentiment_label": "Bullish"
+   }
+  ]
+ },
  "history": []
 }

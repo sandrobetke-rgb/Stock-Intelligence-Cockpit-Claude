@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 47.354000091552734,
     "day_low": 43.56999969482422,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 7.43709240763441,
+    "adx14": 33.6715584075714,
+    "ema10": 52.31198147271431,
+    "sma200": 68.59587480545044,
+    "perf_63d": -42.17955038960943,
+    "adr20_pct": 5.945260401778078,
+    "range10_pct": 20.155437252064434,
+    "high10_prev": 57.974998474121094,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -139,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 9.4,
+   "score": 42.3,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 4,
    "independent_24h": 0
   },
   "political": {
@@ -242,7 +278,17 @@
     "green": false,
     "day_high": 47.354000091552734,
     "day_low": 43.56999969482422,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 7.43709240763441,
+    "adx14": 33.6715584075714,
+    "ema10": 52.31198147271431,
+    "sma200": 68.59587480545044,
+    "perf_63d": -42.17955038960943,
+    "adr20_pct": 5.945260401778078,
+    "range10_pct": 20.155437252064434,
+    "high10_prev": 57.974998474121094,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -272,6 +318,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -279,7 +346,10 @@
     "S01": 0.5,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -618,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 9.4,
+  "score": 42.3,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 99.8,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 53.2,
@@ -640,26 +710,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 19,
+    "independent": 19,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -677,7 +749,451 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "c804c5fe964be345",
+   "symbols": [
+    "ACMR",
+    "ON",
+    "XMTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACM Research And 2 Other Great Automation Stocks To Own",
+   "summary": "AI related investment is now a clear driver of US economic activity, with recent data linking faster GDP growth to heavy spending on advanced computing. That shift creates a tailwind for the companies building the physical robots and automation systems that put this digital intel",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/acm-research-2-other-great-211031563.html?.tsrc=rss",
+   "published_at": "2026-10-29T21:10:31Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:22Z",
+   "fingerprint": "98324c4696049030",
+   "primary_source": false,
+   "cluster_id": "c804c5fe964be345",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "373f6bc5faaea53e",
+   "symbols": [
+    "ACMR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACM Research Announces Preliminary Unaudited Revenue and Shipments for the Third Quarter 2026",
+   "summary": "Coincides with Release of ACM Shanghai Third Quarter 2026 ResultsFREMONT, Calif., Oct. 28, 2026 (GLOBE NEWSWIRE) -- ACM Research, Inc. (“ACM”) (NASDAQ: ACMR), a leading supplier of wafer and panel processing solutions for semiconductor and advanced packaging applications, today a",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/acm-research-announces-preliminary-unaudited-103000476.html?.tsrc=rss",
+   "published_at": "2026-10-28T10:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:35Z",
+   "fingerprint": "6db47ce880183bd2",
+   "primary_source": false,
+   "cluster_id": "373f6bc5faaea53e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "215b2fd9554b23f6",
+   "symbols": [
+    "ACMR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACM Research Announces Shipment of Its First 310 × 310 mm Ultra ECP ap-p Panel-Level Horizontal Electroplating Production Tool",
+   "summary": "FREMONT, Calif., Oct. 28, 2026 (GLOBE NEWSWIRE) -- ACM Research, Inc. (“ACM”) (NASDAQ: ACMR), a leading supplier of wafer processing solutions for semiconductor and advanced packaging applications, today announced the shipment of its first 310 × 310 mm Ultra ECP ap-p panel-level ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/acm-research-announces-shipment-first-103000112.html?.tsrc=rss",
+   "published_at": "2026-10-28T10:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:35Z",
+   "fingerprint": "c8846134c6a6e374",
+   "primary_source": false,
+   "cluster_id": "215b2fd9554b23f6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "931ac599d01401cd",
+   "symbols": [
+    "ACMR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACM Research, Inc. (ACMR) Surpasses Market Returns: Some Facts Worth Knowing",
+   "summary": "ACM Research, Inc. (ACMR) reached $51.97 at the closing of the latest trading day, reflecting a +1.98% change compared to its last close.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acm-research-inc-acmr-surpasses-204501529.html?.tsrc=rss",
+   "published_at": "2026-10-27T20:45:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:35Z",
+   "fingerprint": "25dd461ba3f441df",
+   "primary_source": false,
+   "cluster_id": "931ac599d01401cd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a20af24f6d6c5efe",
+   "symbols": [
+    "ACMR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wall Street Analysts Think ACM Research (ACMR) Is a Good Investment: Is It?",
+   "summary": "According to the average brokerage recommendation (ABR), one should invest in ACM Research (ACMR). It is debatable whether this highly sought-after metric is effective because Wall Street analysts' recommendations tend to be overly optimistic. Would it be worth investing in the s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-think-acm-123002667.html?.tsrc=rss",
+   "published_at": "2026-10-23T12:30:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:35Z",
+   "fingerprint": "f8764f3587ca6e48",
+   "primary_source": false,
+   "cluster_id": "a20af24f6d6c5efe",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a59327551adae516",
+   "symbols": [
+    "ACMR",
+    "XMTR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "3 Automation Stocks With Up To 38% Earnings Growth",
+   "summary": "Oil prices recently jumped to a five month high after attacks on Saudi and Hormuz shipping routes raised fresh questions about global energy security. When fuel costs spike and supply looks fragile, businesses feel real pressure to do more with less labor and less energy. That is",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-automation-stocks-38-earnings-201117175.html?.tsrc=rss",
+   "published_at": "2026-10-22T20:11:17Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:00Z",
+   "fingerprint": "39a5a6089e9054cc",
+   "primary_source": false,
+   "cluster_id": "a59327551adae516",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5534eb9cd201223d",
+   "symbols": [
+    "ACMR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Semiconductor Equipment Stocks for AI Fab Growth",
+   "summary": "Elon Musk’s idea of fusing Tesla with SpaceX into a single US$3.6tn giant has thrown a spotlight on who actually builds and equips the fabs that would feed such large-scale AI and cloud plans. If capital flows toward that vision, the businesses wiring up fabs, cleanrooms and wafe",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/3-semiconductor-equipment-stocks-ai-131240096.html?.tsrc=rss",
+   "published_at": "2026-10-22T13:12:40Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:35Z",
+   "fingerprint": "29d7c0be00cdc53a",
+   "primary_source": false,
+   "cluster_id": "5534eb9cd201223d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "40c2c0ca937f40ba",
+   "symbols": [
+    "ACMR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACM Research Enhances Single-Wafer Hot SPM System with Sulfuric Acid Recycle Capability",
+   "summary": "New capability delivers a 70% sulfuric acid recycle rate while maintaining stringent particle control; System validated across more than 50 process layers at a foundry customerFREMONT, Calif., Oct. 21, 2026 (GLOBE NEWSWIRE) -- ACM Research, Inc. (“ACM”) (NASDAQ: ACMR), a leading ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/acm-research-enhances-single-wafer-000000310.html?.tsrc=rss",
+   "published_at": "2026-10-22T00:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:35Z",
+   "fingerprint": "af0d247d9547a6f1",
+   "primary_source": false,
+   "cluster_id": "40c2c0ca937f40ba",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bc3d47aa6342e879",
+   "symbols": [
+    "ACMR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACM Research, Inc. (ACMR) Stock Drops Despite Market Gains: Important Facts to Note",
+   "summary": "ACM Research, Inc. (ACMR) concluded the recent trading session at $54.96, signifying a -2.01% move from its prior day's close.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acm-research-inc-acmr-stock-204503275.html?.tsrc=rss",
+   "published_at": "2026-10-20T20:45:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:35Z",
+   "fingerprint": "68dadd3223aea8ee",
+   "primary_source": false,
+   "cluster_id": "bc3d47aa6342e879",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6d66f4161c429e22",
+   "symbols": [
+    "ACMR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACM Research, Inc. (ACMR) is Attracting Investor Attention: Here is What You Should Know",
+   "summary": "Recently, Zacks.com users have been paying close attention to ACM Research (ACMR). This makes it worthwhile to examine what the stock has in store.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acm-research-inc-acmr-attracting-120004966.html?.tsrc=rss",
+   "published_at": "2026-10-20T12:00:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:35Z",
+   "fingerprint": "93a9b94ac7e3f266",
+   "primary_source": false,
+   "cluster_id": "6d66f4161c429e22",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "393bb8953693b1c1",
+   "symbols": [
+    "ACMR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACM Research to Release Third Quarter 2026 Financial Results on November 5, 2026",
+   "summary": "FREMONT, Calif., Oct. 19, 2026 (GLOBE NEWSWIRE) -- ACM Research, Inc. (“ACM”) (NASDAQ: ACMR) announced today that it will release its financial results for the third quarter of 2026 before the U.S. market open on Thursday, November 5, 2026. ACM will conduct a corresponding confer",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acm-research-release-third-quarter-200500787.html?.tsrc=rss",
+   "published_at": "2026-10-19T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:35Z",
+   "fingerprint": "c06e243ddf64cd85",
+   "primary_source": false,
+   "cluster_id": "393bb8953693b1c1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2517e1f1a9c2806a",
+   "symbols": [
+    "ACMR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACM Research Is Gaining Ground as China Replaces Foreign Semiconductor Equipment",
+   "summary": "China's push to replace foreign semiconductor equipment is reshaping which domestic suppliers actually win, and one U.S.-listed company is outpacing the broader market in ways that have less to do with industry spending than most investors assume.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/19/acm-research-is-gaining-ground-as-china-replaces-foreign-semiconductor-equipment/?.tsrc=rss",
+   "published_at": "2026-10-19T19:37:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:35Z",
+   "fingerprint": "d63b1cb23101d5fc",
+   "primary_source": false,
+   "cluster_id": "2517e1f1a9c2806a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "faca8b1d70286244",
+   "symbols": [
+    "ACMR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Broadcom And 2 Top AI Chip Stocks To Watch",
+   "summary": "AI specialist Anthropic just reported quarterly revenue of $16.8b and moved into profit, a reminder that demand for computing power can turn into real cash flow, not just headlines. The chips and tools that feed that appetite sit earlier in the chain, where investors often look f",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/broadcom-2-top-ai-chip-031733617.html?.tsrc=rss",
+   "published_at": "2026-10-15T03:17:33Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:35Z",
+   "fingerprint": "8f0078a0fad64556",
+   "primary_source": false,
+   "cluster_id": "faca8b1d70286244",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "828a11b18a1c0683",
+   "symbols": [
+    "ACMR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACM Research, Inc. (ACMR) Registers a Bigger Fall Than the Market: Important Facts to Note",
+   "summary": "ACM Research, Inc. (ACMR) closed at $68.1 in the latest trading session, marking a -4.58% move from the prior day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acm-research-inc-acmr-registers-204502065.html?.tsrc=rss",
+   "published_at": "2026-10-12T20:45:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:35Z",
+   "fingerprint": "5064ba833d255fb1",
+   "primary_source": false,
+   "cluster_id": "828a11b18a1c0683",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "52134447165309f2",
+   "symbols": [
+    "ACMR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACM Research, Inc. (ACMR) Is a Trending Stock: Facts to Know Before Betting on It",
+   "summary": "Zacks.com users have recently been watching ACM Research (ACMR) quite a bit. Thus, it is worth knowing the facts that could determine the stock's prospects.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acm-research-inc-acmr-trending-120004097.html?.tsrc=rss",
+   "published_at": "2026-10-09T12:00:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:35Z",
+   "fingerprint": "8fa2b51d708e0a22",
+   "primary_source": false,
+   "cluster_id": "52134447165309f2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6fd67754a704670b",
+   "symbols": [
+    "ACMR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACM Research And 2 Other Automation Stocks To Watch",
+   "summary": "AI related hardware demand is surging, and recent record revenues at TSMC highlight how quickly physical automation is spreading through global supply chains. Robots and factory automation are moving from experimental projects to core infrastructure as companies look for ways to ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/acm-research-2-other-automation-181203793.html?.tsrc=rss",
+   "published_at": "2026-10-08T18:12:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:35Z",
+   "fingerprint": "ff0b87c3a3668d17",
+   "primary_source": false,
+   "cluster_id": "6fd67754a704670b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "85b18316de575901",
+   "symbols": [
+    "ACMR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "AI Chip Demand Meets Reality in ASML Stock and Semiconductor Equipment Shares",
+   "summary": "AI chip euphoria just met cold reality, with Samsung and TSMC reporting record quarterly figures while their stocks slipped as traders questioned how long the boom can run. That disconnect between blockbuster earnings and softer share prices is where opportunity often hides for p",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/ai-chip-demand-meets-reality-121644263.html?.tsrc=rss",
+   "published_at": "2026-10-08T12:16:44Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:35Z",
+   "fingerprint": "3fea17bea434d059",
+   "primary_source": false,
+   "cluster_id": "85b18316de575901",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6ac2e5225d7796e1",
+   "symbols": [
+    "ACMR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACM Research (ACMR) Is Considered a Good Investment by Brokers: Is That True?",
+   "summary": "The average brokerage recommendation (ABR) for ACM Research (ACMR) is equivalent to a Buy. The overly optimistic recommendations of Wall Street analysts make the effectiveness of this highly sought-after metric questionable. So, is it worth buying the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acm-research-acmr-considered-good-123003193.html?.tsrc=rss",
+   "published_at": "2026-10-07T12:30:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:35Z",
+   "fingerprint": "ed8a7d4d1732b969",
+   "primary_source": false,
+   "cluster_id": "6ac2e5225d7796e1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7549119de8149679",
+   "symbols": [
+    "ACMR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACM Research, Inc. (ACMR) Stock Slides as Market Rises: Facts to Know Before You Trade",
+   "summary": "In the closing of the recent trading day, ACM Research, Inc. (ACMR) stood at $76.28, denoting a -8.52% move from the preceding trading day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acm-research-inc-acmr-stock-204504116.html?.tsrc=rss",
+   "published_at": "2026-10-05T20:45:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:35Z",
+   "fingerprint": "48b44cd272767ef6",
+   "primary_source": false,
+   "cluster_id": "7549119de8149679",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "63171ee5a38c5e7e",
+   "symbols": [
+    "ACMR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACM Research Announces Participation in 18th Annual CEO Investor Summit 2026",
+   "summary": "FREMONT, Calif., Sept. 30, 2026 (GLOBE NEWSWIRE) -- ACM Research, Inc. (“ACM”) (NASDAQ: ACMR), a leading supplier of wafer and panel processing solutions for semiconductor and advanced packaging applications, today announced management’s participation in the 18th Annual CEO Inves",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/acm-research-announces-participation-18th-200500249.html?.tsrc=rss",
+   "published_at": "2026-09-30T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:35Z",
+   "fingerprint": "ae7bbbdc58ec2d9a",
+   "primary_source": false,
+   "cluster_id": "63171ee5a38c5e7e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

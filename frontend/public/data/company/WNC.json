@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -26,7 +26,7 @@
    "ema10": 12.946631471197332,
    "ema21": 12.947176402856638,
    "sma50": 12.833009872436524,
-   "sma200": 10.743023145198823
+   "sma200": 10.743023147583008
   },
   "market_cap": 478272288.0,
   "market_cap_currency": "USD",
@@ -35,16 +35,16 @@
     "close": 11.739999771118164,
     "change_pct": -11.463050011514575,
     "ema20": 12.950606348009456,
-    "ema50": 12.755801992567745,
-    "ema200": 11.360363041297019,
+    "ema50": 12.755801992656185,
+    "ema200": 11.360363049697963,
     "sma50": 12.833009872436524,
-    "rsi14": 38.781552313525395,
-    "rsi_min5": 38.781552313525395,
-    "atr14": 0.8255157400432704,
-    "atr_pct": 7.031650392993534,
+    "rsi14": 38.78155231350273,
+    "rsi_min5": 38.78155231350273,
+    "atr14": 0.8255157400429699,
+    "atr_pct": 7.031650392990975,
     "rvol": 2.428087986463621,
     "vol30": 906113.3333333334,
-    "dist_ema200_pct": 3.3417658259784044,
+    "dist_ema200_pct": 3.341765749557579,
     "dist_52w_high_pct": 18.839127047517945,
     "high_52w": 14.465097951807001,
     "macd_above_signal": false,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 13.270000457763672,
     "day_low": 11.649999618530273,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 6.326365367352238,
+    "adx14": 13.217126747254081,
+    "ema10": 12.946631471197332,
+    "sma200": 10.743023147583008,
+    "perf_63d": -5.225467758573609,
+    "adr20_pct": 5.647029056946524,
+    "range10_pct": 19.765499943809893,
+    "high10_prev": 14.300000190734863,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,14 +98,40 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.3333333333333333,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.5,
+    "RSI2": 1.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -108,9 +144,9 @@
    "plan": {
     "trigger": 13.270000457763672,
     "entry_max": 13.535400466918945,
-    "stop": 12.031726847698767,
-    "risk_per_share": 1.2382736100649048,
-    "target_1": 15.746547677893481,
+    "stop": 12.031726847699217,
+    "risk_per_share": 1.2382736100644554,
+    "target_1": 15.746547677892583,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -139,12 +175,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 15.5,
+   "score": 64.9,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 9,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -210,7 +248,7 @@
   "ema10": 12.946631471197332,
   "ema21": 12.947176402856638,
   "sma50": 12.833009872436524,
-  "sma200": 10.743023145198823,
+  "sma200": 10.743023147583008,
   "volatility_ann": 62.17273692581102,
   "avg_dollar_volume_20d": 10322095.944657326,
   "move_zscore": -2.926850040359683,
@@ -219,16 +257,16 @@
     "close": 11.739999771118164,
     "change_pct": -11.463050011514575,
     "ema20": 12.950606348009456,
-    "ema50": 12.755801992567745,
-    "ema200": 11.360363041297019,
+    "ema50": 12.755801992656185,
+    "ema200": 11.360363049697963,
     "sma50": 12.833009872436524,
-    "rsi14": 38.781552313525395,
-    "rsi_min5": 38.781552313525395,
-    "atr14": 0.8255157400432704,
-    "atr_pct": 7.031650392993534,
+    "rsi14": 38.78155231350273,
+    "rsi_min5": 38.78155231350273,
+    "atr14": 0.8255157400429699,
+    "atr_pct": 7.031650392990975,
     "rvol": 2.428087986463621,
     "vol30": 906113.3333333334,
-    "dist_ema200_pct": 3.3417658259784044,
+    "dist_ema200_pct": 3.341765749557579,
     "dist_52w_high_pct": 18.839127047517945,
     "high_52w": 14.465097951807001,
     "macd_above_signal": false,
@@ -242,7 +280,17 @@
     "green": false,
     "day_high": 13.270000457763672,
     "day_low": 11.649999618530273,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 6.326365367352238,
+    "adx14": 13.217126747254081,
+    "ema10": 12.946631471197332,
+    "sma200": 10.743023147583008,
+    "perf_63d": -5.225467758573609,
+    "adr20_pct": 5.647029056946524,
+    "range10_pct": 19.765499943809893,
+    "high10_prev": 14.300000190734863,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -272,14 +320,40 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.3333333333333333,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.5,
+    "RSI2": 1.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -292,9 +366,9 @@
    "plan": {
     "trigger": 13.270000457763672,
     "entry_max": 13.535400466918945,
-    "stop": 12.031726847698767,
-    "risk_per_share": 1.2382736100649048,
-    "target_1": 15.746547677893481,
+    "stop": 12.031726847699217,
+    "risk_per_share": 1.2382736100644554,
+    "target_1": 15.746547677892583,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -618,11 +692,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 15.5,
+  "score": 64.9,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 80,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 87.8,
@@ -631,35 +705,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 9,
+    "independent": 9,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 13,
+    "independent": 13,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -677,7 +753,432 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "e038c7ae78b519fe",
+   "symbols": [
+    "WNC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WNC Q3 deep dive: pulled-forward costs, backlog surge, and confidence in 2027 recovery",
+   "summary": "Semi trailers and liquid transportation container manufacturer Wabash (NYSE:WNC) reported Q3 2026 results topping the market’s revenue expectations, with sales up 24.8% year on year to $476.4 million. The company expects next quarter’s revenue to be around $435 million, close to ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wnc-q3-deep-dive-pulled-215500146.html?.tsrc=rss",
+   "published_at": "2026-10-31T21:55:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:45Z",
+   "fingerprint": "bb587666ca876a53",
+   "primary_source": false,
+   "cluster_id": "e038c7ae78b519fe",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "WNC Q3 Deep Dive: Pull-Forward-Kosten, Rückstandsschub und Vertrauen in die Erholung 2027"
+  },
+  {
+   "id": "0dd5447adaf08b6d",
+   "symbols": [
+    "WNC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What Wabash National (WNC) Said on Its Q3 Earnings Call",
+   "summary": "Wabash National (NYSE:WNC) reported third-quarter revenue of more than $476 million and an adjusted loss of $0.63 per diluted share, while management said accelerating dry van orders prompted the company to bring forward capacity and workforce investments previously planned for 2",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-wabash-national-wnc-said-on-its-q3-earnings-call-2026-10-30/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-31T04:13:58Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:45Z",
+   "fingerprint": "02c4e37606d140e7",
+   "primary_source": false,
+   "cluster_id": "0dd5447adaf08b6d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Was Wabash National (WNC) zu seinem Q3-Gewinnaufruf sagte"
+  },
+  {
+   "id": "a1a9ad4c9d529d1c",
+   "symbols": [
+    "WNC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Wabash National Corporation Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Wabash National Corporation's Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-wabash-national-corporation-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-29T22:19:58Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:45Z",
+   "fingerprint": "507789283e7783de",
+   "primary_source": false,
+   "cluster_id": "a1a9ad4c9d529d1c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7767d862c7a26b03",
+   "symbols": [
+    "WNC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Wabash (WNC) stock is trading lower today",
+   "summary": "Shares of semi trailers and liquid transportation container manufacturer Wabash (NYSE:WNC) fell 2.5% in the afternoon session after the company reported third-quarter adjusted earnings per share below consensus estimates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-wabash-wnc-stock-trading-210434867.html?.tsrc=rss",
+   "published_at": "2026-10-29T21:04:34Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:45Z",
+   "fingerprint": "59bab91d9ec0d5ea",
+   "primary_source": false,
+   "cluster_id": "7767d862c7a26b03",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b7fe6bbc9ebd8c03",
+   "symbols": [
+    "WNC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Wabash National (WNC) Q3 2026 Earnings Call Transcript",
+   "summary": "CEO signals dry van volumes could exceed 40,000 units in 2027 amid strong backlog growth.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/29/wabash-national-wnc-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-29T20:58:55Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:45Z",
+   "fingerprint": "8440b3664df51acb",
+   "primary_source": false,
+   "cluster_id": "b7fe6bbc9ebd8c03",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "158e5155b69f2f6e",
+   "symbols": [
+    "WNC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Wabash: Q3 Earnings Snapshot",
+   "summary": "(WNC) on Thursday reported a loss of $20.On a per-share basis, the Lafayette, Indiana-based company said it had a loss of 51 cents.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wabash-q3-earnings-snapshot-110354694.html?.tsrc=rss",
+   "published_at": "2026-10-29T11:03:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:45Z",
+   "fingerprint": "7c5311607c8fe247",
+   "primary_source": false,
+   "cluster_id": "158e5155b69f2f6e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2b2afc46d459551b",
+   "symbols": [
+    "WNC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wabash (NYSE:WNC) posts better-than-expected sales in Q3 2026",
+   "summary": "Semi-trailer and liquid transportation container manufacturer Wabash (NYSE:WNC) reported Q3 2026 results exceeding the market’s revenue expectations, with revenue up 24.8% year on year to $476.4 million. The company expects next quarter’s revenue to be around $435 million, close ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wabash-nyse-wnc-posts-better-105925168.html?.tsrc=rss",
+   "published_at": "2026-10-29T10:59:25Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:45Z",
+   "fingerprint": "5d41093faabd231c",
+   "primary_source": false,
+   "cluster_id": "2b2afc46d459551b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7b3e80e6a6f9cea8",
+   "symbols": [
+    "WNC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Wabash Announces Third Quarter 2026 Results",
+   "summary": "Quarterly revenue of $476 million - Reflects strong shipments in core Dry Van market. Parts & Services generated positive revenue growth year-over-year.GAAP operating loss of $20 million or Non-GAAP adjusted operating loss of $27 million; Non-GAAP adjusted operating loss excludes",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wabash-announces-third-quarter-2026-105300271.html?.tsrc=rss",
+   "published_at": "2026-10-29T10:53:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:45Z",
+   "fingerprint": "98d51912075de459",
+   "primary_source": false,
+   "cluster_id": "7b3e80e6a6f9cea8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6d7d9f6167a9538e",
+   "symbols": [
+    "WNC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What to expect from Wabash’s (WNC) Q3 earnings",
+   "summary": "Semi trailers and liquid transportation container manufacturer Wabash (NYSE:WNC) will be announcing earnings results this Thursday before market hours. Here’s what you need to know.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/expect-wabash-wnc-q3-earnings-144634361.html?.tsrc=rss",
+   "published_at": "2026-10-28T14:46:34Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:45Z",
+   "fingerprint": "8689eccb7cc9e7fa",
+   "primary_source": false,
+   "cluster_id": "6d7d9f6167a9538e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ae919bd0c894f455",
+   "symbols": [
+    "FCEL",
+    "TTI",
+    "WNC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 cash-burning stock with exciting potential and 2 that underwhelm",
+   "summary": "While some companies burn cash to fuel expansion, others struggle to turn spending into sustainable growth. A high cash burn rate without a strong balance sheet can leave investors exposed to significant downside.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-cash-burning-stock-exciting-194153252.html?.tsrc=rss",
+   "published_at": "2026-10-22T19:41:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:07Z",
+   "fingerprint": "93f19a50320709e7",
+   "primary_source": false,
+   "cluster_id": "ae919bd0c894f455",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b0a53342a0c19a8a",
+   "symbols": [
+    "WNC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wabash Welcomes Final U.S. Ruling on Unfairly Traded Chinese Trailer Imports; Canada and Mexico Investigations Advance Toward Final Decisions",
+   "summary": "Final antidumping and countervailing duty orders on Chinese van-type trailers and subassemblies follow affirmative Commerce and ITC determinations; Section 232 steel and aluminum tariffs continue to apply to imported trailersLAFAYETTE, Ind., Oct. 06, 2026 (GLOBE NEWSWIRE) -- Waba",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/economy/policy/articles/wabash-welcomes-final-u-ruling-201800298.html?.tsrc=rss",
+   "published_at": "2026-10-06T20:18:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:45Z",
+   "fingerprint": "7d82c118f09dff8a",
+   "primary_source": false,
+   "cluster_id": "b0a53342a0c19a8a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d5b3764d6fc8b402",
+   "symbols": [
+    "WNC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Wabash Schedules Third Quarter 2026 Earnings Conference Call",
+   "summary": "LAFAYETTE, Ind., Oct. 05, 2026 (GLOBE NEWSWIRE) -- Wabash (NYSE: WNC) today announced that it will webcast its quarterly earnings conference call to review and discuss its financial results for the third quarter of 2026 on Thursday, October 29, 2026, beginning at 12:00 p.m. ET. T",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wabash-schedules-third-quarter-2026-105500095.html?.tsrc=rss",
+   "published_at": "2026-10-05T10:55:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:45Z",
+   "fingerprint": "f84c19af3866987a",
+   "primary_source": false,
+   "cluster_id": "d5b3764d6fc8b402",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a5aa53d69846b9e5",
+   "symbols": [
+    "NOVT",
+    "WNC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "FuelCell Energy, Nextpower, Wabash, Avis Budget Group, and Novanta Shares Skyrocket, What You Need To Know",
+   "summary": "A number of stocks jumped in the morning session after weaker-than-expected U.S. employment data cooled Treasury yields, easing borrowing-cost pressure across the sector.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/fuelcell-energy-nextpower-wabash-avis-224603323.html?.tsrc=rss",
+   "published_at": "2026-10-02T22:46:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:30Z",
+   "fingerprint": "6716319eb73b87e3",
+   "primary_source": false,
+   "cluster_id": "a5aa53d69846b9e5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "54c101aa70d2f93d",
+   "symbols": [
+    "VSTS",
+    "WNC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Small-Cap Stock Worth Investigating and 2 We Question",
+   "summary": "Many small-cap stocks have limited Wall Street coverage, giving savvy investors the chance to act before everyone else catches on. But the flip side is that these businesses have increased downside risk because they lack the scale and staying power of their larger competitors.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-small-cap-stock-worth-113307298.html?.tsrc=rss",
+   "published_at": "2026-10-01T11:33:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:46:26Z",
+   "fingerprint": "d513e50189042718",
+   "primary_source": false,
+   "cluster_id": "54c101aa70d2f93d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "23ce90cdf107a9eb",
+   "symbols": [
+    "WNC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Wabash (NYSE:WNC): Strongest Q2 Results from the Heavy Transportation Equipment Group",
+   "summary": "As the Q2 earnings season wraps, let’s dig into this quarter’s best and worst performers in the heavy transportation equipment industry, including Wabash (NYSE:WNC) and its peers.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wabash-nyse-wnc-strongest-q2-191713650.html?.tsrc=rss",
+   "published_at": "2026-09-30T19:17:13Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:45Z",
+   "fingerprint": "3af223050533a09c",
+   "primary_source": false,
+   "cluster_id": "23ce90cdf107a9eb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ea8ac2fb8043b922",
+   "symbols": [
+    "WNC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "AAON, Wabash, and Blue Bird Shares Skyrocket, What You Need To Know",
+   "summary": "A number of stocks traded up in the afternoon session after Treasury yields eased and crude oil prices fell amid U.S. and Iranian talks on reopening the Strait of Hormuz.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/aaon-wabash-blue-bird-shares-032037961.html?.tsrc=rss",
+   "published_at": "2026-09-26T03:20:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:45Z",
+   "fingerprint": "eeb5256169568dfa",
+   "primary_source": false,
+   "cluster_id": "ea8ac2fb8043b922",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "aa4acf4975a8a195",
+   "symbols": [
+    "WNC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "No Two Loads Are Alike: Wabash to Highlight Application-Specific Tank Trailers at NTTC 2026",
+   "summary": "LAFAYETTE, Ind., September 24, 2026--Wabash (NYSE: WNC), a leader in end-to-end supply chain solutions for the transportation, logistics and infrastructure markets, will showcase application-specific tank trailer solutions, safety technology and lifecycle support at National Tank",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/no-two-loads-alike-wabash-144500061.html?.tsrc=rss",
+   "published_at": "2026-09-24T14:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:45Z",
+   "fingerprint": "00728db38032ef30",
+   "primary_source": false,
+   "cluster_id": "aa4acf4975a8a195",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "36e197a5c06ea805",
+   "symbols": [
+    "WNC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Unprofitable Stocks We Think Twice About",
+   "summary": "Running at a loss can be a red flag. Many of these businesses face mounting challenges as competition increases and funding becomes harder to secure.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-unprofitable-stocks-think-twice-124330938.html?.tsrc=rss",
+   "published_at": "2026-09-14T12:43:30Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:45Z",
+   "fingerprint": "9316cacc376d8ae9",
+   "primary_source": false,
+   "cluster_id": "36e197a5c06ea805",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "822545e6b2015d48",
+   "symbols": [
+    "WNC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Reasons WNC is Risky and 1 Stock to Buy Instead",
+   "summary": "Wabash has had an impressive run over the past six months as its shares have beaten the S&amp;P 500 by 27.2%. The stock now trades at $12.63, marking a 40% gain. This was partly thanks to its solid quarterly results, and the run-up might have investors contemplating their next mo",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-reasons-wnc-risky-1-213105368.html?.tsrc=rss",
+   "published_at": "2026-09-11T21:31:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:45Z",
+   "fingerprint": "54ed69b5f6c3c7d2",
+   "primary_source": false,
+   "cluster_id": "822545e6b2015d48",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "08864884941e4291",

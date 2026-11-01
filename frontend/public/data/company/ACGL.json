@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 106.68000030517578,
     "day_low": 105.12999725341797,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 92.8304731625931,
+    "adx14": 25.22359176614859,
+    "ema10": 102.26139226061413,
+    "sma200": 96.7960997390747,
+    "perf_63d": 5.181959771996403,
+    "adr20_pct": 1.914373151267314,
+    "range10_pct": 5.982996289880549,
+    "high10_prev": 104.69000244140625,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": false
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": true,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
@@ -97,7 +128,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 1.0,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.8333333333333334,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": true,
@@ -139,14 +173,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 53.8,
+   "score": 65.6,
    "drivers": [
     "news_flow",
     "source_diversity",
-    "price_volume_anomaly"
+    "freshness"
    ],
-   "independent_7d": 13,
-   "independent_24h": 0
+   "independent_7d": 15,
+   "independent_24h": 2
   },
   "political": {
    "relevance": 0,
@@ -224,7 +258,17 @@
     "green": true,
     "day_high": 106.68000030517578,
     "day_low": 105.12999725341797,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 92.8304731625931,
+    "adx14": 25.22359176614859,
+    "ema10": 102.26139226061413,
+    "sma200": 96.7960997390747,
+    "perf_63d": 5.181959771996403,
+    "adr20_pct": 1.914373151267314,
+    "range10_pct": 5.982996289880549,
+    "high10_prev": 104.69000244140625,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -254,6 +298,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": false
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": true,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
@@ -263,7 +328,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 1.0,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.8333333333333334,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": true,
@@ -514,10 +582,10 @@
   ]
  },
  "intelligence_detail": {
-  "score": 53.8,
+  "score": 65.6,
   "components": {
    "news_flow": 100.0,
-   "freshness": 0,
+   "freshness": 100.0,
    "source_diversity": 80,
    "primary_sources": 0,
    "analyst_activity": 0,
@@ -527,17 +595,17 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 13,
-    "independent": 13,
+    "signals": 15,
+    "independent": 15,
     "duplicates": 0,
     "sources": 4,
     "primary": 0,
@@ -545,8 +613,8 @@
     "verified": 0
    },
    "30d": {
-    "signals": 19,
-    "independent": 19,
+    "signals": 21,
+    "independent": 21,
     "duplicates": 0,
     "sources": 4,
     "primary": 0,
@@ -557,7 +625,7 @@
   "drivers": [
    "news_flow",
    "source_diversity",
-   "price_volume_anomaly"
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -576,6 +644,52 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "949b843226a8a1e8",
+   "symbols": [
+    "ACGL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Arch Capital Group (ACGL) Stock Looks About Right After Earnings Beat",
+   "summary": "Arch Capital Group has rewarded long term shareholders, and with the stock changing hands around US$106, the main question is whether that price still lines up with what its earnings can support. Recent gains sit against a backdrop of solid profitability, so the focus now turns t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/arch-capital-group-acgl-stock-051150878.html?.tsrc=rss",
+   "published_at": "2026-11-01T05:11:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:31Z",
+   "fingerprint": "39b5409c7d1bf320",
+   "primary_source": false,
+   "cluster_id": "949b843226a8a1e8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Arch Capital Group (ACGL) Stock Looks About Direkt nach dem Gewinn Beat"
+  },
+  {
+   "id": "6a251e25244fb3bc",
+   "symbols": [
+    "ACGL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What Does Arch Capital Group (ACGL) Board Resignation Mean For Investors?",
+   "summary": "Arch Capital Group (NasdaqGS:ACGL) disclosed that Moira Kilcoyne has resigned from its Board of Directors, effective immediately. The insurer stated that Kilcoyne’s resignation did not result from any disagreement with Arch Capital Group’s operations, policies or practices. Her d",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/does-arch-capital-group-acgl-011051802.html?.tsrc=rss",
+   "published_at": "2026-11-01T01:10:51Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:31Z",
+   "fingerprint": "caf364aeb0ebbcc1",
+   "primary_source": false,
+   "cluster_id": "6a251e25244fb3bc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Was bedeutet der Rücktritt des Vorstands der Arch Capital Group (ACGL) für Investoren?"
+  },
   {
    "id": "5a171b528d40726d",
    "symbols": [

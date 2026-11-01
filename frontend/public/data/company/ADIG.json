@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 17.790000915527344,
     "day_low": 16.479999542236328,
-    "history_ok": false
+    "history_ok": false,
+    "rsi2": 58.5547873131919,
+    "adx14": 26.856682294836272,
+    "ema10": 16.973428691301027,
+    "sma200": null,
+    "perf_63d": -20.761559540275364,
+    "adr20_pct": 5.614777432372101,
+    "range10_pct": 19.085481323024965,
+    "high10_prev": 17.969999313354492,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.6666666666666666,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -139,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 1.3,
+   "score": 15.8,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -180,7 +216,7 @@
     "time": "vor Börseneröffnung",
     "fiscal_quarter": "Sep/2026",
     "eps_forecast": 0.46,
-    "estimates": 8,
+    "estimates": 1,
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/adig/earnings",
@@ -243,7 +279,17 @@
     "green": true,
     "day_high": 17.790000915527344,
     "day_low": 16.479999542236328,
-    "history_ok": false
+    "history_ok": false,
+    "rsi2": 58.5547873131919,
+    "adx14": 26.856682294836272,
+    "ema10": 16.973428691301027,
+    "sma200": null,
+    "perf_63d": -20.761559540275364,
+    "adr20_pct": 5.614777432372101,
+    "range10_pct": 19.085481323024965,
+    "high10_prev": 17.969999313354492,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -273,6 +319,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -280,7 +347,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.6666666666666666,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -619,11 +689,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 1.3,
+  "score": 15.8,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 8.1,
@@ -641,25 +711,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -678,7 +750,206 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "16bc62d16f425cca",
+   "symbols": [
+    "ADIG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ADI Global Distribution (ADIG) Presents an Attractive Entry Point After Spin-Off, Ariel Appreciation Fund Says",
+   "summary": "Ariel Investments, an investment management company, released its “Ariel Appreciation Fund” Q3 2026 investor letter. A copy of the letter can be downloaded here. Copy main article 1st para. The Fund faced a challenging third quarter of 2026 as rising interest rates, higher energy",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adi-global-distribution-adig-presents-160153639.html?.tsrc=rss",
+   "published_at": "2026-10-28T16:01:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:42Z",
+   "fingerprint": "70c00abeff3f05bb",
+   "primary_source": false,
+   "cluster_id": "16bc62d16f425cca",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3c53161f46ac379d",
+   "symbols": [
+    "ADIG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ADI Global Distribution to Report Third Quarter 2026 Financial Results on November 12, 2026",
+   "summary": "MELVILLE, N.Y., October 22, 2026--ADI Global Distribution Inc. (NYSE: ADIG) (\"ADI\"), a leading global specialty distributor of low-voltage products, will report its third quarter 2026 financial results before the market opens on Thursday, November 12, 2026. ADI will host a webcas",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adi-global-distribution-report-third-105000083.html?.tsrc=rss",
+   "published_at": "2026-10-22T10:50:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:42Z",
+   "fingerprint": "dcc87d103c1b4976",
+   "primary_source": false,
+   "cluster_id": "3c53161f46ac379d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "23f6cb5917320e7a",
+   "symbols": [
+    "ADIG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ADI Global Distribution (ADIG) Stock Dropped, So What Is Driving Attention Now?",
+   "summary": "ADI Global Distribution (ADIG) has attracted fresh attention after recent share price weakness, with the stock closing at US$16.80 as near term returns turned negative across the past week, month, and year to date. Recent trading has been heavy for ADI Global Distribution, with t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adi-global-distribution-adig-stock-221525534.html?.tsrc=rss",
+   "published_at": "2026-10-10T22:15:25Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:42Z",
+   "fingerprint": "c8371cf585e103a7",
+   "primary_source": false,
+   "cluster_id": "23f6cb5917320e7a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d8d14484e71fece5",
+   "symbols": [
+    "ADIG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ADI Global Distribution (ADIG) Stock Could Still Be Cheap After 20% Fall",
+   "summary": "ADI Global Distribution shares have fallen sharply this year, which puts fresh focus on whether the current valuation is properly supported by the cash the business is expected to generate. With the price under pressure, the question is how closely the stock lines up with what it",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adi-global-distribution-adig-stock-091011433.html?.tsrc=rss",
+   "published_at": "2026-10-10T09:10:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:42Z",
+   "fingerprint": "a15ace4970b87c22",
+   "primary_source": false,
+   "cluster_id": "d8d14484e71fece5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b36070c9f277290a",
+   "symbols": [
+    "ADIG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ADI Global Distribution to Participate in the Jefferies 2026 Industrials Conference",
+   "summary": "MELVILLE, N.Y., August 27, 2026--ADI Global Distribution Inc. (NYSE: ADIG) (\"ADI\"), a leading global specialty distributor of low-voltage products, today announced that Rob Aarnes, President and Chief Executive Officer, will present at the Jefferies 2026 Industrials Conference in",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adi-global-distribution-participate-jefferies-100500869.html?.tsrc=rss",
+   "published_at": "2026-08-27T10:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:42Z",
+   "fingerprint": "377f14b9eb09b011",
+   "primary_source": false,
+   "cluster_id": "b36070c9f277290a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0a4cdc34a614b520",
+   "symbols": [
+    "ADIG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ADI Global Distribution Inc. Common Stock Q2 Earnings Call Highlights",
+   "summary": "ADI Global Distribution Inc. Common Stock (NYSE:ADIG) reported record second-quarter revenue as commercial demand remained resilient, helping offset continued weakness in residential audiovisual markets. The company also initiated its full-year 2026 outlook following its August s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/adi-global-distribution-inc-common-stock-q2-earnings-call-highlights-2026-08-13/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-13T20:04:24Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:42Z",
+   "fingerprint": "4ee71ef8f24c6632",
+   "primary_source": false,
+   "cluster_id": "0a4cdc34a614b520",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f9a9d6bf9b40cd68",
+   "symbols": [
+    "ADIG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ADI Announces Second Quarter 2026 Financial Results",
+   "summary": "MELVILLE, N.Y., August 13, 2026--ADI Global Distribution Inc. (\"ADI\") (NYSE: ADIG), a leading global specialty distributor of low-voltage products, today announced financial results for its second quarter 2026 ended July 4, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adi-announces-second-quarter-2026-110500582.html?.tsrc=rss",
+   "published_at": "2026-08-13T11:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:42Z",
+   "fingerprint": "06ebc7adbf8c6439",
+   "primary_source": false,
+   "cluster_id": "f9a9d6bf9b40cd68",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d01fbb0192d0efbc",
+   "symbols": [
+    "ADIG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "NYSE Content Update: ADI to Make NYSE Trading Debut After Spin-Off",
+   "summary": "The New York Stock Exchange (NYSE) provides a daily pre-market update directly from the NYSE Trading Floor. Access today's NYSE Pre-market update for market insights before trading begins.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nyse-content-adi-nyse-trading-125500317.html?.tsrc=rss",
+   "published_at": "2026-08-04T12:55:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:42Z",
+   "fingerprint": "b302565422892648",
+   "primary_source": false,
+   "cluster_id": "d01fbb0192d0efbc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "24351834ae9e8410",
+   "symbols": [
+    "ADIG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Ferguson Enterprises Set to Join S&P 500 and ADI Global Distribution to Join S&P SmallCap 600",
+   "summary": "S&amp;P Dow Jones Indices will make the following changes to the S&amp;P 500 and S&amp;P SmallCap 600:",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ferguson-enterprises-set-join-p-215100514.html?.tsrc=rss",
+   "published_at": "2026-07-31T21:51:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:42Z",
+   "fingerprint": "628c66996a5f1f8d",
+   "primary_source": false,
+   "cluster_id": "24351834ae9e8410",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 30.045000076293945,
     "day_low": 28.610000610351562,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 70.43404117826162,
+    "adx14": 23.662906854729844,
+    "ema10": 27.822037627703356,
+    "sma200": 16.956025018692017,
+    "perf_63d": 53.71134165560028,
+    "adr20_pct": 6.47599657579201,
+    "range10_pct": 52.935819409412964,
+    "high10_prev": 33.599998474121094,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": true,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": true,
@@ -139,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.8,
+   "score": 46.3,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 9,
    "independent_24h": 0
   },
   "political": {
@@ -242,7 +278,17 @@
     "green": true,
     "day_high": 30.045000076293945,
     "day_low": 28.610000610351562,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 70.43404117826162,
+    "adx14": 23.662906854729844,
+    "ema10": 27.822037627703356,
+    "sma200": 16.956025018692017,
+    "perf_63d": 53.71134165560028,
+    "adr20_pct": 6.47599657579201,
+    "range10_pct": 52.935819409412964,
+    "high10_prev": 33.599998474121094,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -272,6 +318,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": true,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -279,7 +346,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": true,
@@ -618,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.8,
+  "score": 46.3,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 80,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 15.8,
@@ -640,25 +710,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 9,
+    "independent": 9,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 12,
+    "independent": 12,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -677,7 +749,431 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "992ef480bfc80798",
+   "symbols": [
+    "XNCR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xencor Sees Upside Potential After 'Exciting' Kidney Cancer Trial Data, RBC Capital Markets Says",
+   "summary": "Xencor's (XNCR) shares have strong upside potential due to \"exciting\" phase 1 data that exceeded exp",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xencor-sees-upside-potential-apos-155140503.html?.tsrc=rss",
+   "published_at": "2026-10-27T15:51:40Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:01Z",
+   "fingerprint": "b42f34b172551993",
+   "primary_source": false,
+   "cluster_id": "992ef480bfc80798",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d298896af0474c21",
+   "symbols": [
+    "XNCR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xencor (XNCR) Is Up 15.8% What's Changed After Kidney Cancer Trial Update",
+   "summary": "Xencor reported updated Phase 1 data for XmAb819 in advanced clear cell renal cell carcinoma, selecting a 400 mcg/kg intravenous dose as the proposed Phase 3 regimen after enrolling 119 heavily pre treated patients and observing confirmed responses with a generally manageable saf",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xencor-xncr-15-8-whats-222147838.html?.tsrc=rss",
+   "published_at": "2026-10-26T22:21:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:01Z",
+   "fingerprint": "108b5bb64fd56482",
+   "primary_source": false,
+   "cluster_id": "d298896af0474c21",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cc5de7396a6b7e8a",
+   "symbols": [
+    "XNCR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xencor Catapults On 'Unprecedented,' 'Profound' Cancer Data",
+   "summary": "Xencor stock catapulted Monday to a nearly four-year high, briefly breaking out on positive results in kidney cancer.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/16e6463a-b8c3-34b8-a1c1-419b2c4adca5/xencor-catapults-on.html?.tsrc=rss",
+   "published_at": "2026-10-26T20:13:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:01Z",
+   "fingerprint": "3c3ba8239a1fccc9",
+   "primary_source": false,
+   "cluster_id": "cc5de7396a6b7e8a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9c80b9d757791adc",
+   "symbols": [
+    "XNCR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xencor Picks Phase 3 Dose After XmAb819 Shows 45.5% Response Rate in Kidney Cancer",
+   "summary": "Xencor (NASDAQ:XNCR) reported updated Phase 1 dose-expansion results for its ENPP3-targeting CD3 T-cell engager, XmAb819, in previously treated advanced clear cell renal cell carcinoma at the ESMO 2026 conference. The company said it selected a 400 microgram-per-kilogram intraven",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-xencor-picks-phase-3-dose-after-xmab819-shows-455-response-rate-in-kidney-cancer-2026-10-26/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-26T19:02:30Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:01Z",
+   "fingerprint": "e31f2289e0c282e3",
+   "primary_source": false,
+   "cluster_id": "9c80b9d757791adc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9020a8ad95a021d5",
+   "symbols": [
+    "XNCR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xencor Soars 31% on Kidney Cancer Trial Data Showing “Impressive Antitumor Activity”",
+   "summary": "Key TakeawaysXencor shares jumped 31% after its kidney cancer drug XmAb819 had a 45. 5% confirmed response rate in heavily pre-treated patients at the dose it chose.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/xencor-soars-31-on-kidney-cancer-trial-data-showing-impressive-antitumor-activity?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-26T18:55:28Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:01Z",
+   "fingerprint": "db7e73ad0e2a3bc3",
+   "primary_source": false,
+   "cluster_id": "9020a8ad95a021d5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e2e543933ef7c32c",
+   "symbols": [
+    "SGRY",
+    "XNCR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sector Update: Healthcare Stocks Softer Monday Afternoon",
+   "summary": "Healthcare stocks were lower Monday afternoon, with the NYSE Healthcare Index down 0.1% and the Stat",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/sector-healthcare-stocks-softer-monday-181118347.html?.tsrc=rss",
+   "published_at": "2026-10-26T18:11:18Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:21Z",
+   "fingerprint": "0f7aae141ab37f8f",
+   "primary_source": false,
+   "cluster_id": "e2e543933ef7c32c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "834bfcf10a7a2589",
+   "symbols": [
+    "SGRY",
+    "XNCR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Top Midday Gainers",
+   "summary": "Surgery Partners (SGRY) said Monday it has agreed to be acquired by HealthSpan Partners in an all-ca",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/top-midday-gainers-175658117.html?.tsrc=rss",
+   "published_at": "2026-10-26T17:56:58Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:21Z",
+   "fingerprint": "90aa4f5ef40b8027",
+   "primary_source": false,
+   "cluster_id": "834bfcf10a7a2589",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6415fb678e23b00c",
+   "symbols": [
+    "XNCR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xencor shares jump as kidney cancer drug data support Phase 3 plans",
+   "summary": "Xencor (NASDAQ:XNCR) shares jumped 20% to $30.18 on Monday after updated clinical trial results for its experimental kidney cancer drug XmAb819 supported plans for later-stage development. The clinical-stage biopharmaceutical company selected 400 micrograms per kilogram as the pr",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "proactiveinvestors.com",
+   "url": "https://www.proactiveinvestors.com/companies/news/1100701/xencor-shares-jump-as-kidney-cancer-drug-data-support-phase-3-plans-1100701.html?.tsrc=rss",
+   "published_at": "2026-10-26T16:08:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:01Z",
+   "fingerprint": "58af5236621372a7",
+   "primary_source": false,
+   "cluster_id": "6415fb678e23b00c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c0157ca3b3a526a8",
+   "symbols": [
+    "XNCR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xencor stock surges on positive cancer drug trial data",
+   "summary": "Investing.com -- Xencor Inc (NASDAQ:XNCR) shares jumped 24% Monday following the presentation of Phase 1 dose selection data for XmAb819, a bispecific T-cell engager in development for patients with advanced clear cell renal cell carcinoma and ENPP3+ tumors.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xencor-stock-surges-positive-cancer-152152207.html?.tsrc=rss",
+   "published_at": "2026-10-26T15:21:52Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:01Z",
+   "fingerprint": "41b35dc21795b4e9",
+   "primary_source": false,
+   "cluster_id": "c0157ca3b3a526a8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4a07c7538e5afe2b",
+   "symbols": [
+    "XNCR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xencor Presents Phase 1 Dose Selection Data for XmAb819, a Potential First-in-Class ENPP3 x CD3 Bispecific T-Cell Engager, in Development for Patients With Advanced Clear Cell Renal Cell Carcinoma and ENPP3+ Tumors",
+   "summary": "PASADENA, Calif., October 25, 2026--Xencor, Inc. (NASDAQ:XNCR), a clinical-stage biopharmaceutical company developing engineered antibodies for the treatment of cancer and autoimmune diseases, today announced updated results from the Phase 1 study of XmAb819, an ENPP3 x CD3 T-cel",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xencor-presents-phase-1-dose-083500804.html?.tsrc=rss",
+   "published_at": "2026-10-25T08:35:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:01Z",
+   "fingerprint": "f22f6bb4c320d4df",
+   "primary_source": false,
+   "cluster_id": "4a07c7538e5afe2b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e6ac5e8d414785b3",
+   "symbols": [
+    "XNCR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Xencor (XNCR) A Bargain After Its XmAb819 Phase 1 Update?",
+   "summary": "Xencor (XNCR) has put its XmAb819 kidney cancer program in the spotlight by scheduling an October 26 webcast to review Phase 1 data and by flagging plans for a registration-enabling study in 2027. The webcast lands after a stretch where Xencor’s 1-day share price return of 1.53% ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xencor-xncr-bargain-xmab819-phase-231929420.html?.tsrc=rss",
+   "published_at": "2026-10-19T23:19:29Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:01Z",
+   "fingerprint": "ab317979f5820ef7",
+   "primary_source": false,
+   "cluster_id": "e6ac5e8d414785b3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7012d33b0a81a715",
+   "symbols": [
+    "XNCR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xencor to Host Webcast to Discuss Results From the Phase 1 Study of XmAb819 in Advanced Clear Cell Renal Cell Carcinoma",
+   "summary": "PASADENA, Calif., October 19, 2026--Xencor, Inc. (NASDAQ:XNCR), a clinical-stage biopharmaceutical company developing engineered antibodies for the treatment of cancer and autoimmune diseases, will host a webcast on Monday, October 26 at 7:00 a.m. EDT (4:00 a.m. PDT) to discuss r",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xencor-host-webcast-discuss-results-110100971.html?.tsrc=rss",
+   "published_at": "2026-10-19T11:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:01Z",
+   "fingerprint": "c73e58492602a3db",
+   "primary_source": false,
+   "cluster_id": "7012d33b0a81a715",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9d137277fa681348",
+   "symbols": [
+    "CLYM",
+    "RLAY",
+    "TYRA",
+    "XNCR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Raymond James Updates Healthcare Top Picks for October",
+   "summary": "Investing.com -- Raymond James has updated its Healthcare Top Picks list for October, adding three new stocks while removing others from the monthly selection. The firm added Xencor, Calyxt, and UnitedHealth Group to replace Relay Therapeutics, Tyra Biosciences, and Oscar Health.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/raymond-james-updates-healthcare-top-202647622.html?.tsrc=rss",
+   "published_at": "2026-10-01T20:26:47Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:43Z",
+   "fingerprint": "e0988596a6a33574",
+   "primary_source": false,
+   "cluster_id": "9d137277fa681348",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ce33d2dc28679367",
+   "symbols": [
+    "XNCR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Ulcerative Colitis Market Outlook: 5 Late-Stage Drug Candidates to Watch | DelveInsight",
+   "summary": "Emerging therapies for ulcerative colitis treatment, such as Obefazimod (Abivax), Tulisokibart (Merck), Olamkicept (Ferring Pharmaceuticals), Afimkibart (Roche), Icotrokinra (Johnson & Johnson/Protagonist Therapeutics), Duvakitug (Teva Pharmaceuticals/Sanofi), Zotemtegrast (Eli L",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/ulcerative-colitis-market-outlook-5-170000477.html?.tsrc=rss",
+   "published_at": "2026-09-07T17:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:01Z",
+   "fingerprint": "3bce1a5bb657d68e",
+   "primary_source": false,
+   "cluster_id": "ce33d2dc28679367",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "78275c261eed971b",
+   "symbols": [
+    "XNCR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xencor to Present at the 2026 Cantor Global Healthcare Conference",
+   "summary": "PASADENA, Calif., September 02, 2026--Xencor, Inc. (NASDAQ:XNCR), a clinical-stage biopharmaceutical company developing engineered antibodies for the treatment of cancer and autoimmune diseases, today announced that company management will present at the Cantor Global Healthcare ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xencor-present-2026-cantor-global-200100761.html?.tsrc=rss",
+   "published_at": "2026-09-02T20:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:01Z",
+   "fingerprint": "821231de84f6ed2a",
+   "primary_source": false,
+   "cluster_id": "78275c261eed971b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7a9d4bcf318db2c0",
+   "symbols": [
+    "XNCR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "How Investors May Respond To Xencor (XNCR) Narrowing Quarterly Losses Amid Deeper First‑Half Deficit",
+   "summary": "Xencor, Inc. has reported its second-quarter 2026 results, with net loss improving to US$21.73 million versus US$30.83 million a year earlier, while basic and diluted loss per share from continuing operations narrowed to US$0.29 from US$0.41. Over the first half of 2026, however,",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/investors-may-respond-xencor-xncr-121236359.html?.tsrc=rss",
+   "published_at": "2026-08-08T12:12:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:01Z",
+   "fingerprint": "6ab598217512663b",
+   "primary_source": false,
+   "cluster_id": "7a9d4bcf318db2c0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a991d488ffa28294",
+   "symbols": [
+    "XNCR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xencor (XNCR) Reports Q2 Loss, Beats Revenue Estimates",
+   "summary": "Xencor (XNCR) delivered earnings and revenue surprises of +64.63% and +337.04%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xencor-xncr-reports-q2-loss-212506260.html?.tsrc=rss",
+   "published_at": "2026-08-05T21:25:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:01Z",
+   "fingerprint": "ab5788d0bc20e3bf",
+   "primary_source": false,
+   "cluster_id": "a991d488ffa28294",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1dc60155ef140696",
+   "symbols": [
+    "XNCR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xencor Reports Second Quarter 2026 Financial Results",
+   "summary": "PASADENA, Calif., August 05, 2026--Xencor, Inc. (NASDAQ:XNCR), a clinical-stage biopharmaceutical company developing engineered antibodies for the treatment of cancer and autoimmune diseases, today reported financial results for the second quarter ended June 30, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xencor-reports-second-quarter-2026-200100100.html?.tsrc=rss",
+   "published_at": "2026-08-05T20:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:01Z",
+   "fingerprint": "d309d7c25357ccab",
+   "primary_source": false,
+   "cluster_id": "1dc60155ef140696",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d3b4f1c6fc6060a9",
+   "symbols": [
+    "XNCR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sector Update: Healthcare Stocks Decline Late Afternoon",
+   "summary": "Healthcare stocks declined late Thursday afternoon, with the NYSE Healthcare Index shedding 1.5% and",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/sector-healthcare-stocks-decline-afternoon-194608510.html?.tsrc=rss",
+   "published_at": "2026-07-30T19:46:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:01Z",
+   "fingerprint": "866e7d75e86539d2",
+   "primary_source": false,
+   "cluster_id": "d3b4f1c6fc6060a9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

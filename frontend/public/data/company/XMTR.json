@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 97.41000366210938,
     "day_low": 90.41000366210938,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 23.028042319554345,
+    "adx14": 18.135526273226642,
+    "ema10": 95.70965760384036,
+    "sma200": 75.96002504348755,
+    "perf_63d": 7.631305857517701,
+    "adr20_pct": 6.2572117081687235,
+    "range10_pct": 19.151914192416463,
+    "high10_prev": 102.27999877929688,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -139,12 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 14.4,
+   "score": 48.9,
    "drivers": [
+    "news_flow",
     "price_volume_anomaly",
-    "insider_activity"
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 5,
    "independent_24h": 0
   },
   "political": {
@@ -243,7 +278,17 @@
     "green": false,
     "day_high": 97.41000366210938,
     "day_low": 90.41000366210938,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 23.028042319554345,
+    "adx14": 18.135526273226642,
+    "ema10": 95.70965760384036,
+    "sma200": 75.96002504348755,
+    "perf_63d": 7.631305857517701,
+    "adr20_pct": 6.2572117081687235,
+    "range10_pct": 19.151914192416463,
+    "high10_prev": 102.27999877929688,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -273,6 +318,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -280,7 +346,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -619,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 14.4,
+  "score": 48.9,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 53.1,
@@ -641,27 +710,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 5,
+    "independent": 5,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 12,
+    "independent": 12,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
    "price_volume_anomaly",
-   "insider_activity"
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -679,7 +749,457 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "a051164b1d85bf5c",
+   "symbols": [
+    "PRLB",
+    "XMTR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Proto Labs Sinks 15% as “Higher Raw Material Costs” Squeeze Margins Despite Record Quarter",
+   "summary": "Key TakeawaysProto Labs shares fell 15% Thursday, even though third-quarter revenue rose 14% to a record $154. 3 million and the company raised its full-year growth outlook.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/proto-labs-sinks-15-as-higher-raw-material-costs-squeeze-margins-despite-record-quarter?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-30T12:51:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:32:35Z",
+   "fingerprint": "a55141ae1c10b699",
+   "primary_source": false,
+   "cluster_id": "a051164b1d85bf5c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Proto Labs sinkt um 15% als \"Höhere Rohstoffkosten\" Squeeze Margen trotz Rekordquartal"
+  },
+  {
+   "id": "1823f1152afe4ff2",
+   "symbols": [
+    "XMTR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Gates Industrial (GTES) Q3 Earnings Top Estimates",
+   "summary": "Gates Industrial (GTES) delivered earnings and revenue surprises of +4.44% and -0.03%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gates-industrial-gtes-q3-earnings-114002490.html?.tsrc=rss",
+   "published_at": "2026-10-30T11:40:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:00Z",
+   "fingerprint": "8fb8c7e355543068",
+   "primary_source": false,
+   "cluster_id": "1823f1152afe4ff2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c804c5fe964be345",
+   "symbols": [
+    "ACMR",
+    "ON",
+    "XMTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACM Research And 2 Other Great Automation Stocks To Own",
+   "summary": "AI related investment is now a clear driver of US economic activity, with recent data linking faster GDP growth to heavy spending on advanced computing. That shift creates a tailwind for the companies building the physical robots and automation systems that put this digital intel",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/acm-research-2-other-great-211031563.html?.tsrc=rss",
+   "published_at": "2026-10-29T21:10:31Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:22Z",
+   "fingerprint": "98324c4696049030",
+   "primary_source": false,
+   "cluster_id": "c804c5fe964be345",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2a95e9e16fc1b3f7",
+   "symbols": [
+    "ITW",
+    "XMTR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Illinois Tool Works (ITW) Surpasses Q3 Earnings Estimates",
+   "summary": "Illinois Tool Works (ITW) delivered earnings and revenue surprises of +0.33% and -0.59%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/illinois-tool-works-itw-surpasses-121002944.html?.tsrc=rss",
+   "published_at": "2026-10-27T12:10:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:02:09Z",
+   "fingerprint": "5053a2501608b249",
+   "primary_source": false,
+   "cluster_id": "2a95e9e16fc1b3f7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "84235c9160fb76e7",
+   "symbols": [
+    "XMTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "RiskVantage AI Unveils Explainable, Sovereign AI for the $75 Billion Contract and Deal Legal Market at Dubai AI Festival",
+   "summary": "Founded by a former Xometry VP of AI and a former Bristol Myers Squibb Lead AI/Tech Counsel, the U.S.-based company replaces black-box legal AI with an end-to-end negotiation engine whose every risk decision can be traced, audited and run inside a company's own cloud.CHICAGO, IL,",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/riskvantage-ai-unveils-explainable-sovereign-162300150.html?.tsrc=rss",
+   "published_at": "2026-10-26T16:23:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:00Z",
+   "fingerprint": "17641ced2734875f",
+   "primary_source": false,
+   "cluster_id": "84235c9160fb76e7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a59327551adae516",
+   "symbols": [
+    "ACMR",
+    "XMTR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "3 Automation Stocks With Up To 38% Earnings Growth",
+   "summary": "Oil prices recently jumped to a five month high after attacks on Saudi and Hormuz shipping routes raised fresh questions about global energy security. When fuel costs spike and supply looks fragile, businesses feel real pressure to do more with less labor and less energy. That is",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-automation-stocks-38-earnings-201117175.html?.tsrc=rss",
+   "published_at": "2026-10-22T20:11:17Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:00Z",
+   "fingerprint": "39a5a6089e9054cc",
+   "primary_source": false,
+   "cluster_id": "a59327551adae516",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1801350fee85c491",
+   "symbols": [
+    "XMTR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xometry to Announce Third Quarter 2026 Financial Results on November 3, 2026",
+   "summary": "NORTH BETHESDA, Md., Oct. 20, 2026 (GLOBE NEWSWIRE) -- Xometry, Inc. (NASDAQ: XMTR), the global AI-native marketplace connecting buyers and suppliers of custom manufacturing, today announced it will report its third quarter 2026 financial results before the market opens on Novemb",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xometry-announce-third-quarter-2026-130500854.html?.tsrc=rss",
+   "published_at": "2026-10-20T13:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:00Z",
+   "fingerprint": "d8f85c351baf351d",
+   "primary_source": false,
+   "cluster_id": "1801350fee85c491",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c233d824e210c266",
+   "symbols": [
+    "XMTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Top 3 Automation Stocks To Watch In October 2026",
+   "summary": "Hotter producer price data has pushed inflation worries back to the front of the queue, and higher borrowing costs are putting pressure on labor heavy business models. That is where robotics and automation stocks become interesting. Companies that help factories, warehouses and i",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/top-3-automation-stocks-watch-191119202.html?.tsrc=rss",
+   "published_at": "2026-10-15T19:11:19Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:00Z",
+   "fingerprint": "00a3ff19ad29c76f",
+   "primary_source": false,
+   "cluster_id": "c233d824e210c266",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3f3dccff12407d32",
+   "symbols": [
+    "XMTR",
+    "ZBRA"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "GE Vernova, Snowflake Lead 5 AI Stocks With Accelerating Growth",
+   "summary": "Accelerating revenue growth has whetted investor appetites.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/14772ad4-6d0f-356a-88f1-942838969885/ge-vernova%2C-snowflake-lead-5.html?.tsrc=rss",
+   "published_at": "2026-10-10T15:24:44Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:44Z",
+   "fingerprint": "f54e0bb56f13edf0",
+   "primary_source": false,
+   "cluster_id": "3f3dccff12407d32",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f7882ecbed5b3f52",
+   "symbols": [
+    "XMTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xometry's 'Black Box' Solves AI Fears, Seizes Massive Market Opening",
+   "summary": "Xometry has the inside track to one of the remaining largely untapped online markets: the market for things that don't yet exist.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/0368a186-c0d6-3ccd-bdaf-4435c392f2b8/xometry%27s-%27black-box%27-solves.html?.tsrc=rss",
+   "published_at": "2026-10-09T20:31:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:00Z",
+   "fingerprint": "277a45553fe56144",
+   "primary_source": false,
+   "cluster_id": "f7882ecbed5b3f52",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "424e265ef5fb3996",
+   "symbols": [
+    "MEC",
+    "XMTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sheet Metal Fabrication Services Market Forecasts Growth from $87.3B (2025) to $136.5B by 2035, Profiling Gestamp, Martinrea International, Mayville Engineering, Xometry & 18 Other Key Players",
+   "summary": "220-Page Report Shows Stamping Reaching $22.7B and Steel Holding a 54% Share in 2025 as Electric Mobility, Automation and Infrastructure Investment Drive DemandDublin, Oct. 07, 2026 (GLOBE NEWSWIRE) -- \"Sheet Metal Fabrication Services Market Opportunity, Growth Drivers, Industry",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/articles/sheet-metal-fabrication-services-market-150300266.html?.tsrc=rss",
+   "published_at": "2026-10-07T15:03:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:37Z",
+   "fingerprint": "7a78f88fde74afdb",
+   "primary_source": false,
+   "cluster_id": "424e265ef5fb3996",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "948822caa25a17ab",
+   "symbols": [
+    "XMTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xometry Names Marc Teulières as General Manager for Europe to Accelerate Regional Adoption",
+   "summary": "Marc Teulières, Xometry Europe General Manager Marc Teulières joins Xometry as Europe General Manager Key Facts Executive Appointment: Marc Teulières appointed General Manager for Xometry Europe.Market Adoption: The appointment targets adoption across European markets, establishi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/xometry-names-marc-teuli-res-070500143.html?.tsrc=rss",
+   "published_at": "2026-10-06T07:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:00Z",
+   "fingerprint": "fc7ee7c385eb9a54",
+   "primary_source": false,
+   "cluster_id": "948822caa25a17ab",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "45a590a1db1c3bf1",
+   "symbols": [
+    "XMTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Access Is Becoming Manufacturing’s Competitive Advantage, According to Xometry's 2027 U.S. Manufacturing Outlook",
+   "summary": "AI, capacity, suppliers, and skills are becoming the resources that define who wins in manufacturing next year, and access beyond the factory walls is the key to unlocking themManufacturing's AI payoff is upstream: Manufacturers see the biggest impact in manufacturability, costin",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/access-becoming-manufacturing-competitive-advantage-130500100.html?.tsrc=rss",
+   "published_at": "2026-10-01T13:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:00Z",
+   "fingerprint": "9cf185000449e29e",
+   "primary_source": false,
+   "cluster_id": "45a590a1db1c3bf1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bc153b7dbdabd1fd",
+   "symbols": [
+    "XMTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Access Is the New Manufacturing Advantage: Xometry Releases 2027 EMEA Manufacturing Outlook",
+   "summary": "Industrial firms across Europe are turning to AI-powered networks for manufacturing capacity, quality proof, and specialised engineering skillsMUNICH, Oct. 01, 2026 (GLOBE NEWSWIRE) -- Xometry, Inc. (NASDAQ: XMTR), the global AI-native marketplace connecting buyers and suppliers ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/access-manufacturing-advantage-xometry-releases-130500180.html?.tsrc=rss",
+   "published_at": "2026-10-01T13:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:00Z",
+   "fingerprint": "9328ac430b7105ed",
+   "primary_source": false,
+   "cluster_id": "bc153b7dbdabd1fd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "666a0b81aaa272e5",
+   "symbols": [
+    "XMTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xometry CEO Sells 1,500 Shares Amid a 67% One-Year Return",
+   "summary": "The AI-powered marketplace connecting buyers and suppliers of custom manufacturing reported a notable insider stock sale as shares soared.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/coverage/filings/2026/09/30/xometry-ceo-sells-1-500-shares-amid-a-67-one-year-return/?.tsrc=rss",
+   "published_at": "2026-10-01T02:02:38Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:00Z",
+   "fingerprint": "45c24b604c9e9e38",
+   "primary_source": false,
+   "cluster_id": "666a0b81aaa272e5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dcdf9a472483acb5",
+   "symbols": [
+    "XMTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xometry (XMTR): AI-Enabled Marketplace Scaling Drives Revenue Surge and Profitability",
+   "summary": "Brown Capital Management, an investment management company, released its second-quarter 2026 investor letter for “The Brown Capital Management Small Company Fund.” The letter can be downloaded here. For the quarter ended June 30, 2026, market volatility reflected uncertainty arou",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/xometry-xmtr-ai-enabled-marketplace-142523348.html?.tsrc=rss",
+   "published_at": "2026-09-29T14:25:23Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:00Z",
+   "fingerprint": "4bc8f8307c6f1721",
+   "primary_source": false,
+   "cluster_id": "dcdf9a472483acb5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "66aea1bec11f33e8",
+   "symbols": [
+    "PRLB",
+    "XMTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Top 3D Printing Stocks to Buy for Solid Long-Term Returns",
+   "summary": "3D Printing is reshaping industries with faster production and lower costs, drawing investor interest. Stocks like ATI, NVDA, AVNT, PRLB and SNPS offer strong growth potential.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/top-3d-printing-stocks-buy-150600670.html?.tsrc=rss",
+   "published_at": "2026-09-28T15:06:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:32:35Z",
+   "fingerprint": "53da9de3cad83227",
+   "primary_source": false,
+   "cluster_id": "66aea1bec11f33e8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a15b4886e4f79aa1",
+   "symbols": [
+    "XMTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xometry (XMTR) Stock Looks Fairly Priced Despite Its Nearly 5x Run",
+   "summary": "Xometry has seen its share price move sharply in recent years, which puts a spotlight on whether the current US$100.57 level lines up with the cash the business is expected to generate. With fresh product integration news in the mix, the question now is how those developments fil",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xometry-xmtr-stock-looks-fairly-060952651.html?.tsrc=rss",
+   "published_at": "2026-09-26T06:09:52Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:00Z",
+   "fingerprint": "bccdd1d716c7ba82",
+   "primary_source": false,
+   "cluster_id": "a15b4886e4f79aa1",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "df41a46b849f7f55",
+   "symbols": [
+    "XMTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "XMTR Stock, Avnet Near Buy Points Amid Push For AI Supply Chains",
+   "summary": "XMTR stock failed a breakout attempt on Thursday while Avnet eased in buy range, with both showing sharply accelerating growth on AI tailwinds. Xometry and Avnet are deploying artificial intelligence to ease bottlenecks within supply chains.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/011f60c0-eb06-33a3-a772-e2bfe6703e8f/xmtr-stock%2C-avnet-near-buy.html?.tsrc=rss",
+   "published_at": "2026-09-24T20:40:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:00Z",
+   "fingerprint": "2a3e601ec5250c72",
+   "primary_source": false,
+   "cluster_id": "df41a46b849f7f55",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c04ec62d08c3b277",
+   "symbols": [
+    "XMTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Xometry Stock Still a Buy After a 144% Six-Month Run?",
+   "summary": "Key TakeawaysTarget Catches Up: The Street now rates Xometry stock 6 buys, 3 outperforms, and 3 holds with no sells, and the mean target of $110 sits 14% above the current $97 price. Earnings Engine: Q2 revenue hit $229.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/is-xometry-stock-still-a-buy-after-a-144-six-month-run?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-09-19T14:08:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:00Z",
+   "fingerprint": "93452eb9011a64e6",
+   "primary_source": false,
+   "cluster_id": "c04ec62d08c3b277",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "e0572a624a9a4866",

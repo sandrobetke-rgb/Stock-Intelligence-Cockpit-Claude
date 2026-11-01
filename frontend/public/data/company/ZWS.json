@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -35,16 +35,16 @@
     "close": 44.79999923706055,
     "change_pct": 0.15649384203126893,
     "ema20": 46.88921915836278,
-    "ema50": 47.32589625078174,
-    "ema200": 47.307565122745395,
+    "ema50": 47.32589625077551,
+    "ema200": 47.307565082010825,
     "sma50": 47.09540000915527,
-    "rsi14": 38.362759872461545,
-    "rsi_min5": 30.03350528607831,
-    "atr14": 1.4977561463517224,
-    "atr_pct": 3.343205740755263,
+    "rsi14": 38.36275987246169,
+    "rsi_min5": 30.033505286078608,
+    "atr14": 1.4977561463517277,
+    "atr_pct": 3.343205740755275,
     "rvol": 1.3365192707537428,
     "vol30": 990456.6666666666,
-    "dist_ema200_pct": -5.300560024974132,
+    "dist_ema200_pct": -5.300559943432404,
     "dist_52w_high_pct": 18.364369945898417,
     "high_52w": 54.87799776564557,
     "macd_above_signal": false,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 45.36000061035156,
     "day_low": 44.220001220703125,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 34.151044495861285,
+    "adx14": 19.189593034874736,
+    "ema10": 46.51824131677465,
+    "sma200": 48.16359548568725,
+    "perf_63d": -12.30547996524194,
+    "adr20_pct": 3.036070335456461,
+    "range10_pct": 16.484028434214835,
+    "high10_prev": 49.959999084472656,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.0
    },
    "filter": {
     "Tag grün": true,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 45.36000061035156,
     "entry_max": 46.2672006225586,
-    "stop": 43.11336639082398,
-    "risk_per_share": 2.2466342195275857,
-    "target_1": 49.853269049406734,
+    "stop": 43.11336639082397,
+    "risk_per_share": 2.246634219527593,
+    "target_1": 49.85326904940675,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -135,11 +169,13 @@
    "top_factors": []
   },
   "market_intelligence": {
-   "score": 3.0,
+   "score": 50.0,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 11,
    "independent_24h": 0
   },
   "political": {
@@ -212,16 +248,16 @@
     "close": 44.79999923706055,
     "change_pct": 0.15649384203126893,
     "ema20": 46.88921915836278,
-    "ema50": 47.32589625078174,
-    "ema200": 47.307565122745395,
+    "ema50": 47.32589625077551,
+    "ema200": 47.307565082010825,
     "sma50": 47.09540000915527,
-    "rsi14": 38.362759872461545,
-    "rsi_min5": 30.03350528607831,
-    "atr14": 1.4977561463517224,
-    "atr_pct": 3.343205740755263,
+    "rsi14": 38.36275987246169,
+    "rsi_min5": 30.033505286078608,
+    "atr14": 1.4977561463517277,
+    "atr_pct": 3.343205740755275,
     "rvol": 1.3365192707537428,
     "vol30": 990456.6666666666,
-    "dist_ema200_pct": -5.300560024974132,
+    "dist_ema200_pct": -5.300559943432404,
     "dist_52w_high_pct": 18.364369945898417,
     "high_52w": 54.87799776564557,
     "macd_above_signal": false,
@@ -235,7 +271,17 @@
     "green": false,
     "day_high": 45.36000061035156,
     "day_low": 44.220001220703125,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 34.151044495861285,
+    "adx14": 19.189593034874736,
+    "ema10": 46.51824131677465,
+    "sma200": 48.16359548568725,
+    "perf_63d": -12.30547996524194,
+    "adr20_pct": 3.036070335456461,
+    "range10_pct": 16.484028434214835,
+    "high10_prev": 49.959999084472656,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -265,6 +311,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -272,7 +339,10 @@
     "S01": 0.5,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.0
    },
    "filter": {
     "Tag grün": true,
@@ -285,9 +355,9 @@
    "plan": {
     "trigger": 45.36000061035156,
     "entry_max": 46.2672006225586,
-    "stop": 43.11336639082398,
-    "risk_per_share": 2.2466342195275857,
-    "target_1": 49.853269049406734,
+    "stop": 43.11336639082397,
+    "risk_per_share": 2.246634219527593,
+    "target_1": 49.85326904940675,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -607,11 +677,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 3.0,
+  "score": 50.0,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 100.0,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 16.8,
@@ -629,25 +699,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 11,
+    "independent": 11,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 5,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 17,
+    "independent": 17,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 5,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -666,7 +738,410 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "5dac5bf85522e307",
+   "symbols": [
+    "ZWS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ZWS Q3 deep dive: margin expansion and new product launches offset cautious market outlook",
+   "summary": "Water management solutions company Zurn Elkay (NYSE:ZWS) met Wall Street’s revenue expectations in Q3 2026, with sales up 8.7% year on year to $495.1 million. On the other hand, next quarter’s revenue guidance of $433.5 million was less impressive, coming in 1% below analysts’ es",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zws-q3-deep-dive-margin-022729346.html?.tsrc=rss",
+   "published_at": "2026-10-31T02:27:29Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "8235979ecc0b8e96",
+   "primary_source": false,
+   "cluster_id": "5dac5bf85522e307",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "ZWS Q3 Deep Dive: Margenausbau und neue Produkteinführungen kompensieren vorsichtige Marktaussichten"
+  },
+  {
+   "id": "0246b57085407a65",
+   "symbols": [
+    "ZWS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zurn Elkay’s Q3 earnings call: our top 5 analyst questions",
+   "summary": "Zurn Elkay’s third quarter results were met with a significant negative market reaction, despite the company delivering organic revenue growth and notable margin expansion. Management attributed the performance to solid contributions from both its water safety and drinking water ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zurn-elkay-q3-earnings-call-210729072.html?.tsrc=rss",
+   "published_at": "2026-10-30T21:07:29Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "52bcfdfb5e36d8ab",
+   "primary_source": false,
+   "cluster_id": "0246b57085407a65",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ea24858bb0174a60",
+   "symbols": [
+    "ZWS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zurn Elkay Water Solutions Named One of America’s Growth Leaders 2027",
+   "summary": "MILWAUKEE, October 30, 2026--Zurn Elkay Water Solutions Corporation (NYSE: ZWS) announced today its inclusion on TIME’s list of America’s Growth Leaders 2027. This ranking highlights the top 500 U.S.-based companies in demonstrating exceptional growth, financial stability and sto",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zurn-elkay-water-solutions-named-121500778.html?.tsrc=rss",
+   "published_at": "2026-10-30T12:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "760297aea67dc97c",
+   "primary_source": false,
+   "cluster_id": "ea24858bb0174a60",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Zurn Elkay Water Solutions ist einer der Wachstumsführer Amerikas 2027"
+  },
+  {
+   "id": "369a4cb37afbe244",
+   "symbols": [
+    "ZWS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Did Zurn Elkay Water Solutions (ZWS) Move Today?",
+   "summary": "Zurn Elkay Water Solutions (ZWS) is back in focus after a packed October, with third quarter earnings, fresh fourth quarter revenue guidance and an 18% dividend hike giving investors new information to assess. The mixed reaction to October’s announcements shows up clearly in the ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-did-zurn-elkay-water-021544039.html?.tsrc=rss",
+   "published_at": "2026-10-30T02:15:44Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "1af23786f43fc244",
+   "primary_source": false,
+   "cluster_id": "369a4cb37afbe244",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cdc48c970e297a9c",
+   "symbols": [
+    "ZWS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zurn Elkay Water Solutions Cor Q3 Earnings Call Highlights",
+   "summary": "Zurn Elkay Water Solutions Cor (NYSE:ZWS) reported third-quarter sales growth and higher profitability, while raising its full-year adjusted EBITDA outlook and outlining plans to expand its commercial hot water portfolio. Third-quarter sales totaled $495 million, up 9% year over ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-zurn-elkay-water-solutions-cor-q3-earnings-call-highlights-2026-10-29/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-29T09:04:32Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "75c067b1cdcdcb74",
+   "primary_source": false,
+   "cluster_id": "cdc48c970e297a9c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b6e4e98645023e19",
+   "symbols": [
+    "ZWS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zurn Elkay Sinks 11% on Cautious Fourth-Quarter Outlook: “A Time to Be Conservative”",
+   "summary": "Key TakeawaysZurn Elkay shares fell 11% today because its fourth-quarter sales outlook of $430 million to $437 million outweighed 9% sales growth and an 18% dividend raise in the third quarter. The sell-off looks like an overreaction, since the company is still guiding to sales g",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/zurn-elkay-sinks-11-on-cautious-fourth-quarter-outlook-a-time-to-be-conservative?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-28T17:12:18Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "869e7db6fbbfa70a",
+   "primary_source": false,
+   "cluster_id": "b6e4e98645023e19",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "41f70ceef5a131d6",
+   "symbols": [
+    "ZWS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zurn Elkay (ZWS) Q3 2026 Earnings Call Transcript",
+   "summary": "Margin expansion and new hot water products drive results despite cautious 2027 outlook.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/28/zurn-elkay-zws-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-28T16:44:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "dd255370ced66d24",
+   "primary_source": false,
+   "cluster_id": "41f70ceef5a131d6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "77c700313f7e2dbf",
+   "symbols": [
+    "ZWS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zurn Elkay Water Solutions Corporation Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Zurn Elkay Water Solutions Corporation's Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-zurn-elkay-water-solutions-corporation-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-28T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "8ada5b1ea5b3f342",
+   "primary_source": false,
+   "cluster_id": "77c700313f7e2dbf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8ce6c4328bbd644f",
+   "symbols": [
+    "VLTO",
+    "ZWS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zurn Water (ZWS) Q3 Earnings and Revenues Surpass Estimates",
+   "summary": "Zurn Water (ZWS) delivered earnings and revenue surprises of +4.00% and +0.27%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zurn-water-zws-q3-earnings-212012579.html?.tsrc=rss",
+   "published_at": "2026-10-27T21:20:12Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:25Z",
+   "fingerprint": "2f89a79bd0db17c7",
+   "primary_source": false,
+   "cluster_id": "8ce6c4328bbd644f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "70dbcb490a19e209",
+   "symbols": [
+    "ZWS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zurn Elkay (NYSE:ZWS) posts Q3 2026 sales in line with estimates but stock drops",
+   "summary": "Water management solutions company Zurn Elkay (NYSE:ZWS) met Wall Street’s revenue expectations in Q3 2026, with revenue rising 8.7% year on year to $495.1 million. On the other hand, next quarter’s revenue guidance of $433.5 million was less impressive, coming in 1% below analys",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zurn-elkay-nyse-zws-posts-204533375.html?.tsrc=rss",
+   "published_at": "2026-10-27T20:45:33Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "1658976e815610a1",
+   "primary_source": false,
+   "cluster_id": "70dbcb490a19e209",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a1c5c815559ed5cf",
+   "symbols": [
+    "ZWS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zurn Elkay (ZWS) reports earnings tomorrow: what to expect",
+   "summary": "Water management solutions company Zurn Elkay (NYSE:ZWS) will be reporting results this Tuesday after market hours. Here’s what to expect.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zurn-elkay-zws-reports-earnings-075847728.html?.tsrc=rss",
+   "published_at": "2026-10-26T07:58:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "a72c17c1d3b14b67",
+   "primary_source": false,
+   "cluster_id": "a1c5c815559ed5cf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "649ed1169aa585d2",
+   "symbols": [
+    "ZWS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zurn Elkay Water Solutions Raises Quarterly Dividend by 18%",
+   "summary": "MILWAUKEE, October 22, 2026--Zurn Elkay Water Solutions Raises Quarterly Dividend by 18%",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zurn-elkay-water-solutions-raises-181200381.html?.tsrc=rss",
+   "published_at": "2026-10-22T18:12:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "cb86cf0ca82c4059",
+   "primary_source": false,
+   "cluster_id": "649ed1169aa585d2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0a8f431538ae62f8",
+   "symbols": [
+    "ZWS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Reasons Why Growth Investors Shouldn't Overlook Zurn Water (ZWS)",
+   "summary": "Zurn Water (ZWS) is well positioned to outperform the market, as it exhibits above-average growth in financials.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-reasons-why-growth-investors-154502204.html?.tsrc=rss",
+   "published_at": "2026-10-19T15:45:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "3d129d002dd94c03",
+   "primary_source": false,
+   "cluster_id": "0a8f431538ae62f8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3eb2ef88e81fec5e",
+   "symbols": [
+    "ZWS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zurn Elkay Water Solutions Schedules Third Quarter 2026 Earnings Release and Investor Conference Call",
+   "summary": "MILWAUKEE, October 14, 2026--Zurn Elkay Water Solutions Schedules Third Quarter 2026 Earnings Release and Investor Conference Call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zurn-elkay-water-solutions-schedules-200500334.html?.tsrc=rss",
+   "published_at": "2026-10-14T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "0830ce18c4b897c0",
+   "primary_source": false,
+   "cluster_id": "3eb2ef88e81fec5e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7e81e2e033319cd2",
+   "symbols": [
+    "NOVT",
+    "PAR",
+    "ZWS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "2 of Wall Street’s Favorite Stocks Worth Your Attention and 1 Facing Headwinds",
+   "summary": "The stocks in this article have caught Wall Street’s attention in a big way, with price targets implying returns above 20%. But investors should take these forecasts with a grain of salt because analysts typically say nice things about companies so their firms can win business in",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/2-wall-street-favorite-stocks-100809221.html?.tsrc=rss",
+   "published_at": "2026-10-08T10:08:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:30Z",
+   "fingerprint": "0dc629c6c297d52d",
+   "primary_source": false,
+   "cluster_id": "7e81e2e033319cd2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "18a9329b5edfdab2",
+   "symbols": [
+    "ZWS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "XYL vs. ZWS: Which Stock Is the Better Value Option?",
+   "summary": "XYL vs. ZWS: Which Stock Is the Better Value Option?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xyl-vs-zws-stock-better-144004965.html?.tsrc=rss",
+   "published_at": "2026-10-05T14:40:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "653dbed9211378fd",
+   "primary_source": false,
+   "cluster_id": "18a9329b5edfdab2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1653c852bec1ff3f",
+   "symbols": [
+    "ZWS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Pentair Expands Water Solutions Segment With Taco Acquisition",
+   "summary": "PNR's Taco acquisition expands its water solutions portfolio, targeting high-growth markets with pumps, valves and controls.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/pentair-expands-water-solutions-segment-141900665.html?.tsrc=rss",
+   "published_at": "2026-10-05T14:19:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "9849b5b38078980f",
+   "primary_source": false,
+   "cluster_id": "1653c852bec1ff3f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1923edf28ba28d5d",
+   "symbols": [
+    "GFF",
+    "ZWS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Profitable Stock with Competitive Advantages and 2 Facing Challenges",
+   "summary": "Not all profitable companies are built to last - some rely on outdated models or unsustainable advantages. Just because a business is in the green today doesn’t mean it will thrive tomorrow.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-profitable-stock-competitive-advantages-102907407.html?.tsrc=rss",
+   "published_at": "2026-10-01T10:29:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:28Z",
+   "fingerprint": "f3b56e62a734918b",
+   "primary_source": false,
+   "cluster_id": "1923edf28ba28d5d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "2cff9ac65a9c6bb9",

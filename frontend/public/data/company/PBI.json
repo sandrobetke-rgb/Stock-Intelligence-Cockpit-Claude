@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 2.6088920431256057,
    "rvol": 1.7454057595706842,
    "ema10": 16.963610465219233,
-   "ema21": 16.973794283929934,
+   "ema21": 16.973794283929937,
    "sma50": 16.938400001525878,
-   "sma200": 14.758303017616273
+   "sma200": 14.758303027153016
   },
   "market_cap": 2210894592.0,
   "market_cap_currency": "USD",
@@ -35,16 +35,16 @@
     "close": 16.309999465942383,
     "change_pct": -0.9112978546382378,
     "ema20": 16.975686304609972,
-    "ema50": 16.93779335548107,
-    "ema200": 15.181630082816248,
+    "ema50": 16.93779335555397,
+    "ema200": 15.181630086399888,
     "sma50": 16.938400001525878,
-    "rsi14": 39.23129107785362,
-    "rsi_min5": 39.23129107785362,
-    "atr14": 0.4912050408694537,
-    "atr_pct": 3.011680300144462,
+    "rsi14": 39.23129107783234,
+    "rsi_min5": 39.23129107783234,
+    "atr14": 0.4912050408693885,
+    "atr_pct": 3.011680300144062,
     "rvol": 1.7454057595706842,
     "vol30": 1653103.3333333333,
-    "dist_ema200_pct": 7.432465268688837,
+    "dist_ema200_pct": 7.4324652433293,
     "dist_52w_high_pct": 13.97918874160723,
     "high_52w": 18.960527373951113,
     "macd_above_signal": false,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 16.43000030517578,
     "day_low": 15.920000076293945,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 6.591729258263598,
+    "adx14": 14.314493806053553,
+    "ema10": 16.963610465219233,
+    "sma200": 14.758303027153016,
+    "perf_63d": -9.218770552446575,
+    "adr20_pct": 2.6088920431256057,
+    "range10_pct": 7.3780549997947364,
+    "high10_prev": 17.610000610351562,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,14 +98,40 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": false
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.5,
     "S02": 0.7,
     "S03": 0.3333333333333333,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.6666666666666666,
+    "RSI2": 1.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -108,9 +144,9 @@
    "plan": {
     "trigger": 16.43000030517578,
     "entry_max": 16.7586003112793,
-    "stop": 15.6931927438716,
-    "risk_per_share": 0.7368075613041807,
-    "target_1": 17.903615427784143,
+    "stop": 15.693192743871698,
+    "risk_per_share": 0.736807561304083,
+    "target_1": 17.903615427783947,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -189,9 +225,9 @@
   "adr20": 2.6088920431256057,
   "rvol": 1.7454057595706842,
   "ema10": 16.963610465219233,
-  "ema21": 16.973794283929934,
+  "ema21": 16.973794283929937,
   "sma50": 16.938400001525878,
-  "sma200": 14.758303017616273,
+  "sma200": 14.758303027153016,
   "volatility_ann": 25.645418448207053,
   "avg_dollar_volume_20d": 27700438.498268127,
   "move_zscore": -0.564093153375245,
@@ -200,16 +236,16 @@
     "close": 16.309999465942383,
     "change_pct": -0.9112978546382378,
     "ema20": 16.975686304609972,
-    "ema50": 16.93779335548107,
-    "ema200": 15.181630082816248,
+    "ema50": 16.93779335555397,
+    "ema200": 15.181630086399888,
     "sma50": 16.938400001525878,
-    "rsi14": 39.23129107785362,
-    "rsi_min5": 39.23129107785362,
-    "atr14": 0.4912050408694537,
-    "atr_pct": 3.011680300144462,
+    "rsi14": 39.23129107783234,
+    "rsi_min5": 39.23129107783234,
+    "atr14": 0.4912050408693885,
+    "atr_pct": 3.011680300144062,
     "rvol": 1.7454057595706842,
     "vol30": 1653103.3333333333,
-    "dist_ema200_pct": 7.432465268688837,
+    "dist_ema200_pct": 7.4324652433293,
     "dist_52w_high_pct": 13.97918874160723,
     "high_52w": 18.960527373951113,
     "macd_above_signal": false,
@@ -223,7 +259,17 @@
     "green": false,
     "day_high": 16.43000030517578,
     "day_low": 15.920000076293945,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 6.591729258263598,
+    "adx14": 14.314493806053553,
+    "ema10": 16.963610465219233,
+    "sma200": 14.758303027153016,
+    "perf_63d": -9.218770552446575,
+    "adr20_pct": 2.6088920431256057,
+    "range10_pct": 7.3780549997947364,
+    "high10_prev": 17.610000610351562,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -253,14 +299,40 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": false
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.5,
     "S02": 0.7,
     "S03": 0.3333333333333333,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.6666666666666666,
+    "RSI2": 1.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -273,9 +345,9 @@
    "plan": {
     "trigger": 16.43000030517578,
     "entry_max": 16.7586003112793,
-    "stop": 15.6931927438716,
-    "risk_per_share": 0.7368075613041807,
-    "target_1": 17.903615427784143,
+    "stop": 15.693192743871698,
+    "risk_per_share": 0.736807561304083,
+    "target_1": 17.903615427783947,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -949,6 +1021,7 @@
   {
    "id": "f26677068d4fd6da",
    "symbols": [
+    "ACCO",
     "PBI"
    ],
    "category": "market",

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -59,7 +59,17 @@
     "green": false,
     "day_high": 68.7699966430664,
     "day_low": 63.20000076293945,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 3.8765850569700433,
+    "adx14": 27.433950117649903,
+    "ema10": 88.43349564515368,
+    "sma200": 86.86499998092651,
+    "perf_63d": -27.736261388757722,
+    "adr20_pct": 4.656420758425551,
+    "range10_pct": 13.03012236322858,
+    "high10_prev": 95.68000030517578,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -89,6 +99,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -96,7 +127,10 @@
     "S01": 0.5,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -147,7 +181,7 @@
     "price_volume_anomaly"
    ],
    "independent_7d": 32,
-   "independent_24h": 26
+   "independent_24h": 24
   },
   "political": {
    "relevance": 0,
@@ -158,12 +192,12 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 80,
+   "mentions_7d": 92,
    "manipulation_risk": "auffaellig",
-   "mentions_24h": 41,
-   "sentiment_7d": 0.16,
-   "bullish_7d": 18,
-   "bearish_7d": 5
+   "mentions_24h": 46,
+   "sentiment_7d": 0.13,
+   "bullish_7d": 19,
+   "bearish_7d": 6
   },
   "insider": {
    "window_days": 90,
@@ -261,7 +295,17 @@
     "green": false,
     "day_high": 68.7699966430664,
     "day_low": 63.20000076293945,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 3.8765850569700433,
+    "adx14": 27.433950117649903,
+    "ema10": 88.43349564515368,
+    "sma200": 86.86499998092651,
+    "perf_63d": -27.736261388757722,
+    "adr20_pct": 4.656420758425551,
+    "range10_pct": 13.03012236322858,
+    "high10_prev": 95.68000030517578,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -291,6 +335,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -298,7 +363,10 @@
     "S01": 0.5,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -650,8 +718,8 @@
   },
   "windows": {
    "24h": {
-    "signals": 26,
-    "independent": 26,
+    "signals": 24,
+    "independent": 24,
     "duplicates": 0,
     "sources": 7,
     "primary": 0,
@@ -702,6 +770,11 @@
   {
    "id": "215fddafaba72d91",
    "symbols": [
+    "AAPL",
+    "AMD",
+    "AMGN",
+    "AMZN",
+    "ANET",
     "GOOG",
     "GOOGL",
     "INTC",
@@ -874,6 +947,7 @@
   {
    "id": "3c35ce657fe9da4a",
    "symbols": [
+    "AMD",
     "INTC"
    ],
    "category": "market",
@@ -943,6 +1017,8 @@
   {
    "id": "9b5518d45489382d",
    "symbols": [
+    "AAPL",
+    "AMZN",
     "INTC"
    ],
    "category": "market",
@@ -1299,7 +1375,8 @@
     "GOOG",
     "GOOGL",
     "INTC",
-    "NOW"
+    "NOW",
+    "ZETA"
    ],
    "category": "market",
    "signal_type": "news",
@@ -1531,6 +1608,7 @@
    "id": "9dd7457862c8b6bf",
    "symbols": [
     "AAPL",
+    "AMZN",
     "GOOG",
     "GOOGL",
     "INTC"
@@ -1660,21 +1738,21 @@
   }
  ],
  "social_detail": {
-  "mentions_24h": 41,
-  "mentions_7d": 80,
-  "mentions_30d": 80,
-  "change_vs_baseline_pct": 636,
-  "engagement_7d": 158.0,
-  "sentiment_7d": 0.16,
+  "mentions_24h": 46,
+  "mentions_7d": 92,
+  "mentions_30d": 92,
+  "change_vs_baseline_pct": 600,
+  "engagement_7d": 192.0,
+  "sentiment_7d": 0.13,
   "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
-  "bullish_7d": 18,
-  "bearish_7d": 5,
+  "bullish_7d": 19,
+  "bearish_7d": 6,
   "by_platform_7d": {
-   "stocktwits": 59,
-   "reddit": 21
+   "stocktwits": 70,
+   "reddit": 22
   },
   "communities_7d": {
-   "StockTwits": 59,
+   "StockTwits": 70,
    "r/wallstreetbets": 11,
    "r/StockMarket": 8,
    "r/wallstreetbetsGER": 1,
@@ -1706,7 +1784,7 @@
     "posted_at": "2026-11-01T01:13:34Z",
     "url": "https://stocktwits.com/thesupine/message/667859346",
     "text": "$PLTR $INTC $RDDT $GOOGL",
-    "engagement": 14.0,
+    "engagement": 15.0,
     "sentiment_label": null
    },
    {
@@ -1722,22 +1800,22 @@
    {
     "platform": "stocktwits",
     "community": "StockTwits",
+    "author": "JDKING",
+    "posted_at": "2026-10-30T16:35:40Z",
+    "url": "https://stocktwits.com/JDKING/message/667785500",
+    "text": "$INTC $ORCL $PLTR $QCOM $CRWD ENIUGH IS ENOUGH! !!",
+    "engagement": 7.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
     "author": "sayiptony",
     "posted_at": "2026-10-30T15:22:18Z",
     "url": "https://stocktwits.com/sayiptony/message/667774655",
     "text": "$CVNA this will see a $INTC sorta price correction soon.",
     "engagement": 7.0,
     "sentiment_label": "Bearish"
-   },
-   {
-    "platform": "stocktwits",
-    "community": "StockTwits",
-    "author": "Philfoundation4",
-    "posted_at": "2026-10-30T18:55:50Z",
-    "url": "https://stocktwits.com/Philfoundation4/message/667808409",
-    "text": "$ASTS $INTC $NOW $SMCI $UPST you’re a fucking ray of sunshine",
-    "engagement": 6.0,
-    "sentiment_label": null
    }
   ]
  },

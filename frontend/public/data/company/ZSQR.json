@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 3.687999963760376,
     "day_low": 3.4809999465942383,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 16.48684727184768,
+    "adx14": 17.815106199893712,
+    "ema10": 3.9151451591508395,
+    "sma200": 8.922474973201751,
+    "perf_63d": -30.155641878957383,
+    "adr20_pct": 15.12399318616443,
+    "range10_pct": 37.272735614093655,
+    "high10_prev": 4.53000020980835,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.3,
     "S03": 0.0,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.16666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -139,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 0.4,
+   "score": 16.5,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -173,7 +209,7 @@
     "time": "Uhrzeit offen",
     "fiscal_quarter": "Sep/2026",
     "eps_forecast": null,
-    "estimates": 8,
+    "estimates": 1,
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/zsqr/earnings",
@@ -236,7 +272,17 @@
     "green": true,
     "day_high": 3.687999963760376,
     "day_low": 3.4809999465942383,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 16.48684727184768,
+    "adx14": 17.815106199893712,
+    "ema10": 3.9151451591508395,
+    "sma200": 8.922474973201751,
+    "perf_63d": -30.155641878957383,
+    "adr20_pct": 15.12399318616443,
+    "range10_pct": 37.272735614093655,
+    "high10_prev": 4.53000020980835,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -266,6 +312,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -273,7 +340,10 @@
     "S01": 0.0,
     "S02": 0.3,
     "S03": 0.0,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.16666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -612,11 +682,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 0.4,
+  "score": 16.5,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 2.0,
@@ -634,25 +704,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -671,7 +743,273 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "7ee4d766e85dac2f",
+   "symbols": [
+    "ZSQR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Z Squared Begins Site Planning and Engineering at Energized Union County Campus in El Dorado, Arkansas",
+   "summary": "Z Squared Inc. (Nasdaq: ZSQR) (\"Z Squared\" or the \"Company\") today announced that it has begun site planning and preliminary engineering for its Union County Campus in El Dorado, Arkansas. The Company has engaged A2 Advisors to advise on site development, project delivery, vendor",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/z-squared-begins-planning-engineering-113000150.html?.tsrc=rss",
+   "published_at": "2026-10-30T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:15Z",
+   "fingerprint": "9721d1b6efa272b6",
+   "primary_source": false,
+   "cluster_id": "7ee4d766e85dac2f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Z Squared beginnt mit der Planung und Entwicklung des Standorts auf dem Energized Union County Campus in El Dorado, Arkansas"
+  },
+  {
+   "id": "9d1a73fde3237390",
+   "symbols": [
+    "ZSQR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Inside an Alleged $1.2B Ponzi Scheme That Left Investors Holding Crashed Stock",
+   "summary": "Z Squared began trading on Nasdaq in April, part of a plan to get investors out of a private-equity fund.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/893bc0c2-9261-3142-b8aa-930dcae81eb1/inside-an-alleged-%241.2b-ponzi.html?.tsrc=rss",
+   "published_at": "2026-09-29T13:04:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:15Z",
+   "fingerprint": "50cd17e2059f228f",
+   "primary_source": false,
+   "cluster_id": "9d1a73fde3237390",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "438f23023509750b",
+   "symbols": [
+    "ZSQR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Z Squared Acquires Energized Arkansas Campus to Advance AI Infrastructure Strategy",
+   "summary": "Z Squared Inc. (Nasdaq: ZSQR) (\"Z Squared\" or the \"Company\") today announced the closing of its acquisition of Paradox Data, LLC from Paradox Infrastructure LLC, bringing the energized Union County Campus in El Dorado, Arkansas (the \"Union County Campus\"), into its computing infr",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/z-squared-acquires-energized-arkansas-110000770.html?.tsrc=rss",
+   "published_at": "2026-09-09T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:15Z",
+   "fingerprint": "acc229b87a6600f7",
+   "primary_source": false,
+   "cluster_id": "438f23023509750b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "06e5c69c07577bfb",
+   "symbols": [
+    "ZSQR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Z Squared Inc. Signs Definitive Agreement to Acquire 100% of Paradox Data and Its Union County Campus",
+   "summary": "Z Squared Inc. (Nasdaq: ZSQR) (\"Z Squared\" or the \"Company\"), a computing infrastructure company expanding into AI infrastructure, today announced that it has signed a definitive agreement to acquire 100% of the membership interests of Paradox Data, LLC from Paradox Infrastructur",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/z-squared-inc-signs-definitive-110000183.html?.tsrc=rss",
+   "published_at": "2026-08-03T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:15Z",
+   "fingerprint": "2b925ccf649b4338",
+   "primary_source": false,
+   "cluster_id": "06e5c69c07577bfb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2eb6a8173a279607",
+   "symbols": [
+    "ZSQR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Z Squared Inc. Provides Capital Structure Update",
+   "summary": "Z Squared Inc. (Nasdaq: ZSQR) (the \"Company\") today provided the following update regarding its capital structure.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/z-squared-inc-provides-capital-130600292.html?.tsrc=rss",
+   "published_at": "2026-07-15T13:06:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:15Z",
+   "fingerprint": "3ff0bb8232254bc6",
+   "primary_source": false,
+   "cluster_id": "2eb6a8173a279607",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6506d20b71f0b974",
+   "symbols": [
+    "ZSQR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Z Squared Inc. Appoints Jeffrey Harris as Chief Technology Officer",
+   "summary": "Z Squared Inc. (Nasdaq: ZSQR) (the \"Company\"), a digital infrastructure company expanding into AI infrastructure, today announced the appointment of Jeffrey Harris as Chief Technology Officer.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/z-squared-inc-appoints-jeffrey-110000375.html?.tsrc=rss",
+   "published_at": "2026-06-30T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:15Z",
+   "fingerprint": "39d284294ff6686b",
+   "primary_source": false,
+   "cluster_id": "6506d20b71f0b974",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "64b205d58e6df7a5",
+   "symbols": [
+    "ZSQR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Z Squared Raises Approximately $15.3 Million in Non-Debt Capital to Advance AI Infrastructure Strategy",
+   "summary": "Z Squared Inc. (NASDAQ: ZSQR), a digital infrastructure company expanding into AI infrastructure, today announced that it has raised approximately $15.3 million in capital through equity sales under its standby equity purchase agreement. The Company incurred no new debt in connec",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/z-squared-raises-approximately-15-203900301.html?.tsrc=rss",
+   "published_at": "2026-06-29T20:39:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:15Z",
+   "fingerprint": "e74fcc9b1115b75e",
+   "primary_source": false,
+   "cluster_id": "64b205d58e6df7a5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "74e8d2f36d8763d7",
+   "symbols": [
+    "ZSQR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Russell Indexes Add Z Squared Inc. to Russell 2000® and Russell 3000®",
+   "summary": "Z Squared Inc. (Nasdaq: ZSQR) (the \"Company\"), a digital infrastructure company expanding into AI infrastructure, today confirmed its official inclusion in the Russell 3000® Index and the Russell 2000® Index, effective after the market closed on Friday, June 26, 2026, as part of ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/russell-indexes-add-z-squared-110000048.html?.tsrc=rss",
+   "published_at": "2026-06-29T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:15Z",
+   "fingerprint": "ec272b620b76e2e5",
+   "primary_source": false,
+   "cluster_id": "74e8d2f36d8763d7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "190acb220f718340",
+   "symbols": [
+    "ZSQR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Z Squared, Inc. to Acquire Majority Interest in Paradox Data and Its Union County Campus, a Next-Generation Data Center Development Targeting Up to 150 MW of Firm Power",
+   "summary": "Z Squared, Inc. (Nasdaq: ZSQR) (the \"Company\"), a digital infrastructure company expanding into AI infrastructure, today announced that it has entered into a binding letter of intent to acquire majority membership interest in Paradox Data LLC (\"Paradox Data\" or \"Paradox\"), a digi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/z-squared-inc-acquire-majority-110000650.html?.tsrc=rss",
+   "published_at": "2026-06-25T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:15Z",
+   "fingerprint": "16c53aef2b8897fa",
+   "primary_source": false,
+   "cluster_id": "190acb220f718340",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d14a250b241a3d7b",
+   "symbols": [
+    "ZSQR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Z Squared to Participate in Maxim Group's AI Data Center Summit",
+   "summary": "Z Squared, Inc. (Nasdaq: ZSQR) (\"Z Squared\" or the \"Company\"), a digital infrastructure company expanding into AI infrastructure, today announced that its management team will participate in Maxim Group's AI Data Center Summit, being held virtually on Thursday, June 11, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/technology/articles/z-squared-participate-maxim-groups-110000244.html?.tsrc=rss",
+   "published_at": "2026-06-09T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:15Z",
+   "fingerprint": "b25814557d57050c",
+   "primary_source": false,
+   "cluster_id": "d14a250b241a3d7b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b677ecd6a83925b8",
+   "symbols": [
+    "ZSQR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Z Squared, Inc. Enters $50 Million Committed Equity Forward Purchase Agreement to Support AI Infrastructure Buildout",
+   "summary": "Z Squared, Inc. (Nasdaq: ZSQR) (the \"Company\"), a digital infrastructure company expanding into AI infrastructure, today announced the Company has entered into a $50 million committed equity forward purchase agreement with LucentHash / Data Part Capital, a trading name of Translu",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/z-squared-inc-enters-50-110000456.html?.tsrc=rss",
+   "published_at": "2026-06-04T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:15Z",
+   "fingerprint": "80d6c51ade064c72",
+   "primary_source": false,
+   "cluster_id": "b677ecd6a83925b8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a591f3766bd34311",
+   "symbols": [
+    "ZSQR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Z Squared, Inc. Announces Preliminary Inclusion in Russell 3000® and Russell 2000® Indexes",
+   "summary": "Z Squared, Inc. (Nasdaq: ZSQR) a digital infrastructure company expanding into AI infrastructure for inference workloads, today announced that the Company has been included in the preliminary list of additions to the broad-market Russell 3000® Index and the small-cap Russell 2000",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/z-squared-inc-announces-preliminary-110000993.html?.tsrc=rss",
+   "published_at": "2026-05-27T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:15Z",
+   "fingerprint": "9f10c81ee86be9dd",
+   "primary_source": false,
+   "cluster_id": "a591f3766bd34311",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "598162043fa9cb05",

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 13.119999885559082,
     "day_low": 12.800000190734863,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 99.96090186848006,
+    "adx14": 30.77801595037678,
+    "ema10": 11.902193175194007,
+    "sma200": 17.033150010108947,
+    "perf_63d": -18.675078655565937,
+    "adr20_pct": 4.505840322947817,
+    "range10_pct": 27.30844449540699,
+    "high10_prev": 12.960000038146973,
+    "pullback_ema20": false,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.3,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": true,
@@ -138,11 +172,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.2,
+   "score": 22.4,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "analyst_activity",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -235,7 +271,17 @@
     "green": true,
     "day_high": 13.119999885559082,
     "day_low": 12.800000190734863,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 99.96090186848006,
+    "adx14": 30.77801595037678,
+    "ema10": 11.902193175194007,
+    "sma200": 17.033150010108947,
+    "perf_63d": -18.675078655565937,
+    "adr20_pct": 4.505840322947817,
+    "range10_pct": 27.30844449540699,
+    "high10_prev": 12.960000038146973,
+    "pullback_ema20": false,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -265,6 +311,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -272,7 +339,10 @@
     "S01": 0.0,
     "S02": 0.3,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": true,
@@ -610,13 +680,13 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.2,
+  "score": 22.4,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
-   "analyst_activity": 0,
+   "analyst_activity": 35,
    "price_volume_anomaly": 12.2,
    "social_attention": null,
    "insider_activity": null
@@ -632,26 +702,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "analyst_activity",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -669,7 +741,405 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "85c8c50e1fd48d14",
+   "symbols": [
+    "ACR"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "KBRA Publishes Ratings for ACRES Commercial Realty Corp.",
+   "summary": "NEW YORK, October 29, 2026--KBRA publishes the issuer rating of BB, senior secured debt rating of BBB-, and preferred stock rating of BB- for ACRES Commercial Realty Corp. (NYSE: ACR, \"ACRES\", or \"the company\"). The Outlook for the ratings is Stable. On August 5, 2026, these rati",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/kbra-publishes-ratings-acres-commercial-195300322.html?.tsrc=rss",
+   "published_at": "2026-10-29T19:53:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "e5ba93c243c35a9c",
+   "primary_source": false,
+   "cluster_id": "85c8c50e1fd48d14",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "30cd4a41711537f4",
+   "symbols": [
+    "ACR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACRES Commercial Realty Corp. to Report Results for Third Quarter 2026",
+   "summary": "ACRES Commercial Realty Corp. (NYSE: ACR) (the \"Company\" or \"ACRES\") announced today that it will release its results for the third quarter 2026 on Wednesday, November 4, 2026, after the market closes. The Company invites investors and other interested parties to listen to its li",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/acres-commercial-realty-corp-report-201500603.html?.tsrc=rss",
+   "published_at": "2026-10-21T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "e9089d4ed6b0629e",
+   "primary_source": false,
+   "cluster_id": "30cd4a41711537f4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "62e0cf8cbfe14599",
+   "symbols": [
+    "ACR",
+    "ADAM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACRES Commercial (ACR) Moves 9.5% Higher: Will This Strength Last?",
+   "summary": "ACRES Commercial (ACR) was a big mover last session on higher-than-average trading volume. The latest trend in earnings estimate revisions might not help the stock continue moving higher in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acres-commercial-acr-moves-9-122100164.html?.tsrc=rss",
+   "published_at": "2026-10-01T12:21:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "f050c5653694821a",
+   "primary_source": false,
+   "cluster_id": "62e0cf8cbfe14599",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "837c2467eeec46ad",
+   "symbols": [
+    "ACR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACRES Commercial Realty Corp. Reauthorizes an Additional $5 Million Share Repurchase Program",
+   "summary": "ACRES Commercial Realty Corp. (NYSE:ACR) (the \"Company\") announced today that its board of directors (the \"Board\") authorized and approved the continued use of its existing share repurchase program to repurchase an additional $5.0 million of the outstanding shares of its common s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acres-commercial-realty-corp-reauthorizes-203000826.html?.tsrc=rss",
+   "published_at": "2026-09-29T20:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "c37ccbe9ff33b092",
+   "primary_source": false,
+   "cluster_id": "837c2467eeec46ad",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bd75520531fd6ae3",
+   "symbols": [
+    "ACR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACRES Commercial Realty Corp. Declares Quarterly Cash Dividends for its Preferred Stock",
+   "summary": "ACRES Commercial Realty Corp. (NYSE: ACR) (the \"Company\") announced today that its Board of Directors declared cash dividends on its Preferred Stock.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/acres-commercial-realty-corp-declares-201500242.html?.tsrc=rss",
+   "published_at": "2026-09-16T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "1ceed7a482fe9d12",
+   "primary_source": false,
+   "cluster_id": "bd75520531fd6ae3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "41880683991b10ba",
+   "symbols": [
+    "ACR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "CORRECTING and REPLACING Amid Declining Book Value, ACRES Commercial Realty Struggles to Sell REO Property Due to Labor Dispute with Philadelphia Hospitality Union UNITE HERE Local 274",
+   "summary": "PHILADELPHIA, August 20, 2026--Please replace the release with the following corrected version due to multiple revisions to the first paragraph.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/amid-declining-book-value-acres-144000848.html?.tsrc=rss",
+   "published_at": "2026-08-20T22:07:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "8a0d9619b220653f",
+   "primary_source": false,
+   "cluster_id": "41880683991b10ba",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "45b8e564185405a0",
+   "symbols": [
+    "ACR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACRES (ACR) Q2 2026 Earnings Call Transcript",
+   "summary": "Internalization costs drove loss; liquidity stable and leverage improved.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/07/acres-acr-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-08T01:14:28Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "daeec08c0df7fefe",
+   "primary_source": false,
+   "cluster_id": "45b8e564185405a0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "42d804007618844f",
+   "symbols": [
+    "ACR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACRES COMMERCIAL REALTY CORP. ANNOUNCES COMPLETION OF MERGER, INTERNALIZATION AND PRIVATE NOTES OFFERING",
+   "summary": "ACRES Commercial Realty Corp. (NYSE: ACR) (the \"ACR\" or \"Company\") announced today that it has completed its previously disclosed acquisition of ACRES Capital Corp. (\"ACC\") in an all-stock transaction (the \"Merger\") and transitioned from an externally-managed REIT to an internall",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/acres-commercial-realty-corp-announces-202000197.html?.tsrc=rss",
+   "published_at": "2026-08-06T20:20:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "a457438e420af841",
+   "primary_source": false,
+   "cluster_id": "42d804007618844f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "849d87c41ac1d0a5",
+   "symbols": [
+    "ACR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACRES Commercial Realty Q2 Earnings Call Highlights",
+   "summary": "ACRES Commercial Realty (NYSE:ACR) reported a second-quarter 2026 GAAP net loss allocable to common shareholders of $12.5 million, or $1.87 per share, as costs tied to its planned manager internalization weighed on results. Chief Financial Officer Eldron Blackwell said the quarte",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/acres-commercial-realty-q2-earnings-call-highlights-2026-07-30/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-01T02:03:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "0d2771682de3781d",
+   "primary_source": false,
+   "cluster_id": "849d87c41ac1d0a5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3d13211e9649a60b",
+   "symbols": [
+    "ACR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACRES Commercial Realty Corp (ACR) (Q2 2026) Earnings Call Highlights: Internalization ...",
+   "summary": "Shareholders back management alignment, yet a $12.5 million net loss and declining book value weigh on the quarter.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acres-commercial-realty-corp-acr-230457954.html?.tsrc=rss",
+   "published_at": "2026-07-30T23:04:57Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "c5d4a045b5f9da00",
+   "primary_source": false,
+   "cluster_id": "3d13211e9649a60b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "717913c03c385046",
+   "symbols": [
+    "ACR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACRES Commercial (ACR) Reports Q2 Loss, Misses Revenue Estimates",
+   "summary": "ACRES Commercial (ACR) delivered earnings and revenue surprises of -772.73% and -14.48%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/acres-commercial-acr-reports-q2-222503739.html?.tsrc=rss",
+   "published_at": "2026-07-29T22:25:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "6dff79b7491aa26c",
+   "primary_source": false,
+   "cluster_id": "717913c03c385046",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "504c5679dd206c6d",
+   "symbols": [
+    "ACR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACRES COMMERCIAL REALTY CORP. REPORTS RESULTS FOR SECOND QUARTER 2026",
+   "summary": "ACRES Commercial Realty Corp. (NYSE: ACR) (\"ACR\" or the \"Company\"), a real estate investment trust that is primarily focused on originating, holding and managing commercial real estate mortgage loans and equity investments in commercial real estate property through direct ownersh",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/acres-commercial-realty-corp-reports-201100608.html?.tsrc=rss",
+   "published_at": "2026-07-29T20:11:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "d5f4a1edf026f758",
+   "primary_source": false,
+   "cluster_id": "37531f91b68f020b",
+   "independence": "copy",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "627168336dba336e",
+   "symbols": [
+    "ACR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Implied Volatility Surging for ACRES Commercial Stock Options",
+   "summary": "Investors need to pay close attention to ACR stock based on the movements in the options market lately.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/options/articles/implied-volatility-surging-acres-commercial-123200639.html?.tsrc=rss",
+   "published_at": "2026-07-23T12:32:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "0b9013ec60ed0741",
+   "primary_source": false,
+   "cluster_id": "627168336dba336e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cdca956242797e0f",
+   "symbols": [
+    "ACR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Annaly Capital Management (NLY) Beats Q2 Earnings Estimates",
+   "summary": "Annaly (NLY) delivered earnings and revenue surprises of +5.33% and -4.09%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/annaly-capital-management-nly-beats-215503174.html?.tsrc=rss",
+   "published_at": "2026-07-21T21:55:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "d96c0d85af98fe1b",
+   "primary_source": false,
+   "cluster_id": "cdca956242797e0f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d9fae63625fe918e",
+   "symbols": [
+    "ACR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "New Strong Sell Stocks for July 20th",
+   "summary": "ACR, AEM and AYTU have been added to the Zacks Rank #5 (Strong Sell) List on July 20, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/strong-sell-stocks-july-20th-103100373.html?.tsrc=rss",
+   "published_at": "2026-07-20T10:31:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "7a38203b2a21b66c",
+   "primary_source": false,
+   "cluster_id": "d9fae63625fe918e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "37531f91b68f020b",
+   "symbols": [
+    "ACR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACRES Commercial Realty Corp. to Report Results for Second Quarter 2026",
+   "summary": "ACRES Commercial Realty Corp. (NYSE: ACR) (the \"Company\") announced today that it will release its results for the second quarter 2026, on Wednesday, July 29, 2026, after the market closes. The Company invites investors and other interested parties to listen to its live conferenc",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/acres-commercial-realty-corp-report-201200454.html?.tsrc=rss",
+   "published_at": "2026-07-15T20:12:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "9f2a1d367cc9ba9d",
+   "primary_source": false,
+   "cluster_id": "37531f91b68f020b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9aae049f931fb61f",
+   "symbols": [
+    "ACR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 European Growth Stocks Insiders Are Eager To Hold",
+   "summary": "Despite recent fluctuations, European markets are navigating a complex landscape marked by geopolitical tensions and economic contractions. In such an environment, growth companies with high insider ownership can be particularly appealing to investors, as they often indicate stro",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-european-growth-stocks-insiders-103556852.html?.tsrc=rss",
+   "published_at": "2026-06-09T10:35:56Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "0f547914aea95d7b",
+   "primary_source": false,
+   "cluster_id": "9aae049f931fb61f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "24db166bc1d322c4",
+   "symbols": [
+    "ACR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are Finance Stocks Lagging  American Tower (AMT) This Year?",
+   "summary": "Here is how American Tower (AMT) and ACRES Commercial (ACR) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/finance-stocks-lagging-american-tower-134004705.html?.tsrc=rss",
+   "published_at": "2026-05-04T13:40:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "44c40e474621d5d9",
+   "primary_source": false,
+   "cluster_id": "24db166bc1d322c4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

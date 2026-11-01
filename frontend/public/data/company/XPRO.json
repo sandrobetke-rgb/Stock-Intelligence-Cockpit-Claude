@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 17.510000228881836,
     "day_low": 16.90999984741211,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 37.29319387627055,
+    "adx14": 17.938519989258523,
+    "ema10": 16.96843627559989,
+    "sma200": 16.503049988746643,
+    "perf_63d": 8.145364584133175,
+    "adr20_pct": 5.013592917685696,
+    "range10_pct": 17.66644885759625,
+    "high10_prev": 17.850000381469727,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -235,7 +269,17 @@
     "green": false,
     "day_high": 17.510000228881836,
     "day_low": 16.90999984741211,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 37.29319387627055,
+    "adx14": 17.938519989258523,
+    "ema10": 16.96843627559989,
+    "sma200": 16.503049988746643,
+    "perf_63d": 8.145364584133175,
+    "adr20_pct": 5.013592917685696,
+    "range10_pct": 17.66644885759625,
+    "high10_prev": 17.850000381469727,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -265,6 +309,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -272,7 +337,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -641,10 +709,10 @@
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 7,
+    "independent": 7,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -669,7 +737,453 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "8c81f37cda4ddcc2",
+   "symbols": [
+    "CMRC",
+    "ICUI",
+    "XPRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 small-cap stocks we find risky",
+   "summary": "Investors looking for hidden gems should keep an eye on small-cap stocks because they’re frequently overlooked by Wall Street. Many opportunities exist in this part of the market, but it is also a high-risk, high-reward environment due to the lack of reliable analyst price target",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-small-cap-stocks-risky-195239938.html?.tsrc=rss",
+   "published_at": "2026-10-23T19:52:39Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:49Z",
+   "fingerprint": "7ec8836dd2f7a502",
+   "primary_source": false,
+   "cluster_id": "8c81f37cda4ddcc2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e6984b1c99585e01",
+   "symbols": [
+    "XPRO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Expro Ltd Schedules Third Quarter 2026 Earnings Release and Conference Call",
+   "summary": "HOUSTON, October 22, 2026--Expro Ltd (NYSE: XPRO) (\"Expro\" or the \"Company\") will hold a conference call on November 3, 2026 to discuss results for the third quarter ended September 30, 2026. The conference call is scheduled to begin at 10:00 a.m. Central Time (11:00 a.m. Eastern",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/expro-ltd-schedules-third-quarter-105500065.html?.tsrc=rss",
+   "published_at": "2026-10-22T10:55:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "5bdc62e08ccc73ea",
+   "primary_source": false,
+   "cluster_id": "e6984b1c99585e01",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "791733db19259dde",
+   "symbols": [
+    "MTRX",
+    "REAX",
+    "XPRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Cash-Heavy Stock to Keep an Eye On and 2 We Question",
+   "summary": "A surplus of cash can mean financial stability, but it can also indicate a reluctance (or inability) to invest in growth. Some of these companies also face challenges like stagnating revenue, declining market share, or limited scalability.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-cash-heavy-stock-keep-125104491.html?.tsrc=rss",
+   "published_at": "2026-10-13T12:51:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:09:17Z",
+   "fingerprint": "5df7a6b39be87559",
+   "primary_source": false,
+   "cluster_id": "791733db19259dde",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d87905efa08f1f7e",
+   "symbols": [
+    "XPRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Oilfield Services Stocks Q2 Recap: Benchmarking Expro (NYSE:XPRO)",
+   "summary": "Earnings results often indicate what direction a company will take in the months ahead. With Q2 behind us, let’s have a look at Expro (NYSE:XPRO) and its peers.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/oilfield-services-stocks-q2-recap-201910192.html?.tsrc=rss",
+   "published_at": "2026-10-09T20:19:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "337a83f52d473a42",
+   "primary_source": false,
+   "cluster_id": "d87905efa08f1f7e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5763d6c7749eba93",
+   "symbols": [
+    "XPRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Expro and Noble Corporation Shares Are Soaring, What You Need To Know",
+   "summary": "A number of stocks jumped in the afternoon session after a Gulf tanker attack slowed traffic through the Strait of Hormuz, while hurricane-driven production halts shut in Gulf of Mexico output, the Financial Times noted.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/expro-noble-corporation-shares-soaring-224809501.html?.tsrc=rss",
+   "published_at": "2026-10-08T22:48:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "a274a816cca97051",
+   "primary_source": false,
+   "cluster_id": "5763d6c7749eba93",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "824e7b3f4ce1a31d",
+   "symbols": [
+    "HZO",
+    "XPRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Unpopular Stocks Walking a Fine Line",
+   "summary": "When Wall Street turns bearish on a stock, it’s worth paying attention. These calls stand out because analysts rarely issue grim ratings on companies for fear their firms will lose out in other business lines such as M&amp;A advisory.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-unpopular-stocks-walking-fine-095247409.html?.tsrc=rss",
+   "published_at": "2026-10-07T09:52:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:10:45Z",
+   "fingerprint": "b4ad6efd61681047",
+   "primary_source": false,
+   "cluster_id": "824e7b3f4ce1a31d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "acb68ccacbfb9c22",
+   "symbols": [
+    "XPRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Low-Volatility Stocks That Fall Short",
+   "summary": "A stock with low volatility can be reassuring, but it doesn’t always mean strong long-term performance. Investors who prioritize stability may miss out on higher-reward opportunities elsewhere.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-low-volatility-stocks-fall-110700556.html?.tsrc=rss",
+   "published_at": "2026-10-05T11:07:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "3f46a4c44a1da5c6",
+   "primary_source": false,
+   "cluster_id": "acb68ccacbfb9c22",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "01b84ad9d4dc8faf",
+   "symbols": [
+    "XPRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Cash-Producing Stock Worth Your Attention and 2 That Underwhelm",
+   "summary": "A company that generates cash isn’t automatically a winner. Some businesses stockpile cash but fail to reinvest wisely, limiting their ability to expand.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-cash-producing-stock-worth-075025769.html?.tsrc=rss",
+   "published_at": "2026-09-21T07:50:25Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "b03597927e80c1f2",
+   "primary_source": false,
+   "cluster_id": "01b84ad9d4dc8faf",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1ed0cc3de16c7a79",
+   "symbols": [
+    "XPRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Energy Stocks We’re Skeptical Of",
+   "summary": "Whether you see them or not, energy businesses play a crucial part in our daily activities, from powering our homes and businesses to powering our transportation and industries.But they are at the whim of volatile macroeconomic factors that influence capital spending (like intere",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/3-energy-stocks-skeptical-142452579.html?.tsrc=rss",
+   "published_at": "2026-08-28T14:24:52Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "24beb0f41bee77f8",
+   "primary_source": false,
+   "cluster_id": "1ed0cc3de16c7a79",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f3adac7bad5e3f86",
+   "symbols": [
+    "XPRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Reasons to Sell XPRO and 1 Stock to Buy Instead",
+   "summary": "Expro has been treading water for the past six months, recording a small return of 2% while holding steady at $17. The stock also fell short of the S&amp;P 500’s 10.9% gain during that period.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-reasons-sell-xpro-1-195722818.html?.tsrc=rss",
+   "published_at": "2026-08-10T19:57:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "227b37eb685e6e57",
+   "primary_source": false,
+   "cluster_id": "f3adac7bad5e3f86",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4b291a473463ab33",
+   "symbols": [
+    "XPRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Russell 2000 Stock with Solid Fundamentals and 2 We Brush Off",
+   "summary": "Small-cap stocks in the Russell 2000 (^RUT) can be a goldmine for investors looking beyond the usual large-cap names. But with less stability and fewer resources than their bigger counterparts, these companies face steeper challenges in scaling their businesses.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-russell-2000-stock-solid-231722984.html?.tsrc=rss",
+   "published_at": "2026-08-03T23:17:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "de0005b57db07441",
+   "primary_source": false,
+   "cluster_id": "4b291a473463ab33",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ada64628599d2920",
+   "symbols": [
+    "XPRO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "How Expro’s Higher 2026 Guidance and Buyback Will Impact Expro (XPRO) Investors",
+   "summary": "In late July 2026, Expro Ltd. raised its full‑year 2026 revenue guidance to US$1.65 billion–US$1.70 billion, reported weaker year‑on‑year second‑quarter earnings, completed a US$40 million share buyback, and finalized its redomiciliation to Expro Ltd. with related SEC filings. De",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/expro-higher-2026-guidance-buyback-020858904.html?.tsrc=rss",
+   "published_at": "2026-08-02T02:08:58Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "4f7cc9c45cdefa0d",
+   "primary_source": false,
+   "cluster_id": "ada64628599d2920",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "062937f28c5c1ed9",
+   "symbols": [
+    "XPRO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Expro (XPRO) Could Be 11% Undervalued As 2026 Revenue Guidance Rises",
+   "summary": "Expro (XPRO) raised its full year 2026 revenue guidance to a range of US$1,650 million to US$1,700 million, a change tied to the Enhanced Drilling acquisition and ongoing disruptions related to conflict in the Middle East. See our latest analysis for Expro. The latest guidance ch",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/expro-xpro-could-11-undervalued-231011384.html?.tsrc=rss",
+   "published_at": "2026-08-01T23:10:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "439046dd11ed7857",
+   "primary_source": false,
+   "cluster_id": "062937f28c5c1ed9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3545cc50a9cc713d",
+   "symbols": [
+    "XPRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Expro (XPRO) Stock Trades Up, Here Is Why",
+   "summary": "Shares of oilfield services provider Expro (NYSE:XPRO) jumped 2.9% in the morning session after the company posted mixed results for the second quarter that included a revenue beat but a miss on profit. The company reported revenue of $393.2 million, which was down 7% from the pr",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/expro-xpro-stock-trades-why-032502803.html?.tsrc=rss",
+   "published_at": "2026-07-29T03:25:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "b636184ae373bebc",
+   "primary_source": false,
+   "cluster_id": "3545cc50a9cc713d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cab71b97560c359f",
+   "symbols": [
+    "XPRO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Expro Group Q2 Earnings Call Highlights",
+   "summary": "Expro Group (NYSE:XPRO) reported second-quarter 2026 revenue of $393 million, adjusted EBITDA of $76 million and adjusted free cash flow of $56 million, as the company rebounded sequentially from what it described as a seasonally weaker first quarter. Adjusted EBITDA margin was a",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/expro-group-q2-earnings-call-highlights-2026-07-28/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-07-28T21:04:14Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "ad819616d84fc93f",
+   "primary_source": false,
+   "cluster_id": "cab71b97560c359f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "04697113c4e46022",
+   "symbols": [
+    "XPRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sector Update: Energy Stocks Edge Higher Pre-Bell Tuesday",
+   "summary": "Energy stocks were edging higher pre-bell Tuesday, with the State Street Energy Select Sector SPDR E",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-edge-higher-132435380.html?.tsrc=rss",
+   "published_at": "2026-07-28T13:24:35Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "81b356c0a683f02f",
+   "primary_source": false,
+   "cluster_id": "04697113c4e46022",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "556301073c41ae0a",
+   "symbols": [
+    "XPRO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Expro Misses Earnings Estimates but Issues Stronger Revenue Outlook",
+   "summary": "Expro Group Holdings N. V. (NYSE:XPRO) reported mixed second-quarter results on Tuesday, missing Wall Street earnings expectations while delivering a modest revenue beat.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "investorshub.advfn.com",
+   "url": "https://investorshub.advfn.com/market-news/article/32831/expro-misses-earnings-estimates-but-issues-stronger-revenue-outlook?.tsrc=rss",
+   "published_at": "2026-07-28T12:41:28Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "549d85f2d5ab2619",
+   "primary_source": false,
+   "cluster_id": "556301073c41ae0a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b6f3bd16056fd414",
+   "symbols": [
+    "XPRO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Expro Group Holdings (XPRO) Q2 Earnings and Revenues Surpass Estimates",
+   "summary": "Expro Group Holdings (XPRO) delivered earnings and revenue surprises of +15.39% and +3.74%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/expro-group-holdings-xpro-q2-115502737.html?.tsrc=rss",
+   "published_at": "2026-07-28T11:55:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "908344dbb0ec6528",
+   "primary_source": false,
+   "cluster_id": "b6f3bd16056fd414",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8f3625ed463f3909",
+   "symbols": [
+    "XPRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Expro (NYSE:XPRO) Surprises With Q2 CY2026 Sales",
+   "summary": "Oilfield services provider Expro (NYSE:XPRO) reported revenue ahead of Wall Street’s expectations in Q2 CY2026, but sales fell by 7% year on year to $393.2 million. Its non-GAAP profit of $0.15 per share was 16.6% below analysts’ consensus estimates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/expro-nyse-xpro-surprises-q2-113305344.html?.tsrc=rss",
+   "published_at": "2026-07-28T11:33:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "edd83a4782a86a12",
+   "primary_source": false,
+   "cluster_id": "8f3625ed463f3909",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "152b1f2675a5b174",
+   "symbols": [
+    "XPRO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Expro Announces Second Quarter 2026 Results",
+   "summary": "HOUSTON, July 28, 2026--Expro Ltd (NYSE: XPRO) (the \"Company\" or \"Expro\") today reported financial and operational results for the three months ended June 30, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/expro-announces-second-quarter-2026-104500972.html?.tsrc=rss",
+   "published_at": "2026-07-28T10:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "b565a216167d0b34",
+   "primary_source": false,
+   "cluster_id": "152b1f2675a5b174",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

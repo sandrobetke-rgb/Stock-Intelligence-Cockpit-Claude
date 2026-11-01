@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 6.820000171661377,
     "day_low": 6.349999904632568,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 14.223281655966105,
+    "adx14": 17.6276368805578,
+    "ema10": 6.72201420371756,
+    "sma200": 11.125850007534027,
+    "perf_63d": -26.297963173315885,
+    "adr20_pct": 4.366626939754585,
+    "range10_pct": 10.96979429896825,
+    "high10_prev": 6.980000019073486,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.3,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -139,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 9.3,
+   "score": 45.8,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 4,
    "independent_24h": 0
   },
   "political": {
@@ -242,7 +278,17 @@
     "green": false,
     "day_high": 6.820000171661377,
     "day_low": 6.349999904632568,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 14.223281655966105,
+    "adx14": 17.6276368805578,
+    "ema10": 6.72201420371756,
+    "sma200": 11.125850007534027,
+    "perf_63d": -26.297963173315885,
+    "adr20_pct": 4.366626939754585,
+    "range10_pct": 10.96979429896825,
+    "high10_prev": 6.980000019073486,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -272,6 +318,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -279,7 +346,10 @@
     "S01": 0.0,
     "S02": 0.3,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -618,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 9.3,
+  "score": 45.8,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 99.8,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 52.9,
@@ -640,26 +710,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 11,
+    "independent": 11,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -677,7 +749,460 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "ebcc7bd2c1655dcc",
+   "symbols": [
+    "ADTN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ADTRAN Holdings, Inc. Appoints Dr. Christian H. Terlinde to Board of Directors",
+   "summary": "HUNTSVILLE, Ala., October 29, 2026--ADTRAN Holdings, Inc. (NASDAQ: ADTN and FSE: QH9) (\"ADTRAN Holdings\" or the \"Company\"), a leading global provider of networking and communications solutions, today announced the appointment of Dr. Christian H. Terlinde as an independent member ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/adtran-holdings-inc-appoints-dr-212700034.html?.tsrc=rss",
+   "published_at": "2026-10-29T21:27:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:46Z",
+   "fingerprint": "5a234590502db038",
+   "primary_source": false,
+   "cluster_id": "ebcc7bd2c1655dcc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4153232625bc7b11",
+   "symbols": [
+    "ADTN",
+    "FEIM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can Lumentum Stock Drop From Here?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/lite/articles/620752/can-lumentum-stock-drop-from-here/2026-10-27?.tsrc=rss",
+   "published_at": "2026-10-27T13:32:48Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:12Z",
+   "fingerprint": "9c43d4ebaf17e9cb",
+   "primary_source": false,
+   "cluster_id": "4153232625bc7b11",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6acafa75f3f26477",
+   "symbols": [
+    "ADTN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Corning (GLW) Surpasses Q3 Earnings and Revenue Estimates",
+   "summary": "Corning (GLW) delivered earnings and revenue surprises of +2.25% and +1.04%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/corning-glw-surpasses-q3-earnings-111502210.html?.tsrc=rss",
+   "published_at": "2026-10-27T11:15:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:46Z",
+   "fingerprint": "6b561b929e4a3fb0",
+   "primary_source": false,
+   "cluster_id": "6acafa75f3f26477",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a0034a512937340e",
+   "symbols": [
+    "ADTN",
+    "FEIM",
+    "FOX",
+    "NWS",
+    "NWSA",
+    "SNEX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What Sent Lumentum Stock Higher?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/lite/articles/620821/what-sent-lumentum-stock-higher/2026-10-27?.tsrc=rss",
+   "published_at": "2026-10-27T10:26:06Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:35Z",
+   "fingerprint": "324dce936700e2a8",
+   "primary_source": false,
+   "cluster_id": "a0034a512937340e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2169a54445f72c9d",
+   "symbols": [
+    "ADTN",
+    "FEIM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Should You Buy The Dip In Lumentum Stock?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/619915/should-you-buy-the-dip-in-lumentum-stock/2026-10-22?.tsrc=rss",
+   "published_at": "2026-10-22T13:24:51Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:12Z",
+   "fingerprint": "0673c0f941a669d6",
+   "primary_source": false,
+   "cluster_id": "2169a54445f72c9d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4438f1b5848eb2b0",
+   "symbols": [
+    "ADTN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ADTRAN Holdings, Inc. to release third quarter 2026 financial results on November 2, 2026",
+   "summary": "HUNTSVILLE, Ala., October 19, 2026--ADTRAN Holdings, Inc. (NASDAQ: ADTN and FSE: QH9) (\"ADTRAN Holdings\" or the \"Company\") announced today that the Company will release its financial results for the third quarter 2026 after the market close on Monday, November 2, 2026, at https:/",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adtran-holdings-inc-release-third-200500751.html?.tsrc=rss",
+   "published_at": "2026-10-19T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:46Z",
+   "fingerprint": "f8eda7dfd1d2bc91",
+   "primary_source": false,
+   "cluster_id": "4438f1b5848eb2b0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cb49a1a97db41025",
+   "symbols": [
+    "ADTN",
+    "FEIM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Did Lumentum Stock Fall?",
+   "summary": "Shares of Lumentum (LITE) fell 25.3% in the five trading sessions from October 9 to October 16, 2026. The S&amp;P 500 lost 1.9% over the same stretch. Although the company's chief executive stated on Friday, October 9, that AI demand had booked capacity through early 2029—lifting",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/619159/why-did-lumentum-stock-fall/2026-10-19?.tsrc=rss",
+   "published_at": "2026-10-19T17:32:14Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:12Z",
+   "fingerprint": "e2f46441d0939862",
+   "primary_source": false,
+   "cluster_id": "cb49a1a97db41025",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f39b364b967046b3",
+   "symbols": [
+    "ADTN",
+    "FEIM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How Risky Is Lumentum Stock?",
+   "summary": "Shares of Lumentum (LITE) fell 19.3% in the week to October 14. The retreat came despite upbeat comments from management earlier in the week, which had briefly sent the stock higher. Even with that drop, the stock remains up 458% over the past year, compared with a 17.3% gain for",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/618829/how-risky-is-lumentum-stock/2026-10-15?.tsrc=rss",
+   "published_at": "2026-10-15T23:06:56Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:12Z",
+   "fingerprint": "658211d86a05b8c0",
+   "primary_source": false,
+   "cluster_id": "f39b364b967046b3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7d29542d34f0f4f6",
+   "symbols": [
+    "ADTN",
+    "KEYS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can Viavi's U.S. Army Defense Testing Selection Propel Its Shares?",
+   "summary": "VIAV wins a U.S. Army contract to modernize military test ranges with software-defined transceivers that replicate complex electronic warfare conditions.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/viavis-u-army-defense-testing-133400142.html?.tsrc=rss",
+   "published_at": "2026-10-14T13:34:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:02:15Z",
+   "fingerprint": "948b3a0fd353337f",
+   "primary_source": false,
+   "cluster_id": "7d29542d34f0f4f6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "02f8f76c6572232f",
+   "symbols": [
+    "ADTN",
+    "FEIM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What Is The True Hidden Price Of Lumentum Stock?",
+   "summary": "Lumentum (LITE) stock currently trades at 150.5 times its adjusted earnings for the last twelve months, meaning normalized net income with stock-based pay added back. While that is a steep price for one year of profit, Lumentum's sales more than doubled from a year earlier in its",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/617928/what-is-the-true-hidden-price-of-lumentum-stock/2026-10-08?.tsrc=rss",
+   "published_at": "2026-10-09T00:24:34Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:12Z",
+   "fingerprint": "7112365fa5ae5f57",
+   "primary_source": false,
+   "cluster_id": "02f8f76c6572232f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3eaf5b3c0048b604",
+   "symbols": [
+    "ADTN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adtran launches Mosaic One Agents to help teams easily scale operations",
+   "summary": "HUNTSVILLE, Ala., October 08, 2026--Adtran today launched Mosaic One Agents, a suite of AI agents designed to help organizations scale expertise across network management, customer care and business operations. Built on Mosaic One Fabric, it gives role-based agent teams access to",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/adtran-launches-mosaic-one-agents-120000228.html?.tsrc=rss",
+   "published_at": "2026-10-08T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:46Z",
+   "fingerprint": "f678936572679f0e",
+   "primary_source": false,
+   "cluster_id": "3eaf5b3c0048b604",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d974c019ac69e221",
+   "symbols": [
+    "ADTN",
+    "ATEX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can VIAV's New CF50 Strengthen Its Enterprise-Scale Testing Portfolio?",
+   "summary": "Viavi launches CyberFlood CF50, a compact 100G platform that tests network performance, security and AI inference before deployment.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/viavs-cf50-strengthen-enterprise-scale-143500387.html?.tsrc=rss",
+   "published_at": "2026-09-30T14:35:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:44Z",
+   "fingerprint": "68b8d43372dba495",
+   "primary_source": false,
+   "cluster_id": "d974c019ac69e221",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bb092aae2580819d",
+   "symbols": [
+    "ADTN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Ciena vs. ADTRAN: Which Optical Networking Stock is the Better Buy?",
+   "summary": "CIEN's surging backlog and optical demand contrast with ADTRAN's supply, margin and timing pressures as AI networking drives opportunities.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ciena-vs-adtran-optical-networking-132000736.html?.tsrc=rss",
+   "published_at": "2026-09-22T13:20:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:46Z",
+   "fingerprint": "6bca705879ac14c0",
+   "primary_source": false,
+   "cluster_id": "bb092aae2580819d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7b54499c78c73a13",
+   "symbols": [
+    "ADTN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adtran showcases open optical networking for AI infrastructure at OIF’s ECOC 2026 interop demo",
+   "summary": "MÁLAGA, Spain, September 17, 2026--Adtran today announced its participation in OIF’s live multi-vendor interoperability demo at ECOC 2026, taking place September 21 to 23 in Málaga, Spain. Bringing together 39 member companies, the showcase highlights interoperable optical transp",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/adtran-showcases-open-optical-networking-120000746.html?.tsrc=rss",
+   "published_at": "2026-09-17T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:46Z",
+   "fingerprint": "02a0afc79aa6dfb9",
+   "primary_source": false,
+   "cluster_id": "7b54499c78c73a13",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a19422749419143e",
+   "symbols": [
+    "ADTN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "BMC TV expands UK network for major sports broadcasts with Adtran and Fibre Technologies Ltd",
+   "summary": "LONDON, September 15, 2026--Adtran today announced that BMC TV has expanded its UK core network, harnessing Adtran technology to support coverage of major events, including the FIFA World Cup and extensive racecourse broadcasting across the UK. The new infrastructure strengthens ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/bmc-tv-expands-uk-network-120000894.html?.tsrc=rss",
+   "published_at": "2026-09-15T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:46Z",
+   "fingerprint": "90a7a36cbaab6b0f",
+   "primary_source": false,
+   "cluster_id": "a19422749419143e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "53c34e328e466986",
+   "symbols": [
+    "ADTN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "One Customer’s Delay Can’t Hide ADTRAN’s (ADTN) Optical Surge",
+   "summary": "On August 4, ADTRAN Holdings Inc. (NASDAQ:ADTN) reported second-quarter revenue of $281.1 million, up 6.1% from a year earlier, for the period ended June 30. That top line missed the company’s own guidance, and the stock has felt it. But buried inside the release is a business sp",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/one-customer-delay-t-hide-025435705.html?.tsrc=rss",
+   "published_at": "2026-09-10T02:54:35Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:46Z",
+   "fingerprint": "f8c427c949de0183",
+   "primary_source": false,
+   "cluster_id": "53c34e328e466986",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d37f215fbbc6e3de",
+   "symbols": [
+    "ADTN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Why Is ADTRAN Holdings (ADTN) Down 14.7% Since Last Earnings Report?",
+   "summary": "ADTRAN Holdings (ADTN) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-adtran-holdings-adtn-down-153003729.html?.tsrc=rss",
+   "published_at": "2026-09-02T15:30:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:46Z",
+   "fingerprint": "35e0d5967b6182a8",
+   "primary_source": false,
+   "cluster_id": "d37f215fbbc6e3de",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ee64dbafe3f0e228",
+   "symbols": [
+    "ADTN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Implied Volatility Surging for ADTRAN Stock Options",
+   "summary": "Investors need to pay close attention to ADTN stock based on the movements in the options market lately.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/options/articles/implied-volatility-surging-adtran-stock-161600608.html?.tsrc=rss",
+   "published_at": "2026-08-25T16:16:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:46Z",
+   "fingerprint": "75bc7451ff136b88",
+   "primary_source": false,
+   "cluster_id": "ee64dbafe3f0e228",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8181cccc9e571f15",
+   "symbols": [
+    "ADTN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Viavi Solutions Gains From AI Infrastructure Demand as Margins Expand",
+   "summary": "Viavi Solutions benefits from AI infrastructure demand as data center growth, new testing capabilities and expanding margins lift results.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/viavi-solutions-gains-ai-infrastructure-180100202.html?.tsrc=rss",
+   "published_at": "2026-08-13T18:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:46Z",
+   "fingerprint": "d812da88506a850f",
+   "primary_source": false,
+   "cluster_id": "8181cccc9e571f15",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "50cc9fae3472e960",
+   "symbols": [
+    "ADTN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Viavi Solutions Stock: Is Growth Worth the Premium Valuation Now?",
+   "summary": "VIAV's growth is accelerating, but a premium valuation and weak quantitative signals raise questions about how much upside remains.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/viavi-solutions-stock-growth-worth-171700819.html?.tsrc=rss",
+   "published_at": "2026-08-13T17:17:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:46Z",
+   "fingerprint": "84fe10330cf7b88c",
+   "primary_source": false,
+   "cluster_id": "50cc9fae3472e960",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

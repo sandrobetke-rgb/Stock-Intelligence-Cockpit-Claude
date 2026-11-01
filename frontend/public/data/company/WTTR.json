@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -26,7 +26,7 @@
    "ema10": 19.247630670992592,
    "ema21": 19.247413063455475,
    "sma50": 19.625600090026854,
-   "sma200": 17.31515896320343
+   "sma200": 17.315158953666685
   },
   "market_cap": 2816136960.0,
   "market_cap_currency": "USD",
@@ -35,16 +35,16 @@
     "close": 19.729999542236328,
     "change_pct": -1.0035161057549646,
     "ema20": 19.237824524686765,
-    "ema50": 19.434475644520543,
-    "ema200": 17.399551917243596,
+    "ema50": 19.434475644496754,
+    "ema200": 17.399551903814924,
     "sma50": 19.625600090026854,
-    "rsi14": 54.12303797000264,
-    "rsi_min5": 46.22280308587779,
-    "atr14": 0.8154258027194897,
-    "atr_pct": 4.132923576474974,
+    "rsi14": 54.12303797000272,
+    "rsi_min5": 46.22280308587783,
+    "atr14": 0.815425802719494,
+    "atr_pct": 4.1329235764749965,
     "rvol": 0.6647720855552944,
     "vol30": 1767736.6666666667,
-    "dist_ema200_pct": 13.393722068688296,
+    "dist_ema200_pct": 13.393722156203602,
     "dist_52w_high_pct": 12.208663161235345,
     "high_52w": 22.47374314218719,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 19.809999465942383,
     "day_low": 19.399999618530273,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 56.62196807914294,
+    "adx14": 15.158288003223367,
+    "ema10": 19.247630670992592,
+    "sma200": 17.315158953666685,
+    "perf_63d": 7.709177571522008,
+    "adr20_pct": 4.109833876036669,
+    "range10_pct": 19.29156961950964,
+    "high10_prev": 20.375,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 19.809999465942383,
     "entry_max": 20.20619945526123,
-    "stop": 18.58686076186315,
-    "risk_per_share": 1.2231387040792328,
-    "target_1": 22.25627687410085,
+    "stop": 18.586860761863143,
+    "risk_per_share": 1.2231387040792399,
+    "target_1": 22.256276874100863,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -139,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 1.5,
+   "score": 34.4,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 5,
    "independent_24h": 0
   },
   "political": {
@@ -210,7 +246,7 @@
   "ema10": 19.247630670992592,
   "ema21": 19.247413063455475,
   "sma50": 19.625600090026854,
-  "sma200": 17.31515896320343,
+  "sma200": 17.315158953666685,
   "volatility_ann": 56.3913908052578,
   "avg_dollar_volume_20d": 30112715.416326523,
   "move_zscore": -0.28249568041099765,
@@ -219,16 +255,16 @@
     "close": 19.729999542236328,
     "change_pct": -1.0035161057549646,
     "ema20": 19.237824524686765,
-    "ema50": 19.434475644520543,
-    "ema200": 17.399551917243596,
+    "ema50": 19.434475644496754,
+    "ema200": 17.399551903814924,
     "sma50": 19.625600090026854,
-    "rsi14": 54.12303797000264,
-    "rsi_min5": 46.22280308587779,
-    "atr14": 0.8154258027194897,
-    "atr_pct": 4.132923576474974,
+    "rsi14": 54.12303797000272,
+    "rsi_min5": 46.22280308587783,
+    "atr14": 0.815425802719494,
+    "atr_pct": 4.1329235764749965,
     "rvol": 0.6647720855552944,
     "vol30": 1767736.6666666667,
-    "dist_ema200_pct": 13.393722068688296,
+    "dist_ema200_pct": 13.393722156203602,
     "dist_52w_high_pct": 12.208663161235345,
     "high_52w": 22.47374314218719,
     "macd_above_signal": true,
@@ -242,7 +278,17 @@
     "green": true,
     "day_high": 19.809999465942383,
     "day_low": 19.399999618530273,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 56.62196807914294,
+    "adx14": 15.158288003223367,
+    "ema10": 19.247630670992592,
+    "sma200": 17.315158953666685,
+    "perf_63d": 7.709177571522008,
+    "adr20_pct": 4.109833876036669,
+    "range10_pct": 19.29156961950964,
+    "high10_prev": 20.375,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -272,6 +318,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -279,7 +346,10 @@
     "S01": 0.5,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -292,9 +362,9 @@
    "plan": {
     "trigger": 19.809999465942383,
     "entry_max": 20.20619945526123,
-    "stop": 18.58686076186315,
-    "risk_per_share": 1.2231387040792328,
-    "target_1": 22.25627687410085,
+    "stop": 18.586860761863143,
+    "risk_per_share": 1.2231387040792399,
+    "target_1": 22.256276874100863,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -618,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 1.5,
+  "score": 34.4,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 8.5,
@@ -640,25 +710,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 5,
+    "independent": 5,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 12,
+    "independent": 12,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -677,7 +749,459 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "05d56941563f4e95",
+   "symbols": [
+    "RSG",
+    "WTTR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Republic Services (RSG) Beats Q3 Earnings and Revenue Estimates",
+   "summary": "Republic Services (RSG) delivered earnings and revenue surprises of +1.04% and +3.38%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/republic-services-rsg-beats-q3-203505991.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:35:05Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:47Z",
+   "fingerprint": "330b6079f09116aa",
+   "primary_source": false,
+   "cluster_id": "05d56941563f4e95",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6e3f91d5130bb7be",
+   "symbols": [
+    "WTTR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Select Water Solutions Announces Quarterly Cash Dividend of $0.07 Per Share",
+   "summary": "Select Water Solutions, Inc. (NYSE: WTTR) (\"Select\" or the \"Company\"), a leading provider of sustainable water and chemical solutions to the energy industry, today announced that its Board of Directors declared a quarterly cash dividend of $0.07 per share of Class A common stock ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/select-water-solutions-announces-quarterly-201500553.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:54Z",
+   "fingerprint": "1279a2865e7b15ca",
+   "primary_source": false,
+   "cluster_id": "6e3f91d5130bb7be",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "95c8cc6df0e0f9a7",
+   "symbols": [
+    "WTTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Select Water Solutions (WTTR) Stock Looks Above Fair Value After Its 261% Run",
+   "summary": "Select Water Solutions has delivered a powerful share price run in recent years, which naturally puts the focus on whether the earnings behind that move are carrying their weight. With the stock now around US$19.48, the question for anyone looking at the chart is how well that pr",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/select-water-solutions-wttr-stock-072144046.html?.tsrc=rss",
+   "published_at": "2026-10-28T07:21:44Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:54Z",
+   "fingerprint": "66e03e7624f00a45",
+   "primary_source": false,
+   "cluster_id": "95c8cc6df0e0f9a7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cab2e149a5e9e816",
+   "symbols": [
+    "WTTR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Select Water Solutions Announces 2026 Third Quarter Earnings Release and Conference Call Schedule",
+   "summary": "Select Water Solutions, Inc. (NYSE: WTTR) today announced that it will release 2026 third quarter financial results on Monday, November 9, 2026 before the market opens. In conjunction with the release, the Company has scheduled a conference call, which will also be broadcast live",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/select-water-solutions-announces-2026-201500148.html?.tsrc=rss",
+   "published_at": "2026-10-27T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:54Z",
+   "fingerprint": "5922ec316a9c128d",
+   "primary_source": false,
+   "cluster_id": "cab2e149a5e9e816",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "526d1bf9d41dda31",
+   "symbols": [
+    "RSG",
+    "WTTR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Select Water Solutions, Inc. (WTTR) to Report Q3 Results: Wall Street Expects Earnings Growth",
+   "summary": "Select Water Solutions, Inc. (WTTR) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/select-water-solutions-inc-wttr-130020923.html?.tsrc=rss",
+   "published_at": "2026-10-27T13:00:20Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:47Z",
+   "fingerprint": "b6bb5d0b5e3daf81",
+   "primary_source": false,
+   "cluster_id": "526d1bf9d41dda31",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9d7ae4e02fda8275",
+   "symbols": [
+    "RNGR",
+    "WHK",
+    "WTTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 U.S. Energy Stocks With Direct Exposure to Higher Natural Gas and Oil Prices",
+   "summary": "Inflation running at 3.7% and energy costs jumping, with gasoline up 34% and fuel oil up 72%, has turned the usual script on its head. Some businesses now face tighter margins while certain producers see stronger pricing power, and that split can reshape portfolios. This article ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/3-u-energy-stocks-direct-110932424.html?.tsrc=rss",
+   "published_at": "2026-10-18T11:09:32Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:38Z",
+   "fingerprint": "bbd3b0cae146d92e",
+   "primary_source": false,
+   "cluster_id": "9d7ae4e02fda8275",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1914e61138726ac4",
+   "symbols": [
+    "ASTH",
+    "PODD",
+    "WTTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "2 of Wall Street’s Favorite Stocks to Target This Week and 1 We Ignore",
+   "summary": "Wall Street has set ambitious price targets for the stocks in this article. While this suggests attractive upside potential, it’s important to remain skeptical because analysts face institutional pressures that can sometimes lead to overly optimistic forecasts.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/2-wall-street-favorite-stocks-125939106.html?.tsrc=rss",
+   "published_at": "2026-10-16T12:59:39Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:35Z",
+   "fingerprint": "48bc0de64e5eb5da",
+   "primary_source": false,
+   "cluster_id": "1914e61138726ac4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2437b0ae72115533",
+   "symbols": [
+    "WTTR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Select Water Solutions, Inc. Announces Pricing of Upsized $900 Million of 7.625% Senior Notes Due 2034",
+   "summary": "Select Water Solutions, Inc. (NYSE: WTTR) (\"Select,\" \"we\" or \"our\") announced today that its subsidiary Select Water Holdings LLC (the \"Issuer\") has priced its previously announced offer (the \"Notes Offering\") pursuant to Rule 144A and Regulation S under the Securities Act of 193",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/select-water-solutions-inc-announces-205100823.html?.tsrc=rss",
+   "published_at": "2026-10-14T20:51:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:54Z",
+   "fingerprint": "b8058ca968f94b8c",
+   "primary_source": false,
+   "cluster_id": "2437b0ae72115533",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "593949477636543a",
+   "symbols": [
+    "WTTR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Select Water Solutions, Inc. Announces Offering of $800 Million of Senior Notes Due 2034",
+   "summary": "Select Water Solutions, Inc. (NYSE: WTTR) (\"Select,\" \"we\" or \"our\") announced today that, subject to market conditions, its subsidiary Select Water Holdings LLC (the \"Issuer\") intends to offer (the \"Notes Offering\") for sale pursuant to Rule 144A and Regulation S under the Securi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/select-water-solutions-inc-announces-113500819.html?.tsrc=rss",
+   "published_at": "2026-10-13T11:35:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:54Z",
+   "fingerprint": "647da73223697e70",
+   "primary_source": false,
+   "cluster_id": "593949477636543a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "393ce91ec351b317",
+   "symbols": [
+    "KGS",
+    "NESR",
+    "PUMP",
+    "WTTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Select Water Solutions, ProPetro, Kodiak Gas Services, and NESR Stocks Trade Down, What You Need To Know",
+   "summary": "A number of stocks fell in the afternoon session after surging long-term Treasury yields reached multi-decade highs and energy market tightness prompted global emergency reserve actions. CNBC reported that longer-dated Treasury yields hit their highest levels in more than two dec",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/select-water-solutions-propetro-kodiak-195247751.html?.tsrc=rss",
+   "published_at": "2026-10-07T19:52:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:08Z",
+   "fingerprint": "9d5de45a19b62cd1",
+   "primary_source": false,
+   "cluster_id": "393ce91ec351b317",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3b5bd8da12cd1942",
+   "symbols": [
+    "ANIP",
+    "WTTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Safe-and-Steady Stock with Competitive Advantages and 2 We Turn Down",
+   "summary": "Stability is great, but low-volatility stocks may struggle to deliver market-beating returns over time as they sometimes underperform during bull markets.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-safe-steady-stock-competitive-094434089.html?.tsrc=rss",
+   "published_at": "2026-10-06T09:44:34Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:11Z",
+   "fingerprint": "f8d9e7b291248044",
+   "primary_source": false,
+   "cluster_id": "3b5bd8da12cd1942",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c6f08c48ba89fc11",
+   "symbols": [
+    "CWT",
+    "WTTR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WTRG's Aqua Pennsylvania Acquires Ulster Municipal Water Systems",
+   "summary": "Essential Utilities' Aqua Pennsylvania unit acquired Ulster's water assets for $0.5 million, adding 180 customers and planning $2 million in upgrades over five years.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/wtrgs-aqua-pennsylvania-acquires-ulster-123000649.html?.tsrc=rss",
+   "published_at": "2026-10-02T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:48Z",
+   "fingerprint": "6768315c6076b02b",
+   "primary_source": false,
+   "cluster_id": "c6f08c48ba89fc11",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "86fe580dbbc5abe7",
+   "symbols": [
+    "WTTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Select Water Solutions Buys Pilot Water for $700M, Expanding Delaware Basin Network",
+   "summary": "Select Water Solutions (NYSE:WTTR) said it has agreed to acquire Pilot Water Solutions for $700 million, expanding its produced-water disposal and pipeline footprint, particularly in the Permian Basin’s Delaware Basin. The transaction is expected to close in the fourth quarter of",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-select-water-solutions-buys-pilot-water-for-700m-expanding-delaware-basin-network-2026-09-26/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-09-27T01:01:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:54Z",
+   "fingerprint": "10011fbfc6a8947c",
+   "primary_source": false,
+   "cluster_id": "86fe580dbbc5abe7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4aa76177c22250bf",
+   "symbols": [
+    "WTTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Select Water Solutions (WTTR) Stock Is Trading Up Today",
+   "summary": "Shares of oilfield water management company Select Water Solutions (NYSE:WTTR) jumped 4.4% in the pre-market session after the stock continued to rally as it announced a definitive agreement to acquire Delaware Basin water midstream operator Pilot Water Solutions for $700 million",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-select-water-solutions-wttr-232837118.html?.tsrc=rss",
+   "published_at": "2026-09-25T23:28:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:54Z",
+   "fingerprint": "ed79da7c14e15312",
+   "primary_source": false,
+   "cluster_id": "4aa76177c22250bf",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e95650ec96a4d9eb",
+   "symbols": [
+    "WTTR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Select to acquire Delaware Basin-focused Pilot Water for $700m",
+   "summary": "Select will acquire the debt-free business for $600m in cash, $100m in stock and up to $15m in contingent payments.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "offshore-technology.com",
+   "url": "https://www.offshore-technology.com/news/select-to-acquire-pilot-water-700m/?.tsrc=rss",
+   "published_at": "2026-09-25T09:04:45Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:54Z",
+   "fingerprint": "dd179044911813bb",
+   "primary_source": false,
+   "cluster_id": "e95650ec96a4d9eb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7a4444e3169f43e0",
+   "symbols": [
+    "WTTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Select Water stock surges 13% on Pilot Water acquisition deal",
+   "summary": "Investing.com -- Select Water Solutions, Inc. (NYSE:WTTR) shares rose 13% in after-hours trading Thursday following the announcement of a definitive agreement to acquire Pilot Water Solutions LLC for $700 million, plus $15 million of potential contingent consideration.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/select-water-stock-surges-13-211249870.html?.tsrc=rss",
+   "published_at": "2026-09-24T21:12:49Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:54Z",
+   "fingerprint": "58d1cac9d2c71870",
+   "primary_source": false,
+   "cluster_id": "7a4444e3169f43e0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "38c6b038cba081a9",
+   "symbols": [
+    "WTTR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Select Water Solutions Announces Agreement to Acquire Pilot Water Solutions",
+   "summary": "Select Water Solutions, Inc. (NYSE: WTTR) (\"Select,\" the \"Company,\" \"we\" or \"us\") announced today that it has entered into a definitive agreement (the \"Purchase Agreement\") to acquire Pilot Water Solutions LLC (\"Pilot Water\"), a leading, private water midstream company with prima",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/select-water-solutions-announces-agreement-203000196.html?.tsrc=rss",
+   "published_at": "2026-09-24T20:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:54Z",
+   "fingerprint": "e1dbe3f137fc4afa",
+   "primary_source": false,
+   "cluster_id": "38c6b038cba081a9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a0d89dc04f857af6",
+   "symbols": [
+    "WTTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Profitable Stock to Research Further and 2 We Find Risky",
+   "summary": "Even if a company is profitable, it doesn’t always mean it’s a great investment. Some struggle to maintain growth, face looming threats, or fail to reinvest wisely, limiting their future potential.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-profitable-stock-research-further-135825902.html?.tsrc=rss",
+   "published_at": "2026-09-21T13:58:25Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:54Z",
+   "fingerprint": "5d5646041aeb9046",
+   "primary_source": false,
+   "cluster_id": "a0d89dc04f857af6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d769a784642f1f86",
+   "symbols": [
+    "WTTR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Select Water Solutions (WTTR): Buy, Sell, or Hold Post Q2 Earnings?",
+   "summary": "Select Water Solutions currently trades at $20.23 and has been a dream stock for shareholders. It’s returned 290% since September 2021, blowing past the S&amp;P 500’s 71.6% gain. The company has also beaten the index over the past six months as its stock price is up 38.5% thanks ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/select-water-solutions-wttr-buy-183417702.html?.tsrc=rss",
+   "published_at": "2026-09-17T18:34:17Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:54Z",
+   "fingerprint": "22501edae3d1db89",
+   "primary_source": false,
+   "cluster_id": "d769a784642f1f86",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "481107afe6456895",
+   "symbols": [
+    "WTTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Select Water Solutions (WTTR) Cools After A Strong Run, Is It Still Undervalued?",
+   "summary": "Select Water Solutions (WTTR) has drawn fresh attention after recent trading pressure, with the share price closing at US$20.31 and showing a decline over the past month despite strong year to date gains. For context, Select Water Solutions has cooled off recently, with a 1 day s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/select-water-solutions-wttr-cools-111138320.html?.tsrc=rss",
+   "published_at": "2026-09-17T11:11:38Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:54Z",
+   "fingerprint": "78bd8fa6793d6ea2",
+   "primary_source": false,
+   "cluster_id": "481107afe6456895",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

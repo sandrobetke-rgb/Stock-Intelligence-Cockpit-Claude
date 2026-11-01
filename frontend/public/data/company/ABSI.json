@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 11.800000190734863,
     "day_low": 10.449999809265137,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 37.985313041889896,
+    "adx14": 20.615485821769777,
+    "ema10": 10.492676975013891,
+    "sma200": 6.489350008964538,
+    "perf_63d": 40.353094014791566,
+    "adr20_pct": 10.006358444016595,
+    "range10_pct": 54.49507700861489,
+    "high10_prev": 12.545000076293945,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": true,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.6666666666666666,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": false,
@@ -139,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 6.9,
+   "score": 43.3,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 4,
    "independent_24h": 0
   },
   "political": {
@@ -242,7 +278,17 @@
     "green": false,
     "day_high": 11.800000190734863,
     "day_low": 10.449999809265137,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 37.985313041889896,
+    "adx14": 20.615485821769777,
+    "ema10": 10.492676975013891,
+    "sma200": 6.489350008964538,
+    "perf_63d": 40.353094014791566,
+    "adr20_pct": 10.006358444016595,
+    "range10_pct": 54.49507700861489,
+    "high10_prev": 12.545000076293945,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -272,6 +318,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": true,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -279,7 +346,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.6666666666666666,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": false,
@@ -618,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.9,
+  "score": 43.3,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 99.8,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 39.0,
@@ -640,25 +710,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 8,
+    "independent": 8,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -677,7 +749,391 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "e75b99a82b3eb5de",
+   "symbols": [
+    "ABSI",
+    "CERT",
+    "RXRX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Absci Sinks 8%, Schrödinger and Recursion Slide as AI Drug Discovery Stocks Give Back Rally",
+   "summary": "Key TakeawaysAbsci fell 8% today as AI drug discovery peers Schrödinger and Recursion slid in a Nasdaq sell-off. These stocks trade together on sentiment, so the drop says little about Absci’s business.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/absci-sinks-8-schrodinger-and-recursion-slide-as-ai-drug-discovery-stocks-give-back-rally?ref=yahoofinance&tlnk=yf-261030-886qj6q6&.tsrc=rss",
+   "published_at": "2026-10-30T20:28:19Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:22Z",
+   "fingerprint": "591f89859dda6225",
+   "primary_source": false,
+   "cluster_id": "e75b99a82b3eb5de",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fc9c9be68fc480c7",
+   "symbols": [
+    "ABSI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Does Positive Hair Loss Trial Data Change The Bull Case For Absci Stock?",
+   "summary": "Absci reported positive interim Phase 1 data for ABS-201 in pattern hair loss, including an estimated half-life of at least 65 days and timelines for proof-of-concept data in the second half of 2026 and full data in early 2027. The extended half-life suggests ABS-201 could be dos",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/does-positive-hair-loss-trial-100830991.html?.tsrc=rss",
+   "published_at": "2026-10-30T10:08:30Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:27Z",
+   "fingerprint": "e3e88b12ed7bf340",
+   "primary_source": false,
+   "cluster_id": "fc9c9be68fc480c7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Ändern Positive Hair Loss Trial Data Den Bull Case Für Absci Stock?"
+  },
+  {
+   "id": "809c3d923e735488",
+   "symbols": [
+    "ABSI",
+    "TWST",
+    "TXG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Absci Soars 12%, Schrödinger Up 11%, Recursion Up 9% as AI Drug Discovery Stocks Rally",
+   "summary": "Key TakeawaysAbsci rose 12% today, Schrödinger 11% and Recursion 9%, and no company news explains any of the three moves. Schrödinger’s rally has the most business behind it, and Absci’s rally is mostly about investors’ appetite for risk.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/absci-soars-12-schrodinger-up-11-recursion-up-9-as-ai-drug-discovery-stocks-rally?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-28T16:11:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:45:27Z",
+   "fingerprint": "3544f1749d5f6da3",
+   "primary_source": false,
+   "cluster_id": "809c3d923e735488",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "73c841bbe3a164ee",
+   "symbols": [
+    "ABSI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Absci to Participate in Upcoming Investor Conferences",
+   "summary": "VANCOUVER, Wash. and NEW YORK, Oct. 27, 2026 (GLOBE NEWSWIRE) -- Absci Corporation (Nasdaq: ABSI), a clinical-stage biopharmaceutical company advancing breakthrough therapeutics designed with generative AI, today announced the company will be participating in the following upcomi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/absci-participate-upcoming-investor-conferences-120000599.html?.tsrc=rss",
+   "published_at": "2026-10-27T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:27Z",
+   "fingerprint": "2fd3b155d28a0736",
+   "primary_source": false,
+   "cluster_id": "73c841bbe3a164ee",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "32d24b9260ba6688",
+   "symbols": [
+    "ABSI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Absci (ABSI) Undervalued As Positive ABS 201 Phase 1 Data Lifts Optimism?",
+   "summary": "Absci (ABSI) has drawn fresh attention after reporting positive interim Phase 1 data for ABS-201 in pattern hair loss, including an estimated half-life of at least 65 days for the antibody therapy. The latest ABS-201 update lands after a powerful run for Absci’s stock, with a yea",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/absci-absi-undervalued-positive-abs-190800170.html?.tsrc=rss",
+   "published_at": "2026-10-24T19:08:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:27Z",
+   "fingerprint": "d38fe254a20a954f",
+   "primary_source": false,
+   "cluster_id": "32d24b9260ba6688",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "85e9c9ca62256089",
+   "symbols": [
+    "ABSI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Absci (ABSI) Stock Seems Rich Against Its Book Value Backdrop",
+   "summary": "Absci has posted very strong multi year share gains, and the jump in market value now raises a simple question for you as an investor. Is the current price still grounded in what the business has built on its balance sheet, or has it moved well ahead of its book value? Over the p",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/absci-absi-stock-seems-rich-231151629.html?.tsrc=rss",
+   "published_at": "2026-10-16T23:11:51Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:27Z",
+   "fingerprint": "b69a9543cb5ae250",
+   "primary_source": false,
+   "cluster_id": "85e9c9ca62256089",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fc77d160e7c9d87d",
+   "symbols": [
+    "ABSI"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Absci to Report Business Updates and Third Quarter 2026 Financial and Operating Results on November 12, 2026",
+   "summary": "VANCOUVER, Wash. and NEW YORK, Oct. 13, 2026 (GLOBE NEWSWIRE) -- Absci Corporation (Nasdaq: ABSI), a clinical-stage biopharmaceutical company advancing breakthrough therapeutics designed with generative AI, today announced the company will report business updates and financial an",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/absci-report-business-updates-third-120000317.html?.tsrc=rss",
+   "published_at": "2026-10-13T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:27Z",
+   "fingerprint": "b86e2d83363bc61a",
+   "primary_source": false,
+   "cluster_id": "fc77d160e7c9d87d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "eb806e5de1791d73",
+   "symbols": [
+    "ABSI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Absci (ABSI) Stock Dropped, So What Is Behind The Latest Attention?",
+   "summary": "Absci (ABSI) is back in focus after management outlined fresh details for its planned global Phase 2 STORYLINE trial of ABS-201 in endometriosis, giving investors a clearer read on this pipeline project. After the ABS-201 STORYLINE update, Absci’s share price has been volatile, w",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/absci-absi-stock-dropped-behind-231756513.html?.tsrc=rss",
+   "published_at": "2026-10-07T23:17:56Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:27Z",
+   "fingerprint": "2f594041e6c84d43",
+   "primary_source": false,
+   "cluster_id": "eb806e5de1791d73",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bc6cf26787a6f215",
+   "symbols": [
+    "ABSI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Absci Announces Preliminary Details for Phase 2 STORYLINE™ Trial of AI-Designed Antibody ABS-201™ for Endometriosis",
+   "summary": "Phase 2 trial to assess efficacy and safety in participants with surgically-diagnosed endometriosis and moderate to severe endometriosis-associated pain (EAP) Anticipated initiation of Phase 2 trial in mid-2027 VANCOUVER, Wash. and NEW YORK, Sept. 24, 2026 (GLOBE NEWSWIRE) -- Abs",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/absci-announces-preliminary-details-phase-120000710.html?.tsrc=rss",
+   "published_at": "2026-09-24T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:27Z",
+   "fingerprint": "dd4f0b8bac4bb434",
+   "primary_source": false,
+   "cluster_id": "bc6cf26787a6f215",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0a24788b77761521",
+   "symbols": [
+    "ABSI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Absci (ABSI) Stock Looks Expensive Against Its Book Value",
+   "summary": "Absci has seen its share price move sharply in recent years, which puts a spotlight on whether the current US$9.82 level is supported by the company’s book value. For anyone looking at the stock today, the key issue is how that accounting base stacks up against the recent share p",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/absci-absi-stock-looks-expensive-081906474.html?.tsrc=rss",
+   "published_at": "2026-09-22T08:19:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:27Z",
+   "fingerprint": "fba31cfef4daa08f",
+   "primary_source": false,
+   "cluster_id": "0a24788b77761521",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7571652c75f5511f",
+   "symbols": [
+    "ABSI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Recursion Pharmaceuticals Highlights AI Drug Platform, FAP Progress at Morgan Stanley Conference",
+   "summary": "Recursion Pharmaceuticals (NASDAQ:RXRX) outlined its strategy, clinical pipeline and partnership progress at Morgan Stanley’s Global Healthcare Conference, with CEO and President Najat Khan emphasizing the company’s shift toward an end-to-end, AI-enabled drug discovery and develo",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-recursion-pharmaceuticals-highlights-ai-drug-platform-fap-progress-at-morgan-stanley-conference-2026-09-20/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-09-21T01:02:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:27Z",
+   "fingerprint": "4a78242977d07822",
+   "primary_source": false,
+   "cluster_id": "7571652c75f5511f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "de8168938d853c71",
+   "symbols": [
+    "ABSI",
+    "MANE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Baldness Drug Stocks like Veradermics (MANE) and Absci (ABSI) Are Chasing the Same Wall Street Magic as Ozempic",
+   "summary": "Bloomberg reported on August 29 that hair-loss drug stocks are surging as Wall Street bets on a new pharmaceutical goldmine following the GLP-1 weight-loss boom. Shares of Veradermics, Incorporated (NYSE:MANE) have climbed nearly 500% since its February 2026 initial public offeri",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/baldness-drug-stocks-veradermics-mane-002949530.html?.tsrc=rss",
+   "published_at": "2026-09-12T00:29:49Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:20Z",
+   "fingerprint": "dc2c52dc3e821d2a",
+   "primary_source": false,
+   "cluster_id": "de8168938d853c71",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7e20996f4976a42b",
+   "symbols": [
+    "ABSI",
+    "SDGR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "AI in Drug Discovery Market Projected to Reach $8.52 Billion By 2030",
+   "summary": "Equity Insider News Commentary - Pharmaceutical research is being rebuilt around artificial intelligence faster than the industry can absorb it. Arizton values the global AI in drug discovery market at approximately $1.71 billion in 2024 and projects it will reach roughly $8.52 b",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/ai-drug-discovery-market-projected-125500066.html?.tsrc=rss",
+   "published_at": "2026-09-03T12:55:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:10Z",
+   "fingerprint": "b91c8aee40607043",
+   "primary_source": false,
+   "cluster_id": "7e20996f4976a42b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "907f8c4b1360c480",
+   "symbols": [
+    "ABSI",
+    "MANE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Hair Loss Biotechs Emerge As Wall Street's Newest Growth Trade",
+   "summary": "Hair loss biotechs Veradermics, Absci, and Cosmo are drawing investor bets on a market untouched since the 1990s.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "beincrypto.com",
+   "url": "https://beincrypto.com/hair-loss-biotechs-wall-street-trade/?.tsrc=rss",
+   "published_at": "2026-08-31T03:21:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:20Z",
+   "fingerprint": "58c5dec728f6404c",
+   "primary_source": false,
+   "cluster_id": "907f8c4b1360c480",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5266010be5883c54",
+   "symbols": [
+    "ABSI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Absci (ABSI) Q2 2026 Earnings Call Transcript",
+   "summary": "Biotech extends runway to 2028 with $100M financing and Eli Lilly deal.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/19/absci-absi-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-19T13:52:40Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:27Z",
+   "fingerprint": "0903863be093b49d",
+   "primary_source": false,
+   "cluster_id": "5266010be5883c54",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5725d2379595c1c2",
+   "symbols": [
+    "ABSI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "AMD’s $1.3 Billion Portfolio Reveals Its Biggest Investments and Where AI Demand Lands Next",
+   "summary": "AMD just filed its first-ever 13F, and buried inside a $1.31 billion portfolio are five positions that trace exactly where the company believes AI infrastructure spending lands next, including one ticker most investors will never think to check.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/08/18/amds-1-3-billion-portfolio-reveals-its-biggest-investments-and-where-ai-demand-lands-next/?.tsrc=rss",
+   "published_at": "2026-08-18T21:07:59Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:27Z",
+   "fingerprint": "432ccee19ddc8996",
+   "primary_source": false,
+   "cluster_id": "5725d2379595c1c2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2c37599b82a421f4",
+   "symbols": [
+    "ABSI",
+    "RLAY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "The Zacks Analyst Blog Highlights Recursion Pharmaceuticals, Schrodinger, Relay Therapeutics and Absci",
+   "summary": "AI is reshaping drug discovery, with Recursion Pharmaceuticals, Schrodinger, Relay Therapeutics and Absci advancing computational platforms and pipelines.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zacks-analyst-blog-highlights-recursion-074300158.html?.tsrc=rss",
+   "published_at": "2026-08-18T07:43:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:33Z",
+   "fingerprint": "06445bfbdf655972",
+   "primary_source": false,
+   "cluster_id": "2c37599b82a421f4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "33ff68409e14b3ba",

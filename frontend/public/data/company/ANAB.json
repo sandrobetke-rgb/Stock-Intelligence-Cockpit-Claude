@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 48.970001220703125,
     "day_low": 47.8849983215332,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 22.32733638439241,
+    "adx14": 26.657734098899148,
+    "ema10": 48.58492516320881,
+    "sma200": 50.40426655769348,
+    "perf_63d": -10.026092216574423,
+    "adr20_pct": 4.6446771781931115,
+    "range10_pct": 17.798725586089414,
+    "high10_prev": 51.85499954223633,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -138,14 +172,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 29.2,
+   "score": 38.6,
    "drivers": [
     "news_flow",
-    "source_diversity",
-    "price_volume_anomaly"
+    "freshness",
+    "source_diversity"
    ],
-   "independent_7d": 3,
-   "independent_24h": 0
+   "independent_7d": 4,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -243,7 +277,17 @@
     "green": false,
     "day_high": 48.970001220703125,
     "day_low": 47.8849983215332,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 22.32733638439241,
+    "adx14": 26.657734098899148,
+    "ema10": 48.58492516320881,
+    "sma200": 50.40426655769348,
+    "perf_63d": -10.026092216574423,
+    "adr20_pct": 4.6446771781931115,
+    "range10_pct": 17.798725586089414,
+    "high10_prev": 51.85499954223633,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -273,6 +317,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -280,7 +345,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -618,10 +686,10 @@
   ]
  },
  "intelligence_detail": {
-  "score": 29.2,
+  "score": 38.6,
   "components": {
-   "news_flow": 86.0,
-   "freshness": 0,
+   "news_flow": 99.8,
+   "freshness": 50,
    "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
@@ -631,17 +699,17 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 3,
-    "independent": 3,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
@@ -649,8 +717,8 @@
     "verified": 0
    },
    "30d": {
-    "signals": 7,
-    "independent": 7,
+    "signals": 8,
+    "independent": 8,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
@@ -660,8 +728,8 @@
   },
   "drivers": [
    "news_flow",
-   "source_diversity",
-   "price_volume_anomaly"
+   "freshness",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -680,6 +748,30 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "5517bdab33af4e76",
+   "symbols": [
+    "ANAB",
+    "MIRM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "AnaptysBio (ANAB) vs. PTCT and MIRM: Is the Market Missing the Value of Its Royalty Stream and Legal Upside?",
+   "summary": "Is ANAB a good stock to buy? We came across a bullish thesis on AnaptysBio, Inc. on TripleS Special Situations’s Substack. Since the thesis was published on June 15th, ANAB shares have pulled back as uncertainty over its GSK dispute and scrutiny of earnings boosted by a one-time ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/anaptysbio-anab-vs-ptct-mirm-211717007.html?.tsrc=rss",
+   "published_at": "2026-10-31T21:17:17Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:48Z",
+   "fingerprint": "5f3524c80091896e",
+   "primary_source": false,
+   "cluster_id": "5517bdab33af4e76",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "AnaptysBio (ANAB) vs. PTCT und MIRM: Fehlt dem Markt der Wert seines Royalty-Streams und seines rechtlichen Vorteils?"
+  },
   {
    "id": "98bce382d90b477c",
    "symbols": [

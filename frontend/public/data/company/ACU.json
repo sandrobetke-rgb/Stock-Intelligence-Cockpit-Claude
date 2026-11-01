@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -35,16 +35,16 @@
     "close": 67.26000213623047,
     "change_pct": -1.247978955372242,
     "ema20": 64.14360620520588,
-    "ema50": 61.8907017404725,
-    "ema200": 52.474259049711705,
+    "ema50": 61.89070174040866,
+    "ema200": 52.47425907022472,
     "sma50": 62.73757469177246,
-    "rsi14": 67.37164227878026,
-    "rsi_min5": 56.87776099652038,
-    "atr14": 1.9712394762049932,
-    "atr_pct": 2.9307752209290516,
+    "rsi14": 67.37164227878472,
+    "rsi_min5": 56.877760996523655,
+    "atr14": 1.9712394762049288,
+    "atr_pct": 2.9307752209289557,
     "rvol": 0.9920751394188435,
     "vol30": 35133.333333333336,
-    "dist_ema200_pct": 28.177135521840203,
+    "dist_ema200_pct": 28.17713547173375,
     "dist_52w_high_pct": 3.680366071079344,
     "high_52w": 69.83000183105469,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 69.62999725341797,
     "day_low": 67.26000213623047,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 57.87962233157104,
+    "adx14": 32.99686450981735,
+    "ema10": 65.28230482402401,
+    "sma200": 50.078972282409666,
+    "perf_63d": 16.925357139541397,
+    "adr20_pct": 2.7736126325916084,
+    "range10_pct": 14.851978137016019,
+    "high10_prev": 69.83000183105469,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": false
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.6666666666666666,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 69.62999725341797,
     "entry_max": 71.02259719848632,
-    "stop": 66.67313803911048,
-    "risk_per_share": 2.956859214307485,
-    "target_1": 75.54371568203294,
+    "stop": 66.67313803911057,
+    "risk_per_share": 2.9568592143074,
+    "target_1": 75.54371568203277,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -138,12 +172,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 4.7,
+   "score": 42.5,
    "drivers": [
-    "price_volume_anomaly",
-    "insider_activity"
+    "news_flow",
+    "source_diversity",
+    "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 6,
    "independent_24h": 0
   },
   "political": {
@@ -205,16 +240,16 @@
     "close": 67.26000213623047,
     "change_pct": -1.247978955372242,
     "ema20": 64.14360620520588,
-    "ema50": 61.8907017404725,
-    "ema200": 52.474259049711705,
+    "ema50": 61.89070174040866,
+    "ema200": 52.47425907022472,
     "sma50": 62.73757469177246,
-    "rsi14": 67.37164227878026,
-    "rsi_min5": 56.87776099652038,
-    "atr14": 1.9712394762049932,
-    "atr_pct": 2.9307752209290516,
+    "rsi14": 67.37164227878472,
+    "rsi_min5": 56.877760996523655,
+    "atr14": 1.9712394762049288,
+    "atr_pct": 2.9307752209289557,
     "rvol": 0.9920751394188435,
     "vol30": 35133.333333333336,
-    "dist_ema200_pct": 28.177135521840203,
+    "dist_ema200_pct": 28.17713547173375,
     "dist_52w_high_pct": 3.680366071079344,
     "high_52w": 69.83000183105469,
     "macd_above_signal": true,
@@ -228,7 +263,17 @@
     "green": false,
     "day_high": 69.62999725341797,
     "day_low": 67.26000213623047,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 57.87962233157104,
+    "adx14": 32.99686450981735,
+    "ema10": 65.28230482402401,
+    "sma200": 50.078972282409666,
+    "perf_63d": 16.925357139541397,
+    "adr20_pct": 2.7736126325916084,
+    "range10_pct": 14.851978137016019,
+    "high10_prev": 69.83000183105469,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -258,6 +303,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": false
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -265,7 +331,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.6666666666666666,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -278,9 +347,9 @@
    "plan": {
     "trigger": 69.62999725341797,
     "entry_max": 71.02259719848632,
-    "stop": 66.67313803911048,
-    "risk_per_share": 2.956859214307485,
-    "target_1": 75.54371568203294,
+    "stop": 66.67313803911057,
+    "risk_per_share": 2.9568592143074,
+    "target_1": 75.54371568203277,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -603,11 +672,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 4.7,
+  "score": 42.5,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 60,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 24.9,
@@ -625,27 +694,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 6,
+    "independent": 6,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 7,
+    "independent": 7,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly",
-   "insider_activity"
+   "news_flow",
+   "source_diversity",
+   "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -663,7 +733,440 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "0ac249aa902c0e1c",
+   "symbols": [
+    "ACU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acme United (ACU) Q3 Earnings Ride Tariff Refund Boost",
+   "summary": "Acme United stock barely moved after its Q3 2026 release, ticking down just 0.03% in afternoon trading. Yet the headline story is much louder than the price. The company posted Q3 sales of US$58.0m and basic earnings per share of US$0.88, with a powerful lift from a one time US$6",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acme-united-acu-q3-earnings-151221900.html?.tsrc=rss",
+   "published_at": "2026-10-28T15:12:21Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "efed5ccfc6433455",
+   "primary_source": false,
+   "cluster_id": "0ac249aa902c0e1c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1525f1604ad20c0b",
+   "symbols": [
+    "ACU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Acme United: 3 Key Takeaways for Long-Term Investors",
+   "summary": "Automation and RFID-enabled refill systems are reshaping how Acme generates profit, not just revenue.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/takeaways/2026/10/27/acme-united-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+   "published_at": "2026-10-28T02:09:27Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "72ef08d2dbb445b5",
+   "primary_source": false,
+   "cluster_id": "1525f1604ad20c0b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "909d5a456d918816",
+   "symbols": [
+    "ACU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acme United Corporation Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Acme United Corporation's Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-acme-united-corporation-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-28T00:28:56Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "3da3c2c96305692f",
+   "primary_source": false,
+   "cluster_id": "909d5a456d918816",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "89067b270808d268",
+   "symbols": [
+    "ACU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acme United (ACU) Q3 2026 Earnings Call Transcript",
+   "summary": "Record sales and 80% net income growth driven by My Medic acquisition and tariff refunds.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/acme-united-acu-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-27T20:12:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "c672c905a0d92e93",
+   "primary_source": false,
+   "cluster_id": "89067b270808d268",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d4bb5a8ec0b4d75a",
+   "symbols": [
+    "ACU",
+    "IPAR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acme United Corporation. (ACU) Surpasses Q3 Earnings and Revenue Estimates",
+   "summary": "Acme United (ACU) delivered earnings and revenue surprises of +12.68% and +4.15%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acme-united-corporation-acu-surpasses-104501650.html?.tsrc=rss",
+   "published_at": "2026-10-27T10:45:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:20Z",
+   "fingerprint": "617fdc46855571e7",
+   "primary_source": false,
+   "cluster_id": "d4bb5a8ec0b4d75a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f0114b29ed72b309",
+   "symbols": [
+    "ACU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acme United Reports Third Quarter 2026 Net Sales Increase of 18%",
+   "summary": "SHELTON, Conn., Oct. 27, 2026 (GLOBE NEWSWIRE) -- Acme United Corporation (NYSE American: ACU) today announced that net sales for the quarter ended September 30, 2026, were $58.0 million compared to $49.1 million for the same period in 2025, an increase of 18%. Excluding sales re",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acme-united-reports-third-quarter-103000831.html?.tsrc=rss",
+   "published_at": "2026-10-27T10:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "3368854b21997f6f",
+   "primary_source": false,
+   "cluster_id": "f0114b29ed72b309",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bfed6fe3993a3636",
+   "symbols": [
+    "ACU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acme United to Release Third Quarter 2026  Financial Results on October 27, 2026",
+   "summary": "SHELTON, Conn., Oct. 19, 2026 (GLOBE NEWSWIRE) -- Acme United Corporation (NYSE American: ACU) will release its financial results for the third quarter of 2026 on Tuesday, October 27, 2026, at 6:30 AM Eastern Time. A conference call to discuss these results will be broadcast over",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acme-united-release-third-quarter-125000008.html?.tsrc=rss",
+   "published_at": "2026-10-19T12:50:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "7661a3dae5dc8a6b",
+   "primary_source": false,
+   "cluster_id": "bfed6fe3993a3636",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "eea66d5c171882d3",
+   "symbols": [
+    "ACU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are Consumer Discretionary Stocks Lagging  Acme United (ACU) This Year?",
+   "summary": "Here is how Acme United Corporation. (ACU) and ASICS Corporation Unsponsored ADR (ASCCY) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/consumer-discretionary-stocks-lagging-acme-124003139.html?.tsrc=rss",
+   "published_at": "2026-09-30T12:40:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "21e248ae89021908",
+   "primary_source": false,
+   "cluster_id": "eea66d5c171882d3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8c2fb5421bda9331",
+   "symbols": [
+    "ACU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cintas (CTAS) Q1 Earnings and Revenues Surpass Estimates",
+   "summary": "Cintas (CTAS) delivered earnings and revenue surprises of +2.96% and +1.58%, respectively, for the quarter ended August 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cintas-ctas-q1-earnings-revenues-134501500.html?.tsrc=rss",
+   "published_at": "2026-09-23T13:45:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "be082ec454a3fe4f",
+   "primary_source": false,
+   "cluster_id": "8c2fb5421bda9331",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ead6abd0afdd931b",
+   "symbols": [
+    "ACU",
+    "AP",
+    "BHE",
+    "CMCO",
+    "CRAI",
+    "EPM",
+    "ESCA",
+    "GATX",
+    "GNK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sidoti Events, LLC's September Small-Cap Virtual Conference",
+   "summary": "NEW YORK CITY, NY / ACCESS Newswire / September 22, 2026 / Sidoti Events, LLC, an affiliate of , has released the presentation schedule and weblinks for its two-day September Small-Cap Virtual Investor Conference taking place Wednesday and Thursday, September 23-24, 2026. The pre",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/sidoti-events-llcs-september-small-134500209.html?.tsrc=rss",
+   "published_at": "2026-09-22T13:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:16Z",
+   "fingerprint": "b6a9f5996fc2d4b4",
+   "primary_source": false,
+   "cluster_id": "ead6abd0afdd931b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d7706c77abdccc69",
+   "symbols": [
+    "ACU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acme United Corporation Board Approves Cash Dividend",
+   "summary": "SHELTON, Conn., Sept. 18, 2026 (GLOBE NEWSWIRE) -- The Board of Directors of Acme United Corporation (NYSE American: ACU) declared a cash dividend of 16 cents per share on its outstanding common stock. The dividend is payable on October 22, 2026, to stockholders of record on the ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acme-united-corporation-board-approves-134800608.html?.tsrc=rss",
+   "published_at": "2026-09-18T13:48:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "588cba68815b1f10",
+   "primary_source": false,
+   "cluster_id": "d7706c77abdccc69",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f9690a6e668f25e2",
+   "symbols": [
+    "ACU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Acme United to Present at the Sidoti Small-Cap Virtual Conference",
+   "summary": "SHELTON, Conn., Sept. 16, 2026 (GLOBE NEWSWIRE) -- Acme United Corporation (NYSE American: ACU) today announced Acme United’s Chairman and Chief Executive Officer Walter Johnsen will present at the Sidoti Small-Cap Conference being held virtually on Wednesday, September 23, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/acme-united-present-sidoti-small-153000542.html?.tsrc=rss",
+   "published_at": "2026-09-16T15:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "400f3d74de7d2b54",
+   "primary_source": false,
+   "cluster_id": "f9690a6e668f25e2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "85ea3fab692e274d",
+   "symbols": [
+    "ACU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Acme United (ACU) Stock Outpacing Its Consumer Discretionary Peers This Year?",
+   "summary": "Here is how Acme United Corporation. (ACU) and ASICS Corporation Unsponsored ADR (ASCCY) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acme-united-acu-stock-outpacing-134005267.html?.tsrc=rss",
+   "published_at": "2026-09-14T13:40:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "ce33ccc752c4eed6",
+   "primary_source": false,
+   "cluster_id": "85ea3fab692e274d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3d0a6289dad3523e",
+   "symbols": [
+    "ACU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "BC3 Technologies Announces First Retail Availability of SEAL Hemostatic Wound Spray at Army & Air Force Exchange Service Locations",
+   "summary": "SEAL OTC Now Available at 77 Select Exchange Locations Across the U.S. and Overseas Through BC3 Distributor Acme United Corporation SEAL Hemostatic Wound Spray OTC SEAL is the first and only FDA-cleared, patented chitosan formula-based aerosolized hemostatic wound spray designed ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/bc3-technologies-announces-first-retail-121500942.html?.tsrc=rss",
+   "published_at": "2026-09-10T12:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "d2d77baf53597e39",
+   "primary_source": false,
+   "cluster_id": "3d0a6289dad3523e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "884e33c31fc6868e",
+   "symbols": [
+    "ACU",
+    "IPI",
+    "NTCT",
+    "TILE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zacks.com featured highlights include Polaris, Intrepid Potash, Interface, NetScout Systems and Acme United",
+   "summary": "Strong efficiency metrics and earnings surprises put Polaris, Intrepid Potash, Interface, NetScout Systems and Acme United in focus.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-com-featured-highlights-polaris-135100051.html?.tsrc=rss",
+   "published_at": "2026-09-04T13:51:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:21Z",
+   "fingerprint": "223b732e2ebf6c77",
+   "primary_source": false,
+   "cluster_id": "884e33c31fc6868e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "953964d0dc68ee91",
+   "symbols": [
+    "ACU",
+    "NTCT",
+    "TILE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "5 High-Efficient Stocks With Strong Financial Performance",
+   "summary": "Five stocks stand out after screening for strong efficiency metrics, including Polaris, Intrepid Potash, Interface, NetScout Systems and Acme United.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/5-high-efficient-stocks-strong-131200626.html?.tsrc=rss",
+   "published_at": "2026-09-03T13:12:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:41Z",
+   "fingerprint": "ad2d0143d71ccaf2",
+   "primary_source": false,
+   "cluster_id": "953964d0dc68ee91",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c70c1e3074dd9427",
+   "symbols": [
+    "ACU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Acme United (ACU) a Solid Growth Stock? 3 Reasons to Think \"Yes\"",
+   "summary": "Acme United (ACU) possesses solid growth attributes, which could help it handily outperform the market.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acme-united-acu-solid-growth-164503312.html?.tsrc=rss",
+   "published_at": "2026-08-31T16:45:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "63b5546d4ed69469",
+   "primary_source": false,
+   "cluster_id": "c70c1e3074dd9427",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "26347a7e76410811",
+   "symbols": [
+    "ACU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Acme United (ACU) Outperforming Other Consumer Discretionary Stocks This Year?",
+   "summary": "Here is how Acme United Corporation. (ACU) and ASICS Corporation Unsponsored ADR (ASCCY) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acme-united-acu-outperforming-other-134003634.html?.tsrc=rss",
+   "published_at": "2026-08-28T13:40:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "a41c4c10e28ce250",
+   "primary_source": false,
+   "cluster_id": "26347a7e76410811",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3c22bf20fbcdc46a",
+   "symbols": [
+    "ACU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Here's Why You Should Retain Westlake Stock in Your Portfolio",
+   "summary": "WLK's HIP growth and acquisitions support its portfolio, but housing weakness, operational risks and global pressures cloud the outlook.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/heres-why-retain-westlake-stock-120700964.html?.tsrc=rss",
+   "published_at": "2026-08-27T12:07:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "7d27d1fc132b64d4",
+   "primary_source": false,
+   "cluster_id": "3c22bf20fbcdc46a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "fc85d035c45a9b56",

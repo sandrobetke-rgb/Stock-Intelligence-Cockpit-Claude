@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 29.110000610351562,
     "day_low": 27.90999984741211,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 49.45909218095618,
+    "adx14": 15.92910753558826,
+    "ema10": 27.80496855418356,
+    "sma200": 24.954749946594237,
+    "perf_63d": -8.80179840984836,
+    "adr20_pct": 6.745479172753173,
+    "range10_pct": 21.195428993519915,
+    "high10_prev": 29.704999923706055,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.16666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -139,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.0,
+   "score": 18.2,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -233,7 +269,17 @@
     "green": true,
     "day_high": 29.110000610351562,
     "day_low": 27.90999984741211,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 49.45909218095618,
+    "adx14": 15.92910753558826,
+    "ema10": 27.80496855418356,
+    "sma200": 24.954749946594237,
+    "perf_63d": -8.80179840984836,
+    "adr20_pct": 6.745479172753173,
+    "range10_pct": 21.195428993519915,
+    "high10_prev": 29.704999923706055,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -263,6 +309,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -270,7 +337,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.16666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -609,11 +679,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.0,
+  "score": 18.2,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 11.3,
@@ -631,25 +701,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 7,
+    "independent": 7,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -668,7 +740,385 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "63e9e09743f88a44",
+   "symbols": [
+    "ZBIO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zenas BioPharma Eyes Key Lupus and IL-17 Data as Obexelimab FDA Decision Nears",
+   "summary": "Zenas BioPharma (NASDAQ:ZBIO) outlined development plans for obexelimab in systemic lupus erythematosus (SLE) and ZB021, an investigational oral IL-17AA/AF inhibitor, during an R&amp;D event ahead of clinical data expected later in the quarter. Founder and Chief Executive Officer",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-zenas-biopharma-eyes-key-lupus-and-il-17-data-as-obexelimab-fda-decision-nears-2026-10-30/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-30T15:14:52Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:11Z",
+   "fingerprint": "f108a526c256d67a",
+   "primary_source": false,
+   "cluster_id": "63e9e09743f88a44",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Zenas BioPharma Augen Key Lupus und IL-17 Daten als Obexelimab FDA Entscheidung nähert"
+  },
+  {
+   "id": "2c8f5db83375c701",
+   "symbols": [
+    "ZBIO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wall Street Analysts Predict a 77.61% Upside in Zenas BioPharma, Inc. (ZBIO): Here's  What You Should Know",
+   "summary": "The mean of analysts' price targets for Zenas BioPharma, Inc. (ZBIO) points to a 77.6% upside in the stock. While this highly sought-after metric has not proven reasonably effective, strong agreement among analysts in raising earnings estimates does indicate an upside in the stoc",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-predict-77-125501688.html?.tsrc=rss",
+   "published_at": "2026-10-23T12:55:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:11Z",
+   "fingerprint": "061eb12c33400699",
+   "primary_source": false,
+   "cluster_id": "2c8f5db83375c701",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1f8acdae7113964e",
+   "symbols": [
+    "ZBIO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zenas BioPharma Stock Gains Attention After Long Term Trial Data",
+   "summary": "Zenas BioPharma reported new Phase 3 INDIGO data in IgG4-related disease, including 12 month flare protection, lower glucocorticoid rescue use, and safety outcomes that were comparable to or lower than the randomized phase. The company also shared early vaccine sub study findings",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zenas-biopharma-stock-gains-attention-001733791.html?.tsrc=rss",
+   "published_at": "2026-10-21T00:17:33Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:11Z",
+   "fingerprint": "3d78b87c97e0b28d",
+   "primary_source": false,
+   "cluster_id": "1f8acdae7113964e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dce94a6d63dcfeaf",
+   "symbols": [
+    "ZBIO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zenas BioPharma (ZBIO) Is Down 5.1% After New Phase 3 Obexelimab IgG4-RD Data Release",
+   "summary": "Zenas BioPharma recently presented new Phase 3 INDIGO data for obexelimab in immunoglobulin G4-related disease at the 6th International Symposium on IgG4-Related Disease, highlighting longer-term flare protection, reduced glucocorticoid use, and a favorable safety profile in an o",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zenas-biopharma-zbio-down-5-081800406.html?.tsrc=rss",
+   "published_at": "2026-10-13T08:18:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:11Z",
+   "fingerprint": "db64f674c43d6bb6",
+   "primary_source": false,
+   "cluster_id": "dce94a6d63dcfeaf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "76cfd40720b10fbe",
+   "symbols": [
+    "ZBIO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zenas BioPharma Announces the Presentation of New Obexelimab Data in IgG4-Related Disease at the 6th International Symposium on IgG4-Related Disease",
+   "summary": "– Phase 3 INDIGO open-label extension findings demonstrated sustained clinical activity of obexelimab – – Additional analyses of secondary endpoints showed that significantly fewer patients experienced clinically meaningful cumulative glucocorticoid toxicity at week 52 – – Initia",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zenas-biopharma-announces-presentation-obexelimab-110000144.html?.tsrc=rss",
+   "published_at": "2026-10-12T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:11Z",
+   "fingerprint": "fa3e2541dccbb827",
+   "primary_source": false,
+   "cluster_id": "76cfd40720b10fbe",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "639aa91d19cbfaca",
+   "symbols": [
+    "ZBIO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zenas BioPharma Announces Upcoming Presentations of Orelabrutinib Data in Relapsing Remitting Multiple Sclerosis, Clinical Trial Designs in Progressive Multiple Sclerosis and Other Multiple Sclerosis Portfolio Data at MSToronto2026",
+   "summary": "WALTHAM, Mass., Oct. 07, 2026 (GLOBE NEWSWIRE) -- Zenas BioPharma, Inc. (“Zenas” or the “Company”) (Nasdaq: ZBIO), a clinical-stage global biopharmaceutical company advancing therapies for patients living with autoimmune and inflammatory diseases, today announced that it will pre",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zenas-biopharma-announces-upcoming-presentations-110500586.html?.tsrc=rss",
+   "published_at": "2026-10-07T11:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:11Z",
+   "fingerprint": "83b58965ca70558c",
+   "primary_source": false,
+   "cluster_id": "639aa91d19cbfaca",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "81288d11fe7acd0e",
+   "symbols": [
+    "ZBIO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zenas BioPharma to Host Virtual R&D Event",
+   "summary": "WALTHAM, Mass., Oct. 06, 2026 (GLOBE NEWSWIRE) -- Zenas BioPharma, Inc. (“Zenas” or the “Company”) (Nasdaq: ZBIO), a clinical-stage global biopharmaceutical company committed to being a leader in the development and commercialization of transformative therapies for patients livin",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zenas-biopharma-host-virtual-r-110500499.html?.tsrc=rss",
+   "published_at": "2026-10-06T11:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:11Z",
+   "fingerprint": "2330b08ee124758d",
+   "primary_source": false,
+   "cluster_id": "81288d11fe7acd0e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a18679a4dce7150f",
+   "symbols": [
+    "ZBIO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can Zenas BioPharma’s (ZBIO) Clinical Pipeline Justify Its Heavy Cash Burn?",
+   "summary": "When biotechnology innovators approach the commercialization cliff, market participants must weigh the clinical promise of a lead asset against the stark realities of surging operating expenses and capital dilution. Zenas BioPharma (NASDAQ:ZBIO) finds itself at this critical junc",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zenas-biopharma-zbio-clinical-pipeline-111448242.html?.tsrc=rss",
+   "published_at": "2026-09-23T11:14:48Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:11Z",
+   "fingerprint": "39324f016c2953f8",
+   "primary_source": false,
+   "cluster_id": "a18679a4dce7150f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "023907da82fa5d0b",
+   "symbols": [
+    "ZBIO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Is Zenas BioPharma (ZBIO) Filing More Than $240 Million In Shelves?",
+   "summary": "Zenas BioPharma (NasdaqGS:ZBIO) filed shelf registrations totaling more than US$240 million, according to recent regulatory disclosures. The filings include a broad shelf registration for potential future securities offerings across multiple instruments. A separate portion of the",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/why-zenas-biopharma-zbio-filing-043226725.html?.tsrc=rss",
+   "published_at": "2026-09-23T04:32:26Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:11Z",
+   "fingerprint": "89fef87f838eb95c",
+   "primary_source": false,
+   "cluster_id": "023907da82fa5d0b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e69ca05f756c58b0",
+   "symbols": [
+    "ZBIO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zenas BioPharma Announces Upcoming Presentations of Obexelimab Data in IgG4-Related Disease at the IgG4ward! 6th International Symposium on IgG4-Related Disease and ACR Convergence 2026",
+   "summary": "– New data from the Phase 3 INDIGO open-label extension will include the longer-term flare protection and safety data of obexelimab in IgG4-RD – – Additional analyses will assess glucocorticoid-associated toxicity and vaccine responses – WALTHAM, Mass., Sept. 22, 2026 (GLOBE NEWS",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zenas-biopharma-announces-upcoming-presentations-110500989.html?.tsrc=rss",
+   "published_at": "2026-09-22T11:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:11Z",
+   "fingerprint": "1754c2a144b2dc49",
+   "primary_source": false,
+   "cluster_id": "e69ca05f756c58b0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d4ccc8e6de078b41",
+   "symbols": [
+    "ZBIO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zenas BioPharma Announces Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+   "summary": "WALTHAM, Mass., Sept. 18, 2026 (GLOBE NEWSWIRE) -- Zenas BioPharma, Inc. (“Zenas” or the “Company”) (Nasdaq: ZBIO), a clinical-stage global biopharmaceutical company committed to being a leader in the development and commercialization of transformative therapies for patients livi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zenas-biopharma-announces-inducement-grants-201500327.html?.tsrc=rss",
+   "published_at": "2026-09-18T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:11Z",
+   "fingerprint": "b2f0ddc1246c13d9",
+   "primary_source": false,
+   "cluster_id": "d4ccc8e6de078b41",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f0ff5af9645d202f",
+   "symbols": [
+    "ZBIO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zenas BioPharma to Host Obexelimab IgG4-RD Investor Event",
+   "summary": "WALTHAM, Mass., Sept. 08, 2026 (GLOBE NEWSWIRE) -- Zenas BioPharma, Inc. (“Zenas” or the “Company”) (Nasdaq: ZBIO), a clinical-stage global biopharmaceutical company committed to being a leader in the development and commercialization of transformative therapies for patients livi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zenas-biopharma-host-obexelimab-igg4-110500676.html?.tsrc=rss",
+   "published_at": "2026-09-08T11:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:11Z",
+   "fingerprint": "b2b39d4d3e3b96e5",
+   "primary_source": false,
+   "cluster_id": "f0ff5af9645d202f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e1b0cf60af1dbea7",
+   "symbols": [
+    "ZBIO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zenas BioPharma to Present at Upcoming Healthcare Investor Conferences",
+   "summary": "WALTHAM, Mass., Sept. 04, 2026 (GLOBE NEWSWIRE) -- Zenas BioPharma, Inc. (“Zenas” or the “Company”) (Nasdaq: ZBIO), a clinical-stage global biopharmaceutical company committed to being a leader in the development and commercialization of transformative therapies for patients livi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zenas-biopharma-present-upcoming-healthcare-110500516.html?.tsrc=rss",
+   "published_at": "2026-09-04T11:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:11Z",
+   "fingerprint": "8f303f7031e1437c",
+   "primary_source": false,
+   "cluster_id": "e1b0cf60af1dbea7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3c1dda767a67b666",
+   "symbols": [
+    "CMPR",
+    "DLO",
+    "ZBIO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Fortune Brands and 4 More Stocks See Action From Activist Investors",
+   "summary": "13D FILINGS These disclosures are from 13Ds filed with the Securities and Exchange Commission. 13Ds are filed within 10 days of an entity’s attaining more than 5% in any class of a company’s securities.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/ee139902-79a4-3682-9bbd-5ffc214762c5/fortune-brands-and-4-more.html?.tsrc=rss",
+   "published_at": "2026-08-28T23:46:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:48Z",
+   "fingerprint": "e811526b44c8284e",
+   "primary_source": false,
+   "cluster_id": "3c1dda767a67b666",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4ea2aa67be22cfe9",
+   "symbols": [
+    "ZBIO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zenas BioPharma Reports Second Quarter 2026 Financial Results and Provides Corporate Update",
+   "summary": "- Obexelimab BLA submission for the treatment of IgG4-RD accepted by FDA; PDUFA target action date of May 27, 2027 - - New study data confirm bioequivalence of obexelimab single-dose prefilled autoinjector pen compared to prefilled syringes - - Obexelimab global Phase 2 SunStone ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zenas-biopharma-reports-second-quarter-110000973.html?.tsrc=rss",
+   "published_at": "2026-08-13T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:11Z",
+   "fingerprint": "ee1b9016da63af24",
+   "primary_source": false,
+   "cluster_id": "4ea2aa67be22cfe9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f35bff78558e89ba",
+   "symbols": [
+    "ZBIO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zenas BioPharma Bear Case Overlooks Obexelimab's Commercial Potential, Wedbush Says",
+   "summary": "Zenas BioPharma (ZBIO) remains undervalued, as investor concerns over its phase 3 INDIGO trial for o",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zenas-biopharma-bear-case-overlooks-121356207.html?.tsrc=rss",
+   "published_at": "2026-07-17T12:13:56Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:11Z",
+   "fingerprint": "55249407e7f8afcc",
+   "primary_source": false,
+   "cluster_id": "f35bff78558e89ba",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cf31849e63eb892b",
+   "symbols": [
+    "ZBIO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zenas BioPharma (ZBIO): Best IPO Stocks with Huge Upside Potential",
+   "summary": "Zenas BioPharma Inc. (NASDAQ:ZBIO) is one of the best IPO stocks with huge upside potential. On June 2, Zenas announced positive results from the Phase 3 INDIGO trial of obexelimab for Immunoglobulin G4-Related Disease. The study met its primary and all key secondary endpoints, d",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zenas-biopharma-zbio-best-ipo-135853785.html?.tsrc=rss",
+   "published_at": "2026-07-10T13:58:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:11Z",
+   "fingerprint": "917139c6d5bcb371",
+   "primary_source": false,
+   "cluster_id": "cf31849e63eb892b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

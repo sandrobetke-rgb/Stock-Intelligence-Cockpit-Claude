@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -35,16 +35,16 @@
     "close": 20.709999084472656,
     "change_pct": -3.897912679009763,
     "ema20": 21.820652617606953,
-    "ema50": 22.200158681497257,
-    "ema200": 19.32831225648556,
+    "ema50": 22.200158681497236,
+    "ema200": 19.328312258278462,
     "sma50": 23.107000007629395,
-    "rsi14": 34.76336296902615,
-    "rsi_min5": 33.93855615826472,
-    "atr14": 0.8390699165350258,
-    "atr_pct": 4.051520780433638,
+    "rsi14": 34.76336296902643,
+    "rsi_min5": 33.93855615826514,
+    "atr14": 0.8390699165350274,
+    "atr_pct": 4.051520780433646,
     "rvol": 1.4808559067137554,
     "vol30": 2232433.3333333335,
-    "dist_ema200_pct": 7.148512553254482,
+    "dist_ema200_pct": 7.148512543315344,
     "dist_52w_high_pct": 20.069474309390355,
     "high_52w": 25.90999984741211,
     "macd_above_signal": false,
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 21.34000015258789,
     "day_low": 19.68000030517578,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 16.35394462105674,
+    "adx14": 27.273587563225696,
+    "ema10": 21.351052143868404,
+    "sma200": 19.032712664604187,
+    "perf_63d": -1.1992395128645694,
+    "adr20_pct": 3.5284102661075267,
+    "range10_pct": 7.0388292657272755,
+    "high10_prev": 22.049999237060547,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -135,12 +169,14 @@
    "top_factors": []
   },
   "market_intelligence": {
-   "score": 9.3,
+   "score": 68.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 18,
+   "independent_24h": 2
   },
   "political": {
    "relevance": 0,
@@ -209,16 +245,16 @@
     "close": 20.709999084472656,
     "change_pct": -3.897912679009763,
     "ema20": 21.820652617606953,
-    "ema50": 22.200158681497257,
-    "ema200": 19.32831225648556,
+    "ema50": 22.200158681497236,
+    "ema200": 19.328312258278462,
     "sma50": 23.107000007629395,
-    "rsi14": 34.76336296902615,
-    "rsi_min5": 33.93855615826472,
-    "atr14": 0.8390699165350258,
-    "atr_pct": 4.051520780433638,
+    "rsi14": 34.76336296902643,
+    "rsi_min5": 33.93855615826514,
+    "atr14": 0.8390699165350274,
+    "atr_pct": 4.051520780433646,
     "rvol": 1.4808559067137554,
     "vol30": 2232433.3333333335,
-    "dist_ema200_pct": 7.148512553254482,
+    "dist_ema200_pct": 7.148512543315344,
     "dist_52w_high_pct": 20.069474309390355,
     "high_52w": 25.90999984741211,
     "macd_above_signal": false,
@@ -232,7 +268,17 @@
     "green": true,
     "day_high": 21.34000015258789,
     "day_low": 19.68000030517578,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 16.35394462105674,
+    "adx14": 27.273587563225696,
+    "ema10": 21.351052143868404,
+    "sma200": 19.032712664604187,
+    "perf_63d": -1.1992395128645694,
+    "adr20_pct": 3.5284102661075267,
+    "range10_pct": 7.0388292657272755,
+    "high10_prev": 22.049999237060547,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -262,6 +308,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -269,7 +336,10 @@
     "S01": 0.5,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -518,11 +588,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 9.3,
+  "score": 68.1,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 100.0,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 52.6,
@@ -531,35 +601,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 18,
+    "independent": 18,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 6,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 18,
+    "independent": 18,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 6,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -577,7 +649,412 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "457b395b11227131",
+   "symbols": [
+    "WT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WisdomTree (WT) Stock Drops After Q3 Earnings Flash Record Margins",
+   "summary": "WisdomTree shares closed at US$20.71, down 3.9% on the day, even as the asset manager reported one of its cleanest profit stories in years for Q3 2026. The market focused on the red on the screen. The business reported record assets under management of US$171b and US$179.4m in re",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wisdomtree-wt-stock-drops-q3-010829534.html?.tsrc=rss",
+   "published_at": "2026-11-01T01:08:29Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:52Z",
+   "fingerprint": "a734d73a471fd07a",
+   "primary_source": false,
+   "cluster_id": "457b395b11227131",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "WisdomTree (WT) Aktienrückgänge nach Q3-Ergebnissen Flash Record Margins"
+  },
+  {
+   "id": "cf1af628e4713deb",
+   "symbols": [
+    "WT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WisdomTree: 3 Key Takeaways for Long-Term Investors",
+   "summary": "Operating margins expanded 7.5 points year-over-year, showing how scale translates into earnings power for shareholders.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/takeaways/2026/10/31/wisdomtree-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+   "published_at": "2026-10-31T14:22:57Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:52Z",
+   "fingerprint": "3b2565ca0d10d2ce",
+   "primary_source": false,
+   "cluster_id": "cf1af628e4713deb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "WisdomTree: 3 wichtige Takeaways für langfristige Investoren"
+  },
+  {
+   "id": "e2037833e3d443ed",
+   "symbols": [
+    "ITW",
+    "WT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What WisdomTree (WT) Said on Its Q3 Earnings Call",
+   "summary": "WisdomTree (NYSE:WT) reported record assets under management and broad-based inflows for the third quarter of 2026, while executives outlined plans to expand the firm’s private-markets offerings and build its tokenization platform. Assets under management reached a record $171 bi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-wisdomtree-wt-said-on-its-q3-earnings-call-2026-10-31/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-31T06:14:01Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:02:09Z",
+   "fingerprint": "60b6c4cefbb75941",
+   "primary_source": false,
+   "cluster_id": "e2037833e3d443ed",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Was WisdomTree (WT) auf seinem Q3-Einkommensaufruf gesagt hat"
+  },
+  {
+   "id": "8220009df4ca4763",
+   "symbols": [
+    "WT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WisdomTree (WT) Q3 2026 Earnings Call Transcript",
+   "summary": "Record $171B AUM and 43% margin expansion highlight strong quarterly performance.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/30/wisdomtree-wt-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-30T21:43:26Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:52Z",
+   "fingerprint": "38718eb6cc048df2",
+   "primary_source": false,
+   "cluster_id": "8220009df4ca4763",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "61a3986e7537f9ca",
+   "symbols": [
+    "WT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WisdomTree, Inc. Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of WisdomTree, Inc.'s Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-wisdomtree-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-30T21:15:44Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:52Z",
+   "fingerprint": "a392805ade04d9b2",
+   "primary_source": false,
+   "cluster_id": "61a3986e7537f9ca",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a2291d537ee5980e",
+   "symbols": [
+    "WT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WisdomTree, Inc. (WT) Reports Q3 Earnings: What Key Metrics Have to Say",
+   "summary": "While the top- and bottom-line numbers for WisdomTree, Inc. (WT) give a sense of how the business performed in the quarter ended September 2026, it could be worth looking at how some of its key metrics compare to Wall Street estimates and year-ago values.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wisdomtree-inc-wt-reports-q3-123002760.html?.tsrc=rss",
+   "published_at": "2026-10-30T12:30:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:52Z",
+   "fingerprint": "6ccec7b33108b5ed",
+   "primary_source": false,
+   "cluster_id": "a2291d537ee5980e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "WisdomTree, Inc. (WT) berichtet Q3 Einnahmen: Was Key Metrics zu sagen haben"
+  },
+  {
+   "id": "a7623a6a5218a0d0",
+   "symbols": [
+    "WT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WisdomTree (NYSE:WT) reports sales below analyst estimates in Q3 2026 earnings",
+   "summary": "Asset management firm WisdomTree (NYSE:WT) fell short of the market’s revenue expectations in Q3 2026, but revenue rose 42.8% year on year to $179.4 million. Its non-GAAP profit of $0.32 per share was 6.7% above analysts’ consensus estimates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wisdomtree-nyse-wt-reports-sales-121415376.html?.tsrc=rss",
+   "published_at": "2026-10-30T12:14:15Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:52Z",
+   "fingerprint": "877c0d1a5b6aa054",
+   "primary_source": false,
+   "cluster_id": "a7623a6a5218a0d0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "WisdomTree (NYSE:WT) meldet Verkäufe unter Analystenschätzungen im Q3 2026 Ergebnis"
+  },
+  {
+   "id": "c4d163a2c3a1798e",
+   "symbols": [
+    "WT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WisdomTree, Inc. (WT) Q3 Earnings Top Estimates",
+   "summary": "WisdomTree, Inc. (WT) delivered earnings and revenue surprises of +6.67% and -0.84%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wisdomtree-inc-wt-q3-earnings-102002572.html?.tsrc=rss",
+   "published_at": "2026-10-30T10:20:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:52Z",
+   "fingerprint": "9cb0ece4ae200f33",
+   "primary_source": false,
+   "cluster_id": "c4d163a2c3a1798e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d3dd4217ee91ea6b",
+   "symbols": [
+    "WT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WisdomTree earnings: what to look for from WT",
+   "summary": "Asset management firm WisdomTree (NYSE:WT) will be announcing earnings results this Friday before market hours. Here’s what to look for.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wisdomtree-earnings-look-wt-043034776.html?.tsrc=rss",
+   "published_at": "2026-10-29T04:30:34Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:52Z",
+   "fingerprint": "cc4d577e71013227",
+   "primary_source": false,
+   "cluster_id": "d3dd4217ee91ea6b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8b359ae1f2df841a",
+   "symbols": [
+    "WT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What Comes Next For WisdomTree After An 82% Gain",
+   "summary": "If WisdomTree sat on your watchlist rather than in your portfolio, the recent move may feel expensive in hindsight. Holding WisdomTree over the past year would have returned 82.1%, including dividends. That jump now raises a sharper question. Back on 28 October 2025, could an inv",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/comes-next-wisdomtree-82-gain-221027558.html?.tsrc=rss",
+   "published_at": "2026-10-28T22:10:27Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:52Z",
+   "fingerprint": "8f17a3a36dd26e37",
+   "primary_source": false,
+   "cluster_id": "8b359ae1f2df841a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "60b26263777e14bf",
+   "symbols": [
+    "WT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Investment Roundup: Vestmark, Allspring, WisdomTree, Returned Stacked ETFs, Quoros Expand Model Portfolio Options",
+   "summary": "Janus Henderson, Van Eck and Cantor Fitzgerald also announced innovative fund launches in recent days.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "wealthmanagement.com",
+   "url": "https://www.wealthmanagement.com/etfs/investment-roundup-vestmark-allspring-wisdomtree-returned-stacked-etfs-quoros-expand-model-portfolio-options?.tsrc=rss",
+   "published_at": "2026-10-28T15:33:43Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:52Z",
+   "fingerprint": "3e9dc5a84920202d",
+   "primary_source": false,
+   "cluster_id": "60b26263777e14bf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a062a0f5115c346f",
+   "symbols": [
+    "BUR",
+    "WT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Burford Capital Limited (BUR) Reports Next Week: Wall Street Expects Earnings Growth",
+   "summary": "Burford Capital (BUR) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/burford-capital-limited-bur-reports-130012915.html?.tsrc=rss",
+   "published_at": "2026-10-28T13:00:12Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:47:40Z",
+   "fingerprint": "c2177d764f88c9e8",
+   "primary_source": false,
+   "cluster_id": "a062a0f5115c346f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bdba2d9b493f46b5",
+   "symbols": [
+    "WT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why WisdomTree (WT) Is Back In The Spotlight",
+   "summary": "Market attention turns to WisdomTree after expectations-focused mention WisdomTree (WT) moved into the spotlight after being highlighted in a recent analysis as one of two stocks that could meet or beat Wall Street expectations, drawing fresh attention to its fundamentals. Recent",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-wisdomtree-wt-back-spotlight-121000903.html?.tsrc=rss",
+   "published_at": "2026-10-28T12:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:52Z",
+   "fingerprint": "35fc5b749b6cd472",
+   "primary_source": false,
+   "cluster_id": "bdba2d9b493f46b5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b13c97839802ae1b",
+   "symbols": [
+    "WT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WisdomTree and Return Stacked® Collaborate to Deliver Capital-Efficient Model Portfolios Through Quorus",
+   "summary": "NEW YORK, October 28, 2026--WisdomTree and Return Stacked® deliver capital-efficient model portfolios through Quorus, pairing core exposures with diversifying strategies.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wisdomtree-return-stacked-collaborate-deliver-100000224.html?.tsrc=rss",
+   "published_at": "2026-10-28T10:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:52Z",
+   "fingerprint": "2de248bb77ccb726",
+   "primary_source": false,
+   "cluster_id": "b13c97839802ae1b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ccdcfc98c832bd58",
+   "symbols": [
+    "WT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Is WisdomTree (WT) Getting Stretched Or Still Reasonable On Earnings?",
+   "summary": "WisdomTree has delivered a powerful share price run in recent years, which puts a spotlight on whether the current valuation is adequately supported by its earnings profile. With that backdrop, the question for holders and potential buyers alike is how much of this past share pri",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wisdomtree-wt-getting-stretched-still-092001155.html?.tsrc=rss",
+   "published_at": "2026-10-28T09:20:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:52Z",
+   "fingerprint": "f3464eb59a8a7402",
+   "primary_source": false,
+   "cluster_id": "ccdcfc98c832bd58",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c8df0259452a5e11",
+   "symbols": [
+    "WT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How Revenue Growth And Buybacks At WisdomTree Stock Have Changed Its Investment Story",
+   "summary": "Recent commentary has highlighted WisdomTree for strong revenue growth and active share buybacks, with investors reacting to this focus on fundamentals in the past week. The emphasis on returning capital through repurchases, alongside expansion in higher fee product areas, has sh",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/revenue-growth-buybacks-wisdomtree-stock-044854247.html?.tsrc=rss",
+   "published_at": "2026-10-28T04:48:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:52Z",
+   "fingerprint": "c752146318d61a7f",
+   "primary_source": false,
+   "cluster_id": "c8df0259452a5e11",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "77942c81f9d80203",
+   "symbols": [
+    "WAB",
+    "WT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "2 of Wall Street’s favorite stocks for long-term investors and 1 that underwhelm",
+   "summary": "The stocks in this article have caught Wall Street’s attention in a big way, with price targets implying returns above 20%. But investors should take these forecasts with a grain of salt because analysts typically say nice things about companies so their firms can win business in",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/2-wall-street-favorite-stocks-165447614.html?.tsrc=rss",
+   "published_at": "2026-10-27T16:54:47Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:32Z",
+   "fingerprint": "7a564f79834dc45d",
+   "primary_source": false,
+   "cluster_id": "77942c81f9d80203",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "78ce4bae422c71c6",
+   "symbols": [
+    "WT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Two Yields, One Fund: Why Your ETF’s Yield Depends on Which Number You Read",
+   "summary": "The same ETF can show two very different yield numbers on the exact same day, and the gap is not a mistake. Understanding why each number exists changes how you compare funds and estimate the income they will actually put in your pocket.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/etf/2026/10/27/two-yields-one-fund-why-your-etfs-yield-depends-on-which-number-you-read/?.tsrc=rss",
+   "published_at": "2026-10-27T10:33:42Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:52Z",
+   "fingerprint": "31d0411961db5bed",
+   "primary_source": false,
+   "cluster_id": "78ce4bae422c71c6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

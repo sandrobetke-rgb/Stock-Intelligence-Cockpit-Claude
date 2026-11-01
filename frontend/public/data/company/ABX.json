@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 8.649999618530273,
     "day_low": 8.359999656677246,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 46.557226513060385,
+    "adx14": 17.871857424955582,
+    "ema10": 8.364809027914966,
+    "sma200": 9.143250019550324,
+    "perf_63d": -20.3198478283903,
+    "adr20_pct": 3.590048719108695,
+    "range10_pct": 13.40674031577369,
+    "high10_prev": 8.755000114440918,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.6666666666666666,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -138,11 +172,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.8,
+   "score": 26.4,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -241,7 +277,17 @@
     "green": false,
     "day_high": 8.649999618530273,
     "day_low": 8.359999656677246,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 46.557226513060385,
+    "adx14": 17.871857424955582,
+    "ema10": 8.364809027914966,
+    "sma200": 9.143250019550324,
+    "perf_63d": -20.3198478283903,
+    "adr20_pct": 3.590048719108695,
+    "range10_pct": 13.40674031577369,
+    "high10_prev": 8.755000114440918,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -271,6 +317,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -278,7 +345,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.6666666666666666,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -530,11 +600,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.8,
+  "score": 26.4,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 16.1,
@@ -552,25 +622,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 9,
+    "independent": 9,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -589,7 +661,384 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "e512a3470a6df65b",
+   "symbols": [
+    "ABX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Brookfield Asset Management (BAM) Earnings Expected to Grow: What to Know Ahead of Next Week's Release",
+   "summary": "Brookfield (BAM) possesses the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/brookfield-asset-management-bam-earnings-130003325.html?.tsrc=rss",
+   "published_at": "2026-10-30T13:00:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "f71756d1c2932832",
+   "primary_source": false,
+   "cluster_id": "e512a3470a6df65b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Brookfield Asset Management (BAM) Erwartete Gewinne zu wachsen: Was Sie vor der Veröffentlichung der nächsten Woche wissen sollten"
+  },
+  {
+   "id": "bf5ece374000ada0",
+   "symbols": [
+    "ABX",
+    "RPC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Abacus Global Management, Inc. (ABX) Earnings Expected to Grow: Should You Buy?",
+   "summary": "Abacus Global Management, Inc. (ABX) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/abacus-global-management-inc-abx-130013304.html?.tsrc=rss",
+   "published_at": "2026-10-29T13:00:13Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:44Z",
+   "fingerprint": "f75f231126de41f8",
+   "primary_source": false,
+   "cluster_id": "bf5ece374000ada0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1688b436e5dd7bbd",
+   "symbols": [
+    "ABX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "SPGI Gears Up to Report Q3 Earnings: Here's What Investors Should Know",
+   "summary": "S&amp;P Global's Q3 earnings face pressure despite expected growth in Indices, Market Intelligence and Ratings, led by AI demand, ETF inflows and debt issuance.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/spgi-gears-report-q3-earnings-120800130.html?.tsrc=rss",
+   "published_at": "2026-10-23T12:08:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "788f5f45c64fa443",
+   "primary_source": false,
+   "cluster_id": "1688b436e5dd7bbd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5b2e7dc5d1b5d9bc",
+   "symbols": [
+    "ABX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wall Street Analysts Think Abacus Global Management, Inc. (ABX) Could Surge 67.58%: Read This Before Placing a Bet",
+   "summary": "The mean of analysts' price targets for Abacus Global Management, Inc. (ABX) points to a 67.6% upside in the stock. While this highly sought-after metric has not proven reasonably effective, strong agreement among analysts in raising earnings estimates does indicate an upside in ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-think-abacus-125501294.html?.tsrc=rss",
+   "published_at": "2026-10-21T12:55:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "33fbbba63aeff847",
+   "primary_source": false,
+   "cluster_id": "5b2e7dc5d1b5d9bc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "183b062b5af1ffaf",
+   "symbols": [
+    "ABX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Abacus Global Management to Announce Third Quarter 2026 Financial Results on Thursday, November 5, 2026",
+   "summary": "ORLANDO, Fla., October 15, 2026--Abacus Global Management, Inc. (NYSE: ABX), a financial services company specializing in alternative asset management, with a focus on longevity-based assets and personalized financial planning, today announced it will release its third quarter 20",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/abacus-global-management-announce-third-120000709.html?.tsrc=rss",
+   "published_at": "2026-10-15T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "b7f8162f653f8136",
+   "primary_source": false,
+   "cluster_id": "183b062b5af1ffaf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c9d1c65dc50cbf92",
+   "symbols": [
+    "ABX"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Abacus Global Management and Retirable Announce Partnership, Integrating Abacus LifeARC™ into Retirable Platform",
+   "summary": "ORLANDO, Fla. & NEW YORK, October 13, 2026--Abacus Global Management, Inc. (NYSE: ABX) (\"Abacus\"), a financial services company specializing in alternative asset management, with a focus on longevity-based assets and personalized financial planning, today announced a partnership ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/abacus-global-management-retirable-announce-120000270.html?.tsrc=rss",
+   "published_at": "2026-10-13T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "c51bab5050294db2",
+   "primary_source": false,
+   "cluster_id": "c9d1c65dc50cbf92",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "71ca1b3ae91769ff",
+   "symbols": [
+    "ABX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Applied Digital Corporation (APLD) Reports Q1 Loss, Tops Revenue Estimates",
+   "summary": "Applied Digital Corporation (APLD) delivered earnings and revenue surprises of -192.31% and +154.95%, respectively, for the quarter ended August 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/applied-digital-corporation-apld-reports-204002720.html?.tsrc=rss",
+   "published_at": "2026-10-07T20:40:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "151afe7d15d0dd81",
+   "primary_source": false,
+   "cluster_id": "71ca1b3ae91769ff",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5797ede08140c9f3",
+   "symbols": [
+    "ABX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Living to 95? Your Retirement Plan Isn't Ready",
+   "summary": "Jay Jackson on why the 4% rule is broken and how to plan for a longer life",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "thestreet.com",
+   "url": "https://www.thestreet.com/retirement/living-to-95-your-retirement-plan-isnt-ready?.tsrc=rss",
+   "published_at": "2026-10-06T14:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "a7f513ff0db59471",
+   "primary_source": false,
+   "cluster_id": "5797ede08140c9f3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fe7a1bfaa1d6f10c",
+   "symbols": [
+    "ABX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Abacus Global Management, Inc. (ABX) Loses 19% in 4 Weeks, Here's Why a Trend Reversal May be Around the Corner",
+   "summary": "Abacus Global Management, Inc. (ABX) has become technically an oversold stock now, which implies exhaustion of the heavy selling pressure on it. This, combined with strong agreement among Wall Street analysts in revising earnings estimates higher, indicates a potential trend reve",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/abacus-global-management-inc-abx-123502276.html?.tsrc=rss",
+   "published_at": "2026-10-02T12:35:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "fcb2369e6641d734",
+   "primary_source": false,
+   "cluster_id": "fe7a1bfaa1d6f10c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4121f153c8f6cee6",
+   "symbols": [
+    "ABX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What Makes Abacus Global Management, Inc. (ABX) a New Buy Stock",
+   "summary": "Abacus Global Management, Inc. (ABX) has been upgraded to a Zacks Rank #2 (Buy), reflecting growing optimism about the company's earnings prospects. This might drive the stock higher in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/makes-abacus-global-management-inc-150003995.html?.tsrc=rss",
+   "published_at": "2026-09-28T15:00:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "818902efa75f2178",
+   "primary_source": false,
+   "cluster_id": "4121f153c8f6cee6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "00601bc4ef4bf92a",
+   "symbols": [
+    "ABX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "B. Riley Securities Names Top Pick in Financial Services Sector",
+   "summary": "Investing.com -- B. Riley Securities has named Abacus Global Management Inc. as its top investment opportunity in the financial services sector, citing the alternative asset manager’s expansion into new business lines, rising assets under management and potential for stronger rec",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/b-riley-securities-names-top-205805507.html?.tsrc=rss",
+   "published_at": "2026-09-25T20:58:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "815091bef3542d6c",
+   "primary_source": false,
+   "cluster_id": "00601bc4ef4bf92a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ef92c6f743cbf246",
+   "symbols": [
+    "ABX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Abacus Global Management Completes Landmark $400 Million Securitization",
+   "summary": "ORLANDO, Fla., September 25, 2026--Abacus Global Management, Inc. (\"Abacus\" or the \"Company\") (NYSE: ABX), a financial services company specializing in alternative asset management, with a focus on longevity-based assets and personalized financial planning, today announced the cl",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/abacus-global-management-completes-landmark-120000386.html?.tsrc=rss",
+   "published_at": "2026-09-25T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "9a4d9f0f254baf44",
+   "primary_source": false,
+   "cluster_id": "ef92c6f743cbf246",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5a32c99056239e13",
+   "symbols": [
+    "ABX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Abacus Global Management to Participate in Virtual Fireside Chat Hosted by Autonomous Research",
+   "summary": "ORLANDO, Fla., September 24, 2026--Abacus Global Management, Inc. (\"Abacus\" or the \"Company\") (NYSE: ABX), a financial services company specializing in alternative asset management, with a focus on longevity-based assets and personalized financial planning, today announced that C",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/abacus-global-management-participate-virtual-120000652.html?.tsrc=rss",
+   "published_at": "2026-09-24T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "701760f811f51ea4",
+   "primary_source": false,
+   "cluster_id": "5a32c99056239e13",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "553c3c812bf14d20",
+   "symbols": [
+    "ABX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Abacus Founders Elect to Retain Substantial Ownership, Terminate 10b5-1 Trading Plans",
+   "summary": "ORLANDO, Fla., September 23, 2026--Abacus Global Management, Inc. (\"Abacus\" or the \"Company\") (NYSE: ABX), a financial services company specializing in alternative asset management with a focus on longevity-based assets and personalized financial planning, today announced that Co",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/abacus-founders-elect-retain-substantial-213300309.html?.tsrc=rss",
+   "published_at": "2026-09-23T21:33:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "9c88e5d63ab025b5",
+   "primary_source": false,
+   "cluster_id": "553c3c812bf14d20",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b4eb1482651cbebc",
+   "symbols": [
+    "ABX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Abacus Global Management, Inc. (ABX) Stock Outpacing Its Finance Peers This Year?",
+   "summary": "Here is how Abacus Global Management, Inc. (ABX) and EPR Properties (EPR) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/abacus-global-management-inc-abx-134003177.html?.tsrc=rss",
+   "published_at": "2026-09-18T13:40:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "a7f9f4bd2f163ee7",
+   "primary_source": false,
+   "cluster_id": "b4eb1482651cbebc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cf740a424825ec11",
+   "symbols": [
+    "ABX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wall Street Analysts Believe Abacus Global Management, Inc. (ABX) Could Rally 48.75%: Here's is How to Trade",
+   "summary": "The consensus price target hints at a 48.8% upside potential for Abacus Global Management, Inc. (ABX). While empirical research shows that this sought-after metric is hardly effective, an upward trend in earnings estimate revisions could mean that the stock will witness an upside",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-believe-abacus-135503779.html?.tsrc=rss",
+   "published_at": "2026-09-10T13:55:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "489b2d69ba8b5599",
+   "primary_source": false,
+   "cluster_id": "cf740a424825ec11",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d72897884eaf786d",
+   "symbols": [
+    "ABX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Abacus Global Management to Participate in the Barclays 24th Annual Global Financial Services Conference",
+   "summary": "ORLANDO, Fla., September 09, 2026--Abacus Global Management, Inc. (NYSE: ABX), a financial services company specializing in alternative asset management, data-driven wealth solutions, and technology innovations for longevity-based assets, today announced that it will participate ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/abacus-global-management-participate-barclays-120000914.html?.tsrc=rss",
+   "published_at": "2026-09-09T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "55ea7f1cd6ca2559",
+   "primary_source": false,
+   "cluster_id": "d72897884eaf786d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "bdcde1b050718afc",

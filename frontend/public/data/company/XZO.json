@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 17.899999618530273,
     "day_low": 17.260000228881836,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 93.95327565700705,
+    "adx14": 21.116850641703227,
+    "ema10": 17.05213959502236,
+    "sma200": 15.977750039100647,
+    "perf_63d": 11.889860281337516,
+    "adr20_pct": 5.061051298469537,
+    "range10_pct": 16.124919060765098,
+    "high10_prev": 18.219999313354492,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [
@@ -97,7 +128,10 @@
     "S01": 0.5,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": true,
@@ -140,11 +174,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 1.9,
+   "score": 18.1,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -243,7 +279,17 @@
     "green": true,
     "day_high": 17.899999618530273,
     "day_low": 17.260000228881836,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 93.95327565700705,
+    "adx14": 21.116850641703227,
+    "ema10": 17.05213959502236,
+    "sma200": 15.977750039100647,
+    "perf_63d": 11.889860281337516,
+    "adr20_pct": 5.061051298469537,
+    "range10_pct": 16.124919060765098,
+    "high10_prev": 18.219999313354492,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -273,6 +319,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [
@@ -282,7 +349,10 @@
     "S01": 0.5,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": true,
@@ -534,11 +604,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 1.9,
+  "score": 18.1,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 10.7,
@@ -556,25 +626,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -593,7 +665,320 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "34b9ee6d84909e9d",
+   "symbols": [
+    "XZO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Hanover Insurance Group (THG) Q3 Earnings and Revenues Surpass Estimates",
+   "summary": "Hanover Insurance (THG) delivered earnings and revenue surprises of +12.20% and +0.65%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/hanover-insurance-group-thg-q3-204508788.html?.tsrc=rss",
+   "published_at": "2026-10-28T20:45:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:06Z",
+   "fingerprint": "f01818d8abceaae6",
+   "primary_source": false,
+   "cluster_id": "34b9ee6d84909e9d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4b0706213ab1bfb4",
+   "symbols": [
+    "HCI",
+    "XZO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "HCI Group Declares Quarterly Cash Dividend",
+   "summary": "TAMPA, Fla., Oct. 21, 2026 (GLOBE NEWSWIRE) -- The board of directors of HCI Group, Inc. (NYSE: HCI) has declared a regular quarterly cash dividend in the amount of 40 cents per common share. The dividend is scheduled to be paid December 18, 2026 to shareholders of record at the ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/hci-group-declares-quarterly-cash-203000913.html?.tsrc=rss",
+   "published_at": "2026-10-21T20:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:10:05Z",
+   "fingerprint": "c9803cf8564b59fb",
+   "primary_source": false,
+   "cluster_id": "4b0706213ab1bfb4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dfb62dac846adcf9",
+   "symbols": [
+    "XZO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Exzeo Group Sets Third Quarter 2026 Earnings Call for Wednesday, November 4, 2026, at 5:45 p.m. ET",
+   "summary": "TAMPA, Fla., October 20, 2026--Exzeo Group, Inc. (NYSE:XZO) will hold a conference call on Wednesday, November 4, 2026, at 5:45 p.m. Eastern Time to discuss results for the third quarter ended September 30, 2026. Financial results will be issued in a press release the same day af",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/exzeo-group-sets-third-quarter-123000015.html?.tsrc=rss",
+   "published_at": "2026-10-20T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:06Z",
+   "fingerprint": "72eff6014be9d2e8",
+   "primary_source": false,
+   "cluster_id": "dfb62dac846adcf9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "747dd965363bc3d5",
+   "symbols": [
+    "MMS",
+    "TOYO",
+    "XZO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Undervalued Stocks With ROE Over 21%",
+   "summary": "Global bond yields are climbing as investors factor in higher inflation and tighter central bank policy, which has put pressure on many large, rate-sensitive stocks. That kind of backdrop can create pricing gaps in smaller, high quality US companies that big funds are not focused",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-undervalued-stocks-roe-over-121742828.html?.tsrc=rss",
+   "published_at": "2026-09-01T12:17:42Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:55Z",
+   "fingerprint": "eba45fe926f08108",
+   "primary_source": false,
+   "cluster_id": "747dd965363bc3d5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "049d388d668c9113",
+   "symbols": [
+    "XZO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Exzeo Authorizes $25 Million Stock Repurchase Program",
+   "summary": "TAMPA, Fla., August 14, 2026--Exzeo Group, Inc. (NYSE: XZO) today announced that its Board of Directors has authorized a program to purchase up to $25 million of the company’s common shares, subject to market conditions.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/exzeo-authorizes-25-million-stock-201500741.html?.tsrc=rss",
+   "published_at": "2026-08-14T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:06Z",
+   "fingerprint": "ceb9b165a64cb005",
+   "primary_source": false,
+   "cluster_id": "049d388d668c9113",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f5ee68ac35e0a106",
+   "symbols": [
+    "XZO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Exzeo Group Q2 Earnings Call Highlights",
+   "summary": "Exzeo Group (NYSE:XZO) reported second-quarter 2026 results that exceeded its guidance, with higher managed premium, revenue and pre-tax income, while outlining continued expansion of its insurance platform and the launch of an internal artificial intelligence initiative. Chief F",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/exzeo-group-q2-earnings-call-highlights-2026-08-09/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-09T18:03:49Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:06Z",
+   "fingerprint": "2917511f23e33861",
+   "primary_source": false,
+   "cluster_id": "f5ee68ac35e0a106",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3e7150360ca7ba67",
+   "symbols": [
+    "XZO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Exzeo Group Inc (XZO) (Q2 2026) Earnings Call Highlights: Record EBITDA and Geico Partnership ...",
+   "summary": "Exzeo Group Inc (XZO) posts 53% adjusted EBITDA margin and $1.4B managed premium, while launching AI-driven Exzeo Ventures and signing Geico as its eighth carrier partner.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/exzeo-group-inc-xzo-q2-051210087.html?.tsrc=rss",
+   "published_at": "2026-08-07T05:12:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:06Z",
+   "fingerprint": "a4f3e8c57e5272ee",
+   "primary_source": false,
+   "cluster_id": "3e7150360ca7ba67",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "851660ae009bd41c",
+   "symbols": [
+    "XZO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Exzeo Announces Second Quarter 2026 Financial Results",
+   "summary": "TAMPA, Fla., August 06, 2026--Exzeo Group, Inc. (NYSE:XZO) today announced financial results for the second quarter ended June 30, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/exzeo-announces-second-quarter-2026-201500129.html?.tsrc=rss",
+   "published_at": "2026-08-06T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:06Z",
+   "fingerprint": "708a23aae396a460",
+   "primary_source": false,
+   "cluster_id": "851660ae009bd41c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bda4784275739365",
+   "symbols": [
+    "XZO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Exzeo Group Launches Exzeo Ventures to Build the Next Generation of AI-Native Businesses",
+   "summary": "TAMPA, Fla., August 06, 2026--Exzeo Group Inc. (NYSE: XZO) today announced the launch of Exzeo Ventures, a new innovation division dedicated to developing AI-native products, services and businesses designed to reshape the future of insurance and beyond.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/exzeo-group-launches-exzeo-ventures-123000051.html?.tsrc=rss",
+   "published_at": "2026-08-06T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:06Z",
+   "fingerprint": "5c8da1b5ee3610f4",
+   "primary_source": false,
+   "cluster_id": "bda4784275739365",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3dde83e80acc36aa",
+   "symbols": [
+    "XZO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Exzeo Group, Inc. (XZO) A Good Stock To Buy Now?",
+   "summary": "Is XZO a good stock to buy? We came across a bullish thesis on Exzeo Group, Inc. on r/ValueInvesting by North_Square8662. In this article, we will summarize the bulls’ thesis on XZO. Exzeo Group, Inc.’s share was trading at $13.43 as of June 22nd. XZO’s trailing P/E was 14.33 acc",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/exzeo-group-inc-xzo-good-180348198.html?.tsrc=rss",
+   "published_at": "2026-06-29T18:03:48Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:06Z",
+   "fingerprint": "ec4cb161e117b2b7",
+   "primary_source": false,
+   "cluster_id": "3dde83e80acc36aa",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c1087b77f125e279",
+   "symbols": [
+    "XZO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Exzeo Group, Inc. (XZO): 10 Best Insurance Stocks to Buy Following Q1 Earnings",
+   "summary": "With an upside potential of 94.18%, Exzeo Group, Inc. (NYSE:XZO) is among the 10 Best Insurance Stocks to Buy Following Q1 Earnings. On May 26, Exzeo Group, Inc. (NYSE:XZO) announced that its Board of Directors authorized a new share repurchase program and adopted a corresponding",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/exzeo-group-inc-xzo-10-003901257.html?.tsrc=rss",
+   "published_at": "2026-06-12T00:39:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:06Z",
+   "fingerprint": "5d2c3242ccf31168",
+   "primary_source": false,
+   "cluster_id": "c1087b77f125e279",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "55c4f4fc7e3f5233",
+   "symbols": [
+    "XZO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Undervalued Small Caps With Insider Buying Across Regions",
+   "summary": "The United States market has shown robust performance, climbing 1.6% in the last week and rising 28% over the past year, with earnings expected to grow by 17% annually. In this thriving environment, identifying small-cap stocks that may be undervalued and exhibit insider buying c",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-undervalued-small-caps-insider-114010620.html?.tsrc=rss",
+   "published_at": "2026-06-01T11:40:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:06Z",
+   "fingerprint": "b4047a3dbe1a4ebe",
+   "primary_source": false,
+   "cluster_id": "55c4f4fc7e3f5233",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "27dc5c501edc660f",
+   "symbols": [
+    "IMKTA",
+    "XZO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "US Market's Hidden Gems: Discover 3 Undiscovered Stocks",
+   "summary": "The United States market has shown robust performance recently, climbing 1.3% in the last week and an impressive 28% over the past year, with earnings forecasted to grow by 17% annually. In this thriving environment, identifying stocks that are not only resilient but also positio",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/us-markets-hidden-gems-discover-113300984.html?.tsrc=rss",
+   "published_at": "2026-05-28T11:33:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:02Z",
+   "fingerprint": "4344db9582b4bee4",
+   "primary_source": false,
+   "cluster_id": "27dc5c501edc660f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1a68af79a759f5f3",
+   "symbols": [
+    "XZO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Exzeo (XZO) Q1 2026 Earnings Transcript",
+   "summary": "Good evening, everyone, and thank you for joining us for Exzeo Group, Inc.’s first quarter earnings call.  Exzeo Group, Inc. continues to deliver on its core objectives.  Managed premium on the platform experienced another quarter of growth to $1.43 billion and exceeded our expec",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/05/07/exzeo-xzo-q1-2026-earnings-transcript/?.tsrc=rss",
+   "published_at": "2026-05-07T13:37:57Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:06Z",
+   "fingerprint": "15b4e4483829d812",
+   "primary_source": false,
+   "cluster_id": "1a68af79a759f5f3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

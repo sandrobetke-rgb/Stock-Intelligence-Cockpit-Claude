@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 1.5399999618530273,
     "day_low": 1.4299999475479126,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 47.59263393902631,
+    "adx14": 24.7929385383178,
+    "ema10": 1.526157250851102,
+    "sma200": 2.4801800054311753,
+    "perf_63d": 45.71428960683412,
+    "adr20_pct": 11.600077954125652,
+    "range10_pct": 22.30216296253098,
+    "high10_prev": 1.7000000476837158,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": true,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.0,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.0,
+    "QM": 0.6666666666666666
    },
    "filter": {
     "Tag grün": true,
@@ -139,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.3,
+   "score": 25.9,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -236,7 +272,17 @@
     "green": true,
     "day_high": 1.5399999618530273,
     "day_low": 1.4299999475479126,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 47.59263393902631,
+    "adx14": 24.7929385383178,
+    "ema10": 1.526157250851102,
+    "sma200": 2.4801800054311753,
+    "perf_63d": 45.71428960683412,
+    "adr20_pct": 11.600077954125652,
+    "range10_pct": 22.30216296253098,
+    "high10_prev": 1.7000000476837158,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -266,6 +312,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": true,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -273,7 +340,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.0,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.0,
+    "QM": 0.6666666666666666
    },
    "filter": {
     "Tag grün": true,
@@ -612,11 +682,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.3,
+  "score": 25.9,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 13.0,
@@ -634,25 +704,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 5,
+    "independent": 5,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -671,7 +743,452 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "f0a8fa69abea2656",
+   "symbols": [
+    "ADCT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ADC Therapeutics Announces ZYNLONTA® Updates in Japan",
+   "summary": "ADC Therapeutics SA (NYSE: ADCT), a commercial-stage global leader and pioneer in the field of antibody drug conjugates (ADCs), today announced that its Japanese licensing partner, Tanabe Pharma Corporation (formerly Mitsubishi Tanabe Pharma Corporation), filed a marketing author",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adc-therapeutics-announces-zynlonta-updates-113000613.html?.tsrc=rss",
+   "published_at": "2026-10-29T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:40Z",
+   "fingerprint": "10eb1d658b046e0e",
+   "primary_source": false,
+   "cluster_id": "f0a8fa69abea2656",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f4ecaad4189e50ba",
+   "symbols": [
+    "ADCT",
+    "NEO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "NeoGenomics (NEO) Q3 Earnings and Revenues Beat Estimates",
+   "summary": "NeoGenomics (NEO) delivered earnings and revenue surprises of +16.67% and +0.66%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/neogenomics-neo-q3-earnings-revenues-223009147.html?.tsrc=rss",
+   "published_at": "2026-10-28T22:30:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:13Z",
+   "fingerprint": "87f4a0dc3f253d87",
+   "primary_source": false,
+   "cluster_id": "f4ecaad4189e50ba",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f4f30ccf000e1dc1",
+   "symbols": [
+    "ADCT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ADC Therapeutics Cuts Debt, Extends Runway Ahead of Key Drug Data, RBC Says",
+   "summary": "ADC Therapeutics (ADCT) cut debt and extended its cash runway, reducing pressure on its balance shee",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adc-therapeutics-cuts-debt-extends-152740976.html?.tsrc=rss",
+   "published_at": "2026-10-09T15:27:40Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:40Z",
+   "fingerprint": "92cc3a1eb2a84169",
+   "primary_source": false,
+   "cluster_id": "f4f30ccf000e1dc1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c6f579d5173a3992",
+   "symbols": [
+    "ADCT",
+    "EDIT",
+    "PCRX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sector Update: Healthcare Stocks Softer Late Afternoon",
+   "summary": "Healthcare stocks were lower late Thursday afternoon, with the NYSE Healthcare Index shedding 0.6% a",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/sector-healthcare-stocks-softer-afternoon-195325111.html?.tsrc=rss",
+   "published_at": "2026-10-08T19:53:25Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:15Z",
+   "fingerprint": "b523bcee198be22d",
+   "primary_source": false,
+   "cluster_id": "c6f579d5173a3992",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5f8fbac6ba23b0cd",
+   "symbols": [
+    "ADCT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ADC Therapeutics Announces Comprehensive Strategic Financial Restructuring Marking Key Capital Structure Improvements",
+   "summary": "ADC Therapeutics SA (NYSE: ADCT), a commercial-stage global leader and pioneer in the field of antibody drug conjugates (ADCs), today announced a comprehensive strategic financial restructuring designed to strengthen its balance sheet, reduce leverage, and increase strategic opti",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adc-therapeutics-announces-comprehensive-strategic-130000939.html?.tsrc=rss",
+   "published_at": "2026-10-08T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:40Z",
+   "fingerprint": "95d0b28ac833cbfc",
+   "primary_source": false,
+   "cluster_id": "5f8fbac6ba23b0cd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2c4c419db97d9390",
+   "symbols": [
+    "ADCT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ADC Therapeutics to Participate in the 2026 Cantor Global Healthcare Conference",
+   "summary": "ADC Therapeutics SA (NYSE: ADCT) today announced that Ameet Mallik, Chief Executive Officer, will participate in a fireside chat at the 2026 Cantor Global Healthcare Conference in New York, NY, on Friday, September 11, 2026, at 9:10 a.m. ET.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adc-therapeutics-participate-2026-cantor-111500949.html?.tsrc=rss",
+   "published_at": "2026-09-03T11:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:40Z",
+   "fingerprint": "85eac5451e130af6",
+   "primary_source": false,
+   "cluster_id": "2c4c419db97d9390",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "52cb5dac55163b00",
+   "symbols": [
+    "ADCT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ADC Therapeutics (ADCT) Navigates FDA Setback While Cutting Its Losses",
+   "summary": "On August 13, ADC Therapeutics (NYSE:ADCT) held its second-quarter earnings call and delivered a mixed message that investors are still sorting through. The company’s confirmatory trial for ZYNLONTA in second-line lymphoma cleared its main efficacy bar, but the FDA has flagged se",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adc-therapeutics-adct-navigates-fda-204202873.html?.tsrc=rss",
+   "published_at": "2026-08-27T20:42:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:40Z",
+   "fingerprint": "9b4ab4a45127e7ad",
+   "primary_source": false,
+   "cluster_id": "52cb5dac55163b00",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cfbe5b13cd956c5c",
+   "symbols": [
+    "ADCT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ADC Therapeutics (ADCT) Q2 2026 Earnings Call Transcript",
+   "summary": "FDA raised safety concerns about ZYNLONTA combination therapy in LOTIS-5 trial.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/20/adc-therapeutics-adct-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-20T19:49:49Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:40Z",
+   "fingerprint": "bca090100161529b",
+   "primary_source": false,
+   "cluster_id": "cfbe5b13cd956c5c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c47e6c2fc00eacde",
+   "symbols": [
+    "ADCT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ADC Therapeutics (ADCT) Stock Fair Value Falls After LOTIS 5 Reshapes Zynlonta Outlook",
+   "summary": "The central fair value estimate for ADC Therapeutics has been cut from US$5.00 to about US$3.33, which marks a sizeable reset in modeled upside for the stock. Analysts are linking these lower targets to mixed LOTIS-5 outcomes, a more cautious view on Zynlonta’s growth potential, ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adc-therapeutics-adct-stock-fair-031554044.html?.tsrc=rss",
+   "published_at": "2026-08-16T03:15:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:40Z",
+   "fingerprint": "32d7a409a5a681a3",
+   "primary_source": false,
+   "cluster_id": "c47e6c2fc00eacde",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7c25e59722ad3deb",
+   "symbols": [
+    "ADCT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ADC Therapeutics S.A. Q2 2026 Earnings Call Summary",
+   "summary": "Moby summary of ADC Therapeutics S.A.'s Q2 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-adc-therapeutics-sa-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-08-14T00:25:49Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:40Z",
+   "fingerprint": "366c93e7f907f0ff",
+   "primary_source": false,
+   "cluster_id": "7c25e59722ad3deb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "056c6fcf01f74cb1",
+   "symbols": [
+    "ADCT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ADC Therapeutics SA (ADCT) (Q2 2026) Earnings Call Highlights: Navigating Regulatory Hurdles ...",
+   "summary": "ADC Therapeutics reports stable Zynlonta sales and cost savings, but faces FDA concerns over LOTUS-5 that cloud the path to full approval.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adc-therapeutics-sa-adct-q2-230703533.html?.tsrc=rss",
+   "published_at": "2026-08-13T23:07:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:40Z",
+   "fingerprint": "09e340c9b903f155",
+   "primary_source": false,
+   "cluster_id": "056c6fcf01f74cb1",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "78b2491764a81064",
+   "symbols": [
+    "ADCT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ADC Therapeutics Q2 Earnings Call Highlights",
+   "summary": "ADC Therapeutics (NYSE:ADCT) reported second-quarter 2026 net product revenue of $18.6 million for ZYNLONTA, up from $18.1 million in the prior-year period, while executives said the treatment’s commercial performance remained broadly consistent with recent quarters. The company ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/adc-therapeutics-q2-earnings-call-highlights-2026-08-13/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-13T20:04:24Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:40Z",
+   "fingerprint": "33a6092eff4f3ace",
+   "primary_source": false,
+   "cluster_id": "78b2491764a81064",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "789951496ed47477",
+   "symbols": [
+    "ADCT",
+    "PHR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ADC Therapeutics SA (ADCT) Reports Q2 Loss, Lags Revenue Estimates",
+   "summary": "ADC Therapeutics (ADCT) delivered earnings and revenue surprises of +42.11% and -4.48%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adc-therapeutics-sa-adct-reports-125002536.html?.tsrc=rss",
+   "published_at": "2026-08-13T12:50:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:32:08Z",
+   "fingerprint": "f0b1ec93886a77f7",
+   "primary_source": false,
+   "cluster_id": "789951496ed47477",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9ea41ebbc21ef22d",
+   "symbols": [
+    "ADCT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ADC Therapeutics Reports Second Quarter 2026 Financial Results and Provides Operational Updates",
+   "summary": "ADC Therapeutics SA (NYSE: ADCT) today reported financial results for the second quarter ended June 30, 2026, and provided recent operational updates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adc-therapeutics-reports-second-quarter-113000640.html?.tsrc=rss",
+   "published_at": "2026-08-13T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:40Z",
+   "fingerprint": "7b984f0355e5144c",
+   "primary_source": false,
+   "cluster_id": "9ea41ebbc21ef22d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a10f1708bb82f171",
+   "symbols": [
+    "ADCT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Iovance Biotherapeutics (IOVA) Reports Q2 Loss, Tops Revenue Estimates",
+   "summary": "Iovance Biotherapeutics (IOVA) delivered earnings and revenue surprises of +35.29% and +13.73%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/iovance-biotherapeutics-iova-reports-q2-135006498.html?.tsrc=rss",
+   "published_at": "2026-08-06T13:50:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:40Z",
+   "fingerprint": "057a7fbc3342e71d",
+   "primary_source": false,
+   "cluster_id": "a10f1708bb82f171",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cacc3cdda427e8ab",
+   "symbols": [
+    "ADCT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ADC Therapeutics to Host Second Quarter 2026 Financial Results Conference Call on August 13, 2026",
+   "summary": "ADC Therapeutics SA (NYSE: ADCT), a commercial-stage global leader and pioneer in the field of antibody drug conjugates (ADCs), today announced that it will host a conference call and live webcast on Thursday, August 13, 2026, at 8:30 a.m. EDT to report financial results for the ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adc-therapeutics-host-second-quarter-113000376.html?.tsrc=rss",
+   "published_at": "2026-08-06T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:40Z",
+   "fingerprint": "db8bc4c6297bb38c",
+   "primary_source": false,
+   "cluster_id": "cacc3cdda427e8ab",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5d62273b05da7a6a",
+   "symbols": [
+    "ADCT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Alkermes (ALKS) Reports Break-Even Earnings for Q2",
+   "summary": "Alkermes (ALKS) delivered earnings and revenue surprises of +100.00% and +9.26%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/alkermes-alks-reports-break-even-121501322.html?.tsrc=rss",
+   "published_at": "2026-07-28T12:15:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:40Z",
+   "fingerprint": "2acd80d3e7299996",
+   "primary_source": false,
+   "cluster_id": "5d62273b05da7a6a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6d342f4b728751a4",
+   "symbols": [
+    "ADCT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "The Cancer Therapy Strategy VERAXA Is Betting the Company On",
+   "summary": "By Karen Roman VERAXA Biotech AG (Nasdaq: VRXA) said it expects BiTAC molecules to be the company’s main value drivers and to dominate its pipeline development in the upcoming years, hence receiving VERAXA’s main share of investments to have a first BiTAC-T cell engager candidate",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/cancer-therapy-strategy-veraxa-betting-160053349.html?.tsrc=rss",
+   "published_at": "2026-07-06T16:00:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:40Z",
+   "fingerprint": "dd6a7ec1d8f56d9b",
+   "primary_source": false,
+   "cluster_id": "6d342f4b728751a4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dfe56ea1451161b4",
+   "symbols": [
+    "ADCT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ADC Therapeutics Announces New Employee Inducement Grant",
+   "summary": "ADC Therapeutics SA (NYSE: ADCT), a commercial-stage global leader and pioneer in the field of antibody drug conjugates (ADCs), today announced that the Company has made a grant of options to purchase an aggregate of 17,000 of the Company's common shares to a new employee on July",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adc-therapeutics-announces-employee-inducement-200500279.html?.tsrc=rss",
+   "published_at": "2026-07-01T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:40Z",
+   "fingerprint": "90138bbc5554f829",
+   "primary_source": false,
+   "cluster_id": "dfe56ea1451161b4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7912053f6855a980",
+   "symbols": [
+    "ADCT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ADC Therapeutics Announces Completion of Enrollment in LOTIS-7 Phase 1b ZYNLONTA® Combination Trial",
+   "summary": "ADC Therapeutics SA (NYSE: ADCT), a commercial-stage global leader and pioneer in the field of antibody drug conjugates (ADCs), today announced the completion of enrollment in the LOTIS-7 Phase 1b open-label clinical trial evaluating the safety and efficacy of ZYNLONTA® (loncastu",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adc-therapeutics-announces-completion-enrollment-111500596.html?.tsrc=rss",
+   "published_at": "2026-06-30T11:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:40Z",
+   "fingerprint": "8d3f1c67e78cb616",
+   "primary_source": false,
+   "cluster_id": "7912053f6855a980",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

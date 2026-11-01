@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 19.270000457763672,
     "day_low": 18.649999618530273,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 64.45881158848908,
+    "adx14": 15.767783750361676,
+    "ema10": 19.24203772876507,
+    "sma200": 23.719549980163574,
+    "perf_63d": -28.79522367451539,
+    "adr20_pct": 4.516900468453644,
+    "range10_pct": 16.583202912925877,
+    "high10_prev": 20.950000762939453,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.6666666666666666,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": true,
@@ -137,12 +171,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.9,
+   "score": 34.0,
    "drivers": [
-    "insider_activity",
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "insider_activity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 7,
    "independent_24h": 0
   },
   "political": {
@@ -241,7 +276,17 @@
     "green": true,
     "day_high": 19.270000457763672,
     "day_low": 18.649999618530273,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 64.45881158848908,
+    "adx14": 15.767783750361676,
+    "ema10": 19.24203772876507,
+    "sma200": 23.719549980163574,
+    "perf_63d": -28.79522367451539,
+    "adr20_pct": 4.516900468453644,
+    "range10_pct": 16.583202912925877,
+    "high10_prev": 20.950000762939453,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -271,6 +316,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -278,7 +344,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.6666666666666666,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": true,
@@ -615,11 +684,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.9,
+  "score": 34.0,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 7.3,
@@ -637,27 +706,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 7,
+    "independent": 7,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 17,
+    "independent": 17,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "insider_activity",
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -675,7 +745,436 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "4ff6610309a8e8e8",
+   "symbols": [
+    "LUMN",
+    "SHOP",
+    "YELP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Lumen to Report Q3 Earnings: Here's What Investors Should Know",
+   "summary": "LUMN gears up for Q3 earnings amid rising AI-driven connectivity demand, strategic growth and legacy business challenges. What can investors expect?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/lumen-report-q3-earnings-heres-151700821.html?.tsrc=rss",
+   "published_at": "2026-10-30T15:17:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:08Z",
+   "fingerprint": "5432d13d76115683",
+   "primary_source": false,
+   "cluster_id": "4ff6610309a8e8e8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Lumen zu berichten Q3 Einnahmen: Hier ist, was Investoren wissen sollten"
+  },
+  {
+   "id": "8bdd05e97e8e8ade",
+   "symbols": [
+    "CVGI",
+    "DOV",
+    "PYPL",
+    "YELP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 low-volatility stocks we find risky",
+   "summary": "A stock with low volatility can be reassuring, but it doesn’t always mean strong long-term performance. Investors who prioritize stability may miss out on higher-reward opportunities elsewhere.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-low-volatility-stocks-risky-145929172.html?.tsrc=rss",
+   "published_at": "2026-10-30T14:59:29Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:07Z",
+   "fingerprint": "fb33a47e729f489e",
+   "primary_source": false,
+   "cluster_id": "8bdd05e97e8e8ade",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "3 Low-Volatility-Aktien, die wir riskant finden"
+  },
+  {
+   "id": "ffe9da716c278ee7",
+   "symbols": [
+    "YELP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "YELP or RELX: Which Is the Better Value Stock Right Now?",
+   "summary": "YELP vs. RELX: Which Stock Is the Better Value Option?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/yelp-relx-better-value-stock-144002397.html?.tsrc=rss",
+   "published_at": "2026-10-29T14:40:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "6b4fc7dc9078c8a2",
+   "primary_source": false,
+   "cluster_id": "ffe9da716c278ee7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8642a03e7eda2582",
+   "symbols": [
+    "YELP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Yelp (YELP) Expected to Beat Earnings Estimates: Should You Buy?",
+   "summary": "Yelp (YELP) possesses the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/yelp-yelp-expected-beat-earnings-130009957.html?.tsrc=rss",
+   "published_at": "2026-10-29T13:00:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "a5296ef6613a52ee",
+   "primary_source": false,
+   "cluster_id": "8642a03e7eda2582",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4619ab6f9c2bf10b",
+   "symbols": [
+    "MCHP",
+    "YELP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Can Healthy Revenue Growth Benefit Lattice's Q3 Earnings?",
+   "summary": "LSCC is set to report Q3 2026 results, with AI and cloud infrastructure demand, AMI acquisition benefits and low-power FPGA adoption driving revenue growth expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/healthy-revenue-growth-benefit-lattices-141600886.html?.tsrc=rss",
+   "published_at": "2026-10-28T14:16:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:55Z",
+   "fingerprint": "6cd0a6e1dad8a2ed",
+   "primary_source": false,
+   "cluster_id": "4619ab6f9c2bf10b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b72d775c7b82d326",
+   "symbols": [
+    "YELP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wall Street Analysts Believe Yelp (YELP) Could Rally 25.01%: Here's is How to Trade",
+   "summary": "The mean of analysts' price targets for Yelp (YELP) points to a 25% upside in the stock. While this highly sought-after metric has not proven reasonably effective, strong agreement among analysts in raising earnings estimates does indicate an upside in the stock.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-believe-yelp-125502418.html?.tsrc=rss",
+   "published_at": "2026-10-28T12:55:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "2f9b747edace8efe",
+   "primary_source": false,
+   "cluster_id": "b72d775c7b82d326",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b418779444969272",
+   "symbols": [
+    "YELP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are Investors Undervaluing Yelp (YELP) Right Now?",
+   "summary": "Here at Zacks, our focus is on the proven Zacks Rank system, which emphasizes earnings estimates and estimate revisions to find great stocks. Nevertheless, we are always paying attention to the latest value, growth, and momentum trends to underscore strong picks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/investors-undervaluing-yelp-yelp-now-124003125.html?.tsrc=rss",
+   "published_at": "2026-10-27T12:40:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "a9723dc869241caf",
+   "primary_source": false,
+   "cluster_id": "b418779444969272",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2ade6ed7b59f1aa7",
+   "symbols": [
+    "YELP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Yelp (YELP) Just Overtook the 50-Day Moving Average",
+   "summary": "Good things could be on the horizon when a stock surpasses the 50-Day simple moving average. How should investors react?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/yelp-yelp-just-overtook-50-123002754.html?.tsrc=rss",
+   "published_at": "2026-10-23T12:30:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "5effa34fb7fcc971",
+   "primary_source": false,
+   "cluster_id": "2ade6ed7b59f1aa7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4a6e0c6f58deed0b",
+   "symbols": [
+    "YELP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Yelp Announces Date of Third Quarter 2026 Financial Results",
+   "summary": "SAN FRANCISCO, October 22, 2026--Yelp Inc. (NYSE: YELP), the company that connects people with great local businesses, announced that it will release its financial results for the quarter ended September 30, 2026 after the market closes on Thursday, November 5, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/yelp-announces-date-third-quarter-200500010.html?.tsrc=rss",
+   "published_at": "2026-10-22T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "8ff8773a43ea5dd8",
+   "primary_source": false,
+   "cluster_id": "4a6e0c6f58deed0b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e869a4e37abc67e6",
+   "symbols": [
+    "YELP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Yelp (YELP) Undervalued Following Its New AI Rollout?",
+   "summary": "Yelp (YELP) is leaning further into artificial intelligence, rolling out the Check for Me agent to handle restaurant wait time calls while tying its Yelp Assistant more tightly to OpenTable bookings. These AI rollouts land at a moment when momentum in Yelp’s share price has been ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/yelp-yelp-undervalued-following-ai-021547230.html?.tsrc=rss",
+   "published_at": "2026-10-21T02:15:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "5d6a339d9dfd988e",
+   "primary_source": false,
+   "cluster_id": "e869a4e37abc67e6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "475aa2d82440229e",
+   "symbols": [
+    "YELP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Yelp (YELP) Stock Is Up, What You Need To Know",
+   "summary": "Shares of local business platform Yelp (NYSE:YELP) jumped 3.8% in the afternoon session after the company announced its 2026 Fall Product Release with more than 30 new features, including OpenTable reservations in Yelp Assistant and new AI tools for diners and service professiona",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/yelp-yelp-stock-know-194950980.html?.tsrc=rss",
+   "published_at": "2026-10-20T19:49:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "e4e4398dd3e2a559",
+   "primary_source": false,
+   "cluster_id": "475aa2d82440229e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6bc15d67a0bbe64a",
+   "symbols": [
+    "NXDR",
+    "SOUN",
+    "YELP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Ten Million Downloads in Six Weeks: The Fight for the AI Agent in Your Pocket Has Started",
+   "summary": "Stock Preachers News Commentary - A new personal AI agent has been downloaded 10.9 million times in the six weeks since its September 8 launch, according to Sensor Tower data reported by Yahoo Finance on October 20, with more than 10.2 million of those downloads in the United Sta",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/ten-million-downloads-six-weeks-183100965.html?.tsrc=rss",
+   "published_at": "2026-10-20T18:31:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:55Z",
+   "fingerprint": "fb4c94fb188ff154",
+   "primary_source": false,
+   "cluster_id": "6bc15d67a0bbe64a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1f8ed3027d821bc9",
+   "symbols": [
+    "YELP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Yelp Announces More Personalized Yelp Assistant, Agent that Checks Restaurant Wait Times and AI Tools for Service Professionals",
+   "summary": "SAN FRANCISCO, October 20, 2026--Yelp’s 2026 Fall Product Release unveils more than 30 new features, including a smarter Yelp Assistant, Check for Me, My Lists & Smart Lead Reply.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/yelp-announces-more-personalized-yelp-110000166.html?.tsrc=rss",
+   "published_at": "2026-10-20T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "383cf16125b7ac47",
+   "primary_source": false,
+   "cluster_id": "1f8ed3027d821bc9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8eace1b9318bc445",
+   "symbols": [
+    "YELP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Profitable Stock to Target This Week and 2 Facing Headwinds",
+   "summary": "Not all profitable companies are built to last - some rely on outdated models or unsustainable advantages. Just because a business is in the green today doesn’t mean it will thrive tomorrow.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-profitable-stock-target-week-100550009.html?.tsrc=rss",
+   "published_at": "2026-10-20T10:05:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "7811e63f56ed739a",
+   "primary_source": false,
+   "cluster_id": "8eace1b9318bc445",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b1eef35c5a0a9169",
+   "symbols": [
+    "YELP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Why Yelp (YELP) is Poised to Beat Earnings Estimates Again",
+   "summary": "Yelp (YELP) has an impressive earnings surprise history and currently possesses the right combination of the two key ingredients for a likely beat in its next quarterly report.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-yelp-yelp-poised-beat-151002670.html?.tsrc=rss",
+   "published_at": "2026-10-15T15:10:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "45c2242478bc53c3",
+   "primary_source": false,
+   "cluster_id": "b1eef35c5a0a9169",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0120b595be1d6ad8",
+   "symbols": [
+    "YELP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Value Stock Worth Your Attention and 2 We Avoid",
+   "summary": "Value investing has produced some of the world’s most famous investing billionaires, including Warren Buffett, David Einhorn, and Seth Klarman, who built their fortunes by purchasing wonderful businesses at reasonable prices. But these hidden gems are few and far between - many s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-value-stock-worth-attention-120703482.html?.tsrc=rss",
+   "published_at": "2026-10-12T12:07:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "2b92df6928cc0971",
+   "primary_source": false,
+   "cluster_id": "0120b595be1d6ad8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "012152797a592a3c",
+   "symbols": [
+    "YELP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Ampersand closes generation gap between agents and the enterprise software stack, backed by $15 million from Bessemer Venture Partners",
+   "summary": "Ampersand today announced a $15 million Series A led by Bessemer Venture Partners, with participation from existing investors Matrix and Flex Capital. New investors participating in this round also include Yelp, Tenacity Capital, CTO Fund, Mana Ventures, and prominent angel inves",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/ampersand-closes-generation-gap-between-155900815.html?.tsrc=rss",
+   "published_at": "2026-10-06T15:59:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "73163e2d255ee3ef",
+   "primary_source": false,
+   "cluster_id": "012152797a592a3c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5d2eb006be2111d8",
+   "symbols": [
+    "YELP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What is Yelp’s (YELP) Economic Moat, and is it Widening or Narrowing?",
+   "summary": "Yelp Inc. (NYSE:YELP) closed at $17.59 on Monday, more than 40% lower than a year ago. The company is worth about $954 million and trades at under nine times earnings. An economic moat is whatever stops a competitor from taking your customers. Yelp spent twenty years building one",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/yelp-yelp-economic-moat-widening-054205542.html?.tsrc=rss",
+   "published_at": "2026-09-30T05:42:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "a12144bbc47e3abd",
+   "primary_source": false,
+   "cluster_id": "5d2eb006be2111d8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "309f51440345094b",
+   "symbols": [
+    "YELP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Which Companies Are Screaming ‘Take Me Private’? These 3 Fit the Bill",
+   "summary": "Buyout sponsors hunt for cash flow, equity discounts, and operational levers that management left on the table. Three public companies are sitting on all three right now, and at least one trades at a valuation small enough for a mid-market fund to write the check alone.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/09/29/which-companies-are-screaming-take-me-private-these-3-fit-the-bill/?.tsrc=rss",
+   "published_at": "2026-09-29T13:15:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "7d4af9b8f6587332",
+   "primary_source": false,
+   "cluster_id": "309f51440345094b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "dac4bf5e53bead7a",

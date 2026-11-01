@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 275.0,
     "day_low": 249.08999633789062,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 14.839380650526962,
+    "adx14": 20.59183840807598,
+    "ema10": 282.5881353309116,
+    "sma200": 255.2359995651245,
+    "perf_63d": -19.42064412291593,
+    "adr20_pct": 7.251633016099754,
+    "range10_pct": 20.6664894578942,
+    "high10_prev": 300.760009765625,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -138,14 +172,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 47.0,
+   "score": 55.0,
    "drivers": [
     "news_flow",
     "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 11,
-   "independent_24h": 0
+   "independent_7d": 12,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -250,7 +284,17 @@
     "green": false,
     "day_high": 275.0,
     "day_low": 249.08999633789062,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 14.839380650526962,
+    "adx14": 20.59183840807598,
+    "ema10": 282.5881353309116,
+    "sma200": 255.2359995651245,
+    "perf_63d": -19.42064412291593,
+    "adr20_pct": 7.251633016099754,
+    "range10_pct": 20.6664894578942,
+    "high10_prev": 300.760009765625,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -280,6 +324,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -287,7 +352,10 @@
     "S01": 0.5,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -625,11 +693,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 47.0,
+  "score": 55.0,
   "components": {
    "news_flow": 100.0,
-   "freshness": 0,
-   "source_diversity": 60,
+   "freshness": 50,
+   "source_diversity": 80,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 59.7,
@@ -638,28 +706,28 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 11,
-    "independent": 11,
+    "signals": 12,
+    "independent": 12,
     "duplicates": 0,
-    "sources": 3,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 14,
-    "independent": 14,
+    "signals": 15,
+    "independent": 15,
     "duplicates": 0,
-    "sources": 4,
+    "sources": 5,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -687,6 +755,30 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "cb6daf1b8bf289a6",
+   "symbols": [
+    "ALAB",
+    "MRVL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wall Street Is Getting More Interested in Credo. Here’s My Price Prediction",
+   "summary": "Credo just posted triple-digit revenue growth and still trades at a steeper discount than its closest rivals, yet the stock has fallen nearly 20% in a single month. Something in this picture does not add up, and the answer points to a price target most analysts have not caught up",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/31/wall-street-is-getting-more-interested-in-credo-heres-my-price-prediction/?.tsrc=rss",
+   "published_at": "2026-10-31T15:33:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:09:10Z",
+   "fingerprint": "74dfde18ecb726c2",
+   "primary_source": false,
+   "cluster_id": "cb6daf1b8bf289a6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Wall Street interessiert sich mehr für Credo. Hier ist meine Preisprognose"
+  },
   {
    "id": "695d00e3ba3f2a36",
    "symbols": [

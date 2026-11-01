@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 13.359999656677246,
     "day_low": 11.875,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 1.0136716003096637,
+    "adx14": 49.094613883382195,
+    "ema10": 15.42290529116055,
+    "sma200": 23.82680003166199,
+    "perf_63d": -56.960227445907094,
+    "adr20_pct": 6.261372220326502,
+    "range10_pct": 41.315603965903705,
+    "high10_prev": 19.1200008392334,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -139,7 +173,7 @@
    ]
   },
   "market_intelligence": {
-   "score": 61.5,
+   "score": 64.0,
    "drivers": [
     "news_flow",
     "price_volume_anomaly",
@@ -157,10 +191,10 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 1,
+   "mentions_7d": 3,
    "manipulation_risk": "unauffällig",
-   "mentions_24h": 0,
-   "sentiment_7d": 1.0,
+   "mentions_24h": 2,
+   "sentiment_7d": 0.33,
    "bullish_7d": 1,
    "bearish_7d": 0
   },
@@ -237,7 +271,17 @@
     "green": false,
     "day_high": 13.359999656677246,
     "day_low": 11.875,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 1.0136716003096637,
+    "adx14": 49.094613883382195,
+    "ema10": 15.42290529116055,
+    "sma200": 23.82680003166199,
+    "perf_63d": -56.960227445907094,
+    "adr20_pct": 6.261372220326502,
+    "range10_pct": 41.315603965903705,
+    "high10_prev": 19.1200008392334,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -267,6 +311,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -274,7 +339,10 @@
     "S01": 0.5,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -613,7 +681,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 61.5,
+  "score": 64.0,
   "components": {
    "news_flow": 100.0,
    "freshness": 50,
@@ -621,7 +689,7 @@
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 100.0,
-   "social_attention": 25.0,
+   "social_attention": 50.0,
    "insider_activity": 40
   },
   "windows": {
@@ -1326,22 +1394,25 @@
   }
  ],
  "social_detail": {
-  "mentions_24h": 0,
-  "mentions_7d": 1,
-  "mentions_30d": 1,
-  "change_vs_baseline_pct": -100,
+  "mentions_24h": 2,
+  "mentions_7d": 3,
+  "mentions_30d": 3,
+  "change_vs_baseline_pct": 1300,
   "engagement_7d": 1.0,
-  "sentiment_7d": 1.0,
+  "sentiment_7d": 0.33,
   "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
   "bullish_7d": 1,
   "bearish_7d": 0,
   "by_platform_7d": {
+   "reddit": 2,
    "stocktwits": 1
   },
   "communities_7d": {
+   "r/Daytrading": 2,
    "StockTwits": 1
   },
   "platforms": [
+   "reddit",
    "stocktwits"
   ],
   "manipulation_flags": [],
@@ -1356,6 +1427,26 @@
     "text": "$WFC gives $RSI a $26  \nhttps://www.gurufocus.com/news/9151517/rsi-maintained-by-wells-fargo-price-target-lowered-to-26?utm_source=marketwatch&amp;utm_medium=syndication&amp;utm_campaign=headlines&amp;r=4bf001661e6fdd88d0cd7a5659ff9748&amp;mod=mw_quote_news",
     "engagement": 1.0,
     "sentiment_label": "Bullish"
+   },
+   {
+    "platform": "reddit",
+    "community": "r/Daytrading",
+    "author": "cryptoman_101",
+    "posted_at": "2026-11-01T07:18:23Z",
+    "url": "https://www.reddit.com/r/Daytrading/comments/1xkwsl3/after_100_failed_ta_backtests_on_crypto_forex_and/",
+    "text": "After 100+ failed TA backtests on crypto, forex and stocks, the ideas that held up weren't chart setups. TA isn't useless, it's just not where the edge comes from. Want to find real edges together ? Let's brainstorm and test them    In my tests TA couldn't predict direction after costs: crypto 15m to daily, FX majors, gold, S&amp;P/NQ intraday. ICT on gold, stop-runs on S&amp;P, VWAP fades on NQ, ",
+    "engagement": 0.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "reddit",
+    "community": "r/Daytrading",
+    "author": "cryptoman_101",
+    "posted_at": "2026-10-31T13:10:09Z",
+    "url": "https://www.reddit.com/r/Daytrading/comments/1xk9tkg/backtested_100_popular_day_trading_strategies_on/",
+    "text": "Backtested 100+ popular day trading strategies on 6 years of crypto data (plus some S&P), with fees. Almost all of them lose and for the same 6 reasons.    So for the last few months I've been testing strategies people keep posting here, on youtube, X and in trading books. ICT, Qullamaggie breakouts, VWAP scalps, chart patterns, RSI/stoch setups, pyramiding, &quot;just short every shitcoin&quot; e",
+    "engagement": 0.0,
+    "sentiment_label": null
    }
   ]
  },

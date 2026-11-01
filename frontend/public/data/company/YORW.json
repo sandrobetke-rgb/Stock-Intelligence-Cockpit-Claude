@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -23,10 +23,10 @@
    "perf_63d": 3.298309419334333,
    "adr20": 2.0556365431071293,
    "rvol": 0.8119981820936222,
-   "ema10": 31.32831713764818,
-   "ema21": 31.29008046867514,
+   "ema10": 31.328317137648177,
+   "ema21": 31.29008046866776,
    "sma50": 31.993133239746093,
-   "sma200": 31.044466400146483
+   "sma200": 31.04446633338928
   },
   "market_cap": 512660864.0,
   "market_cap_currency": "USD",
@@ -34,17 +34,17 @@
    "tech": {
     "close": 31.59000015258789,
     "change_pct": 1.673641657132996,
-    "ema20": 31.28450686651933,
-    "ema50": 31.470569521884922,
-    "ema200": 31.19381192402174,
+    "ema20": 31.284506866512906,
+    "ema50": 31.470569523225812,
+    "ema200": 31.193811887490906,
     "sma50": 31.993133239746093,
-    "rsi14": 53.262941954057375,
-    "rsi_min5": 46.582988503796635,
-    "atr14": 0.6668033919341725,
-    "atr_pct": 2.1108052824100643,
+    "rsi14": 53.26294195310656,
+    "rsi_min5": 46.5829885044754,
+    "atr14": 0.6668033918110389,
+    "atr_pct": 2.1108052820202774,
     "rvol": 0.8119981820936222,
     "vol30": 165940.0,
-    "dist_ema200_pct": 1.270085969393997,
+    "dist_ema200_pct": 1.2700860879906184,
     "dist_52w_high_pct": 8.571647294793783,
     "high_52w": 34.551645324338274,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 31.700000762939453,
     "day_low": 31.360000610351562,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 71.11432469996029,
+    "adx14": 17.342329990318166,
+    "ema10": 31.328317137648177,
+    "sma200": 31.04446633338928,
+    "perf_63d": 3.298309419334333,
+    "adr20_pct": 2.0556365431071293,
+    "range10_pct": 6.599998474121094,
+    "high10_prev": 31.979999542236328,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": true,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 31.700000762939453,
     "entry_max": 32.334000778198245,
-    "stop": 30.699795675038196,
-    "risk_per_share": 1.0002050879012572,
-    "target_1": 33.70041093874197,
+    "stop": 30.699795675222894,
+    "risk_per_share": 1.0002050877165587,
+    "target_1": 33.70041093837257,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -214,10 +248,10 @@
   "perf_63d": 3.298309419334333,
   "adr20": 2.0556365431071293,
   "rvol": 0.8119981820936222,
-  "ema10": 31.32831713764818,
-  "ema21": 31.29008046867514,
+  "ema10": 31.328317137648177,
+  "ema21": 31.29008046866776,
   "sma50": 31.993133239746093,
-  "sma200": 31.044466400146483,
+  "sma200": 31.04446633338928,
   "volatility_ann": 18.410930000219313,
   "avg_dollar_volume_20d": 5124407.400798798,
   "move_zscore": 1.4430687451071262,
@@ -225,17 +259,17 @@
    "tech": {
     "close": 31.59000015258789,
     "change_pct": 1.673641657132996,
-    "ema20": 31.28450686651933,
-    "ema50": 31.470569521884922,
-    "ema200": 31.19381192402174,
+    "ema20": 31.284506866512906,
+    "ema50": 31.470569523225812,
+    "ema200": 31.193811887490906,
     "sma50": 31.993133239746093,
-    "rsi14": 53.262941954057375,
-    "rsi_min5": 46.582988503796635,
-    "atr14": 0.6668033919341725,
-    "atr_pct": 2.1108052824100643,
+    "rsi14": 53.26294195310656,
+    "rsi_min5": 46.5829885044754,
+    "atr14": 0.6668033918110389,
+    "atr_pct": 2.1108052820202774,
     "rvol": 0.8119981820936222,
     "vol30": 165940.0,
-    "dist_ema200_pct": 1.270085969393997,
+    "dist_ema200_pct": 1.2700860879906184,
     "dist_52w_high_pct": 8.571647294793783,
     "high_52w": 34.551645324338274,
     "macd_above_signal": true,
@@ -249,7 +283,17 @@
     "green": true,
     "day_high": 31.700000762939453,
     "day_low": 31.360000610351562,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 71.11432469996029,
+    "adx14": 17.342329990318166,
+    "ema10": 31.328317137648177,
+    "sma200": 31.04446633338928,
+    "perf_63d": 3.298309419334333,
+    "adr20_pct": 2.0556365431071293,
+    "range10_pct": 6.599998474121094,
+    "high10_prev": 31.979999542236328,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -279,6 +323,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -286,7 +351,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": true,
@@ -299,9 +367,9 @@
    "plan": {
     "trigger": 31.700000762939453,
     "entry_max": 32.334000778198245,
-    "stop": 30.699795675038196,
-    "risk_per_share": 1.0002050879012572,
-    "target_1": 33.70041093874197,
+    "stop": 30.699795675222894,
+    "risk_per_share": 1.0002050877165587,
+    "target_1": 33.70041093837257,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -684,7 +752,272 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "e6129492f23b57d5",
+   "symbols": [
+    "YORW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Meet Wall Street's Greatest Dividend Stock: A Company Paying Dividends for Over 200 Years That 99% of Investors Have No Clue Exists",
+   "summary": "What this little-known company lacks in size and daily trading volume, it more than makes up for with dividend consistency.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/09/30/meet-wall-street-greatest-dividend-stock-paying-dividends-for-over-200-years/?.tsrc=rss",
+   "published_at": "2026-09-30T11:26:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "57b3998b4e985ed3",
+   "primary_source": false,
+   "cluster_id": "e6129492f23b57d5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e89a16faa8fbdefd",
+   "symbols": [
+    "YORW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "5 Dividend Stocks Delivering Rock Solid Fourth-Quarter Income",
+   "summary": "Not every dividend survives a rough macro quarter, but some payouts are structured to keep growing no matter what the economy does. Five Nasdaq stocks built on contracted fees, recurring subscriptions, and regulated rates are making a case for income investors heading into year e",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/09/16/high-yield-dividend-stocks-to-buy-for-the-fourth-quarter/?.tsrc=rss",
+   "published_at": "2026-09-16T15:11:19Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "4e4e1381bec9d4cc",
+   "primary_source": false,
+   "cluster_id": "e89a16faa8fbdefd",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "25b772a77c210709",
+   "symbols": [
+    "YORW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "York Water’s (YORW) Rate Hike Just Rewrote Its Earnings Picture",
+   "summary": "On August 6, The York Water Company (NASDAQ:YORW) reported second-quarter and six-month results that moved well past last year’s numbers. Both revenue and net income climbed, largely because a rate increase took effect March 1. But the company also spent the period pouring money ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/york-water-yorw-rate-hike-095848522.html?.tsrc=rss",
+   "published_at": "2026-09-12T09:58:48Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "252bcd28996dda6a",
+   "primary_source": false,
+   "cluster_id": "25b772a77c210709",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "be9ad056bd9a5a63",
+   "symbols": [
+    "YORW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "The York Water Company Reports 2nd Quarter and Six Months Earnings",
+   "summary": "YORK, Pa., Aug. 06, 2026 (GLOBE NEWSWIRE) -- The York Water Company's (NASDAQ:YORW) President, JT Hand, announced the Company's financial results for the second quarter and the first six months of 2026. President Hand reported that second quarter operating revenues of $23,515,000",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/york-water-company-reports-2nd-133000417.html?.tsrc=rss",
+   "published_at": "2026-08-06T13:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "17c34b0af614992f",
+   "primary_source": false,
+   "cluster_id": "be9ad056bd9a5a63",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "34f460b1aef9cbd1",
+   "symbols": [
+    "YORW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "The Only New Stock I've Bought This Year Is the Perfect Addition Amid a Historically Pricey Stock Market",
+   "summary": "The \"Greatest Dividend Stock on Wall Street\" is ideally positioned to benefit if the stock market rolls over.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/06/16/new-stock-perfect-historically-pricey-stock-market/?.tsrc=rss",
+   "published_at": "2026-06-16T11:26:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "667308f38f4e192e",
+   "primary_source": false,
+   "cluster_id": "34f460b1aef9cbd1",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "87e595b68ce3fb22",
+   "symbols": [
+    "YORW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Solid Earnings May Not Tell The Whole Story For York Water (NASDAQ:YORW)",
+   "summary": "The York Water Company's ( NASDAQ:YORW ) robust recent earnings didn't do much to move the stock. However the statutory...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/solid-earnings-may-not-tell-114822631.html?.tsrc=rss",
+   "published_at": "2026-05-18T11:48:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "ea47422051ce0109",
+   "primary_source": false,
+   "cluster_id": "87e595b68ce3fb22",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b867b99feba79517",
+   "symbols": [
+    "YORW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Results: The York Water Company Exceeded Expectations And The Consensus Has Updated Its Estimates",
+   "summary": "The York Water Company ( NASDAQ:YORW ) last week reported its latest quarterly results, which makes it a good time for...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/results-york-water-company-exceeded-103322127.html?.tsrc=rss",
+   "published_at": "2026-05-08T10:33:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "555e1cb05b5eb8e2",
+   "primary_source": false,
+   "cluster_id": "b867b99feba79517",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1366944e9d643d3b",
+   "symbols": [
+    "YORW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "The York Water Company Reports Three Months Earnings",
+   "summary": "YORK, Pa., May 05, 2026 (GLOBE NEWSWIRE) -- The York Water Company's (NASDAQ:YORW) President, JT Hand, announced the Company's financial results for the first quarter of 2026. President Hand reported that first quarter operating revenues of $20,074,000 increased $1,618,000, and n",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/york-water-company-reports-three-133000769.html?.tsrc=rss",
+   "published_at": "2026-05-05T13:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "c5956e1133885b0c",
+   "primary_source": false,
+   "cluster_id": "1366944e9d643d3b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e438a19acb9934d6",
+   "symbols": [
+    "YORW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "I Just Opened a Position in Wall Street's Greatest Dividend Stock -- a Company That's Been Paying Dividends Since the Early 1800s",
+   "summary": "This historically cheap company has been paying a continuous dividend 60 years longer than any other public company in the U.S.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/05/05/open-position-wall-street-greatest-dividend-stock/?.tsrc=rss",
+   "published_at": "2026-05-05T09:26:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "b345a25ee1679921",
+   "primary_source": false,
+   "cluster_id": "e438a19acb9934d6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0e37b71238bc3565",
+   "symbols": [
+    "YORW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "3 Rock-Solid Dividend Stocks That Have Been Making Payments for Over a Century",
+   "summary": "These stocks can be excellent options to consider if you're in search of reliable dividend income.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/04/29/3-rock-solid-dividend-stocks-that-have-been-making/?.tsrc=rss",
+   "published_at": "2026-04-29T16:20:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "a83e0384fbd82bd4",
+   "primary_source": false,
+   "cluster_id": "0e37b71238bc3565",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6153a16d49372af3",
+   "symbols": [
+    "YORW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "The York Water Company Announces Closing of Its Common Stock Public Offering",
+   "summary": "YORK, Pa., April 22, 2026 (GLOBE NEWSWIRE) -- The York Water Company (“York Water” or the “Company”) (NASDAQ: YORW), a provider of water and wastewater utility services, announced today the closing of the underwriters’ full exercise of the underwriters’ option to purchase 228,261",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/york-water-company-announces-closing-200200984.html?.tsrc=rss",
+   "published_at": "2026-04-22T20:02:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "3c3ce1f8b4fdea85",
+   "primary_source": false,
+   "cluster_id": "6153a16d49372af3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fde6a99e2612c29a",
+   "symbols": [
+    "YORW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "The York Water Company (YORW) Acquires Wastewater System Serving Pine Run Retirement Community",
+   "summary": "The York Water Company (NASDAQ:YORW) is one of the 8 Most Profitable Utility Stocks to Invest In Now. On March 30, 2026, The York Water Company (NASDAQ:YORW) announced the acquisition of wastewater system assets serving the Pine Run Retirement Community in Hamilton Township, addi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/york-water-company-yorw-acquires-155353590.html?.tsrc=rss",
+   "published_at": "2026-04-20T15:53:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "29e5e5e436dfaf20",
+   "primary_source": false,
+   "cluster_id": "fde6a99e2612c29a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "4fc7dd4748ca7a84",

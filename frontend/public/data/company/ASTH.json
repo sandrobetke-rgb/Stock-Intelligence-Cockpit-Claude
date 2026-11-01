@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 36.7599983215332,
     "day_low": 35.84000015258789,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 6.22140181802196,
+    "adx14": 11.816029149538444,
+    "ema10": 37.01087098494158,
+    "sma200": 33.83859992027283,
+    "perf_63d": 1.7265356015573552,
+    "adr20_pct": 4.005043166258766,
+    "range10_pct": 7.188284269946843,
+    "high10_prev": 38.77000045776367,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,14 +98,40 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.0,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.3333333333333333,
+    "RSI2": 1.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -137,12 +173,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 0.4,
+   "score": 22.5,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "freshness",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 1,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -240,7 +278,17 @@
     "green": false,
     "day_high": 36.7599983215332,
     "day_low": 35.84000015258789,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 6.22140181802196,
+    "adx14": 11.816029149538444,
+    "ema10": 37.01087098494158,
+    "sma200": 33.83859992027283,
+    "perf_63d": 1.7265356015573552,
+    "adr20_pct": 4.005043166258766,
+    "range10_pct": 7.188284269946843,
+    "high10_prev": 38.77000045776367,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -270,14 +318,40 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.0,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.3333333333333333,
+    "RSI2": 1.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -614,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 0.4,
+  "score": 22.5,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 43.0,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 2.4,
@@ -627,26 +701,26 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 13,
-    "independent": 13,
+    "signals": 14,
+    "independent": 14,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
@@ -655,7 +729,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "freshness",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -674,6 +750,30 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "e27c523399d692de",
+   "symbols": [
+    "ALHC",
+    "ASTH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What’s Behind Alignment Healthcare (ALHC) Stock’s Latest Move?",
+   "summary": "Alignment Healthcare (ALHC) just released its third quarter 2026 report, pairing revenue of about US$1.36b with a net loss of US$8.05m, along with updated guidance that lifts full year sales expectations. The short-term picture has been rough for Alignment Healthcare, with the sh",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/behind-alignment-healthcare-alhc-stock-201017157.html?.tsrc=rss",
+   "published_at": "2026-10-31T20:10:17Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:04:10Z",
+   "fingerprint": "4b15d4875a7906b9",
+   "primary_source": false,
+   "cluster_id": "e27c523399d692de",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Was steckt hinter dem neuesten Schritt der Alignment Healthcare (ALHC)?"
+  },
   {
    "id": "fca28023dfd0be04",
    "symbols": [
@@ -723,7 +823,8 @@
    "id": "1914e61138726ac4",
    "symbols": [
     "ASTH",
-    "PODD"
+    "PODD",
+    "WTTR"
    ],
    "category": "market",
    "signal_type": "news",

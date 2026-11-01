@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -59,7 +59,17 @@
     "green": false,
     "day_high": 166.85000610351562,
     "day_low": 164.10000610351562,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 7.127473580531884,
+    "adx14": 17.39985019115329,
+    "ema10": 168.58110814452843,
+    "sma200": 146.71209991455078,
+    "perf_63d": 9.127721757641517,
+    "adr20_pct": 2.4430378852217487,
+    "range10_pct": 8.675606924044587,
+    "high10_prev": 179.1300048828125,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -89,14 +99,40 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.6666666666666666,
+    "RSI2": 1.0,
+    "QM": 0.0
    },
    "filter": {
     "Tag grün": false,
@@ -136,14 +172,14 @@
    "top_factors": []
   },
   "market_intelligence": {
-   "score": 57.7,
+   "score": 63.2,
    "drivers": [
     "news_flow",
     "source_diversity",
     "freshness"
    ],
-   "independent_7d": 15,
-   "independent_24h": 1
+   "independent_7d": 16,
+   "independent_24h": 2
   },
   "political": {
    "relevance": 0,
@@ -250,7 +286,17 @@
     "green": false,
     "day_high": 166.85000610351562,
     "day_low": 164.10000610351562,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 7.127473580531884,
+    "adx14": 17.39985019115329,
+    "ema10": 168.58110814452843,
+    "sma200": 146.71209991455078,
+    "perf_63d": 9.127721757641517,
+    "adr20_pct": 2.4430378852217487,
+    "range10_pct": 8.675606924044587,
+    "high10_prev": 179.1300048828125,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -280,14 +326,40 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.6666666666666666,
+    "RSI2": 1.0,
+    "QM": 0.0
    },
    "filter": {
     "Tag grün": false,
@@ -622,10 +694,10 @@
   ]
  },
  "intelligence_detail": {
-  "score": 57.7,
+  "score": 63.2,
   "components": {
    "news_flow": 100.0,
-   "freshness": 50,
+   "freshness": 100.0,
    "source_diversity": 100.0,
    "primary_sources": 0,
    "analyst_activity": 0,
@@ -635,8 +707,8 @@
   },
   "windows": {
    "24h": {
-    "signals": 1,
-    "independent": 1,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
@@ -644,8 +716,8 @@
     "verified": 0
    },
    "7d": {
-    "signals": 15,
-    "independent": 15,
+    "signals": 16,
+    "independent": 16,
     "duplicates": 0,
     "sources": 6,
     "primary": 0,
@@ -653,8 +725,8 @@
     "verified": 0
    },
    "30d": {
-    "signals": 15,
-    "independent": 15,
+    "signals": 16,
+    "independent": 16,
     "duplicates": 0,
     "sources": 6,
     "primary": 0,
@@ -684,6 +756,29 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "25c2cc8c7c1642c6",
+   "symbols": [
+    "ABNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Earnings Guidance Raised Might Change The Case For Investing In Amex Stock (AXP)",
+   "summary": "American Express reported higher third quarter 2026 net income of US$3,712 million and raised full year earnings guidance while keeping revenue growth expectations unchanged. Fresh card partnerships with Airbnb and Albertsons expand American Express's travel and everyday spending",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/earnings-guidance-raised-might-change-231054410.html?.tsrc=rss",
+   "published_at": "2026-10-31T23:10:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:25Z",
+   "fingerprint": "d55f70963ce179ae",
+   "primary_source": false,
+   "cluster_id": "25c2cc8c7c1642c6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Gewinnprognosen könnten den Fall für die Investition in Amex Stock (AXP) ändern"
+  },
   {
    "id": "de80420c29742978",
    "symbols": [

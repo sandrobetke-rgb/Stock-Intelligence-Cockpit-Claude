@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 9.789999961853027,
     "day_low": 9.300000190734863,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 9.97048163716363,
+    "adx14": 12.988638353338542,
+    "ema10": 10.883306478134006,
+    "sma200": 8.572450013160706,
+    "perf_63d": -13.725489529429735,
+    "adr20_pct": 8.739397046796988,
+    "range10_pct": 28.115340180341676,
+    "high10_prev": 12.4399995803833,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,14 +98,40 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.0,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.16666666666666666,
+    "RSI2": 1.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -157,11 +193,11 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 63,
+   "mentions_7d": 68,
    "manipulation_risk": "auffaellig",
    "mentions_24h": 57,
-   "sentiment_7d": 0.26,
-   "bullish_7d": 26,
+   "sentiment_7d": 0.32,
+   "bullish_7d": 31,
    "bearish_7d": 4
   },
   "insider": {
@@ -251,7 +287,17 @@
     "green": true,
     "day_high": 9.789999961853027,
     "day_low": 9.300000190734863,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 9.97048163716363,
+    "adx14": 12.988638353338542,
+    "ema10": 10.883306478134006,
+    "sma200": 8.572450013160706,
+    "perf_63d": -13.725489529429735,
+    "adr20_pct": 8.739397046796988,
+    "range10_pct": 28.115340180341676,
+    "high10_prev": 12.4399995803833,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -281,14 +327,40 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.0,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.16666666666666666,
+    "RSI2": 1.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -734,8 +806,7 @@
    "cluster_id": "90037681be2b77c3",
    "independence": "original",
    "verification": "Unverified",
-   "feed": "yahoo_rss",
-   "title_de": "SELLAS Life Sciences Group (SLS) fallen gelassen, also was steckt hinter der neuesten Aufmerksamkeit?"
+   "feed": "yahoo_rss"
   },
   {
    "id": "bc05e241f3fe5d20",
@@ -1154,19 +1225,19 @@
  ],
  "social_detail": {
   "mentions_24h": 57,
-  "mentions_7d": 63,
-  "mentions_30d": 63,
-  "change_vs_baseline_pct": 6550,
-  "engagement_7d": 422.0,
-  "sentiment_7d": 0.26,
+  "mentions_7d": 68,
+  "mentions_30d": 68,
+  "change_vs_baseline_pct": 3527,
+  "engagement_7d": 471.0,
+  "sentiment_7d": 0.32,
   "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
-  "bullish_7d": 26,
+  "bullish_7d": 31,
   "bearish_7d": 4,
   "by_platform_7d": {
-   "stocktwits": 63
+   "stocktwits": 68
   },
   "communities_7d": {
-   "StockTwits": 63
+   "StockTwits": 68
   },
   "platforms": [
    "stocktwits"

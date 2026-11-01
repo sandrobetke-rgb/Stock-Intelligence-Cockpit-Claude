@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 7.289999961853027,
     "day_low": 6.570000171661377,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 36.82143059829856,
+    "adx14": 17.961172118408378,
+    "ema10": 6.82563142687508,
+    "sma200": 5.641050012111664,
+    "perf_63d": 8.069616110637078,
+    "adr20_pct": 5.663186456559481,
+    "range10_pct": 16.23794634968494,
+    "high10_prev": 7.230000019073486,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.6666666666666666,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -242,7 +276,17 @@
     "green": false,
     "day_high": 7.289999961853027,
     "day_low": 6.570000171661377,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 36.82143059829856,
+    "adx14": 17.961172118408378,
+    "ema10": 6.82563142687508,
+    "sma200": 5.641050012111664,
+    "perf_63d": 8.069616110637078,
+    "adr20_pct": 5.663186456559481,
+    "range10_pct": 16.23794634968494,
+    "high10_prev": 7.230000019073486,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -272,6 +316,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -279,7 +344,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.6666666666666666,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -649,10 +717,10 @@
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 5,
+    "independent": 5,
+    "duplicates": 1,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -677,7 +745,384 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "cb07eeaab74cd561",
+   "symbols": [
+    "ACHV"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Achieve Life Sciences Presents 52-Week Cytisinicline Results for Smoking and Vaping Cessation at CHEST 2026",
+   "summary": "Nearly one in three adults who were still smoking or vaping after a prior ORCA trial had quit at the end of a year of cytisinicline treatment, with quit rates rising through the year Among the participants new to cytisinicline (prior attempt on placebo), 39% had quit at the end o",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/achieve-life-sciences-presents-52-123000849.html?.tsrc=rss",
+   "published_at": "2026-10-21T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:33Z",
+   "fingerprint": "8697f752eb78e973",
+   "primary_source": false,
+   "cluster_id": "cb07eeaab74cd561",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "45fc57f2807e10d4",
+   "symbols": [
+    "ACHV",
+    "TARS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Lisata adds biopharma finance veteran Jeffrey Farrow to board",
+   "summary": "Lisata Therapeutics Inc (NASDAQ:LSTA, FRA:8NE) said it has appointed Jeffrey Farrow, a veteran biopharma finance executive, to its board of directors. Farrow fills a newly created seat, expanding the board from seven to eight members. He will also serve on the Audit Committee. “J",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "proactiveinvestors.com",
+   "url": "https://www.proactiveinvestors.com/companies/news/1100171/lisata-adds-biopharma-finance-veteran-jeffrey-farrow-to-board-1100171.html?.tsrc=rss",
+   "published_at": "2026-10-15T12:41:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:44:35Z",
+   "fingerprint": "09b8c62e3b15b3f8",
+   "primary_source": false,
+   "cluster_id": "45fc57f2807e10d4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "77b7262cafa522a0",
+   "symbols": [
+    "ACHV",
+    "TARS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Lisata Therapeutics Appoints Jeff Farrow to Board of Directors",
+   "summary": "Veteran biopharma CFO brings more than 15 years of public-company financial leadership across development, approval and commercial launch; joins Audit CommitteeLIBERTY CORNER, N.J., Oct. 14, 2026 (GLOBE NEWSWIRE) -- Lisata Therapeutics, Inc. (Nasdaq: LSTA) (“Lisata” or the “Compa",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/lisata-therapeutics-appoints-jeff-farrow-200500163.html?.tsrc=rss",
+   "published_at": "2026-10-14T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:44:35Z",
+   "fingerprint": "87e166b291c7563e",
+   "primary_source": false,
+   "cluster_id": "77b7262cafa522a0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d5cd43db64d2b96f",
+   "symbols": [
+    "ACHV"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Achieve Life Sciences Appoints Kaitlyn Tuson as Senior Vice President, Marketing and Communications",
+   "summary": "Brings 15 years of pharma launch, health system, and direct-to-patient engagement experience as Achieve prepares for potential commercialization of cytisiniclineSEATTLE and VANCOUVER, British Columbia, Oct. 07, 2026 (GLOBE NEWSWIRE) -- Achieve Life Sciences, Inc. (Achieve and the",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/achieve-life-sciences-appoints-kaitlyn-123000608.html?.tsrc=rss",
+   "published_at": "2026-10-07T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:33Z",
+   "fingerprint": "fde0451c3fed6db9",
+   "primary_source": false,
+   "cluster_id": "d5cd43db64d2b96f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dd773272b23700e1",
+   "symbols": [
+    "ACHV"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Achieve Life Sciences Announces Granting of New Hire Inducement Awards",
+   "summary": "SEATTLE and VANCOUVER, British Columbia, Oct. 06, 2026 (GLOBE NEWSWIRE) -- Achieve Life Sciences, Inc. (Achieve or the Company) (Nasdaq: ACHV), a late-stage specialty pharmaceutical company focused on the global development and commercialization of cytisinicline as a treatment fo",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/achieve-life-sciences-announces-granting-200200453.html?.tsrc=rss",
+   "published_at": "2026-10-06T20:02:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:33Z",
+   "fingerprint": "dc5d4db50f8a8284",
+   "primary_source": false,
+   "cluster_id": "55999a87c3efda1a",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "76000f00d0ff8f6c",
+   "symbols": [
+    "ACHV"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Achieve Life Sciences Appoints Benjamin Halladay as Chief Financial Officer",
+   "summary": "Brings public company CFO experience across commercial pharma and business development as Achieve prepares for potential commercialization of cytisiniclineSEATTLE and VANCOUVER, British Columbia, Oct. 01, 2026 (GLOBE NEWSWIRE) -- Achieve Life Sciences, Inc. (Achieve or the Compan",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/achieve-life-sciences-appoints-benjamin-123000537.html?.tsrc=rss",
+   "published_at": "2026-10-01T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:33Z",
+   "fingerprint": "2083dbb6ac6c087a",
+   "primary_source": false,
+   "cluster_id": "76000f00d0ff8f6c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b789d5fa1ef10ecf",
+   "symbols": [
+    "ACHV"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Achieve Life Sciences to Present 52-Week Cytisinicline Efficacy Data for Smoking and E-Cigarette Cessation at CHEST 2026",
+   "summary": "SEATTLE and VANCOUVER, British Columbia, Sept. 28, 2026 (GLOBE NEWSWIRE) -- Achieve Life Sciences, Inc. (Nasdaq: ACHV), a late-stage specialty pharmaceutical company focused on the global development and commercialization of cytisinicline as a treatment for nicotine dependence, t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/achieve-life-sciences-present-52-123000324.html?.tsrc=rss",
+   "published_at": "2026-09-28T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:33Z",
+   "fingerprint": "0afcc4d95d4b944f",
+   "primary_source": false,
+   "cluster_id": "b789d5fa1ef10ecf",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ccd8d6fe096d0b28",
+   "symbols": [
+    "ACHV"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACHV: Looking Ahead to Resubmission",
+   "summary": "By John Vandermosten, CFA NASDAQ: ACHV READ THE FULL ACHV RESEARCH REPORT Achieve Life Sciences, Inc. (NASDAQ: ACHV) reported second quarter results, introducing a number of new faces and regulatory updates since the previous financial update in May. Achieve has added new individ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/achv-looking-ahead-resubmission-102100214.html?.tsrc=rss",
+   "published_at": "2026-08-18T10:21:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:33Z",
+   "fingerprint": "4bf71a098a7f4e48",
+   "primary_source": false,
+   "cluster_id": "ccd8d6fe096d0b28",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4dab2ef17a18535f",
+   "symbols": [
+    "ACHV"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Achieve Life Sciences Stock Has Nearly Tripled in the Last Year. Now It Just Needs to Turn a Profit.",
+   "summary": "Achieve Life Sciences (ACHV) is a $685 million biotech focused on cytisinicline-based nicotine addiction treatments, showing strong recent technical momentum. ACHV has surged 173% over 52 weeks. Shares recently hit a 3-year high earlier in July. Despite robust technicals, ACHV re",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "barchart.com",
+   "url": "https://www.barchart.com/story/news/3809536/achieve-life-sciences-stock-has-nearly-tripled-in-the-last-year-now-it-just-needs-to-turn-a-profit?.tsrc=rss",
+   "published_at": "2026-08-12T17:10:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:33Z",
+   "fingerprint": "b35922b726eade7f",
+   "primary_source": false,
+   "cluster_id": "4dab2ef17a18535f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7a77efbcdb140b3c",
+   "symbols": [
+    "ACHV"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Achieve Life Sciences Reports Second Quarter 2026 Financial Results and Provides Business Updates",
+   "summary": "Closed a private placement of up to $354 million, with $180 million upfront and up to $174 million from warrants exercisable prior to and up to 20 trading days following FDA approval Strengthened organization with new Chief Executive Officer, experienced commercial, CMC, and qual",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/achieve-life-sciences-reports-second-123000595.html?.tsrc=rss",
+   "published_at": "2026-08-11T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:33Z",
+   "fingerprint": "9e497222bf097e55",
+   "primary_source": false,
+   "cluster_id": "7a77efbcdb140b3c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "78dbcfa3977ec407",
+   "symbols": [
+    "ACHV"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Achieve Life Sciences Appoints Ronald Dadino and Gloria Cosgrove to Lead CMC, Supply Chain, and Quality",
+   "summary": "Veteran U.S.-based CMC, supply chain, and quality leaders join Achieve as the Company continues the transition of cytisinicline finished product manufacturing to the United StatesSEATTLE and VANCOUVER, British Columbia, Aug. 03, 2026 (GLOBE NEWSWIRE) -- Achieve Life Sciences, Inc",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/achieve-life-sciences-appoints-ronald-123000991.html?.tsrc=rss",
+   "published_at": "2026-08-03T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:33Z",
+   "fingerprint": "20294ed5f31d4e07",
+   "primary_source": false,
+   "cluster_id": "78dbcfa3977ec407",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "55999a87c3efda1a",
+   "symbols": [
+    "ACHV"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Achieve Life Sciences Announced Granting of New Hire Inducement Awards",
+   "summary": "SEATTLE and VANCOUVER, British Columbia, July 31, 2026 (GLOBE NEWSWIRE) -- Achieve Life Sciences, Inc. (Nasdaq: ACHV), a late-stage specialty pharmaceutical company focused on the global development and commercialization of cytisinicline as a treatment for nicotine dependence, to",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/achieve-life-sciences-announced-granting-123000252.html?.tsrc=rss",
+   "published_at": "2026-07-31T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:33Z",
+   "fingerprint": "88e80626bca98949",
+   "primary_source": false,
+   "cluster_id": "55999a87c3efda1a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "66d89e54cdbd7854",
+   "symbols": [
+    "ACHV"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Achieve Life Sciences Stockholders Weigh Board Slate, Share Increase at Annual Meeting",
+   "summary": "Achieve Life Sciences (NASDAQ:ACHV) held its 2026 Annual Meeting of Stockholders virtually, with Chief Executive Officer Andrew Goldberg serving as chairperson of the meeting. Goldberg called the meeting to order and said Erik Atkisson, the company’s Chief Legal Officer, would ac",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/achieve-life-sciences-stockholders-weigh-board-slate-share-increase-at-annual-meeting-2026-07-09/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-07-10T00:01:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:33Z",
+   "fingerprint": "d6446254c7aeb2c5",
+   "primary_source": false,
+   "cluster_id": "66d89e54cdbd7854",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "01f17b564b3c10da",
+   "symbols": [
+    "ACHV"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Achieve Life Sciences Joins Russell 2000® Index",
+   "summary": "SEATTLE and VANCOUVER, British Columbia, June 29, 2026 (GLOBE NEWSWIRE) -- Achieve Life Sciences, Inc. (Achieve or the Company) (Nasdaq: ACHV), a late-stage specialty pharmaceutical company focused on the global development and commercialization of cytisinicline as a treatment fo",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/achieve-life-sciences-joins-russell-123000076.html?.tsrc=rss",
+   "published_at": "2026-06-29T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:33Z",
+   "fingerprint": "6df13d5eadce0f92",
+   "primary_source": false,
+   "cluster_id": "01f17b564b3c10da",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f3b08de771cb6531",
+   "symbols": [
+    "ACHV"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Achieve Life Sciences Receives Complete Response Letter from FDA for Cytisinicline NDA",
+   "summary": "CRL Cites Deficiencies at Third-Party Manufacturing Facility No Efficacy or Clinical Safety Deficiencies Identified SEATTLE and VANCOUVER, British Columbia, June 22, 2026 (GLOBE NEWSWIRE) -- Achieve Life Sciences, Inc. (Achieve or the Company) (Nasdaq: ACHV), a late-stage special",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/achieve-life-sciences-receives-complete-123000312.html?.tsrc=rss",
+   "published_at": "2026-06-22T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:33Z",
+   "fingerprint": "e2604ce6e2cd28a4",
+   "primary_source": false,
+   "cluster_id": "f3b08de771cb6531",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3eee82f177f3ae8a",
+   "symbols": [
+    "ACHV"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Achieve Life Sciences Appoints Jeffrey Farrow and Reid Waldman, MD to Board of Directors",
+   "summary": "Appointments Add Deep Biopharmaceutical Commercial Strategy, Clinical and Finance Expertise as Company Advances Toward Potential Cytisinicline Approval and LaunchSEATTLE and VANCOUVER, British Columbia, June 02, 2026 (GLOBE NEWSWIRE) -- Achieve Life Sciences, Inc. (“Achieve” or t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/achieve-life-sciences-appoints-jeffrey-123000054.html?.tsrc=rss",
+   "published_at": "2026-06-02T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:33Z",
+   "fingerprint": "8f6e4875ffe876c2",
+   "primary_source": false,
+   "cluster_id": "3eee82f177f3ae8a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9889a01698abdef4",
+   "symbols": [
+    "ACHV"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Achieve Life Sciences Presents Safety Data from 52 Weeks of Continuous Cytisinicline Treatment",
+   "summary": "ORCA-OL data complete the clinical evidence package supporting the cytisinicline smoking cessation NDA No new safety signals identified by the independent Data Safety Monitoring Committee over 52 weeks of continuous exposure Nausea — a common barrier to treatment adherence with s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/achieve-life-sciences-presents-safety-181500734.html?.tsrc=rss",
+   "published_at": "2026-05-19T18:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:33Z",
+   "fingerprint": "2fbbf712740b7131",
+   "primary_source": false,
+   "cluster_id": "9889a01698abdef4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

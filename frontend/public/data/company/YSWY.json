@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 24.989999771118164,
     "day_low": 24.229999542236328,
-    "history_ok": false
+    "history_ok": false,
+    "rsi2": 71.19777511496693,
+    "adx14": 33.5765841879814,
+    "ema10": 24.066481826176968,
+    "sma200": null,
+    "perf_63d": 17.89624078020271,
+    "adr20_pct": 3.816542033169894,
+    "range10_pct": 12.028402138837869,
+    "high10_prev": 25.239999771118164,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [
@@ -97,7 +128,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": true,
@@ -141,11 +175,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 3.0,
+   "score": 19.2,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -181,7 +217,7 @@
     "time": "vor Börseneröffnung",
     "fiscal_quarter": "Sep/2026",
     "eps_forecast": 0.3,
-    "estimates": 8,
+    "estimates": 1,
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/yswy/earnings",
@@ -244,7 +280,17 @@
     "green": true,
     "day_high": 24.989999771118164,
     "day_low": 24.229999542236328,
-    "history_ok": false
+    "history_ok": false,
+    "rsi2": 71.19777511496693,
+    "adx14": 33.5765841879814,
+    "ema10": 24.066481826176968,
+    "sma200": null,
+    "perf_63d": 17.89624078020271,
+    "adr20_pct": 3.816542033169894,
+    "range10_pct": 12.028402138837869,
+    "high10_prev": 25.239999771118164,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -274,6 +320,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [
@@ -283,7 +350,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": true,
@@ -622,11 +692,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 3.0,
+  "score": 19.2,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 17.2,
@@ -644,25 +714,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 5,
+    "independent": 5,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -681,7 +753,449 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "d7177a6fb282d3be",
+   "symbols": [
+    "YSWY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Yesway, Inc. Schedules Third Quarter 2026 Earnings Release and Conference Call",
+   "summary": "Company to Host Conference Call and Webcast on November 12, 2026, at 8:30 a.m. ETFORT WORTH, Texas, Oct. 29, 2026 (GLOBE NEWSWIRE) -- Yesway, Inc. (“Yesway” or the “Company”) (Nasdaq: YSWY), one of the fastest-growing convenience store operators in the United States, today announ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/yesway-inc-schedules-third-quarter-123000657.html?.tsrc=rss",
+   "published_at": "2026-10-29T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "56ffbc6b11b3ced6",
+   "primary_source": false,
+   "cluster_id": "d7177a6fb282d3be",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b5965ce86c626af7",
+   "symbols": [
+    "YSWY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How diesel is powering Yesway’s gains",
+   "summary": "Diesel accounts for more than a third of the fuel the company sells at its stores, thanks in part to its focus on operating in areas with a lot of truck traffic.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "cstoredive.com",
+   "url": "https://www.cstoredive.com/news/how-diesel-is-powering-yesways-gains/833482/?.tsrc=rss",
+   "published_at": "2026-10-22T13:49:58Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "ba6cff51b3f547a0",
+   "primary_source": false,
+   "cluster_id": "b5965ce86c626af7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9b916413e68fa8ec",
+   "symbols": [
+    "DEC",
+    "YSWY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "New Strong Buy Stocks for October 13th",
+   "summary": "NATL, BGC, CCNE, FRME and UVSP have been added to the Zacks Rank #1 (Strong Buy) List on October 13, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/strong-buy-stocks-october-13th-092900256.html?.tsrc=rss",
+   "published_at": "2026-10-13T09:29:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:33:37Z",
+   "fingerprint": "c26174be2546227a",
+   "primary_source": false,
+   "cluster_id": "9b916413e68fa8ec",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6e67b9029b741150",
+   "symbols": [
+    "YSWY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Best Value Stocks to Buy for October 13th",
+   "summary": "REPYY, BTE and YSWY made it to the Zacks Rank #1 (Strong Buy) value stocks list on October 13, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-value-stocks-buy-october-074400383.html?.tsrc=rss",
+   "published_at": "2026-10-13T07:44:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "2c91c225e1df0723",
+   "primary_source": false,
+   "cluster_id": "6e67b9029b741150",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b38cae97b57875fd",
+   "symbols": [
+    "YSWY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Yesway’s Midwest exit closes with an unexpected buyer",
+   "summary": "Mega Saver confirmed last year that it had agreed to acquire Yesway’s 29 Iowa and Kansas sites. But when the deal closed on Thursday, Texas-based Now & Forever was the purchaser.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "cstoredive.com",
+   "url": "https://www.cstoredive.com/news/yesways-midwest-exit-closes-with-an-unexpected-buyer/832031/?.tsrc=rss",
+   "published_at": "2026-10-02T15:57:46Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "d6425d96cd7f9f32",
+   "primary_source": false,
+   "cluster_id": "b38cae97b57875fd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2e91ffca9422fab6",
+   "symbols": [
+    "YSWY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Yesway Completes Iowa and Kansas Portfolio Sale to Redeploy Capital into Higher-Return Growth Opportunities",
+   "summary": "Divestiture of non-strategic assets supports a stronger balance sheet and investment in new-to-industry stores in faster-growing core marketsFORT WORTH, Texas, Oct. 01, 2026 (GLOBE NEWSWIRE) -- Yesway, Inc. (“Yesway” or the “Company”) (Nasdaq: YSWY), one of the fastest-growing co",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/yesway-completes-iowa-kansas-portfolio-201500116.html?.tsrc=rss",
+   "published_at": "2026-10-01T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "73bb73b6ffb7859e",
+   "primary_source": false,
+   "cluster_id": "2e91ffca9422fab6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4d4dd378b2f2310f",
+   "symbols": [
+    "YSWY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Yesway to open first Arizona c-store in October",
+   "summary": "The Grand Canyon state is a key player in Yesway’s plan to open 130 new-to-industry stores over the next five years.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "cstoredive.com",
+   "url": "https://www.cstoredive.com/news/yesway-to-open-first-arizona-c-store-in-october/831295/?.tsrc=rss",
+   "published_at": "2026-09-25T13:00:12Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "236cf99e6482a185",
+   "primary_source": false,
+   "cluster_id": "4d4dd378b2f2310f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "15024d9e203afe1f",
+   "symbols": [
+    "YSWY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "YESWAY ENTERS ARIZONA WITH GRAND OPENING OF ITS FIRST ALLSUP'S STORE IN THE STATE",
+   "summary": "Yesway, Inc. (Nasdaq: YSWY), one of the nation's fastest-growing convenience store chains, today announced that it will celebrate the grand opening of its first-ever Allsup's convenience store in Arizona on Friday, October 2, 2026. The opening marks an important milestone in Yesw",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/yesway-enters-arizona-grand-opening-130700351.html?.tsrc=rss",
+   "published_at": "2026-09-24T13:07:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "c11c6790b0b0781a",
+   "primary_source": false,
+   "cluster_id": "15024d9e203afe1f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "69a420e22641bf53",
+   "symbols": [
+    "YSWY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zacks Industry Outlook Highlights Walmart, Kroger and Yesway",
+   "summary": "Walmart, Kroger and Yesway are positioned to benefit from omnichannel growth, loyalty programs, private brands and new retail profit pools.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-industry-outlook-highlights-walmart-092100889.html?.tsrc=rss",
+   "published_at": "2026-09-24T09:21:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "7c923d9b54dec872",
+   "primary_source": false,
+   "cluster_id": "69a420e22641bf53",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f5420fdc2775b502",
+   "symbols": [
+    "YSWY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Supermarket Stocks Set to Benefit From Omnichannel & Loyalty Growth",
+   "summary": "Omnichannel growth, private brands, retail media and automation reshape supermarkets, while productivity efforts help manage cost pressures, creating opportunities for WMT, KR and YSWY.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-supermarket-stocks-set-benefit-134700539.html?.tsrc=rss",
+   "published_at": "2026-09-23T13:47:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "a4e9da9b2cc602c3",
+   "primary_source": false,
+   "cluster_id": "f5420fdc2775b502",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2a0a64577d804285",
+   "symbols": [
+    "YSWY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Yesway Continues Texas Expansion with New Allsup's Store in Odessa",
+   "summary": "Yesway, Inc. (Nasdaq: YSWY), one of the nation's fastest-growing convenience store chains, today announced the opening of a new-to-industry Allsup's store in Odessa, Texas, further advancing the company's strategic expansion across the state. This marks the 93rd new-to-industry s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/yesway-continues-texas-expansion-allsups-130900455.html?.tsrc=rss",
+   "published_at": "2026-09-21T13:09:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "6233153c55ff2315",
+   "primary_source": false,
+   "cluster_id": "2a0a64577d804285",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fadc910044eb1c64",
+   "symbols": [
+    "YSWY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Yesway, Inc. Announces Participation in Upcoming Investor Conferences",
+   "summary": "FORT WORTH, Texas, Sept. 01, 2026 (GLOBE NEWSWIRE) -- Yesway, Inc. (“Yesway” or the “Company”) (Nasdaq: YSWY), one of the fastest-growing convenience store operators in the United States, today announced that it will participate in the following investor conferences: Barclays 19t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/yesway-inc-announces-participation-upcoming-201500838.html?.tsrc=rss",
+   "published_at": "2026-09-01T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "264d4b177022430f",
+   "primary_source": false,
+   "cluster_id": "fadc910044eb1c64",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6e610f79a1d83f3d",
+   "symbols": [
+    "YSWY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Yesway (YSWY) Still Undervalued After a 17% Monthly Gain?",
+   "summary": "Yesway stock has climbed over the past month while the broader valuation checks still suggest the shares look cheap on key fundamentals. For investors, that mix of recent gains and a high value score raises the question of whether the current price fully reflects what the busines",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/yesway-yswy-still-undervalued-17-170432105.html?.tsrc=rss",
+   "published_at": "2026-08-30T17:04:32Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "12ea118f7b406b50",
+   "primary_source": false,
+   "cluster_id": "6e610f79a1d83f3d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0c1ab80223827839",
+   "symbols": [
+    "YSWY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "IPO Stock Of The Week: Convenience Store Yesway Offers First Buy Point After 39% Surge",
+   "summary": "Yesway stock is approaching its first buy point as a public company following a 39% rally in recent weeks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/085c045b-37f9-3443-93e9-de62ba39bff0/ipo-stock-of-the-week%3A.html?.tsrc=rss",
+   "published_at": "2026-08-28T12:00:48Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "37968302176d1f71",
+   "primary_source": false,
+   "cluster_id": "0c1ab80223827839",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d287cb03f7511198",
+   "symbols": [
+    "YSWY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Yesway updates fuel supply operations",
+   "summary": "Technology from Gravitate will use machine learning to distill data on inventory, pricing and more to enable faster, more informed decision making.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "cstoredive.com",
+   "url": "https://www.cstoredive.com/news/yesway-updates-fuel-supply-operations/828681/?.tsrc=rss",
+   "published_at": "2026-08-25T14:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "73ec3be13260bc46",
+   "primary_source": false,
+   "cluster_id": "d287cb03f7511198",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ded25189c291cabd",
+   "symbols": [
+    "YSWY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Chomps Hits 65,000+ Retail Locations as Demand for Convenient Protein Grows",
+   "summary": "As consumers increasingly make protein a part of their everyday routines, Chomps, America's fastest-growing meat snack brand[1], is expanding where and how they can access convenient, high-quality protein. The brand announced today that its national retail footprint has grown to ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/chomps-hits-65-000-retail-130000985.html?.tsrc=rss",
+   "published_at": "2026-08-25T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "68a9d469c8cd604c",
+   "primary_source": false,
+   "cluster_id": "ded25189c291cabd",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dee5cbc1f4bbc372",
+   "symbols": [
+    "YSWY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Yesway (YSWY) Q2 2026 Earnings Call Transcript",
+   "summary": "Record fuel margins and merchandise sales drive 35% EBITDA growth.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/20/yesway-yswy-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-20T14:19:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "0b3dadf731548d8c",
+   "primary_source": false,
+   "cluster_id": "dee5cbc1f4bbc372",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "766dddbdb6bd2348",
+   "symbols": [
+    "YSWY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What did c-store CEOs make in 2025? Here’s what the filings show.",
+   "summary": "From about $1 million to over $84 million, chief executive compensation varied widely among publicly traded c-store retailers last fiscal year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "cstoredive.com",
+   "url": "https://www.cstoredive.com/news/c-store-ceo-compensation-2025-filings/827882/?.tsrc=rss",
+   "published_at": "2026-08-18T08:28:17Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "94a73d7978d078a1",
+   "primary_source": false,
+   "cluster_id": "766dddbdb6bd2348",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6756073942051795",
+   "symbols": [
+    "YSWY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Yesway sees strongest quarter in company history, CEO says",
+   "summary": "Record fuel, merchandise and store contribution results helped the Texas-based retailer boost EBITDA as it pursues its five-year growth strategy.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "cstoredive.com",
+   "url": "https://www.cstoredive.com/news/yesway-sees-strongest-quarter-in-company-history-ceo-says/827827/?.tsrc=rss",
+   "published_at": "2026-08-14T08:58:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "a5fc5c487afbf381",
+   "primary_source": false,
+   "cluster_id": "6756073942051795",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8965e21419c4297d",
+   "symbols": [
+    "YSWY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Yesway Inc (YSWY) (Q2 2026) Earnings Call Highlights: Record EBITDA and Raised Guidance Signal ...",
+   "summary": "Yesway Inc (YSWY) posts 35% adjusted EBITDA growth in Q2 2026, driven by robust fuel margins and strategic expansion, prompting an upward revision of full-year guidance.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/yesway-inc-yswy-q2-2026-230637715.html?.tsrc=rss",
+   "published_at": "2026-08-13T23:06:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "e06e7fcaaea884a0",
+   "primary_source": false,
+   "cluster_id": "8965e21419c4297d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

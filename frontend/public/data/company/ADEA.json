@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 4.226754387791621,
    "rvol": 1.2453173313634545,
    "ema10": 22.078843911098343,
-   "ema21": 22.677022396346647,
+   "ema21": 22.677022396346576,
    "sma50": 24.400199813842775,
-   "sma200": 25.543427610397337
+   "sma200": 25.543427572250366
   },
   "market_cap": 2364406528.0,
   "market_cap_currency": "USD",
@@ -34,17 +34,17 @@
    "tech": {
     "close": 21.450000762939453,
     "change_pct": -4.581845196934598,
-    "ema20": 22.61688142583671,
-    "ema50": 24.1419238564406,
-    "ema200": 24.28177868774757,
+    "ema20": 22.616881425836684,
+    "ema50": 24.141923856084457,
+    "ema200": 24.28177867976759,
     "sma50": 24.400199813842775,
-    "rsi14": 40.027247793269616,
-    "rsi_min5": 38.03888241191379,
-    "atr14": 1.0669974739810073,
-    "atr_pct": 4.974347021117722,
+    "rsi14": 40.02724779330344,
+    "rsi_min5": 38.03888241196624,
+    "atr14": 1.0669974739805599,
+    "atr_pct": 4.974347021115636,
     "rvol": 1.2453173313634545,
     "vol30": 1137087.7666666666,
-    "dist_ema200_pct": -11.66215194209398,
+    "dist_ema200_pct": -11.66215191306258,
     "dist_52w_high_pct": 37.3004763997637,
     "high_52w": 34.210787468979454,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 21.81999969482422,
     "day_low": 20.700000762939453,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 14.223175813112576,
+    "adx14": 18.448445176667878,
+    "ema10": 22.078843911098343,
+    "sma200": 25.543427572250366,
+    "perf_63d": -22.666656397710085,
+    "adr20_pct": 4.226754387791621,
+    "range10_pct": 12.395476966161677,
+    "high10_prev": 22.850000381469727,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.6666666666666666,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 21.81999969482422,
     "entry_max": 22.256399688720702,
-    "stop": 20.21950348385271,
-    "risk_per_share": 1.6004962109715102,
-    "target_1": 25.02099211676724,
+    "stop": 20.21950348385338,
+    "risk_per_share": 1.6004962109708387,
+    "target_1": 25.020992116765896,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -139,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 7.2,
+   "score": 30.7,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -208,9 +244,9 @@
   "adr20": 4.226754387791621,
   "rvol": 1.2453173313634545,
   "ema10": 22.078843911098343,
-  "ema21": 22.677022396346647,
+  "ema21": 22.677022396346576,
   "sma50": 24.400199813842775,
-  "sma200": 25.543427610397337,
+  "sma200": 25.543427572250366,
   "volatility_ann": 53.72795804834887,
   "avg_dollar_volume_20d": 25452960.5893281,
   "move_zscore": -1.3537558519505934,
@@ -218,17 +254,17 @@
    "tech": {
     "close": 21.450000762939453,
     "change_pct": -4.581845196934598,
-    "ema20": 22.61688142583671,
-    "ema50": 24.1419238564406,
-    "ema200": 24.28177868774757,
+    "ema20": 22.616881425836684,
+    "ema50": 24.141923856084457,
+    "ema200": 24.28177867976759,
     "sma50": 24.400199813842775,
-    "rsi14": 40.027247793269616,
-    "rsi_min5": 38.03888241191379,
-    "atr14": 1.0669974739810073,
-    "atr_pct": 4.974347021117722,
+    "rsi14": 40.02724779330344,
+    "rsi_min5": 38.03888241196624,
+    "atr14": 1.0669974739805599,
+    "atr_pct": 4.974347021115636,
     "rvol": 1.2453173313634545,
     "vol30": 1137087.7666666666,
-    "dist_ema200_pct": -11.66215194209398,
+    "dist_ema200_pct": -11.66215191306258,
     "dist_52w_high_pct": 37.3004763997637,
     "high_52w": 34.210787468979454,
     "macd_above_signal": true,
@@ -242,7 +278,17 @@
     "green": false,
     "day_high": 21.81999969482422,
     "day_low": 20.700000762939453,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 14.223175813112576,
+    "adx14": 18.448445176667878,
+    "ema10": 22.078843911098343,
+    "sma200": 25.543427572250366,
+    "perf_63d": -22.666656397710085,
+    "adr20_pct": 4.226754387791621,
+    "range10_pct": 12.395476966161677,
+    "high10_prev": 22.850000381469727,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -272,6 +318,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -279,7 +346,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.6666666666666666,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -292,9 +362,9 @@
    "plan": {
     "trigger": 21.81999969482422,
     "entry_max": 22.256399688720702,
-    "stop": 20.21950348385271,
-    "risk_per_share": 1.6004962109715102,
-    "target_1": 25.02099211676724,
+    "stop": 20.21950348385338,
+    "risk_per_share": 1.6004962109708387,
+    "target_1": 25.020992116765896,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -618,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 7.2,
+  "score": 30.7,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 40.6,
@@ -640,26 +710,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 12,
+    "independent": 12,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -677,7 +749,405 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "eb140b6cc8dd1e46",
+   "symbols": [
+    "ADEA",
+    "IDCC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Roku, Google, Tubi, LG Electronics, Sony Pictures, and Many More Leading Streaming Executives to Gather in California for Parks Associates' Ninth Annual Future of Video",
+   "summary": "Parks Associates announced the speaker lineup for Future of Video: Business of Streaming, taking place November 17-18, Marina del Rey Marriott, Marina del Rey, California. Sponsors include Adeia, InterDigital, OTT.X, Streaming Women in Media, and TheDesk.net.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/roku-google-tubi-lg-electronics-124100562.html?.tsrc=rss",
+   "published_at": "2026-10-29T12:41:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:10:53Z",
+   "fingerprint": "7b47fcb0b72cd1a2",
+   "primary_source": false,
+   "cluster_id": "eb140b6cc8dd1e46",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c561995ac1756cbb",
+   "symbols": [
+    "ADEA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adeia Stock In Focus After Media License Renewal",
+   "summary": "Adeia Inc. reported that TCL Electronics Holdings Limited renewed a multi year license agreement for continued access to Adeia's media intellectual property portfolio. The long term renewal with a large consumer electronics customer underscores that Adeia's media patents continue",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adeia-stock-focus-media-license-231310629.html?.tsrc=rss",
+   "published_at": "2026-10-27T23:13:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:41Z",
+   "fingerprint": "feb55b9b5fb4208a",
+   "primary_source": false,
+   "cluster_id": "c561995ac1756cbb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3c62cc856545e93e",
+   "symbols": [
+    "ADEA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adeia Enters into Multi-Year IP License Renewal with TCL",
+   "summary": "Renewed agreement continues Adeia's media IP license with one of the world's largest television and consumer electronics manufacturersSAN JOSE, Calif., Oct. 22, 2026 (GLOBE NEWSWIRE) -- Adeia Inc. (Nasdaq: ADEA), the technology company pioneering foundational innovations that sha",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/adeia-enters-multi-ip-license-200500126.html?.tsrc=rss",
+   "published_at": "2026-10-22T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:41Z",
+   "fingerprint": "77b8f486e5519428",
+   "primary_source": false,
+   "cluster_id": "3c62cc856545e93e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1fc3b2d2b6fc77f6",
+   "symbols": [
+    "ADEA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Did IBM Stock Beat Gartner Over Five Years?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/619976/why-did-ibm-stock-beat-gartner-over-five-years/2026-10-22?.tsrc=rss",
+   "published_at": "2026-10-22T16:02:44Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:41Z",
+   "fingerprint": "68c2b5d3f7ac0127",
+   "primary_source": false,
+   "cluster_id": "1fc3b2d2b6fc77f6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9d6f00bd1a18785b",
+   "symbols": [
+    "ADEA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What Gave IBM Stock Its Edge Over Cognizant?",
+   "summary": "Two IT consulting and services companies grew their sales at about the same pace over the last three years. Over the five years to October 2026, though, one stock climbed 110.0% while the other dropped 8.8%. The stock that rose belongs to International Business Machines (IBM), an",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/619437/what-gave-ibm-stock-its-edge-over-cognizant/2026-10-20?.tsrc=rss",
+   "published_at": "2026-10-20T19:43:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:41Z",
+   "fingerprint": "3db244b3fac8988d",
+   "primary_source": false,
+   "cluster_id": "9d6f00bd1a18785b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e784d96f33ae11d4",
+   "symbols": [
+    "ADEA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adeia to Release Third Quarter 2026 Financial Results on November 2, 2026",
+   "summary": "SAN JOSE, Calif., Oct. 19, 2026 (GLOBE NEWSWIRE) -- Adeia Inc. (Nasdaq: ADEA), the technology company pioneering foundational innovations that shape how the world computes, connects and experiences entertainment, will announce its financial results for the third quarter ended Sep",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adeia-release-third-quarter-2026-200500172.html?.tsrc=rss",
+   "published_at": "2026-10-19T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:41Z",
+   "fingerprint": "cded98aaeb318ce8",
+   "primary_source": false,
+   "cluster_id": "e784d96f33ae11d4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ac6bd6020b5dad94",
+   "symbols": [
+    "ADEA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Q3 Earnings Preview Might Change The Case For Investing In Charter Communications (CHTR)",
+   "summary": "Charter Communications recently renewed Adeia's multi year intellectual property license for Spectrum's video, broadband and mobility services, and also shifted former Chief Commercial Officer Adam Ray into a non executive advisory role through December 31, 2026. The upcoming Q3 ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/q3-earnings-preview-might-change-071710027.html?.tsrc=rss",
+   "published_at": "2026-10-16T07:17:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:41Z",
+   "fingerprint": "2c5cca4de7886764",
+   "primary_source": false,
+   "cluster_id": "ac6bd6020b5dad94",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "686eb62b1801d0c7",
+   "symbols": [
+    "ADEA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Adeia (ADEA) Is Back In The Spotlight",
+   "summary": "Adeia (ADEA) is back in focus after renewing a multi-year intellectual property agreement with Charter Communications, keeping its media patents in use across Spectrum pay-TV, broadband, and mobility services. Despite the fresh Charter renewal, Adeia’s share price has eased in re",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-adeia-adea-back-spotlight-043036247.html?.tsrc=rss",
+   "published_at": "2026-10-16T04:30:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:41Z",
+   "fingerprint": "887359bf9b4cb76b",
+   "primary_source": false,
+   "cluster_id": "686eb62b1801d0c7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "27a0bdd182fa3941",
+   "symbols": [
+    "ADEA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Charter Communications (CHTR) Loses Its Commercial Chief, Is The 64% Undervaluation Case Convincing?",
+   "summary": "Charter Communications (CHTR) moved as investors digested the news that Executive Vice President and Chief Commercial Officer Adam Ray exited the role on 12 October and shifted into a non-executive advisory post through year end. At a share price of $105.14, Charter Communication",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/charter-communications-chtr-loses-commercial-211235519.html?.tsrc=rss",
+   "published_at": "2026-10-15T21:12:35Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:41Z",
+   "fingerprint": "2eb40e535467810e",
+   "primary_source": false,
+   "cluster_id": "27a0bdd182fa3941",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c70c20a840f6a584",
+   "symbols": [
+    "ADEA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adeia Wins 2026 AutoTech Breakthrough Award for Overall Electric Vehicle Innovation of the Year",
+   "summary": "Award recognizes Adeia’s Capillary-Driven Cooling technology, a thermal management architecture for high-power electric motors Overall Electric Vehicle Innovation of the Year Adeia received the AutoTech Breakthrough Overall Electric Vehicle Innovation of the Year recognition for ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/adeia-wins-2026-autotech-breakthrough-200500152.html?.tsrc=rss",
+   "published_at": "2026-10-15T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:41Z",
+   "fingerprint": "376e6af363ec8c95",
+   "primary_source": false,
+   "cluster_id": "c70c20a840f6a584",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "42e45161beb423b1",
+   "symbols": [
+    "ADEA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adeia Has Lost 28% From Its May High: BWS Financial Sees 106% Upside",
+   "summary": "Key TakeawaysAdeia shares closed at $24. 31 on Oct.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/adeia-has-lost-28-from-its-may-high-bws-financial-sees-106-upside?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-11T16:04:18Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:41Z",
+   "fingerprint": "53ac02f674ff4d80",
+   "primary_source": false,
+   "cluster_id": "42e45161beb423b1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "48dd3ae020668eba",
+   "symbols": [
+    "ADEA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adeia Renews IP License Agreement with Spectrum",
+   "summary": "Multi-year renewal extends Adeia’s long-standing relationship with the nation’s leading video providerSAN JOSE, Calif., Oct. 05, 2026 (GLOBE NEWSWIRE) -- Adeia Inc. (Nasdaq: ADEA), the technology company pioneering foundational innovations that shape how the world computes, conne",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/adeia-renews-ip-license-agreement-200500776.html?.tsrc=rss",
+   "published_at": "2026-10-05T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:41Z",
+   "fingerprint": "298115187a8a0d6f",
+   "primary_source": false,
+   "cluster_id": "48dd3ae020668eba",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a4efbbe1e7d5c66b",
+   "symbols": [
+    "ADEA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adeia Appoints Dipti Vachani as Chief Executive Officer",
+   "summary": "Seasoned technology executive to lead Adeia’s continued growth; succeeds Paul E. Davis, who announced in May 2026 his intention to step down after 15 years with the companySAN JOSE, Calif., Sept. 28, 2026 (GLOBE NEWSWIRE) -- Adeia Inc. (Nasdaq: ADEA), the technology company pione",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/adeia-appoints-dipti-vachani-chief-200500202.html?.tsrc=rss",
+   "published_at": "2026-09-28T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:41Z",
+   "fingerprint": "810b86395bbc7ed3",
+   "primary_source": false,
+   "cluster_id": "a4efbbe1e7d5c66b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "32861761ce84b2a9",
+   "symbols": [
+    "ADEA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adeia Recognized with Two Asia Pacific Business Awards Honoring Regional Innovation and Leadership",
+   "summary": "Company named Asia Pacific Outstanding Company of the Year Steve Kim recognized as Outstanding Executive of the Year SAN JOSE, Calif., Sept. 16, 2026 (GLOBE NEWSWIRE) -- Adeia Inc. (Nasdaq: ADEA), the technology company pioneering foundational innovations that shape how the world",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/adeia-recognized-two-asia-pacific-114500775.html?.tsrc=rss",
+   "published_at": "2026-09-16T11:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:41Z",
+   "fingerprint": "ab81f9f334b22973",
+   "primary_source": false,
+   "cluster_id": "32861761ce84b2a9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "361fbcb3acdbca1d",
+   "symbols": [
+    "ADEA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adeia (ADEA) Q2 2026 Earnings Call Transcript",
+   "summary": "Semiconductor revenue target doubled to $200M as hybrid bonding adoption accelerates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/10/adeia-adea-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-11T01:58:35Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:41Z",
+   "fingerprint": "b306265bd0850fd8",
+   "primary_source": false,
+   "cluster_id": "361fbcb3acdbca1d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ddab64259890bc28",
+   "symbols": [
+    "ADEA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adeia Inc. Q2 2026 Earnings Call Summary",
+   "summary": "Moby summary of Adeia Inc.'s Q2 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-adeia-inc-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-08-04T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:41Z",
+   "fingerprint": "378b085618cc7d66",
+   "primary_source": false,
+   "cluster_id": "ddab64259890bc28",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8e86e56b47279002",
+   "symbols": [
+    "ADEA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adeia Inc (ADEA) (Q2 2026) Earnings Call Highlights: Revenue Hits $96. ...",
+   "summary": "Adeia Inc (ADEA) raises long-term revenue target to $600M as non-Pay-TV recurring revenue nearly doubles Pay-TV, driven by hybrid bonding adoption and strategic diversification.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adeia-inc-adea-q2-2026-050634400.html?.tsrc=rss",
+   "published_at": "2026-08-04T05:06:34Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:41Z",
+   "fingerprint": "5947a99d3dbb0d88",
+   "primary_source": false,
+   "cluster_id": "8e86e56b47279002",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0e7274c4b409d2a7",
+   "symbols": [
+    "ADEA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adeia Q2 Earnings Call Highlights",
+   "summary": "Adeia (NASDAQ:ADEA) reported second-quarter 2026 revenue of $96.1 million and adjusted EBITDA of $56.4 million, producing an adjusted EBITDA margin of 59%. The intellectual-property licensing company said results were in line with its expectations and reiterated full-year revenue",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/adeia-q2-earnings-call-highlights-2026-08-03/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-03T22:03:48Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:41Z",
+   "fingerprint": "aa2cc81f27db6bcc",
+   "primary_source": false,
+   "cluster_id": "0e7274c4b409d2a7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "c3e71b757a4c74ae",

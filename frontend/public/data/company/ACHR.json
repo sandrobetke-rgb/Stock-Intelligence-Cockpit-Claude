@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 4.320000171661377,
     "day_low": 4.070000171661377,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 32.81288167273864,
+    "adx14": 32.95173922522821,
+    "ema10": 4.197699102080942,
+    "sma200": 5.8107500076293945,
+    "perf_63d": -13.223147172434558,
+    "adr20_pct": 5.650466204513636,
+    "range10_pct": 22.826084210088492,
+    "high10_prev": 4.519999980926514,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -139,12 +173,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 5.0,
+   "score": 54.4,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 17,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -242,7 +278,17 @@
     "green": false,
     "day_high": 4.320000171661377,
     "day_low": 4.070000171661377,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 32.81288167273864,
+    "adx14": 32.95173922522821,
+    "ema10": 4.197699102080942,
+    "sma200": 5.8107500076293945,
+    "perf_63d": -13.223147172434558,
+    "adr20_pct": 5.650466204513636,
+    "range10_pct": 22.826084210088492,
+    "high10_prev": 4.519999980926514,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -272,6 +318,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -279,7 +346,10 @@
     "S01": 0.5,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -618,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 5.0,
+  "score": 54.4,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 80,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 28.3,
@@ -631,35 +701,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 17,
+    "independent": 17,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 17,
+    "independent": 17,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -677,7 +749,401 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "916b02d910f65a8b",
+   "symbols": [
+    "ACHR",
+    "MS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wall Street Thinks Archer Aviation Stock Is a Buy. Here's Why I Don't",
+   "summary": "Some Wall Street analysts see 330% upside in Archer stock over the next 12 months. Here's the sobering reality.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/10/31/wall-street-thinks-archer-aviation-stock-is-a-buy/?.tsrc=rss",
+   "published_at": "2026-10-31T10:44:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:05Z",
+   "fingerprint": "af9fd9751c2c8bc4",
+   "primary_source": false,
+   "cluster_id": "916b02d910f65a8b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Wall Street denkt, Archer Aviation Stock ist ein Kauf. Hier ist, warum ich nicht"
+  },
+  {
+   "id": "079bf533a9b457e3",
+   "symbols": [
+    "ACHR",
+    "JOBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Betting on Archer Aviation or Joby Aviation Being the Tesla of eVTOLs? They Could End Up More Like Lucid.",
+   "summary": "Archer and Joby both want to be the Tesla of the commercial eVTOL market. Struggling EV player Lucid could be the more apt parallel.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/10/31/betting-on-archer-aviation-or-joby-aviation-being/?.tsrc=rss",
+   "published_at": "2026-10-31T05:20:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:42Z",
+   "fingerprint": "23cecce950ed9e56",
+   "primary_source": false,
+   "cluster_id": "079bf533a9b457e3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Wetten auf Archer Aviation oder Joby Aviation als Tesla der eVTOLs? Sie könnten am Ende mehr wie Lucid."
+  },
+  {
+   "id": "8fcddc4b7d51708e",
+   "symbols": [
+    "ACHR",
+    "AMD",
+    "HOOD",
+    "JOBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Cathie Wood Shifts From AI Chips to Robinhood and Air Taxis in Latest ARK Trades",
+   "summary": "Cathie Wood just pulled millions out of two of this year's hottest AI chip winners and poured it into a battered broker and a pair of air taxi startups burning through cash. The trades raise a pointed question: does ARK see something the market is punishing, or is this a costly b",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/30/cathie-wood-shifts-from-ai-chips-to-robinhood-and-air-taxis-in-latest-ark-trades/?.tsrc=rss",
+   "published_at": "2026-10-30T23:09:47Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:05Z",
+   "fingerprint": "777eff3c14519ac6",
+   "primary_source": false,
+   "cluster_id": "8fcddc4b7d51708e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Cathie Wood verschiebt sich von KI-Chips zu Robinhood und Air Taxis in den neuesten ARK Trades"
+  },
+  {
+   "id": "51817f2f8286a9f9",
+   "symbols": [
+    "ACHR",
+    "BA",
+    "JOBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Joby Is Buying a Defense Company. Archer Plans to Buy 3 From Boeing. Here's Which Pivot Makes More Sense.",
+   "summary": "What do recent pivots to the defense sector mean for Joby Aviation and Archer Aviation?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/10/30/joby-is-buying-a-defense-company-archer-bought-3-f/?.tsrc=rss",
+   "published_at": "2026-10-30T10:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:17Z",
+   "fingerprint": "31f61f284d17c479",
+   "primary_source": false,
+   "cluster_id": "51817f2f8286a9f9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Archer plant, 3 von Boeing zu kaufen. Hier ist der Pivot, der mehr Sinn macht."
+  },
+  {
+   "id": "873695685819e231",
+   "symbols": [
+    "ACHR",
+    "JOBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "The UAE Just Inspected Archer's and Joby's Aircraft in Person. Here's Why Dubai, Not the FAA, Could Deliver the First Paying Passenger.",
+   "summary": "Starting in the UAE was always part of the plan, and it looks closer to fruition than ever.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/10/29/the-uae-just-inspected-archers-and-jobys-aircraft/?.tsrc=rss",
+   "published_at": "2026-10-30T02:35:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:42Z",
+   "fingerprint": "c8bff2f37e8d072f",
+   "primary_source": false,
+   "cluster_id": "873695685819e231",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Die Vereinigten Arabischen Emirate haben gerade die Flugzeuge von Archer und Joby persönlich inspiziert. Hier ist der Grund, warum Dubai, nicht die FAA, den ersten zahlenden Passagier liefern könnte."
+  },
+  {
+   "id": "7a43e25112fd09cf",
+   "symbols": [
+    "ACHR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Is Archer Aviation Stock a Buy Before Its Q3 Earnings Report?",
+   "summary": "Archer Aviation is scheduled to report earnings on Nov. 9. Will investors wish they had invested beforehand?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/10/29/is-archer-aviation-a-buy-before-its-q3-earnings/?.tsrc=rss",
+   "published_at": "2026-10-29T17:20:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:32Z",
+   "fingerprint": "70e06cd521b5edae",
+   "primary_source": false,
+   "cluster_id": "7a43e25112fd09cf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7b378d26ff9af48e",
+   "symbols": [
+    "ACHR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Archer and ITA Airways Partner on the Development of Air Taxi Services in Italy",
+   "summary": "SILICON VALLEY & ROME, October 29, 2026--Archer Aviation Inc. (NYSE: ACHR) and ITA Airways, member of the Lufthansa Group, Europe's largest airline group, announced today that they have signed an agreement to partner on an all-electric air taxi network in Italy. ITA Airways is It",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/archer-ita-airways-partner-development-120000133.html?.tsrc=rss",
+   "published_at": "2026-10-29T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:32Z",
+   "fingerprint": "8ff95c0577a32210",
+   "primary_source": false,
+   "cluster_id": "7b378d26ff9af48e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7cd73d846a7800fe",
+   "symbols": [
+    "ACHR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Cathie Wood Is Buying Archer Aviation Stock. Here's What History Says About Following Ark Into a Stock Down 62%.",
+   "summary": "Should investors follow Wood's lead with this eVTOL manufacturer?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/10/29/cathie-wood-buy-archer-aviation-stock-ark-invest/?.tsrc=rss",
+   "published_at": "2026-10-29T08:42:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:32Z",
+   "fingerprint": "999267d2325a3f91",
+   "primary_source": false,
+   "cluster_id": "7cd73d846a7800fe",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cecf40bd1be85299",
+   "symbols": [
+    "ACHR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Archer Aviation (ACHR) Cheap After Its 62% Share Price Fall?",
+   "summary": "Archer Aviation has seen its share price struggle over the past year, even as the company pushes ahead with plans for electric air taxi networks and high profile test flights. That gap between the story and the stock raises a simple question for you as an investor: Is the current",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/archer-aviation-achr-cheap-62-201245497.html?.tsrc=rss",
+   "published_at": "2026-10-28T20:12:45Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:32Z",
+   "fingerprint": "db386e0da21f5857",
+   "primary_source": false,
+   "cluster_id": "cecf40bd1be85299",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fd0f6f9f4c8ead80",
+   "symbols": [
+    "ACHR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What’s Behind Archer Aviation (ACHR) Stock’s Latest Move?",
+   "summary": "Archer Aviation (ACHR) is back in focus after unveiling plans for three Midnight air taxi networks across Austin, Dallas Fort Worth and Houston, linking major airports, downtown hubs and key leisure destinations across Texas. Recent moves around Archer Aviation have been intense.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/behind-archer-aviation-achr-stock-190708200.html?.tsrc=rss",
+   "published_at": "2026-10-28T19:07:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:32Z",
+   "fingerprint": "ca26c1d9709d7853",
+   "primary_source": false,
+   "cluster_id": "fd0f6f9f4c8ead80",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cdd0081af3c6497a",
+   "symbols": [
+    "ACHR",
+    "JOBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Cathie Wood Pours Millions into Archer Aviation Stock",
+   "summary": "Cathie Wood doubles down on flying taxis with a surprise two day Archer Aviation haul",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cathie-wood-pours-million-archer-151352358.html?.tsrc=rss",
+   "published_at": "2026-10-28T15:13:52Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:42Z",
+   "fingerprint": "d376ef633e6693ba",
+   "primary_source": false,
+   "cluster_id": "cdd0081af3c6497a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "243e624b4691735a",
+   "symbols": [
+    "ACHR",
+    "JOBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACHR vs. JOBY: Which eVTOL Stock Offers Stronger Growth Potential?",
+   "summary": "Archer Aviation and Joby Aviation are advancing eVTOL ambitions through air taxi networks, autonomous flight and strategic initiatives amid growth opportunities and risks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/achr-vs-joby-evtol-stock-135900081.html?.tsrc=rss",
+   "published_at": "2026-10-28T13:59:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:42Z",
+   "fingerprint": "ffcf94a8cb8742cc",
+   "primary_source": false,
+   "cluster_id": "243e624b4691735a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f36dbec037f85420",
+   "symbols": [
+    "ACHR",
+    "JOBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "The Pentagon Is Now the eVTOL Industry's Biggest Customer. Here's How Much Revenue That's Actually Worth to Archer and Joby.",
+   "summary": "Defense contracts provide early, reliable revenue for both companies and strengthen their investment case.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/10/28/the-pentagon-is-now-the-evtol-industrys-biggest-cu/?.tsrc=rss",
+   "published_at": "2026-10-28T10:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:42Z",
+   "fingerprint": "46606ca543618990",
+   "primary_source": false,
+   "cluster_id": "f36dbec037f85420",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "351819667631f6a3",
+   "symbols": [
+    "ACHR",
+    "JOBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Cathie Wood’s ARK Invest Adds Archer, Joby Shares For Second Straight Day — Retail Bulls Say 'Only Up From Here'",
+   "summary": "ARK Invest bought 884,681 Joby shares and 524,515 Archer shares, investing $6.6 million.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/cathie-wood-s-ark-invest-adds-archer-joby-shares-for-second-straight-day-retail-bulls-say-only-up-from-here/cZU9TxQRB6a?.tsrc=rss",
+   "published_at": "2026-10-28T04:20:41Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:42Z",
+   "fingerprint": "2abaa076da3272e8",
+   "primary_source": false,
+   "cluster_id": "351819667631f6a3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3a63258669853661",
+   "symbols": [
+    "ACHR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Archer Aviation Stock Took Flight on Tuesday",
+   "summary": "The eVTOL maker just got a big vote of confidence from a well-known name on Wall Street.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/10/27/why-archer-aviation-stock-took-flight-on-tuesday/?.tsrc=rss",
+   "published_at": "2026-10-27T23:16:15Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:32Z",
+   "fingerprint": "5b4c59b1cd57af4d",
+   "primary_source": false,
+   "cluster_id": "3a63258669853661",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c2ab5e3ff721b64e",
+   "symbols": [
+    "ACHR",
+    "JOBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Cathie Wood Cashes Out AI Chip Stocks, Adds These Aviation Plays",
+   "summary": "Cathie Wood sold big chunks of the two AI chip stocks, which hit record-highs earlier this month.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/f8b522d9-6997-32f6-ad32-2f16f7a640f8/cathie-wood-cashes-out-ai.html?.tsrc=rss",
+   "published_at": "2026-10-27T20:02:19Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:42Z",
+   "fingerprint": "1db6ab3352a955cf",
+   "primary_source": false,
+   "cluster_id": "c2ab5e3ff721b64e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "08278c388dbb145c",
+   "symbols": [
+    "ACHR",
+    "JOBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Archer Aviation Is Still Down 43% in 2026: Did ACHR Stock Just Find a Bottom?",
+   "summary": "Archer Aviation is bouncing hard while rivals Joby and EHang sink deeper into 2026 losses, but a pending acquisition, widening net losses, and an unfinished FAA certification process all pull in different directions. Whether today's rally signals a real turning point or a false f",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/27/archer-aviation-is-still-down-43-in-2026-did-achr-stock-just-find-a-bottom/?.tsrc=rss",
+   "published_at": "2026-10-27T18:36:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:42Z",
+   "fingerprint": "af0e092da5f7742d",
+   "primary_source": false,
+   "cluster_id": "08278c388dbb145c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

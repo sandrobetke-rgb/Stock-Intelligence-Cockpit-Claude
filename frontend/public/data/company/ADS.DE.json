@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 170.3000030517578,
     "day_low": 166.5,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 94.35214481454375,
+    "adx14": 31.319113262795188,
+    "ema10": 160.72517282998024,
+    "sma200": 153.84390350341798,
+    "perf_63d": 4.917528450305353,
+    "adr20_pct": 2.16497539050456,
+    "range10_pct": 7.912514180269281,
+    "high10_prev": 167.75,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": true,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
@@ -97,7 +128,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.6666666666666666,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": true,
@@ -140,14 +174,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 50.2,
+   "score": 59.7,
    "drivers": [
     "news_flow",
     "source_diversity",
-    "analyst_activity"
+    "freshness"
    ],
-   "independent_7d": 8,
-   "independent_24h": 0
+   "independent_7d": 9,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -225,7 +259,17 @@
     "green": true,
     "day_high": 170.3000030517578,
     "day_low": 166.5,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 94.35214481454375,
+    "adx14": 31.319113262795188,
+    "ema10": 160.72517282998024,
+    "sma200": 153.84390350341798,
+    "perf_63d": 4.917528450305353,
+    "adr20_pct": 2.16497539050456,
+    "range10_pct": 7.912514180269281,
+    "high10_prev": 167.75,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -255,6 +299,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": true,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
@@ -264,7 +329,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.6666666666666666,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": true,
@@ -602,11 +670,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 50.2,
+  "score": 59.7,
   "components": {
    "news_flow": 100.0,
-   "freshness": 0,
-   "source_diversity": 80,
+   "freshness": 50,
+   "source_diversity": 100.0,
    "primary_sources": 0,
    "analyst_activity": 35,
    "price_volume_anomaly": 14.7,
@@ -615,28 +683,28 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 8,
-    "independent": 8,
+    "signals": 9,
+    "independent": 9,
     "duplicates": 0,
-    "sources": 4,
+    "sources": 5,
     "primary": 0,
     "analyst_changes": 1,
     "verified": 0
    },
    "30d": {
-    "signals": 14,
-    "independent": 14,
+    "signals": 15,
+    "independent": 15,
     "duplicates": 0,
-    "sources": 6,
+    "sources": 7,
     "primary": 0,
     "analyst_changes": 2,
     "verified": 0
@@ -645,7 +713,7 @@
   "drivers": [
    "news_flow",
    "source_diversity",
-   "analyst_activity"
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -664,6 +732,29 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "73ef56ce0f2d818c",
+   "symbols": [
+    "ADS.DE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "England cricket team’s shirt-maker in cash squeeze",
+   "summary": "The England cricket team’s kit-maker is accused of failing to pay a key supplier, even as it seeks a £1bn sale.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "telegraph.co.uk",
+   "url": "https://www.telegraph.co.uk/business/2026/11/01/england-cricket-shirt-maker-in-cash-squeeze/?.tsrc=rss",
+   "published_at": "2026-11-01T06:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:45Z",
+   "fingerprint": "3518d4f9d305688f",
+   "primary_source": false,
+   "cluster_id": "73ef56ce0f2d818c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "England Cricket Team Shirt-Maker in Cash Squeeze"
+  },
   {
    "id": "5080138eecce97cc",
    "symbols": [

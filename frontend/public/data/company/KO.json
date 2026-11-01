@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -23,10 +23,10 @@
    "perf_63d": 8.958538290922768,
    "adr20": 1.604996209834347,
    "rvol": 1.0957222049525455,
-   "ema10": 92.54607185977775,
-   "ema21": 91.3921422103304,
+   "ema10": 92.54607185977773,
+   "ema21": 91.39214221018676,
    "sma50": 89.29514343261718,
-   "sma200": 81.38329193115234
+   "sma200": 81.38329147338867
   },
   "market_cap": 404722974720.0,
   "market_cap_currency": "USD",
@@ -34,17 +34,17 @@
    "tech": {
     "close": 94.08000183105469,
     "change_pct": 1.3574683692880063,
-    "ema20": 91.48623565505386,
-    "ema50": 89.36797909394897,
-    "ema200": 82.18434595277736,
+    "ema20": 91.48623565496143,
+    "ema50": 89.36797907316081,
+    "ema200": 82.18434573883697,
     "sma50": 89.29514343261718,
-    "rsi14": 62.69412544911573,
-    "rsi_min5": 53.22108366168106,
-    "atr14": 1.62364680135016,
-    "atr_pct": 1.7258150188664363,
+    "rsi14": 62.694125454782466,
+    "rsi_min5": 53.22108366719066,
+    "atr14": 1.623646801374681,
+    "atr_pct": 1.7258150188925,
     "rvol": 1.0957222049525455,
     "vol30": 16333436.666666666,
-    "dist_ema200_pct": 14.474357300491869,
+    "dist_ema200_pct": 14.474357598488874,
     "dist_52w_high_pct": 1.35262753316171,
     "high_52w": 95.37000274658203,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 95.08000183105469,
     "day_low": 93.94999694824219,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 87.64510464841868,
+    "adx14": 28.795918622346296,
+    "ema10": 92.54607185977773,
+    "sma200": 81.38329147338867,
+    "perf_63d": 8.958538290922768,
+    "adr20_pct": 1.604996209834347,
+    "range10_pct": 5.288143981782434,
+    "high10_prev": 95.37000274658203,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,16 +98,41 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": false
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
-    "S03"
+    "S03",
+    "DSM"
    ],
    "near": {
     "S01": 0.0,
     "S02": 0.7,
     "S03": 1.0,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 1.0,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": true,
@@ -110,9 +145,9 @@
    "plan": {
     "trigger": 95.08000183105469,
     "entry_max": 96.98160186767578,
-    "stop": 92.64453162902944,
-    "risk_per_share": 2.4354702020252432,
-    "target_1": 99.95094223510517,
+    "stop": 92.64453162899267,
+    "risk_per_share": 2.435470202062021,
+    "target_1": 99.95094223517873,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -137,7 +172,7 @@
    "top_factors": []
   },
   "market_intelligence": {
-   "score": 64.8,
+   "score": 65.5,
    "drivers": [
     "news_flow",
     "source_diversity",
@@ -155,10 +190,10 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 4,
+   "mentions_7d": 5,
    "manipulation_risk": "unauffällig",
    "mentions_24h": 2,
-   "sentiment_7d": 0.25,
+   "sentiment_7d": 0.2,
    "bullish_7d": 0,
    "bearish_7d": 0
   },
@@ -203,10 +238,10 @@
   "perf_63d": 8.958538290922768,
   "adr20": 1.604996209834347,
   "rvol": 1.0957222049525455,
-  "ema10": 92.54607185977775,
-  "ema21": 91.3921422103304,
+  "ema10": 92.54607185977773,
+  "ema21": 91.39214221018676,
   "sma50": 89.29514343261718,
-  "sma200": 81.38329193115234,
+  "sma200": 81.38329147338867,
   "volatility_ann": 16.802448027684278,
   "avg_dollar_volume_20d": 1520964471.1841965,
   "move_zscore": 1.2825001613532527,
@@ -214,17 +249,17 @@
    "tech": {
     "close": 94.08000183105469,
     "change_pct": 1.3574683692880063,
-    "ema20": 91.48623565505386,
-    "ema50": 89.36797909394897,
-    "ema200": 82.18434595277736,
+    "ema20": 91.48623565496143,
+    "ema50": 89.36797907316081,
+    "ema200": 82.18434573883697,
     "sma50": 89.29514343261718,
-    "rsi14": 62.69412544911573,
-    "rsi_min5": 53.22108366168106,
-    "atr14": 1.62364680135016,
-    "atr_pct": 1.7258150188664363,
+    "rsi14": 62.694125454782466,
+    "rsi_min5": 53.22108366719066,
+    "atr14": 1.623646801374681,
+    "atr_pct": 1.7258150188925,
     "rvol": 1.0957222049525455,
     "vol30": 16333436.666666666,
-    "dist_ema200_pct": 14.474357300491869,
+    "dist_ema200_pct": 14.474357598488874,
     "dist_52w_high_pct": 1.35262753316171,
     "high_52w": 95.37000274658203,
     "macd_above_signal": true,
@@ -238,7 +273,17 @@
     "green": false,
     "day_high": 95.08000183105469,
     "day_low": 93.94999694824219,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 87.64510464841868,
+    "adx14": 28.795918622346296,
+    "ema10": 92.54607185977773,
+    "sma200": 81.38329147338867,
+    "perf_63d": 8.958538290922768,
+    "adr20_pct": 1.604996209834347,
+    "range10_pct": 5.288143981782434,
+    "high10_prev": 95.37000274658203,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -268,16 +313,41 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": false
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
-    "S03"
+    "S03",
+    "DSM"
    ],
    "near": {
     "S01": 0.0,
     "S02": 0.7,
     "S03": 1.0,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 1.0,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": true,
@@ -290,9 +360,9 @@
    "plan": {
     "trigger": 95.08000183105469,
     "entry_max": 96.98160186767578,
-    "stop": 92.64453162902944,
-    "risk_per_share": 2.4354702020252432,
-    "target_1": 99.95094223510517,
+    "stop": 92.64453162899267,
+    "risk_per_share": 2.435470202062021,
+    "target_1": 99.95094223517873,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -612,7 +682,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 64.8,
+  "score": 65.5,
   "components": {
    "news_flow": 100.0,
    "freshness": 100.0,
@@ -620,7 +690,7 @@
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 38.5,
-   "social_attention": 58.0,
+   "social_attention": 64.6,
    "insider_activity": null
   },
   "windows": {
@@ -681,7 +751,8 @@
     "KO",
     "O",
     "PEP",
-    "PG"
+    "PG",
+    "XOM"
    ],
    "category": "market",
    "signal_type": "news",
@@ -1309,20 +1380,20 @@
  ],
  "social_detail": {
   "mentions_24h": 2,
-  "mentions_7d": 4,
-  "mentions_30d": 6,
-  "change_vs_baseline_pct": 600,
-  "engagement_7d": 5.0,
-  "sentiment_7d": 0.25,
+  "mentions_7d": 5,
+  "mentions_30d": 7,
+  "change_vs_baseline_pct": 367,
+  "engagement_7d": 9.0,
+  "sentiment_7d": 0.2,
   "sentiment_basis": "algorithmisch (Lexikon)",
   "bullish_7d": 0,
   "bearish_7d": 0,
   "by_platform_7d": {
-   "stocktwits": 3,
+   "stocktwits": 4,
    "reddit": 1
   },
   "communities_7d": {
-   "StockTwits": 3,
+   "StockTwits": 4,
    "r/wallstreetbets": 1
   },
   "platforms": [
@@ -1332,6 +1403,16 @@
   "manipulation_flags": [],
   "manipulation_risk": "unauffällig",
   "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "topstockalerts",
+    "posted_at": "2026-10-30T14:11:17Z",
+    "url": "https://stocktwits.com/topstockalerts/message/667761961",
+    "text": "As investors rotated out of tech, defensive areas such as consumer staples and healthcare saw gains. Procter &amp; Gamble\n, Walmart\n and Coca-Cola\n each rose around 2%, supporting Dow futures. Fellow Dow members Johnson &amp; Johnson\n and Merck\n added roughly 2%.\n\n“With renewed fears over AI Monetization, the Equity rotation is likely to continue today but the broader indices will reflect Tech’s d",
+    "engagement": 4.0,
+    "sentiment_label": null
+   },
    {
     "platform": "stocktwits",
     "community": "StockTwits",

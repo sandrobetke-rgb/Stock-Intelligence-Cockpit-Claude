@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 38.119998931884766,
     "day_low": 36.84000015258789,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 81.64763896200805,
+    "adx14": 39.05247622295849,
+    "ema10": 36.410483881048016,
+    "sma200": 52.366025104522706,
+    "perf_63d": -39.91326557027306,
+    "adr20_pct": 3.396096078283975,
+    "range10_pct": 12.89694477957324,
+    "high10_prev": 37.685001373291016,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -138,11 +172,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 0.4,
+   "score": 21.5,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -153,7 +189,14 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 0,
+   "manipulation_risk": "unauffällig",
+   "mentions_24h": 0,
+   "sentiment_7d": null,
+   "bullish_7d": 0,
+   "bearish_7d": 0
+  },
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
@@ -241,7 +284,17 @@
     "green": false,
     "day_high": 38.119998931884766,
     "day_low": 36.84000015258789,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 81.64763896200805,
+    "adx14": 39.05247622295849,
+    "ema10": 36.410483881048016,
+    "sma200": 52.366025104522706,
+    "perf_63d": -39.91326557027306,
+    "adr20_pct": 3.396096078283975,
+    "range10_pct": 12.89694477957324,
+    "high10_prev": 37.685001373291016,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -271,6 +324,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -278,7 +352,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -616,15 +693,15 @@
   ]
  },
  "intelligence_detail": {
-  "score": 0.4,
+  "score": 21.5,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 2.3,
-   "social_attention": null,
+   "social_attention": 0.0,
    "insider_activity": null
   },
   "windows": {
@@ -638,25 +715,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 7,
+    "independent": 7,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -675,7 +754,428 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "e12a9d60299dd740",
+   "symbols": [
+    "XENE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xenon Pharmaceuticals Reports Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+   "summary": "VANCOUVER, BC and BOSTON, MA, Oct. 30, 2026 (GLOBE NEWSWIRE) -- Xenon Pharmaceuticals Inc. (Nasdaq: XENE), a neuroscience-focused biopharmaceutical company dedicated to drug discovery, clinical development, and commercialization of life-changing therapeutics for patients in need,",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xenon-pharmaceuticals-reports-inducement-grants-200100858.html?.tsrc=rss",
+   "published_at": "2026-10-30T20:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "9eeab3fc86fe4458",
+   "primary_source": false,
+   "cluster_id": "e12a9d60299dd740",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "028c0e9951d92fba",
+   "symbols": [
+    "XENE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xenon Announces Positive Phase 1 and New Preclinical Data at IASP 2026 Supporting Advancement of XEN1701 and XEN1120 to Phase 2 Proof-of-Concept Studies in Acute Pain",
+   "summary": "XEN1701 achieved target profile, including desired NaV1.7 receptor occupancy in both the peripheral and central nervous system, and was generally well-tolerated with no notable autonomic cardiovascular effectsXEN1120 achieved plasma levels predictive of analgesic effects based on",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xenon-announces-positive-phase-1-123000840.html?.tsrc=rss",
+   "published_at": "2026-10-29T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "d29d18fecdb59954",
+   "primary_source": false,
+   "cluster_id": "028c0e9951d92fba",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1707884f8fda8257",
+   "symbols": [
+    "RAPP",
+    "XENE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Inside the $1 Billion Blockbuster Opportunity Sending Rapport Therapeutics Stock Higher",
+   "summary": "Positive trial data for Rapport’s lead pipeline candidate, RAP-219, a treatment for bipolar mania, points to a potential $1 billion peak sales opportunity, Jefferies says.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/121b505e-971e-307d-bbaf-0570a2881dc3/inside-the-%241-billion.html?.tsrc=rss",
+   "published_at": "2026-10-20T19:46:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:05Z",
+   "fingerprint": "58bc4a4a88f102e6",
+   "primary_source": false,
+   "cluster_id": "1707884f8fda8257",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "686948a7d0c68fc5",
+   "symbols": [
+    "VNDA",
+    "XENE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "XENE's Depression Trial Setback: Is Its Pipeline Still Attractive?",
+   "summary": "Xenon pauses enrollment in late-stage depression trials after unexpected side effects, while its epilepsy pipeline offers growth potential.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xenes-depression-trial-setback-pipeline-160500356.html?.tsrc=rss",
+   "published_at": "2026-10-15T16:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:46:16Z",
+   "fingerprint": "00ab1ba741ad4e68",
+   "primary_source": false,
+   "cluster_id": "686948a7d0c68fc5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "67a06d89bba7c941",
+   "symbols": [
+    "XENE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Xenon Pharmaceuticals (XENE) Is Getting Attention Now",
+   "summary": "Xenon Pharmaceuticals (XENE) has drawn fresh attention after a sharp pullback, with the stock down about 38% over the past month and roughly 47% over the past 3 months. The recent slide comes after a softer year overall for Xenon Pharmaceuticals, with the share price return down ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-xenon-pharmaceuticals-xene-getting-231010016.html?.tsrc=rss",
+   "published_at": "2026-10-09T23:10:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "cfd5130bc94446e1",
+   "primary_source": false,
+   "cluster_id": "67a06d89bba7c941",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3a8b951e109152e2",
+   "symbols": [
+    "XENE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xenon Pharmaceuticals (XENE) Stock May Still Look Above Fair Value On Its Research Pipeline",
+   "summary": "Xenon Pharmaceuticals has seen a sharp reset in sentiment recently, with the share price falling 39.3% over the past month. After that kind of slide, the immediate question for investors is whether the current market value still lines up with what the company’s balance sheet and ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xenon-pharmaceuticals-xene-stock-may-141401053.html?.tsrc=rss",
+   "published_at": "2026-10-09T14:14:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "bd22224e56ef28c7",
+   "primary_source": false,
+   "cluster_id": "3a8b951e109152e2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "98548deff9c006da",
+   "symbols": [
+    "XENE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Insiders Are Buying These 2 ‘Strong Buy’ Stocks With Over 60% Upside",
+   "summary": "Insider activity can provide investors with useful clues about how corporate leaders view their own companies. Executives and directors have firsthand knowledge of their businesses, making their disclosed stock transactions worth following. Insider sales can happen for many reaso",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/insiders-buying-2-strong-buy-175700829.html?.tsrc=rss",
+   "published_at": "2026-10-07T17:57:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "1988260351f16e7f",
+   "primary_source": false,
+   "cluster_id": "98548deff9c006da",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2d95bf7525cf5db2",
+   "symbols": [
+    "XENE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xenon’s Insider Buying Tops $1.6M – XENE Stock Heads For Best Day In Over Month",
+   "summary": "CEO Ian Mortimer and CFO Thomas Kelly purchased 45,000 shares of XENE in the open market.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/xenon-insider-buying-tops-1-6-m-xene-stock-heads-for-best-day-in-over-month/cZD0BUqRB0T?.tsrc=rss",
+   "published_at": "2026-10-01T16:10:35Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "855ae7a62de04818",
+   "primary_source": false,
+   "cluster_id": "2d95bf7525cf5db2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "004cee8646bfb73d",
+   "symbols": [
+    "XENE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xenon's AZK Approval Path Unlikely to Be Hurt by Safety Issues, RBC Says",
+   "summary": "Xenon Pharmaceuticals' (XENE) safety data has raised investor concerns about a potential Food and Dr",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xenon-apos-azk-approval-path-150207394.html?.tsrc=rss",
+   "published_at": "2026-10-01T15:02:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "d08b6a46e949d51f",
+   "primary_source": false,
+   "cluster_id": "004cee8646bfb73d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d61d629ae34ce2a6",
+   "symbols": [
+    "XENE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Ian Mortimer Receives the 2026 Bloom Burton Award",
+   "summary": "Toronto, Ontario--(Newsfile Corp. - September 29, 2026) - Bloom Burton & Co. (\"Bloom Burton\") is pleased to announce Ian Mortimer, President and Chief Executive Officer of Xenon Pharmaceuticals, as the recipient of the 2026 Bloom Burton Award. 2026 Bloom Burton Award Winner Ian M",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/ian-mortimer-receives-2026-bloom-120000292.html?.tsrc=rss",
+   "published_at": "2026-09-29T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "0f4f9b8f06240ee2",
+   "primary_source": false,
+   "cluster_id": "d61d629ae34ce2a6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cf60422d7545abd4",
+   "symbols": [
+    "XENE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Defence Therapeutics Appoints Finance Executive Sherry Aulin to Its Board of Directors",
+   "summary": "Montreal, Quebec--(Newsfile Corp. - September 29, 2026) - Defence Therapeutics Inc. (CSE: DTC) (OTCQB: DTCFF) (FSE: DTC), (\"Defence\" or the \"Company\"), a publicly traded biotechnology company developing next-generation precision oncology therapeutics using its proprietary Accum® ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/defence-therapeutics-appoints-finance-executive-071500606.html?.tsrc=rss",
+   "published_at": "2026-09-29T07:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "1a3eeda98592cb8a",
+   "primary_source": false,
+   "cluster_id": "cf60422d7545abd4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "aa136fe737833868",
+   "symbols": [
+    "XENE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xenon Files Azetukalner NDA as It Pauses Psychiatry Trials for Tolerability Review",
+   "summary": "Xenon Pharmaceuticals (NASDAQ:XENE) said it has filed its first new drug application for azetukalner as a treatment for focal-onset seizures, while pausing portions of its late-stage psychiatry program to evaluate changes intended to improve tolerability. Speaking at the 2026 TD ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-xenon-files-azetukalner-nda-as-it-pauses-psychiatry-trials-for-tolerability-review-2026-09-27/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-09-27T16:02:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "56e8d8d89f16da33",
+   "primary_source": false,
+   "cluster_id": "aa136fe737833868",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e1e67ba8173d2926",
+   "symbols": [
+    "XENE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xenon Pharmaceuticals (XENE) Seeks Epilepsy Approval. Can its Drug Overcome a Depression Setback?",
+   "summary": "Xenon Pharmaceuticals Inc. (NASDAQ:XENE) advanced its epilepsy program while encountering a new obstacle to expansion. On September 17, it submitted a New Drug Application to the U.S. Food and Drug Administration for azetukalner in focal seizures, which originate in a specific ar",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xenon-pharmaceuticals-xene-seeks-epilepsy-000808683.html?.tsrc=rss",
+   "published_at": "2026-09-23T00:08:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "625d1b0a57e56d5a",
+   "primary_source": false,
+   "cluster_id": "e1e67ba8173d2926",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b1f0b0f1c01b547f",
+   "symbols": [
+    "XENE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xenon stock lost 30%, but the FDA story is more complicated",
+   "summary": "Wall Street reacts as the drugmaker’s experimental medication hits a roadblock.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "thestreet.com",
+   "url": "https://www.thestreet.com/health/xenon-stock-falls-azetukalner-depression-seizure-medication-fda?.tsrc=rss",
+   "published_at": "2026-09-22T00:03:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "045cc5535c346d60",
+   "primary_source": false,
+   "cluster_id": "b1f0b0f1c01b547f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "73560cb661eaa445",
+   "symbols": [
+    "XENE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xenon to Present at TD Cowen Novel Mechanisms in Neuropsychiatry & Epilepsy Summit",
+   "summary": "VANCOUVER, BC and BOSTON, MA, Sept. 21, 2026 (GLOBE NEWSWIRE) -- Xenon Pharmaceuticals Inc. (Nasdaq: XENE), a neuroscience-focused biopharmaceutical company dedicated to drug discovery, clinical development and commercialization of life-changing therapeutics for patients in need,",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xenon-present-td-cowen-novel-200100702.html?.tsrc=rss",
+   "published_at": "2026-09-21T20:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "eb2b34110409e71d",
+   "primary_source": false,
+   "cluster_id": "73560cb661eaa445",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f1cd55b2d2b34ee1",
+   "symbols": [
+    "XENE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Company News for Sep 21, 2026",
+   "summary": "Companies in The News Are: STLD,XENE,AMD,TXN",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/company-news-sep-21-2026-132200831.html?.tsrc=rss",
+   "published_at": "2026-09-21T13:22:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "06f721c0470b6a41",
+   "primary_source": false,
+   "cluster_id": "f1cd55b2d2b34ee1",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7bc02b6f1716122e",
+   "symbols": [
+    "XENE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xenon Pharmaceuticals Stock Sinks 31% After Pausing Depression Study Enrollment",
+   "summary": "Key Stats for Xenon Pharmaceuticals StockPrice change for Xenon Pharmaceuticals stock: -31%$XENE Stock Price as of Sep. 19: $4052-Week High: $73$XENE Stock Price Target: $78What Happened?Xenon Pharmaceuticals (XENE) stock is under pressure after the company paused enrollment in i",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/xenon-pharmaceuticals-stock-sinks-depression-study-pause?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-09-21T11:37:27Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "b06e1d12dd144ab2",
+   "primary_source": false,
+   "cluster_id": "7bc02b6f1716122e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5eb4a9ad9401c727",
+   "symbols": [
+    "XENE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Xenon Pharmaceuticals (XENE) Is Down 32.2% After Pausing Psychiatry Trials Despite Positive NDA Data",
+   "summary": "Earlier this month, Xenon Pharmaceuticals submitted a New Drug Application to the US FDA for azetukalner in focal seizures, supported by two randomized, double-blind, placebo-controlled trials showing statistically significant seizure reduction and a generally consistent safety p",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/why-xenon-pharmaceuticals-xene-down-002009302.html?.tsrc=rss",
+   "published_at": "2026-09-20T00:20:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "61488f9e1d7c5ea0",
+   "primary_source": false,
+   "cluster_id": "5eb4a9ad9401c727",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c5dab2bed3617a4f",
+   "symbols": [
+    "XENE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "This Biotech Surged 50% On Positive Data In March. Now, It's Completely Gone.",
+   "summary": "Xenon Pharmaceuticals voluntarily halted enrollment in a handful of studies Friday due to several unexpected side effects. The biotech stock crashed to a 10-month low.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/2fce6acf-ffeb-3058-b267-ced8ca538b51/this-biotech-surged-50%25-on.html?.tsrc=rss",
+   "published_at": "2026-09-18T20:08:44Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "42b1ce8d3c57f144",
+   "primary_source": false,
+   "cluster_id": "c5dab2bed3617a4f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "f728853644cd6f41",
@@ -721,6 +1221,22 @@
    "report_date": "2026-06-30"
   }
  ],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 0,
+  "mentions_7d": 0,
+  "mentions_30d": 0,
+  "change_vs_baseline_pct": null,
+  "engagement_7d": 0,
+  "sentiment_7d": null,
+  "sentiment_basis": "algorithmisch (Lexikon)",
+  "bullish_7d": 0,
+  "bearish_7d": 0,
+  "by_platform_7d": {},
+  "communities_7d": {},
+  "platforms": [],
+  "manipulation_flags": [],
+  "manipulation_risk": "unauffällig",
+  "top_posts": []
+ },
  "history": []
 }

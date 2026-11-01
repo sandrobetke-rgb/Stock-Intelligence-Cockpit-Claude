@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 2.0610054818645196,
    "rvol": 0.6616915422885572,
    "ema10": 19.77009056304461,
-   "ema21": 19.842342758252578,
+   "ema21": 19.84234275825297,
    "sma50": 20.26409652709961,
-   "sma200": 18.914435834884642
+   "sma200": 18.91443588256836
   },
   "market_cap": 351450880.0,
   "market_cap_currency": "USD",
@@ -34,17 +34,17 @@
    "tech": {
     "close": 19.549999237060547,
     "change_pct": -1.4120054852384434,
-    "ema20": 19.83370728967249,
-    "ema50": 20.003498059963427,
-    "ema200": 18.808679078355862,
+    "ema20": 19.83370728967269,
+    "ema50": 20.0034980607576,
+    "ema200": 18.808679124972848,
     "sma50": 20.26409652709961,
-    "rsi14": 41.10184960703378,
-    "rsi_min5": 41.10184960703378,
-    "atr14": 0.42678881177011396,
-    "atr_pct": 2.183063061000324,
+    "rsi14": 41.1018496061166,
+    "rsi_min5": 41.1018496061166,
+    "atr14": 0.4267888117689955,
+    "atr_pct": 2.1830630609946033,
     "rvol": 0.6616915422885572,
     "vol30": 63776.666666666664,
-    "dist_ema200_pct": 3.9413727865544868,
+    "dist_ema200_pct": 3.941372528937581,
     "dist_52w_high_pct": 8.952977870364776,
     "high_52w": 21.47242027226846,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 19.8700008392334,
     "day_low": 19.530000686645508,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 11.822279779328667,
+    "adx14": 13.587883734187058,
+    "ema10": 19.77009056304461,
+    "sma200": 18.91443588256836,
+    "perf_63d": -5.051589337700236,
+    "adr20_pct": 2.0610054818645196,
+    "range10_pct": 4.683478297062615,
+    "high10_prev": 20.34000015258789,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 19.8700008392334,
     "entry_max": 20.267400856018067,
-    "stop": 19.229817621578228,
-    "risk_per_share": 0.6401832176551707,
-    "target_1": 21.15036727454374,
+    "stop": 19.229817621579905,
+    "risk_per_share": 0.6401832176534938,
+    "target_1": 21.150367274540386,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -138,11 +172,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 7.8,
+   "score": 31.4,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -207,9 +243,9 @@
   "adr20": 2.0610054818645196,
   "rvol": 0.6616915422885572,
   "ema10": 19.77009056304461,
-  "ema21": 19.842342758252578,
+  "ema21": 19.84234275825297,
   "sma50": 20.26409652709961,
-  "sma200": 18.914435834884642,
+  "sma200": 18.91443588256836,
   "volatility_ann": 15.13660056777585,
   "avg_dollar_volume_20d": 1120056.7671871185,
   "move_zscore": -1.4808405680281251,
@@ -217,17 +253,17 @@
    "tech": {
     "close": 19.549999237060547,
     "change_pct": -1.4120054852384434,
-    "ema20": 19.83370728967249,
-    "ema50": 20.003498059963427,
-    "ema200": 18.808679078355862,
+    "ema20": 19.83370728967269,
+    "ema50": 20.0034980607576,
+    "ema200": 18.808679124972848,
     "sma50": 20.26409652709961,
-    "rsi14": 41.10184960703378,
-    "rsi_min5": 41.10184960703378,
-    "atr14": 0.42678881177011396,
-    "atr_pct": 2.183063061000324,
+    "rsi14": 41.1018496061166,
+    "rsi_min5": 41.1018496061166,
+    "atr14": 0.4267888117689955,
+    "atr_pct": 2.1830630609946033,
     "rvol": 0.6616915422885572,
     "vol30": 63776.666666666664,
-    "dist_ema200_pct": 3.9413727865544868,
+    "dist_ema200_pct": 3.941372528937581,
     "dist_52w_high_pct": 8.952977870364776,
     "high_52w": 21.47242027226846,
     "macd_above_signal": true,
@@ -241,7 +277,17 @@
     "green": false,
     "day_high": 19.8700008392334,
     "day_low": 19.530000686645508,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 11.822279779328667,
+    "adx14": 13.587883734187058,
+    "ema10": 19.77009056304461,
+    "sma200": 18.91443588256836,
+    "perf_63d": -5.051589337700236,
+    "adr20_pct": 2.0610054818645196,
+    "range10_pct": 4.683478297062615,
+    "high10_prev": 20.34000015258789,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -271,6 +317,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -278,7 +345,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -291,9 +361,9 @@
    "plan": {
     "trigger": 19.8700008392334,
     "entry_max": 20.267400856018067,
-    "stop": 19.229817621578228,
-    "risk_per_share": 0.6401832176551707,
-    "target_1": 21.15036727454374,
+    "stop": 19.229817621579905,
+    "risk_per_share": 0.6401832176534938,
+    "target_1": 21.150367274540386,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -530,11 +600,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 7.8,
+  "score": 31.4,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 44.4,
@@ -552,26 +622,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -589,7 +661,432 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "8039c1df1c9f2d19",
+   "symbols": [
+    "WSBF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "The Zacks Analyst Blog Highlights Alphabet, ExxonMobil, Toyota, Waterstone Financial and AXIL Brands",
+   "summary": "Alphabet's AI-driven growth, ExxonMobil's production strengths and Toyota's hybrid strategy headline research reports alongside insights on two micro-cap stocks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-alphabet-073900537.html?.tsrc=rss",
+   "published_at": "2026-10-28T07:39:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "d02eaa65d833f479",
+   "primary_source": false,
+   "cluster_id": "8039c1df1c9f2d19",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "913c1487749136ce",
+   "symbols": [
+    "WFC",
+    "WSBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Top Research Reports for Alphabet, ExxonMobil & Toyota Motor",
+   "summary": "Alphabet, ExxonMobil and Toyota Motor headline today's top research reports, highlighting AI growth, energy cash generation and hybrid vehicle opportunities.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/top-research-reports-alphabet-exxonmobil-190900718.html?.tsrc=rss",
+   "published_at": "2026-10-27T19:09:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:35Z",
+   "fingerprint": "87a56d49739aa31a",
+   "primary_source": false,
+   "cluster_id": "913c1487749136ce",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bf3efef0647f971c",
+   "symbols": [
+    "NECB",
+    "WSBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "4 Dividend Stocks With October Payout Deadlines Right Around the Corner",
+   "summary": "Four dividend stocks have ex-dividend deadlines in the next 48 hours, and one of them stops qualifying at today's close. Yields, earnings coverage, and a few red flags worth knowing before the window shuts.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/07/4-dividend-stocks-with-october-payout-deadlines-right-around-the-corner/?.tsrc=rss",
+   "published_at": "2026-10-07T15:15:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:11Z",
+   "fingerprint": "1bd4c293355122a0",
+   "primary_source": false,
+   "cluster_id": "bf3efef0647f971c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b3a18dea0f51bc1d",
+   "symbols": [
+    "TSBK",
+    "WSBF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WSBF vs. TSBK: Which Community Lender is the Better Buy?",
+   "summary": "Waterstone Financial's spread income, mortgage strength and capital position support growth, while Timberland gains from rising loans, deposits and earnings. Which is the better buy?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wsbf-vs-tsbk-community-lender-171100565.html?.tsrc=rss",
+   "published_at": "2026-09-25T17:11:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:45:19Z",
+   "fingerprint": "648369d47463bae1",
+   "primary_source": false,
+   "cluster_id": "b3a18dea0f51bc1d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0cb72bfb41a30fc8",
+   "symbols": [
+    "WSBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Waterstone Financial Declares Regular Quarterly Cash Dividend",
+   "summary": "WAUWATOSA, Wis., Sept. 22, 2026 (GLOBE NEWSWIRE) -- The Board of Directors of Waterstone Financial, Inc. (NASDAQ: WSBF) declared a regular quarterly cash dividend of $0.17 per common share. The dividend is payable on November 2, 2026, to shareholders of record at the close of bus",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/waterstone-financial-declares-regular-quarterly-200100854.html?.tsrc=rss",
+   "published_at": "2026-09-22T20:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "b8c1a3fcf09ccf12",
+   "primary_source": false,
+   "cluster_id": "0cb72bfb41a30fc8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3cf247822375d4f9",
+   "symbols": [
+    "GSBC",
+    "HFWA",
+    "WSBF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WSBF Surges 43% in a Year: Reason to Buy the Stock Now?",
+   "summary": "Improving margins, stronger mortgage volumes, loan growth and solid credit quality are strengthening Waterstone Financial's earnings outlook and financial flexibility.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wsbf-surges-43-reason-buy-175000452.html?.tsrc=rss",
+   "published_at": "2026-09-03T17:50:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:51Z",
+   "fingerprint": "5ed30ad88af9e79a",
+   "primary_source": false,
+   "cluster_id": "3cf247822375d4f9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f16adf2fc4ed8fa8",
+   "symbols": [
+    "WSBF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "The Zacks Analyst Blog Highlights Costco, Chevron, Home Depot, IDT and Waterstone Financial",
+   "summary": "Costco, Chevron and Home Depot headline Zacks' latest research, with microcaps IDT and Waterstone adding notable growth and earnings trends.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-costco-145500969.html?.tsrc=rss",
+   "published_at": "2026-08-11T14:55:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "e32083eaa88ab0cb",
+   "primary_source": false,
+   "cluster_id": "f16adf2fc4ed8fa8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "061e10dda503cf30",
+   "symbols": [
+    "WSBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Top Analyst Reports for Costco, Chevron & Home Depot",
+   "summary": "Costco, Chevron and Home Depot highlight growth opportunities, from membership strength and production gains to digital and Pro initiatives.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/top-analyst-reports-costco-chevron-202100592.html?.tsrc=rss",
+   "published_at": "2026-08-10T20:21:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "43e590d3de8244d9",
+   "primary_source": false,
+   "cluster_id": "061e10dda503cf30",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "814ae5c5b8f20fc0",
+   "symbols": [
+    "WSBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Waterstone Financial's Q2 Earnings Up Y/Y on Loan Yield Gains",
+   "summary": "WSBF's Q2 earnings per share rise year over year on higher net interest income, improved margins and community banking strength, while mortgage banking faces pressure from softer sales margins.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/waterstone-financials-q2-earnings-y-151300688.html?.tsrc=rss",
+   "published_at": "2026-07-30T15:13:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "32c2fa0d8a49da95",
+   "primary_source": false,
+   "cluster_id": "814ae5c5b8f20fc0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8408d6113d62167e",
+   "symbols": [
+    "WSBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Waterstone Financial, Inc. Announces Results of Operations for the Quarter and Six Months Ended June 30, 2026",
+   "summary": "WAUWATOSA, Wis., July 23, 2026 (GLOBE NEWSWIRE) -- Waterstone Financial, Inc. (NASDAQ: WSBF), holding company for WaterStone Bank, reported net income of $8.5 million, or $0.49 per diluted share, for the quarter ended June 30, 2026 compared to $7.7 million, or $0.43 per diluted s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/waterstone-financial-inc-announces-results-200100496.html?.tsrc=rss",
+   "published_at": "2026-07-23T20:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "6e1e0bad7c838650",
+   "primary_source": false,
+   "cluster_id": "8408d6113d62167e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "45117f5e8958fc00",
+   "symbols": [
+    "WSBF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "The Zacks Analyst Blog  NVIDIA, Mastercard, AbbVie, Waterstone and Precipio",
+   "summary": "AI demand and pipeline growth headline top Zacks stock reports on NVIDIA, Mastercard and AbbVie.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/zacks-analyst-blog-nvidia-mastercard-101200445.html?.tsrc=rss",
+   "published_at": "2026-05-13T10:12:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "336a1c59660965e0",
+   "primary_source": false,
+   "cluster_id": "45117f5e8958fc00",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "76142202a4a1aefb",
+   "symbols": [
+    "WSBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Top Stock Reports for NVIDIA, Mastercard & AbbVie",
+   "summary": "NVIDIA, Mastercard and AbbVie headline Zacks' top stock reports, with AI growth, payment trends and drug launches in focus.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/top-stock-reports-nvidia-mastercard-202800878.html?.tsrc=rss",
+   "published_at": "2026-05-12T20:28:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "e445056bdabed80b",
+   "primary_source": false,
+   "cluster_id": "76142202a4a1aefb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "67126f55c7c91d81",
+   "symbols": [
+    "WSBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Waterstone Financial's Q1 Earnings Jump Y/Y on Mortgage Growth",
+   "summary": "WSBF doubles its Q1 earnings per share on a year-over-year basis on margin expansion and stronger mortgage activity, though higher compensation costs act as a partial offset.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/waterstone-financials-q1-earnings-jump-162300794.html?.tsrc=rss",
+   "published_at": "2026-04-29T16:23:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "4d03c2bac99bd134",
+   "primary_source": false,
+   "cluster_id": "67126f55c7c91d81",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1d97d04e310ba9e6",
+   "symbols": [
+    "WSBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Waterstone Financial, Inc. Announces Expansion of Share Repurchase Program",
+   "summary": "WAUWATOSA, Wis., April 27, 2026 (GLOBE NEWSWIRE) -- Waterstone Financial, Inc. (NASDAQ: WSBF) (the “Company”) announced that on April 27, 2026, its Board of Directors authorized the repurchase of up to an additional 2,000,000 shares of the Company’s outstanding shares of common s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/waterstone-financial-inc-announces-expansion-200100133.html?.tsrc=rss",
+   "published_at": "2026-04-27T20:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "de97b35d4d895407",
+   "primary_source": false,
+   "cluster_id": "1d97d04e310ba9e6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f09b92a93f09269e",
+   "symbols": [
+    "WSBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Waterstone Financial, Inc. Announces Results of Operations for the Three Months Ended March 31, 2026",
+   "summary": "WAUWATOSA, Wis., April 23, 2026 (GLOBE NEWSWIRE) -- Waterstone Financial, Inc. (NASDAQ: WSBF), holding company for WaterStone Bank, reported net income of $6.0 million, or $0.34 per diluted share, for the quarter ended March 31, 2026, compared to $3.0 million, or $0.17 per dilute",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/waterstone-financial-inc-announces-results-200100072.html?.tsrc=rss",
+   "published_at": "2026-04-23T20:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "b89b0186a7bd8f9e",
+   "primary_source": false,
+   "cluster_id": "f09b92a93f09269e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cccc81a50c3432bc",
+   "symbols": [
+    "WSBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Waterstone Financial Raises Quarterly Cash Dividend by 13.3%",
+   "summary": "WAUWATOSA, Wis., March 17, 2026 (GLOBE NEWSWIRE) -- On March 17, 2026, the Board of Directors of Waterstone Financial, Inc. (NASDAQ: WSBF) declared a regular quarterly cash dividend of $0.17 per common share, a 13.3% increase compared to the prior quarterly dividend. “Today's ann",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/waterstone-financial-raises-quarterly-cash-200600973.html?.tsrc=rss",
+   "published_at": "2026-03-17T20:06:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "6f0a1f4f01843962",
+   "primary_source": false,
+   "cluster_id": "cccc81a50c3432bc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "14d68cdd9dfdf2b3",
+   "symbols": [
+    "WSBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Top Analyst Reports for Amazon, Micron Technology & Bank of America",
+   "summary": "Amazon's push across e-commerce, AWS, ads and streaming lifts growth outlook, but heavy AI infrastructure spending and rising debt pressure margins.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/top-analyst-reports-amazon-micron-202800589.html?.tsrc=rss",
+   "published_at": "2026-03-10T20:28:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "594a13834c33e468",
+   "primary_source": false,
+   "cluster_id": "14d68cdd9dfdf2b3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4921d1f96cd1145a",
+   "symbols": [
+    "WSBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WSBF's Q4 Earnings Jump 57% Y/Y on Margin Expansion, Credit Gains",
+   "summary": "Waterstone Financial posts strong Q4 2025 results, with EPS up 57%, boosted by rising net interest income, loan yield expansion and a return to profitability in Mortgage Banking.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/wsbfs-q4-earnings-jump-57-180100222.html?.tsrc=rss",
+   "published_at": "2026-02-03T18:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "24b04e594c0deb97",
+   "primary_source": false,
+   "cluster_id": "4921d1f96cd1145a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "87fa49cfeefbd428",
+   "symbols": [
+    "GCBC",
+    "WSBF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Discovering US Market Undiscovered Gems in February 2026",
+   "summary": "As February 2026 unfolds, the U.S. stock market is experiencing a robust start with major indices like the Dow Jones Industrial Average and S&amp;P 500 climbing significantly higher, driven by positive economic indicators such as an unexpected expansion in manufacturing activity.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/discovering-us-market-undiscovered-gems-173330652.html?.tsrc=rss",
+   "published_at": "2026-02-03T17:33:30Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:36:00Z",
+   "fingerprint": "d576c77316be05a2",
+   "primary_source": false,
+   "cluster_id": "87fa49cfeefbd428",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

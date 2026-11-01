@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 55.75,
     "day_low": 53.470001220703125,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 15.547987662103438,
+    "adx14": 18.293042893937045,
+    "ema10": 56.39166288860608,
+    "sma200": 47.38654999732971,
+    "perf_63d": 1.4441818519427052,
+    "adr20_pct": 2.684505402429589,
+    "range10_pct": 8.729144035920422,
+    "high10_prev": 59.290000915527344,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.0
    },
    "filter": {
     "Tag grün": false,
@@ -139,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 6.0,
+   "score": 22.2,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -236,7 +272,17 @@
     "green": false,
     "day_high": 55.75,
     "day_low": 53.470001220703125,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 15.547987662103438,
+    "adx14": 18.293042893937045,
+    "ema10": 56.39166288860608,
+    "sma200": 47.38654999732971,
+    "perf_63d": 1.4441818519427052,
+    "adr20_pct": 2.684505402429589,
+    "range10_pct": 8.729144035920422,
+    "high10_prev": 59.290000915527344,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -266,6 +312,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -273,7 +340,10 @@
     "S01": 0.5,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.0
    },
    "filter": {
     "Tag grün": false,
@@ -612,11 +682,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.0,
+  "score": 22.2,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 34.0,
@@ -634,26 +704,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 5,
+    "independent": 5,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -671,7 +743,407 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "355c4cc7176789e4",
+   "symbols": [
+    "ZD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zedge (ZDGE) Stock Fair Value Falls As Margin View Weakens On Traffic Risks",
+   "summary": "Zedge now sits under a revised analyst fair value estimate of US$4.00, down from US$6.00, which represents a cut of about one third in the modeled equity value. Recent research on Ziff Davis, Zedge’s parent, links this reset to ongoing questions around web traffic trends, search ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zedge-zdge-stock-fair-value-062654440.html?.tsrc=rss",
+   "published_at": "2026-10-29T06:26:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:12Z",
+   "fingerprint": "c61050c752ab9c9a",
+   "primary_source": false,
+   "cluster_id": "355c4cc7176789e4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "74a6160900d6ea7c",
+   "symbols": [
+    "ZD"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ziff Davis to Announce Third Quarter 2026 Earnings",
+   "summary": "NEW YORK, October 15, 2026--Ziff Davis, Inc. (NASDAQ: ZD) will release its Third Quarter 2026 Earnings at 6:00PM ET on Thursday, November 5, 2026. Additionally, Ziff Davis invites the public, members of the press, the financial community, stockholders, and other interested partie",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ziff-davis-announce-third-quarter-110000773.html?.tsrc=rss",
+   "published_at": "2026-10-15T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:12Z",
+   "fingerprint": "44031cf1f5c49600",
+   "primary_source": false,
+   "cluster_id": "74a6160900d6ea7c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "351bf6d4e40bf711",
+   "symbols": [
+    "ZD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "2 Momentum  Stocks on Our Buy List and 1 We Find Risky",
+   "summary": "Each stock in this article is trading near its 52-week high. These elevated prices usually indicate some degree of investor confidence, business improvements, or favorable market conditions.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/2-momentum-stocks-buy-list-152703866.html?.tsrc=rss",
+   "published_at": "2026-10-12T15:27:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:12Z",
+   "fingerprint": "f21179ddc5ac4e87",
+   "primary_source": false,
+   "cluster_id": "351bf6d4e40bf711",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0e4deee311478833",
+   "symbols": [
+    "ZD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "IPVanish Launches Next-Generation Antivirus, Bringing VPN Privacy and Device Security Together in One App",
+   "summary": "NEW YORK, October 07, 2026--IPVanish, a leading provider of online privacy and security solutions, today announced the official release of its next-generation Antivirus for Windows and macOS alongside a new three-tier plan lineup and refreshed brand identity. The updates mark a m",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/ipvanish-launches-next-generation-antivirus-140000832.html?.tsrc=rss",
+   "published_at": "2026-10-07T14:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:12Z",
+   "fingerprint": "aed0a906cbf2880b",
+   "primary_source": false,
+   "cluster_id": "0e4deee311478833",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3fb845c2ed989f13",
+   "symbols": [
+    "ZD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Value Stocks with Open Questions",
+   "summary": "Value investing has produced some of the world’s most famous investing billionaires, including Warren Buffett, David Einhorn, and Seth Klarman, who built their fortunes by purchasing wonderful businesses at reasonable prices. But these hidden gems are few and far between - many s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-value-stocks-open-questions-130434921.html?.tsrc=rss",
+   "published_at": "2026-10-06T13:04:34Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:12Z",
+   "fingerprint": "a8ed09bb7e12084f",
+   "primary_source": false,
+   "cluster_id": "3fb845c2ed989f13",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f215566255772a6b",
+   "symbols": [
+    "HNI",
+    "ZD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "2 Services Stocks to Own for Decades and 1 We Avoid",
+   "summary": "Business services providers thrive by solving complex operational challenges for their clients, allowing them to focus on their secret sauce. These firms have helped their customers unlock huge efficiencies, so it’s no surprise the industry has posted a 21% gain over the past six",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/2-services-stocks-own-decades-150437641.html?.tsrc=rss",
+   "published_at": "2026-09-25T15:04:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:10:19Z",
+   "fingerprint": "870d1071bf28293c",
+   "primary_source": false,
+   "cluster_id": "f215566255772a6b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9bd21a8a3b44aa75",
+   "symbols": [
+    "ZD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "RetailMeNot Launches App Week With Exclusive Cash Back Deals Across 7 Top Shopping Categories",
+   "summary": "Today, RetailMeNot kicks off App Week, a seven-day shopping event offering RetailMeNot Rewards app users exclusive, limited-time cash back offers across seven categories, from home and travel to electronics, beauty, fashion, pets and sports.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/retailmenot-launches-app-week-exclusive-131000131.html?.tsrc=rss",
+   "published_at": "2026-09-21T13:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:12Z",
+   "fingerprint": "fec7a9714cc288a5",
+   "primary_source": false,
+   "cluster_id": "9bd21a8a3b44aa75",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "280cdfd984f98204",
+   "symbols": [
+    "ZD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Reasons ZD is Risky and 1 Stock to Buy Instead",
+   "summary": "What a fantastic six months it’s been for Ziff Davis. Shares of the company have skyrocketed 94.3%, hitting $54.44. This was partly thanks to its solid quarterly results, and the run-up might have investors contemplating their next move.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-reasons-zd-risky-1-133223906.html?.tsrc=rss",
+   "published_at": "2026-09-02T13:32:23Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:12Z",
+   "fingerprint": "75c38cbba8c67097",
+   "primary_source": false,
+   "cluster_id": "280cdfd984f98204",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "394395dfcc176ed0",
+   "symbols": [
+    "ZD"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Digital Media & Content Platforms Q2 Earnings: Ziff Davis (NASDAQ:ZD) is the Best in the Biz",
+   "summary": "As the Q2 earnings season wraps, let’s dig into this quarter’s best and worst performers in the digital media & content platforms industry, including Ziff Davis (NASDAQ:ZD) and its peers.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/digital-media-content-platforms-q2-143824294.html?.tsrc=rss",
+   "published_at": "2026-08-31T14:38:24Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:12Z",
+   "fingerprint": "62471f6257b1b189",
+   "primary_source": false,
+   "cluster_id": "394395dfcc176ed0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e4685107d782a319",
+   "symbols": [
+    "ZD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "A Ziff Davis Director Sells 2,513 Shares as the Stock Soars. Here's a Closer Look at the Transaction.",
+   "summary": "The digital media company reported a notable insider disposition following a 49% one-year rally in share price.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/coverage/filings/2026/08/20/a-ziff-davis-director-sells-2-513-shares-as-the-stock-soars-here-s-a-closer-look-at-the-transaction/?.tsrc=rss",
+   "published_at": "2026-08-20T21:20:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:12Z",
+   "fingerprint": "96c4c294059bd755",
+   "primary_source": false,
+   "cluster_id": "e4685107d782a319",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "21d9b74090a03f36",
+   "symbols": [
+    "LFTO",
+    "TDS",
+    "ZD"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Who Is on the Shortlist to Acquire Ziff Davis?",
+   "summary": "The market may be overlooking a portfolio of valuable digital assets, but a strategic buyer likely sees a bargain waiting to be claimed.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/611841/who-is-on-the-shortlist-to-acquire-ziff-davis/2026-08-19?.tsrc=rss",
+   "published_at": "2026-08-19T14:39:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:45Z",
+   "fingerprint": "60dc8e5e37cc0fd1",
+   "primary_source": false,
+   "cluster_id": "21d9b74090a03f36",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7113a1d083200c69",
+   "symbols": [
+    "ZD"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ziff Davis (ZD) Q2 2026 Earnings Call Transcript",
+   "summary": "AI authorship doubled while company returned $200M to shareholders.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/14/ziff-davis-zd-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-14T05:30:20Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:12Z",
+   "fingerprint": "4414e6c566b935a7",
+   "primary_source": false,
+   "cluster_id": "7113a1d083200c69",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "83fba92f07f75510",
+   "symbols": [
+    "ZD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can Ziff Davis (ZD) Trade At A Premium After A 58% Rally?",
+   "summary": "Ziff Davis stock has climbed 58.5% year to date, yet its valuation checks lean expensive and raise questions about how much upside is already reflected in the price. The 58.5% year to date gain can signal renewed confidence in the story, but it also increases the risk that expect",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ziff-davis-zd-trade-premium-131039589.html?.tsrc=rss",
+   "published_at": "2026-08-10T13:10:39Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:12Z",
+   "fingerprint": "4122e5953644f143",
+   "primary_source": false,
+   "cluster_id": "83fba92f07f75510",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "feb3fd2b6aedec33",
+   "symbols": [
+    "ZD"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ziff Davis Q2 Earnings Call Highlights",
+   "summary": "Ziff Davis (NASDAQ:ZD) said its second-quarter results reflected continued pressure in search-driven advertising businesses, partially offset by growth in several operating areas, while the company moved to reshape its capital structure following the sale of its Connectivity busi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/ziff-davis-q2-earnings-call-highlights-2026-08-07/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-07T21:04:18Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:12Z",
+   "fingerprint": "d5d2e0366a501fea",
+   "primary_source": false,
+   "cluster_id": "feb3fd2b6aedec33",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d0607514ded2fe11",
+   "symbols": [
+    "ZD"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ziff Davis Inc (ZD) (Q2 2026) Earnings Call Highlights: Strategic Pivot and AI-Driven ...",
+   "summary": "Ziff Davis Inc (ZD) navigates a 2.7% revenue decline while boosting adjusted EPS by 13% through aggressive buybacks and AI-led operational gains.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/ziff-davis-inc-zd-q2-210236489.html?.tsrc=rss",
+   "published_at": "2026-08-07T21:02:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:12Z",
+   "fingerprint": "fc3ac393d75e7a4f",
+   "primary_source": false,
+   "cluster_id": "d0607514ded2fe11",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c57c88b6eab8ed97",
+   "symbols": [
+    "ZD"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ziff Davis, Inc. Q2 2026 Earnings Call Summary",
+   "summary": "Moby summary of Ziff Davis, Inc.'s Q2 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-ziff-davis-inc-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-08-07T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:12Z",
+   "fingerprint": "a46669e8731bea70",
+   "primary_source": false,
+   "cluster_id": "c57c88b6eab8ed97",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e478e682280ee296",
+   "symbols": [
+    "ZD"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ziff Davis Reports Second Quarter 2026 Financial Results",
+   "summary": "NEW YORK, August 06, 2026--Ziff Davis, Inc. (NASDAQ: ZD) reported unaudited financial results for the second quarter ended June 30, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ziff-davis-reports-second-quarter-220000624.html?.tsrc=rss",
+   "published_at": "2026-08-06T22:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:12Z",
+   "fingerprint": "b5f1d739306e8600",
+   "primary_source": false,
+   "cluster_id": "e478e682280ee296",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "019e1c6327fdafc2",
+   "symbols": [
+    "ZD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "RetailMeNot Launches Rewards App Featuring AI Smart Search and Industry-First Working Code Promise",
+   "summary": "As RetailMeNot celebrates its 20th anniversary, the company today announced the launch of the RetailMeNot Rewards app, marking the largest product transformation in its history and introducing a new vision for the future of shopping.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/retailmenot-launches-rewards-app-featuring-120000945.html?.tsrc=rss",
+   "published_at": "2026-08-05T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:12Z",
+   "fingerprint": "c27157717ca0e577",
+   "primary_source": false,
+   "cluster_id": "019e1c6327fdafc2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

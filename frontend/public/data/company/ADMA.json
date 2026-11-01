@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 11.899999618530273,
     "day_low": 11.364999771118164,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 46.17888627771038,
+    "adx14": 28.194858077935258,
+    "ema10": 11.14069088597407,
+    "sma200": 10.95817500591278,
+    "perf_63d": 30.549200757614603,
+    "adr20_pct": 3.4290960406571633,
+    "range10_pct": 11.352893070820569,
+    "high10_prev": 11.770000457763672,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": true,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
@@ -97,7 +128,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.3333333333333333,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -139,12 +173,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 5.8,
+   "score": 44.6,
    "drivers": [
+    "news_flow",
+    "freshness",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 5,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -242,7 +278,17 @@
     "green": false,
     "day_high": 11.899999618530273,
     "day_low": 11.364999771118164,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 46.17888627771038,
+    "adx14": 28.194858077935258,
+    "ema10": 11.14069088597407,
+    "sma200": 10.95817500591278,
+    "perf_63d": 30.549200757614603,
+    "adr20_pct": 3.4290960406571633,
+    "range10_pct": 11.352893070820569,
+    "high10_prev": 11.770000457763672,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -272,6 +318,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": true,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
@@ -281,7 +348,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.3333333333333333,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -618,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 5.8,
+  "score": 44.6,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 32.7,
@@ -631,34 +701,36 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 5,
+    "independent": 5,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 12,
+    "independent": 12,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "freshness",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -677,7 +749,452 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "aff19e251791411d",
+   "symbols": [
+    "ADMA",
+    "WGS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "GeneDx Holdings And 2 Other Top Healthcare Stocks",
+   "summary": "AI giants are planning up to US$828b in data center and chip spending this year, and that level of capital tied up in one corner of the market has many investors rethinking concentration risk. Capital that chases one story often overlooks steadier essentials like healthcare. This",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/genedx-holdings-2-other-top-180815071.html?.tsrc=rss",
+   "published_at": "2026-10-31T18:08:15Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:46:43Z",
+   "fingerprint": "a87e96abbd9ab0e6",
+   "primary_source": false,
+   "cluster_id": "aff19e251791411d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "GeneDx Holdings und 2 andere Top-Aktien im Gesundheitswesen"
+  },
+  {
+   "id": "2063137b8ace3b57",
+   "symbols": [
+    "ADMA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adma Biologics (ADMA) Registers a Bigger Fall Than the Market: Important Facts to Note",
+   "summary": "In the closing of the recent trading day, Adma Biologics (ADMA) stood at $11.41, denoting a -2.89% move from the preceding trading day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adma-biologics-adma-registers-bigger-204502617.html?.tsrc=rss",
+   "published_at": "2026-10-30T20:45:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "61293479db14fead",
+   "primary_source": false,
+   "cluster_id": "2063137b8ace3b57",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Adma Biologics (ADMA) registriert einen größeren Rückgang als der Markt: Wichtige Fakten zu beachten"
+  },
+  {
+   "id": "100abc21450a8578",
+   "symbols": [
+    "ADMA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Brokers Suggest Investing in Adma Biologics (ADMA): Read This Before Placing a Bet",
+   "summary": "According to the average brokerage recommendation (ABR), one should invest in Adma Biologics (ADMA). It is debatable whether this highly sought-after metric is effective because Wall Street analysts' recommendations tend to be overly optimistic. Would it be worth investing in the",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/brokers-suggest-investing-adma-biologics-123003418.html?.tsrc=rss",
+   "published_at": "2026-10-29T12:30:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "be2fda9692acb375",
+   "primary_source": false,
+   "cluster_id": "100abc21450a8578",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "24b0085764d1e821",
+   "symbols": [
+    "ADMA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Investors Heavily Search ADMA Biologics Inc (ADMA): Here is What You Need to Know",
+   "summary": "Adma Biologics (ADMA) has been one of the stocks most watched by Zacks.com users lately. So, it is worth exploring what lies ahead for the stock.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/investors-heavily-search-adma-biologics-120001266.html?.tsrc=rss",
+   "published_at": "2026-10-29T12:00:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "41cda1d4be62da0f",
+   "primary_source": false,
+   "cluster_id": "24b0085764d1e821",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b6a2f08cd7ac5def",
+   "symbols": [
+    "ADMA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ADMA Biologics to Report Third Quarter 2026 Financial Results on November 4, 2026",
+   "summary": "Conference Call Scheduled for November 4, 2026, at 4:30 p.m. ETRAMSEY, N.J. and BOCA RATON, Fla., Oct. 28, 2026 (GLOBE NEWSWIRE) -- ADMA Biologics, Inc. (Nasdaq: ADMA) (“ADMA” or the “Company”), a U.S.-based, end-to-end commercial biopharmaceutical company dedicated to manufactur",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adma-biologics-report-third-quarter-110000065.html?.tsrc=rss",
+   "published_at": "2026-10-28T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "e77a6d771bb72212",
+   "primary_source": false,
+   "cluster_id": "b6a2f08cd7ac5def",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d67563ff08359a0e",
+   "symbols": [
+    "ADMA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adma Biologics (ADMA) Surpasses Market Returns: Some Facts Worth Knowing",
+   "summary": "Adma Biologics (ADMA) closed the most recent trading day at $11.24, moving +1.49% from the previous trading session.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adma-biologics-adma-surpasses-market-205003436.html?.tsrc=rss",
+   "published_at": "2026-10-20T20:50:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "1cb8f6af17154c9b",
+   "primary_source": false,
+   "cluster_id": "d67563ff08359a0e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5aab5644ea10b2be",
+   "symbols": [
+    "ADMA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How Investors May Respond To ADMA Biologics (ADMA) Peer‑Reviewed Validation Of IVIG Safety And Purity",
+   "summary": "ADMA Biologics recently announced that a peer-reviewed article reported its optimized intravenous immune globulin (IVIG) manufacturing process removes procoagulant impurities, preserves product quality, boosts IgG yield, and was associated with no thromboembolic events in postmar",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/investors-may-respond-adma-biologics-142256519.html?.tsrc=rss",
+   "published_at": "2026-10-15T14:22:56Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "639cf7cd8d132d02",
+   "primary_source": false,
+   "cluster_id": "5aab5644ea10b2be",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "45414d4a60be7ccc",
+   "symbols": [
+    "ADMA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ADMA Biologics Announces Peer-Reviewed Publication Highlighting New Data From Its Optimized, Proprietary IVIG Manufacturing Process",
+   "summary": "Optimized Process Demonstrated Effective Removal of Procoagulant Impurities While Maintaining Immunoglobulin Quality and Increasing IgG Yield No Thromboembolic Events Were Reported for ADMA IVIG Products Manufactured Using the Optimized Process During the Postmarketing Surveillan",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adma-biologics-announces-peer-reviewed-110000303.html?.tsrc=rss",
+   "published_at": "2026-10-15T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "3b1d28724610ecca",
+   "primary_source": false,
+   "cluster_id": "45414d4a60be7ccc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "59f093cf41cddd98",
+   "symbols": [
+    "ADMA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wall Street Bulls Look Optimistic About Adma Biologics (ADMA): Should You Buy?",
+   "summary": "Based on the average brokerage recommendation (ABR), Adma Biologics (ADMA) should be added to one's portfolio. Wall Street analysts' overly optimistic recommendations cast doubt on the effectiveness of this highly sought-after metric. So, is the stock worth buying?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-bulls-look-optimistic-123004335.html?.tsrc=rss",
+   "published_at": "2026-10-12T12:30:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "3129c2b06f8d3ac4",
+   "primary_source": false,
+   "cluster_id": "59f093cf41cddd98",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "079c8bd1407a711a",
+   "symbols": [
+    "ADMA",
+    "NTLA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Intellia Therapeutics (NTLA) Soars 7.6%: Is Further Upside Left in the Stock?",
+   "summary": "Intellia Therapeutics (NTLA) witnessed a jump in share price last session on above-average trading volume. The latest trend in earnings estimate revisions for the stock doesn't suggest further strength down the road.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/intellia-therapeutics-ntla-soars-7-105100001.html?.tsrc=rss",
+   "published_at": "2026-10-09T10:51:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:42Z",
+   "fingerprint": "ad5cef7c3b3bb20f",
+   "primary_source": false,
+   "cluster_id": "079c8bd1407a711a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "66452858caa7c98b",
+   "symbols": [
+    "ADMA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adma Biologics (ADMA) Advances While Market Declines: Some Information for Investors",
+   "summary": "In the latest trading session, Adma Biologics (ADMA) closed at $10.33, marking a +1.87% move from the previous day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adma-biologics-adma-advances-while-205002814.html?.tsrc=rss",
+   "published_at": "2026-10-08T20:50:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "fed413d88cd1d4f5",
+   "primary_source": false,
+   "cluster_id": "66452858caa7c98b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f9e25c2ce950ffd1",
+   "symbols": [
+    "ADMA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ADMA Biologics Inc (ADMA) is Attracting Investor Attention: Here is What You Should Know",
+   "summary": "Recently, Zacks.com users have been paying close attention to Adma Biologics (ADMA). This makes it worthwhile to examine what the stock has in store.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adma-biologics-inc-adma-attracting-120007485.html?.tsrc=rss",
+   "published_at": "2026-10-08T12:00:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "e7624a66226cab08",
+   "primary_source": false,
+   "cluster_id": "f9e25c2ce950ffd1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4a009e7bc90063c2",
+   "symbols": [
+    "ADMA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Here's Why Adma Biologics (ADMA) Fell More Than Broader Market",
+   "summary": "In the most recent trading session, Adma Biologics (ADMA) closed at $10, indicating a -1.24% shift from the previous trading day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/heres-why-adma-biologics-adma-204505856.html?.tsrc=rss",
+   "published_at": "2026-09-29T20:45:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "7dbbb5315c79d126",
+   "primary_source": false,
+   "cluster_id": "4a009e7bc90063c2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "81c43c3cfc68e4eb",
+   "symbols": [
+    "ADMA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ADMA Biologics (ADMA), Why Is It Back In The Spotlight?",
+   "summary": "Recent performance swings in ADMA Biologics (ADMA) have put fresh attention on what investors are paying for its plasma-derived therapies business after a year of sharp declines and a much stronger past 3 months. The recent rebound in ADMA Biologics, with a 12.07% 90‑day share pr",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adma-biologics-adma-why-back-130654966.html?.tsrc=rss",
+   "published_at": "2026-09-27T13:06:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "1d560193e1fbc0c7",
+   "primary_source": false,
+   "cluster_id": "81c43c3cfc68e4eb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ed283446c20b99a4",
+   "symbols": [
+    "ADMA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Adma Biologics (ADMA) Dipped More Than Broader Market Today",
+   "summary": "Adma Biologics (ADMA) closed at $9.52 in the latest trading session, marking a -1.86% move from the prior day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-adma-biologics-adma-dipped-205002869.html?.tsrc=rss",
+   "published_at": "2026-09-24T20:50:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "7a55dda59dc62dee",
+   "primary_source": false,
+   "cluster_id": "ed283446c20b99a4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "044b8643cf5144d7",
+   "symbols": [
+    "ADMA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wall Street Analysts Think Adma Biologics (ADMA) Is a Good Investment: Is It?",
+   "summary": "According to the average brokerage recommendation (ABR), one should invest in Adma Biologics (ADMA). It is debatable whether this highly sought-after metric is effective because Wall Street analysts' recommendations tend to be overly optimistic. Would it be worth investing in the",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-think-adma-123004590.html?.tsrc=rss",
+   "published_at": "2026-09-24T12:30:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "ee2f6a87dc6556bd",
+   "primary_source": false,
+   "cluster_id": "044b8643cf5144d7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ff2b72af9dea09e6",
+   "symbols": [
+    "ADMA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adma Biologics (ADMA) Outpaces Stock Market Gains: What You Should Know",
+   "summary": "Adma Biologics (ADMA) closed the most recent trading day at $9.13, moving +2.01% from the previous trading session.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adma-biologics-adma-outpaces-stock-215004018.html?.tsrc=rss",
+   "published_at": "2026-09-18T21:50:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "8f48592905cf2fb7",
+   "primary_source": false,
+   "cluster_id": "ff2b72af9dea09e6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6b0fd4eb658bf367",
+   "symbols": [
+    "ADMA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adma Biologics (ADMA) Stock Falls Amid Market Uptick: What Investors Need to Know",
+   "summary": "Adma Biologics (ADMA) reached $9.23 at the closing of the latest trading day, reflecting a -1.7% change compared to its last close.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adma-biologics-adma-stock-falls-214504991.html?.tsrc=rss",
+   "published_at": "2026-09-11T21:45:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "559dcd70e03aadf5",
+   "primary_source": false,
+   "cluster_id": "6b0fd4eb658bf367",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ef6ba78f879ffc60",
+   "symbols": [
+    "ADMA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adma Biologics (ADMA) Falls More Steeply Than Broader Market: What Investors Need to Know",
+   "summary": "Adma Biologics (ADMA) closed at $9.36 in the latest trading session, marking a -1.01% move from the prior day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adma-biologics-adma-falls-more-215001256.html?.tsrc=rss",
+   "published_at": "2026-09-10T21:50:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "7cb4691aea63ed3e",
+   "primary_source": false,
+   "cluster_id": "ef6ba78f879ffc60",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c6f7e2fddf1c58bc",
+   "symbols": [
+    "ADMA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adma Biologics (ADMA) Is Considered a Good Investment by Brokers: Is That True?",
+   "summary": "Based on the average brokerage recommendation (ABR), Adma Biologics (ADMA) should be added to one's portfolio. Wall Street analysts' overly optimistic recommendations cast doubt on the effectiveness of this highly sought-after metric. So, is the stock worth buying?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adma-biologics-adma-considered-good-133004338.html?.tsrc=rss",
+   "published_at": "2026-09-08T13:30:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "76889ff0c685d81f",
+   "primary_source": false,
+   "cluster_id": "c6f7e2fddf1c58bc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

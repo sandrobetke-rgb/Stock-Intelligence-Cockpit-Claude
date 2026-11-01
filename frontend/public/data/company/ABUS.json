@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 4.300000190734863,
     "day_low": 4.139999866485596,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 17.704560062313817,
+    "adx14": 27.133898325643283,
+    "ema10": 4.256783006672388,
+    "sma200": 4.495999983549118,
+    "perf_63d": -3.4403690544505316,
+    "adr20_pct": 3.8063332819140356,
+    "range10_pct": 6.310685342326261,
+    "high10_prev": 4.380000114440918,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.3,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -173,7 +207,7 @@
     "time": "Uhrzeit offen",
     "fiscal_quarter": "Sep/2026",
     "eps_forecast": null,
-    "estimates": 8,
+    "estimates": 1,
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/abus/earnings",
@@ -236,7 +270,17 @@
     "green": false,
     "day_high": 4.300000190734863,
     "day_low": 4.139999866485596,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 17.704560062313817,
+    "adx14": 27.133898325643283,
+    "ema10": 4.256783006672388,
+    "sma200": 4.495999983549118,
+    "perf_63d": -3.4403690544505316,
+    "adr20_pct": 3.8063332819140356,
+    "range10_pct": 6.310685342326261,
+    "high10_prev": 4.380000114440918,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -266,6 +310,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -273,7 +338,10 @@
     "S01": 0.0,
     "S02": 0.3,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -643,10 +711,10 @@
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -671,7 +739,427 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "272deaf185521d1c",
+   "symbols": [
+    "ABUS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Arbutus Announces FDA Clinical Hold is Lifted on IND Application for AB-101, an Oral PD-L1 Inhibitor",
+   "summary": "WARMINSTER, Pa., Oct. 22, 2026 (GLOBE NEWSWIRE) -- Arbutus Biopharma Corporation (Nasdaq: ABUS) (“Arbutus” or the “Company”), a clinical-stage biopharmaceutical company focused on infectious disease, today announced that the Company was notified by the U.S. Food and Drug Administ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/arbutus-announces-fda-clinical-hold-113000412.html?.tsrc=rss",
+   "published_at": "2026-10-22T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "be46d98d32210159",
+   "primary_source": false,
+   "cluster_id": "272deaf185521d1c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0c9f64653618c3a7",
+   "symbols": [
+    "ABUS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Arbutus Announces Final Results of Its US$230 Million Modified “Dutch Auction” Tender Offer",
+   "summary": "WARMINSTER, Pa., Oct. 01, 2026 (GLOBE NEWSWIRE) -- Arbutus Biopharma Corporation (Nasdaq: ABUS) (“Arbutus” or the “Company”), a clinical-stage biopharmaceutical company focused on infectious disease, today announced the final results of its tender offer (the “Offer”) to purchase ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/arbutus-announces-final-results-us-113000072.html?.tsrc=rss",
+   "published_at": "2026-10-01T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "953f5a717720213f",
+   "primary_source": false,
+   "cluster_id": "e2c7538e143e8abb",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e2c7538e143e8abb",
+   "symbols": [
+    "ABUS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Arbutus Announces Preliminary Results of Its US$230 Million Modified “Dutch Auction” Tender Offer",
+   "summary": "WARMINSTER, Pa., Sept. 30, 2026 (GLOBE NEWSWIRE) -- Arbutus Biopharma Corporation (Nasdaq: ABUS) (“Arbutus” or the “Company”), a clinical-stage biopharmaceutical company focused on infectious disease, today announced the preliminary results of its tender offer (the “Offer”) to pu",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/arbutus-announces-preliminary-results-us-113000022.html?.tsrc=rss",
+   "published_at": "2026-09-30T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "7318e71bd952d0fd",
+   "primary_source": false,
+   "cluster_id": "e2c7538e143e8abb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0f62157f05a08d99",
+   "symbols": [
+    "ABUS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Arbutus Commences US$230 Million Modified “Dutch Auction” Tender Offer of its Common Shares at a Price Not Greater Than US$5.75 Nor Less Than US$5.00 Per Share",
+   "summary": "WARMINSTER, Pa., Aug. 24, 2026 (GLOBE NEWSWIRE) -- Arbutus Biopharma Corporation (Nasdaq: ABUS) (“Arbutus” or the “Company”), a clinical-stage biopharmaceutical company focused on infectious disease, today announced the commencement of a modified “Dutch Auction” tender offer to p",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/arbutus-commences-us-230-million-113000656.html?.tsrc=rss",
+   "published_at": "2026-08-24T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "d8fd94bd55e8b59e",
+   "primary_source": false,
+   "cluster_id": "0f62157f05a08d99",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "11a2f8465e3b1ec8",
+   "symbols": [
+    "ABUS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sector Update: Healthcare Stocks Advance in Afternoon Trading",
+   "summary": "Healthcare stocks were higher Friday afternoon, with the NYSE Healthcare Index rising 1.4% and the S",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/sector-healthcare-stocks-advance-afternoon-174323348.html?.tsrc=rss",
+   "published_at": "2026-08-21T17:43:23Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "498b07ec0f9b273f",
+   "primary_source": false,
+   "cluster_id": "11a2f8465e3b1ec8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b0e5bacc988077f6",
+   "symbols": [
+    "ABUS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Arbutus Biopharma shares jump after unveiling $230 million share buyback plan",
+   "summary": "Arbutus Biopharma Corporation (NASDAQ:ABUS) shares climbed 10. 3% in premarket trading on Friday after the biotechnology company announced plans to repurchase up to $230 million of its common stock through a modified Dutch auction tender offer.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "investorshub.advfn.com",
+   "url": "https://investorshub.advfn.com/market-news/article/34815/arbutus-biopharma-shares-jump-after-unveiling-230-million-share-buyback-plan?.tsrc=rss",
+   "published_at": "2026-08-21T13:32:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "0ebd83f129074329",
+   "primary_source": false,
+   "cluster_id": "b0e5bacc988077f6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8bbe0fa4e23fb582",
+   "symbols": [
+    "ABUS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ABUS Stock Surges 10% Today — What’s Driving This Super Rally?",
+   "summary": "Arbutus Biopharma said it will repurchase $230 million of its common shares at a purchase price of not less than $5 per share and not more than $5.75 apiece, in cash.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/abus-stock-surges-10-today-what-s-driving-this-super-rally/cZYBvSIRJNq?.tsrc=rss",
+   "published_at": "2026-08-21T12:56:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "d859bef7059f7256",
+   "primary_source": false,
+   "cluster_id": "8bbe0fa4e23fb582",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cf2ce460d80ab174",
+   "symbols": [
+    "ABUS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Arbutus Announces Intent to Repurchase Up to US$230 Million of its Common Shares Through Modified “Dutch Auction” Tender Offer",
+   "summary": "WARMINSTER, Pa., Aug. 21, 2026 (GLOBE NEWSWIRE) -- Arbutus Biopharma Corporation (Nasdaq: ABUS) (“Arbutus” or the “Company”), a clinical-stage biopharmaceutical company focused on infectious disease, today announced plans to commence a modified “Dutch Auction” tender offer (the “",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/arbutus-announces-intent-repurchase-us-113000951.html?.tsrc=rss",
+   "published_at": "2026-08-21T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "4ca12a67bee1d553",
+   "primary_source": false,
+   "cluster_id": "cf2ce460d80ab174",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "28fe1dcfcbbad944",
+   "symbols": [
+    "ABUS",
+    "EDIT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Moderna’s Newfound War Chest Opens Door for 4 Strategic Acquisition Targets",
+   "summary": "Moderna's stock just surged in a way that transforms the company from a cash-burning vaccine maker into a serious acquirer, and four biotech targets already sit within striking range of its newly loaded war chest.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/08/20/modernas-newfound-war-chest-opens-door-for-4-strategic-acquisition-targets/?.tsrc=rss",
+   "published_at": "2026-08-20T11:35:28Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:15Z",
+   "fingerprint": "08909007985ee352",
+   "primary_source": false,
+   "cluster_id": "28fe1dcfcbbad944",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "808874c5c46371cb",
+   "symbols": [
+    "ABUS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Arbutus Reports Second Quarter 2026 Financial Results and Provides Corporate Update",
+   "summary": "Maintained strong financial position with cash, cash equivalents and marketable securities of $92.6M as of June 30, 2026 Received first payment of approximately $178M from Moderna settlement in July and expects to return up to approximately $230M in capital to Arbutus shareholder",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/arbutus-reports-second-quarter-2026-113000778.html?.tsrc=rss",
+   "published_at": "2026-08-12T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "2078bb6b55a198cd",
+   "primary_source": false,
+   "cluster_id": "808874c5c46371cb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5a8c90db1339d017",
+   "symbols": [
+    "ABUS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Could Arbutus Biopharma Corporation (ABUS) Turn its Moderna, Inc. (MRNA) Settlement Into a Lasting Biotech Advantage?",
+   "summary": "A landmark legal settlement in the biotech sector recently reshaped the financial trajectories of two key mRNA technology players: Arbutus Biopharma Corporation (NASDAQ:ABUS) and Moderna, Inc. (NASDAQ:MRNA). The resolution of their global patent infringement litigation over lipid",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/could-arbutus-biopharma-corporation-abus-001821145.html?.tsrc=rss",
+   "published_at": "2026-08-11T00:18:21Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "1ad5bf822289e366",
+   "primary_source": false,
+   "cluster_id": "5a8c90db1339d017",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "84d95b1fe163cb06",
+   "symbols": [
+    "ABUS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "MRNA Q2 Earnings Meet, Stock Down on Norovirus Vaccine Setback",
+   "summary": "Moderna's Q2 revenue tops estimates, but shares fall after its phase III norovirus vaccine study misses early success criteria.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/mrna-q2-earnings-meet-stock-180400939.html?.tsrc=rss",
+   "published_at": "2026-07-31T18:04:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "958e115786d60803",
+   "primary_source": false,
+   "cluster_id": "84d95b1fe163cb06",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ba966044ec353bc4",
+   "symbols": [
+    "ABUS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Pfizer (PFE) Faces Expanded Vaccine Lawsuits On A Fair Value Narrative That Still Sees Upside",
+   "summary": "Pfizer (PFE) is back in focus after Arbutus Biopharma and Genevant Sciences expanded their patent litigation over mRNA lipid nanoparticle technology, adding new international cases that raise legal and operational questions for the company’s COVID-19 vaccine business. See our lat",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/pfizer-pfe-faces-expanded-vaccine-210845909.html?.tsrc=rss",
+   "published_at": "2026-07-22T21:08:45Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "f36e893a28549bd8",
+   "primary_source": false,
+   "cluster_id": "ba966044ec353bc4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "83c8fadfdad4bd7c",
+   "symbols": [
+    "ABUS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Pfizer (PFE) Faces New International Patent Lawsuits Over Covid 19 Vaccine",
+   "summary": "Arbutus Biopharma and Genevant Sciences have filed multiple patent infringement lawsuits against Pfizer and BioNTech over their mRNA-LNP COVID-19 vaccines. The new cases extend beyond the existing U.S. litigation into several international jurisdictions. The lawsuits seek monetar",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/pfizer-pfe-faces-international-patent-150941772.html?.tsrc=rss",
+   "published_at": "2026-07-20T15:09:41Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "3247d2012b8f2777",
+   "primary_source": false,
+   "cluster_id": "83c8fadfdad4bd7c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "abc37fac0de437df",
+   "symbols": [
+    "ABUS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Arbutus, Sanofi escalate mRNA patent fights; InnoCare’s TYK2 contender advances",
+   "summary": "The new lawsuits add to a web of legal disputes over technology involved in COVID vaccines. Elsewhere, a prolific AI biotech inked another deal and Insmed strengthened support for a closely watched blood pressure drug.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "biopharmadive.com",
+   "url": "https://www.biopharmadive.com/news/arbutus-sanofi-mrna-insmed-innocare-tyk2-chai-argenx/825420/?.tsrc=rss",
+   "published_at": "2026-07-17T10:07:25Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "4df8694c2ab76c6a",
+   "primary_source": false,
+   "cluster_id": "abc37fac0de437df",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dee9306bb8489c4f",
+   "symbols": [
+    "ABUS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ABUS Stock On Track For Best Day In About Two Months — What’s The Moderna Connection?",
+   "summary": "On July 8, Arbutus received around $178 million from Moderna as part of a patent litigation settlement, the company said.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/abus-stock-on-track-for-best-day-in-about-two-months-what-s-the-moderna-connection/cZZEkhNR7sx?.tsrc=rss",
+   "published_at": "2026-07-16T18:41:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "9a707d1d944b002f",
+   "primary_source": false,
+   "cluster_id": "dee9306bb8489c4f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5b266439ae8fe7c9",
+   "symbols": [
+    "ABUS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Arbutus Initiates International Patent Infringement Enforcement Actions Against Pfizer and BioNTech, Receives First Payment From Moderna Settlement Agreement and Announces Intent to Return Capital to Shareholders",
+   "summary": "Arbutus and its exclusive licensee, Genevant, filed three international lawsuits seeking to enforce patents protecting their innovative lipid nanoparticle (“LNP”) technology against Pfizer and BioNTech Received approximately $178M from Moderna as Arbutus’ share of the noncontinge",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/arbutus-initiates-international-patent-infringement-113000295.html?.tsrc=rss",
+   "published_at": "2026-07-16T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "b15b1a6f2d818583",
+   "primary_source": false,
+   "cluster_id": "5b266439ae8fe7c9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d90af48e8f40b0f5",
+   "symbols": [
+    "ABUS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Arbutus Biopharma (ABUS) Joins Russell Defensive Indexes And Exits Value Benchmarks",
+   "summary": "Arbutus Biopharma (NasdaqGS:ABUS) has been added to the Russell 2000 Growth Defensive and Russell 2000 Defensive Indexes. At the same time, the stock has been removed from several value-oriented Russell indexes. The changes alter which index-linked funds and mandates are likely t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/arbutus-biopharma-abus-joins-russell-221151130.html?.tsrc=rss",
+   "published_at": "2026-07-09T22:11:51Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "fcd3514babfa4b12",
+   "primary_source": false,
+   "cluster_id": "d90af48e8f40b0f5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7a49e8ef3db84310",
+   "symbols": [
+    "ABUS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ABUS Stock Rallies Ahead Of Big Payout From Moderna Settlement This Week",
+   "summary": "Arbutus expects to receive around $179 million from Moderna.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/abus-stock-rallies-ahead-of-big-payout-from-moderna-settlement-this-week/cZmlrrOR7ZK?.tsrc=rss",
+   "published_at": "2026-07-07T18:28:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:28Z",
+   "fingerprint": "9d4684aec6ee3969",
+   "primary_source": false,
+   "cluster_id": "7a49e8ef3db84310",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "c621be7b79e55b62",

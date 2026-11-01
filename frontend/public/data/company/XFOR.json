@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 3.4100000858306885,
     "day_low": 3.190000057220459,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 78.07361593607749,
+    "adx14": 28.157608795705105,
+    "ema10": 3.1879016922362546,
+    "sma200": 3.8009750127792357,
+    "perf_63d": -18.09291492292726,
+    "adr20_pct": 7.611759837965225,
+    "range10_pct": 38.49206491873049,
+    "high10_prev": 3.490000009536743,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.3,
     "S03": 0.6666666666666666,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -139,12 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.6,
+   "score": 28.2,
    "drivers": [
-    "insider_activity",
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "insider_activity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -243,7 +278,17 @@
     "green": true,
     "day_high": 3.4100000858306885,
     "day_low": 3.190000057220459,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 78.07361593607749,
+    "adx14": 28.157608795705105,
+    "ema10": 3.1879016922362546,
+    "sma200": 3.8009750127792357,
+    "perf_63d": -18.09291492292726,
+    "adr20_pct": 7.611759837965225,
+    "range10_pct": 38.49206491873049,
+    "high10_prev": 3.490000009536743,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -273,6 +318,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -280,7 +346,10 @@
     "S01": 0.0,
     "S02": 0.3,
     "S03": 0.6666666666666666,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -619,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.6,
+  "score": 28.2,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 2.2,
@@ -641,27 +710,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 5,
+    "independent": 5,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "insider_activity",
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -679,7 +749,361 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "1e248de150fd5eae",
+   "symbols": [
+    "XFOR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "X4 Pharmaceuticals Highlights Clinical Progress and Market Opportunity for Mavorixafor in Primary Chronic Neutropenia During Virtual Investor Day",
+   "summary": "- Base Case U.S. Market Opportunity Estimated at 15,000 Patients, With Potential to Expand to Approximately 30,000 Patients - - On Track for Completion of 4WARD Phase 3 Target Enrollment in Q4 2026 - - Planned 4STEPS Phase 2b Trial Evaluating G-CSF Dose Reduction with Mavorixafor",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/x4-pharmaceuticals-highlights-clinical-progress-203000924.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "924e7bb69025b478",
+   "primary_source": false,
+   "cluster_id": "1e248de150fd5eae",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d68a396df65d2df8",
+   "symbols": [
+    "XFOR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "X4 Pharmaceuticals Targets 2028 Phase III Data for Mavorixafor in Chronic Neutropenia",
+   "summary": "X4 Pharmaceuticals (NASDAQ:XFOR) said it expects to complete enrollment in its pivotal Phase III 4WARD trial of mavorixafor for primary chronic neutropenia, or PCN, by the end of the fourth quarter of 2026, with top-line data anticipated in the first quarter of 2028. Executive Ch",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-x4-pharmaceuticals-targets-2028-phase-iii-data-for-mavorixafor-in-chronic-neutropenia-2026-10-29/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-29T20:14:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "35873061775eebc8",
+   "primary_source": false,
+   "cluster_id": "d68a396df65d2df8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9e519fe401c04ef6",
+   "symbols": [
+    "XFOR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "X4 Pharmaceuticals to Host Virtual Investor Day on Thursday, October 29, 2026, Featuring Key Opinion Leaders",
+   "summary": "BOSTON, Oct. 09, 2026 (GLOBE NEWSWIRE) -- X4 Pharmaceuticals (Nasdaq: XFOR), a company focused on improving the lives of people with rare hematology diseases, today announced that the Company will host a virtual Investor Day on Thursday, October 29, 2026, from 10:00 a.m. to 12:00",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/x4-pharmaceuticals-host-virtual-investor-110000830.html?.tsrc=rss",
+   "published_at": "2026-10-09T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "f351bc253b9a0104",
+   "primary_source": false,
+   "cluster_id": "9e519fe401c04ef6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f5756a79842101c2",
+   "symbols": [
+    "XFOR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "X4 Pharmaceuticals Secures Up to $150 Million in New Debt Financing From K2 HealthVentures",
+   "summary": "X4 Pharmaceuticals (NASDAQ:XFOR) has entered into a senior secured term loan agreement worth up to $150 million with K2 HealthVentures LLC, refinancing its existing debt facility and providing additional financial flexibility as the biotechnology company advances its clinical dev",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "investorshub.advfn.com",
+   "url": "https://investorshub.advfn.com/market-news/article/37720/x4-pharmaceuticals-secures-up-to-150-million-in-new-debt-financing-from-k2-healthventures?.tsrc=rss",
+   "published_at": "2026-10-08T12:30:27Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "3d7a085df9a057a6",
+   "primary_source": false,
+   "cluster_id": "f5756a79842101c2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8fe366308a49fabf",
+   "symbols": [
+    "XFOR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "X4 Pharmaceuticals Secures Up to $150 Million Senior Debt Facility with K2 HealthVentures",
+   "summary": "- Repayment of Existing Loan Facility Completed -- Strengthens Financial Flexibility with Access to Funding for Corporate and Commercial Activities - - Expect Completion of Enrollment in Phase 3 4WARD trial by Year-End 2026 and Topline Data in H1 2028 - BOSTON, Oct. 08, 2026 (GLO",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/x4-pharmaceuticals-secures-150-million-110000933.html?.tsrc=rss",
+   "published_at": "2026-10-08T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "15a1fd0c07425e35",
+   "primary_source": false,
+   "cluster_id": "8fe366308a49fabf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b58a987a633c34d9",
+   "symbols": [
+    "XFOR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "X4 Pharmaceuticals Announces Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+   "summary": "BOSTON, Oct. 01, 2026 (GLOBE NEWSWIRE) -- X4 Pharmaceuticals (Nasdaq: XFOR), a company focused on improving the lives of people with rare hematology diseases, today announced that, effective on September 30, 2026, the company issued inducement awards to new employees under the X4",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/x4-pharmaceuticals-announces-inducement-grants-203000237.html?.tsrc=rss",
+   "published_at": "2026-10-01T20:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "e0fe0c37d20fbafa",
+   "primary_source": false,
+   "cluster_id": "ba627674fd593f7b",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4167c2c8c47acfc8",
+   "symbols": [
+    "XFOR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Down 25.4% in 4 Weeks, Here's Why X4 Pharmaceuticals (XFOR) Looks Ripe for a Turnaround",
+   "summary": "X4 Pharmaceuticals (XFOR) has become technically an oversold stock now, which implies exhaustion of the heavy selling pressure on it. This, combined with strong agreement among Wall Street analysts in revising earnings estimates higher, indicates a potential trend reversal for th",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/down-25-4-4-weeks-123502139.html?.tsrc=rss",
+   "published_at": "2026-09-24T12:35:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "267c239eea624a2a",
+   "primary_source": false,
+   "cluster_id": "4167c2c8c47acfc8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c6221616101749bf",
+   "symbols": [
+    "XFOR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "X4 Pharmaceuticals (XFOR) Loses 20.8% in 4 Weeks, Here's Why a Trend Reversal May be Around the Corner",
+   "summary": "X4 Pharmaceuticals (XFOR) is technically in oversold territory now, so the heavy selling pressure might have exhausted. This along with strong agreement among Wall Street analysts in raising earnings estimates could lead to a trend reversal for the stock.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/x4-pharmaceuticals-xfor-loses-20-133502555.html?.tsrc=rss",
+   "published_at": "2026-09-11T13:35:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "de60683cb30f6598",
+   "primary_source": false,
+   "cluster_id": "c6221616101749bf",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a8702c21f705facd",
+   "symbols": [
+    "XFOR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "X4 Pharmaceuticals to Participate in a Fireside Chat at the 2026 Wells Fargo Healthcare Conference",
+   "summary": "BOSTON, Sept. 09, 2026 (GLOBE NEWSWIRE) -- X4 Pharmaceuticals (Nasdaq: XFOR), a company focused on improving the lives of people with rare hematology diseases, today announced that management will participate in a fireside chat at the 2026 Wells Fargo Healthcare Conference on Thu",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/x4-pharmaceuticals-participate-fireside-chat-110000686.html?.tsrc=rss",
+   "published_at": "2026-09-09T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "3caf2fd4d6fb190e",
+   "primary_source": false,
+   "cluster_id": "a8702c21f705facd",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2c875cf342a3c527",
+   "symbols": [
+    "XFOR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "X4 Pharmaceuticals Announces Positive Outcome from FDA Type C Meeting",
+   "summary": "- FDA Agrees to Reduced Sample Size for the Global 4WARD Phase 3 Chronic Neutropenia Trial - - Expect Completion of Enrollment by Year-End 2026 and Topline Data in H1 2028 - BOSTON, Sept. 08, 2026 (GLOBE NEWSWIRE) -- X4 Pharmaceuticals (Nasdaq: XFOR), a company focused on improvi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/x4-pharmaceuticals-announces-positive-outcome-110000849.html?.tsrc=rss",
+   "published_at": "2026-09-08T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "1ee7e69737413b58",
+   "primary_source": false,
+   "cluster_id": "2c875cf342a3c527",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bad9d934ff3383ff",
+   "symbols": [
+    "XFOR"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "X4 Pharmaceuticals (XFOR) Upgraded to Buy: Here's Why",
+   "summary": "X4 Pharmaceuticals (XFOR) might move higher on growing optimism about its earnings prospects, which is reflected by its upgrade to a Zacks Rank #2 (Buy).",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/x4-pharmaceuticals-xfor-upgraded-buy-160002068.html?.tsrc=rss",
+   "published_at": "2026-08-11T16:00:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "ceda29eb31ae7e1d",
+   "primary_source": false,
+   "cluster_id": "bad9d934ff3383ff",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "57067d0fa326d646",
+   "symbols": [
+    "XFOR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "X4 Pharmaceuticals (XFOR) Reports Q2 Loss, Beats Revenue Estimates",
+   "summary": "X4 Pharmaceuticals (XFOR) delivered earnings and revenue surprises of +31.58% and +340.30%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/x4-pharmaceuticals-xfor-reports-q2-231026426.html?.tsrc=rss",
+   "published_at": "2026-08-06T23:10:26Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "e686042b0155861d",
+   "primary_source": false,
+   "cluster_id": "57067d0fa326d646",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "26dd5aed3f920c88",
+   "symbols": [
+    "XFOR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "X4 Pharmaceuticals Reports Second Quarter 2026 Financial Results and Provides Corporate Update",
+   "summary": "- Strengthened Clinical Operations to Continue Progress in Enrolling Global 4WARD Phase 3 Chronic Neutropenia Trial - - European Commission Approval of XOLREMDI® (Mavorixafor) Provides the First and Only Authorized Treatment for Patients with WHIM Syndrome in the European Union -",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/x4-pharmaceuticals-reports-second-quarter-201500785.html?.tsrc=rss",
+   "published_at": "2026-08-06T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "ca14afa4ea985551",
+   "primary_source": false,
+   "cluster_id": "26dd5aed3f920c88",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b929fcc3a1d33b0c",
+   "symbols": [
+    "XFOR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Sarepta Therapeutics (SRPT) Q2 Earnings and Revenues Surpass Estimates",
+   "summary": "Sarepta Therapeutics (SRPT) delivered earnings and revenue surprises of +10.35% and +12.85%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/sarepta-therapeutics-srpt-q2-earnings-003517056.html?.tsrc=rss",
+   "published_at": "2026-08-06T00:35:17Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "6529591f2f8450a8",
+   "primary_source": false,
+   "cluster_id": "b929fcc3a1d33b0c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ba627674fd593f7b",
+   "symbols": [
+    "XFOR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "X4 Pharmaceuticals Announces Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+   "summary": "BOSTON, July 07, 2026 (GLOBE NEWSWIRE) -- X4 Pharmaceuticals (Nasdaq: XFOR), a company focused on improving the lives of people with rare hematology diseases, today announced that, effective on July 6, 2026, the company issued inducement awards to new employees under the X4 Pharm",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/x4-pharmaceuticals-announces-inducement-grants-203000777.html?.tsrc=rss",
+   "published_at": "2026-07-07T20:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "e0fe0c37d20fbafa",
+   "primary_source": false,
+   "cluster_id": "ba627674fd593f7b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fc02e8ce6d177a06",
+   "symbols": [
+    "CAMP",
+    "XFOR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "X4 Pharmaceuticals Appoints Kelly Gold, Experienced Chief Financial Officer, to its Board of Directors",
+   "summary": "Kelly Gold Kelly Gold has been appointed to the X4 Pharmaceuticals Board of Directors. BOSTON, July 01, 2026 (GLOBE NEWSWIRE) -- X4 Pharmaceuticals (Nasdaq: XFOR), a company focused on improving the lives of people with rare hematology diseases, today announced the appointment of",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/x4-pharmaceuticals-appoints-kelly-gold-110000873.html?.tsrc=rss",
+   "published_at": "2026-07-01T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:47:54Z",
+   "fingerprint": "68b5222f9d992785",
+   "primary_source": false,
+   "cluster_id": "fc02e8ce6d177a06",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "72c1a05a3a4cc833",

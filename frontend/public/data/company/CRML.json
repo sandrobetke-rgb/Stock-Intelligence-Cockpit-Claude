@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 7.53000020980835,
     "day_low": 7.014999866485596,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 25.82211543093473,
+    "adx14": 17.334268842425615,
+    "ema10": 7.1760954254344655,
+    "sma200": 9.2777250123024,
+    "perf_63d": 12.22570092445121,
+    "adr20_pct": 8.091312410836847,
+    "range10_pct": 39.79764252667093,
+    "high10_prev": 8.289999961853027,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [
@@ -97,7 +128,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.16666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -141,11 +175,11 @@
    ]
   },
   "market_intelligence": {
-   "score": 42.6,
+   "score": 48.7,
    "drivers": [
     "news_flow",
-    "source_diversity",
-    "price_volume_anomaly"
+    "social_attention",
+    "source_diversity"
    ],
    "independent_7d": 9,
    "independent_24h": 0
@@ -158,7 +192,14 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 30,
+   "manipulation_risk": "unauffällig",
+   "mentions_24h": 11,
+   "sentiment_7d": 0.07,
+   "bullish_7d": 10,
+   "bearish_7d": 4
+  },
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
@@ -232,7 +273,17 @@
     "green": false,
     "day_high": 7.53000020980835,
     "day_low": 7.014999866485596,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 25.82211543093473,
+    "adx14": 17.334268842425615,
+    "ema10": 7.1760954254344655,
+    "sma200": 9.2777250123024,
+    "perf_63d": 12.22570092445121,
+    "adr20_pct": 8.091312410836847,
+    "range10_pct": 39.79764252667093,
+    "high10_prev": 8.289999961853027,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -262,6 +313,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [
@@ -271,7 +343,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.16666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -610,7 +685,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 42.6,
+  "score": 48.7,
   "components": {
    "news_flow": 100.0,
    "freshness": 0,
@@ -618,7 +693,7 @@
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 35.0,
-   "social_attention": null,
+   "social_attention": 100.0,
    "insider_activity": null
   },
   "windows": {
@@ -652,8 +727,8 @@
   },
   "drivers": [
    "news_flow",
-   "source_diversity",
-   "price_volume_anomaly"
+   "social_attention",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -1085,6 +1160,79 @@
    "report_date": "2026-06-30"
   }
  ],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 11,
+  "mentions_7d": 30,
+  "mentions_30d": 30,
+  "change_vs_baseline_pct": 305,
+  "engagement_7d": 74.0,
+  "sentiment_7d": 0.07,
+  "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
+  "bullish_7d": 10,
+  "bearish_7d": 4,
+  "by_platform_7d": {
+   "stocktwits": 30
+  },
+  "communities_7d": {
+   "StockTwits": 30
+  },
+  "platforms": [
+   "stocktwits"
+  ],
+  "manipulation_flags": [],
+  "manipulation_risk": "unauffällig",
+  "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "AStrokeOfLuck",
+    "posted_at": "2026-10-31T20:45:23Z",
+    "url": "https://stocktwits.com/AStrokeOfLuck/message/667855130",
+    "text": "$CRML",
+    "engagement": 12.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "Lewi5",
+    "posted_at": "2026-10-30T19:59:01Z",
+    "url": "https://stocktwits.com/Lewi5/message/667817693",
+    "text": "$CRML we need to abandon the middle east, they&#39;ve been killing each other since it&#39;s inception and won&#39;t change\n\nWe need to get $GLND oil and forget that region of the world even exists\n\nWith Venezuela oil and $GLND oil we will be smooooth sailing \n\nI wanted to kill the Supreme Leader and the Mullahs, which we did for January 8th and 9th\n\nJustice is served, move on",
+    "engagement": 11.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "Big_Mach",
+    "posted_at": "2026-10-30T20:29:10Z",
+    "url": "https://stocktwits.com/Big_Mach/message/667821420",
+    "text": "$CRML bros we still finished green on the week. With all the doom around here it wasn’t a bad week for us.",
+    "engagement": 7.0,
+    "sentiment_label": "Bullish"
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "Lewi5",
+    "posted_at": "2026-10-30T19:52:00Z",
+    "url": "https://stocktwits.com/Lewi5/message/667816525",
+    "text": "$CRML Iran killed 20-30 thousand protesters in a weekend, so we blew them TF up.. Need to do the same to the people killing the Nigerians, and the Cartels",
+    "engagement": 6.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "ALLEGEDLY01",
+    "posted_at": "2026-11-01T00:40:36Z",
+    "url": "https://stocktwits.com/ALLEGEDLY01/message/667858878",
+    "text": "Been an amazing few weeks! \n\n$CRML $NOK $SOXS $SOXL $AIOK",
+    "engagement": 4.0,
+    "sentiment_label": null
+   }
+  ]
+ },
  "history": []
 }

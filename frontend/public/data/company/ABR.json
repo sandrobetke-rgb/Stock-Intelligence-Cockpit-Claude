@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 7.491568436301314,
    "rvol": 2.507869845655119,
    "ema10": 2.794553703317901,
-   "ema21": 3.0478613404084673,
+   "ema21": 3.0478613404077786,
    "sma50": 3.9308000230789184,
-   "sma200": 5.6422809445858
+   "sma200": 5.642280939817429
   },
   "market_cap": 433838496.0,
   "market_cap_currency": "USD",
@@ -34,19 +34,19 @@
    "tech": {
     "close": 2.140000104904175,
     "change_pct": -29.13906892649587,
-    "ema20": 3.022708350159524,
-    "ema50": 3.6760720529070623,
-    "ema200": 5.476175823969295,
+    "ema20": 3.0227083501591157,
+    "ema50": 3.6760720527342725,
+    "ema200": 5.476175823701794,
     "sma50": 3.9308000230789184,
-    "rsi14": 21.732311876219754,
-    "rsi_min5": 21.732311876219754,
-    "atr14": 0.2377079224392209,
-    "atr_pct": 11.107846298440487,
+    "rsi14": 21.732311873558004,
+    "rsi_min5": 21.732311873558004,
+    "atr14": 0.23770792243429434,
+    "atr_pct": 11.107846298210273,
     "rvol": 2.507869845655119,
     "vol30": 8831516.666666666,
-    "dist_ema200_pct": -60.921632655814925,
-    "dist_52w_high_pct": 78.95757872548465,
-    "high_52w": 10.169932808521166,
+    "dist_ema200_pct": -60.92163265390602,
+    "dist_52w_high_pct": 78.95757674371228,
+    "high_52w": 10.169931850718374,
     "macd_above_signal": true,
     "obv_rising": false,
     "xo_bull_approx": false,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 2.5,
     "day_low": 2.009999990463257,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 5.800282575733519,
+    "adx14": 44.16223227494361,
+    "ema10": 2.794553703317901,
+    "sma200": 5.642280939817429,
+    "perf_63d": -57.14198334804937,
+    "adr20_pct": 7.491568436301314,
+    "range10_pct": 21.343872251365937,
+    "high10_prev": 3.069999933242798,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.4,
     "S03": 0.6666666666666666,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 2.5,
     "entry_max": 2.55,
-    "stop": 2.1434381163411684,
-    "risk_per_share": 0.35656188365883157,
-    "target_1": 3.213123767317663,
+    "stop": 2.1434381163485585,
+    "risk_per_share": 0.3565618836514415,
+    "target_1": 3.213123767302883,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -138,11 +172,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 17.6,
+   "score": 64.7,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 13,
    "independent_24h": 0
   },
   "political": {
@@ -207,9 +243,9 @@
   "adr20": 7.491568436301314,
   "rvol": 2.507869845655119,
   "ema10": 2.794553703317901,
-  "ema21": 3.0478613404084673,
+  "ema21": 3.0478613404077786,
   "sma50": 3.9308000230789184,
-  "sma200": 5.6422809445858,
+  "sma200": 5.642280939817429,
   "volatility_ann": 73.65464461958359,
   "avg_dollar_volume_20d": 29263056.892409325,
   "move_zscore": -6.2802336672992105,
@@ -217,19 +253,19 @@
    "tech": {
     "close": 2.140000104904175,
     "change_pct": -29.13906892649587,
-    "ema20": 3.022708350159524,
-    "ema50": 3.6760720529070623,
-    "ema200": 5.476175823969295,
+    "ema20": 3.0227083501591157,
+    "ema50": 3.6760720527342725,
+    "ema200": 5.476175823701794,
     "sma50": 3.9308000230789184,
-    "rsi14": 21.732311876219754,
-    "rsi_min5": 21.732311876219754,
-    "atr14": 0.2377079224392209,
-    "atr_pct": 11.107846298440487,
+    "rsi14": 21.732311873558004,
+    "rsi_min5": 21.732311873558004,
+    "atr14": 0.23770792243429434,
+    "atr_pct": 11.107846298210273,
     "rvol": 2.507869845655119,
     "vol30": 8831516.666666666,
-    "dist_ema200_pct": -60.921632655814925,
-    "dist_52w_high_pct": 78.95757872548465,
-    "high_52w": 10.169932808521166,
+    "dist_ema200_pct": -60.92163265390602,
+    "dist_52w_high_pct": 78.95757674371228,
+    "high_52w": 10.169931850718374,
     "macd_above_signal": true,
     "obv_rising": false,
     "xo_bull_approx": false,
@@ -241,7 +277,17 @@
     "green": false,
     "day_high": 2.5,
     "day_low": 2.009999990463257,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 5.800282575733519,
+    "adx14": 44.16223227494361,
+    "ema10": 2.794553703317901,
+    "sma200": 5.642280939817429,
+    "perf_63d": -57.14198334804937,
+    "adr20_pct": 7.491568436301314,
+    "range10_pct": 21.343872251365937,
+    "high10_prev": 3.069999933242798,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -271,6 +317,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -278,7 +345,10 @@
     "S01": 0.5,
     "S02": 0.4,
     "S03": 0.6666666666666666,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -291,9 +361,9 @@
    "plan": {
     "trigger": 2.5,
     "entry_max": 2.55,
-    "stop": 2.1434381163411684,
-    "risk_per_share": 0.35656188365883157,
-    "target_1": 3.213123767317663,
+    "stop": 2.1434381163485585,
+    "risk_per_share": 0.3565618836514415,
+    "target_1": 3.213123767302883,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -616,11 +686,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 17.6,
+  "score": 64.7,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 100.0,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 100.0,
@@ -638,25 +708,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 13,
+    "independent": 13,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 5,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 20,
+    "independent": 20,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 5,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -675,7 +747,463 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "a614cd67981214b0",
+   "symbols": [
+    "ABR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Arbor Realty Trust (ABR) stock is trading lower today",
+   "summary": "Shares of real estate investment trust Arbor Realty Trust (NYSE:ABR) fell 27.3% in the afternoon session after the company reported a GAAP net loss for the third quarter of 2026, missed estimates for revenue, net interest income, and adjusted earnings, and suspended its quarterly",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-arbor-realty-trust-abr-081129773.html?.tsrc=rss",
+   "published_at": "2026-10-31T08:11:29Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "0668412abd15844a",
+   "primary_source": false,
+   "cluster_id": "a614cd67981214b0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Warum Arbor Realty Trust (ABR) Aktien heute niedriger gehandelt werden"
+  },
+  {
+   "id": "c056451cb888afdd",
+   "symbols": [
+    "ABR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Arbor Realty Trust (ABR) Q3 2026 Earnings Call Transcript",
+   "summary": "Management suspended dividend to preserve $125M annually amid rising delinquencies.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/30/arbor-realty-trust-abr-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-30T22:04:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "b29cd979de2e6652",
+   "primary_source": false,
+   "cluster_id": "c056451cb888afdd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "09fa265df79e3fe6",
+   "symbols": [
+    "ABR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Arbor Realty Trust, Inc. Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Arbor Realty Trust, Inc.'s Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-arbor-realty-trust-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-30T20:47:43Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "8b818dd037c55502",
+   "primary_source": false,
+   "cluster_id": "09fa265df79e3fe6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d15c8b7dbe9ea75b",
+   "symbols": [
+    "ABR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Arbor Realty Trust Q3 Earnings Call Highlights",
+   "summary": "Arbor Realty Trust (NYSE:ABR) said third-quarter earnings were pressured by higher interest rates, rising delinquencies and slower asset resolutions, prompting the company to suspend its quarterly common dividend as it builds liquidity ahead of a March debt maturity. Chief Execut",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-arbor-realty-trust-q3-earnings-call-highlights-2026-10-30/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-30T16:15:45Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "d0637d2016b8ee71",
+   "primary_source": false,
+   "cluster_id": "d15c8b7dbe9ea75b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "39fae5a757058ec3",
+   "symbols": [
+    "ABR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Battered Mortgage REIT Suspends Dividend To Preserve Cash",
+   "summary": "The mortgage REIT lost $85.4M in the third quarter, widening losses this year as debt costs squeeze borrowers.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "bisnow.com",
+   "url": "https://www.bisnow.com/news/national/multifamily/battered-mortgage-reit-shares-plummet-arbor-suspends-dividend?.tsrc=rss",
+   "published_at": "2026-10-30T15:16:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "48ecfff3fad1d0f0",
+   "primary_source": false,
+   "cluster_id": "39fae5a757058ec3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Angeschlagene Hypotheken-REITs setzen Dividende aus, um Bargeld zu erhalten"
+  },
+  {
+   "id": "ce7c94c11584fc3a",
+   "symbols": [
+    "ABR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Arbor Realty Trust stock plunges after dividend suspension",
+   "summary": "Investing.com -- Arbor Realty Trust, Inc (NYSE:ABR) shares tumbled 18.3% in premarket trade Friday following the company's decision to suspend its quarterly cash dividend on common stock and report a third-quarter loss that missed analyst expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/arbor-realty-trust-stock-plunges-135450529.html?.tsrc=rss",
+   "published_at": "2026-10-30T13:54:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "bda9c562a192a0a2",
+   "primary_source": false,
+   "cluster_id": "ce7c94c11584fc3a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Arbor Realty Trust Aktie stürzt nach Dividendenaussetzung"
+  },
+  {
+   "id": "6fa85fbd7e1320de",
+   "symbols": [
+    "ABR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Arbor Realty Trust (ABR) Reports Q3 Earnings: What Key Metrics Have to Say",
+   "summary": "The headline numbers for Arbor Realty Trust (ABR) give insight into how the company performed in the quarter ended September 2026, but it may be worthwhile to compare some of its key metrics to Wall Street estimates and the year-ago actuals.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/arbor-realty-trust-abr-reports-133001568.html?.tsrc=rss",
+   "published_at": "2026-10-30T13:30:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "cf8a4b28daf6a5a7",
+   "primary_source": false,
+   "cluster_id": "6fa85fbd7e1320de",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Arbor Realty Trust (ABR) meldet Q3-Ergebnisse: Was Schlüsselmetriken zu sagen haben"
+  },
+  {
+   "id": "a136e21dde9fa09f",
+   "symbols": [
+    "ABR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Arbor Realty Trust (NYSE:ABR) reports sales below analyst estimates in Q3 2026 earnings, stock drops 18.2%",
+   "summary": "Real estate investment trust Arbor Realty Trust (NYSE:ABR) fell short of the market’s revenue expectations in Q3 2026, with revenue falling 16.3% year on year to $94.09 million. Its non-GAAP loss of $0.04 per share was significantly below analysts’ consensus estimates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/arbor-realty-trust-nyse-abr-132400548.html?.tsrc=rss",
+   "published_at": "2026-10-30T13:24:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "a5eb0874bfbb81dc",
+   "primary_source": false,
+   "cluster_id": "a136e21dde9fa09f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Arbor Realty Trust (NYSE: ABR) meldet Umsatz unter Analystenschätzungen im Q3 2026 Ergebnis, Aktienrückgang 18,2%"
+  },
+  {
+   "id": "3d2edd10455871a8",
+   "symbols": [
+    "ABR",
+    "RWT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Arbor Realty Trust (ABR) Reports Q3 Loss, Lags Revenue Estimates",
+   "summary": "Arbor Realty Trust (ABR) delivered earnings and revenue surprises of -166.67% and -2.41%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/arbor-realty-trust-abr-reports-125002058.html?.tsrc=rss",
+   "published_at": "2026-10-30T12:50:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:52Z",
+   "fingerprint": "638eceefbb55fd88",
+   "primary_source": false,
+   "cluster_id": "3d2edd10455871a8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "27fc4dec9c3bab96",
+   "symbols": [
+    "ABR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Arbor Realty Trust: Q3 Earnings Snapshot",
+   "summary": "(AP) — Arbor Realty Trust (ABR) on Friday reported a third-quarter loss of $82.4 million, after reporting a profit in the same period a year earlier.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/arbor-realty-trust-q3-earnings-124604255.html?.tsrc=rss",
+   "published_at": "2026-10-30T12:46:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "0bd86078b7cde493",
+   "primary_source": false,
+   "cluster_id": "27fc4dec9c3bab96",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2b5af0c113c8c026",
+   "symbols": [
+    "ABR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Arbor Realty Trust Reports Third Quarter 2026 Results",
+   "summary": "Company Highlights: GAAP net loss of $(85.4) million, or $(0.51) per diluted common shareDistributable loss1 of $(0.04) per diluted common share, or distributable earnings of $0.08 excluding $21.7 million of net realized losses from the resolution of certain legacy assetsSuspends",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/arbor-realty-trust-reports-third-123000193.html?.tsrc=rss",
+   "published_at": "2026-10-30T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "9c075b337daf87e3",
+   "primary_source": false,
+   "cluster_id": "2b5af0c113c8c026",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "525db71927ee9a64",
+   "symbols": [
+    "ABR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Arbor Realty Trust (ABR) reports Q3: everything you need to know ahead of earnings",
+   "summary": "Real estate investment trust Arbor Realty Trust (NYSE:ABR) will be reporting results this Friday morning. Here’s what you need to know.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/arbor-realty-trust-abr-reports-043834154.html?.tsrc=rss",
+   "published_at": "2026-10-29T04:38:34Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "1efd4ed47fa8b2d5",
+   "primary_source": false,
+   "cluster_id": "525db71927ee9a64",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f5eab4cfbfb292a7",
+   "symbols": [
+    "ABR",
+    "RWT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Redwood Trust (RWT) Earnings Expected to Grow: What to Know Ahead of Next Week's Release",
+   "summary": "Redwood Trust (RWT) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/redwood-trust-rwt-earnings-expected-130011294.html?.tsrc=rss",
+   "published_at": "2026-10-27T13:00:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:52Z",
+   "fingerprint": "96dee727428948a9",
+   "primary_source": false,
+   "cluster_id": "f5eab4cfbfb292a7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0d83619aefd33a07",
+   "symbols": [
+    "ABR",
+    "DX",
+    "INSW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "5 Dividend Stocks with the Highest Yield",
+   "summary": "A high dividend yield is typically the result of either a high dividend or a low share price. The latter is quite common in a slowing economy where sales and profits are beginning to fall. As the share price drops, the yield will go up, though not necessarily for the right reason",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/5-dividend-stocks-highest-yield-204533291.html?.tsrc=rss",
+   "published_at": "2026-10-24T20:45:33Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:06Z",
+   "fingerprint": "c3efb92ac8430f22",
+   "primary_source": false,
+   "cluster_id": "0d83619aefd33a07",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4a496238058d5473",
+   "symbols": [
+    "ABR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Arbor Realty Trust (ABR) Suffers a Larger Drop Than the General Market: Key Insights",
+   "summary": "Arbor Realty Trust (ABR) reached $2.92 at the closing of the latest trading day, reflecting a -1.35% change compared to its last close.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/arbor-realty-trust-abr-suffers-205002228.html?.tsrc=rss",
+   "published_at": "2026-10-23T20:50:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "146bbbe752d3069d",
+   "primary_source": false,
+   "cluster_id": "4a496238058d5473",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "10a051063e7ba7a1",
+   "symbols": [
+    "ABR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Arbor Realty Trust Schedules Third Quarter 2026 Earnings Conference Call",
+   "summary": "UNIONDALE, N.Y., Oct. 23, 2026 (GLOBE NEWSWIRE) -- Arbor Realty Trust, Inc. (NYSE: ABR), today announced that it is scheduled to release third quarter 2026 financial results before the market opens on Friday, October 30, 2026. The Company will host a conference call to review the",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/arbor-realty-trust-schedules-third-201000944.html?.tsrc=rss",
+   "published_at": "2026-10-23T20:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "51f6158fb2c2ebd9",
+   "primary_source": false,
+   "cluster_id": "10a051063e7ba7a1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f6155948216d6261",
+   "symbols": [
+    "ABR",
+    "PMT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Analysts Estimate Arbor Realty Trust (ABR) to Report a Decline in Earnings: What to Look Out for",
+   "summary": "Arbor Realty Trust (ABR) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/analysts-estimate-arbor-realty-trust-130003673.html?.tsrc=rss",
+   "published_at": "2026-10-23T13:00:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:32:22Z",
+   "fingerprint": "a02082fdc1e1b97a",
+   "primary_source": false,
+   "cluster_id": "f6155948216d6261",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "16656ced3950bca1",
+   "symbols": [
+    "ABR",
+    "HURN",
+    "SUPN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Huron Consulting stock rises on S&P SmallCap 600 addition",
+   "summary": "Investing.com -- Huron Consulting Group Inc (NASDAQ:HURN) shares rose 2.9% in after-hours trading Thursday following S&amp;P Dow Jones Indices' announcement that the company will join the S&amp;P SmallCap 600 index.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/huron-consulting-stock-rises-p-222724970.html?.tsrc=rss",
+   "published_at": "2026-10-22T22:27:24Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:10:40Z",
+   "fingerprint": "56070a1f2ea041da",
+   "primary_source": false,
+   "cluster_id": "16656ced3950bca1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "175e3c496cc0dc85",
+   "symbols": [
+    "ABR",
+    "HURN",
+    "INDV",
+    "SUPN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "MSG Rangers and Huron Consulting Group Set to Join S&P SmallCap 600",
+   "summary": "S&amp;P Dow Jones Indices will make the following changes to the S&amp;P SmallCap 600:",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/msg-rangers-huron-consulting-group-220800065.html?.tsrc=rss",
+   "published_at": "2026-10-22T22:08:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:10:40Z",
+   "fingerprint": "07101d2d23ca9609",
+   "primary_source": false,
+   "cluster_id": "175e3c496cc0dc85",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d4ee54dcb5c6ad6d",
+   "symbols": [
+    "ABR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Arbor Realty Trust (ABR) Advances While Market Declines: Some Information for Investors",
+   "summary": "In the most recent trading session, Arbor Realty Trust (ABR) closed at $2.96, indicating a +2.07% shift from the previous trading day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/arbor-realty-trust-abr-advances-210002162.html?.tsrc=rss",
+   "published_at": "2026-10-22T21:00:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "093cbfe6939c8253",
+   "primary_source": false,
+   "cluster_id": "d4ee54dcb5c6ad6d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

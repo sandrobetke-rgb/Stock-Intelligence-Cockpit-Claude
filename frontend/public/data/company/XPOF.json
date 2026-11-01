@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 4.679999828338623,
     "day_low": 3.5799999237060547,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 81.19905963731107,
+    "adx14": 18.214809876396746,
+    "ema10": 4.218164482073024,
+    "sma200": 6.032249987125397,
+    "perf_63d": -32.93233121524422,
+    "adr20_pct": 6.660889215139268,
+    "range10_pct": 24.93297114163635,
+    "high10_prev": 4.659999847412109,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [
@@ -97,7 +128,10 @@
     "S01": 1.0,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": true,
@@ -141,11 +175,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 17.6,
+   "score": 41.2,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -244,7 +280,17 @@
     "green": true,
     "day_high": 4.679999828338623,
     "day_low": 3.5799999237060547,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 81.19905963731107,
+    "adx14": 18.214809876396746,
+    "ema10": 4.218164482073024,
+    "sma200": 6.032249987125397,
+    "perf_63d": -32.93233121524422,
+    "adr20_pct": 6.660889215139268,
+    "range10_pct": 24.93297114163635,
+    "high10_prev": 4.659999847412109,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -274,6 +320,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [
@@ -283,7 +350,10 @@
     "S01": 1.0,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": true,
@@ -622,11 +692,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 17.6,
+  "score": 41.2,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 100.0,
@@ -644,26 +714,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 10,
+    "independent": 10,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -681,7 +753,463 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "85a2444c7661dc02",
+   "symbols": [
+    "XPOF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xponential Fitness shares jump on reports of takeover bid",
+   "summary": "Investing.com -- Shares of Xponential Fitness (NYSE: XPOF) climbed 12% on Friday following reports that Fund 1 Investments LLC is exploring a bid to take the boutique fitness franchisor private.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xponential-fitness-shares-jump-reports-143718270.html?.tsrc=rss",
+   "published_at": "2026-10-30T14:37:18Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "1401613a072e42c7",
+   "primary_source": false,
+   "cluster_id": "85a2444c7661dc02",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Xponential Fitness Aktien springen auf Berichte über Übernahmeangebot"
+  },
+  {
+   "id": "d65c6970b3d433bd",
+   "symbols": [
+    "XPOF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Norwegian Cruise Line (NCLH) Q3 Earnings and Revenues Beat Estimates",
+   "summary": "Norwegian Cruise Line (NCLH) delivered earnings and revenue surprises of +20.43% and +2.25%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/norwegian-cruise-line-nclh-q3-104505876.html?.tsrc=rss",
+   "published_at": "2026-10-29T10:45:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "25f247b47019c573",
+   "primary_source": false,
+   "cluster_id": "d65c6970b3d433bd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b05e8bdad56c8703",
+   "symbols": [
+    "XPOF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xponential Fitness, Inc. to Announce Third Quarter 2026 Financial Results on Thursday, November 5th",
+   "summary": "IRVINE, Calif., October 22, 2026--Xponential Fitness, Inc. (NYSE: XPOF) (\"Xponential\" or the \"Company\"), one of the leading global franchisors of boutique health and wellness brands, today announced that it will release its third quarter 2026 financial results on Thursday, Novemb",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/xponential-fitness-inc-announce-third-200500886.html?.tsrc=rss",
+   "published_at": "2026-10-22T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "86590d7a4209c7c1",
+   "primary_source": false,
+   "cluster_id": "b05e8bdad56c8703",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cf79f172de330c68",
+   "symbols": [
+    "LTH",
+    "PTON",
+    "XPOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What Does Life Time's Falling Multiple Really Say?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/619982/what-does-life-times-falling-multiple-really-say/2026-10-22?.tsrc=rss",
+   "published_at": "2026-10-22T18:32:17Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:06Z",
+   "fingerprint": "041af82b2cf49c7b",
+   "primary_source": false,
+   "cluster_id": "cf79f172de330c68",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "096b6c562de5b3e8",
+   "symbols": [
+    "AMCX",
+    "IHRT",
+    "OXM",
+    "XPOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Oxford Industries, iHeartMedia, AMC Networks, Xponential Fitness, and WeightWatchers Shares Plummet, What You Need To Know",
+   "summary": "A number of stocks fell in the afternoon session after the LSEG/Ipsos Primary Consumer Sentiment Index fell 5.3 points from September to 45.2 in October 2026, the lowest reading since October 2011. According to LSEG, the survey was taken from Sept. 25 through Oct. 1. The monthly ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/oxford-industries-iheartmedia-amc-networks-213939766.html?.tsrc=rss",
+   "published_at": "2026-10-16T21:39:39Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:26:58Z",
+   "fingerprint": "d40618a72e16be0b",
+   "primary_source": false,
+   "cluster_id": "096b6c562de5b3e8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "14d556ecc2f9bb09",
+   "symbols": [
+    "XPOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Consumer Discretionary - Leisure Facilities Stocks Q2 In Review: Xponential Fitness (NYSE:XPOF) Vs Peers",
+   "summary": "The end of an earnings season can be a great time to discover new stocks and assess how companies are handling the current business environment. Let’s take a look at how Xponential Fitness (NYSE:XPOF) and the rest of the consumer discretionary - leisure facilities stocks fared in",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/consumer-discretionary-leisure-facilities-stocks-142427570.html?.tsrc=rss",
+   "published_at": "2026-10-15T14:24:27Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "d02d9ee575bcff27",
+   "primary_source": false,
+   "cluster_id": "14d556ecc2f9bb09",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6004b68c938429bb",
+   "symbols": [
+    "RGR",
+    "RXO",
+    "XPOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Inflated  Stocks We Keep Off Our Radar",
+   "summary": "The stocks featured in this article are seeing some big returns. Over the past month, they’ve outpaced the market due to some combination of positive news, upbeat results, or supportive macro developments. As such, investors are taking notice and bidding up shares.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-inflated-stocks-keep-off-093104876.html?.tsrc=rss",
+   "published_at": "2026-10-13T09:31:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:25Z",
+   "fingerprint": "34344438f8b53e78",
+   "primary_source": false,
+   "cluster_id": "6004b68c938429bb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a1f0e5837b99a560",
+   "symbols": [
+    "XPOF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xponential Fitness, Inc. Announces Adoption of Limited-Duration Stockholder Rights Plan",
+   "summary": "IRVINE, Calif., October 12, 2026--Xponential Fitness, Inc. (NYSE: XPOF) (\"Xponential\" or the \"Company\"), one of the leading global franchisors of boutique health and wellness brands, today announced that the Company’s Board of Directors (the \"Board\") has adopted a limited-duratio",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xponential-fitness-inc-announces-adoption-130000544.html?.tsrc=rss",
+   "published_at": "2026-10-12T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "b8ce229fc0198b8f",
+   "primary_source": false,
+   "cluster_id": "a1f0e5837b99a560",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "07198f26f21e5e5e",
+   "symbols": [
+    "XPOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "These 3 Short-Squeeze Candidates Have Catalysts, But Their Risks Are Just as Large",
+   "summary": "Ondas Holdings, Wolfspeed and Xponential Fitness carry heavy short interest and bearish analyst sentiment, but each shows potential catalysts that could trigger a short squeeze for contrarian investors.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/articles/these-3-short-squeeze-candidates-have-catalysts-but-their-risks-are-just-as-large/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-05T13:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "db034ebabc0e81a4",
+   "primary_source": false,
+   "cluster_id": "07198f26f21e5e5e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d78bddc0902c530d",
+   "symbols": [
+    "XPOF",
+    "YOU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Safe-and-Steady Stock with Impressive Fundamentals and 2 We Brush Off",
+   "summary": "A stock with low volatility can be reassuring, but it doesn’t always mean strong long-term performance. Investors who prioritize stability may miss out on higher-reward opportunities elsewhere.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-safe-steady-stock-impressive-111803368.html?.tsrc=rss",
+   "published_at": "2026-10-02T11:18:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "c6528bd54c74c1c9",
+   "primary_source": false,
+   "cluster_id": "d78bddc0902c530d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ea15cc24865044ec",
+   "symbols": [
+    "TALO",
+    "XPOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Stocks making big moves this week: TD SYNNEX, Talos Energy, The Toro Company, Dropbox, and Xponential Fitness",
+   "summary": "Check out the companies making headlines this week:",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-making-big-moves-week-234437472.html?.tsrc=rss",
+   "published_at": "2026-09-25T23:44:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:44:34Z",
+   "fingerprint": "512c7a0153b95849",
+   "primary_source": false,
+   "cluster_id": "ea15cc24865044ec",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "198a8fb9a1f57db9",
+   "symbols": [
+    "TWI",
+    "XPOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Stocks making big moves yesterday: Xponential Fitness, Meta, Marvell Technology, Titan International, and Cloudflare",
+   "summary": "Check out the companies making headlines yesterday:",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-making-big-moves-yesterday-182946944.html?.tsrc=rss",
+   "published_at": "2026-09-22T18:29:46Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:45:26Z",
+   "fingerprint": "221a41cff47c8ecb",
+   "primary_source": false,
+   "cluster_id": "198a8fb9a1f57db9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e1d6859c1cde2dce",
+   "symbols": [
+    "XPOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Xponential Fitness (XPOF) Stock Is Up Today",
+   "summary": "Shares of boutique fitness studio franchisor Xponential Fitness (NYSE:XPOF) jumped 5.5% in the afternoon session after its Club Pilates brand announced a milestone of expanding beyond 1,500 studios worldwide while introducing its Decades Week studio activation, according to the c",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-xponential-fitness-xpof-stock-013425111.html?.tsrc=rss",
+   "published_at": "2026-09-22T01:34:25Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "3675fd3c354a6519",
+   "primary_source": false,
+   "cluster_id": "e1d6859c1cde2dce",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "84b855c3b25f93e8",
+   "symbols": [
+    "CABO",
+    "FLWS",
+    "LIND",
+    "SABR",
+    "XPOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1-800-FLOWERS, Sabre, Xponential Fitness, Cable One, and Lindblad Expeditions Shares Are Falling, What You Need To Know",
+   "summary": "A number of stocks fell in the afternoon session after rising Treasury yields and higher interest rates intensified worries over household finances and discretionary consumption, creating headwind conditions for consumer-facing companies. According to Reuters, as borrowing costs ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-800-flowers-sabre-xponential-002440185.html?.tsrc=rss",
+   "published_at": "2026-09-19T00:24:40Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:47:50Z",
+   "fingerprint": "2256c0f9b34d8714",
+   "primary_source": false,
+   "cluster_id": "84b855c3b25f93e8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "aa48209185b54f22",
+   "symbols": [
+    "XPOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xponential Fitness outlook hit by weaker sales, slower studio expansion",
+   "summary": "Xponential Fitness Inc. (NYSE:XPOF) faces lower UBS forecasts and a $4.50 price target, down from $7, after weaker sales prompted management to cut guidance. Management’s revised guidance puts financial year 2026 revenue at $250 million to $260 million and EBITDA at $91 million t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "proactiveinvestors.com",
+   "url": "https://www.proactiveinvestors.com/companies/news/1098661/xponential-fitness-outlook-hit-by-weaker-sales-slower-studio-expansion-1098661.html?.tsrc=rss",
+   "published_at": "2026-09-16T19:23:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "3b2405f9454ff621",
+   "primary_source": false,
+   "cluster_id": "aa48209185b54f22",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1f245bdad597a1f2",
+   "symbols": [
+    "XPOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Profitable Stock on Our Buy List and 2 We Avoid",
+   "summary": "Not all profitable companies are built to last - some rely on outdated models or unsustainable advantages. Just because a business is in the green today doesn’t mean it will thrive tomorrow.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-profitable-stock-buy-list-083549185.html?.tsrc=rss",
+   "published_at": "2026-09-16T08:35:49Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "a692ce3ebd71007a",
+   "primary_source": false,
+   "cluster_id": "1f245bdad597a1f2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "89193bf1ac59609e",
+   "symbols": [
+    "XPOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xponential Fitness, Inc. Appoints Jennifer Ryu as Chief Financial Officer",
+   "summary": "IRVINE, Calif., September 08, 2026--Xponential Fitness, Inc. (NYSE: XPOF) (\"Xponential\" or the \"Company\"), one of the leading global franchisors of boutique health and wellness brands, today announced the appointment of Jennifer Ryu as Chief Financial Officer, effective as of Oct",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/xponential-fitness-inc-appoints-jennifer-200500560.html?.tsrc=rss",
+   "published_at": "2026-09-08T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "41c8e3f087bed6d3",
+   "primary_source": false,
+   "cluster_id": "89193bf1ac59609e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3f5f2b81293b5476",
+   "symbols": [
+    "XPOF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xponential Fitness (XPOF) Swings To A Loss And Cuts Guidance",
+   "summary": "On August 6, Xponential Fitness (NYSE:XPOF) reported results for the second quarter ended June 30, and the numbers came in well short of where the boutique-fitness franchisor wanted to be. Revenue fell 13% year over year to $66 million, and the company swung to a net loss of $4.8",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xponential-fitness-xpof-swings-loss-110714310.html?.tsrc=rss",
+   "published_at": "2026-09-06T11:07:14Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "58ec15e09d92cda3",
+   "primary_source": false,
+   "cluster_id": "3f5f2b81293b5476",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4d234e83481fa15e",
+   "symbols": [
+    "XPOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xponential Fitness (XPOF) Stock Sees Fair Value Cut After Weaker Q2 And 2026 Reset",
+   "summary": "Xponential Fitness has seen its modeled fair value trimmed from US$7.21 to US$6.10, which meaningfully narrows the room analysts see between the stock price and their updated target. That reset lines up with recent Wall Street commentary that has shifted toward a more cautious mi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xponential-fitness-xpof-stock-sees-031022646.html?.tsrc=rss",
+   "published_at": "2026-09-06T03:10:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "87b5f83b92a2af87",
+   "primary_source": false,
+   "cluster_id": "4d234e83481fa15e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9968137b94866291",
+   "symbols": [
+    "XPOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "2 Cash-Burning Stocks with Exciting Potential and 1 Facing Headwinds",
+   "summary": "While some companies burn cash to fuel expansion, others struggle to turn spending into sustainable growth. A high cash burn rate without a strong balance sheet can leave investors exposed to significant downside.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/2-cash-burning-stocks-exciting-094452946.html?.tsrc=rss",
+   "published_at": "2026-08-28T09:44:52Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "e0a81a6309dc586d",
+   "primary_source": false,
+   "cluster_id": "9968137b94866291",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "b34c39c7a521644f",

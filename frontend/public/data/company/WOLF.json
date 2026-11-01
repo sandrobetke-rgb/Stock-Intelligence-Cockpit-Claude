@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 23.700000762939453,
     "day_low": 20.812000274658203,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 14.15312593124041,
+    "adx14": 13.583723516045087,
+    "ema10": 24.494253130219786,
+    "sma200": 30.3080499124527,
+    "perf_63d": -9.73306284231914,
+    "adr20_pct": 9.211474565778955,
+    "range10_pct": 22.29358156164263,
+    "high10_prev": 26.65999984741211,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.0,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.16666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -139,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 9.4,
+   "score": 52.9,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 6,
    "independent_24h": 0
   },
   "political": {
@@ -242,7 +278,17 @@
     "green": false,
     "day_high": 23.700000762939453,
     "day_low": 20.812000274658203,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 14.15312593124041,
+    "adx14": 13.583723516045087,
+    "ema10": 24.494253130219786,
+    "sma200": 30.3080499124527,
+    "perf_63d": -9.73306284231914,
+    "adr20_pct": 9.211474565778955,
+    "range10_pct": 22.29358156164263,
+    "high10_prev": 26.65999984741211,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -272,6 +318,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -279,7 +346,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.0,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.16666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -618,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 9.4,
+  "score": 52.9,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 80,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 53.3,
@@ -640,25 +710,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 6,
+    "independent": 6,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 17,
+    "independent": 17,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 6,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -677,7 +749,388 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "28be75eda969d13e",
+   "symbols": [
+    "ON",
+    "WOLF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wolfspeed Is Down 25% in October: Stay the Course, or Just Stay Away?",
+   "summary": "Wolfspeed survived bankruptcy only to shed another quarter of its value in October, leaving investors to weigh a billion-dollar federal commitment against negative margins and a mountain of high-interest debt.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/30/wolfspeed-is-down-25-in-october-stay-the-course-or-just-stay-away/?.tsrc=rss",
+   "published_at": "2026-10-30T19:02:49Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:22Z",
+   "fingerprint": "9cc38dee469128fc",
+   "primary_source": false,
+   "cluster_id": "28be75eda969d13e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Wolfspeed ist im Oktober um 25% gesunken: Bleiben Sie auf Kurs oder bleiben Sie einfach weg?"
+  },
+  {
+   "id": "8b5c4b3744ff6d44",
+   "symbols": [
+    "WOLF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "BorgWarner (BWA) Cuts 2026 Outlook After Earnings Beat, Is The Pullback A Buying Opportunity",
+   "summary": "BorgWarner (BWA) stock is in focus after the auto supplier trimmed its 2026 revenue outlook to US$14.0 billion to US$14.2 billion, while posting third quarter earnings that exceeded analyst expectations. Recent trading shows that momentum in BorgWarner’s share price has cooled, w",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/borgwarner-bwa-cuts-2026-outlook-210829251.html?.tsrc=rss",
+   "published_at": "2026-10-29T21:08:29Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "289443aea2894842",
+   "primary_source": false,
+   "cluster_id": "8b5c4b3744ff6d44",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "57d15f16d3c95895",
+   "symbols": [
+    "WOLF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wolfspeed Commercially Introduces Transparent Silicon Carbide Technology for Augmented Reality and Quantum Computing",
+   "summary": "DURHAM, N.C., October 29, 2026--Wolfspeed, Inc. (NYSE: WOLF), a global leader in silicon carbide (SiC) technology, today announced the commercial introduction of its proprietary transparent silicon carbide (TSiC™) technology expanding the potential of silicon carbide to enable ne",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/wolfspeed-commercially-introduces-transparent-silicon-200500103.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "47b1b6a12561cfc0",
+   "primary_source": false,
+   "cluster_id": "57d15f16d3c95895",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0dae41b82f48f21a",
+   "symbols": [
+    "WOLF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wolfspeed Powers the Future of EVs with Multiyear Silicon Carbide Device Agreement",
+   "summary": "DURHAM, N.C., October 28, 2026--Wolfspeed, Inc. (NYSE: WOLF), a global leader in silicon carbide technology, today announced a multiyear supply agreement for Wolfspeed silicon carbide devices to support BorgWarner’s next-generation 800V silicon carbide-based inverter platform as ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/wolfspeed-powers-future-evs-multiyear-200500346.html?.tsrc=rss",
+   "published_at": "2026-10-28T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "9d38ccb7c1301411",
+   "primary_source": false,
+   "cluster_id": "0dae41b82f48f21a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "552d6af2e9a0153a",
+   "symbols": [
+    "NVTS",
+    "WOLF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Navitas Is Up 12% in 2026, 73% Off Its High: Is the “Power Wall” Pitch a Buy?",
+   "summary": "Key TakeawaysNavitas stock is up 12% in 2026 through Tuesday’s close, but it’s 73% below the high it hit in June during the AI power-chip boom. Buying Claros and new 800-volt designs with Nvidia and Microchip make its AI data-center pitch bigger, but quarterly revenue is still ar",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/navitas-is-up-12-in-2026-73-off-its-high-is-the-power-wall-pitch-a-buy?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-28T10:39:30Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:50Z",
+   "fingerprint": "71d8e5c3cb632c3d",
+   "primary_source": false,
+   "cluster_id": "552d6af2e9a0153a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9fb38e2ad0b65092",
+   "symbols": [
+    "WOLF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wolfspeed Highlights AI Data Center Growth, Silicon Carbide Roadmap at Annual Meeting",
+   "summary": "Wolfspeed (NYSE:WOLF) said it is advancing its silicon carbide technology roadmap, expanding its presence in AI data centers and pursuing operating and capital-structure improvements, Chief Executive Officer Robert Feurle said at the company’s 2026 annual shareholder meeting. The",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-wolfspeed-highlights-ai-data-center-growth-silicon-carbide-roadmap-at-annual-meeting-2026-10-27/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-27T17:05:26Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "d013c8061961c31c",
+   "primary_source": false,
+   "cluster_id": "9fb38e2ad0b65092",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f1705ccf778673f9",
+   "symbols": [
+    "NVTS",
+    "WOLF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Navitas Just Dropped 23% in a Month. Is It Time to Sell, or Load Up?",
+   "summary": "Key TakeawaysNavitas Semiconductor stock fell 23% in the past month, with the damage done on Oct. 12, 14 and 16, days with no company news.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/navitas-just-dropped-23-in-a-month-is-it-time-to-sell-or-load-up?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-23T17:57:26Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:50Z",
+   "fingerprint": "09c60c9791560ddc",
+   "primary_source": false,
+   "cluster_id": "f1705ccf778673f9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "24958f474307e423",
+   "symbols": [
+    "WOLF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Wolfspeed, Inc. Announces Date of Fiscal First Quarter Earnings Call for November 4, 2026",
+   "summary": "DURHAM, N.C., October 15, 2026--Wolfspeed, Inc. (NYSE: WOLF), a global leader in silicon carbide technology, will conduct a conference call and audio webcast to discuss its first quarter fiscal 2027 results on Wednesday, November 4, 2026, at 5:00 pm Eastern Time. The call will be",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wolfspeed-inc-announces-date-fiscal-200500168.html?.tsrc=rss",
+   "published_at": "2026-10-15T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "1512c65672b2960a",
+   "primary_source": false,
+   "cluster_id": "24958f474307e423",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d5a8121552f3b5b4",
+   "symbols": [
+    "WOLF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Infineon and Wolfspeed Expand and Extend Long-Term Silicon Carbide Wafer Supply Agreement to Include 200 mm",
+   "summary": "DURHAM, N.C., October 15, 2026--Wolfspeed, Inc (NYSE: WOLF), a global leader in silicon carbide technology, and Infineon Technologies AG (FSE: IFX / OTCQX: IFNNY) today announced the expansion and extension of their existing long-term silicon carbide (SiC) wafer supply agreement.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/infineon-wolfspeed-expand-extend-long-120000618.html?.tsrc=rss",
+   "published_at": "2026-10-15T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "459f62beab69ebbc",
+   "primary_source": false,
+   "cluster_id": "d5a8121552f3b5b4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3cfe460d9a5b6c8e",
+   "symbols": [
+    "WOLF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "U.S. making bold $1.5 billion investment in defense-critical chipmaker",
+   "summary": "The Pentagon’s 30-year deal comes with a real catch for shareholders.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "thestreet.com",
+   "url": "https://www.thestreet.com/investing/stocks/us-department-defense-wolfspeed-wolf-1-5-billion-investment-chipmaker?.tsrc=rss",
+   "published_at": "2026-10-14T16:17:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "b1edf699d5fa45be",
+   "primary_source": false,
+   "cluster_id": "3cfe460d9a5b6c8e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a9fa83158b773f89",
+   "symbols": [
+    "AXTI",
+    "WOLF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "AXT's Inventory Rises Sharply: Will Working Capital Pressure Grow?",
+   "summary": "AXTI's inventory rises 18% to $96.3 million, raising working-capital concerns despite strong InP demand, a $100 million-plus backlog and robust liquidity.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/axts-inventory-rises-sharply-working-150800912.html?.tsrc=rss",
+   "published_at": "2026-10-13T15:08:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:28:01Z",
+   "fingerprint": "390d5939726dd52d",
+   "primary_source": false,
+   "cluster_id": "a9fa83158b773f89",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4d181fbdd3faf3b4",
+   "symbols": [
+    "WOLF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Enlisting Capital: Wolfspeed's Defense Deal",
+   "summary": "Wolfspeed secured a conditional $1.5 billion, 30-year Defense Department loan involving equity warrants and parallel funding terms, aimed at refinancing debt and scaling its Siler City silicon carbide plant.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/articles/enlisting-capital-wolfspeeds-defense-deal/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-13T13:20:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "923de1814630c525",
+   "primary_source": false,
+   "cluster_id": "4d181fbdd3faf3b4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5df84875e12cb900",
+   "symbols": [
+    "WOLF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Applied Digital Has $36 Billion in Contracted Revenue. Wolfspeed Has the Better Stock Chart.",
+   "summary": "One builds the AI factories, the other makes the chips that power them, yet the market is rewarding only one while punishing the other. Understanding why reveals a deeper split in how investors are valuing the infrastructure boom right now.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/12/applied-digital-has-36-billion-in-contracted-revenue-wolfspeed-has-the-better-stock-chart/?.tsrc=rss",
+   "published_at": "2026-10-12T12:50:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "94aabaed76552a86",
+   "primary_source": false,
+   "cluster_id": "5df84875e12cb900",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "829de5120ca39943",
+   "symbols": [
+    "WOLF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wolfspeed Secures Conditional $1.5 Billion Financing From the Government to Enhance Its Capabilities. What This Means for WOLF Stock.",
+   "summary": "Wolfspeed's new agreement with the Department of Defense is set to last 30 years.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "barchart.com",
+   "url": "https://www.barchart.com/story/news/5433692/wolfspeed-secures-conditional-1-5-billion-financing-from-the-government-to-enhance-its-capabilities-what-this-means-for-wolf-stock?.tsrc=rss",
+   "published_at": "2026-10-09T17:37:20Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "c2d82d0fd4c7612a",
+   "primary_source": false,
+   "cluster_id": "829de5120ca39943",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "22d9b2f88363b971",
+   "symbols": [
+    "WOLF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wolfspeed (WOLF) Stock Could Look Pricey Despite Its $1.5b Loan News",
+   "summary": "Wolfspeed shares have surged 63.9% year to date, which puts a spotlight on whether the current valuation really lines up with what the company is generating in sales. With that kind of move on the board, the key issue for investors is how much revenue power the market is now assu",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wolfspeed-wolf-stock-could-look-060940856.html?.tsrc=rss",
+   "published_at": "2026-10-09T06:09:40Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "f5181711a903d920",
+   "primary_source": false,
+   "cluster_id": "22d9b2f88363b971",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "111881adbd40b384",
+   "symbols": [
+    "WOLF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "A $1.5 Billion Reason Why Wolfspeed Is in Focus Today",
+   "summary": "Wolfspeed stock gained earlier today as the company secured $1.5 billion in financing from the U.S. Department of Defense. Here’s why WOLF shares aren’t worth buying today.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "barchart.com",
+   "url": "https://www.barchart.com/story/news/5111813/a-1-5-billion-reason-why-wolfspeed-is-in-focus-today?.tsrc=rss",
+   "published_at": "2026-10-08T19:19:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "42b1cf5b063569c4",
+   "primary_source": false,
+   "cluster_id": "111881adbd40b384",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "33561c609bd19eb4",
+   "symbols": [
+    "HAE",
+    "WOLF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Chipotle, Starbucks, Palantir, Intel, SpaceX, Wolfspeed, and More Stocks That Explain Today’s Market",
+   "summary": "Chipotle trades higher following a report that Starbucks had looked into a possible takeover of the burrito chain.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/b361f1db-c32b-3b1d-8f3f-7d6523484abf/chipotle%2C-starbucks%2C.html?.tsrc=rss",
+   "published_at": "2026-10-08T16:38:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:58Z",
+   "fingerprint": "94a68d05b6326f62",
+   "primary_source": false,
+   "cluster_id": "33561c609bd19eb4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "1e847c0c8be8b95d",

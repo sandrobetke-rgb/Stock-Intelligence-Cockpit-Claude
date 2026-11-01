@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -35,8 +35,8 @@
     "close": 9.529999732971191,
     "change_pct": -0.8324654169000856,
     "ema20": 9.20544068280204,
-    "ema50": 9.707123745089916,
-    "ema200": 11.164563003201861,
+    "ema50": 9.707123745090252,
+    "ema200": 11.164563005812266,
     "sma50": 9.69879997253418,
     "rsi14": 55.07260448462584,
     "rsi_min5": 50.16288843831619,
@@ -44,7 +44,7 @@
     "atr_pct": 3.557278014946854,
     "rvol": 0.7741615555843347,
     "vol30": 4678643.333333333,
-    "dist_ema200_pct": -14.64063814913219,
+    "dist_ema200_pct": -14.640638169090192,
     "dist_52w_high_pct": 35.43360714640619,
     "high_52w": 14.760000228881836,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 9.680000305175781,
     "day_low": 9.40999984741211,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 58.2700834746058,
+    "adx14": 26.74294101689363,
+    "ema10": 9.2890679363691,
+    "sma200": 11.330250005722046,
+    "perf_63d": -32.55485027752057,
+    "adr20_pct": 3.613511283729089,
+    "range10_pct": 17.00598816073351,
+    "high10_prev": 9.770000457763672,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -138,11 +172,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 1.6,
+   "score": 17.8,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -218,8 +254,8 @@
     "close": 9.529999732971191,
     "change_pct": -0.8324654169000856,
     "ema20": 9.20544068280204,
-    "ema50": 9.707123745089916,
-    "ema200": 11.164563003201861,
+    "ema50": 9.707123745090252,
+    "ema200": 11.164563005812266,
     "sma50": 9.69879997253418,
     "rsi14": 55.07260448462584,
     "rsi_min5": 50.16288843831619,
@@ -227,7 +263,7 @@
     "atr_pct": 3.557278014946854,
     "rvol": 0.7741615555843347,
     "vol30": 4678643.333333333,
-    "dist_ema200_pct": -14.64063814913219,
+    "dist_ema200_pct": -14.640638169090192,
     "dist_52w_high_pct": 35.43360714640619,
     "high_52w": 14.760000228881836,
     "macd_above_signal": true,
@@ -241,7 +277,17 @@
     "green": false,
     "day_high": 9.680000305175781,
     "day_low": 9.40999984741211,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 58.2700834746058,
+    "adx14": 26.74294101689363,
+    "ema10": 9.2890679363691,
+    "sma200": 11.330250005722046,
+    "perf_63d": -32.55485027752057,
+    "adr20_pct": 3.613511283729089,
+    "range10_pct": 17.00598816073351,
+    "high10_prev": 9.770000457763672,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -271,6 +317,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -278,7 +345,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -616,11 +686,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 1.6,
+  "score": 17.8,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 9.2,
@@ -638,25 +708,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 12,
+    "independent": 12,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -675,7 +747,453 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "026f184306f53cdb",
+   "symbols": [
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "XRAYDentsply Sirona (XRAY) Faces Demand Headwinds Despite Ongoing Turnaround Efforts",
+   "summary": "Ariel Investments, an investment management company, released its “Ariel Focus Fund” Q3 2026 investor letter. A copy of the letter can be downloaded here. The Fund declined during the third quarter of 2026 as higher interest rates, persistent inflation, rising energy prices, and ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xraydentsply-sirona-xray-faces-demand-163551459.html?.tsrc=rss",
+   "published_at": "2026-10-28T16:35:51Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:04Z",
+   "fingerprint": "cf0d9aee1c6697a4",
+   "primary_source": false,
+   "cluster_id": "026f184306f53cdb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "641ea291499a35b4",
+   "symbols": [
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Global Dental Implant Treatment Planning Software Market Size, Share, and Forecast, 2026-2032 | Digital Dentistry and GP Adoption Drive 3.4% CAGR Toward $40 Million",
+   "summary": "New 40-page report, available from Research and Markets, values implant treatment planning software at over $30m in 2025, rising to nearly $40m by 2032, with Dentsply Sirona leading Envista, though outsourcing to labs and upfront costs keep growth modestDublin, Oct. 22, 2026 (GLO",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/global-dental-implant-treatment-planning-133000930.html?.tsrc=rss",
+   "published_at": "2026-10-22T13:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:04Z",
+   "fingerprint": "866755cc0644c95a",
+   "primary_source": false,
+   "cluster_id": "641ea291499a35b4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d424940ef57db2c7",
+   "symbols": [
+    "SOLV",
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Mexico Prefabricated Crown and Bridge Materials Market Outlook to 2036: Permanent Crowns and Bridges Revenue, Volume and Pricing",
+   "summary": "Annual revenue, volume and price data for permanent crowns and bridges in Mexico from 2024 to 2036, with 2025 company shares for Ivoclar, Dentsply Sirona, Solventum, Shofu and Dentaurum.Dublin, Oct. 22, 2026 (GLOBE NEWSWIRE) -- \"Mexico Prefabricated Crown and Bridge Materials Mar",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/mexico-prefabricated-crown-bridge-materials-131400557.html?.tsrc=rss",
+   "published_at": "2026-10-22T13:14:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:57Z",
+   "fingerprint": "31b9ac5af1d90204",
+   "primary_source": false,
+   "cluster_id": "d424940ef57db2c7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "48fde520ef7e6037",
+   "symbols": [
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Mexico Dental Imaging Market Outlook to 2036: Dental Cameras and Digital Caries Detection Devices Revenue, Volume and Pricing",
+   "summary": "Annual revenue, unit volume and average price data for dental cameras and digital caries detection devices in Mexico from 2024 to 2036, with company share data for Dentsply Sirona, KaVo, Carestream Dental, Durr Dental and Acteon.Dublin, Oct. 22, 2026 (GLOBE NEWSWIRE) -- \"Mexico D",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/mexico-dental-imaging-market-outlook-131300841.html?.tsrc=rss",
+   "published_at": "2026-10-22T13:13:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:04Z",
+   "fingerprint": "1ce1a445b78760e4",
+   "primary_source": false,
+   "cluster_id": "48fde520ef7e6037",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "026400cf4854ad53",
+   "symbols": [
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Dentsply Sirona to Host Third Quarter 2026 Conference Call on November 5",
+   "summary": "CHARLOTTE, N.C., Oct. 20, 2026 (GLOBE NEWSWIRE) -- DENTSPLY SIRONA Inc. (“Dentsply Sirona” or the \"Company\") (Nasdaq: XRAY) today announced that the Company will host an investor conference call and live webcast on Thursday, November 5, 2026, at 4:30 p.m. EST to review its third ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dentsply-sirona-host-third-quarter-201500515.html?.tsrc=rss",
+   "published_at": "2026-10-20T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:04Z",
+   "fingerprint": "8e89641f4043deb5",
+   "primary_source": false,
+   "cluster_id": "026400cf4854ad53",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3c390f4d0f7c2812",
+   "symbols": [
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Global Clear Aligners Market Size, Share, Trends, and Forecast to 2031 | Image-Conscious Adults Set to Nearly Double the Clear Aligner Market to $11bn Market Value",
+   "summary": "New Report values clear aligners market at $6.09bn in 2026, with dental service organisations and digital orthodontics widening access — though cut-price direct-to-consumer rivals and complex cases test Align Technology, Straumann, Dentsply Sirona and EnvistaDublin, Oct. 20, 2026",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/global-clear-aligners-market-size-090200752.html?.tsrc=rss",
+   "published_at": "2026-10-20T09:02:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:04Z",
+   "fingerprint": "09c52f8747b3597b",
+   "primary_source": false,
+   "cluster_id": "3c390f4d0f7c2812",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "22a828ce63820aa7",
+   "symbols": [
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "U.S. Digital Dentistry Market to Top $1.6B by 2032 as Clear Aligners and DSOs Drive Intraoral Scanner and 3D Printer Adoption",
+   "summary": "Report Ranks Dentsply Sirona, Align Technology and Ivoclar, With Unit Sales, Average Selling Prices and 2025 Market Share as Low-Cost Entrants Push Prices DownDublin, Oct. 14, 2026 (GLOBE NEWSWIRE) -- \"Digital Dentistry Market Size, Share & Trends Analysis | United States | 2026-",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/u-digital-dentistry-market-top-101000028.html?.tsrc=rss",
+   "published_at": "2026-10-14T10:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:04Z",
+   "fingerprint": "e0b2b1982d11b635",
+   "primary_source": false,
+   "cluster_id": "22a828ce63820aa7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1b9f5afc1246ccc4",
+   "symbols": [
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Dentsply Sirona Expands U.S. Digital Dentistry Reach With Midwest Deal",
+   "summary": "XRAY expands its U.S. distribution reach through Midwest Dental, aiming to boost digital dentistry adoption and broaden access to its technology portfolio.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/dentsply-sirona-expands-u-digital-152400410.html?.tsrc=rss",
+   "published_at": "2026-10-12T15:24:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:04Z",
+   "fingerprint": "683fb71231496199",
+   "primary_source": false,
+   "cluster_id": "1b9f5afc1246ccc4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4562b7b67b649e33",
+   "symbols": [
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Dentsply Sirona (XRAY): Buy, Sell, or Hold Post Q2 Earnings?",
+   "summary": "Dentsply Sirona has gotten torched over the last six months - since April 2026, its stock price has dropped 27.3% to $8.62 per share. This may have investors wondering how to approach the situation.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dentsply-sirona-xray-buy-sell-163510797.html?.tsrc=rss",
+   "published_at": "2026-10-09T16:35:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:04Z",
+   "fingerprint": "da9d75d0cefb5517",
+   "primary_source": false,
+   "cluster_id": "4562b7b67b649e33",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e2ab592bf5075621",
+   "symbols": [
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "DENTSPLY SIRONA (XRAY) Tests Its Reset Story After Midwest Dental Expansion",
+   "summary": "Why the Midwest Dental expansion matters for DENTSPLY SIRONA DENTSPLY SIRONA (XRAY) has extended its relationship with Midwest Dental, which will start distributing the company’s technology portfolio across the United States from 1 November 2026. This moves the relationship beyon",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dentsply-sirona-xray-tests-reset-231830632.html?.tsrc=rss",
+   "published_at": "2026-10-08T23:18:30Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:04Z",
+   "fingerprint": "7a2c86dee52ccbf5",
+   "primary_source": false,
+   "cluster_id": "e2ab592bf5075621",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "945cccd7fe684d81",
+   "symbols": [
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Wellspect HealthCare Announces U.S. Medicare Reimbursement Access for Surity™ Urinary Management Portfolio",
+   "summary": "U.S. Medicare Reimbursement Access for Surity™ Urinary Management Portfolio The Surity™ portfolio may be covered by traditional Medicare for eligible beneficiaries when medically necessary. Traditional Medicare reimbursement supports broader access to non-invasive management opti",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/wellspect-healthcare-announces-u-medicare-123400969.html?.tsrc=rss",
+   "published_at": "2026-10-07T12:34:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:04Z",
+   "fingerprint": "d946386d05f99ce1",
+   "primary_source": false,
+   "cluster_id": "945cccd7fe684d81",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fc639626adca1c01",
+   "symbols": [
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Dentsply Sirona Continues North American Commercial Expansion with Midwest Dental Agreement",
+   "summary": "The expanded relationship builds on a series of agreements announced this year, strengthening Dentsply Sirona’s North American dealer network and giving more customers access to its products and technology.CHARLOTTE, N.C., Oct. 06, 2026 (GLOBE NEWSWIRE) -- Dentsply Sirona (Nasdaq",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/dentsply-sirona-continues-north-american-130700438.html?.tsrc=rss",
+   "published_at": "2026-10-06T13:07:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:04Z",
+   "fingerprint": "d21cc68604ea39d1",
+   "primary_source": false,
+   "cluster_id": "fc639626adca1c01",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9944dda835dd5f97",
+   "symbols": [
+    "HSIC",
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Dental Implants and Prosthetics Market Forecasts Growth from $12.79B (2026) to $17.67B by 2031, Profiling Institut Straumann, Envista, Dentsply Sirona & Henry Schein",
+   "summary": "The global dental implants and prosthetics market is projected to grow from USD 12.79 billion in 2026 to USD 17.67 billion by 2031, at a 6.7% CAGR. Growth is driven by rising tooth loss, an aging population, demand for cosmetic dentistry, and advances in CAD/CAM, 3D printing and ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/dental-implants-prosthetics-market-forecasts-082300634.html?.tsrc=rss",
+   "published_at": "2026-10-01T08:23:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:57Z",
+   "fingerprint": "407ba04553a071ea",
+   "primary_source": false,
+   "cluster_id": "9944dda835dd5f97",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "db06876731e7c203",
+   "symbols": [
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Dental Equipment Market Forecasts Growth from $8.31B (2026) to $11.48B by 2031, Profiling Envista, Carestream Dental, Nakanishi & Dentsply Sirona",
+   "summary": "The global dental equipment market is projected to grow from USD 8.31 billion in 2026 to USD 11.48 billion by 2031, registering a 5.5% CAGR. Growth is driven by rising oral health disorders, demand for cosmetic and preventive dentistry, dental tourism, and adoption of digital ima",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/dental-equipment-market-forecasts-growth-090800313.html?.tsrc=rss",
+   "published_at": "2026-09-30T09:08:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:04Z",
+   "fingerprint": "96646dcfd70002a1",
+   "primary_source": false,
+   "cluster_id": "db06876731e7c203",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "26d6559f0e1ec1bc",
+   "symbols": [
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Dental Consumables Market Forecasts Growth from $37.0B (2026) to $54.0B by 2031, Profiling Institut Straumann, Envista, Dentsply Sirona & 3M",
+   "summary": "The global dental consumables market is projected to grow from USD 37.0 billion in 2026 to USD 54.0 billion by 2031, registering a 7.9% CAGR. Growth is driven by rising dental disease prevalence, aging populations, cosmetic dentistry demand, improved access to oral care, and adop",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/dental-consumables-market-forecasts-growth-090700986.html?.tsrc=rss",
+   "published_at": "2026-09-30T09:07:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:04Z",
+   "fingerprint": "e658e68a983c9a9e",
+   "primary_source": false,
+   "cluster_id": "26d6559f0e1ec1bc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "545d2be3f02b23a7",
+   "symbols": [
+    "PAYO",
+    "VRRM",
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Stocks Under $10 Walking a Fine Line",
+   "summary": "Investors can certainly boost their returns by concentrating on stocks trading between $1 and $10. However, a disciplined approach is necessary because many of these businesses are speculative and lack the underlying fundamentals to support their prices.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-stocks-under-10-walking-120636206.html?.tsrc=rss",
+   "published_at": "2026-09-28T12:06:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:44Z",
+   "fingerprint": "4295ef29baef09ef",
+   "primary_source": false,
+   "cluster_id": "545d2be3f02b23a7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d9235ace87511615",
+   "symbols": [
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Q2 Rundown: Dentsply Sirona (NASDAQ:XRAY) Vs Other Dental Equipment & Technology Stocks",
+   "summary": "The end of the earnings season is always a good time to take a step back and see who shined (and who didn’t). Let’s take a look at how dental equipment & technology stocks fared in Q2, starting with Dentsply Sirona (NASDAQ:XRAY).",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/q2-rundown-dentsply-sirona-nasdaq-224837451.html?.tsrc=rss",
+   "published_at": "2026-09-25T22:48:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:04Z",
+   "fingerprint": "e57a60a674368e09",
+   "primary_source": false,
+   "cluster_id": "d9235ace87511615",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e57c558887698465",
+   "symbols": [
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Value Stock with Impressive Fundamentals and 2 Facing Headwinds",
+   "summary": "Value investing has produced some of the world’s most famous investing billionaires, including Warren Buffett, David Einhorn, and Seth Klarman, who built their fortunes by purchasing wonderful businesses at reasonable prices. But these hidden gems are few and far between - many s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-value-stock-impressive-fundamentals-090902978.html?.tsrc=rss",
+   "published_at": "2026-09-23T09:09:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:04Z",
+   "fingerprint": "125511561e887cd1",
+   "primary_source": false,
+   "cluster_id": "e57c558887698465",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c507e1be43cfaef5",
+   "symbols": [
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Reasons to Retain DENTSPLY SIRONA Stock in Your Portfolio for Now",
+   "summary": "XRAY's digital dentistry, R&amp;D and restructuring support growth, but CAD/CAM, implants, SureSmile and tariff pressures pose near-term risks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/reasons-retain-dentsply-sirona-stock-152200034.html?.tsrc=rss",
+   "published_at": "2026-09-17T15:22:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:04Z",
+   "fingerprint": "1d5dae8a3fdd8763",
+   "primary_source": false,
+   "cluster_id": "c507e1be43cfaef5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f7b2cb2958ad9aaf",
+   "symbols": [
+    "SHLS",
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Russell 2000 Stocks We Steer Clear Of",
+   "summary": "The Russell 2000 (^RUT) is packed with potential breakout stocks, thanks to its focus on smaller companies with high growth potential. However, smaller size also means these businesses often lack the resilience and financial flexibility of large-cap firms, making careful selectio",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-russell-2000-stocks-steer-171505557.html?.tsrc=rss",
+   "published_at": "2026-09-11T17:15:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:25Z",
+   "fingerprint": "2ccf9b23b56d8c9f",
+   "primary_source": false,
+   "cluster_id": "f7b2cb2958ad9aaf",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

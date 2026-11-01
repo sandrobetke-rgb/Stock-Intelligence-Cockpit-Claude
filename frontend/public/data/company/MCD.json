@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,7 +24,7 @@
    "adr20": 1.7081108106065923,
    "rvol": 1.1990479488736419,
    "ema10": 250.58379251855519,
-   "ema21": 246.94135086743665,
+   "ema21": 246.9413508674366,
    "sma50": 248.01244842529297,
    "sma200": 280.31678733825686
   },
@@ -35,16 +35,16 @@
     "close": 258.1199951171875,
     "change_pct": 0.28750882754544627,
     "ema20": 247.07645884133763,
-    "ema50": 249.36401114143666,
-    "ema200": 270.94871010303336,
+    "ema50": 249.36401114113497,
+    "ema200": 270.9487102098893,
     "sma50": 248.01244842529297,
-    "rsi14": 68.20462418500838,
-    "rsi_min5": 58.35754183683421,
-    "atr14": 4.722790444982242,
-    "atr_pct": 1.8296879491408933,
+    "rsi14": 68.20462418497554,
+    "rsi_min5": 58.35754183681732,
+    "atr14": 4.722790444991889,
+    "atr_pct": 1.829687949144631,
     "rvol": 1.1990479488736419,
     "vol30": 5979273.333333333,
-    "dist_ema200_pct": -4.734739272597944,
+    "dist_ema200_pct": -4.734739310168379,
     "dist_52w_high_pct": 22.990563249463424,
     "high_52w": 335.17969486432975,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 262.8800048828125,
     "day_low": 257.1099853515625,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 93.94659686637186,
+    "adx14": 33.48456042139865,
+    "ema10": 250.58379251855519,
+    "sma200": 280.31678733825686,
+    "perf_63d": -1.9889641816800974,
+    "adr20_pct": 1.7081108106065923,
+    "range10_pct": 7.349693676671465,
+    "high10_prev": 257.6499938964844,
+    "pullback_ema20": false,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": true,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.6666666666666666,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.0,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": true,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 262.8800048828125,
     "entry_max": 268.1376049804688,
-    "stop": 255.79581921533912,
-    "risk_per_share": 7.084185667473378,
-    "target_1": 277.04837621775926,
+    "stop": 255.79581921532466,
+    "risk_per_share": 7.084185667487844,
+    "target_1": 277.0483762177882,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -139,7 +173,7 @@
    ]
   },
   "market_intelligence": {
-   "score": 47.9,
+   "score": 49.8,
    "drivers": [
     "news_flow",
     "source_diversity",
@@ -157,10 +191,10 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 2,
+   "mentions_7d": 4,
    "manipulation_risk": "unauffällig",
-   "mentions_24h": 1,
-   "sentiment_7d": 0.5,
+   "mentions_24h": 2,
+   "sentiment_7d": 0.25,
    "bullish_7d": 1,
    "bearish_7d": 0
   },
@@ -220,7 +254,7 @@
   "adr20": 1.7081108106065923,
   "rvol": 1.1990479488736419,
   "ema10": 250.58379251855519,
-  "ema21": 246.94135086743665,
+  "ema21": 246.9413508674366,
   "sma50": 248.01244842529297,
   "sma200": 280.31678733825686,
   "volatility_ann": 20.722266100391142,
@@ -231,16 +265,16 @@
     "close": 258.1199951171875,
     "change_pct": 0.28750882754544627,
     "ema20": 247.07645884133763,
-    "ema50": 249.36401114143666,
-    "ema200": 270.94871010303336,
+    "ema50": 249.36401114113497,
+    "ema200": 270.9487102098893,
     "sma50": 248.01244842529297,
-    "rsi14": 68.20462418500838,
-    "rsi_min5": 58.35754183683421,
-    "atr14": 4.722790444982242,
-    "atr_pct": 1.8296879491408933,
+    "rsi14": 68.20462418497554,
+    "rsi_min5": 58.35754183681732,
+    "atr14": 4.722790444991889,
+    "atr_pct": 1.829687949144631,
     "rvol": 1.1990479488736419,
     "vol30": 5979273.333333333,
-    "dist_ema200_pct": -4.734739272597944,
+    "dist_ema200_pct": -4.734739310168379,
     "dist_52w_high_pct": 22.990563249463424,
     "high_52w": 335.17969486432975,
     "macd_above_signal": true,
@@ -254,7 +288,17 @@
     "green": false,
     "day_high": 262.8800048828125,
     "day_low": 257.1099853515625,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 93.94659686637186,
+    "adx14": 33.48456042139865,
+    "ema10": 250.58379251855519,
+    "sma200": 280.31678733825686,
+    "perf_63d": -1.9889641816800974,
+    "adr20_pct": 1.7081108106065923,
+    "range10_pct": 7.349693676671465,
+    "high10_prev": 257.6499938964844,
+    "pullback_ema20": false,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -284,6 +328,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": true,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -291,7 +356,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.6666666666666666,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.0,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": true,
@@ -304,9 +372,9 @@
    "plan": {
     "trigger": 262.8800048828125,
     "entry_max": 268.1376049804688,
-    "stop": 255.79581921533912,
-    "risk_per_share": 7.084185667473378,
-    "target_1": 277.04837621775926,
+    "stop": 255.79581921532466,
+    "risk_per_share": 7.084185667487844,
+    "target_1": 277.0483762177882,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -630,7 +698,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 47.9,
+  "score": 49.8,
   "components": {
    "news_flow": 100.0,
    "freshness": 0,
@@ -638,7 +706,7 @@
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 10.0,
-   "social_attention": 39.6,
+   "social_attention": 58.0,
    "insider_activity": null
   },
   "windows": {
@@ -1282,20 +1350,20 @@
   }
  ],
  "social_detail": {
-  "mentions_24h": 1,
-  "mentions_7d": 2,
-  "mentions_30d": 2,
+  "mentions_24h": 2,
+  "mentions_7d": 4,
+  "mentions_30d": 4,
   "change_vs_baseline_pct": 600,
-  "engagement_7d": 9.0,
-  "sentiment_7d": 0.5,
+  "engagement_7d": 10.0,
+  "sentiment_7d": 0.25,
   "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
   "bullish_7d": 1,
   "bearish_7d": 0,
   "by_platform_7d": {
-   "stocktwits": 2
+   "stocktwits": 4
   },
   "communities_7d": {
-   "StockTwits": 2
+   "StockTwits": 4
   },
   "platforms": [
    "stocktwits"
@@ -1310,7 +1378,7 @@
     "posted_at": "2026-10-27T23:33:27Z",
     "url": "https://stocktwits.com/jonztown/message/667497199",
     "text": "$BA buy quality at 52 week lows.  \n\nEasy peasy as it was with $HD , $MCD and soon to be $NFLX \n\nDon’t over think this.",
-    "engagement": 8.0,
+    "engagement": 9.0,
     "sentiment_label": "Bullish"
    },
    {
@@ -1321,6 +1389,26 @@
     "url": "https://stocktwits.com/BennyandtheJEETS/message/667860559",
     "text": "$LULU $NKE $MCD $SPY $QQQ",
     "engagement": 1.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "parcha",
+    "posted_at": "2026-10-31T12:11:29Z",
+    "url": "https://stocktwits.com/parcha/message/667843218",
+    "text": "https://www.cnbc.com/2026/10/30/jim-cramer-week-ahead-apple-amd-jobs-report.html?__source=iosappshare%7Ccom.stocktwits.StockTwits.STShareExtension\n$CVS $MCD \nWednesday\nCVS Health reports, and Cramer remains intrigued by the company’s position in the healthcare sector. However, he expressed concerns about its pharmacy benefit management business. “I wish it could disengage with that business; its s",
+    "engagement": 0.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "Dark_Prince",
+    "posted_at": "2026-10-30T13:43:07Z",
+    "url": "https://stocktwits.com/Dark_Prince/message/667755796",
+    "text": "$SPY $MCD $PEP $NVDA $SMH whoever said this, is a genius.",
+    "engagement": 0.0,
     "sentiment_label": null
    }
   ]

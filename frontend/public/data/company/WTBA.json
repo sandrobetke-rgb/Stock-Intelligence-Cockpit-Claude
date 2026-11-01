@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -35,16 +35,16 @@
     "close": 29.90999984741211,
     "change_pct": -0.43275986735419325,
     "ema20": 29.648334789358337,
-    "ema50": 29.064560719398703,
-    "ema200": 26.1900260949325,
+    "ema50": 29.064560719396873,
+    "ema200": 26.19002608980484,
     "sma50": 29.137800064086914,
-    "rsi14": 55.39326061429597,
-    "rsi_min5": 55.39326061429597,
-    "atr14": 0.7167915570395667,
-    "atr_pct": 2.396494686380232,
+    "rsi14": 55.39326061429602,
+    "rsi_min5": 55.39326061429602,
+    "atr14": 0.7167915570395662,
+    "atr_pct": 2.3964946863802306,
     "rvol": 1.0164215114016655,
     "vol30": 58683.333333333336,
-    "dist_ema200_pct": 14.20378024441673,
+    "dist_ema200_pct": 14.203780266776334,
     "dist_52w_high_pct": 3.2664949107040653,
     "high_52w": 30.920000076293945,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 30.549999237060547,
     "day_low": 29.790000915527344,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 8.497499085860838,
+    "adx14": 15.070192828641378,
+    "ema10": 29.94651739338224,
+    "sma200": 25.843835325241088,
+    "perf_63d": 6.847106156384575,
+    "adr20_pct": 2.2656400409076363,
+    "range10_pct": 7.063715286732686,
+    "high10_prev": 30.920000076293945,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,16 +98,41 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": false
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
-    "S03"
+    "S03",
+    "RSI2"
    ],
    "near": {
     "S01": 0.0,
     "S02": 0.6,
     "S03": 1.0,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.6666666666666666,
+    "RSI2": 1.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -139,11 +174,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 1.7,
+   "score": 45.2,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 9,
    "independent_24h": 0
   },
   "political": {
@@ -231,16 +268,16 @@
     "close": 29.90999984741211,
     "change_pct": -0.43275986735419325,
     "ema20": 29.648334789358337,
-    "ema50": 29.064560719398703,
-    "ema200": 26.1900260949325,
+    "ema50": 29.064560719396873,
+    "ema200": 26.19002608980484,
     "sma50": 29.137800064086914,
-    "rsi14": 55.39326061429597,
-    "rsi_min5": 55.39326061429597,
-    "atr14": 0.7167915570395667,
-    "atr_pct": 2.396494686380232,
+    "rsi14": 55.39326061429602,
+    "rsi_min5": 55.39326061429602,
+    "atr14": 0.7167915570395662,
+    "atr_pct": 2.3964946863802306,
     "rvol": 1.0164215114016655,
     "vol30": 58683.333333333336,
-    "dist_ema200_pct": 14.20378024441673,
+    "dist_ema200_pct": 14.203780266776334,
     "dist_52w_high_pct": 3.2664949107040653,
     "high_52w": 30.920000076293945,
     "macd_above_signal": true,
@@ -254,7 +291,17 @@
     "green": false,
     "day_high": 30.549999237060547,
     "day_low": 29.790000915527344,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 8.497499085860838,
+    "adx14": 15.070192828641378,
+    "ema10": 29.94651739338224,
+    "sma200": 25.843835325241088,
+    "perf_63d": 6.847106156384575,
+    "adr20_pct": 2.2656400409076363,
+    "range10_pct": 7.063715286732686,
+    "high10_prev": 30.920000076293945,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -284,16 +331,41 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": false
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
-    "S03"
+    "S03",
+    "RSI2"
    ],
    "near": {
     "S01": 0.0,
     "S02": 0.6,
     "S03": 1.0,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.6666666666666666,
+    "RSI2": 1.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -544,11 +616,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 1.7,
+  "score": 45.2,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 80,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 9.6,
@@ -566,25 +638,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 9,
+    "independent": 9,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 12,
+    "independent": 12,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -603,7 +677,432 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "7e7537f4da7249f2",
+   "symbols": [
+    "WTBA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "West Bancorporation (WTBA) Q3 Earnings Build On Margin Recovery",
+   "summary": "West Bancorporation came into this Q3 2026 report with the stock almost flat on the day, slipping just 0.4% to US$29.91 after a modest gain over the past month. That muted move sits awkwardly beside what the bank just reported. Quarterly earnings per share were about US$0.68 and ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/west-bancorporation-wtba-q3-earnings-061343775.html?.tsrc=rss",
+   "published_at": "2026-10-31T06:13:43Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "c8ae9b27ca3e5cc0",
+   "primary_source": false,
+   "cluster_id": "7e7537f4da7249f2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "West Bancorporation (WTBA) Q3 Einnahmen bauen auf Margin Recovery"
+  },
+  {
+   "id": "b60e3f17416fa2c6",
+   "symbols": [
+    "WTBA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "West Bancorp (WTBA) Q3 2026 Earnings Call Transcript",
+   "summary": "Loan growth returned for the first time in over a year amid margin expansion.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/30/west-bancorp-wtba-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-30T15:18:32Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "aa33d52d65e3818b",
+   "primary_source": false,
+   "cluster_id": "b60e3f17416fa2c6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5412b0b8e4b36422",
+   "symbols": [
+    "WTBA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "West Bancorporation, Inc. Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of West Bancorporation, Inc.'s Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-west-bancorporation-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-30T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "6ae407e320ebcc29",
+   "primary_source": false,
+   "cluster_id": "5412b0b8e4b36422",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "75047b9360234136",
+   "symbols": [
+    "WTBA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What West Bancorporation (WTBA) Said on Its Q3 Earnings Call",
+   "summary": "West Bancorporation (NASDAQ:WTBA) reported higher third-quarter earnings as net interest income and margin improved, while executives said loan growth returned after several quarters of customer asset sales and refinancing-related payoffs weighed on balances. Net income totaled $",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-west-bancorporation-wtba-said-on-its-q3-earnings-call-2026-10-29/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-30T03:14:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "3335dc3b1491ad1c",
+   "primary_source": false,
+   "cluster_id": "75047b9360234136",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Was West Bancorporation (WTBA) über seinen Q3-Gewinnaufruf sagte"
+  },
+  {
+   "id": "9229c86542df5cbd",
+   "symbols": [
+    "WTBA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "West Bancorporation, Inc. Announces Third Quarter 2026 Financial Results and Declares Quarterly Dividend",
+   "summary": "WEST DES MOINES, Iowa, Oct. 29, 2026 (GLOBE NEWSWIRE) -- West Bancorporation, Inc. (Nasdaq: WTBA; the “Company”), parent company of West Bank, today reported third quarter 2026 net income of $11.6 million, or $0.67 per diluted common share, compared to second quarter 2026 net inc",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/west-bancorporation-inc-announces-third-123000322.html?.tsrc=rss",
+   "published_at": "2026-10-29T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "8b5026c2ab2069ab",
+   "primary_source": false,
+   "cluster_id": "9229c86542df5cbd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "50d8f8e189446b9a",
+   "symbols": [
+    "WTBA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "West Bancorp (WTBA) Q3 Earnings Match Estimates",
+   "summary": "West Bancorp (WTBA) delivered earnings and revenue surprises of 0.00% and +1.45%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/west-bancorp-wtba-q3-earnings-113511597.html?.tsrc=rss",
+   "published_at": "2026-10-29T11:35:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "e56776cbb7904527",
+   "primary_source": false,
+   "cluster_id": "50d8f8e189446b9a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "36402f4460e8fabb",
+   "symbols": [
+    "PFS",
+    "WTBA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Provident Financial (PFS) Lags Q3 Earnings Estimates",
+   "summary": "Provident Financial (PFS) delivered earnings and revenue surprises of -11.67% and +0.13%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/provident-financial-pfs-lags-q3-223010484.html?.tsrc=rss",
+   "published_at": "2026-10-28T22:30:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:32:02Z",
+   "fingerprint": "d9e6f4590ea4e50a",
+   "primary_source": false,
+   "cluster_id": "36402f4460e8fabb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8ca25d2ef14cc0d8",
+   "symbols": [
+    "WTBA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Why West Bancorp (WTBA) Could Beat Earnings Estimates Again",
+   "summary": "West Bancorp (WTBA) has an impressive earnings surprise history and currently possesses the right combination of the two key ingredients for a likely beat in its next quarterly report.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-west-bancorp-wtba-could-151003253.html?.tsrc=rss",
+   "published_at": "2026-10-28T15:10:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "9acac0b9b62a6495",
+   "primary_source": false,
+   "cluster_id": "8ca25d2ef14cc0d8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "53f54e3b220b104e",
+   "symbols": [
+    "CZWI",
+    "WTBA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Citizens Community Bancorp, Inc. (CZWI) Q3 Earnings and Revenues Top Estimates",
+   "summary": "Citizens Community Bancorp (CZWI) delivered earnings and revenue surprises of +27.27% and +3.41%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/citizens-community-bancorp-inc-czwi-124502229.html?.tsrc=rss",
+   "published_at": "2026-10-26T12:45:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:53Z",
+   "fingerprint": "fbdca4e751ce4b8a",
+   "primary_source": false,
+   "cluster_id": "53f54e3b220b104e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0cae8fe84f8c1576",
+   "symbols": [
+    "HFWA",
+    "WTBA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Heritage Financial (HFWA) Lags Q3 Earnings Estimates",
+   "summary": "Heritage Financial (HFWA) delivered earnings and revenue surprises of -3.51% and +0.37%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/heritage-financial-hfwa-lags-q3-121003658.html?.tsrc=rss",
+   "published_at": "2026-10-22T12:10:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:10:10Z",
+   "fingerprint": "2c32067d97bc0314",
+   "primary_source": false,
+   "cluster_id": "0cae8fe84f8c1576",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ffac7d7cb71a1cc3",
+   "symbols": [
+    "NPB",
+    "WTBA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Northpointe Bancshares, Inc. (NPB) Q3 Earnings and Revenues Lag Estimates",
+   "summary": "Northpointe Bancshares, Inc. (NPB) delivered earnings and revenue surprises of -35.00% and -12.72%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/northpointe-bancshares-inc-npb-q3-213002193.html?.tsrc=rss",
+   "published_at": "2026-10-20T21:30:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:32Z",
+   "fingerprint": "cbec1a1cbfcdd52a",
+   "primary_source": false,
+   "cluster_id": "ffac7d7cb71a1cc3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6b823157d4003605",
+   "symbols": [
+    "WTBA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "West Bancorp (WTBA) Could Be a Great Choice",
+   "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does West Bancorp (WTBA) have what it takes? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/west-bancorp-wtba-could-great-144503803.html?.tsrc=rss",
+   "published_at": "2026-10-14T14:45:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "e40b1772a55b0777",
+   "primary_source": false,
+   "cluster_id": "6b823157d4003605",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "997e9cf6ca0e1219",
+   "symbols": [
+    "WTBA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Are You Looking for a High-Growth Dividend Stock?",
+   "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does West Bancorp (WTBA) have what it takes? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/looking-high-growth-dividend-stock-144503467.html?.tsrc=rss",
+   "published_at": "2026-09-28T14:45:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "85a7524e6e3e9aa7",
+   "primary_source": false,
+   "cluster_id": "997e9cf6ca0e1219",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "600d9aac7e4ad5ba",
+   "symbols": [
+    "WTBA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "West Bancorporation, Inc. to Announce Quarterly Results, Hold Conference Call",
+   "summary": "WEST DES MOINES, Iowa, Sept. 18, 2026 (GLOBE NEWSWIRE) -- West Bancorporation, Inc. (Nasdaq: WTBA) (the “Company”), parent company of West Bank, will report its results for the third quarter of 2026 on Thursday, October 29, 2026 before the markets open. The Company will discuss i",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/west-bancorporation-inc-announce-quarterly-123000207.html?.tsrc=rss",
+   "published_at": "2026-09-18T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "0b5c97d92574acd7",
+   "primary_source": false,
+   "cluster_id": "600d9aac7e4ad5ba",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8689f9246ccfb04e",
+   "symbols": [
+    "WTBA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Why West Bancorp (WTBA) is a Great Dividend Stock Right Now",
+   "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does West Bancorp (WTBA) have what it takes? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-west-bancorp-wtba-great-154503849.html?.tsrc=rss",
+   "published_at": "2026-09-09T15:45:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "e47ad8918d0795ee",
+   "primary_source": false,
+   "cluster_id": "8689f9246ccfb04e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e3bb4c304a4390b2",
+   "symbols": [
+    "WTBA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Why West Bancorp (WTBA) is a Top Dividend Stock for Your Portfolio",
+   "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does West Bancorp (WTBA) have what it takes? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-west-bancorp-wtba-top-154503207.html?.tsrc=rss",
+   "published_at": "2026-08-24T15:45:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "adef263aa6f9f6d3",
+   "primary_source": false,
+   "cluster_id": "e3bb4c304a4390b2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "97a04a0adb3023f1",
+   "symbols": [
+    "WTBA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "West Bancorp (WTBA) is a Top Dividend Stock Right Now: Should You Buy?",
+   "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does West Bancorp (WTBA) have what it takes? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/west-bancorp-wtba-top-dividend-154502542.html?.tsrc=rss",
+   "published_at": "2026-08-06T15:45:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "b5ab457e3605f587",
+   "primary_source": false,
+   "cluster_id": "97a04a0adb3023f1",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9290eb7118cc280c",
+   "symbols": [
+    "WTBA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "West Bancorporation, Inc. Q2 2026 Earnings Call Summary",
+   "summary": "Moby summary of West Bancorporation, Inc.'s Q2 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-west-bancorporation-inc-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-07-24T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "8b3428c11aa42a94",
+   "primary_source": false,
+   "cluster_id": "9290eb7118cc280c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2750b18864063e96",
+   "symbols": [
+    "WTBA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "West Bancorporation Q2 Earnings Call Highlights",
+   "summary": "West Bancorporation (NASDAQ:WTBA) reported stronger second-quarter 2026 earnings, higher net interest income and continued solid credit quality, while executives said loan growth remains affected by commercial real estate payoffs and a competitive deposit environment. On the comp",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/west-bancorporation-q2-earnings-call-highlights-2026-07-23/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-07-23T20:07:12Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "2d2ccd9ea9edec9c",
+   "primary_source": false,
+   "cluster_id": "2750b18864063e96",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 4.08728464963888,
    "rvol": 0.7668416447944006,
    "ema10": 3.4042855789178046,
-   "ema21": 3.520302252965331,
+   "ema21": 3.520302252965333,
    "sma50": 3.9279328632354735,
-   "sma200": 4.383452672958374
+   "sma200": 4.38345267534256
   },
   "market_cap": 186416528.0,
   "market_cap_currency": "USD",
@@ -34,17 +34,17 @@
    "tech": {
     "close": 3.359999895095825,
     "change_pct": -1.7543912239656678,
-    "ema20": 3.5083127192162427,
-    "ema50": 3.80581137250468,
-    "ema200": 4.211518795724219,
+    "ema20": 3.508312719216244,
+    "ema50": 3.805811372526251,
+    "ema200": 4.211518796880381,
     "sma50": 3.9279328632354735,
-    "rsi14": 35.7013825482277,
-    "rsi_min5": 35.7013825482277,
-    "atr14": 0.13468096733864302,
-    "atr_pct": 4.008362248320903,
+    "rsi14": 35.70138254828508,
+    "rsi_min5": 35.70138254828508,
+    "atr14": 0.1346809673386155,
+    "atr_pct": 4.0083622483200845,
     "rvol": 0.7668416447944006,
     "vol30": 681663.3333333334,
-    "dist_ema200_pct": -20.218808034120748,
+    "dist_ema200_pct": -20.218808056022585,
     "dist_52w_high_pct": 36.81618950987758,
     "high_52w": 5.317817759062026,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 3.430000066757202,
     "day_low": 3.2799999713897705,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 16.01687600678106,
+    "adx14": 46.73099256519258,
+    "ema10": 3.4042855789178046,
+    "sma200": 4.38345267534256,
+    "perf_63d": -17.946528299847873,
+    "adr20_pct": 4.08728464963888,
+    "range10_pct": 14.240499906405613,
+    "high10_prev": 3.609999895095825,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.2,
     "S03": 0.3333333333333333,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 3.430000066757202,
     "entry_max": 3.498600068092346,
-    "stop": 3.2279786157492376,
-    "risk_per_share": 0.20202145100796454,
-    "target_1": 3.834042968773131,
+    "stop": 3.227978615749279,
+    "risk_per_share": 0.20202145100792324,
+    "target_1": 3.8340429687730486,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -138,11 +172,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 4.1,
+   "score": 20.3,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -201,9 +237,9 @@
   "adr20": 4.08728464963888,
   "rvol": 0.7668416447944006,
   "ema10": 3.4042855789178046,
-  "ema21": 3.520302252965331,
+  "ema21": 3.520302252965333,
   "sma50": 3.9279328632354735,
-  "sma200": 4.383452672958374,
+  "sma200": 4.38345267534256,
   "volatility_ann": 35.81935656262637,
   "avg_dollar_volume_20d": 2356733.9031243324,
   "move_zscore": -0.7775152866543348,
@@ -211,17 +247,17 @@
    "tech": {
     "close": 3.359999895095825,
     "change_pct": -1.7543912239656678,
-    "ema20": 3.5083127192162427,
-    "ema50": 3.80581137250468,
-    "ema200": 4.211518795724219,
+    "ema20": 3.508312719216244,
+    "ema50": 3.805811372526251,
+    "ema200": 4.211518796880381,
     "sma50": 3.9279328632354735,
-    "rsi14": 35.7013825482277,
-    "rsi_min5": 35.7013825482277,
-    "atr14": 0.13468096733864302,
-    "atr_pct": 4.008362248320903,
+    "rsi14": 35.70138254828508,
+    "rsi_min5": 35.70138254828508,
+    "atr14": 0.1346809673386155,
+    "atr_pct": 4.0083622483200845,
     "rvol": 0.7668416447944006,
     "vol30": 681663.3333333334,
-    "dist_ema200_pct": -20.218808034120748,
+    "dist_ema200_pct": -20.218808056022585,
     "dist_52w_high_pct": 36.81618950987758,
     "high_52w": 5.317817759062026,
     "macd_above_signal": true,
@@ -235,7 +271,17 @@
     "green": false,
     "day_high": 3.430000066757202,
     "day_low": 3.2799999713897705,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 16.01687600678106,
+    "adx14": 46.73099256519258,
+    "ema10": 3.4042855789178046,
+    "sma200": 4.38345267534256,
+    "perf_63d": -17.946528299847873,
+    "adr20_pct": 4.08728464963888,
+    "range10_pct": 14.240499906405613,
+    "high10_prev": 3.609999895095825,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -265,6 +311,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -272,7 +339,10 @@
     "S01": 0.0,
     "S02": 0.2,
     "S03": 0.3333333333333333,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -285,9 +355,9 @@
    "plan": {
     "trigger": 3.430000066757202,
     "entry_max": 3.498600068092346,
-    "stop": 3.2279786157492376,
-    "risk_per_share": 0.20202145100796454,
-    "target_1": 3.834042968773131,
+    "stop": 3.227978615749279,
+    "risk_per_share": 0.20202145100792324,
+    "target_1": 3.8340429687730486,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -610,11 +680,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 4.1,
+  "score": 20.3,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 23.3,
@@ -632,26 +702,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -669,7 +741,428 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "bc230caff2568b35",
+   "symbols": [
+    "ACRE",
+    "FBRT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Franklin BSP (FBRT) Reports Q3 Loss, Beats Revenue Estimates",
+   "summary": "Franklin BSP (FBRT) delivered earnings and revenue surprises of -107.69% and +3.58%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/franklin-bsp-fbrt-reports-q3-223006630.html?.tsrc=rss",
+   "published_at": "2026-10-28T22:30:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:03Z",
+   "fingerprint": "61ad9bda4a2fa9c9",
+   "primary_source": false,
+   "cluster_id": "bc230caff2568b35",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e290002394a66259",
+   "symbols": [
+    "ACRE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ares Commercial Real Estate Corporation Schedules Earnings Release and Conference Call for the Third Quarter Ended September 30, 2026",
+   "summary": "Ares Commercial Real Estate Corporation (NYSE: ACRE) announced today that it will report earnings for the third quarter ended September 30, 2026 on Friday, November 6, 2026 prior to the opening of the New York Stock Exchange. Ares Commercial Real Estate Corporation will hold its ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/ares-commercial-real-estate-corporation-203000974.html?.tsrc=rss",
+   "published_at": "2026-10-23T20:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "e1c5d0d01cf01c7d",
+   "primary_source": false,
+   "cluster_id": "e290002394a66259",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "66e56062238a5ca8",
+   "symbols": [
+    "ACRE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Annaly Capital Management (NLY) Surpasses Q3 Earnings Estimates",
+   "summary": "Annaly (NLY) delivered earnings and revenue surprises of +3.90% and -8.81%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/annaly-capital-management-nly-surpasses-204503161.html?.tsrc=rss",
+   "published_at": "2026-10-20T20:45:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "e6d05ddeac046261",
+   "primary_source": false,
+   "cluster_id": "66e56062238a5ca8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "db65618d79071ab4",
+   "symbols": [
+    "ACRE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Why I Trust ARCC's Nearly 10%-Yielding Dividend and Wouldn't Touch ACRE's Double-Digit Payout",
+   "summary": "These high-yielding dividend stocks have very different track records.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/09/22/why-i-trust-arcc-s-nearly-10-yielding-dividend-and-wouldn-t-touch-acre-s-double-digit-payout/?.tsrc=rss",
+   "published_at": "2026-09-22T13:05:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "e186a14ed347ae45",
+   "primary_source": false,
+   "cluster_id": "db65618d79071ab4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d078c4be4fb61bc4",
+   "symbols": [
+    "ACRE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ares Commercial Real Estate (ACRE) Q2 2026 Earnings Call Transcript",
+   "summary": "Portfolio loan commitments hit $900 million as office exposure drops below 25%.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/04/ares-commercial-real-estate-acre-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-05T02:26:45Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "6c7faa448cbdb9c5",
+   "primary_source": false,
+   "cluster_id": "d078c4be4fb61bc4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "43841aebe443521e",
+   "symbols": [
+    "ACRE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ares Commercial Real Estate Corp (ACRE) (Q2 2026) Earnings Call Highlights: Strategic ...",
+   "summary": "ACRE expands loan portfolio by 36% year-over-year while navigating nonaccrual asset resolutions and maintaining a stable book value of $8.82 per share.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/ares-commercial-real-estate-corp-230235774.html?.tsrc=rss",
+   "published_at": "2026-08-04T23:02:35Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "423549de2e864811",
+   "primary_source": false,
+   "cluster_id": "43841aebe443521e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "69f88e4020ee7b0b",
+   "symbols": [
+    "ACRE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ares Commercial Real Estate Corporation Q2 2026 Earnings Call Summary",
+   "summary": "Moby summary of Ares Commercial Real Estate Corporation's Q2 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-ares-commercial-real-estate-corporation-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-08-04T21:00:49Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "9b546eb173f43c23",
+   "primary_source": false,
+   "cluster_id": "69f88e4020ee7b0b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "de86cfdb81efd2eb",
+   "symbols": [
+    "ACRE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ares Commercial Real Estate Q2 Earnings Call Highlights",
+   "summary": "Ares Commercial Real Estate (NYSE:ACRE) reported second-quarter 2026 GAAP net income of approximately $4.4 million, or $0.08 per diluted common share, while distributable earnings totaled about $6.9 million, or $0.12 per diluted common share. The commercial mortgage REIT said it ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/ares-commercial-real-estate-q2-earnings-call-highlights-2026-08-04/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-04T19:04:23Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "384a02051344789c",
+   "primary_source": false,
+   "cluster_id": "de86cfdb81efd2eb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0026591435038e8d",
+   "symbols": [
+    "ACRE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ares Commercial Real Estate (ACRE) Tops Q2 Earnings and Revenue Estimates",
+   "summary": "Ares Commercial Real Estate (ACRE) delivered earnings and revenue surprises of +50.00% and +4.65%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/ares-commercial-real-estate-acre-112501396.html?.tsrc=rss",
+   "published_at": "2026-08-04T11:25:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "0ad61e2f2665baad",
+   "primary_source": false,
+   "cluster_id": "0026591435038e8d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bff4f17c68a5ad5d",
+   "symbols": [
+    "ACRE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ARES COMMERCIAL REAL ESTATE CORPORATION REPORTS SECOND QUARTER 2026 RESULTS",
+   "summary": "Ares Commercial Real Estate Corporation (the \"Company\") (NYSE: ACRE), a specialty finance company primarily engaged in directly originating and investing in commercial real estate loans and related investments, reported generally accepted accounting principles (\"GAAP\") net income",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/ares-commercial-real-estate-corporation-100000539.html?.tsrc=rss",
+   "published_at": "2026-08-04T10:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "b9b9c201ed863504",
+   "primary_source": false,
+   "cluster_id": "bff4f17c68a5ad5d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7d5a718044060752",
+   "symbols": [
+    "ACRE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Franklin BSP (FBRT) Surpasses Q2 Earnings Estimates",
+   "summary": "Franklin BSP (FBRT) delivered earnings and revenue surprises of +8.70% and -11.04%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/franklin-bsp-fbrt-surpasses-q2-003503843.html?.tsrc=rss",
+   "published_at": "2026-07-30T00:35:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "166149d7aa3e20dc",
+   "primary_source": false,
+   "cluster_id": "7d5a718044060752",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "de7c2b10737f0f09",
+   "symbols": [
+    "ACRE",
+    "BRSP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "BrightSpire (BRSP) Misses Q2 Earnings Estimates",
+   "summary": "Colony Credit (BRSP) delivered earnings and revenue surprises of -7.14% and +10.09%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/brightspire-brsp-misses-q2-earnings-220004604.html?.tsrc=rss",
+   "published_at": "2026-07-28T22:00:04Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:47:34Z",
+   "fingerprint": "f83cfee0e1fb8c0c",
+   "primary_source": false,
+   "cluster_id": "de7c2b10737f0f09",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f3193a3ff57e7a81",
+   "symbols": [
+    "ACRE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ares Commercial Real Estate Corporation Schedules Earnings Release and Conference Call for the Second Quarter Ended June 30, 2026",
+   "summary": "Ares Commercial Real Estate Corporation (NYSE: ACRE) announced today that it will report earnings for the second quarter ended June 30, 2026 on Tuesday, August 4, 2026 prior to the opening of the New York Stock Exchange. Ares Commercial Real Estate Corporation will hold its webca",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/ares-commercial-real-estate-corporation-203000135.html?.tsrc=rss",
+   "published_at": "2026-07-21T20:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "de191b2d8e4b0193",
+   "primary_source": false,
+   "cluster_id": "f3193a3ff57e7a81",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "11e544ae9271158b",
+   "symbols": [
+    "ACRE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Implied Volatility Surging for Ares Commercial Real Estate Stock Options",
+   "summary": "Investors need to pay close attention to ACRE stock based on the movements in the options market lately.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/options/articles/implied-volatility-surging-ares-commercial-142900129.html?.tsrc=rss",
+   "published_at": "2026-06-23T14:29:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "d3492d53a3e5d097",
+   "primary_source": false,
+   "cluster_id": "11e544ae9271158b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8807267ce05f09ed",
+   "symbols": [
+    "ACRE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Ares Commercial Real Estate (ACRE) Stock Sees Modest Fair Value Lift On Split Analyst Views",
+   "summary": "Ares Commercial Real Estate is back in focus as analysts refresh their models and set a new fair value price target of US$5.30 per share, compared with prior figures around US$5.25 and US$5.50. This shift sits alongside a split set of Street opinions, with some analysts pointing ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ares-commercial-real-estate-acre-081625504.html?.tsrc=rss",
+   "published_at": "2026-06-18T08:16:25Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "059c99bf6c370d30",
+   "primary_source": false,
+   "cluster_id": "8807267ce05f09ed",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "42dc1b4f495a7f23",
+   "symbols": [
+    "ACRE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "New Strong Sell Stocks for June 16th",
+   "summary": "ACRE, CWST and CCAP have been added to the Zacks Rank #5 (Strong Sell) List on June 16, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/strong-sell-stocks-june-16th-080800900.html?.tsrc=rss",
+   "published_at": "2026-06-16T08:08:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "fe294a4dc1097819",
+   "primary_source": false,
+   "cluster_id": "42dc1b4f495a7f23",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "13c6d5ef6190ab23",
+   "symbols": [
+    "ACRE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "New Strong Sell Stocks for June 9th",
+   "summary": "APLD, ACRE and SKY have been added to the Zacks Rank #5 (Strong Sell) List on June 9, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/strong-sell-stocks-june-9th-103000913.html?.tsrc=rss",
+   "published_at": "2026-06-09T10:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "de94a999f4df1943",
+   "primary_source": false,
+   "cluster_id": "13c6d5ef6190ab23",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1aad7cbaa83ac906",
+   "symbols": [
+    "ACRE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How The Story Is Shifting For Ares Commercial Real Estate (ACRE) As Targets Ease Toward US$5",
+   "summary": "The latest update trims Ares Commercial Real Estate’s fair value estimate from US$5.38 to US$5.25, aligning the stock’s modeled worth with the lower end of current Street targets around the mid US$5 range. Recent research cuts toward US$5.50 and now US$5.25 reflect analysts reass",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/story-shifting-ares-commercial-real-070741869.html?.tsrc=rss",
+   "published_at": "2026-06-04T07:07:41Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "73c2343358234437",
+   "primary_source": false,
+   "cluster_id": "1aad7cbaa83ac906",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f0d9ff4677dbfded",
+   "symbols": [
+    "ACRE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ares Commercial Real Estate (ACRE) – Among the 12 Best Micro-Cap Dividend Stocks to Buy Now",
+   "summary": "Ares Commercial Real Estate Corporation (NYSE:ACRE) is included among the 12 Best Micro-Cap Dividend Stocks to Buy Now. On May 13, Keefe Bruyette analyst Jade Rahmani lowered the firm’s price recommendation on Ares Commercial Real Estate Corporation (NYSE:ACRE) to $5.50 from $6. ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ares-commercial-real-estate-acre-055625068.html?.tsrc=rss",
+   "published_at": "2026-05-14T05:56:25Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "853cca5dce356ce8",
+   "primary_source": false,
+   "cluster_id": "f0d9ff4677dbfded",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

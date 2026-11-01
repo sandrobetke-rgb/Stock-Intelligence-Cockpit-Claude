@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 1.6683276296307745,
    "rvol": 0.916540413814458,
    "ema10": 81.8355752026233,
-   "ema21": 81.45280528626823,
+   "ema21": 81.45280528626728,
    "sma50": 82.35671630859375,
-   "sma200": 83.39664268493652
+   "sma200": 83.39664245605469
   },
   "market_cap": 5530978816.0,
   "market_cap_currency": "USD",
@@ -34,17 +34,17 @@
    "tech": {
     "close": 82.41999816894531,
     "change_pct": -0.44691719107425865,
-    "ema20": 81.44959164245198,
-    "ema50": 82.45481691894655,
-    "ema200": 81.94477042743931,
+    "ema20": 81.44959164245152,
+    "ema50": 82.45481691629271,
+    "ema200": 81.94477028268905,
     "sma50": 82.35671630859375,
-    "rsi14": 55.11336702972265,
-    "rsi_min5": 52.864393318162975,
-    "atr14": 1.4544170436657946,
-    "atr_pct": 1.764640956051123,
+    "rsi14": 55.11336703013322,
+    "rsi_min5": 52.86439331849148,
+    "atr14": 1.4544170436533288,
+    "atr_pct": 1.7646409560359984,
     "rvol": 0.916540413814458,
     "vol30": 461013.3333333333,
-    "dist_ema200_pct": 0.5799366317424948,
+    "dist_ema200_pct": 0.5799368094105972,
     "dist_52w_high_pct": 11.36518250764562,
     "high_52w": 92.98828665840581,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 83.33999633789062,
     "day_low": 82.0999984741211,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 47.29553510113639,
+    "adx14": 22.21354542072207,
+    "ema10": 81.8355752026233,
+    "sma200": 83.39664245605469,
+    "perf_63d": -6.309809273781286,
+    "adr20_pct": 1.6683276296307745,
+    "range10_pct": 5.820572624538789,
+    "high10_prev": 83.62999725341797,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 83.33999633789062,
     "entry_max": 85.00679626464844,
-    "stop": 81.15837077239193,
-    "risk_per_share": 2.181625565498692,
-    "target_1": 87.70324746888801,
+    "stop": 81.15837077241063,
+    "risk_per_share": 2.1816255654799903,
+    "target_1": 87.7032474688506,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -137,11 +171,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.5,
+   "score": 26.1,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -195,9 +231,9 @@
   "adr20": 1.6683276296307745,
   "rvol": 0.916540413814458,
   "ema10": 81.8355752026233,
-  "ema21": 81.45280528626823,
+  "ema21": 81.45280528626728,
   "sma50": 82.35671630859375,
-  "sma200": 83.39664268493652,
+  "sma200": 83.39664245605469,
   "volatility_ann": 14.868125246679348,
   "avg_dollar_volume_20d": 36387712.448349,
   "move_zscore": -0.47716778999535614,
@@ -205,17 +241,17 @@
    "tech": {
     "close": 82.41999816894531,
     "change_pct": -0.44691719107425865,
-    "ema20": 81.44959164245198,
-    "ema50": 82.45481691894655,
-    "ema200": 81.94477042743931,
+    "ema20": 81.44959164245152,
+    "ema50": 82.45481691629271,
+    "ema200": 81.94477028268905,
     "sma50": 82.35671630859375,
-    "rsi14": 55.11336702972265,
-    "rsi_min5": 52.864393318162975,
-    "atr14": 1.4544170436657946,
-    "atr_pct": 1.764640956051123,
+    "rsi14": 55.11336703013322,
+    "rsi_min5": 52.86439331849148,
+    "atr14": 1.4544170436533288,
+    "atr_pct": 1.7646409560359984,
     "rvol": 0.916540413814458,
     "vol30": 461013.3333333333,
-    "dist_ema200_pct": 0.5799366317424948,
+    "dist_ema200_pct": 0.5799368094105972,
     "dist_52w_high_pct": 11.36518250764562,
     "high_52w": 92.98828665840581,
     "macd_above_signal": true,
@@ -229,7 +265,17 @@
     "green": false,
     "day_high": 83.33999633789062,
     "day_low": 82.0999984741211,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 47.29553510113639,
+    "adx14": 22.21354542072207,
+    "ema10": 81.8355752026233,
+    "sma200": 83.39664245605469,
+    "perf_63d": -6.309809273781286,
+    "adr20_pct": 1.6683276296307745,
+    "range10_pct": 5.820572624538789,
+    "high10_prev": 83.62999725341797,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -259,6 +305,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -266,7 +333,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -279,9 +349,9 @@
    "plan": {
     "trigger": 83.33999633789062,
     "entry_max": 85.00679626464844,
-    "stop": 81.15837077239193,
-    "risk_per_share": 2.181625565498692,
-    "target_1": 87.70324746888801,
+    "stop": 81.15837077241063,
+    "risk_per_share": 2.1816255654799903,
+    "target_1": 87.7032474688506,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -517,11 +587,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.5,
+  "score": 26.1,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 14.3,
@@ -539,25 +609,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 14,
+    "independent": 14,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -576,7 +648,427 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "3694d375870b3e6d",
+   "symbols": [
+    "ABCB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ABCB Q3 deep dive: margin discipline and loan growth offset revenue miss",
+   "summary": "Regional banking company Ameris Bancorp (NYSE:ABCB) missed Wall Street’s revenue expectations in Q3 2026 as sales rose 2.5% year on year to $320.9 million. Its non-GAAP profit of $1.73 per share was 3.1% above analysts’ consensus estimates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/abcb-q3-deep-dive-margin-171047205.html?.tsrc=rss",
+   "published_at": "2026-10-26T17:10:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:23Z",
+   "fingerprint": "0bcc604fbdcd0fa1",
+   "primary_source": false,
+   "cluster_id": "3694d375870b3e6d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1f3d8aa012609dc3",
+   "symbols": [
+    "ABCB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "The top 5 analyst questions from Ameris Bancorp’s Q3 earnings call",
+   "summary": "Ameris Bancorp’s third quarter results showed steady growth in earning assets and disciplined expense management, even as total revenue came in below Wall Street expectations. Management attributed profitability to a balanced approach—highlighting a strong net interest margin, di",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/top-5-analyst-questions-ameris-124647651.html?.tsrc=rss",
+   "published_at": "2026-10-26T12:46:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:23Z",
+   "fingerprint": "caf0abac608b6c62",
+   "primary_source": false,
+   "cluster_id": "1f3d8aa012609dc3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e74e10509f69fd19",
+   "symbols": [
+    "ABCB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ameris Bancorp (ABCB) Stock Shrugs Off Record Q3 Earnings and Buyback",
+   "summary": "Ameris Bancorp came into this Q3 2026 report with a stock that has drifted over the past quarter, including a roughly 5.8% decline over 90 days, yet now trades only slightly higher on the day at US$82.63. The headline is simple: earnings per share hit US$1.74 for the quarter, the",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ameris-bancorp-abcb-stock-shrugs-111241202.html?.tsrc=rss",
+   "published_at": "2026-10-24T11:12:41Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:23Z",
+   "fingerprint": "b1e4a188168140de",
+   "primary_source": false,
+   "cluster_id": "e74e10509f69fd19",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5b70e45748f140a0",
+   "symbols": [
+    "ABCB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Ameris Bancorp (ABCB) Stock Looks Like A Bargain Following Its 138% Run",
+   "summary": "Ameris Bancorp has delivered a strong share price run in recent years, which naturally puts a spotlight on whether the returns it earns on its capital line up with where the stock now trades. With the Excess Returns intrinsic value framework pointing directly at that relationship",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ameris-bancorp-abcb-stock-looks-221444378.html?.tsrc=rss",
+   "published_at": "2026-10-23T22:14:44Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:23Z",
+   "fingerprint": "0b3ed92f29f467e9",
+   "primary_source": false,
+   "cluster_id": "5b70e45748f140a0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ffb0c10549bd1b92",
+   "symbols": [
+    "ABCB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ameris (ABCB) Q3 2026 Earnings Call Transcript",
+   "summary": "CEO Palmer Proctor discusses record $1.73 EPS and $200M buyback authorization.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/23/ameris-abcb-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-23T17:00:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:23Z",
+   "fingerprint": "fb595cd55f80a73a",
+   "primary_source": false,
+   "cluster_id": "ffb0c10549bd1b92",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b5dcf77ad0ba4ebf",
+   "symbols": [
+    "ABCB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ameris Bancorp Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Ameris Bancorp's Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-ameris-bancorp-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-23T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:23Z",
+   "fingerprint": "61ede9ddec6c055a",
+   "primary_source": false,
+   "cluster_id": "b5dcf77ad0ba4ebf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5b0cc406c6d8edef",
+   "symbols": [
+    "ABCB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compared to Estimates, Ameris Bancorp (ABCB) Q3 Earnings: A Look at Key Metrics",
+   "summary": "Although the revenue and EPS for Ameris Bancorp (ABCB) give a sense of how its business performed in the quarter ended September 2026, it might be worth considering how some key metrics compare with Wall Street estimates and the year-ago numbers.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/compared-estimates-ameris-bancorp-abcb-230002060.html?.tsrc=rss",
+   "published_at": "2026-10-22T23:00:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:23Z",
+   "fingerprint": "62630dcc2636ead8",
+   "primary_source": false,
+   "cluster_id": "5b0cc406c6d8edef",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "673571864ceff308",
+   "symbols": [
+    "ABCB",
+    "FCBC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ameris Bancorp (ABCB) Q3 Earnings Top Estimates",
+   "summary": "Ameris Bancorp (ABCB) delivered earnings and revenue surprises of +2.98% and -1.19%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ameris-bancorp-abcb-q3-earnings-210002427.html?.tsrc=rss",
+   "published_at": "2026-10-22T21:00:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:05Z",
+   "fingerprint": "38119044e29f9e00",
+   "primary_source": false,
+   "cluster_id": "673571864ceff308",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "737f0885a21e1fd5",
+   "symbols": [
+    "ABCB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Ameris Bancorp (NYSE:ABCB) misses Q3 2026 revenue estimates",
+   "summary": "Regional banking company Ameris Bancorp (NYSE:ABCB) fell short of the market’s revenue expectations in Q3 2026 as sales rose 2.8% year on year to $321.8 million. Its non-GAAP profit of $1.73 per share was 3.1% above analysts’ consensus estimates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ameris-bancorp-nyse-abcb-misses-203002006.html?.tsrc=rss",
+   "published_at": "2026-10-22T20:30:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:23Z",
+   "fingerprint": "712176ee1c49df45",
+   "primary_source": false,
+   "cluster_id": "737f0885a21e1fd5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0253ee8d047f1f38",
+   "symbols": [
+    "ABCB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ameris Bancorp: Q3 Earnings Snapshot",
+   "summary": "ATLANTA (AP) — ATLANTA (AP) — Ameris Bancorp (ABCB) on Thursday reported third-quarter net income of $116.The Atlanta-based bank said it had earnings of $1.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ameris-bancorp-q3-earnings-snapshot-202808929.html?.tsrc=rss",
+   "published_at": "2026-10-22T20:28:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:23Z",
+   "fingerprint": "64dcd2f9b7c45204",
+   "primary_source": false,
+   "cluster_id": "0253ee8d047f1f38",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "031ee0befd08ee9c",
+   "symbols": [
+    "ABCB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Exploring Analyst Estimates for Ameris Bancorp (ABCB) Q3 Earnings, Beyond Revenue and EPS",
+   "summary": "Evaluate the expected performance of Ameris Bancorp (ABCB) for the quarter ended September 2026, looking beyond the conventional Wall Street top-and-bottom-line estimates and examining some of its key metrics for better insight.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/exploring-analyst-estimates-ameris-bancorp-184211162.html?.tsrc=rss",
+   "published_at": "2026-10-21T18:42:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:23Z",
+   "fingerprint": "12c706ef555cdc15",
+   "primary_source": false,
+   "cluster_id": "031ee0befd08ee9c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e02f3c112243fe1b",
+   "symbols": [
+    "ABCB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What To Expect From Ameris Bancorp’s (ABCB) Q3 Earnings",
+   "summary": "Regional banking company Ameris Bancorp (NYSE:ABCB) will be announcing earnings results this Thursday after the bell. Here’s what to look for.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/expect-ameris-bancorp-abcb-q3-055039160.html?.tsrc=rss",
+   "published_at": "2026-10-21T05:50:39Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:23Z",
+   "fingerprint": "71a4d4e419c9f56e",
+   "primary_source": false,
+   "cluster_id": "e02f3c112243fe1b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0515bc14ef259ff4",
+   "symbols": [
+    "ABCB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ameris Bancorp (ABCB) Reports Next Week: Wall Street Expects Earnings Growth",
+   "summary": "Ameris Bancorp (ABCB) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ameris-bancorp-abcb-reports-next-130018007.html?.tsrc=rss",
+   "published_at": "2026-10-15T13:00:18Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:23Z",
+   "fingerprint": "3b192552508efcab",
+   "primary_source": false,
+   "cluster_id": "0515bc14ef259ff4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "719456813f7455cb",
+   "symbols": [
+    "ABCB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Reasons to Sell ABCB and 1 Stock to Buy Instead",
+   "summary": "Over the past six months, Ameris Bancorp’s stock price fell to $79.02. Shareholders have lost 5.3% of their capital, which is disappointing considering the S&amp;P 500 has climbed by 13.5%. This was partly driven by its softer quarterly results and might have investors contemplat",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-reasons-sell-abcb-1-151504876.html?.tsrc=rss",
+   "published_at": "2026-10-13T15:15:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:23Z",
+   "fingerprint": "021899bc77779f63",
+   "primary_source": false,
+   "cluster_id": "719456813f7455cb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f8fdc6ec812c7e36",
+   "symbols": [
+    "ABCB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ameris Bancorp to Announce Third Quarter 2026 Earnings on October 22, 2026",
+   "summary": "ATLANTA, October 01, 2026--Ameris Bancorp (NYSE: ABCB) (the \"Company\") announced today that it intends to release its third quarter 2026 financial results in a press release after the market closes on Thursday, October 22, 2026. H. Palmer Proctor, Jr., Chief Executive Officer, Ni",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ameris-bancorp-announce-third-quarter-123000617.html?.tsrc=rss",
+   "published_at": "2026-10-01T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:23Z",
+   "fingerprint": "0ffbff04a1ed1bcb",
+   "primary_source": false,
+   "cluster_id": "f8fdc6ec812c7e36",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6a6212dbe7ec7461",
+   "symbols": [
+    "ABCB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can ServisFirst Keep Delivering?",
+   "summary": "ServisFirst Bancshares completed a stock split and index additions after strong quarterly earnings, and analysts rate the regional bank a Buy despite rising credit and concentration risks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/articles/can-servisfirst-keep-delivering/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-09-17T14:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:23Z",
+   "fingerprint": "2837e4435e407968",
+   "primary_source": false,
+   "cluster_id": "6a6212dbe7ec7461",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8f70d2958d2c285d",
+   "symbols": [
+    "ABCB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Do Options Traders Know Something About Ameris Stock We Don't?",
+   "summary": "Investors need to pay close attention to ABCB stock based on the movements in the options market lately.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/options/articles/options-traders-know-something-ameris-150500016.html?.tsrc=rss",
+   "published_at": "2026-09-08T15:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:23Z",
+   "fingerprint": "ff8127c6bc504eff",
+   "primary_source": false,
+   "cluster_id": "8f70d2958d2c285d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "149eff1d5512f9f6",
+   "symbols": [
+    "ABCB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "FB Financial's Southern Expansion and Buybacks Drive Analyst Optimism",
+   "summary": "FB Financial's earnings and loans surged after its Southern States Bancshares acquisition, with analysts issuing Buy ratings and a consensus price target implying 15% upside.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/articles/fb-financials-southern-expansion-and-buybacks-drive-analyst-optimism/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-09-04T16:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:23Z",
+   "fingerprint": "037802aee643acca",
+   "primary_source": false,
+   "cluster_id": "149eff1d5512f9f6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "998597d00d7e82f2",
+   "symbols": [
+    "ABCB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Small-Cap Stock for Long-Term Investors and 2 We Question",
+   "summary": "Many small-cap stocks have limited Wall Street coverage, giving savvy investors the chance to act before everyone else catches on. But the flip side is that these businesses have increased downside risk because they lack the scale and staying power of their larger competitors.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-small-cap-stock-long-142133387.html?.tsrc=rss",
+   "published_at": "2026-08-18T14:21:33Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:23Z",
+   "fingerprint": "a66973b140794eff",
+   "primary_source": false,
+   "cluster_id": "998597d00d7e82f2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "0e7aeb3417445e89",

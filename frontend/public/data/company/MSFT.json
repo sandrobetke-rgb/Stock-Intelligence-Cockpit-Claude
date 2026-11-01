@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -25,9 +25,9 @@
    "adr20": 2.0577562694753304,
    "rvol": 1.6861851199606128,
    "ema10": 528.580965636852,
-   "ema21": 526.0117309725124,
+   "ema21": 526.0117309725649,
    "sma50": 512.910601196289,
-   "sma200": 436.8539479064941
+   "sma200": 436.85394805908203
   },
   "market_cap": 3875804807168.0,
   "market_cap_currency": "USD",
@@ -35,17 +35,17 @@
    "tech": {
     "close": 521.9099731445312,
     "change_pct": -1.5524279014033637,
-    "ema20": 526.4119660912343,
-    "ema50": 509.28162372834186,
-    "ema200": 463.12311226017476,
+    "ema20": 526.4119660912652,
+    "ema50": 509.28162374667846,
+    "ema200": 463.12311251261605,
     "sma50": 512.910601196289,
-    "rsi14": 49.030911260637964,
-    "rsi_min5": 49.030911260637964,
-    "atr14": 11.87815116389445,
-    "atr_pct": 2.2759003995129756,
+    "rsi14": 49.03091126019184,
+    "rsi_min5": 49.03091126019184,
+    "atr14": 11.87815116367469,
+    "atr_pct": 2.275900399470869,
     "rvol": 1.6861851199606128,
     "vol30": 22330773.333333332,
-    "dist_ema200_pct": 12.693570959449541,
+    "dist_ema200_pct": 12.69357089802201,
     "dist_52w_high_pct": 5.305279864700518,
     "high_52w": 551.1500244140625,
     "macd_above_signal": false,
@@ -59,7 +59,17 @@
     "green": false,
     "day_high": 526.0,
     "day_low": 514.3499755859375,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 6.506313666197656,
+    "adx14": 22.577679616763174,
+    "ema10": 528.580965636852,
+    "sma200": 436.85394805908203,
+    "perf_63d": 7.227005089254757,
+    "adr20_pct": 2.0577562694753304,
+    "range10_pct": 5.452781549653829,
+    "high10_prev": 543.8200073242188,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -89,14 +99,40 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": false
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.5,
     "S02": 0.7,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.8333333333333334,
+    "RSI2": 1.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -109,9 +145,9 @@
    "plan": {
     "trigger": 526.0,
     "entry_max": 536.52,
-    "stop": 508.18277325415835,
-    "risk_per_share": 17.81722674584165,
-    "target_1": 561.6344534916833,
+    "stop": 508.182773254488,
+    "risk_per_share": 17.817226745512016,
+    "target_1": 561.634453491024,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -157,11 +193,11 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 61,
+   "mentions_7d": 66,
    "manipulation_risk": "auffaellig",
-   "mentions_24h": 37,
-   "sentiment_7d": 0.22,
-   "bullish_7d": 6,
+   "mentions_24h": 39,
+   "sentiment_7d": 0.24,
+   "bullish_7d": 7,
    "bearish_7d": 1
   },
   "insider": {
@@ -225,9 +261,9 @@
   "adr20": 2.0577562694753304,
   "rvol": 1.6861851199606128,
   "ema10": 528.580965636852,
-  "ema21": 526.0117309725124,
+  "ema21": 526.0117309725649,
   "sma50": 512.910601196289,
-  "sma200": 436.8539479064941,
+  "sma200": 436.85394805908203,
   "volatility_ann": 21.4855790135208,
   "avg_dollar_volume_20d": 11681986250.14038,
   "move_zscore": -1.1470032488916777,
@@ -235,17 +271,17 @@
    "tech": {
     "close": 521.9099731445312,
     "change_pct": -1.5524279014033637,
-    "ema20": 526.4119660912343,
-    "ema50": 509.28162372834186,
-    "ema200": 463.12311226017476,
+    "ema20": 526.4119660912652,
+    "ema50": 509.28162374667846,
+    "ema200": 463.12311251261605,
     "sma50": 512.910601196289,
-    "rsi14": 49.030911260637964,
-    "rsi_min5": 49.030911260637964,
-    "atr14": 11.87815116389445,
-    "atr_pct": 2.2759003995129756,
+    "rsi14": 49.03091126019184,
+    "rsi_min5": 49.03091126019184,
+    "atr14": 11.87815116367469,
+    "atr_pct": 2.275900399470869,
     "rvol": 1.6861851199606128,
     "vol30": 22330773.333333332,
-    "dist_ema200_pct": 12.693570959449541,
+    "dist_ema200_pct": 12.69357089802201,
     "dist_52w_high_pct": 5.305279864700518,
     "high_52w": 551.1500244140625,
     "macd_above_signal": false,
@@ -259,7 +295,17 @@
     "green": false,
     "day_high": 526.0,
     "day_low": 514.3499755859375,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 6.506313666197656,
+    "adx14": 22.577679616763174,
+    "ema10": 528.580965636852,
+    "sma200": 436.85394805908203,
+    "perf_63d": 7.227005089254757,
+    "adr20_pct": 2.0577562694753304,
+    "range10_pct": 5.452781549653829,
+    "high10_prev": 543.8200073242188,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -289,14 +335,40 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": false
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.5,
     "S02": 0.7,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.8333333333333334,
+    "RSI2": 1.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -309,9 +381,9 @@
    "plan": {
     "trigger": 526.0,
     "entry_max": 536.52,
-    "stop": 508.18277325415835,
-    "risk_per_share": 17.81722674584165,
-    "target_1": 561.6344534916833,
+    "stop": 508.182773254488,
+    "risk_per_share": 17.817226745512016,
+    "target_1": 561.634453491024,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -771,6 +843,8 @@
   {
    "id": "c3b51a8d670fc371",
    "symbols": [
+    "AAPL",
+    "ALNY",
     "MSFT",
     "NVDA",
     "PSX",
@@ -797,6 +871,8 @@
   {
    "id": "ab28287a57527a3b",
    "symbols": [
+    "AAPL",
+    "AMZN",
     "GOOG",
     "GOOGL",
     "MSFT",
@@ -869,6 +945,7 @@
   {
    "id": "5106c248e9febb55",
    "symbols": [
+    "AMZN",
     "GOOG",
     "GOOGL",
     "META",
@@ -895,6 +972,7 @@
   {
    "id": "ff2a26aba5dbc5da",
    "symbols": [
+    "AMZN",
     "GOOG",
     "GOOGL",
     "META",
@@ -2065,21 +2143,21 @@
   }
  ],
  "social_detail": {
-  "mentions_24h": 37,
-  "mentions_7d": 61,
-  "mentions_30d": 61,
-  "change_vs_baseline_pct": 979,
-  "engagement_7d": 75.0,
-  "sentiment_7d": 0.22,
+  "mentions_24h": 39,
+  "mentions_7d": 66,
+  "mentions_30d": 66,
+  "change_vs_baseline_pct": 911,
+  "engagement_7d": 90.0,
+  "sentiment_7d": 0.24,
   "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
-  "bullish_7d": 6,
+  "bullish_7d": 7,
   "bearish_7d": 1,
   "by_platform_7d": {
-   "reddit": 26,
-   "stocktwits": 35
+   "stocktwits": 40,
+   "reddit": 26
   },
   "communities_7d": {
-   "StockTwits": 35,
+   "StockTwits": 40,
    "r/StockMarket": 12,
    "r/ValueInvesting": 8,
    "r/wallstreetbets": 6
@@ -2117,6 +2195,16 @@
     "platform": "stocktwits",
     "community": "StockTwits",
     "author": "AshHydrogen",
+    "posted_at": "2026-10-31T17:49:43Z",
+    "url": "https://stocktwits.com/AshHydrogen/message/667851251",
+    "text": "$PLTR  \n \n$SPY when are we getting FAKE AI CUSTOMERS FROM:  $MSFT $CRM $NOW ???… \n \nhttps://sih-st-charts.stocktwits-cdn.com/production/original_537983025.png",
+    "engagement": 5.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "AshHydrogen",
     "posted_at": "2026-10-31T15:30:07Z",
     "url": "https://stocktwits.com/AshHydrogen/message/667847784",
     "text": "$PLTR Dr  Karp  and  team  have  not  changed  their  tune  in  20  years!!! \n$SPY  Palantir  needs  $5  Trillion  Market  Cap  like  $ANT.X  and  $MSFT  combined… \nhttps://media.stocktwits-cdn.com/api/3/media/3757780/medium.png",
@@ -2126,22 +2214,12 @@
    {
     "platform": "stocktwits",
     "community": "StockTwits",
-    "author": "AshHydrogen",
-    "posted_at": "2026-10-31T17:49:43Z",
-    "url": "https://stocktwits.com/AshHydrogen/message/667851251",
-    "text": "$PLTR  \n \n$SPY when are we getting FAKE AI CUSTOMERS FROM:  $MSFT $CRM $NOW ???… \n \nhttps://sih-st-charts.stocktwits-cdn.com/production/original_537983025.png",
+    "author": "AlphaBull_10M",
+    "posted_at": "2026-11-01T01:34:53Z",
+    "url": "https://stocktwits.com/AlphaBull_10M/message/667859592",
+    "text": "Did you know how much these companies make per a day? \n1. $GOOGL $645M  \n2. $NVDA $523M  \n3. $SSNLF (Samsung) $437M  \n4. $MSFT $388M  \n5. $SKHY $387M  \n6. AMZN $366M   \n7. APPL $349M  \n8. MU $230M  \n9. TSM $212M   \n10. META $205M",
     "engagement": 4.0,
-    "sentiment_label": null
-   },
-   {
-    "platform": "stocktwits",
-    "community": "StockTwits",
-    "author": "KingTrades09",
-    "posted_at": "2026-10-31T17:35:10Z",
-    "url": "https://stocktwits.com/KingTrades09/message/667850945",
-    "text": "$GOOGL is the new $MSFT \nShort all the way down to 200\nLike MSFT from 550 to 370s",
-    "engagement": 4.0,
-    "sentiment_label": null
+    "sentiment_label": "Bullish"
    }
   ]
  },

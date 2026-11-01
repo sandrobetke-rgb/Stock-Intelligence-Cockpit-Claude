@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 17.499000549316406,
     "day_low": 16.530000686645508,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 19.837536864313833,
+    "adx14": 24.76981412480731,
+    "ema10": 17.119229468201382,
+    "sma200": 20.56455008506775,
+    "perf_63d": -20.56163563904031,
+    "adr20_pct": 3.946097932834097,
+    "range10_pct": 17.724699697485626,
+    "high10_prev": 18.729999542236328,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -139,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 6.8,
+   "score": 30.4,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -242,7 +278,17 @@
     "green": false,
     "day_high": 17.499000549316406,
     "day_low": 16.530000686645508,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 19.837536864313833,
+    "adx14": 24.76981412480731,
+    "ema10": 17.119229468201382,
+    "sma200": 20.56455008506775,
+    "perf_63d": -20.56163563904031,
+    "adr20_pct": 3.946097932834097,
+    "range10_pct": 17.724699697485626,
+    "high10_prev": 18.729999542236328,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -272,6 +318,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -279,7 +346,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -618,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.8,
+  "score": 30.4,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 38.4,
@@ -640,26 +710,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 6,
+    "independent": 6,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -677,7 +749,406 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "6ead53ebb23f079e",
+   "symbols": [
+    "ADNT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adient (ADNT) Reports Next Week: Wall Street Expects Earnings Growth",
+   "summary": "Adient (ADNT) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adient-adnt-reports-next-week-130024734.html?.tsrc=rss",
+   "published_at": "2026-10-28T13:00:24Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "d52dc18eed4cdb6b",
+   "primary_source": false,
+   "cluster_id": "6ead53ebb23f079e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7709cbc9fddead3c",
+   "symbols": [
+    "ADNT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Auto Stocks Facing North American Supply Chain Risk",
+   "summary": "Tariff talk between the U.S., Canada, and Mexico is no longer background noise. Potentially higher duties on steel and autos, along with tougher rules on where vehicles are built, could reshape how cars and parts move across borders. That kind of shock can hurt some holdings yet ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-auto-stocks-facing-north-180850195.html?.tsrc=rss",
+   "published_at": "2026-10-27T18:08:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "2018c7f79e33cfff",
+   "primary_source": false,
+   "cluster_id": "7709cbc9fddead3c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3fae9e473487b4ab",
+   "symbols": [
+    "ADNT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adient (ADNT) Stock Sees Modest Fair Value Cut As Analysts Trim Expectations",
+   "summary": "Adient’s updated analysis now points to a slightly lower modeled fair value, with the price target moving from US$29.55 to US$27.64. This shift sits alongside a split in analyst opinion, where some recently trimmed targets but still argue the stock could re-rate if execution, mar",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adient-adnt-stock-sees-modest-061509291.html?.tsrc=rss",
+   "published_at": "2026-10-23T06:15:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "ec5fc1297df1a491",
+   "primary_source": false,
+   "cluster_id": "3fae9e473487b4ab",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a075a1fcd6f2a9c4",
+   "symbols": [
+    "ADNT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ADNT or MBLY: Which Is the Better Value Stock Right Now?",
+   "summary": "ADNT vs. MBLY: Which Stock Is the Better Value Option?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adnt-mbly-better-value-stock-144001078.html?.tsrc=rss",
+   "published_at": "2026-10-19T14:40:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "8b80fb7fdfd95c04",
+   "primary_source": false,
+   "cluster_id": "a075a1fcd6f2a9c4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3d8dcd3d8655964f",
+   "symbols": [
+    "ADNT",
+    "CHPT",
+    "CWH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Bear of the Day: Camping World (CWH)",
+   "summary": "The RV biz exploded during COVID but what's happening now?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/bear-day-camping-world-cwh-100000727.html?.tsrc=rss",
+   "published_at": "2026-10-19T10:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:30Z",
+   "fingerprint": "14994e2d0335fbcf",
+   "primary_source": false,
+   "cluster_id": "3d8dcd3d8655964f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4bf04b447fd86717",
+   "symbols": [
+    "ADNT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adient to Discuss Fourth Quarter and Full-Year Fiscal 2026 Financial Results on Nov. 4, 2026",
+   "summary": "Adient (NYSE: ADNT), a global leader in automotive seating, will host a conference call on Nov. 4, 2026, at 8:30 a.m. ET to review its fourth quarter and full-year fiscal 2026 financial results.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adient-discuss-fourth-quarter-full-120000124.html?.tsrc=rss",
+   "published_at": "2026-10-12T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "4b60a5ad620bee2c",
+   "primary_source": false,
+   "cluster_id": "4bf04b447fd86717",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3c98e2ddaa3755cd",
+   "symbols": [
+    "ADNT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Peter Carlin steps down from Adient board of directors, joins company as CFO on Nov. 16, 2026",
+   "summary": "Adient (NYSE: ADNT), a global leader in automotive seating, today announced that on Oct. 1, 2026, Peter Carlin will be stepping down from Adient's board of directors and joining the company initially as vice president, finance. He will then be appointed executive vice president a",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/peter-carlin-steps-down-adient-104500157.html?.tsrc=rss",
+   "published_at": "2026-09-18T10:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "e520dacc6578fba4",
+   "primary_source": false,
+   "cluster_id": "3c98e2ddaa3755cd",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "edf11f9ae2a5759b",
+   "symbols": [
+    "ADNT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adient (ADNT) Up 3.8% Since Last Earnings Report: Can It Continue?",
+   "summary": "Adient (ADNT) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adient-adnt-3-8-since-153011272.html?.tsrc=rss",
+   "published_at": "2026-09-04T15:30:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "396be1b42c189ab9",
+   "primary_source": false,
+   "cluster_id": "edf11f9ae2a5759b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9ff1d2a72f2427ed",
+   "symbols": [
+    "ADNT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "New Strong Sell Stocks for August 24th",
+   "summary": "AGCO, ADNT and AEM have been added to the Zacks Rank #5 (Strong Sell) List on August 24th, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/strong-sell-stocks-august-24th-100900943.html?.tsrc=rss",
+   "published_at": "2026-08-24T10:09:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "28775198912c40cc",
+   "primary_source": false,
+   "cluster_id": "9ff1d2a72f2427ed",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "16e9eeeb7e42b1e6",
+   "symbols": [
+    "ADNT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adient Eyes 2027 Margin Growth as Onshoring Wins and Automation Build Momentum",
+   "summary": "Adient (NYSE:ADNT) executives said the automotive seating supplier expects to finish fiscal 2026 in line with commitments and enter fiscal 2027 with continued revenue growth, improving business performance and margin expansion, supported by Americas onshoring wins, China growth a",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/adient-eyes-2027-margin-growth-as-onshoring-wins-and-automation-build-momentum-2026-08-20/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-20T08:02:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "2af9f64e1b3df84d",
+   "primary_source": false,
+   "cluster_id": "16e9eeeb7e42b1e6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e34686c56c6d4f73",
+   "symbols": [
+    "ADNT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adient's Ana Romero-Davila is recognized as a Rising Star",
+   "summary": "Adient (NYSE: ADNT), a global leader in automotive seating, today announced that Ana Romero-Davila, platform director at the company, has been named a 2026 Automotive News Rising Star.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adients-ana-romero-davila-recognized-160000706.html?.tsrc=rss",
+   "published_at": "2026-08-17T16:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "f2ec097dc1824b59",
+   "primary_source": false,
+   "cluster_id": "e34686c56c6d4f73",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bfe6e2c141d543a2",
+   "symbols": [
+    "ADNT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adient (ADNT) Q3 2026 Earnings Call Transcript",
+   "summary": "China growth and automation investments offset Middle East headwinds.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/12/adient-adnt-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-12T16:43:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "f1baaa03dc5f9c64",
+   "primary_source": false,
+   "cluster_id": "bfe6e2c141d543a2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "704d3a2ef5c89d3f",
+   "symbols": [
+    "ADNT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adient Q3 Earnings Miss Estimates on Higher Commodity Expenses",
+   "summary": "ADNT's Q3 earnings miss estimates despite a sales beat, as higher commodity and freight costs and Middle East disruptions pressure margins.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adient-q3-earnings-miss-estimates-143000464.html?.tsrc=rss",
+   "published_at": "2026-08-10T14:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "0e3d1502aa792fed",
+   "primary_source": false,
+   "cluster_id": "704d3a2ef5c89d3f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "178af425ad3034b0",
+   "symbols": [
+    "ADNT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adient (ADNT) On Third Quarter Results And Buybacks As Undervalued Case Faces A Fresh Test",
+   "summary": "Adient (NYSE:ADNT) just reported its third quarter results alongside an update on its multi year share repurchase program, giving you fresh information on both current profitability and how management is returning capital. See our latest analysis for Adient. Adient's 1 day share ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adient-adnt-third-quarter-results-131005692.html?.tsrc=rss",
+   "published_at": "2026-08-09T13:10:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "edd25bb5176fd0ee",
+   "primary_source": false,
+   "cluster_id": "178af425ad3034b0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fefda167ec6c65ef",
+   "symbols": [
+    "ADNT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adient PLC (ADNT) (Q3 2026) Earnings Call Highlights: Revenue Up 5% to $3. ...",
+   "summary": "Adient PLC (ADNT) maintains fiscal 2026 EBITDA guidance at $885 million despite absorbing $32 million in temporary costs from Middle East disruptions.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adient-plc-adnt-q3-2026-210414099.html?.tsrc=rss",
+   "published_at": "2026-08-05T21:04:14Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "f29b3601a0f0919a",
+   "primary_source": false,
+   "cluster_id": "fefda167ec6c65ef",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e87acb8c2274a3c1",
+   "symbols": [
+    "ADNT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adient Q3 Earnings Call Highlights",
+   "summary": "Adient (NYSE:ADNT) reported third-quarter fiscal 2026 revenue of approximately $3.9 billion, up 5% from a year earlier, while adjusted EBITDA was flat at $225 million as conflict-related commodity and freight costs, customer production disruptions and operating inefficiencies wei",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/adient-q3-earnings-call-highlights-2026-08-05/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-05T20:04:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "d0a5268a4ca20795",
+   "primary_source": false,
+   "cluster_id": "e87acb8c2274a3c1",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "237f5347eda8b4e3",
+   "symbols": [
+    "ADNT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adient (ADNT) Reports Q3 Earnings: What Key Metrics Have to Say",
+   "summary": "While the top- and bottom-line numbers for Adient (ADNT) give a sense of how the business performed in the quarter ended June 2026, it could be worth looking at how some of its key metrics compare to Wall Street estimates and year-ago values.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adient-adnt-reports-q3-earnings-133004901.html?.tsrc=rss",
+   "published_at": "2026-08-05T13:30:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "ab1ff9f7f00dc8a6",
+   "primary_source": false,
+   "cluster_id": "237f5347eda8b4e3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8a978289d43f455f",
+   "symbols": [
+    "ADNT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adient misses earnings estimates despite stronger-than-expected revenue",
+   "summary": "Adient (NYSE:ADNT) reported third-quarter results that fell short of Wall Street earnings forecasts, although revenue exceeded analyst expectations. The mixed performance left shares slightly lower in pre-market trading, down around 0.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "investorshub.advfn.com",
+   "url": "https://investorshub.advfn.com/market-news/article/33496/adient-misses-earnings-estimates-despite-stronger-than-expected-revenue?.tsrc=rss",
+   "published_at": "2026-08-05T12:46:39Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:43Z",
+   "fingerprint": "478846a7ce31ec5a",
+   "primary_source": false,
+   "cluster_id": "8a978289d43f455f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

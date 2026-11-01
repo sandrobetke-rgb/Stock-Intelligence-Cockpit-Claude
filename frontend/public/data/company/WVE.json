@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 3.700000047683716,
     "day_low": 3.430000066757202,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 61.15599625911559,
+    "adx14": 34.469865620751605,
+    "ema10": 3.4552856588550256,
+    "sma200": 7.4241999924182895,
+    "perf_63d": -37.4564449944225,
+    "adr20_pct": 6.017626548959851,
+    "range10_pct": 25.324675023083245,
+    "high10_prev": 3.859999895095825,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.5,
     "S03": 0.6666666666666666,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -139,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 1.5,
+   "score": 45.0,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 7,
    "independent_24h": 0
   },
   "political": {
@@ -228,7 +264,17 @@
     "green": false,
     "day_high": 3.700000047683716,
     "day_low": 3.430000066757202,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 61.15599625911559,
+    "adx14": 34.469865620751605,
+    "ema10": 3.4552856588550256,
+    "sma200": 7.4241999924182895,
+    "perf_63d": -37.4564449944225,
+    "adr20_pct": 6.017626548959851,
+    "range10_pct": 25.324675023083245,
+    "high10_prev": 3.859999895095825,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -258,6 +304,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -265,7 +332,10 @@
     "S01": 0.5,
     "S02": 0.5,
     "S03": 0.6666666666666666,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -604,11 +674,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 1.5,
+  "score": 45.0,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 80,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 8.6,
@@ -626,25 +696,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 7,
+    "independent": 7,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 17,
+    "independent": 17,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -663,7 +735,458 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "b5e0ea5a4f58b424",
+   "symbols": [
+    "WVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Wave Life Sciences (WVE) Stock Rallies As Q3 Results Ease Loss Fears",
+   "summary": "Wave Life Sciences just dropped its Q3 2026 print and the stock is up about 7% intraday. That bounce looks like a reaction to relief as much as results. Revenue landed at US$13.2 million and the company still booked a sizeable net loss of US$61.9 million, so this move is not abou",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wave-life-sciences-wve-stock-181051897.html?.tsrc=rss",
+   "published_at": "2026-10-28T18:10:51Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:55Z",
+   "fingerprint": "cc282279771054c6",
+   "primary_source": false,
+   "cluster_id": "b5e0ea5a4f58b424",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d6b2c9c199bc875a",
+   "symbols": [
+    "WVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Wave Life Sciences Ltd. Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Wave Life Sciences Ltd.'s Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-wave-life-sciences-ltd-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-28T00:30:38Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:55Z",
+   "fingerprint": "cca35ab190812ed0",
+   "primary_source": false,
+   "cluster_id": "d6b2c9c199bc875a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b13c618f1a3a0951",
+   "symbols": [
+    "WVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Wave Life Sciences (WVE) Q3 2026 Earnings Call Transcript",
+   "summary": "RNA medicine company advances obesity and lung disease programs with $431M cash runway.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/wave-life-sciences-wve-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-27T18:58:18Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:55Z",
+   "fingerprint": "90640d44ae216e24",
+   "primary_source": false,
+   "cluster_id": "b13c618f1a3a0951",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cec529675e93f19d",
+   "symbols": [
+    "WVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WAVE Life Sciences Q3 Earnings Call Highlights",
+   "summary": "WAVE Life Sciences (NASDAQ:WVE) reported higher third-quarter revenue and a wider net loss as it increased investment in clinical programs spanning obesity, alpha-1 antitrypsin deficiency and liver disease. Revenue for the third quarter of 2026 totaled $13.2 million, up from $7.6",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-wave-life-sciences-q3-earnings-call-highlights-2026-10-27/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-27T17:05:16Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:55Z",
+   "fingerprint": "19b480dcf68081f1",
+   "primary_source": false,
+   "cluster_id": "cec529675e93f19d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "49822f54dc3bcf33",
+   "symbols": [
+    "WVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Wave Life Sciences (WVE) Reports Q3 Loss, Tops Revenue Estimates",
+   "summary": "Wave Life Sciences (WVE) delivered earnings and revenue surprises of +11.77% and +342.29%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/wave-life-sciences-wve-reports-114003493.html?.tsrc=rss",
+   "published_at": "2026-10-27T11:40:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:55Z",
+   "fingerprint": "945cbb47688ba5de",
+   "primary_source": false,
+   "cluster_id": "49822f54dc3bcf33",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7c61f35dad8fead5",
+   "symbols": [
+    "WVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Wave Life Sciences: Q3 Earnings Snapshot",
+   "summary": "SINGAPORE (AP) — SINGAPORE (AP) — Wave Life Sciences Pte. (WVE) on Tuesday reported a loss of $61.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/wave-life-sciences-q3-earnings-113539428.html?.tsrc=rss",
+   "published_at": "2026-10-27T11:35:39Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:55Z",
+   "fingerprint": "ac92c0ab945a51a2",
+   "primary_source": false,
+   "cluster_id": "7c61f35dad8fead5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "947bf84f2dc461ba",
+   "symbols": [
+    "WVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Wave Life Sciences Reports Third Quarter 2026 Financial Results and Provides Business Update",
+   "summary": "Planning underway for registrational trial of WVE-006 (RNA editing) in AATD, with an interim analysis for potential accelerated approval based on AATD biomarkers Advancing WVE-007 (INHBE siRNA) across treatment settings: dosing ongoing in Phase 2a monotherapy clinical trial in in",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/wave-life-sciences-reports-third-113000429.html?.tsrc=rss",
+   "published_at": "2026-10-27T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:55Z",
+   "fingerprint": "7103f273dd0faa4b",
+   "primary_source": false,
+   "cluster_id": "947bf84f2dc461ba",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3888dceadeb435fe",
+   "symbols": [
+    "WVE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WAVE Life Sciences Highlights Obesity Data, FDA-Aligned RNA Editing Path",
+   "summary": "WAVE Life Sciences (NASDAQ:WVE) outlined progress across its obesity-focused siRNA program and RNA editing pipeline during a Chardan discussion, with President and CEO Paul Bolno emphasizing the company’s chemistry platform, upcoming clinical studies and regulatory alignment for ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-wave-life-sciences-highlights-obesity-data-fda-aligned-rna-editing-path-2026-10-21/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-22T03:02:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:55Z",
+   "fingerprint": "a7e655b4c785eaf9",
+   "primary_source": false,
+   "cluster_id": "3888dceadeb435fe",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9e48d8798381dc6d",
+   "symbols": [
+    "CYTK",
+    "EWTX",
+    "IDYA",
+    "IMNM",
+    "PVLA",
+    "RCUS",
+    "RYTM",
+    "TNGX",
+    "WVE"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "William Blair Expands Biotech Research as Veteran Analyst Alethia Young Initiates Coverage",
+   "summary": "CHICAGO, October 21, 2026--William Blair today announced that Alethia Young has initiated coverage of 13 biotechnology companies, marking the next step in the firm’s continued expansion of its biotech offering.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/william-blair-expands-biotech-research-163000938.html?.tsrc=rss",
+   "published_at": "2026-10-21T16:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:51Z",
+   "fingerprint": "1cf15b865859e1fd",
+   "primary_source": false,
+   "cluster_id": "9e48d8798381dc6d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "34cbfe91684be719",
+   "symbols": [
+    "WVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Analysts Estimate GSK (GSK) to Report a Decline in Earnings: What to Look Out for",
+   "summary": "Glaxo (GSK) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/analysts-estimate-gsk-gsk-report-130012807.html?.tsrc=rss",
+   "published_at": "2026-10-21T13:00:12Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:55Z",
+   "fingerprint": "7a4c51a5e7bd9e3f",
+   "primary_source": false,
+   "cluster_id": "34cbfe91684be719",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "08c71a9a47e0dd19",
+   "symbols": [
+    "WVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Wave Life Sciences Third Quarter 2026 Financial Results Scheduled for October 27, 2026",
+   "summary": "CAMBRIDGE, Mass., Oct. 20, 2026 (GLOBE NEWSWIRE) -- Wave Life Sciences, Inc. (Nasdaq: WVE), a clinical-stage biotechnology company focused on unlocking the broad potential of RNA medicines to transform human health, will host a live webcast and conference call at 8:30 a.m. ET on ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/wave-life-sciences-third-quarter-123000592.html?.tsrc=rss",
+   "published_at": "2026-10-20T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:55Z",
+   "fingerprint": "ccb15007aeae2f78",
+   "primary_source": false,
+   "cluster_id": "08c71a9a47e0dd19",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b942032902dbbb43",
+   "symbols": [
+    "WVE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wave Life Sciences to Host Virtual Research Day on Wednesday, November 4, 2026",
+   "summary": "CAMBRIDGE, Mass., Oct. 19, 2026 (GLOBE NEWSWIRE) -- Wave Life Sciences, Inc. (Nasdaq: WVE), a clinical-stage biotechnology company focused on unlocking the broad potential of RNA medicines to transform human health, announced it will host a virtual Research Day on Wednesday, Nove",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/wave-life-sciences-host-virtual-123000609.html?.tsrc=rss",
+   "published_at": "2026-10-19T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:55Z",
+   "fingerprint": "1f2acdde5dab8259",
+   "primary_source": false,
+   "cluster_id": "b942032902dbbb43",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9d76edc43f98fdf4",
+   "symbols": [
+    "WVE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wave Life Sciences (WVE) Stock Fair Value Moves Lower As Analysts Cut Growth Views",
+   "summary": "Wave Life Sciences has seen its modeled fair value adjusted from US$19.63 to about US$17.68, a cut of roughly 10% in the latest update. This shift aligns with recent Street research that weighs enthusiasm for the RNA editing platform and programs like WVE-006 and WVE-007 against ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wave-life-sciences-wve-stock-101125264.html?.tsrc=rss",
+   "published_at": "2026-10-17T10:11:25Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:55Z",
+   "fingerprint": "8945de12bd2b1571",
+   "primary_source": false,
+   "cluster_id": "9d76edc43f98fdf4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "02e6cb731ab534cd",
+   "symbols": [
+    "WVE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "GSK (LSE:GSK) Following Its ADS Filing And The Case For Undervaluation",
+   "summary": "GSK (LSE:GSK) has put fresh capital plans on the table, filing a US shelf registration for up to $3.0498b of American Depositary Shares tied to its employee share ownership plans. GSK shares trade at £18.16 after a 1-day share price return of 3.59%, with recent headlines covering",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gsk-lse-gsk-following-ads-181159276.html?.tsrc=rss",
+   "published_at": "2026-10-14T18:11:59Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:55Z",
+   "fingerprint": "cb7383bef541de8d",
+   "primary_source": false,
+   "cluster_id": "02e6cb731ab534cd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7871b58bf0b19489",
+   "symbols": [
+    "WVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Alnylam Pharmaceuticals (ALNY) vs. IONS and ARWR: Can Pipeline Growth Restore Confidence After the Guidance Cut?",
+   "summary": "Is ALNY a good stock to buy? We came across a bullish thesis on Alnylam Pharmaceuticals, Inc. on Astute Optics – US’s Substack. The thesis was published on September 11th, when the stock was trading at $248.68, and ALNY lost 8.70% since then. The decline appears to reflect linger",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/alnylam-pharmaceuticals-alny-vs-ions-164307264.html?.tsrc=rss",
+   "published_at": "2026-10-14T16:43:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:55Z",
+   "fingerprint": "ac44a3e399cbf913",
+   "primary_source": false,
+   "cluster_id": "7871b58bf0b19489",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ecf4a30512a78cca",
+   "symbols": [
+    "WVE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wave Life Sciences to Present at Chardan’s 10th Annual Healthcare Conference",
+   "summary": "CAMBRIDGE, Mass., Oct. 13, 2026 (GLOBE NEWSWIRE) -- Wave Life Sciences, Inc. (Nasdaq: WVE), a clinical-stage biotechnology company focused on unlocking the broad potential of RNA medicines to transform human health, today announced that Paul Bolno, MD, MBA, President and Chief Ex",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/wave-life-sciences-present-chardan-123000399.html?.tsrc=rss",
+   "published_at": "2026-10-13T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:55Z",
+   "fingerprint": "513c20549867c620",
+   "primary_source": false,
+   "cluster_id": "ecf4a30512a78cca",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "52ac5853f818317c",
+   "symbols": [
+    "ANTX",
+    "WVE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "GSK (LSE:GSK) Deepens Its Drug Pipeline Through Two Research Partnerships",
+   "summary": "GSK (LSE:GSK) has entered a collaboration with Wave Life Sciences to advance a GalNAc-siRNA hepatology candidate into its development pipeline. The partnership with Wave Life Sciences focuses on RNA-based therapies targeting liver diseases using GalNAc-siRNA technology. GSK expan",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/gsk-lse-gsk-deepens-drug-021340675.html?.tsrc=rss",
+   "published_at": "2026-10-08T02:13:40Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:13Z",
+   "fingerprint": "06f95804f6429d1b",
+   "primary_source": false,
+   "cluster_id": "52ac5853f818317c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fc291e6d28490f9a",
+   "symbols": [
+    "FHTX",
+    "WVE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Lilly, Foghorn part ways; Wave’s FDA-approved plans",
+   "summary": "The pharma giant cut its partnership after a cancer drug disappointed in testing. Elsewhere, Teva and Samsung Bioepis expanded a partnership and space biotech Varda brought in $251 million.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "biopharmadive.com",
+   "url": "https://www.biopharmadive.com/news/foghorn-eli-lilly-wave-samsung-bioepis-teva-varda-hatteras/831918/?.tsrc=rss",
+   "published_at": "2026-10-01T16:04:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:18Z",
+   "fingerprint": "897c4c44dd269872",
+   "primary_source": false,
+   "cluster_id": "fc291e6d28490f9a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8df3c5968f95e0f9",
+   "symbols": [
+    "WVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Wave Life Sciences Announces FDA Feedback Supports Registrational Pathway for WVE-006 (RNA Editing) in AATD",
+   "summary": "Following meeting with FDA, Wave plans for a single, two-year registrational trial, with a one-year interim analysis for potential accelerated approval based on AATD biomarkers WVE-006 (RNA editing) has potential to offer the AATD community a new standard-of-care treatment to pro",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/wave-life-sciences-announces-fda-113000838.html?.tsrc=rss",
+   "published_at": "2026-10-01T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:55Z",
+   "fingerprint": "4a9ec595ed1f59a0",
+   "primary_source": false,
+   "cluster_id": "8df3c5968f95e0f9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "01926566aaeaac36",
+   "symbols": [
+    "WVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Wave Life Sciences Announces GSK’s Selection of siRNA program to Transition to GSK for Further Development",
+   "summary": "Candidate selected by GSK utilizes Wave’s best-in-class SpiNA design siRNA and triggers a milestone payment to Wave; three additional collaboration programs advancing CAMBRIDGE, Mass., Sept. 30, 2026 (GLOBE NEWSWIRE) -- Wave Life Sciences, Inc. (Nasdaq: WVE), a clinical-stage bio",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/wave-life-sciences-announces-gsk-113000645.html?.tsrc=rss",
+   "published_at": "2026-09-30T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:55Z",
+   "fingerprint": "818a9b35d498f83a",
+   "primary_source": false,
+   "cluster_id": "01926566aaeaac36",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "c2ab265f71129dfa",

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 6.869999885559082,
     "day_low": 6.159999847412109,
-    "history_ok": false
+    "history_ok": false,
+    "rsi2": 27.783460211475244,
+    "adx14": 32.62307651997105,
+    "ema10": 6.463862827183268,
+    "sma200": null,
+    "perf_63d": -55.742294889060226,
+    "adr20_pct": 7.607787842193993,
+    "range10_pct": 30.253624675079106,
+    "high10_prev": 7.190000057220459,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.3,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -139,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 9.2,
+   "score": 25.4,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -179,7 +215,7 @@
     "time": "nach Börsenschluss",
     "fiscal_quarter": "Sep/2026",
     "eps_forecast": -0.23,
-    "estimates": 8,
+    "estimates": 1,
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/yss/earnings",
@@ -242,7 +278,17 @@
     "green": false,
     "day_high": 6.869999885559082,
     "day_low": 6.159999847412109,
-    "history_ok": false
+    "history_ok": false,
+    "rsi2": 27.783460211475244,
+    "adx14": 32.62307651997105,
+    "ema10": 6.463862827183268,
+    "sma200": null,
+    "perf_63d": -55.742294889060226,
+    "adr20_pct": 7.607787842193993,
+    "range10_pct": 30.253624675079106,
+    "high10_prev": 7.190000057220459,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -272,6 +318,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -279,7 +346,10 @@
     "S01": 0.0,
     "S02": 0.3,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -618,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 9.2,
+  "score": 25.4,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 52.1,
@@ -640,26 +710,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 8,
+    "independent": 8,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -677,7 +749,407 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "162014b0df90de12",
+   "symbols": [
+    "YSS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "York Space Systems to Release Third Quarter 2026 Results on November 12, 2026",
+   "summary": "DENVER, October 29, 2026--York Space Systems Inc. (NYSE: YSS) will release its financial results for the quarter ended September 30, 2026 after the close of market on Thursday, November 12, 2026. In conjunction with this release, York will host a conference call to review its fin",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/york-space-systems-release-third-120000106.html?.tsrc=rss",
+   "published_at": "2026-10-29T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "c07923a1a4ff4259",
+   "primary_source": false,
+   "cluster_id": "162014b0df90de12",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "78b25a98b8ed6744",
+   "symbols": [
+    "YSS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "RDW, YSS Stocks Extend Losing Streaks: Piper Sandler Sees Competition, Growth Risks",
+   "summary": "Piper Sandler began coverage on Redwire and York Space Systems with a cautious stance, highlighting issues on competition and growth prospects.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/redwire-rdw-york-yss-space-stock-piper-sandler-growth-risks/cZxWrUNRBAF?.tsrc=rss",
+   "published_at": "2026-10-15T10:32:15Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "af54536afc27c437",
+   "primary_source": false,
+   "cluster_id": "78b25a98b8ed6744",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ab821b6d3457a835",
+   "symbols": [
+    "YSS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "York Space Systems Secures Two US Space Force Task Orders for Space Data Network Programme",
+   "summary": "York Space Systems (NYSE:YSS) has been awarded two task orders under the United States Space Force’s (USSF) Space Data Network (SDN) programme, expanding its involvement in the development of advanced space-based communications and data transport infrastructure. The Denver-based ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "investorshub.advfn.com",
+   "url": "https://investorshub.advfn.com/market-news/article/37906/york-space-systems-secures-two-us-space-force-task-orders-for-space-data-network-programme?.tsrc=rss",
+   "published_at": "2026-10-12T14:18:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "dc768f599465cbfb",
+   "primary_source": false,
+   "cluster_id": "ab821b6d3457a835",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8db8f0db0fec7fa3",
+   "symbols": [
+    "YSS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "York Space Systems Awarded Two Space Force Space Data Network Task Orders",
+   "summary": "DENVER, October 12, 2026--York Space Systems (York) (NYSE: YSS), a U.S.-based national-security and commercial space company, shared additional details on two previously awarded task orders supporting the United States Space Force’s (USSF) Space Data Network (SDN) effort.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/york-space-systems-awarded-two-130000419.html?.tsrc=rss",
+   "published_at": "2026-10-12T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "68e554a001688c3e",
+   "primary_source": false,
+   "cluster_id": "8db8f0db0fec7fa3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d947fb75a6bda3bc",
+   "symbols": [
+    "BETA",
+    "KNF",
+    "UCTT",
+    "YSS"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "SpaceX initiated, Humana upgraded: Wall Street's top analyst calls",
+   "summary": "SpaceX initiated, Humana upgraded: Wall Street's top analyst calls",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/spacex-initiated-humana-upgraded-wall-134518623.html?.tsrc=rss",
+   "published_at": "2026-10-09T13:45:18Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:28:23Z",
+   "fingerprint": "1757049165270772",
+   "primary_source": false,
+   "cluster_id": "d947fb75a6bda3bc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9d1ce08e3360fbad",
+   "symbols": [
+    "YSS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "York Space Systems Expands Austin Presence with New Office",
+   "summary": "AUSTIN, Texas, October 08, 2026--York Space Systems Expands Austin Presence with New Office",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/york-space-systems-expands-austin-120000508.html?.tsrc=rss",
+   "published_at": "2026-10-08T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "5e6be5947b09e1d5",
+   "primary_source": false,
+   "cluster_id": "9d1ce08e3360fbad",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "adc8c55da6b9dcc7",
+   "symbols": [
+    "YSS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "York Space Systems Expands into GEO to Support Space Domain Awareness Missions",
+   "summary": "DENVER, October 05, 2026--York Space Systems is expanding its prime integration portfolio into Geosynchronous Earth Orbit (GEO) with the U.S. Space Force’s Tetra 3 & 4 missions",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/york-space-systems-expands-geo-130000151.html?.tsrc=rss",
+   "published_at": "2026-10-05T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "c34c5c1677a6a538",
+   "primary_source": false,
+   "cluster_id": "adc8c55da6b9dcc7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7281fc606e5dd51b",
+   "symbols": [
+    "YSS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "York Space Systems (YSS) Stock May Be 46% Undervalued Following IPO Lawsuit",
+   "summary": "York Space Systems has seen its share price fall sharply so far this year, which puts a spotlight on whether the current US$8.98 level can be explained by the cash the business is expected to generate. With investors weighing both operational updates and legal headlines, the key ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/york-space-systems-yss-stock-050753218.html?.tsrc=rss",
+   "published_at": "2026-10-03T05:07:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "59b907e3dfe4ac8f",
+   "primary_source": false,
+   "cluster_id": "7281fc606e5dd51b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f74d2625cdaf5430",
+   "symbols": [
+    "YSS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "York Space Systems (YSS) Faces Federal Securities Class Action Over IPO Disclosures",
+   "summary": "York Space Systems (NYSE:YSS) faces a federal securities class action alleging misleading IPO disclosures on its onboard software readiness. The complaint claims investors were not fully informed about risks tied to key U.S. Department of Defense contracts that underpin revenue. ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/york-space-systems-yss-faces-231005855.html?.tsrc=rss",
+   "published_at": "2026-10-01T23:10:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "d73e49d134913361",
+   "primary_source": false,
+   "cluster_id": "f74d2625cdaf5430",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2c5f1e02c7677ce1",
+   "symbols": [
+    "YSS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "York Space Systems (YSS) Expands Rwanda Antenna Capacity, Is It Still 42% Below Fair Value?",
+   "summary": "York Space Systems stock reacts to ATLAS antenna expansion in Rwanda York Space Systems (YSS) is back in focus after subsidiary ATLAS Space Operations activated a second antenna at Rwanda’s Mwulire teleport, doubling that site’s satellite contact capacity and broadening equatoria",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/york-space-systems-yss-expands-171207264.html?.tsrc=rss",
+   "published_at": "2026-10-01T17:12:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "c228ae7a9a09e174",
+   "primary_source": false,
+   "cluster_id": "2c5f1e02c7677ce1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0f4b0612836a40a5",
+   "symbols": [
+    "YSS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "York Space CEO Dirk Wallinger on Scaling Satellites and the Next Space Race",
+   "summary": "York Space Systems has spent 15 years industrializing satellite manufacturing, moving the industry from billion-dollar, decade-long builds to standardized platforms fielded in just seven months. Founder, President and CEO Dirk Wallinger goes inside the ICE House to discuss how pr",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/video/york-space-ceo-dirk-wallinger-201649374.html?.tsrc=rss",
+   "published_at": "2026-09-30T20:16:49Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "ba20d0a772d3fbe4",
+   "primary_source": false,
+   "cluster_id": "0f4b0612836a40a5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "23fbe7f85c8f85f2",
+   "symbols": [
+    "YSS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "York Space Systems and ATLAS Space Operations Activate New Antenna in Mwulire, Rwanda, Doubling Contact Capacity at Its Equatorial Ground Station",
+   "summary": "DENVER & TRAVERSE CITY, Mich., September 29, 2026--York and ATLAS activate a second antenna at Rwanda's Mwulire teleport, doubling contact capacity and expanding equatorial coverage for missions.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/york-space-systems-atlas-space-124500043.html?.tsrc=rss",
+   "published_at": "2026-09-29T12:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "8d1d1e26126c61ac",
+   "primary_source": false,
+   "cluster_id": "23fbe7f85c8f85f2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "975ae8d3c65b198b",
+   "symbols": [
+    "YSS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "York Space Systems’ Flight-Proven Platforms Selected by Tomorrow.io for DeepSky Early Warning Constellation",
+   "summary": "DENVER, September 10, 2026--York Space Systems to build Tomorrow.io DeepSky constellation.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/york-space-systems-flight-proven-140000181.html?.tsrc=rss",
+   "published_at": "2026-09-10T20:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "82e827595d846bb5",
+   "primary_source": false,
+   "cluster_id": "975ae8d3c65b198b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6a0e3ce8bbededac",
+   "symbols": [
+    "YSS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "York Space Systems Introduces New Platform Purpose-Built for Very Low Earth Orbit",
+   "summary": "DENVER, September 02, 2026--York Space Systems Introduces New Platform Purpose-Built for Very Low Earth Orbit",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/york-space-systems-introduces-platform-130000946.html?.tsrc=rss",
+   "published_at": "2026-09-02T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "8870151c867c4936",
+   "primary_source": false,
+   "cluster_id": "6a0e3ce8bbededac",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "58c318fbe2fc45e7",
+   "symbols": [
+    "YSS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Atom Computing Appoints Kevin Messerle as Chief Financial Officer",
+   "summary": "BOULDER, Colo., August 31, 2026--Atom Computing appoints Kevin Messerle as Chief Financial Officer",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/atom-computing-appoints-kevin-messerle-140300447.html?.tsrc=rss",
+   "published_at": "2026-08-31T14:03:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "219611f01bf9e1c7",
+   "primary_source": false,
+   "cluster_id": "58c318fbe2fc45e7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "40393783d0b1f9de",
+   "symbols": [
+    "YSS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "York Space Systems to Present at Jefferies Global Industrials Conference",
+   "summary": "DENVER, August 27, 2026--York Space Systems (York) (NYSE: YSS), today announced that Dirk Wallinger, CEO, will present at the 2026 Jefferies Global Industrials Conference in New York. During the course of this event, York may disclose material developments affecting its business ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/york-space-systems-present-jefferies-222000321.html?.tsrc=rss",
+   "published_at": "2026-08-27T22:20:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "aadc7434ba22fb9e",
+   "primary_source": false,
+   "cluster_id": "40393783d0b1f9de",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a6c0bcf3427f923e",
+   "symbols": [
+    "YSS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "York Space Systems (YSS) Cuts Guidance While Backlog Keeps Climbing",
+   "summary": "On August 13, York Space Systems (NYSE:YSS) walked investors through a quarter that looked strong on execution but weak on near-term revenue. The satellite maker put 21 more spacecraft into orbit, closed two acquisitions, and kept winning new government work. Yet management also ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/york-space-systems-yss-cuts-193131941.html?.tsrc=rss",
+   "published_at": "2026-08-27T19:31:31Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "a945f383005a9757",
+   "primary_source": false,
+   "cluster_id": "a6c0bcf3427f923e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "12225e2522355c84",
+   "symbols": [
+    "YSS"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "YSS Stock Is Falling Despite Space Force Win — Goldman Sachs Just Slashed Its Price Target By 50%",
+   "summary": "Goldman Sachs halved its price target on YSS, as weaker 2026 guidance and supply constraints overshadow the company’s latest defense win.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/yss-stock-is-falling-despite-space-force-win-goldman-sachs-slashed-its-price-target-by-50-percent/cZYkwOaRJoB?.tsrc=rss",
+   "published_at": "2026-08-25T18:03:32Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:09Z",
+   "fingerprint": "f29625701cf71e48",
+   "primary_source": false,
+   "cluster_id": "12225e2522355c84",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

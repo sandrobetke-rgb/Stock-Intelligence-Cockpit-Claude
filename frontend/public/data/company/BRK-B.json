@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 550.469970703125,
     "day_low": 542.3200073242188,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 55.652981161296445,
+    "adx14": 43.526248753422266,
+    "ema10": 539.2061245142743,
+    "sma200": 495.74359970092775,
+    "perf_63d": 5.719681714170299,
+    "adr20_pct": 1.1693617529206837,
+    "range10_pct": 4.159095070578833,
+    "high10_prev": 549.9600219726562,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": false
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
@@ -97,7 +128,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 1.0,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": true,
@@ -139,14 +173,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 44.5,
+   "score": 41.0,
    "drivers": [
     "news_flow",
     "source_diversity",
-    "freshness"
+    "social_attention"
    ],
    "independent_7d": 16,
-   "independent_24h": 1
+   "independent_24h": 0
   },
   "political": {
    "relevance": 0,
@@ -157,10 +191,10 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 1,
+   "mentions_7d": 2,
    "manipulation_risk": "unauffällig",
-   "mentions_24h": 0,
-   "sentiment_7d": 1.0,
+   "mentions_24h": 1,
+   "sentiment_7d": 0.5,
    "bullish_7d": 0,
    "bearish_7d": 0
   },
@@ -254,7 +288,17 @@
     "green": false,
     "day_high": 550.469970703125,
     "day_low": 542.3200073242188,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 55.652981161296445,
+    "adx14": 43.526248753422266,
+    "ema10": 539.2061245142743,
+    "sma200": 495.74359970092775,
+    "perf_63d": 5.719681714170299,
+    "adr20_pct": 1.1693617529206837,
+    "range10_pct": 4.159095070578833,
+    "high10_prev": 549.9600219726562,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -284,6 +328,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": false
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
@@ -293,7 +358,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 1.0,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": true,
@@ -544,23 +612,23 @@
   ]
  },
  "intelligence_detail": {
-  "score": 44.5,
+  "score": 41.0,
   "components": {
    "news_flow": 100.0,
-   "freshness": 50,
+   "freshness": 0,
    "source_diversity": 60,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 3.5,
-   "social_attention": 25.0,
+   "social_attention": 39.6,
    "insider_activity": 50
   },
   "windows": {
    "24h": {
-    "signals": 1,
-    "independent": 1,
+    "signals": 0,
+    "independent": 0,
     "duplicates": 0,
-    "sources": 1,
+    "sources": 0,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -587,7 +655,7 @@
   "drivers": [
    "news_flow",
    "source_diversity",
-   "freshness"
+   "social_attention"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -839,8 +907,7 @@
    "cluster_id": "c3aa8d059d9659cc",
    "independence": "original",
    "verification": "Unverified",
-   "feed": "yahoo_rss",
-   "title_de": "Berkshire Hathaway (BRK.B) gewinnt Momentum, da die Bewertung immer noch im Fokus steht"
+   "feed": "yahoo_rss"
   },
   {
    "id": "1813162adb9822fa",
@@ -1907,27 +1974,40 @@
   }
  ],
  "social_detail": {
-  "mentions_24h": 0,
-  "mentions_7d": 1,
-  "mentions_30d": 1,
-  "change_vs_baseline_pct": -100,
-  "engagement_7d": 0.0,
-  "sentiment_7d": 1.0,
+  "mentions_24h": 1,
+  "mentions_7d": 2,
+  "mentions_30d": 2,
+  "change_vs_baseline_pct": 600,
+  "engagement_7d": 1.0,
+  "sentiment_7d": 0.5,
   "sentiment_basis": "algorithmisch (Lexikon)",
   "bullish_7d": 0,
   "bearish_7d": 0,
   "by_platform_7d": {
+   "stocktwits": 1,
    "reddit": 1
   },
   "communities_7d": {
+   "StockTwits": 1,
    "r/ValueInvesting": 1
   },
   "platforms": [
-   "reddit"
+   "reddit",
+   "stocktwits"
   ],
   "manipulation_flags": [],
   "manipulation_risk": "unauffällig",
   "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "Honeystocks",
+    "posted_at": "2026-10-31T14:13:03Z",
+    "url": "https://stocktwits.com/Honeystocks/message/667845740",
+    "text": "THE NOVEMBER OUTLOOK &amp; LOTS OF TRADE IDEAS. \n \nWith tech correcting going into the midterms, which stocks are setting up for a move and what are the key market levels? \n     \n$BRK.B $LTH $ULTA $BB and Druckenmiller&#39;s $PURR pick  fully assessed plus lots more for your November watchlists.  \nhttps://www.honeystocks.com/analysis",
+    "engagement": 1.0,
+    "sentiment_label": null
+   },
    {
     "platform": "reddit",
     "community": "r/ValueInvesting",

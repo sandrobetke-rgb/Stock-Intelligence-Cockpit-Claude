@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 2.0156691207550135,
    "rvol": 1.4082161361954109,
    "ema10": 64.81477608147236,
-   "ema21": 64.29128805836768,
+   "ema21": 64.29128805836763,
    "sma50": 64.0753874206543,
-   "sma200": 56.00443166732788
+   "sma200": 56.00443157196045
   },
   "market_cap": 664747328.0,
   "market_cap_currency": "USD",
@@ -34,17 +34,17 @@
    "tech": {
     "close": 65.4000015258789,
     "change_pct": -0.28967041106839897,
-    "ema20": 64.31942105117285,
-    "ema50": 63.618708617361854,
-    "ema200": 57.33423254820413,
+    "ema20": 64.3194210511728,
+    "ema50": 63.61870861689573,
+    "ema200": 57.33423256996796,
     "sma50": 64.0753874206543,
-    "rsi14": 61.20360442489212,
-    "rsi_min5": 60.065260583255295,
-    "atr14": 1.3448270686012778,
-    "atr_pct": 2.056310454471667,
+    "rsi14": 61.20360442499828,
+    "rsi_min5": 60.06526058337237,
+    "atr14": 1.3448270686012165,
+    "atr_pct": 2.056310454471573,
     "rvol": 1.4082161361954109,
     "vol30": 54493.333333333336,
-    "dist_ema200_pct": 14.067981063308777,
+    "dist_ema200_pct": 14.067981020009057,
     "dist_52w_high_pct": 3.2544334288474808,
     "high_52w": 67.5999984741211,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 66.01000213623047,
     "day_low": 64.87000274658203,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 53.90309480800925,
+    "adx14": 20.362351858580144,
+    "ema10": 64.81477608147236,
+    "sma200": 56.00443157196045,
+    "perf_63d": 2.0232529602970173,
+    "adr20_pct": 2.0156691207550135,
+    "range10_pct": 6.2469940191894,
+    "high10_prev": 66.16000366210938,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": false
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
@@ -97,7 +128,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 1.0,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.8333333333333334,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -110,9 +144,9 @@
    "plan": {
     "trigger": 66.01000213623047,
     "entry_max": 67.33020217895508,
-    "stop": 63.992761533328554,
-    "risk_per_share": 2.0172406029019143,
-    "target_1": 70.0444833420343,
+    "stop": 63.99276153332865,
+    "risk_per_share": 2.017240602901822,
+    "target_1": 70.04448334203411,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -140,11 +174,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 3.6,
+   "score": 27.2,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -195,9 +231,9 @@
   "adr20": 2.0156691207550135,
   "rvol": 1.4082161361954109,
   "ema10": 64.81477608147236,
-  "ema21": 64.29128805836768,
+  "ema21": 64.29128805836763,
   "sma50": 64.0753874206543,
-  "sma200": 56.00443166732788,
+  "sma200": 56.00443157196045,
   "volatility_ann": 14.495170383918548,
   "avg_dollar_volume_20d": 3558854.5207977295,
   "move_zscore": -0.3172349891289731,
@@ -205,17 +241,17 @@
    "tech": {
     "close": 65.4000015258789,
     "change_pct": -0.28967041106839897,
-    "ema20": 64.31942105117285,
-    "ema50": 63.618708617361854,
-    "ema200": 57.33423254820413,
+    "ema20": 64.3194210511728,
+    "ema50": 63.61870861689573,
+    "ema200": 57.33423256996796,
     "sma50": 64.0753874206543,
-    "rsi14": 61.20360442489212,
-    "rsi_min5": 60.065260583255295,
-    "atr14": 1.3448270686012778,
-    "atr_pct": 2.056310454471667,
+    "rsi14": 61.20360442499828,
+    "rsi_min5": 60.06526058337237,
+    "atr14": 1.3448270686012165,
+    "atr_pct": 2.056310454471573,
     "rvol": 1.4082161361954109,
     "vol30": 54493.333333333336,
-    "dist_ema200_pct": 14.067981063308777,
+    "dist_ema200_pct": 14.067981020009057,
     "dist_52w_high_pct": 3.2544334288474808,
     "high_52w": 67.5999984741211,
     "macd_above_signal": true,
@@ -229,7 +265,17 @@
     "green": false,
     "day_high": 66.01000213623047,
     "day_low": 64.87000274658203,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 53.90309480800925,
+    "adx14": 20.362351858580144,
+    "ema10": 64.81477608147236,
+    "sma200": 56.00443157196045,
+    "perf_63d": 2.0232529602970173,
+    "adr20_pct": 2.0156691207550135,
+    "range10_pct": 6.2469940191894,
+    "high10_prev": 66.16000366210938,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -259,6 +305,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": false
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
@@ -268,7 +335,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 1.0,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.8333333333333334,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -281,9 +351,9 @@
    "plan": {
     "trigger": 66.01000213623047,
     "entry_max": 67.33020217895508,
-    "stop": 63.992761533328554,
-    "risk_per_share": 2.0172406029019143,
-    "target_1": 70.0444833420343,
+    "stop": 63.99276153332865,
+    "risk_per_share": 2.017240602901822,
+    "target_1": 70.04448334203411,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -520,11 +590,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 3.6,
+  "score": 27.2,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 20.4,
@@ -542,26 +612,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 5,
+    "independent": 5,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -579,7 +651,384 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "990228db1cf1f6a7",
+   "symbols": [
+    "ACNB",
+    "AMT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is American Tower (AMT) Stock Outpacing Its Finance Peers This Year?",
+   "summary": "Here is how American Tower (AMT) and ACNB (ACNB) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/american-tower-amt-stock-outpacing-124002547.html?.tsrc=rss",
+   "published_at": "2026-10-29T12:40:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:07Z",
+   "fingerprint": "3de0ce0ca89a9fd8",
+   "primary_source": false,
+   "cluster_id": "990228db1cf1f6a7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "54e23f51cec829a8",
+   "symbols": [
+    "ACNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACNB Corporation Announces Fourth Quarter of 2026 Regular and Special Cash Dividends",
+   "summary": "GETTYSBURG, Pa., Oct. 28, 2026 (GLOBE NEWSWIRE) -- ACNB Corporation (NASDAQ: ACNB), financial holding company for ACNB Bank and ACNB Insurance Services, Inc., announced today that the Board of Directors has declared both a regular quarterly cash dividend of $0.46 per share and a ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acnb-corporation-announces-fourth-quarter-130000547.html?.tsrc=rss",
+   "published_at": "2026-10-28T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "d881aab8a3b97294",
+   "primary_source": false,
+   "cluster_id": "54e23f51cec829a8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "40a431c7054866cf",
+   "symbols": [
+    "ACNB",
+    "HAPN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACNB (ACNB) Q3 Earnings and Revenues Top Estimates",
+   "summary": "ACNB (ACNB) delivered earnings and revenue surprises of +4.73% and +1.59%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acnb-acnb-q3-earnings-revenues-121502064.html?.tsrc=rss",
+   "published_at": "2026-10-22T12:15:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:10:00Z",
+   "fingerprint": "adbe80d32b0a80ad",
+   "primary_source": false,
+   "cluster_id": "40a431c7054866cf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "27c051325dd16cdc",
+   "symbols": [
+    "ACNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACNB: Q3 Earnings Snapshot",
+   "summary": "(ACNB) on Thursday reported third-quarter net income of $15.The bank, based in Gettysburg, Pennsylvania, said it had earnings of $1.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acnb-q3-earnings-snapshot-121221189.html?.tsrc=rss",
+   "published_at": "2026-10-22T12:12:21Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "65332a7b92291dd1",
+   "primary_source": false,
+   "cluster_id": "27c051325dd16cdc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "16e3ff811e871798",
+   "symbols": [
+    "ACNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Why ACNB (ACNB) is a Great Dividend Stock Right Now",
+   "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does ACNB (ACNB) have what it takes? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-acnb-acnb-great-dividend-144503218.html?.tsrc=rss",
+   "published_at": "2026-10-16T14:45:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "6dbf21baf8302ad7",
+   "primary_source": false,
+   "cluster_id": "16e3ff811e871798",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "361b389ed28ba2cd",
+   "symbols": [
+    "ACNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Why ACNB (ACNB) is a Top Dividend Stock for Your Portfolio",
+   "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does ACNB (ACNB) have what it takes? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-acnb-acnb-top-dividend-144503854.html?.tsrc=rss",
+   "published_at": "2026-09-30T14:45:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "f090ac857d99890d",
+   "primary_source": false,
+   "cluster_id": "361b389ed28ba2cd",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b82dfa2dab527a4b",
+   "symbols": [
+    "ACNB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Has ACNB (ACNB) Outpaced Other Finance Stocks This Year?",
+   "summary": "Here is how ACNB (ACNB) and Interactive Brokers Group, Inc. (IBKR) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acnb-acnb-outpaced-other-finance-134003053.html?.tsrc=rss",
+   "published_at": "2026-09-21T13:40:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "f14527ca51d10c3f",
+   "primary_source": false,
+   "cluster_id": "b82dfa2dab527a4b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bd517d25690d29a2",
+   "symbols": [
+    "ACNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACNB (ACNB) is a Top Dividend Stock Right Now: Should You Buy?",
+   "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does ACNB (ACNB) have what it takes? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acnb-acnb-top-dividend-stock-154503902.html?.tsrc=rss",
+   "published_at": "2026-09-14T15:45:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "13df3ec5dee0b71d",
+   "primary_source": false,
+   "cluster_id": "bd517d25690d29a2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dd164abbbda6a1de",
+   "symbols": [
+    "ACNB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Brookfield Infrastructure Partners (BIP) Outperforming Other Finance Stocks This Year?",
+   "summary": "Here is how Brookfield Infrastructure Partners (BIP) and ACNB (ACNB) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/brookfield-infrastructure-partners-bip-outperforming-134003299.html?.tsrc=rss",
+   "published_at": "2026-08-31T13:40:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "741c441b989e0d05",
+   "primary_source": false,
+   "cluster_id": "dd164abbbda6a1de",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5cf998eea0c21c3d",
+   "symbols": [
+    "ACNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "This is Why  ACNB (ACNB) is a Great Dividend Stock",
+   "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does ACNB (ACNB) have what it takes? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-acnb-acnb-great-dividend-154502065.html?.tsrc=rss",
+   "published_at": "2026-08-28T15:45:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "6988ae8b71265df1",
+   "primary_source": false,
+   "cluster_id": "5cf998eea0c21c3d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "276f381a8bb10d18",
+   "symbols": [
+    "ACNB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Prologis (PLD) Stock Outpacing Its Finance Peers This Year?",
+   "summary": "Here is how Prologis (PLD) and ACNB (ACNB) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/prologis-pld-stock-outpacing-finance-134003158.html?.tsrc=rss",
+   "published_at": "2026-08-13T13:40:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "ac7d0f4fe06b5c9d",
+   "primary_source": false,
+   "cluster_id": "276f381a8bb10d18",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ce2d9aea003e4d8c",
+   "symbols": [
+    "ACNB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACNB (ACNB) Could Be a Great Choice",
+   "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does ACNB (ACNB) have what it takes? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acnb-acnb-could-great-choice-154503997.html?.tsrc=rss",
+   "published_at": "2026-08-12T15:45:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "073531e40e6434b6",
+   "primary_source": false,
+   "cluster_id": "ce2d9aea003e4d8c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dd6ce96b05440233",
+   "symbols": [
+    "ACNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACNB Corporation Announces Third Quarter of 2026 Cash Dividend",
+   "summary": "GETTYSBURG, Pa., July 29, 2026 (GLOBE NEWSWIRE) -- ACNB Corporation (NASDAQ: ACNB), financial holding company for ACNB Bank and ACNB Insurance Services, Inc., announced today that the Board of Directors has approved and declared a regular quarterly cash dividend of $0.42 per shar",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acnb-corporation-announces-third-quarter-125000439.html?.tsrc=rss",
+   "published_at": "2026-07-29T12:50:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "9e820408c98e9297",
+   "primary_source": false,
+   "cluster_id": "dd6ce96b05440233",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a1ccf3877887b845",
+   "symbols": [
+    "ACNB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is ACNB (ACNB) Outperforming Other Finance Stocks This Year?",
+   "summary": "Here is how ACNB (ACNB) and Amalgamated Financial (AMAL) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acnb-acnb-outperforming-other-finance-134003828.html?.tsrc=rss",
+   "published_at": "2026-07-28T13:40:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "650d4e4a58ef6e5d",
+   "primary_source": false,
+   "cluster_id": "a1ccf3877887b845",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6ecf51fe094d9ee2",
+   "symbols": [
+    "ACNB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACNB Corporation (ACNB) Hit a 52 Week High, Can the Run Continue?",
+   "summary": "ACNB (ACNB) is at a 52-week high, but can investors hope for more gains in the future? We take a look at the company's fundamentals for clues.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acnb-corporation-acnb-hit-52-131504163.html?.tsrc=rss",
+   "published_at": "2026-07-28T13:15:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "151b236e263c6af8",
+   "primary_source": false,
+   "cluster_id": "6ecf51fe094d9ee2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5d725b8353d7c4b9",
+   "symbols": [
+    "ACNB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are Options Traders Betting on a Big Move in ACNB Stock?",
+   "summary": "Investors need to pay close attention to ACNB stock based on the movements in the options market lately.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/options-traders-betting-big-move-130000250.html?.tsrc=rss",
+   "published_at": "2026-07-28T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "b1131204304c32ff",
+   "primary_source": false,
+   "cluster_id": "5d725b8353d7c4b9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "020a364474f89318",
+   "symbols": [
+    "ACNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Are You Looking for a High-Growth Dividend Stock?",
+   "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does ACNB (ACNB) have what it takes? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/looking-high-growth-dividend-stock-154504932.html?.tsrc=rss",
+   "published_at": "2026-07-27T15:45:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "85a7524e6e3e9aa7",
+   "primary_source": false,
+   "cluster_id": "020a364474f89318",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

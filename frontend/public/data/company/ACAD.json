@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 21.010000228881836,
     "day_low": 20.489999771118164,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 62.50013366278756,
+    "adx14": 40.263241785525665,
+    "ema10": 20.23465113421061,
+    "sma200": 23.681049995422363,
+    "perf_63d": -19.601719399157634,
+    "adr20_pct": 2.9640640040970307,
+    "range10_pct": 10.651818930257463,
+    "high10_prev": 20.8799991607666,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -137,12 +171,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.0,
+   "score": 29.2,
    "drivers": [
-    "price_volume_anomaly",
-    "insider_activity"
+    "news_flow",
+    "source_diversity",
+    "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 3,
    "independent_24h": 0
   },
   "political": {
@@ -241,7 +276,17 @@
     "green": false,
     "day_high": 21.010000228881836,
     "day_low": 20.489999771118164,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 62.50013366278756,
+    "adx14": 40.263241785525665,
+    "ema10": 20.23465113421061,
+    "sma200": 23.681049995422363,
+    "perf_63d": -19.601719399157634,
+    "adr20_pct": 2.9640640040970307,
+    "range10_pct": 10.651818930257463,
+    "high10_prev": 20.8799991607666,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -271,6 +316,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -278,7 +344,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -615,11 +684,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.0,
+  "score": 29.2,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 86.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 8.4,
@@ -637,27 +706,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 9,
+    "independent": 9,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly",
-   "insider_activity"
+   "news_flow",
+   "source_diversity",
+   "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -675,7 +745,455 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "40897a15866dfa99",
+   "symbols": [
+    "ACAD",
+    "RGNX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Regenxbio (RGNX) Expected to Beat Earnings Estimates: Should You Buy?",
+   "summary": "Regenxbio (RGNX) possesses the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/regenxbio-rgnx-expected-beat-earnings-130005452.html?.tsrc=rss",
+   "published_at": "2026-10-29T13:00:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:25Z",
+   "fingerprint": "9d599f01c783f4e5",
+   "primary_source": false,
+   "cluster_id": "40897a15866dfa99",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8fdc2277af9374a3",
+   "symbols": [
+    "ACAD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Acadia Pharmaceuticals to Participate in the UBS Global Biopharma Conference 2026",
+   "summary": "SAN DIEGO, October 28, 2026--Acadia Pharmaceuticals Inc. (Nasdaq: ACAD) today announced that it will participate in a fireside chat at the UBS Global Biopharma Conference 2026 on Tuesday, November 17, 2026 at 12:40 p.m. Greenwich Mean Time.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/acadia-pharmaceuticals-participate-ubs-global-200500866.html?.tsrc=rss",
+   "published_at": "2026-10-28T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "607b931f8fe9d42b",
+   "primary_source": false,
+   "cluster_id": "8fdc2277af9374a3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ff17fd5170caf0c4",
+   "symbols": [
+    "ACAD",
+    "IDYA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Earnings Preview: Acadia Pharmaceuticals (ACAD) Q3 Earnings Expected to Decline",
+   "summary": "Acadia (ACAD) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/earnings-preview-acadia-pharmaceuticals-acad-130024116.html?.tsrc=rss",
+   "published_at": "2026-10-28T13:00:24Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:10:55Z",
+   "fingerprint": "b1d3f4f7eac7e71e",
+   "primary_source": false,
+   "cluster_id": "ff17fd5170caf0c4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bbb02aa7abb511d5",
+   "symbols": [
+    "ACAD"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acadia Pharmaceuticals to Announce Third Quarter 2026 Financial Results on November 4, 2026",
+   "summary": "SAN DIEGO, October 21, 2026--Acadia Pharmaceuticals Inc. (Nasdaq: ACAD) today announced that it will report third quarter 2026 financial results on Wednesday, November 4, 2026, after the close of the U.S. financial markets. Acadia’s management team will also host a conference cal",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/acadia-pharmaceuticals-announce-third-quarter-200500242.html?.tsrc=rss",
+   "published_at": "2026-10-21T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "8812b7077411d1b2",
+   "primary_source": false,
+   "cluster_id": "bbb02aa7abb511d5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "76a9947d6860849c",
+   "symbols": [
+    "ACAD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Will Auvelity Continue to Aid Axsome's Top-Line Growth in Q3?",
+   "summary": "AXSM's Auvelity sales surged 54.2% to $333 million in the first half of 2026. New indications could further expand its growth potential.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/auvelity-continue-aid-axsomes-top-140000851.html?.tsrc=rss",
+   "published_at": "2026-10-21T14:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "74dcafdf39fb4733",
+   "primary_source": false,
+   "cluster_id": "76a9947d6860849c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ec76458c488f5e30",
+   "symbols": [
+    "ACAD",
+    "SNDX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Top Midday Decliners",
+   "summary": "UBS downgraded Acadia Pharmaceuticals' (ACAD) shares one notch to neutral and set a $23 price target",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/top-midday-decliners-180129580.html?.tsrc=rss",
+   "published_at": "2026-10-13T18:01:29Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:49Z",
+   "fingerprint": "bf4e29035b568c58",
+   "primary_source": false,
+   "cluster_id": "ec76458c488f5e30",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b2eb6e35463931fc",
+   "symbols": [
+    "ACAD",
+    "NGNE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can Nuplazid and Daybue Strengthen Acadia's Growth Prospects?",
+   "summary": "ACAD's Nuplazid and Daybue drive revenue growth, with rising demand, new formulations and European expansion offering opportunities amid growing competition.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/nuplazid-daybue-strengthen-acadias-growth-130100059.html?.tsrc=rss",
+   "published_at": "2026-10-13T13:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:17Z",
+   "fingerprint": "a6ca6ba559ebb5ec",
+   "primary_source": false,
+   "cluster_id": "b2eb6e35463931fc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "53a40e44893dda33",
+   "symbols": [
+    "ACAD",
+    "ALKS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "4 CNS Drug Stocks Worth Watching This World Mental Health Day",
+   "summary": "AXSM, NBIX, ALKS and ACAD are advancing CNS treatments for mental health disorders, with growing product sales, pipeline progress and new growth opportunities.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/4-cns-drug-stocks-worth-132800942.html?.tsrc=rss",
+   "published_at": "2026-10-09T13:28:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:26:44Z",
+   "fingerprint": "b3499dddc19ae022",
+   "primary_source": false,
+   "cluster_id": "53a40e44893dda33",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "098a3bda86c654ca",
+   "symbols": [
+    "ACAD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Acadia Pharmaceuticals (ACAD) Secures Patent And Phase 2 Progress, Is It 38% Below Fair Value?",
+   "summary": "Acadia Pharmaceuticals (ACAD) just stacked two key clinical milestones: a fresh USPTO Notice of Allowance extending potential trofinetide protection to 2041 and Phase 2 RADIANT data guiding remlifanserin into Phase 3 for Alzheimer’s disease psychosis. Despite the fresh patent pro",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/acadia-pharmaceuticals-acad-secures-patent-010733761.html?.tsrc=rss",
+   "published_at": "2026-10-06T01:07:33Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "0349a34c5ea2ff13",
+   "primary_source": false,
+   "cluster_id": "098a3bda86c654ca",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "131e4258ec85def0",
+   "symbols": [
+    "ACAD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Acadia's Daybue Patent Allowance Extends U.S. Protection to March 2041",
+   "summary": "ACAD gains a potential patent extension for Daybue to 2041, while strong sales growth and EU approval expand trofinetide's reach.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/acadias-daybue-patent-allowance-extends-130600358.html?.tsrc=rss",
+   "published_at": "2026-09-29T13:06:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "76d8cbb54a2d2d1a",
+   "primary_source": false,
+   "cluster_id": "131e4258ec85def0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "817c696b2c0f19be",
+   "symbols": [
+    "ACAD"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acadia Pharmaceuticals Announces Allowance of U.S. Patent Covering Weight-Banded Dosing of Trofinetide, extending U.S. patent protections to March 2041",
+   "summary": "SAN DIEGO, September 28, 2026--Acadia Pharmaceuticals Inc. (Nasdaq: ACAD) today announced that the United States Patent and Trademark Office (USPTO) has issued a Notice of Allowance for U.S. Patent Application No. 17/590,496, titled \"Methods and Compositions for Treatment of Rett",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/acadia-pharmaceuticals-announces-allowance-u-200500035.html?.tsrc=rss",
+   "published_at": "2026-09-28T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "c00fae3817eec62b",
+   "primary_source": false,
+   "cluster_id": "817c696b2c0f19be",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8dbf84cf53984aba",
+   "symbols": [
+    "ACAD",
+    "AMTX",
+    "REZI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Stocks Put Traders Are Targeting Today: AMTX, ACAD, REZI",
+   "summary": "AMTX, ACAD, and REZI are drawing attention from options bears",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/options/articles/3-stocks-put-traders-targeting-153025126.html?.tsrc=rss",
+   "published_at": "2026-09-28T15:30:25Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:07Z",
+   "fingerprint": "8f9cd1747de6d4a9",
+   "primary_source": false,
+   "cluster_id": "8dbf84cf53984aba",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "66bb8947319461eb",
+   "symbols": [
+    "ACAD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Acadia Pharmaceuticals (ACAD) Stock Trades At A Discount After A 29% Drop",
+   "summary": "Acadia Pharmaceuticals has seen its share price fall sharply over the past month, and that pullback is pushing investors to ask whether the current valuation still lines up with what the business is earning today. With the stock under pressure and expectations around its drug pip",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acadia-pharmaceuticals-acad-stock-trades-070907504.html?.tsrc=rss",
+   "published_at": "2026-09-27T07:09:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "9c29545b42f61c43",
+   "primary_source": false,
+   "cluster_id": "66bb8947319461eb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "96ab6cbc85db945a",
+   "symbols": [
+    "ACAD"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "ACAD Stock Tumbles Today: Analysts Weigh RADIANT Results, Cut Price Targets",
+   "summary": "Acadia's latest trial update has put the spotlight on remlifanserin's development path, prompting analysts to reassess its near-term prospects and valuation.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/acad-stock-tumbles-today-analysts-weigh-radiant-results-cut-price-targets/cZMOQm1RBO4?.tsrc=rss",
+   "published_at": "2026-09-25T15:22:44Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "84a7c9a8b33833a7",
+   "primary_source": false,
+   "cluster_id": "96ab6cbc85db945a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f2b7d7a35075ba99",
+   "symbols": [
+    "ACAD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACAD Stock Down 13% as Phase II Alzheimer's Study Misses Primary Goal",
+   "summary": "Acadia stock falls 13% after its Alzheimer's psychosis study narrowly misses its primary goal, though 60 mg results support continued phase III development.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/acad-stock-down-13-phase-150200430.html?.tsrc=rss",
+   "published_at": "2026-09-25T15:02:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "1d9497d55c98dec8",
+   "primary_source": false,
+   "cluster_id": "f2b7d7a35075ba99",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d7fe1f90c11a5322",
+   "symbols": [
+    "ACAD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Acadia chugs on with Alzheimer’s psychosis programme despite Phase II miss",
+   "summary": "Acadia hopes to become one of the first companies to secure approval for a therapy specifically indicated for ADP.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "clinicaltrialsarena.com",
+   "url": "https://www.clinicaltrialsarena.com/news/acadia-alzheimers-psychosis-phase-ii-results/?.tsrc=rss",
+   "published_at": "2026-09-25T15:01:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "e9359f8986051191",
+   "primary_source": false,
+   "cluster_id": "d7fe1f90c11a5322",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b2dc0c838923db05",
+   "symbols": [
+    "ACAD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Novo pursues long-acting obesity drugs; Acadia slumps on Alzheimer’s data",
+   "summary": "Novo’s latest alliance involves injectables given every one to three months. Elsewhere, Nektar won a legal spat with Eli Lilly and the FDA issued two approvals.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "biopharmadive.com",
+   "url": "https://www.biopharmadive.com/news/novo-nanexa-acadia-remlifanserin-nektar-lilly-onswik-welireg/831346/?.tsrc=rss",
+   "published_at": "2026-09-25T13:21:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "06f93fd5b12803e1",
+   "primary_source": false,
+   "cluster_id": "b2dc0c838923db05",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "286d691a64c70e57",
+   "symbols": [
+    "ACAD"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "ACADIA Pharmaceuticals (ACAD) Gets ‘Sell’ Rating on Weak Trial Results, Shares Fall 13%",
+   "summary": "ACADIA Pharmaceuticals (NASDAQ:ACAD) fell for a fifth consecutive day on Thursday, shedding 12.78 percent to close at $22.18 apiece, after earning a sell recommendation from Goldman Sachs. In its market note, the investment firm reiterated its sell recommendation and $17 price ta",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/acadia-pharmaceuticals-acad-gets-sell-032657090.html?.tsrc=rss",
+   "published_at": "2026-09-25T03:26:57Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "93957f9d206cdd19",
+   "primary_source": false,
+   "cluster_id": "286d691a64c70e57",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d253594d32883394",
+   "symbols": [
+    "ACAD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Acadia Pharmaceuticals Fell 19% Today. Here’s Where the Stock Could Go in 2026",
+   "summary": "Key Stats for Acadia Pharmaceuticals StockToday’s Performance: -19%52-Week Range: $20 to $31Valuation Model Target Price: $34Implied Upside: 54%What Happened?Acadia Pharmaceuticals stock (NASDAQ: ACAD) is facing a major test over whether remlifanserin still has a credible path fo",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/acadia-pharmaceuticals-fell-19-today-heres-where-the-stock-could-go-in-2026?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-09-24T22:41:55Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "749cffbd976da178",
+   "primary_source": false,
+   "cluster_id": "d253594d32883394",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "32095641342f839c",
+   "symbols": [
+    "ACAD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACAD Stock Clocks Worst Day In 2 Years After Alzheimer’s Psychosis Drug Misses Main Goal — Citi Cuts Drug’s Success Odds To 20%",
+   "summary": "Citi’s Yigal Nochomovitz trimmed his price target to $33 from $40 and kept a Buy rating following the company’s update.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/acad-stock-clocks-worst-day-in-2-years-after-alzheimer-s-psychosis-drug-misses-main-goal-citi-cuts-drug-s-success-odds-to-20/cZMJhsCRB9z?.tsrc=rss",
+   "published_at": "2026-09-24T21:51:44Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "df9f487ec830c610",
+   "primary_source": false,
+   "cluster_id": "32095641342f839c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "31267afa3b4ed4bd",

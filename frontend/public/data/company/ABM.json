@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,7 +24,7 @@
    "adr20": 1.975409696271392,
    "rvol": 1.4241834188081068,
    "ema10": 52.974876158742944,
-   "ema21": 51.83678827063843,
+   "ema21": 51.83678827054572,
    "sma50": 49.53864532470703,
    "sma200": 44.36702350616455
   },
@@ -34,17 +34,17 @@
    "tech": {
     "close": 53.47999954223633,
     "change_pct": -0.8344163923475145,
-    "ema20": 51.92402878691887,
-    "ema50": 50.0209584265375,
-    "ema200": 46.128790742820335,
+    "ema20": 51.924028786859864,
+    "ema50": 50.02095841486936,
+    "ema200": 46.12879079837414,
     "sma50": 49.53864532470703,
-    "rsi14": 67.02242956224478,
-    "rsi_min5": 67.02242956224478,
-    "atr14": 1.0696523226739396,
-    "atr_pct": 2.0000978530846316,
+    "rsi14": 67.02242961175443,
+    "rsi_min5": 67.02242961175443,
+    "atr14": 1.069652322261751,
+    "atr_pct": 2.0000978523138975,
     "rvol": 1.4241834188081068,
     "vol30": 388320.0,
-    "dist_ema200_pct": 15.936270344481485,
+    "dist_ema200_pct": 15.93627020485715,
     "dist_52w_high_pct": 2.533259370706331,
     "high_52w": 54.869998931884766,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 54.869998931884766,
     "day_low": 53.2400016784668,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 39.010684760894975,
+    "adx14": 34.44962082516517,
+    "ema10": 52.974876158742944,
+    "sma200": 44.36702350616455,
+    "perf_63d": 10.39063013661956,
+    "adr20_pct": 1.975409696271392,
+    "range10_pct": 7.934305993059887,
+    "high10_prev": 54.54999923706055,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": false
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
@@ -97,7 +128,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 1.0,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -110,9 +144,9 @@
    "plan": {
     "trigger": 54.869998931884766,
     "entry_max": 55.96739891052246,
-    "stop": 53.265520447873854,
-    "risk_per_share": 1.6044784840109116,
-    "target_1": 58.07895589990659,
+    "stop": 53.26552044849214,
+    "risk_per_share": 1.6044784833926258,
+    "target_1": 58.07895589867002,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -141,11 +175,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 3.7,
+   "score": 30.8,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -196,7 +232,7 @@
   "adr20": 1.975409696271392,
   "rvol": 1.4241834188081068,
   "ema10": 52.974876158742944,
-  "ema21": 51.83678827063843,
+  "ema21": 51.83678827054572,
   "sma50": 49.53864532470703,
   "sma200": 44.36702350616455,
   "volatility_ann": 22.269927706090844,
@@ -206,17 +242,17 @@
    "tech": {
     "close": 53.47999954223633,
     "change_pct": -0.8344163923475145,
-    "ema20": 51.92402878691887,
-    "ema50": 50.0209584265375,
-    "ema200": 46.128790742820335,
+    "ema20": 51.924028786859864,
+    "ema50": 50.02095841486936,
+    "ema200": 46.12879079837414,
     "sma50": 49.53864532470703,
-    "rsi14": 67.02242956224478,
-    "rsi_min5": 67.02242956224478,
-    "atr14": 1.0696523226739396,
-    "atr_pct": 2.0000978530846316,
+    "rsi14": 67.02242961175443,
+    "rsi_min5": 67.02242961175443,
+    "atr14": 1.069652322261751,
+    "atr_pct": 2.0000978523138975,
     "rvol": 1.4241834188081068,
     "vol30": 388320.0,
-    "dist_ema200_pct": 15.936270344481485,
+    "dist_ema200_pct": 15.93627020485715,
     "dist_52w_high_pct": 2.533259370706331,
     "high_52w": 54.869998931884766,
     "macd_above_signal": true,
@@ -230,7 +266,17 @@
     "green": false,
     "day_high": 54.869998931884766,
     "day_low": 53.2400016784668,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 39.010684760894975,
+    "adx14": 34.44962082516517,
+    "ema10": 52.974876158742944,
+    "sma200": 44.36702350616455,
+    "perf_63d": 10.39063013661956,
+    "adr20_pct": 1.975409696271392,
+    "range10_pct": 7.934305993059887,
+    "high10_prev": 54.54999923706055,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -260,6 +306,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": false
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
@@ -269,7 +336,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 1.0,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -282,9 +352,9 @@
    "plan": {
     "trigger": 54.869998931884766,
     "entry_max": 55.96739891052246,
-    "stop": 53.265520447873854,
-    "risk_per_share": 1.6044784840109116,
-    "target_1": 58.07895589990659,
+    "stop": 53.26552044849214,
+    "risk_per_share": 1.6044784833926258,
+    "target_1": 58.07895589867002,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -608,11 +678,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 3.7,
+  "score": 30.8,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 21.2,
@@ -630,25 +700,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 15,
+    "independent": 15,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -667,7 +739,440 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "973420e2f3d09b19",
+   "symbols": [
+    "ABM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ABM Announces Executive Leadership Changes",
+   "summary": "Rene Jacobsen to Retire as Chief Operating Officer After 14 Years of Service to ABMRichard Sykes named President, Facility SolutionsMark Hawkinson named President, Engineering & Infrastructure Solutions NEW YORK, Oct. 28, 2026 (GLOBE NEWSWIRE) -- ABM (NYSE: ABM), a leading provid",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/abm-announces-executive-leadership-changes-200500324.html?.tsrc=rss",
+   "published_at": "2026-10-28T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:25Z",
+   "fingerprint": "43d15786ebf08c71",
+   "primary_source": false,
+   "cluster_id": "973420e2f3d09b19",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f6b1c2d6cb33637a",
+   "symbols": [
+    "ABM",
+    "CTAS",
+    "ECL",
+    "ROL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Rollins Stock About To Rebound?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/rol/articles/620467/is-rollins-stock-about-to-rebound/2026-10-26?.tsrc=rss",
+   "published_at": "2026-10-26T22:20:33Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:55Z",
+   "fingerprint": "d87e65b79029ec43",
+   "primary_source": false,
+   "cluster_id": "f6b1c2d6cb33637a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dee42f5c749d2a92",
+   "symbols": [
+    "ABM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How Investors May Respond To ABM Industries (ABM) UK Public Sector Framework Win",
+   "summary": "ABM Industries has been appointed to two lots on the UK Government Commercial Agency’s Facilities Management and Security Services framework, giving public sector bodies simplified access to its hard FM and security officer services across departments, healthcare, education, and ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/investors-may-respond-abm-industries-231305899.html?.tsrc=rss",
+   "published_at": "2026-10-23T23:13:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:25Z",
+   "fingerprint": "d8ed10792a928c78",
+   "primary_source": false,
+   "cluster_id": "dee42f5c749d2a92",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0019c225eba6dfaf",
+   "symbols": [
+    "ABM",
+    "AMN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Strength Seen in AMN Healthcare (AMN): Can Its 8.9% Jump Turn into More Strength?",
+   "summary": "AMN Healthcare (AMN) witnessed a jump in share price last session on above-average trading volume. The latest trend in earnings estimate revisions for the stock doesn't suggest further strength down the road.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/strength-seen-amn-healthcare-amn-103500368.html?.tsrc=rss",
+   "published_at": "2026-10-23T10:35:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:00Z",
+   "fingerprint": "83e6d5e8f2ddec76",
+   "primary_source": false,
+   "cluster_id": "0019c225eba6dfaf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1e79595762882420",
+   "symbols": [
+    "ABM",
+    "CTAS",
+    "UNF",
+    "VSTS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Could Cintas Stock Survive Slower Growth?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/619956/could-cintas-stock-survive-slower-growth/2026-10-22?.tsrc=rss",
+   "published_at": "2026-10-22T13:26:28Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:55Z",
+   "fingerprint": "abe780f411ac3608",
+   "primary_source": false,
+   "cluster_id": "1e79595762882420",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f9881b48374adeee",
+   "symbols": [
+    "ABM",
+    "UNF",
+    "VSTS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What Could Stall Cintas Stock's Run?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/619652/what-could-stall-cintas-stocks-run/2026-10-21?.tsrc=rss",
+   "published_at": "2026-10-21T15:21:24Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:45:43Z",
+   "fingerprint": "2523018c39054147",
+   "primary_source": false,
+   "cluster_id": "f9881b48374adeee",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "98f2a8af352303f3",
+   "symbols": [
+    "ABM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ABM and Buffalo Bills Team Up for a New Era at Highmark Stadium",
+   "summary": "Partnership built over the past two seasons moves into a new chapter at the Bills’ new home in Orchard Park NEW YORK, Oct. 20, 2026 (GLOBE NEWSWIRE) -- With the NFL season in full swing and more than 60,000 fans packing the new Highmark Stadium on game day, ABM (NYSE: ABM), a lea",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/abm-buffalo-bills-team-era-120000876.html?.tsrc=rss",
+   "published_at": "2026-10-20T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:25Z",
+   "fingerprint": "7c92f182d611ae91",
+   "primary_source": false,
+   "cluster_id": "98f2a8af352303f3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9cacd6e95224d3bf",
+   "symbols": [
+    "ABM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Equifax Q3 Earnings Beat Estimates, Revenues Increase Y/Y",
+   "summary": "EFX tops Q3 earnings estimates as revenues rise 9.6%, driven by USIS and international growth, but mortgage weakness prompts a cut in its 2026 outlook.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/equifax-q3-earnings-beat-estimates-115700878.html?.tsrc=rss",
+   "published_at": "2026-10-20T11:57:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:25Z",
+   "fingerprint": "9a3e8e943a957d4a",
+   "primary_source": false,
+   "cluster_id": "9cacd6e95224d3bf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "34fc9c7e4a223310",
+   "symbols": [
+    "ABM",
+    "CNXC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Here's Why You Should Hold ABM Stock in Your Portfolio Now",
+   "summary": "ABM's 28.2% stock rally, strong infrastructure growth, WGNSTAR acquisition and improved cash flow support its outlook despite debt and macroeconomic risks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/heres-why-hold-abm-stock-153900522.html?.tsrc=rss",
+   "published_at": "2026-10-13T15:39:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:59Z",
+   "fingerprint": "e1dd0460565adc66",
+   "primary_source": false,
+   "cluster_id": "34fc9c7e4a223310",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "62d4f61bba0effa2",
+   "symbols": [
+    "ABM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ABM Extends Partnership with SoFi Stadium and YouTube Theater Ahead of Upcoming Marquee Global Events",
+   "summary": "Longstanding relationship continues as ABM helps power extraordinary fan and guest experiences at one of the nation's premier sports and entertainment destinationsNEW YORK, Oct. 13, 2026 (GLOBE NEWSWIRE) -- ABM (NYSE: ABM), a leading provider of facility, engineering, and infrast",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/abm-extends-partnership-sofi-stadium-120000660.html?.tsrc=rss",
+   "published_at": "2026-10-13T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:25Z",
+   "fingerprint": "b13d43181a121e70",
+   "primary_source": false,
+   "cluster_id": "62d4f61bba0effa2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7a079a0c614bee7b",
+   "symbols": [
+    "ABM",
+    "CNXC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zacks Industry Outlook Highlights Concentrix, Sodexo and ABM Industries",
+   "summary": "Concentrix, Sodexo and ABM Industries navigate business services headwinds with AI adoption, resilient outsourcing demand and expanding infrastructure opportunities.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-industry-outlook-highlights-concentrix-095000655.html?.tsrc=rss",
+   "published_at": "2026-10-13T09:50:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:59Z",
+   "fingerprint": "d937039a13a313ea",
+   "primary_source": false,
+   "cluster_id": "7a079a0c614bee7b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e5d87af4cd37ee6e",
+   "symbols": [
+    "ABM",
+    "CNXC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Business Services Stocks to Consider Amid Industry Woes",
+   "summary": "Labor cost pressures and operational challenges persist, but AI adoption, resilient outsourcing demand and improving execution position CNXC, SDXAY and ABM for growth.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-business-services-stocks-consider-174900259.html?.tsrc=rss",
+   "published_at": "2026-10-12T17:49:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:59Z",
+   "fingerprint": "364b6af29a786297",
+   "primary_source": false,
+   "cluster_id": "e5d87af4cd37ee6e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8992c11f1261b6da",
+   "symbols": [
+    "ABM",
+    "ACHC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Stocks Under $50 Walking a Fine Line",
+   "summary": "Stocks in the $10-50 range offer a sweet spot between affordability and stability as they’re typically more established than penny stocks. But their headline prices don’t guarantee quality, and investors should exercise caution as some have shaky business models.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-stocks-under-50-walking-155103558.html?.tsrc=rss",
+   "published_at": "2026-10-12T15:51:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:25Z",
+   "fingerprint": "d3c70a8b37d59268",
+   "primary_source": false,
+   "cluster_id": "8992c11f1261b6da",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dbc229a667e83af6",
+   "symbols": [
+    "ABM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ABM Industries: A Boring Dividend Stock with an Interesting Valuation",
+   "summary": "ABM Industries Incorporated (NYSE:ABM) isn’t the kind of stock that makes headlines, but for income-focused investors, it deserves a closer look. The company’s bread-and-butter is facility services, including janitorial, engineering, and parking contracts for businesses and airpo",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/abm-industries-boring-dividend-stock-124417882.html?.tsrc=rss",
+   "published_at": "2026-10-11T12:44:17Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:25Z",
+   "fingerprint": "bc80a3414210d638",
+   "primary_source": false,
+   "cluster_id": "dbc229a667e83af6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c68a9fe8c35361ba",
+   "symbols": [
+    "ABM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ABM Industries (ABM) Down 2% Since Last Earnings Report: Can It Rebound?",
+   "summary": "ABM Industries (ABM) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/abm-industries-abm-down-2-143001915.html?.tsrc=rss",
+   "published_at": "2026-10-08T14:30:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:25Z",
+   "fingerprint": "7684597d1e68eaa1",
+   "primary_source": false,
+   "cluster_id": "c68a9fe8c35361ba",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f70f859654f01cd5",
+   "symbols": [
+    "ABM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ABM Industries (ABM) Could Be 13% Undervalued Following Its Boise Training Center Opening",
+   "summary": "ABM Industries (ABM) just opened a new Technical Training Center in Boise, Idaho, tying its facility services footprint more directly to semiconductor manufacturing and raising fresh questions about how this expansion fits into the stock’s current valuation. Recent trading has be",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/abm-industries-abm-could-13-110900464.html?.tsrc=rss",
+   "published_at": "2026-10-01T11:09:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:25Z",
+   "fingerprint": "05f87f54f6d89b33",
+   "primary_source": false,
+   "cluster_id": "f70f859654f01cd5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e965c2f82413b978",
+   "symbols": [
+    "ABM",
+    "VSTS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "The Open Question Under Cintas Stock's Price",
+   "summary": "Cintas (CTAS) has raised its profit forecast for fiscal 2027, and meeting it depends on its margins widening further. At 40.1 times earnings, against 22.1 for the S&amp;P 500, the share price appears to assume the forecast holds. Cintas does not charge customers fuel surcharges, ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/616954/the-open-question-under-cintas-stocks-price/2026-09-30?.tsrc=rss",
+   "published_at": "2026-09-30T10:37:55Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:46:26Z",
+   "fingerprint": "31bb9358e1d5d70c",
+   "primary_source": false,
+   "cluster_id": "e965c2f82413b978",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "599257cda56475be",
+   "symbols": [
+    "ABM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACN Set to Report Q4 Earnings: Here's What Investors Should Know",
+   "summary": "Accenture heads into its Q4 earnings release with y/y revenue and earnings growth expected, supported by AI demand, federal recovery and strength across key markets.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acn-set-report-q4-earnings-131700088.html?.tsrc=rss",
+   "published_at": "2026-09-29T13:17:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:25Z",
+   "fingerprint": "41f3f91824bf88ca",
+   "primary_source": false,
+   "cluster_id": "599257cda56475be",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8c8f87e4640e2df9",
+   "symbols": [
+    "ABM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ABM and Arizona Cardinals Highlight Partnership at State Farm Stadium",
+   "summary": "More than 200 ABM professionals help keep the 1.7-million-square-foot venue ready for Cardinals games, concerts, and major events NEW YORK, Sept. 29, 2026 (GLOBE NEWSWIRE) -- As the 2026 NFL season gets underway, ABM (NYSE: ABM), a leading provider of facility, engineering, and i",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/abm-arizona-cardinals-highlight-partnership-120000851.html?.tsrc=rss",
+   "published_at": "2026-09-29T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:25Z",
+   "fingerprint": "995579a7ddf15cfd",
+   "primary_source": false,
+   "cluster_id": "8c8f87e4640e2df9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

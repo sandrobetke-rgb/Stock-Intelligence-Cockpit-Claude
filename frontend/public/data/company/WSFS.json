@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 1.7506507317830533,
    "rvol": 1.0900030154422384,
    "ema10": 78.18321241253267,
-   "ema21": 77.66864456472204,
+   "ema21": 77.66864456471507,
    "sma50": 77.79220031738281,
-   "sma200": 72.5082018661499
+   "sma200": 72.50820177078248
   },
   "market_cap": 4032416512.0,
   "market_cap_currency": "USD",
@@ -34,17 +34,17 @@
    "tech": {
     "close": 78.47000122070312,
     "change_pct": -1.07160675414949,
-    "ema20": 77.68617274798804,
-    "ema50": 77.6495960851339,
-    "ema200": 72.4673239953041,
+    "ema20": 77.68617274798389,
+    "ema50": 77.64959608333969,
+    "ema200": 72.46732398596008,
     "sma50": 77.79220031738281,
-    "rsi14": 54.59686434319777,
-    "rsi_min5": 54.59686434319777,
-    "atr14": 1.4529477621835054,
-    "atr_pct": 1.8515964567108572,
+    "rsi14": 54.596864344038266,
+    "rsi_min5": 54.596864344038266,
+    "atr14": 1.4529477621185254,
+    "atr_pct": 1.8515964566280483,
     "rvol": 1.0900030154422384,
     "vol30": 319780.0,
-    "dist_ema200_pct": 8.283288100700403,
+    "dist_ema200_pct": 8.283288114662568,
     "dist_52w_high_pct": 5.157184359995082,
     "high_52w": 82.73689545294805,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 80.23999786376953,
     "day_low": 78.31999969482422,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 33.95863494922568,
+    "adx14": 20.144852115967453,
+    "ema10": 78.18321241253267,
+    "sma200": 72.50820177078248,
+    "perf_63d": -3.540607644597371,
+    "adr20_pct": 1.7506507317830533,
+    "range10_pct": 6.218641691731142,
+    "high10_prev": 80.44999694824219,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.6666666666666666,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.8333333333333334,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 80.23999786376953,
     "entry_max": 81.84479782104492,
-    "stop": 78.06057622049427,
-    "risk_per_share": 2.179421643275262,
-    "target_1": 84.59884115032006,
+    "stop": 78.06057622059174,
+    "risk_per_share": 2.1794216431777897,
+    "target_1": 84.59884115012511,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -137,11 +171,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 5.9,
+   "score": 38.2,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 3,
    "independent_24h": 0
   },
   "political": {
@@ -205,9 +241,9 @@
   "adr20": 1.7506507317830533,
   "rvol": 1.0900030154422384,
   "ema10": 78.18321241253267,
-  "ema21": 77.66864456472204,
+  "ema21": 77.66864456471507,
   "sma50": 77.79220031738281,
-  "sma200": 72.5082018661499,
+  "sma200": 72.50820177078248,
   "volatility_ann": 15.36732336340038,
   "avg_dollar_volume_20d": 24309880.632209778,
   "move_zscore": -1.1069741584884545,
@@ -215,17 +251,17 @@
    "tech": {
     "close": 78.47000122070312,
     "change_pct": -1.07160675414949,
-    "ema20": 77.68617274798804,
-    "ema50": 77.6495960851339,
-    "ema200": 72.4673239953041,
+    "ema20": 77.68617274798389,
+    "ema50": 77.64959608333969,
+    "ema200": 72.46732398596008,
     "sma50": 77.79220031738281,
-    "rsi14": 54.59686434319777,
-    "rsi_min5": 54.59686434319777,
-    "atr14": 1.4529477621835054,
-    "atr_pct": 1.8515964567108572,
+    "rsi14": 54.596864344038266,
+    "rsi_min5": 54.596864344038266,
+    "atr14": 1.4529477621185254,
+    "atr_pct": 1.8515964566280483,
     "rvol": 1.0900030154422384,
     "vol30": 319780.0,
-    "dist_ema200_pct": 8.283288100700403,
+    "dist_ema200_pct": 8.283288114662568,
     "dist_52w_high_pct": 5.157184359995082,
     "high_52w": 82.73689545294805,
     "macd_above_signal": true,
@@ -239,7 +275,17 @@
     "green": false,
     "day_high": 80.23999786376953,
     "day_low": 78.31999969482422,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 33.95863494922568,
+    "adx14": 20.144852115967453,
+    "ema10": 78.18321241253267,
+    "sma200": 72.50820177078248,
+    "perf_63d": -3.540607644597371,
+    "adr20_pct": 1.7506507317830533,
+    "range10_pct": 6.218641691731142,
+    "high10_prev": 80.44999694824219,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -269,6 +315,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -276,7 +343,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.6666666666666666,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.8333333333333334,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -289,9 +359,9 @@
    "plan": {
     "trigger": 80.23999786376953,
     "entry_max": 81.84479782104492,
-    "stop": 78.06057622049427,
-    "risk_per_share": 2.179421643275262,
-    "target_1": 84.59884115032006,
+    "stop": 78.06057622059174,
+    "risk_per_share": 2.1794216431777897,
+    "target_1": 84.59884115012511,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -527,11 +597,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 5.9,
+  "score": 38.2,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 86.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 33.2,
@@ -549,25 +619,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 19,
+    "independent": 19,
+    "duplicates": 1,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -586,7 +658,428 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "4a0b89765449d0bf",
+   "symbols": [
+    "WSFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WSFS Q3 deep dive: Trust segment and loan growth drive earnings, deposit trends in focus",
+   "summary": "Regional banking company WSFS Financial (NASDAQ:WSFS) met Wall Street’s revenue expectations in Q3 2026, with sales up 5.7% year on year to $288.1 million. Its non-GAAP profit of $1.75 per share was 8% above analysts’ consensus estimates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wsfs-q3-deep-dive-trust-122247028.html?.tsrc=rss",
+   "published_at": "2026-10-26T12:22:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:51Z",
+   "fingerprint": "ea4c3b288d2f2d48",
+   "primary_source": false,
+   "cluster_id": "4a0b89765449d0bf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f762430c29675455",
+   "symbols": [
+    "WSFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "5 must-read analyst questions from WSFS Financial’s Q3 earnings call",
+   "summary": "WSFS Financial’s third quarter performance met Wall Street’s revenue expectations and delivered non-GAAP profit above consensus, with the market responding positively. Management attributed this outcome to strong growth in the Walton Trust business, ongoing momentum in commercial",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/5-must-read-analyst-questions-121447006.html?.tsrc=rss",
+   "published_at": "2026-10-26T12:14:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:51Z",
+   "fingerprint": "ea4637a276c12049",
+   "primary_source": false,
+   "cluster_id": "f762430c29675455",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "025683b111bfc149",
+   "symbols": [
+    "WSFS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WSFS: 3 Key Takeaways for Long-Term Investors",
+   "summary": "Fee income now represents nearly a third of total revenue, while commercial lending drives disciplined balance-sheet growth.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/takeaways/2026/10/26/wsfs-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+   "published_at": "2026-10-26T11:19:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:51Z",
+   "fingerprint": "f545cb068cacdbe7",
+   "primary_source": false,
+   "cluster_id": "025683b111bfc149",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d8acf893bbeb01c3",
+   "symbols": [
+    "WSFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WSFS Financial (WSFS) Q3 2026 Earnings Call Transcript",
+   "summary": "Wealth and Trust fees surged 30% year-over-year as core EPS grew 25%.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/25/wsfs-financial-wsfs-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-25T06:45:30Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:51Z",
+   "fingerprint": "27a3a347b066d5fa",
+   "primary_source": false,
+   "cluster_id": "d8acf893bbeb01c3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8049bafde2d2dfb8",
+   "symbols": [
+    "WSFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WSFS Financial (WSFS) Stock Price Trails Strong Q3 Earnings Growth",
+   "summary": "WSFS Financial came into this earnings print as the quietly efficient regional bank with a long-running profit story and a stock that has not fully kept pace. The company just posted its Q3 2026 results with basic earnings per share at about US$1.75 and net income close to US$89.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wsfs-financial-wsfs-stock-price-091432095.html?.tsrc=rss",
+   "published_at": "2026-10-24T09:14:32Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:51Z",
+   "fingerprint": "20dd8575ba1cc5de",
+   "primary_source": false,
+   "cluster_id": "8049bafde2d2dfb8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "90eddbeb5e503a1f",
+   "symbols": [
+    "WSFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What WSFS Financial (WSFS)'s Earnings Beat Means For Shareholders",
+   "summary": "WSFS Financial reported third quarter 2026 net income of US$89.3 million and diluted EPS from continuing operations of US$1.75, alongside a US$0.20 quarterly cash dividend payable on November 20, 2026 to shareholders of record on November 6, 2026. Broad based loan activity and gr",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wsfs-financial-wsfs-earnings-beat-081347955.html?.tsrc=rss",
+   "published_at": "2026-10-24T08:13:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:51Z",
+   "fingerprint": "db84598d6d6c5335",
+   "primary_source": false,
+   "cluster_id": "90eddbeb5e503a1f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1a39df8ba80853dc",
+   "symbols": [
+    "WSFS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why WSFS Financial (WSFS) Is Getting Attention Today",
+   "summary": "WSFS Financial (WSFS) shares reacted to a busy news day after the bank released third quarter 2026 results that topped earnings forecasts and confirmed a quarterly dividend, alongside broad based loan and fee income strength. Recent trading suggests investors are rewarding WSFS F",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-wsfs-financial-wsfs-getting-052110434.html?.tsrc=rss",
+   "published_at": "2026-10-24T05:21:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:51Z",
+   "fingerprint": "93bbd4e835561cb1",
+   "primary_source": false,
+   "cluster_id": "1a39df8ba80853dc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e8912e5c8d8ed682",
+   "symbols": [
+    "WSFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WSFS Financial (WSFS) Stock Looks Undervalued Based On Its Earnings Power",
+   "summary": "WSFS Financial has delivered a powerful share price run over the past few years, and that kind of move naturally raises a simple question for you as a shareholder or potential buyer. Is the current price really supported by the returns the bank earns on the capital it puts to wor",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wsfs-financial-wsfs-stock-looks-011615326.html?.tsrc=rss",
+   "published_at": "2026-10-24T01:16:15Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:51Z",
+   "fingerprint": "20dc341cfd74d044",
+   "primary_source": false,
+   "cluster_id": "e8912e5c8d8ed682",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "31528782dc0979db",
+   "symbols": [
+    "WSFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What WSFS Financial (WSFS) Said on Its Q3 Earnings Call",
+   "summary": "WSFS Financial (NASDAQ:WSFS) reported third-quarter 2026 core earnings per share of $1.75, with core return on assets of 1.58% and core return on tangible common equity of 20.7%, Chief Financial Officer David Burg said during the company’s earnings call. Each measure increased fr",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-wsfs-financial-wsfs-said-on-its-q3-earnings-call-2026-10-23/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-23T19:05:18Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:51Z",
+   "fingerprint": "94e5f5a574b68319",
+   "primary_source": false,
+   "cluster_id": "31528782dc0979db",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "00473ff30343f858",
+   "symbols": [
+    "WSFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WSFS Financial Corporation Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of WSFS Financial Corporation's Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-wsfs-financial-corporation-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-23T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:51Z",
+   "fingerprint": "da502e187044ad2b",
+   "primary_source": false,
+   "cluster_id": "00473ff30343f858",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d5d4d4ab1905aa44",
+   "symbols": [
+    "WSFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WSFS (WSFS) Q3 Earnings: How Key Metrics Compare to Wall Street Estimates",
+   "summary": "While the top- and bottom-line numbers for WSFS (WSFS) give a sense of how the business performed in the quarter ended September 2026, it could be worth looking at how some of its key metrics compare to Wall Street estimates and year-ago values.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wsfs-wsfs-q3-earnings-key-213002583.html?.tsrc=rss",
+   "published_at": "2026-10-22T21:30:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:51Z",
+   "fingerprint": "cac6fe7954e8ebb3",
+   "primary_source": false,
+   "cluster_id": "d5d4d4ab1905aa44",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "595bd77c2a1c66f7",
+   "symbols": [
+    "LARK",
+    "WSFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WSFS Financial (WSFS) Tops Q3 Earnings and Revenue Estimates",
+   "summary": "WSFS (WSFS) delivered earnings and revenue surprises of +8.70% and +0.04%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wsfs-financial-wsfs-tops-q3-210008585.html?.tsrc=rss",
+   "published_at": "2026-10-22T21:00:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:33Z",
+   "fingerprint": "1e95bd1bdc456cb1",
+   "primary_source": false,
+   "cluster_id": "595bd77c2a1c66f7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b712aba89b3403ee",
+   "symbols": [
+    "WSFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WSFS: Q3 Earnings Snapshot",
+   "summary": "(WSFS) on Thursday reported third-quarter net income of $89.On a per-share basis, the Wilmington, Delaware-based company said it had profit of $1.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wsfs-q3-earnings-snapshot-203914639.html?.tsrc=rss",
+   "published_at": "2026-10-22T20:39:14Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:51Z",
+   "fingerprint": "82b2f5ce7457730e",
+   "primary_source": false,
+   "cluster_id": "b712aba89b3403ee",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "193db7470abb23d3",
+   "symbols": [
+    "WSFS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WSFS Financial (NASDAQ:WSFS) misses Q3 2026 sales expectations",
+   "summary": "Regional banking company WSFS Financial (NASDAQ:WSFS) missed Wall Street’s revenue expectations in Q3 2026, but sales rose 5.5% year on year to $287.6 million. Its non-GAAP profit of $1.75 per share was 8% above analysts’ consensus estimates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wsfs-financial-nasdaq-wsfs-misses-203827862.html?.tsrc=rss",
+   "published_at": "2026-10-22T20:38:27Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:51Z",
+   "fingerprint": "fc6f775df164fd4f",
+   "primary_source": false,
+   "cluster_id": "193db7470abb23d3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5bb657d9d3ad92ef",
+   "symbols": [
+    "WSFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WSFS Reports 3Q 2026 EPS of $1.75,\nReflecting YOY Growth of 28%, ROA of 1.58% and NIM of 3.88%;\nWealth and Trust Fees Up 30% YOY",
+   "summary": "WILMINGTON, Del., October 22, 2026--WSFS Financial Corporation (Nasdaq: WSFS), the parent company of WSFS Bank, today announced its financial results for the third quarter of 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wsfs-reports-3q-2026-eps-200500401.html?.tsrc=rss",
+   "published_at": "2026-10-22T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:51Z",
+   "fingerprint": "f8f9e6f4db654871",
+   "primary_source": false,
+   "cluster_id": "5bb657d9d3ad92ef",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5a0c1c0756c8c1be",
+   "symbols": [
+    "GSBC",
+    "WSFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Great Southern Bancorp (GSBC) Beats Q3 Earnings and Revenue Estimates",
+   "summary": "Great Southern Bancorp (GSBC) delivered earnings and revenue surprises of +7.91% and +3.85%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/great-southern-bancorp-gsbc-beats-225003778.html?.tsrc=rss",
+   "published_at": "2026-10-21T22:50:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:51Z",
+   "fingerprint": "68e6fa19e7b7f953",
+   "primary_source": false,
+   "cluster_id": "7bcb7525a0c68bcf",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "57b79450d4fe6057",
+   "symbols": [
+    "WSFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What Analyst Projections for Key Metrics Reveal About WSFS (WSFS) Q3 Earnings",
+   "summary": "Evaluate the expected performance of WSFS (WSFS) for the quarter ended September 2026, looking beyond the conventional Wall Street top-and-bottom-line estimates and examining some of its key metrics for better insight.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/analyst-projections-key-metrics-reveal-184213524.html?.tsrc=rss",
+   "published_at": "2026-10-21T18:42:13Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:51Z",
+   "fingerprint": "681cd284f637be7e",
+   "primary_source": false,
+   "cluster_id": "57b79450d4fe6057",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0361ed1acf2d0566",
+   "symbols": [
+    "WSFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WSFS Financial (WSFS) Reports Earnings Tomorrow: What To Expect",
+   "summary": "Regional banking company WSFS Financial (NASDAQ:WSFS) will be reporting earnings this Thursday after the bell. Here’s what to look for.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wsfs-financial-wsfs-reports-earnings-125439921.html?.tsrc=rss",
+   "published_at": "2026-10-21T12:54:39Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:51Z",
+   "fingerprint": "f8740f8b909aeb01",
+   "primary_source": false,
+   "cluster_id": "0361ed1acf2d0566",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "99feda23c8adb1b6",
+   "symbols": [
+    "WSFS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Riverview Bancorp (RVSB) to Report Q2 Results: Wall Street Expects Earnings Growth",
+   "summary": "Riverview Bancorp (RVSB) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/riverview-bancorp-rvsb-report-q2-130024488.html?.tsrc=rss",
+   "published_at": "2026-10-20T13:00:24Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:51Z",
+   "fingerprint": "484eac8be8de9a9a",
+   "primary_source": false,
+   "cluster_id": "99feda23c8adb1b6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

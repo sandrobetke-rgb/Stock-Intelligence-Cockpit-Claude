@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,10 +24,10 @@
    "perf_63d": 6.2569312848358205,
    "adr20": 1.5056571583434502,
    "rvol": 1.6650926122236571,
-   "ema10": 993.3608677882062,
-   "ema21": 976.8697628890995,
+   "ema10": 993.360867788213,
+   "ema21": 976.8697628957162,
    "sma50": 941.9411450195313,
-   "sma200": 967.8804290771484
+   "sma200": 967.8804330444336
   },
   "market_cap": 448570982400.0,
   "market_cap_currency": "USD",
@@ -35,17 +35,17 @@
    "tech": {
     "close": 1012.280029296875,
     "change_pct": 1.7765801877674514,
-    "ema20": 978.1988994465962,
-    "ema50": 956.8551692240953,
-    "ema200": 953.9951337358527,
+    "ema20": 978.1988994514747,
+    "ema50": 956.8551695316573,
+    "ema200": 953.9951375304606,
     "sma50": 941.9411450195313,
-    "rsi14": 66.87488119498718,
-    "rsi_min5": 57.37946504192993,
-    "atr14": 16.45259424798108,
-    "atr_pct": 1.6253006847728662,
+    "rsi14": 66.87488114559869,
+    "rsi_min5": 57.379465006533046,
+    "atr14": 16.452594293332165,
+    "atr_pct": 1.625300689252959,
     "rvol": 1.6650926122236571,
     "vol30": 2270220.0,
-    "dist_ema200_pct": 6.1095590008701794,
+    "dist_ema200_pct": 6.109558578809149,
     "dist_52w_high_pct": 7.397362336530689,
     "high_52w": 1093.1438400012314,
     "macd_above_signal": true,
@@ -59,7 +59,17 @@
     "green": true,
     "day_high": 1021.3099975585938,
     "day_low": 1006.5599975585938,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 84.81525925419116,
+    "adx14": 40.83487207429753,
+    "ema10": 993.360867788213,
+    "sma200": 967.8804330444336,
+    "perf_63d": 6.2569312848358205,
+    "adr20_pct": 1.5056571583434502,
+    "range10_pct": 4.195568360717727,
+    "high10_prev": 1019.9425428162457,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -89,16 +99,41 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
-    "S04"
+    "S04",
+    "DSM"
    ],
    "near": {
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.6666666666666666,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 1.0,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": true,
@@ -111,9 +146,9 @@
    "plan": {
     "trigger": 1019.9425428162457,
     "entry_max": 1040.3413936725706,
-    "stop": 995.263651444274,
-    "risk_per_share": 24.678891371971645,
-    "target_1": 1069.3003255601889,
+    "stop": 995.2636513762475,
+    "risk_per_share": 24.67889143999821,
+    "target_1": 1069.300325696242,
     "trigger_basis": "letztes Higher High"
    }
   },
@@ -140,7 +175,7 @@
    ]
   },
   "market_intelligence": {
-   "score": 55.0,
+   "score": 58.0,
    "drivers": [
     "news_flow",
     "source_diversity",
@@ -158,12 +193,12 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 6,
-   "manipulation_risk": "auffaellig",
-   "mentions_24h": 3,
-   "sentiment_7d": -0.33,
-   "bullish_7d": 1,
-   "bearish_7d": 3
+   "mentions_7d": 32,
+   "manipulation_risk": "unauffällig",
+   "mentions_24h": 7,
+   "sentiment_7d": 0.16,
+   "bullish_7d": 9,
+   "bearish_7d": 4
   },
   "insider": {
    "window_days": 90,
@@ -225,10 +260,10 @@
   "perf_63d": 6.2569312848358205,
   "adr20": 1.5056571583434502,
   "rvol": 1.6650926122236571,
-  "ema10": 993.3608677882062,
-  "ema21": 976.8697628890995,
+  "ema10": 993.360867788213,
+  "ema21": 976.8697628957162,
   "sma50": 941.9411450195313,
-  "sma200": 967.8804290771484,
+  "sma200": 967.8804330444336,
   "volatility_ann": 18.061786081103428,
   "avg_dollar_volume_20d": 2103730091.831665,
   "move_zscore": 1.5614367283138446,
@@ -236,17 +271,17 @@
    "tech": {
     "close": 1012.280029296875,
     "change_pct": 1.7765801877674514,
-    "ema20": 978.1988994465962,
-    "ema50": 956.8551692240953,
-    "ema200": 953.9951337358527,
+    "ema20": 978.1988994514747,
+    "ema50": 956.8551695316573,
+    "ema200": 953.9951375304606,
     "sma50": 941.9411450195313,
-    "rsi14": 66.87488119498718,
-    "rsi_min5": 57.37946504192993,
-    "atr14": 16.45259424798108,
-    "atr_pct": 1.6253006847728662,
+    "rsi14": 66.87488114559869,
+    "rsi_min5": 57.379465006533046,
+    "atr14": 16.452594293332165,
+    "atr_pct": 1.625300689252959,
     "rvol": 1.6650926122236571,
     "vol30": 2270220.0,
-    "dist_ema200_pct": 6.1095590008701794,
+    "dist_ema200_pct": 6.109558578809149,
     "dist_52w_high_pct": 7.397362336530689,
     "high_52w": 1093.1438400012314,
     "macd_above_signal": true,
@@ -260,7 +295,17 @@
     "green": true,
     "day_high": 1021.3099975585938,
     "day_low": 1006.5599975585938,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 84.81525925419116,
+    "adx14": 40.83487207429753,
+    "ema10": 993.360867788213,
+    "sma200": 967.8804330444336,
+    "perf_63d": 6.2569312848358205,
+    "adr20_pct": 1.5056571583434502,
+    "range10_pct": 4.195568360717727,
+    "high10_prev": 1019.9425428162457,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -290,16 +335,41 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
-    "S04"
+    "S04",
+    "DSM"
    ],
    "near": {
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.6666666666666666,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 1.0,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": true,
@@ -312,9 +382,9 @@
    "plan": {
     "trigger": 1019.9425428162457,
     "entry_max": 1040.3413936725706,
-    "stop": 995.263651444274,
-    "risk_per_share": 24.678891371971645,
-    "target_1": 1069.3003255601889,
+    "stop": 995.2636513762475,
+    "risk_per_share": 24.67889143999821,
+    "target_1": 1069.300325696242,
     "trigger_basis": "letztes Higher High"
    }
   }
@@ -636,7 +706,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 55.0,
+  "score": 58.0,
   "components": {
    "news_flow": 100.0,
    "freshness": 0,
@@ -644,7 +714,7 @@
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 46.8,
-   "social_attention": 70.2,
+   "social_attention": 100.0,
    "insider_activity": 20
   },
   "windows": {
@@ -2271,30 +2341,58 @@
   }
  ],
  "social_detail": {
-  "mentions_24h": 3,
-  "mentions_7d": 6,
-  "mentions_30d": 7,
-  "change_vs_baseline_pct": 600,
-  "engagement_7d": 9.0,
-  "sentiment_7d": -0.33,
+  "mentions_24h": 7,
+  "mentions_7d": 32,
+  "mentions_30d": 33,
+  "change_vs_baseline_pct": 96,
+  "engagement_7d": 62.0,
+  "sentiment_7d": 0.16,
   "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
-  "bullish_7d": 1,
-  "bearish_7d": 3,
+  "bullish_7d": 9,
+  "bearish_7d": 4,
   "by_platform_7d": {
-   "stocktwits": 6
+   "stocktwits": 32
   },
   "communities_7d": {
-   "StockTwits": 6
+   "StockTwits": 32
   },
   "platforms": [
    "reddit",
    "stocktwits"
   ],
-  "manipulation_flags": [
-   "Wenige Accounts erzeugen Großteil der Erwähnungen"
-  ],
-  "manipulation_risk": "auffaellig",
+  "manipulation_flags": [],
+  "manipulation_risk": "unauffällig",
   "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "DefenseMania",
+    "posted_at": "2026-10-30T18:52:06Z",
+    "url": "https://stocktwits.com/DefenseMania/message/667807753",
+    "text": "$COST Grand Opening  today of  NEW Costco Warehouse , Camarillo California , friend told me there were 2 separate lines wrapped around the whole warehouse by 6am.\nCRAZY 💰💰💰💰💰💰💰💰\n$KR $WMT $CVS",
+    "engagement": 7.0,
+    "sentiment_label": "Bullish"
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "ArcValueTrade",
+    "posted_at": "2026-11-01T08:57:26Z",
+    "url": "https://stocktwits.com/ArcValueTrade/message/667863100",
+    "text": "Clues for Stock market directions-    \n                                                                                                                                                       \n MAG 7 &amp; $SPY &amp;  $QQQ  &amp;  Tech Stocks Trend &amp; Technical:                                                                                                                \nhttps://youtu.be/e4fWho2",
+    "engagement": 5.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "Shasho",
+    "posted_at": "2026-10-30T12:35:42Z",
+    "url": "https://stocktwits.com/Shasho/message/667746242",
+    "text": "@Hooooooold @AIbubblez I live in a major metropolitan area with a combined population of about 10 million. There is a $CVNA location about 40 miles from where I live. I only hear about people selling their cars to them. However, I never see Carvana license plates on the roads. But I do see quite a few $KMX vehicles.\n\nBuffett’s rule is to buy companies where people are actually shopping and spendin",
+    "engagement": 4.0,
+    "sentiment_label": "Bearish"
+   },
    {
     "platform": "stocktwits",
     "community": "StockTwits",
@@ -2308,41 +2406,11 @@
    {
     "platform": "stocktwits",
     "community": "StockTwits",
-    "author": "gayforsanjay",
-    "posted_at": "2026-10-30T14:56:19Z",
-    "url": "https://stocktwits.com/gayforsanjay/message/667770519",
-    "text": "$WMT $COST $PG $JNJ SELL.",
-    "engagement": 2.0,
-    "sentiment_label": "Bearish"
-   },
-   {
-    "platform": "stocktwits",
-    "community": "StockTwits",
-    "author": "gayforsanjay",
-    "posted_at": "2026-10-30T12:13:05Z",
-    "url": "https://stocktwits.com/gayforsanjay/message/667744123",
-    "text": "Next up go experience reality is $WMT $COST $PEP $JNJ $PG",
-    "engagement": 2.0,
-    "sentiment_label": "Bearish"
-   },
-   {
-    "platform": "stocktwits",
-    "community": "StockTwits",
-    "author": "gayforsanjay",
-    "posted_at": "2026-10-30T11:42:42Z",
-    "url": "https://stocktwits.com/gayforsanjay/message/667741565",
-    "text": "$COST $WMT $JNJ $PEP enjoy your short term fun.\n\nWe know what happens next.\n\nStocks don’t just go up because other stocks come down. \n\nThere has to be a fundamental reason. I don’t see any.",
-    "engagement": 2.0,
-    "sentiment_label": "Bearish"
-   },
-   {
-    "platform": "stocktwits",
-    "community": "StockTwits",
-    "author": "DefenseMania",
-    "posted_at": "2026-10-31T15:41:21Z",
-    "url": "https://stocktwits.com/DefenseMania/message/667848043",
-    "text": "$COST update on Grand Opening in California yesterday HUGE SUCESS !!!💰💰💰 850 parking spaces and people still had to use the $HD Home Depot   parking lot next door 🤙🏼🤙🏼",
-    "engagement": 0.0,
+    "author": "Girlheartstox",
+    "posted_at": "2026-10-30T22:16:37Z",
+    "url": "https://stocktwits.com/Girlheartstox/message/667829297",
+    "text": "The only green on my screen today? $COST $HII $NEE $ICE $XOM. Everything else was a fucking HOT MESS. 🔥🤣\n\nDidn’t panic sell or  buy. Not waiting for the bottom, not throwing money at every red candle just because it’s there.\n\nI’ve been a long tech investor for years, but this market is a different beast. Between options, algorithms, day traders, and the push toward round-the-clock trading, it feel",
+    "engagement": 3.0,
     "sentiment_label": "Bullish"
    }
   ]

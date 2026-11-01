@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 4.070000171661377,
     "day_low": 3.869999885559082,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 73.21207045729437,
+    "adx14": 38.57138819484215,
+    "ema10": 3.854519351518136,
+    "sma200": 4.532550011873245,
+    "perf_63d": -28.209767124985053,
+    "adr20_pct": 8.477554878945975,
+    "range10_pct": 25.701082897959203,
+    "high10_prev": 4.078999996185303,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -139,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 0.5,
+   "score": 40.5,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 5,
    "independent_24h": 0
   },
   "political": {
@@ -242,7 +278,17 @@
     "green": false,
     "day_high": 4.070000171661377,
     "day_low": 3.869999885559082,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 73.21207045729437,
+    "adx14": 38.57138819484215,
+    "ema10": 3.854519351518136,
+    "sma200": 4.532550011873245,
+    "perf_63d": -28.209767124985053,
+    "adr20_pct": 8.477554878945975,
+    "range10_pct": 25.701082897959203,
+    "high10_prev": 4.078999996185303,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -272,6 +318,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -279,7 +346,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -618,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 0.5,
+  "score": 40.5,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 60,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 3.1,
@@ -640,25 +710,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 5,
+    "independent": 5,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 6,
+    "independent": 6,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -677,7 +749,426 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "38c3d67fec323f60",
+   "symbols": [
+    "ACRS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Aclaris Therapeutics ATI-052 Posts Early Eczema, Asthma Signals in Phase 1b",
+   "summary": "Aclaris Therapeutics (NASDAQ:ACRS) reported Phase 1b proof-of-concept results for ATI-052, its bispecific antibody designed to inhibit thymic stromal lymphopoietin (TSLP) and IL-4 receptor alpha, in small studies of atopic dermatitis and asthma. The company said the treatment was",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-aclaris-therapeutics-ati-052-posts-early-eczema-asthma-signals-in-phase-1b-2026-10-27/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-27T22:04:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "fc84ea9f7f357857",
+   "primary_source": false,
+   "cluster_id": "38c3d67fec323f60",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fdfecf12355c6553",
+   "symbols": [
+    "ACRS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Aclaris Therapeutics Reports Positive Phase 1b ATI-052 Trial Results, Prices $50 Million Offering",
+   "summary": "Aclaris Therapeutics (ACRS) said Tuesday the phase 1b proof-of-concept trials of its anti-TSLP/IL-4R",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/aclaris-therapeutics-reports-positive-phase-143854887.html?.tsrc=rss",
+   "published_at": "2026-10-27T14:38:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "3cd12951c07efa67",
+   "primary_source": false,
+   "cluster_id": "fdfecf12355c6553",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c3e6210eeebe31db",
+   "symbols": [
+    "ACRS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Aclaris Reports Positive Asthma, Eczema Drug Trial Results — So, Why Is ACRS Stock Down Nearly 8%?",
+   "summary": "Aclaris announced plans to sell about 7.8 million shares and pre-funded warrants at $3.50 each, a 7.65% discount to Monday’s closing price.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/aclaris-reports-positive-asthma-eczema-drug-trial-results-acrs-stock-down-nearly-8/cZUee2uRBCB?.tsrc=rss",
+   "published_at": "2026-10-27T12:40:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "6f33a4c97eba8532",
+   "primary_source": false,
+   "cluster_id": "c3e6210eeebe31db",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "393a71e22ea268d9",
+   "symbols": [
+    "ACRS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Aclaris Therapeutics Announces Pricing of $50.0 Million Offering of Common Stock and Pre-Funded Warrants",
+   "summary": "WAYNE, Pa., Oct. 27, 2026 (GLOBE NEWSWIRE) -- Aclaris Therapeutics, Inc. (NASDAQ: ACRS), a clinical-stage biopharmaceutical company focused on developing novel product candidates for immuno-inflammatory diseases, today announced the pricing of an underwritten offering of 7,785,71",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/aclaris-therapeutics-announces-pricing-50-104300779.html?.tsrc=rss",
+   "published_at": "2026-10-27T10:43:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "cf0dac74caa5de5f",
+   "primary_source": false,
+   "cluster_id": "393a71e22ea268d9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bad6aeda6e4a4020",
+   "symbols": [
+    "ACRS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Aclaris Therapeutics Announces Positive Phase 1b Proof-of-Concept Primary Analysis Results for its Anti-TSLP/IL-4Rα Bispecific ATI-052 in Atopic Dermatitis (AD) and Asthma",
+   "summary": "- Results Demonstrated Breadth and Rapidity of Response to ATI-052 in Heterogeneous Patient Populations; Pharmacodynamic Results Demonstrated Potential for Additivity/Synergy of Targeting TSLP and IL-4Rα - - Rapid and Durable Improvement in Skin and Itch Observed in Severe AD Pop",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/aclaris-therapeutics-announces-positive-phase-100000212.html?.tsrc=rss",
+   "published_at": "2026-10-27T10:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "4627b23169644f51",
+   "primary_source": false,
+   "cluster_id": "bad6aeda6e4a4020",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "56b0ed7bd38bbc8e",
+   "symbols": [
+    "ACRS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are Medical Stocks Lagging  Aclaris Therapeutics (ACRS) This Year?",
+   "summary": "Here is how Aclaris Therapeutics (ACRS) and Glaukos (GKOS) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/medical-stocks-lagging-aclaris-therapeutics-124003659.html?.tsrc=rss",
+   "published_at": "2026-10-21T12:40:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "e1f798df36a02952",
+   "primary_source": false,
+   "cluster_id": "56b0ed7bd38bbc8e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "213f6353b659910b",
+   "symbols": [
+    "ACRS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Aclaris (ACRS) Soars 6.0%: Is Further Upside Left in the Stock?",
+   "summary": "Aclaris (ACRS) saw its shares surge in the last session with trading volume being higher than average. The latest trend in earnings estimate revisions may not translate into further price increase in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/aclaris-acrs-soars-6-0-124700748.html?.tsrc=rss",
+   "published_at": "2026-09-15T12:47:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "a94e8a591cefa790",
+   "primary_source": false,
+   "cluster_id": "213f6353b659910b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b86ba4f9c625ce1b",
+   "symbols": [
+    "ACRS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Aclaris Therapeutics to Participate in the 2026 Cantor Global Healthcare Conference",
+   "summary": "WAYNE, Pa., Sept. 03, 2026 (GLOBE NEWSWIRE) -- Aclaris Therapeutics, Inc. (NASDAQ: ACRS), a clinical-stage biopharmaceutical company focused on developing novel product candidates for immuno-inflammatory diseases, today announced that on Thursday, September 10, 2026, at 2:45 PM E",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/aclaris-therapeutics-participate-2026-cantor-120000016.html?.tsrc=rss",
+   "published_at": "2026-09-03T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "fd5a740f30ecbc25",
+   "primary_source": false,
+   "cluster_id": "b86ba4f9c625ce1b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "be68328a84b1c60e",
+   "symbols": [
+    "ACRS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wall Street Analysts Believe Aclaris (ACRS) Could Rally 69.2%: Here's is How to Trade",
+   "summary": "The consensus price target hints at a 69.2% upside potential for Aclaris (ACRS). While empirical research shows that this sought-after metric is hardly effective, an upward trend in earnings estimate revisions could mean that the stock will witness an upside in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-believe-aclaris-135502276.html?.tsrc=rss",
+   "published_at": "2026-08-10T13:55:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "6fdb5fd81cc06e8d",
+   "primary_source": false,
+   "cluster_id": "be68328a84b1c60e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6a72f30944ef14f8",
+   "symbols": [
+    "ACRS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Aclaris Therapeutics Receives Fast Track Designation for Modzatinib (ATI-2138) for Moderate to Severe Lichen Planus (LP)",
+   "summary": "WAYNE, Pa., Aug. 06, 2026 (GLOBE NEWSWIRE) -- Aclaris Therapeutics, Inc. (NASDAQ: ACRS), a clinical-stage biopharmaceutical company focused on developing novel product candidates for immuno-inflammatory diseases, today announced that the U.S. Food and Drug Administration (the \"FD",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/aclaris-therapeutics-receives-fast-track-203500414.html?.tsrc=rss",
+   "published_at": "2026-08-06T20:35:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "30d434274fededc9",
+   "primary_source": false,
+   "cluster_id": "6a72f30944ef14f8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fa08e272103d0b21",
+   "symbols": [
+    "ACRS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Aclaris Therapeutics (ACRS) Reports Q2 Loss, Tops Revenue Estimates",
+   "summary": "Aclaris (ACRS) delivered earnings and revenue surprises of +6.25% and +17.19%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/aclaris-therapeutics-acrs-reports-q2-122002611.html?.tsrc=rss",
+   "published_at": "2026-08-06T12:20:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "ddf24319f1ccf8f5",
+   "primary_source": false,
+   "cluster_id": "fa08e272103d0b21",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a67d1364a2cdf797",
+   "symbols": [
+    "ACRS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Aclaris Therapeutics Reports Second Quarter 2026 Financial Results and Provides Corporate and Clinical Update",
+   "summary": "- Full Top Line Results from Phase 1a SAD/MAD Trial of ATI-052 Validate Potential Best-in-Class Potency Advantage and Opportunity for Extended Dosing - - Timelines Reaffirmed for Upcoming Top Line Results from Phase 1b Proof-of-Concept (POC) Trials of ATI-052 and Phase 2 Trial of",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/aclaris-therapeutics-reports-second-quarter-105900310.html?.tsrc=rss",
+   "published_at": "2026-08-06T10:59:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "4d18766343a8fb48",
+   "primary_source": false,
+   "cluster_id": "a67d1364a2cdf797",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c22775722f21d4ee",
+   "symbols": [
+    "ACRS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Strength Seen in Aclaris (ACRS): Can Its 5.4% Jump Turn into More Strength?",
+   "summary": "Aclaris (ACRS) witnessed a jump in share price last session on above-average trading volume. The latest trend in earnings estimate revisions for the stock doesn't suggest further strength down the road.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/strength-seen-aclaris-acrs-5-122300862.html?.tsrc=rss",
+   "published_at": "2026-07-01T12:23:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "ac794da1e6e2bd2e",
+   "primary_source": false,
+   "cluster_id": "c22775722f21d4ee",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6b3df8a22dd69729",
+   "symbols": [
+    "ACRS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Penny Stocks Under $5 Backed by Real Revenue Growth",
+   "summary": "These three penny stocks under $5 generate real revenue and have catalysts that analysts believe could drive significant upside",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/originals/3-penny-stocks-under-5-backed-by-real-revenue-growth/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-06-20T13:20:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "e684e628c6cf48d9",
+   "primary_source": false,
+   "cluster_id": "6b3df8a22dd69729",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9146e02f5ded4cb8",
+   "symbols": [
+    "ACRS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Aclaris Therapeutics, Inc. (ACRS): A Top Penny Stock in Investors Portfolio That Stifel is Bullish On",
+   "summary": "Aclaris Therapeutics Inc. (NASDAQ:ACRS) is one of the top penny stocks to buy in investors’ stock portfolio. On May 8, Stifel reiterated a Hold rating on Aclaris Therapeutics Inc. (NASDAQ:ACRS) and increased the price target to $4 from $3. The price target hike underscores the re",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/aclaris-therapeutics-inc-acrs-top-175905265.html?.tsrc=rss",
+   "published_at": "2026-06-07T17:59:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "18782f57b952f5be",
+   "primary_source": false,
+   "cluster_id": "9146e02f5ded4cb8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f1afb39805724599",
+   "symbols": [
+    "ACRS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Aclaris Therapeutics Maps Busy Pipeline Calendar, Plans Phase 2 Asthma Trial for ATI-052",
+   "summary": "Aclaris Therapeutics (NASDAQ:ACRS) executives outlined a busy clinical calendar for the biotechnology company during a fireside chat at the Jefferies 2026 Global Healthcare Conference, highlighting upcoming readouts across its immunology pipeline and a planned Phase 2 asthma stud",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/aclaris-therapeutics-maps-busy-pipeline-calendar-plans-phase-2-asthma-trial-for-ati-052-2026-06-04/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-06-04T19:02:23Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "9d85d2cc1b403bc8",
+   "primary_source": false,
+   "cluster_id": "f1afb39805724599",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1e9007f0edd52e78",
+   "symbols": [
+    "ACRS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Aclaris Therapeutics to Participate in the 2026 Jefferies Global Healthcare Conference",
+   "summary": "WAYNE, Pa., May 28, 2026 (GLOBE NEWSWIRE) -- Aclaris Therapeutics, Inc. (NASDAQ: ACRS), a clinical-stage biopharmaceutical company focused on developing novel product candidates for immuno-inflammatory diseases, today announced that on Thursday June 4, 2026, at 2:00 PM ET, Aclari",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/aclaris-therapeutics-participate-2026-jefferies-123000296.html?.tsrc=rss",
+   "published_at": "2026-05-28T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "01d6eaaff80623af",
+   "primary_source": false,
+   "cluster_id": "1e9007f0edd52e78",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a72f11d57c399b85",
+   "symbols": [
+    "ACRS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Aclaris Therapeutics to Participate in the 2026 Bank of America Healthcare Conference",
+   "summary": "WAYNE, Pa., May 08, 2026 (GLOBE NEWSWIRE) -- Aclaris Therapeutics, Inc. (NASDAQ: ACRS), a clinical-stage biopharmaceutical company focused on developing novel product candidates for immuno-inflammatory diseases, today announced that on Thursday May 14, 2026, at 9:35 AM PT, Aclari",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/aclaris-therapeutics-participate-2026-bank-123000746.html?.tsrc=rss",
+   "published_at": "2026-05-08T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "5ac0e4f74175cfb4",
+   "primary_source": false,
+   "cluster_id": "a72f11d57c399b85",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "26579b141b7c7b1d",
+   "symbols": [
+    "ACRS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Aclaris Therapeutics (ACRS) Reports Q1 Loss, Beats Revenue Estimates",
+   "summary": "Aclaris (ACRS) delivered earnings and revenue surprises of +7.24% and +46.12%, respectively, for the quarter ended March 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/aclaris-therapeutics-acrs-reports-q1-125006234.html?.tsrc=rss",
+   "published_at": "2026-05-07T12:50:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:37Z",
+   "fingerprint": "720f4f72ae3e6ca6",
+   "primary_source": false,
+   "cluster_id": "26579b141b7c7b1d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

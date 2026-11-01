@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 4.059999942779541,
     "day_low": 3.6549999713897705,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 54.132195083308176,
+    "adx14": 16.998408587377785,
+    "ema10": 3.969239388110511,
+    "sma200": 5.235975008010865,
+    "perf_63d": -26.811594641075942,
+    "adr20_pct": 12.235309468467845,
+    "range10_pct": 40.67278077870861,
+    "high10_prev": 4.599999904632568,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.16666666666666666,
+    "RSI2": 0.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": true,
@@ -139,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 5.2,
+   "score": 28.8,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -228,7 +264,17 @@
     "green": true,
     "day_high": 4.059999942779541,
     "day_low": 3.6549999713897705,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 54.132195083308176,
+    "adx14": 16.998408587377785,
+    "ema10": 3.969239388110511,
+    "sma200": 5.235975008010865,
+    "perf_63d": -26.811594641075942,
+    "adr20_pct": 12.235309468467845,
+    "range10_pct": 40.67278077870861,
+    "high10_prev": 4.599999904632568,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -258,6 +304,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -265,7 +332,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.16666666666666666,
+    "RSI2": 0.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": true,
@@ -604,11 +674,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 5.2,
+  "score": 28.8,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 29.5,
@@ -626,26 +696,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 2,
+    "independent": 2,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 3,
+    "independent": 3,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -663,7 +735,250 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "146b9e81c1ed8cc6",
+   "symbols": [
+    "ZURA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zura Bio Reports Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+   "summary": "HENDERSON, Nev., October 27, 2026--Zura Bio Limited (Nasdaq: ZURA) (\"Zura\" or the \"Company\"), a clinical-stage biotechnology company developing novel and differentiated medicines to meaningfully improve the lives of patients with serious and debilitating autoimmune and inflammato",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zura-bio-reports-inducement-grants-220000723.html?.tsrc=rss",
+   "published_at": "2026-10-27T22:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:17Z",
+   "fingerprint": "5e7de6f5319b3764",
+   "primary_source": false,
+   "cluster_id": "146b9e81c1ed8cc6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a95cb8742839d991",
+   "symbols": [
+    "ZURA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zura Bio Reports Third Quarter 2026 Financial Results and Recent Corporate Updates",
+   "summary": "HENDERSON, Nev., October 27, 2026--Zura Bio Limited (Nasdaq: ZURA) (\"Zura\"), a clinical-stage biotechnology company developing novel and differentiated medicines to meaningfully improve the lives of patients with serious and debilitating autoimmune and inflammatory diseases, toda",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zura-bio-reports-third-quarter-113000710.html?.tsrc=rss",
+   "published_at": "2026-10-27T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:17Z",
+   "fingerprint": "9ab994239d5ae6d9",
+   "primary_source": false,
+   "cluster_id": "818fb1786cf9afbb",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9d6c23458aa3ecf3",
+   "symbols": [
+    "ZURA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "This biotech stock is a top pick at Guggenheim",
+   "summary": "Investing.com-- Guggenheim named Zura Bio a top pick in the biotechnology sector, reiterating its Buy rating and $20 price target ahead of the company’s Phase II TibuSHIELD readout in hidradenitis suppurativa, expected in the fourth quarter of 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/biotech-stock-top-pick-guggenheim-080004787.html?.tsrc=rss",
+   "published_at": "2026-10-07T08:00:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:17Z",
+   "fingerprint": "60af96082477e60c",
+   "primary_source": false,
+   "cluster_id": "9d6c23458aa3ecf3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e2d906f90d2547ff",
+   "symbols": [
+    "ZURA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zura Bio (ZURA) Hits Enrollment Milestones As Losses Widen Sharply",
+   "summary": "On August 11, Zura Bio (NASDAQ:ZURA) reported second-quarter results that landed on an unusual mix of good and bad news. The clinical-stage biotech finished enrolling two separate Phase 2 studies of its lead drug, tibulizumab, both ahead of their original targets, while a widenin",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zura-bio-zura-hits-enrollment-053502709.html?.tsrc=rss",
+   "published_at": "2026-09-11T05:35:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:17Z",
+   "fingerprint": "ed55d97a86c88d04",
+   "primary_source": false,
+   "cluster_id": "e2d906f90d2547ff",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a65ace05f15d655c",
+   "symbols": [
+    "ZURA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zura Bio to Participate in the Cantor Global Healthcare Conference",
+   "summary": "HENDERSON, Nev., August 31, 2026--Zura Bio Limited (Nasdaq: ZURA) (\"Zura\"), a clinical-stage biotechnology company developing novel and differentiated medicines to meaningfully improve the lives of patients with serious and debilitating autoimmune and inflammatory diseases, today",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zura-bio-participate-cantor-global-203000316.html?.tsrc=rss",
+   "published_at": "2026-08-31T20:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:17Z",
+   "fingerprint": "b3eef701e1a6c8d4",
+   "primary_source": false,
+   "cluster_id": "a65ace05f15d655c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "818fb1786cf9afbb",
+   "symbols": [
+    "ZURA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zura Bio Reports Second Quarter 2026 Financial Results and Recent Corporate Updates",
+   "summary": "HENDERSON, Nev., August 11, 2026--Zura Bio Limited (Nasdaq: ZURA) (\"Zura\"), a clinical‑stage biotechnology company developing novel and differentiated medicines to meaningfully improve the lives of patients with serious and debilitating autoimmune and inflammatory diseases, today",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zura-bio-reports-second-quarter-113000480.html?.tsrc=rss",
+   "published_at": "2026-08-11T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:17Z",
+   "fingerprint": "a22d8f911f1c6c14",
+   "primary_source": false,
+   "cluster_id": "818fb1786cf9afbb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6834e74d4aaf5fc4",
+   "symbols": [
+    "ZURA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "William Blair Starts Zura Bio (ZURA) at Outperform",
+   "summary": "Zura Bio Limited (NASDAQ:ZURA) is one of the 10 High Growth Stocks Insiders Are Buying. On July 8, 2026, William Blair initiated coverage of Zura Bio Limited (NASDAQ:ZURA) with an Outperform rating. The firm sees potential for the dual mechanism of action of tibulizumab to drive ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/william-blair-starts-zura-bio-180912106.html?.tsrc=rss",
+   "published_at": "2026-07-14T18:09:12Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:17Z",
+   "fingerprint": "11107443c25423e2",
+   "primary_source": false,
+   "cluster_id": "6834e74d4aaf5fc4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "de62e8605902178f",
+   "symbols": [
+    "ZURA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zura Bio Exceeds Enrollment Target in Both Hidradenitis Suppurativa (HS) & Systemic Sclerosis (SSc) Phase 2 Studies and Expands Tibulizumab Program",
+   "summary": "HENDERSON, Nev., June 29, 2026--Zura Bio Limited (Nasdaq: ZURA) (\"Zura\"), a clinical stage biotechnology company developing novel and differentiated medicines to meaningfully improve the lives of patients with serious and debilitating autoimmune and inflammatory diseases, today a",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zura-bio-exceeds-enrollment-target-113000272.html?.tsrc=rss",
+   "published_at": "2026-06-29T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:17Z",
+   "fingerprint": "e925244f1847b89b",
+   "primary_source": false,
+   "cluster_id": "de62e8605902178f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "39ff63adba5138f8",
+   "symbols": [
+    "ZURA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Here's Why We're Not Too Worried About Zura Bio's (NASDAQ:ZURA) Cash Burn Situation",
+   "summary": "Even when a business is losing money, it's possible for shareholders to make money if they buy a good business at the...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/heres-why-were-not-too-100926751.html?.tsrc=rss",
+   "published_at": "2026-06-03T10:09:26Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:17Z",
+   "fingerprint": "4ac9653c2102399e",
+   "primary_source": false,
+   "cluster_id": "39ff63adba5138f8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6c5bdf1c31b6e8c7",
+   "symbols": [
+    "ZURA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "One Zura Bio Insider Raised Their Stake In The Previous Year",
+   "summary": "Viewing insider transactions for Zura Bio Limited's ( NASDAQ:ZURA ) over the last year, we see that insiders were net...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/one-zura-bio-insider-raised-100627028.html?.tsrc=rss",
+   "published_at": "2026-04-23T10:06:27Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:17Z",
+   "fingerprint": "7af2ae850492ec1b",
+   "primary_source": false,
+   "cluster_id": "6c5bdf1c31b6e8c7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0cf590d62ee3deee",
+   "symbols": [
+    "ZURA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Apogee Therapeutics Stock Up 100% as Fund Lifts Stake to $28 Million",
+   "summary": "This biotech specializes in monoclonal antibody therapies for inflammatory and immunological diseases with significant unmet needs.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/coverage/filings/2026/02/25/apogee-therapeutics-stock-up-100-as-fund-lifts-stake-to-usd28-million/?.tsrc=rss",
+   "published_at": "2026-02-25T20:26:18Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:17Z",
+   "fingerprint": "6470de15b4229828",
+   "primary_source": false,
+   "cluster_id": "0cf590d62ee3deee",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 4.46999979019165,
     "day_low": 4.135000228881836,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 18.112180366094947,
+    "adx14": 33.12729724152865,
+    "ema10": 4.396948054206051,
+    "sma200": 3.349499989748001,
+    "perf_63d": 0.0,
+    "adr20_pct": 6.251292401607162,
+    "range10_pct": 14.988287338275995,
+    "high10_prev": 4.909999847412109,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.0,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -139,12 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 8.2,
+   "score": 23.5,
    "drivers": [
+    "news_flow",
     "price_volume_anomaly",
-    "insider_activity"
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -243,7 +278,17 @@
     "green": false,
     "day_high": 4.46999979019165,
     "day_low": 4.135000228881836,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 18.112180366094947,
+    "adx14": 33.12729724152865,
+    "ema10": 4.396948054206051,
+    "sma200": 3.349499989748001,
+    "perf_63d": 0.0,
+    "adr20_pct": 6.251292401607162,
+    "range10_pct": 14.988287338275995,
+    "high10_prev": 4.909999847412109,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -273,6 +318,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -280,7 +346,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.0,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -619,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 8.2,
+  "score": 23.5,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 32.7,
@@ -641,27 +710,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
    "price_volume_anomaly",
-   "insider_activity"
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -679,7 +749,404 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "6bb47242903ceab7",
+   "symbols": [
+    "ZIP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ZipRecruiter Research: 53% of Workers Say AI Has Made Their Work More Enjoyable",
+   "summary": "SANTA MONICA, Calif., October 26, 2026--ZipRecruiter® (NYSE: ZIP), a leading online employment marketplace, released Better Work, More to Learn: The 2026 AI Worker Report, a new report on how AI is changing the day-to-day experience of work. Based on a survey of 1,500 employed U.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/ziprecruiter-research-53-workers-ai-130000723.html?.tsrc=rss",
+   "published_at": "2026-10-26T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:14Z",
+   "fingerprint": "5d369b3f7c9db74e",
+   "primary_source": false,
+   "cluster_id": "6bb47242903ceab7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c525bc9201bd5eb1",
+   "symbols": [
+    "ZIP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ZipRecruiter to Report Third Quarter 2026 Financial Results on November 9, 2026",
+   "summary": "SANTA MONICA, Calif., October 19, 2026--ZipRecruiter® (NYSE:ZIP), a leading online employment marketplace, today announced that the company will report financial results for the quarter ended September 30, 2026, on Monday, November 9, 2026. On that day, management will host a con",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ziprecruiter-report-third-quarter-2026-130000641.html?.tsrc=rss",
+   "published_at": "2026-10-19T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:14Z",
+   "fingerprint": "b7e899cb6073bde2",
+   "primary_source": false,
+   "cluster_id": "c525bc9201bd5eb1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8e32a50ad9cf8710",
+   "symbols": [
+    "ZIP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What to expect from the August jobs report",
+   "summary": "ZipRecruiter (ZIP) labor economist Nicole Bachaud joins Josh Lipton on Market Domination to break down what investors and economists are watching ahead of the August jobs report and what the latest data could signal for the broader labor market.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/video/expect-august-jobs-report-201500213.html?.tsrc=rss",
+   "published_at": "2026-08-31T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:14Z",
+   "fingerprint": "9c0aff66868c16bf",
+   "primary_source": false,
+   "cluster_id": "8e32a50ad9cf8710",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "74b903eaf60ec341",
+   "symbols": [
+    "ZIP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ZipRecruiter Q2 Earnings Call Highlights",
+   "summary": "ZipRecruiter (NYSE:ZIP) reported second-quarter revenue growth and higher profitability as product improvements increased activity between employers and job seekers, while the company also reduced its debt through a discounted repurchase of senior notes. Revenue for the quarter e",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/ziprecruiter-q2-earnings-call-highlights-2026-08-09/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-09T18:03:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:14Z",
+   "fingerprint": "4b791e2bf6a4040d",
+   "primary_source": false,
+   "cluster_id": "74b903eaf60ec341",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "118f94cb219a0d5c",
+   "symbols": [
+    "ZIP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ZipRecruiter Inc (ZIP) (Q2 2026) Earnings Call Highlights: AI-Driven Matching and Debt ...",
+   "summary": "ZipRecruiter Inc (ZIP) beats Q2 2026 revenue guidance, expands margins to 12%, and raises full-year outlook on the back of AI product innovations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ziprecruiter-inc-zip-q2-2026-050210303.html?.tsrc=rss",
+   "published_at": "2026-08-06T05:02:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:14Z",
+   "fingerprint": "0c0dc7b661e2b1ac",
+   "primary_source": false,
+   "cluster_id": "118f94cb219a0d5c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "910006e20d6a2c92",
+   "symbols": [
+    "ZIP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ZipRecruiter, Inc. (ZIP) Reports Q2 Loss, Beats Revenue Estimates",
+   "summary": "ZipRecruiter (ZIP) delivered earnings and revenue surprises of +33.33% and +5.41%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ziprecruiter-inc-zip-reports-q2-003522939.html?.tsrc=rss",
+   "published_at": "2026-08-06T00:35:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:14Z",
+   "fingerprint": "66b80f15bf38f899",
+   "primary_source": false,
+   "cluster_id": "910006e20d6a2c92",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c4cb20b4ffce38bf",
+   "symbols": [
+    "ZIP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ZipRecruiter Announces Second Quarter 2026 Results",
+   "summary": "SANTA MONICA, Calif., August 05, 2026--ZipRecruiter® (NYSE: ZIP), a leading online employment marketplace, today announced financial results for the quarter ended June 30, 2026. ZipRecruiter’s complete second quarter 2026 results, financial guidance, and management commentary can",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ziprecruiter-announces-second-quarter-2026-200500924.html?.tsrc=rss",
+   "published_at": "2026-08-05T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:14Z",
+   "fingerprint": "02fd1b2690e46ed9",
+   "primary_source": false,
+   "cluster_id": "c4cb20b4ffce38bf",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "82394681606c4336",
+   "symbols": [
+    "ZIP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ZipRecruiter to Participate at Upcoming Investor Conferences",
+   "summary": "SANTA MONICA, Calif., August 04, 2026--ZipRecruiter® (NYSE: ZIP), a leading online employment marketplace, today announced that the company will present and host individual and small group meetings at the following investor conferences:",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ziprecruiter-participate-upcoming-investor-conferences-130000280.html?.tsrc=rss",
+   "published_at": "2026-08-04T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:14Z",
+   "fingerprint": "8d6d0d319f34279e",
+   "primary_source": false,
+   "cluster_id": "82394681606c4336",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "51cc5271d6f77d86",
+   "symbols": [
+    "ZIP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "UL Solutions Inc. (ULS) Q2 Earnings and Revenues Top Estimates",
+   "summary": "UL Solutions Inc. (ULS) delivered earnings and revenue surprises of +5.36% and +0.51%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ul-solutions-inc-uls-q2-122505803.html?.tsrc=rss",
+   "published_at": "2026-08-04T12:25:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:14Z",
+   "fingerprint": "34fd3593d12c6abe",
+   "primary_source": false,
+   "cluster_id": "51cc5271d6f77d86",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7fccc8783e5e9468",
+   "symbols": [
+    "ZIP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Bright Horizons Family Solutions (BFAM) Beats Q2 Earnings and Revenue Estimates",
+   "summary": "Bright Horizons (BFAM) delivered earnings and revenue surprises of +5.79% and +0.73%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/bright-horizons-family-solutions-bfam-220005037.html?.tsrc=rss",
+   "published_at": "2026-07-30T22:00:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:14Z",
+   "fingerprint": "9bb91856cc8e1d87",
+   "primary_source": false,
+   "cluster_id": "7fccc8783e5e9468",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9f01faad68713c17",
+   "symbols": [
+    "ZIP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ZipRecruiter Finds That as AI Adoption Rises, So Does Hiring",
+   "summary": "SANTA MONICA, Calif., July 29, 2026--ZipRecruiter® (NYSE: ZIP), a leading online employment marketplace, released More Jobs, Higher Bar: The 2026 AI Employer Report, a new report on how AI is reshaping employer hiring plans and workplace expectations. Based on a survey of more th",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/ziprecruiter-finds-ai-adoption-rises-130000754.html?.tsrc=rss",
+   "published_at": "2026-07-29T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:14Z",
+   "fingerprint": "d9de1eb203369554",
+   "primary_source": false,
+   "cluster_id": "9f01faad68713c17",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "aa8cfda8a3c352b5",
+   "symbols": [
+    "ZIP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ZipRecruiter Appoints Carmen Chan as Chief Financial Officer",
+   "summary": "SANTA MONICA, Calif., July 28, 2026--ZipRecruiter (NYSE: ZIP), a leading online employment marketplace, today announced the appointment of Carmen Chan as Chief Financial Officer, effective August 17, 2026. Ms. Chan will oversee the company's Accounting and Finance organizations a",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ziprecruiter-appoints-carmen-chan-chief-130000620.html?.tsrc=rss",
+   "published_at": "2026-07-28T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:14Z",
+   "fingerprint": "1cd579f7d41b9e48",
+   "primary_source": false,
+   "cluster_id": "aa8cfda8a3c352b5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2d53ee51dd8f3b08",
+   "symbols": [
+    "ZIP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zip Research Reveals Two-Thirds of US Shoppers Turn to AI Before Making Purchase Decisions",
+   "summary": "NEW YORK, July 21, 2026--Zip Co Limited (ASX: ZIP), the digital financial services company offering innovative, people-centred products for everyday Americans, released new research revealing artificial intelligence is rapidly becoming embedded in the modern shopping journey. Ame",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/zip-research-reveals-two-thirds-140000154.html?.tsrc=rss",
+   "published_at": "2026-07-21T14:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:14Z",
+   "fingerprint": "26deff49020cd44a",
+   "primary_source": false,
+   "cluster_id": "2d53ee51dd8f3b08",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "83f657da11d074e2",
+   "symbols": [
+    "ZIP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ZipRecruiter to Report Second Quarter 2026 Financial Results on August 5, 2026",
+   "summary": "SANTA MONICA, Calif., July 15, 2026--ZipRecruiter® (NYSE:ZIP), a leading online employment marketplace, today announced that the company will report financial results for the quarter ended June 30, 2026, on Wednesday, August 5, 2026. On that day, management will host a conference",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ziprecruiter-report-second-quarter-2026-130000337.html?.tsrc=rss",
+   "published_at": "2026-07-15T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:14Z",
+   "fingerprint": "a230721dcc83deb8",
+   "primary_source": false,
+   "cluster_id": "83f657da11d074e2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "873cf460a741894b",
+   "symbols": [
+    "ZIP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zacks Industry Outlook Highlights UL Solutions, Willdan and ZipRecruiter",
+   "summary": "ULS, WLDN and ZIP are positioned to benefit as AI adoption and resilient service demand support business services growth.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-industry-outlook-highlights-ul-085500219.html?.tsrc=rss",
+   "published_at": "2026-07-06T08:55:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:14Z",
+   "fingerprint": "b2a269e98c8af79d",
+   "primary_source": false,
+   "cluster_id": "873cf460a741894b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1309d629e3444ca3",
+   "symbols": [
+    "ZIP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Business Services Stocks to Consider From a Prospering Industry",
+   "summary": "The Zacks Business Services industry is poised to prosper on rising demand and growing technology adoption. ULS, WLDN and ZIP appear well-positioned to ride on the demand strength.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-business-services-stocks-consider-154800912.html?.tsrc=rss",
+   "published_at": "2026-07-02T15:48:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:14Z",
+   "fingerprint": "b96babc7a21ca646",
+   "primary_source": false,
+   "cluster_id": "1309d629e3444ca3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b0dea225807d01b0",
+   "symbols": [
+    "ZIP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ZipRecruiter (ZIP) Is Attractively Priced Despite Fast-paced Momentum",
+   "summary": "If you are looking for stocks that have gained strong momentum recently but are still trading at reasonable prices, ZipRecruiter (ZIP) could be a great choice. It is one of the several stocks that passed through our 'Fast-Paced Momentum at a Bargain' screen.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ziprecruiter-zip-attractively-priced-despite-125502329.html?.tsrc=rss",
+   "published_at": "2026-07-02T12:55:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:14Z",
+   "fingerprint": "d3c0dce0bc9da3d2",
+   "primary_source": false,
+   "cluster_id": "b0dea225807d01b0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b0c3e8a4989077b8",
+   "symbols": [
+    "ZIP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ZipRecruiter Expands AI-Powered Job Search with Claude Integration",
+   "summary": "SANTA MONICA, Calif., June 09, 2026--ZipRecruiter® (NYSE: ZIP), a leading online employment marketplace, is expanding its AI job search offerings with the launch of the ZipRecruiter connector for Claude. ZipRecruiter is bringing its millions of job opportunities to Anthropic's AI",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/technology/articles/ziprecruiter-expands-ai-powered-job-130000161.html?.tsrc=rss",
+   "published_at": "2026-06-09T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:14Z",
+   "fingerprint": "7acc2c2b2b8a2652",
+   "primary_source": false,
+   "cluster_id": "b0c3e8a4989077b8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "8e13838201e182a8",

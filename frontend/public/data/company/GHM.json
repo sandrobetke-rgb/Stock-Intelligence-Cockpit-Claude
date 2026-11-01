@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 70.04000091552734,
     "day_low": 67.83999633789062,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 31.51707901244339,
+    "adx14": 38.001173185245825,
+    "ema10": 70.66925215811841,
+    "sma200": 91.31765026092529,
+    "perf_63d": -29.279148358743047,
+    "adr20_pct": 4.954698698569305,
+    "range10_pct": 15.916349485710102,
+    "high10_prev": 72.61000061035156,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.3,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -243,7 +277,17 @@
     "green": true,
     "day_high": 70.04000091552734,
     "day_low": 67.83999633789062,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 31.51707901244339,
+    "adx14": 38.001173185245825,
+    "ema10": 70.66925215811841,
+    "sma200": 91.31765026092529,
+    "perf_63d": -29.279148358743047,
+    "adr20_pct": 4.954698698569305,
+    "range10_pct": 15.916349485710102,
+    "high10_prev": 72.61000061035156,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -273,6 +317,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -280,7 +345,10 @@
     "S01": 0.5,
     "S02": 0.3,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -686,7 +754,7 @@
    "statement_at": "2026-10-17T00:34:24Z",
    "date_only": false,
    "timezone": "UTC",
-   "captured_at": "2026-11-01T08:48:59Z",
+   "captured_at": "2026-11-01T09:00:23Z",
    "verification": "Verified",
    "direction": "negative",
    "direction_basis": "algorithmic",
@@ -704,7 +772,7 @@
    "ambiguous_name": true,
    "bonus": {
     "expires_at": "2026-10-22T00:34:24Z",
-    "age_days": 15.34,
+    "age_days": 15.35,
     "active": false,
     "value": 0,
     "reason": "Älter als 5 Kalendertage – verfallen"
@@ -1047,7 +1115,8 @@
    "id": "730e6c97230e6ec0",
    "symbols": [
     "GHC",
-    "GHM"
+    "GHM",
+    "WSBC"
    ],
    "category": "market",
    "signal_type": "news",

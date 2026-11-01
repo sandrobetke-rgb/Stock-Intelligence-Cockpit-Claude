@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 10.880000114440918,
     "day_low": 10.520000457763672,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 68.28771444941617,
+    "adx14": 36.93116993242063,
+    "ema10": 10.549894862445019,
+    "sma200": 7.499649980068207,
+    "perf_63d": 31.734315958044434,
+    "adr20_pct": 4.800788800198214,
+    "range10_pct": 16.05690954476784,
+    "high10_prev": 11.420000076293945,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": true,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [
@@ -97,7 +128,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.0,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": false,
@@ -141,12 +175,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.2,
+   "score": 17.5,
    "drivers": [
-    "insider_activity",
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "insider_activity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -245,7 +280,17 @@
     "green": false,
     "day_high": 10.880000114440918,
     "day_low": 10.520000457763672,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 68.28771444941617,
+    "adx14": 36.93116993242063,
+    "ema10": 10.549894862445019,
+    "sma200": 7.499649980068207,
+    "perf_63d": 31.734315958044434,
+    "adr20_pct": 4.800788800198214,
+    "range10_pct": 16.05690954476784,
+    "high10_prev": 11.420000076293945,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -275,6 +320,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": true,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [
@@ -284,7 +350,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.0,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": false,
@@ -623,11 +692,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.2,
+  "score": 17.5,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 3.1,
@@ -645,27 +714,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 5,
+    "independent": 5,
+    "duplicates": 1,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "insider_activity",
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -683,7 +753,428 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "6e12d6fd7b22dd6e",
+   "symbols": [
+    "AMLX",
+    "XERS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can Corcept Therapeutics Stock Rally 40% After This Dip?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/cort/articles/620463/can-corcept-therapeutics-stock-rally-40-after-this-dip/2026-10-26?.tsrc=rss",
+   "published_at": "2026-10-26T07:11:47Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:00Z",
+   "fingerprint": "b72cddf5fb9ddb69",
+   "primary_source": false,
+   "cluster_id": "6e12d6fd7b22dd6e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fee49ef6892f23db",
+   "symbols": [
+    "XERS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xeris Biopharma to Report Third Quarter 2026 Financial Results and Business Highlights on November 5, 2026",
+   "summary": "CHICAGO, October 22, 2026--Xeris Biopharma Holdings, Inc. (Nasdaq: XERS), a leading, endocrine and rare disease biopharmaceutical company committed to helping people realize better lives through the development and commercialization of innovative medicines, today announced it wil",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xeris-biopharma-report-third-quarter-120000565.html?.tsrc=rss",
+   "published_at": "2026-10-22T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "16bd7d3ec9f4ba50",
+   "primary_source": false,
+   "cluster_id": "fee49ef6892f23db",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "de218d46c181be53",
+   "symbols": [
+    "XERS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xeris Biopharma Reinforces Leadership in Endocrinology With Data Disclosures Spanning Commercial Portfolio and Pipeline at Multiple Scientific Meetings",
+   "summary": "CHICAGO, October 15, 2026--XERIS BIOPHARMA REINFORCES LEADERSHIP IN ENDOCRINOLOGY WITH DATA DISCLOSURES SPANNING COMMERCIAL PORTFOLIO & PIPELINE AT MULTIPLE SCIENTIFIC MEETINGS",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xeris-biopharma-reinforces-leadership-endocrinology-120000138.html?.tsrc=rss",
+   "published_at": "2026-10-15T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "3430e283de1cb2a0",
+   "primary_source": false,
+   "cluster_id": "de218d46c181be53",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2e16dd8407475957",
+   "symbols": [
+    "XERS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Why Xeris Biopharma Holdings (XERS) Is Up 5.8% After Raising 2026 Revenue Guidance And Retiring Debt",
+   "summary": "Xeris Biopharma Holdings recently reported a record second quarter, highlighting strong revenue growth led by Recorlev, enhanced intellectual property protections, and the full retirement of its convertible notes, while also raising the lower end of its 2026 total revenue guidanc",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/why-xeris-biopharma-holdings-xers-191509723.html?.tsrc=rss",
+   "published_at": "2026-10-08T19:15:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "285978153980f009",
+   "primary_source": false,
+   "cluster_id": "2e16dd8407475957",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a3df542b30d5c6a7",
+   "symbols": [
+    "XERS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xeris Announces Inducement Grants Under NASDAQ Listing Rule 5635(c)(4)",
+   "summary": "CHICAGO, October 02, 2026--Xeris Announces Inducement Grants Under NASDAQ Listing Rule 5635(c)(4)",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xeris-announces-inducement-grants-under-210000470.html?.tsrc=rss",
+   "published_at": "2026-10-02T21:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "e2041c9de76b8ed1",
+   "primary_source": false,
+   "cluster_id": "dbe1ece2a43401c6",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ff0080cb2f04bef4",
+   "symbols": [
+    "XERS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Lundbeck approaches Xeris Biopharma over potential takeover, Bloomberg reports",
+   "summary": "Investing.com -- H Lundbeck (LON:0ND5) has expressed interest in a potential takeover of Chicago-based commercial-stage drugmaker Xeris Pharmaceuticals Inc (NASDAQ:XERS), according to people familiar with the matter cited by Bloomberg. The Danish pharmaceutical group has been wor",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/lundbeck-approaches-xeris-biopharma-over-201736994.html?.tsrc=rss",
+   "published_at": "2026-09-29T20:17:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "9ad1325d71cfe359",
+   "primary_source": false,
+   "cluster_id": "ff0080cb2f04bef4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "aee97300a68a6a21",
+   "symbols": [
+    "XERS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xeris Biopharma Reportedly Draws Takeover Interest — But Firm Says It’s ‘Not For Sale’",
+   "summary": "According to a Bloomberg report, Danish company Lundbeck has been working with advisers to explore a potential takeover of Xeris.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/xeris-biopharma-reportedly-draws-takeover-interest-but-firm-says-it-s-not-for-sale/cZMZJh5RBWe?.tsrc=rss",
+   "published_at": "2026-09-29T18:01:13Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "95f396b29a0fb4dd",
+   "primary_source": false,
+   "cluster_id": "aee97300a68a6a21",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e898e1c2aaaf66f0",
+   "symbols": [
+    "XERS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xeris Hosts Webinar Detailing Its Comprehensive Development Program for XP-8121, an Investigational, Once-Weekly Subcutaneous Levothyroxine for Hypothyroidism",
+   "summary": "CHICAGO, September 09, 2026--Xeris Biopharma Holdings, Inc. (Nasdaq: XERS), a fast-growing biopharmaceutical company committed to improving patient lives by developing and commercializing innovative products across a range of therapies, will host an XP-8121 Program Overview today",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xeris-hosts-webinar-detailing-comprehensive-123000088.html?.tsrc=rss",
+   "published_at": "2026-09-09T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "83d95bbb52cb0add",
+   "primary_source": false,
+   "cluster_id": "e898e1c2aaaf66f0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "099337e645ff3cae",
+   "symbols": [
+    "XERS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xeris Announces Details for XP-8121 Program Overview Webinar",
+   "summary": "CHICAGO, August 26, 2026--Xeris Biopharma Holdings, Inc. (Nasdaq: XERS), a fast-growing biopharmaceutical company committed to improving patient lives by developing and commercializing innovative products across a range of therapies, today announced details for a dedicated Progra",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xeris-announces-details-xp-8121-113000188.html?.tsrc=rss",
+   "published_at": "2026-08-26T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "212437ef1c03b044",
+   "primary_source": false,
+   "cluster_id": "099337e645ff3cae",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "13f3e9de5e5b4dac",
+   "symbols": [
+    "XERS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Why Xeris Biopharma Holdings (XERS) Is Up 8.4% After Tightening 2026 Revenue Guidance And Advancing XP-8121",
+   "summary": "Xeris Biopharma’s August 6, 2026 update showed second-quarter revenue rising to US$92.1 million while net loss widened to US$31.1 million, and the company tightened its full-year 2026 total revenue guidance to US$385 million–US$390 million. Alongside record quarterly revenue, Xer",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/why-xeris-biopharma-holdings-xers-061158348.html?.tsrc=rss",
+   "published_at": "2026-08-15T06:11:58Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "990249f1f5eee313",
+   "primary_source": false,
+   "cluster_id": "13f3e9de5e5b4dac",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0a0e7ae6811e0992",
+   "symbols": [
+    "XERS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xeris Biopharma Holdings (XERS) Posts Record Q2 Revenue, Is It Still A Bargain?",
+   "summary": "Xeris Biopharma Holdings (XERS) is back in focus after reporting record second quarter revenue of $92.1 million and tightening its 2026 revenue outlook to a range of $385 million to $390 million. See our latest analysis for Xeris Biopharma Holdings. The latest record quarter and ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xeris-biopharma-holdings-xers-posts-191055929.html?.tsrc=rss",
+   "published_at": "2026-08-14T19:10:55Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "66a0a0a4d2e966ca",
+   "primary_source": false,
+   "cluster_id": "0a0e7ae6811e0992",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f27beff688b42841",
+   "symbols": [
+    "XERS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xeris (XERS) Q2 2026 Earnings Call Transcript",
+   "summary": "Recorlev revenue surged 81% year-over-year, driving tightened full-year guidance to $385M–$390M.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/13/xeris-xers-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-13T16:15:40Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "e4ee85101aec3969",
+   "primary_source": false,
+   "cluster_id": "f27beff688b42841",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1528c8e36dcfeb6b",
+   "symbols": [
+    "XERS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xeris Biopharma Q2 Earnings Call Highlights",
+   "summary": "Xeris Biopharma (NASDAQ:XERS) reported second-quarter total revenue of $92.1 million, up 29% from a year earlier, as net product revenue increased 34% to $91 million. The company raised the low end of its full-year 2026 revenue outlook, now forecasting total revenue of $385 milli",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/xeris-biopharma-q2-earnings-call-highlights-2026-08-07/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-07T20:04:17Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "412e8781b94a721c",
+   "primary_source": false,
+   "cluster_id": "1528c8e36dcfeb6b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "94b48ad814dcf90e",
+   "symbols": [
+    "XERS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xeris Biopharma Holdings Inc (XERS) (Q2 2026) Earnings Call Highlights: Record Revenue and ...",
+   "summary": "Xeris Biopharma Holdings Inc (XERS) posts a 29% revenue surge to $92.1 million, driven by RECORLEV's 81% growth, and lifts full-year 2026 outlook.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xeris-biopharma-holdings-inc-xers-231347358.html?.tsrc=rss",
+   "published_at": "2026-08-06T23:13:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "7886e034a49b1923",
+   "primary_source": false,
+   "cluster_id": "94b48ad814dcf90e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9e17e8bbb25aa277",
+   "symbols": [
+    "XERS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compared to Estimates, Xeris Biopharma (XERS) Q2 Earnings: A Look at Key Metrics",
+   "summary": "The headline numbers for Xeris Biopharma (XERS) give insight into how the company performed in the quarter ended June 2026, but it may be worthwhile to compare some of its key metrics to Wall Street estimates and the year-ago actuals.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/compared-estimates-xeris-biopharma-xers-133008665.html?.tsrc=rss",
+   "published_at": "2026-08-06T13:30:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "3e43e186b66d1d13",
+   "primary_source": false,
+   "cluster_id": "9e17e8bbb25aa277",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a674cc6483465651",
+   "symbols": [
+    "XERS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xeris Biopharma Reports Second Quarter 2026 Financial Results",
+   "summary": "CHICAGO, August 06, 2026--Xeris Biopharma Holdings, Inc. (Nasdaq: XERS), a fast-growing biopharmaceutical company committed to improving patient lives by developing and commercializing innovative products across a range of therapies, today announced its financial results for the ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xeris-biopharma-reports-second-quarter-110000031.html?.tsrc=rss",
+   "published_at": "2026-08-06T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "4b944c668830c810",
+   "primary_source": false,
+   "cluster_id": "a674cc6483465651",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "77c900fb7bfb60d5",
+   "symbols": [
+    "XERS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xeris Biopharma to Report Second Quarter 2026 Financial Results on August 6, 2026",
+   "summary": "CHICAGO, July 23, 2026--Xeris Biopharma Holdings, Inc. (Nasdaq: XERS), a fast-growing biopharmaceutical company committed to improving patient lives by developing and commercializing innovative products across a range of therapies, today announced that the Company will release it",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xeris-biopharma-report-second-quarter-113000567.html?.tsrc=rss",
+   "published_at": "2026-07-23T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "ac86d49f86636e67",
+   "primary_source": false,
+   "cluster_id": "77c900fb7bfb60d5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4e4a199200a551c7",
+   "symbols": [
+    "GRDN",
+    "XERS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xeris Biopharma (XERS) Moves 6.8% Higher: Will This Strength Last?",
+   "summary": "Xeris Biopharma (XERS) was a big mover last session on higher-than-average trading volume. The latest trend in earnings estimate revisions might not help the stock continue moving higher in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xeris-biopharma-xers-moves-6-143700946.html?.tsrc=rss",
+   "published_at": "2026-07-08T14:37:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:48Z",
+   "fingerprint": "49befe3353d62c4f",
+   "primary_source": false,
+   "cluster_id": "4e4a199200a551c7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dbe1ece2a43401c6",
+   "symbols": [
+    "XERS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "CORRECTING and REPLACING Xeris Announces Inducement Grants Under Nasdaq Listing Rule 5635(C)(4)",
+   "summary": "CHICAGO, July 03, 2026--Please replace the release issued earlier today with the following corrected version that provides additional information regarding the inducement grants.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/xeris-announces-inducement-grants-under-200500769.html?.tsrc=rss",
+   "published_at": "2026-07-03T02:40:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:58Z",
+   "fingerprint": "9e52ca05c5c09e8e",
+   "primary_source": false,
+   "cluster_id": "dbe1ece2a43401c6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "1de448759163c747",

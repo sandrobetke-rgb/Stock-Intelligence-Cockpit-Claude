@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -35,16 +35,16 @@
     "close": 62.75,
     "change_pct": -2.304224318203818,
     "ema20": 62.9234957253882,
-    "ema50": 60.99378738773406,
-    "ema200": 57.22789998874402,
+    "ema50": 60.993787387700024,
+    "ema200": 57.2279000075267,
     "sma50": 60.45701599121094,
-    "rsi14": 51.50624770905479,
-    "rsi_min5": 51.50624770905479,
-    "atr14": 1.6682194199860059,
-    "atr_pct": 2.6585170039617623,
+    "rsi14": 51.50624770905515,
+    "rsi_min5": 51.50624770905515,
+    "atr14": 1.6682194199859333,
+    "atr_pct": 2.6585170039616464,
     "rvol": 0.9261647137971633,
     "vol30": 364933.3333333333,
-    "dist_ema200_pct": 9.649314429399137,
+    "dist_ema200_pct": 9.649314393411302,
     "dist_52w_high_pct": 7.092094833576068,
     "high_52w": 67.54000091552734,
     "macd_above_signal": false,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 64.0999984741211,
     "day_low": 62.5099983215332,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 20.517217184267764,
+    "adx14": 30.15006461684814,
+    "ema10": 63.54804933635074,
+    "sma200": 56.12954662322998,
+    "perf_63d": 10.77920112676063,
+    "adr20_pct": 2.2483908994941606,
+    "range10_pct": 4.609476775313293,
+    "high10_prev": 65.36000061035156,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.0,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 64.0999984741211,
     "entry_max": 65.38199844360352,
-    "stop": 61.59766934414208,
-    "risk_per_share": 2.5023291299790102,
-    "target_1": 69.10465673407911,
+    "stop": 61.59766934414219,
+    "risk_per_share": 2.5023291299789037,
+    "target_1": 69.1046567340789,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -137,11 +171,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 5.8,
+   "score": 21.9,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -203,16 +239,16 @@
     "close": 62.75,
     "change_pct": -2.304224318203818,
     "ema20": 62.9234957253882,
-    "ema50": 60.99378738773406,
-    "ema200": 57.22789998874402,
+    "ema50": 60.993787387700024,
+    "ema200": 57.2279000075267,
     "sma50": 60.45701599121094,
-    "rsi14": 51.50624770905479,
-    "rsi_min5": 51.50624770905479,
-    "atr14": 1.6682194199860059,
-    "atr_pct": 2.6585170039617623,
+    "rsi14": 51.50624770905515,
+    "rsi_min5": 51.50624770905515,
+    "atr14": 1.6682194199859333,
+    "atr_pct": 2.6585170039616464,
     "rvol": 0.9261647137971633,
     "vol30": 364933.3333333333,
-    "dist_ema200_pct": 9.649314429399137,
+    "dist_ema200_pct": 9.649314393411302,
     "dist_52w_high_pct": 7.092094833576068,
     "high_52w": 67.54000091552734,
     "macd_above_signal": false,
@@ -226,7 +262,17 @@
     "green": false,
     "day_high": 64.0999984741211,
     "day_low": 62.5099983215332,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 20.517217184267764,
+    "adx14": 30.15006461684814,
+    "ema10": 63.54804933635074,
+    "sma200": 56.12954662322998,
+    "perf_63d": 10.77920112676063,
+    "adr20_pct": 2.2483908994941606,
+    "range10_pct": 4.609476775313293,
+    "high10_prev": 65.36000061035156,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -256,6 +302,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -263,7 +330,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.0,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -276,9 +346,9 @@
    "plan": {
     "trigger": 64.0999984741211,
     "entry_max": 65.38199844360352,
-    "stop": 61.59766934414208,
-    "risk_per_share": 2.5023291299790102,
-    "target_1": 69.10465673407911,
+    "stop": 61.59766934414219,
+    "risk_per_share": 2.5023291299789037,
+    "target_1": 69.1046567340789,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -600,11 +670,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 5.8,
+  "score": 21.9,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 32.6,
@@ -622,26 +692,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -659,7 +731,448 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "c09be8bf91010bf8",
+   "symbols": [
+    "WOR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Robinhood Stock Drops. What’s Overshadowing the Earnings Beat.",
+   "summary": "Analysts are parsing the impact of Robinhood’s brisk rollout of new services and products.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/0def8cb9-b1d9-3741-8921-086a2bf90fe7/robinhood-stock-drops.-what%E2%80%99s.html?.tsrc=rss",
+   "published_at": "2026-10-28T14:50:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "e6e5d9339a783b64",
+   "primary_source": false,
+   "cluster_id": "c09be8bf91010bf8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "61e9bb6d62171e94",
+   "symbols": [
+    "WOR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Worthington Enterprises Participating in Baird Global Industrial Conference Following Investor and Analyst Day",
+   "summary": "COLUMBUS, Ohio, Oct. 22, 2026 (GLOBE NEWSWIRE) -- Worthington Enterprises Inc. (NYSE: WOR), a designer and manufacturer of market-leading brands that improve everyday life by elevating spaces and experiences, today announced it will participate in next month’s Baird Global Indust",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/worthington-enterprises-participating-baird-global-124000585.html?.tsrc=rss",
+   "published_at": "2026-10-22T12:40:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "97db6713360de44d",
+   "primary_source": false,
+   "cluster_id": "61e9bb6d62171e94",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2b7c0fb268fc713c",
+   "symbols": [
+    "WOR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Worthington Enterprises (WOR): Could A Handful Of Steel Tanks Redefine This Industrial Stock?",
+   "summary": "Worthington Enterprises (NYSE:WOR) presents a classic compounder thesis anchored by pristine balance sheet health, an exceptionally high trailing 12-month free cash flow conversion rate of 116% ($196 million record FCF relative to adjusted net earnings), and a low leverage profil",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/worthington-enterprises-wor-could-handful-201032065.html?.tsrc=rss",
+   "published_at": "2026-09-25T20:10:32Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "14b41985b2652440",
+   "primary_source": false,
+   "cluster_id": "2b7c0fb268fc713c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d0e51122201fb319",
+   "symbols": [
+    "WOR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Company News for Sep 24, 2026",
+   "summary": "Companies in The News Are: GIS,CBRL,WOR,IONQ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/company-news-sep-24-2026-123900390.html?.tsrc=rss",
+   "published_at": "2026-09-24T12:39:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "520e716bb10c3402",
+   "primary_source": false,
+   "cluster_id": "d0e51122201fb319",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "14003387d5a6d235",
+   "symbols": [
+    "WOR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Worthington Enterprises Inc (WOR) Q1 2027 Earnings Call Highlights: Data Center Momentum ...",
+   "summary": "Worthington Enterprises Inc (WOR) posted 13% sales growth and record free cash flow, with data center ASME tank revenue matching its entire prior fiscal year in just one quarter.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/worthington-enterprises-inc-wor-q1-230019746.html?.tsrc=rss",
+   "published_at": "2026-09-23T23:00:19Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "2d2ea6e6aac36cf4",
+   "primary_source": false,
+   "cluster_id": "14003387d5a6d235",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "96c0f39532ef9aef",
+   "symbols": [
+    "WOR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Worthington Enterprises Stock Is Up Today",
+   "summary": "The building products maker is an under-the-radar AI play.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/09/23/why-worthington-enterprises-stock-is-up-today/?.tsrc=rss",
+   "published_at": "2026-09-23T19:25:40Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "b9564a9cf664fda6",
+   "primary_source": false,
+   "cluster_id": "96c0f39532ef9aef",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "78ae7dd7297529c6",
+   "symbols": [
+    "WOR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Worthington (WOR) Q1 2027 Earnings Call Transcript",
+   "summary": "Free cash flow nearly doubled as data center tank revenue surged.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/09/23/worthington-wor-q1-2027-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-09-23T18:28:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "f105fcdb970c3c48",
+   "primary_source": false,
+   "cluster_id": "78ae7dd7297529c6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "46aa5ad6e827c0dd",
+   "symbols": [
+    "WOR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Is Worthington Enterprises (WOR) A Bargain On Its Latest Earnings And Dividend Update?",
+   "summary": "Worthington Enterprises (WOR) is back in focus after its fiscal first quarter update, with higher sales, firmer earnings per share, and a fresh quarterly dividend giving investors new numbers to dissect. Worthington Enterprises has ridden this earnings and dividend news into a st",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/worthington-enterprises-wor-bargain-latest-171354979.html?.tsrc=rss",
+   "published_at": "2026-09-23T17:13:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "656a4be3736bebe8",
+   "primary_source": false,
+   "cluster_id": "46aa5ad6e827c0dd",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3f4abef25f51acca",
+   "symbols": [
+    "WOR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Worthington Enterprises Shares Jump 15% on Strong Earnings and Cash Flow Boost",
+   "summary": "Worthington Enterprises Shares Explode After Strong Revenue Growth and Buybacks",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/worthington-enterprises-shares-jump-15-150926543.html?.tsrc=rss",
+   "published_at": "2026-09-23T15:09:26Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "51eab0ac4d645b39",
+   "primary_source": false,
+   "cluster_id": "3f4abef25f51acca",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6296c7ff67bfd2f8",
+   "symbols": [
+    "WOR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How the AI Data Center Boom Is Pushing This Industrial Manufacturing Stock Higher",
+   "summary": "Worthington Enterprises stock rises sharply as demand for data-center cooling infrastructure powers its strong earnings.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/df7f45b2-8da3-36d8-8f26-fadd4ecd46a8/how-the-ai-data-center-boom.html?.tsrc=rss",
+   "published_at": "2026-09-23T15:08:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "5a4c4bfa53dedb0e",
+   "primary_source": false,
+   "cluster_id": "6296c7ff67bfd2f8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cecdb030212874f9",
+   "symbols": [
+    "WOR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Worthington Enterprises Q1 Earnings Call Highlights",
+   "summary": "Worthington Enterprises (NYSE:WOR) reported a 13% increase in fiscal 2027 first-quarter sales to $344 million, supported by 7% organic growth and $19 million of revenue from recent acquisitions. Adjusted earnings per share rose to $0.82 from $0.78 a year earlier, while adjusted E",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-worthington-enterprises-q1-earnings-call-highlights-2026-09-23/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-09-23T14:03:31Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "412f8fc88a7ccda2",
+   "primary_source": false,
+   "cluster_id": "cecdb030212874f9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f14f1808dc053ebb",
+   "symbols": [
+    "WOR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Worthington Industries, Inc. Q1 2027 Earnings Call Summary",
+   "summary": "Moby summary of Worthington Industries, Inc.'s Q1 2027 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-worthington-industries-inc-q1-2027-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-09-23T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "4379e426b7c22194",
+   "primary_source": false,
+   "cluster_id": "f14f1808dc053ebb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ca4065a96bc2074d",
+   "symbols": [
+    "WOR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Worthington Enterprises (WOR) Tops Q1 Earnings and Revenue Estimates",
+   "summary": "Worthington Enterprises (WOR) delivered earnings and revenue surprises of +10.81% and +3.55%, respectively, for the quarter ended August 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/worthington-enterprises-wor-tops-q1-212002201.html?.tsrc=rss",
+   "published_at": "2026-09-22T21:20:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "7a62d7ca556a59f3",
+   "primary_source": false,
+   "cluster_id": "ca4065a96bc2074d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d1dd694051d42ed2",
+   "symbols": [
+    "WOR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Worthington (NYSE:WOR) Delivers Strong Q3 CY2026 Numbers, Stock Soars",
+   "summary": "Diversified industrial manufacturing company Worthington (NYSE:WOR) reported revenue ahead of Wall Street’s expectations in Q3 CY2026, with sales up 13.2% year on year to $343.9 million. Its non-GAAP profit of $0.82 per share was 9.3% above analysts’ consensus estimates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/worthington-nyse-wor-delivers-strong-202435787.html?.tsrc=rss",
+   "published_at": "2026-09-22T20:24:35Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "577e806139d3fad4",
+   "primary_source": false,
+   "cluster_id": "d1dd694051d42ed2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9cba1cd4428582e2",
+   "symbols": [
+    "WOR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Worthington Enterprises Reports First Quarter Fiscal 2027 Results",
+   "summary": "COLUMBUS, Ohio, Sept. 22, 2026 (GLOBE NEWSWIRE) -- Worthington Enterprises Inc. (NYSE: WOR), a designer and manufacturer of market-leading products and solutions for building, trade and specialty applications, today reported results for its fiscal 2027 first quarter ended August ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/worthington-enterprises-reports-first-quarter-201000470.html?.tsrc=rss",
+   "published_at": "2026-09-22T20:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "20898b38009bf1e7",
+   "primary_source": false,
+   "cluster_id": "9cba1cd4428582e2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "93749e19a4785f4a",
+   "symbols": [
+    "WOR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Worthington Enterprises Declares Quarterly Dividend; Recognizes Contributions of Three Retiring Directors",
+   "summary": "COLUMBUS, Ohio, Sept. 22, 2026 (GLOBE NEWSWIRE) -- The Worthington Enterprises Inc. (NYSE: WOR) board of directors today declared a quarterly dividend of $0.20 per share. The dividend is payable on December 29, 2026, to shareholders of record on December 15, 2026. The company has",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/worthington-enterprises-declares-quarterly-dividend-162000909.html?.tsrc=rss",
+   "published_at": "2026-09-22T16:20:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "b9fc6a7b65f812e4",
+   "primary_source": false,
+   "cluster_id": "93749e19a4785f4a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cdf2b37bcb002569",
+   "symbols": [
+    "WOR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "How To Earn $500 A Month From Worthington Enterprises Stock Ahead Of Q1 Earnings",
+   "summary": "As Worthington Enterprises, Inc. prepares to release first-quarter earnings after the closing bell on Tuesday, Sept. 22, some investors may be eyeing potential gains from its dividends. Currently, Worthington has an annual dividend yield of 1.36%, with a quarterly dividend...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/earn-500-month-worthington-enterprises-203110190.html?.tsrc=rss",
+   "published_at": "2026-09-18T20:31:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "a823af181461b50b",
+   "primary_source": false,
+   "cluster_id": "cdf2b37bcb002569",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "57dfe066ff4a817d",
+   "symbols": [
+    "WOR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Strength Seen in Worthington Enterprises (WOR): Can Its 8.2% Jump Turn into More Strength?",
+   "summary": "Worthington Enterprises (WOR) was a big mover last session on higher-than-average trading volume. The latest trend in earnings estimate revisions might not help the stock continue moving higher in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/strength-seen-worthington-enterprises-wor-142000856.html?.tsrc=rss",
+   "published_at": "2026-09-18T14:20:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "448d709304bd0eb3",
+   "primary_source": false,
+   "cluster_id": "57dfe066ff4a817d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a73faa4d09d7739a",
+   "symbols": [
+    "WOR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How Investors Are Reacting To Worthington (WOR) Linking Sustainability Targets With Automation And AI Investments",
+   "summary": "Earlier this year, Worthington Enterprises released its annual Corporate Citizenship and Sustainability Report, outlining progress across people, planet, products and governance, alongside advances in automation and AI-enabled operational technologies. The combination of expanded",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/investors-reacting-worthington-wor-linking-011651100.html?.tsrc=rss",
+   "published_at": "2026-09-18T01:16:51Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "77f8318447ec56c5",
+   "primary_source": false,
+   "cluster_id": "a73faa4d09d7739a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ac7c85124f4625eb",
+   "symbols": [
+    "WOR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Worthington Enterprises Highlights Measurable Results  in 2026 Corporate Citizenship and Sustainability Report",
+   "summary": "COLUMBUS, Ohio, Sept. 17, 2026 (GLOBE NEWSWIRE) -- Worthington Enterprises Inc. (NYSE: WOR), a designer and manufacturer of market-leading brands that help improve everyday life by elevating spaces and experiences, today published its annual Corporate Citizenship and Sustainabili",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/worthington-enterprises-highlights-measurable-results-121500321.html?.tsrc=rss",
+   "published_at": "2026-09-17T12:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "246aeb84bf87b08a",
+   "primary_source": false,
+   "cluster_id": "ac7c85124f4625eb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

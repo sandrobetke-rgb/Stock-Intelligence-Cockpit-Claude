@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 109.9000015258789,
     "day_low": 103.51000213623047,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 0.6669007942292495,
+    "adx14": 35.477986879206036,
+    "ema10": 136.70426261460202,
+    "sma200": 114.98710010528565,
+    "perf_63d": -7.942901743502684,
+    "adr20_pct": 4.573464502819612,
+    "range10_pct": 46.76113319113044,
+    "high10_prev": 159.5,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -145,7 +179,7 @@
     "freshness"
    ],
    "independent_7d": 22,
-   "independent_24h": 12
+   "independent_24h": 10
   },
   "political": {
    "relevance": 0,
@@ -156,11 +190,11 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 17,
-   "manipulation_risk": "unauffällig",
-   "mentions_24h": 5,
-   "sentiment_7d": -0.06,
-   "bullish_7d": 2,
+   "mentions_7d": 48,
+   "manipulation_risk": "auffaellig",
+   "mentions_24h": 30,
+   "sentiment_7d": 0.16,
+   "bullish_7d": 9,
    "bearish_7d": 3
   },
   "insider": {
@@ -239,7 +273,17 @@
     "green": false,
     "day_high": 109.9000015258789,
     "day_low": 103.51000213623047,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 0.6669007942292495,
+    "adx14": 35.477986879206036,
+    "ema10": 136.70426261460202,
+    "sma200": 114.98710010528565,
+    "perf_63d": -7.942901743502684,
+    "adr20_pct": 4.573464502819612,
+    "range10_pct": 46.76113319113044,
+    "high10_prev": 159.5,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -269,6 +313,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -276,7 +341,10 @@
     "S01": 0.5,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -627,8 +695,8 @@
   },
   "windows": {
    "24h": {
-    "signals": 12,
-    "independent": 12,
+    "signals": 10,
+    "independent": 10,
     "duplicates": 0,
     "sources": 2,
     "primary": 0,
@@ -679,6 +747,11 @@
   {
    "id": "215fddafaba72d91",
    "symbols": [
+    "AAPL",
+    "AMD",
+    "AMGN",
+    "AMZN",
+    "ANET",
     "GOOG",
     "GOOGL",
     "INTC",
@@ -926,7 +999,8 @@
     "GOOG",
     "GOOGL",
     "INTC",
-    "NOW"
+    "NOW",
+    "ZETA"
    ],
    "category": "market",
    "signal_type": "news",
@@ -1381,21 +1455,21 @@
   }
  ],
  "social_detail": {
-  "mentions_24h": 5,
-  "mentions_7d": 17,
-  "mentions_30d": 17,
-  "change_vs_baseline_pct": 192,
-  "engagement_7d": 34.0,
-  "sentiment_7d": -0.06,
+  "mentions_24h": 30,
+  "mentions_7d": 48,
+  "mentions_30d": 48,
+  "change_vs_baseline_pct": 1067,
+  "engagement_7d": 114.0,
+  "sentiment_7d": 0.16,
   "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
-  "bullish_7d": 2,
+  "bullish_7d": 9,
   "bearish_7d": 3,
   "by_platform_7d": {
-   "stocktwits": 12,
+   "stocktwits": 43,
    "reddit": 5
   },
   "communities_7d": {
-   "StockTwits": 12,
+   "StockTwits": 43,
    "r/ValueInvesting": 3,
    "r/StockMarket": 2
   },
@@ -1403,9 +1477,41 @@
    "reddit",
    "stocktwits"
   ],
-  "manipulation_flags": [],
-  "manipulation_risk": "unauffällig",
+  "manipulation_flags": [
+   "Plötzlicher Erwähnungsanstieg (>5x Basis)"
+  ],
+  "manipulation_risk": "auffaellig",
   "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "MakeWiseDecisions2027",
+    "posted_at": "2026-10-30T16:57:52Z",
+    "url": "https://stocktwits.com/MakeWiseDecisions2027/message/667788837",
+    "text": "$RZLV RZLV is 2 cheap.  SOLD some of my other holdings today to add more RZLV $SHOP $NOW $CRM",
+    "engagement": 16.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "nanidog",
+    "posted_at": "2026-10-31T17:39:46Z",
+    "url": "https://stocktwits.com/nanidog/message/667851025",
+    "text": "$GOOG $NOW   2  trillion wipe out in 2 days. Mini stock market crash. Bounce back is in the order",
+    "engagement": 12.0,
+    "sentiment_label": "Bullish"
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "Roar01",
+    "posted_at": "2026-10-31T18:05:10Z",
+    "url": "https://stocktwits.com/Roar01/message/667851573",
+    "text": "$GOOGL $SNDK $NOW bull run Monday - IRAN deal imminent 🍀🍀🍀🍀🍀🍀",
+    "engagement": 9.0,
+    "sentiment_label": "Bullish"
+   },
    {
     "platform": "stocktwits",
     "community": "StockTwits",
@@ -1419,42 +1525,12 @@
    {
     "platform": "stocktwits",
     "community": "StockTwits",
-    "author": "Philfoundation4",
-    "posted_at": "2026-10-30T18:55:50Z",
-    "url": "https://stocktwits.com/Philfoundation4/message/667808409",
-    "text": "$ASTS $INTC $NOW $SMCI $UPST you’re a fucking ray of sunshine",
+    "author": "Academia",
+    "posted_at": "2026-10-31T18:42:06Z",
+    "url": "https://stocktwits.com/Academia/message/667852457",
+    "text": "$GOOG $GOOGL $AAPL $NOW $QQQ \n\nJuat wait until next week!",
     "engagement": 6.0,
     "sentiment_label": null
-   },
-   {
-    "platform": "stocktwits",
-    "community": "StockTwits",
-    "author": "AshHydrogen",
-    "posted_at": "2026-10-31T17:49:43Z",
-    "url": "https://stocktwits.com/AshHydrogen/message/667851251",
-    "text": "$PLTR  \n \n$SPY when are we getting FAKE AI CUSTOMERS FROM:  $MSFT $CRM $NOW ???… \n \nhttps://sih-st-charts.stocktwits-cdn.com/production/original_537983025.png",
-    "engagement": 4.0,
-    "sentiment_label": null
-   },
-   {
-    "platform": "stocktwits",
-    "community": "StockTwits",
-    "author": "Trying2hard",
-    "posted_at": "2026-10-30T19:03:54Z",
-    "url": "https://stocktwits.com/Trying2hard/message/667809672",
-    "text": "$SMCI $INTC $ASTS $UPST $NOW move the hell back to where you came from sleaze",
-    "engagement": 3.0,
-    "sentiment_label": null
-   },
-   {
-    "platform": "stocktwits",
-    "community": "StockTwits",
-    "author": "US_Stock_Bubble2026",
-    "posted_at": "2026-10-30T18:36:46Z",
-    "url": "https://stocktwits.com/US_Stock_Bubble2026/message/667805232",
-    "text": "There is a huge potential that the terrorist US Government would announce more bad news on the weekend. Monday could be even worse. Be prepared for DISASTER $SMCI $INTC $ASTS $UPST $NOW",
-    "engagement": 3.0,
-    "sentiment_label": "Bearish"
    }
   ]
  },

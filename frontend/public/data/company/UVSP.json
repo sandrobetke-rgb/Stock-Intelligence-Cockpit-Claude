@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -35,16 +35,16 @@
     "close": 39.599998474121094,
     "change_pct": 0.6864902885746149,
     "ema20": 41.30258818990435,
-    "ema50": 41.62846061519121,
-    "ema200": 39.20743691158496,
+    "ema50": 41.628460615321735,
+    "ema200": 39.20743695113576,
     "sma50": 41.64899993896484,
-    "rsi14": 34.99166115133377,
-    "rsi_min5": 32.16140435929337,
-    "atr14": 0.8544350071024951,
-    "atr_pct": 2.1576642424894916,
+    "rsi14": 34.991661151312314,
+    "rsi_min5": 32.16140435926697,
+    "atr14": 0.8544350071026655,
+    "atr_pct": 2.157664242489922,
     "rvol": 1.7621389834783705,
     "vol30": 212706.66666666666,
-    "dist_ema200_pct": 1.0012426046144718,
+    "dist_ema200_pct": 1.0012425027287053,
     "dist_52w_high_pct": 12.44143803391159,
     "high_52w": 45.22687169012465,
     "macd_above_signal": false,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 39.93000030517578,
     "day_low": 39.189998626708984,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 17.409434756227924,
+    "adx14": 21.57925046775872,
+    "ema10": 41.08589490902066,
+    "sma200": 39.03495185852051,
+    "perf_63d": -10.55253138898211,
+    "adr20_pct": 1.8348610517444908,
+    "range10_pct": 9.638560107691617,
+    "high10_prev": 42.77000045776367,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.7,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": true,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 39.93000030517578,
     "entry_max": 40.728600311279294,
-    "stop": 38.64834779452204,
-    "risk_per_share": 1.2816525106537426,
-    "target_1": 42.49330532648327,
+    "stop": 38.64834779452178,
+    "risk_per_share": 1.2816525106539984,
+    "target_1": 42.49330532648378,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -138,14 +172,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 62.0,
+   "score": 56.1,
    "drivers": [
     "news_flow",
     "source_diversity",
-    "freshness"
+    "price_volume_anomaly"
    ],
    "independent_7d": 10,
-   "independent_24h": 2
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -219,16 +253,16 @@
     "close": 39.599998474121094,
     "change_pct": 0.6864902885746149,
     "ema20": 41.30258818990435,
-    "ema50": 41.62846061519121,
-    "ema200": 39.20743691158496,
+    "ema50": 41.628460615321735,
+    "ema200": 39.20743695113576,
     "sma50": 41.64899993896484,
-    "rsi14": 34.99166115133377,
-    "rsi_min5": 32.16140435929337,
-    "atr14": 0.8544350071024951,
-    "atr_pct": 2.1576642424894916,
+    "rsi14": 34.991661151312314,
+    "rsi_min5": 32.16140435926697,
+    "atr14": 0.8544350071026655,
+    "atr_pct": 2.157664242489922,
     "rvol": 1.7621389834783705,
     "vol30": 212706.66666666666,
-    "dist_ema200_pct": 1.0012426046144718,
+    "dist_ema200_pct": 1.0012425027287053,
     "dist_52w_high_pct": 12.44143803391159,
     "high_52w": 45.22687169012465,
     "macd_above_signal": false,
@@ -242,7 +276,17 @@
     "green": false,
     "day_high": 39.93000030517578,
     "day_low": 39.189998626708984,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 17.409434756227924,
+    "adx14": 21.57925046775872,
+    "ema10": 41.08589490902066,
+    "sma200": 39.03495185852051,
+    "perf_63d": -10.55253138898211,
+    "adr20_pct": 1.8348610517444908,
+    "range10_pct": 9.638560107691617,
+    "high10_prev": 42.77000045776367,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -272,6 +316,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -279,7 +344,10 @@
     "S01": 0.5,
     "S02": 0.7,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": true,
@@ -292,9 +360,9 @@
    "plan": {
     "trigger": 39.93000030517578,
     "entry_max": 40.728600311279294,
-    "stop": 38.64834779452204,
-    "risk_per_share": 1.2816525106537426,
-    "target_1": 42.49330532648327,
+    "stop": 38.64834779452178,
+    "risk_per_share": 1.2816525106539984,
+    "target_1": 42.49330532648378,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -531,10 +599,10 @@
   ]
  },
  "intelligence_detail": {
-  "score": 62.0,
+  "score": 56.1,
   "components": {
    "news_flow": 100.0,
-   "freshness": 100.0,
+   "freshness": 50,
    "source_diversity": 80,
    "primary_sources": 0,
    "analyst_activity": 0,
@@ -544,8 +612,8 @@
   },
   "windows": {
    "24h": {
-    "signals": 2,
-    "independent": 2,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
@@ -574,7 +642,7 @@
   "drivers": [
    "news_flow",
    "source_diversity",
-   "freshness"
+   "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },

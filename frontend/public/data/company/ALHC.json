@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 8.149999618530273,
     "day_low": 7.171000003814697,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 5.759787579398818,
+    "adx14": 36.60393787704084,
+    "ema10": 8.00461601153389,
+    "sma200": 16.807475016117095,
+    "perf_63d": -50.06868288869253,
+    "adr20_pct": 6.768361653777679,
+    "range10_pct": 10.897428295002754,
+    "high10_prev": 8.649999618530273,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.4,
     "S03": 0.6666666666666666,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": false,
@@ -139,14 +173,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 64.7,
+   "score": 74.2,
    "drivers": [
     "news_flow",
     "source_diversity",
-    "price_volume_anomaly"
+    "freshness"
    ],
-   "independent_7d": 12,
-   "independent_24h": 1
+   "independent_7d": 15,
+   "independent_24h": 4
   },
   "political": {
    "relevance": 0,
@@ -244,7 +278,17 @@
     "green": false,
     "day_high": 8.149999618530273,
     "day_low": 7.171000003814697,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 5.759787579398818,
+    "adx14": 36.60393787704084,
+    "ema10": 8.00461601153389,
+    "sma200": 16.807475016117095,
+    "perf_63d": -50.06868288869253,
+    "adr20_pct": 6.768361653777679,
+    "range10_pct": 10.897428295002754,
+    "high10_prev": 8.649999618530273,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -274,6 +318,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -281,7 +346,10 @@
     "S01": 0.5,
     "S02": 0.4,
     "S03": 0.6666666666666666,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": false,
@@ -620,50 +688,50 @@
   ]
  },
  "intelligence_detail": {
-  "score": 64.7,
+  "score": 74.2,
   "components": {
    "news_flow": 100.0,
-   "freshness": 50,
+   "freshness": 100.0,
    "source_diversity": 100.0,
    "primary_sources": 0,
-   "analyst_activity": 35,
+   "analyst_activity": 70,
    "price_volume_anomaly": 61.6,
    "social_attention": null,
    "insider_activity": 10
   },
   "windows": {
    "24h": {
-    "signals": 1,
-    "independent": 1,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    },
    "7d": {
-    "signals": 12,
-    "independent": 12,
+    "signals": 15,
+    "independent": 15,
     "duplicates": 0,
     "sources": 5,
     "primary": 0,
-    "analyst_changes": 1,
+    "analyst_changes": 2,
     "verified": 0
    },
    "30d": {
-    "signals": 18,
-    "independent": 18,
+    "signals": 21,
+    "independent": 21,
     "duplicates": 0,
     "sources": 5,
     "primary": 0,
-    "analyst_changes": 1,
+    "analyst_changes": 2,
     "verified": 0
    }
   },
   "drivers": [
    "news_flow",
    "source_diversity",
-   "price_volume_anomaly"
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -682,6 +750,76 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "9c7f99b05b7b3790",
+   "symbols": [
+    "ALHC"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Alignment Healthcare (ALHC) Stock Looks Reasonably Valued Following The CMS Ratings Cut",
+   "summary": "Alignment Healthcare stock has been hit hard over the past few years, and with earnings now under a brighter spotlight, investors are asking whether the current valuation still lines up with the story they thought they owned. A steep share price reset plus questions around the qu",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/alignment-healthcare-alhc-stock-looks-041642269.html?.tsrc=rss",
+   "published_at": "2026-11-01T04:16:42Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:04:10Z",
+   "fingerprint": "d39c8de4a203f2c9",
+   "primary_source": false,
+   "cluster_id": "9c7f99b05b7b3790",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Alignment Healthcare (ALHC) Stock sieht nach den CMS-Ratings angemessen bewertet aus"
+  },
+  {
+   "id": "8547cf9519ba5076",
+   "symbols": [
+    "ALHC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ALHC Q3 deep dive: rising costs, claims volatility, and cautious outlook amid Stars setback",
+   "summary": "Health insurance company Alignment Healthcare (NASDAQ:ALHC) beat Wall Street’s revenue expectations in Q3 2026, with sales up 36.7% year on year to $1.36 billion. Revenue guidance for the full year exceeded analysts’ estimates, but next quarter’s guidance of $1.32 billion was les",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/alhc-q3-deep-dive-rising-023500931.html?.tsrc=rss",
+   "published_at": "2026-11-01T02:35:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:04:10Z",
+   "fingerprint": "ed448bcac6b6bb17",
+   "primary_source": false,
+   "cluster_id": "8547cf9519ba5076",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "ALHC Q3 Deep Dive: Steigende Kosten, Schadensvolatilität und vorsichtige Aussichten inmitten des Stars-Rückschlags"
+  },
+  {
+   "id": "e27c523399d692de",
+   "symbols": [
+    "ALHC",
+    "ASTH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What’s Behind Alignment Healthcare (ALHC) Stock’s Latest Move?",
+   "summary": "Alignment Healthcare (ALHC) just released its third quarter 2026 report, pairing revenue of about US$1.36b with a net loss of US$8.05m, along with updated guidance that lifts full year sales expectations. The short-term picture has been rough for Alignment Healthcare, with the sh",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/behind-alignment-healthcare-alhc-stock-201017157.html?.tsrc=rss",
+   "published_at": "2026-10-31T20:10:17Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:04:10Z",
+   "fingerprint": "4b15d4875a7906b9",
+   "primary_source": false,
+   "cluster_id": "e27c523399d692de",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Was steckt hinter dem neuesten Schritt der Alignment Healthcare (ALHC)?"
+  },
   {
    "id": "bb96368a073cc818",
    "symbols": [
@@ -769,8 +907,7 @@
    "cluster_id": "868155d11d3892e5",
    "independence": "original",
    "verification": "Unverified",
-   "feed": "yahoo_rss",
-   "title_de": "Was Alignment Healthcare (ALHC) auf seinem Q3-Gewinnaufruf sagte"
+   "feed": "yahoo_rss"
   },
   {
    "id": "8702cff9370d05e6",

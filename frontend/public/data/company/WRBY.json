@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 25.020000457763672,
     "day_low": 23.834999084472656,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 33.39163920671545,
+    "adx14": 10.925738075313408,
+    "ema10": 24.99506039946905,
+    "sma200": 25.16125,
+    "perf_63d": -12.977369120174764,
+    "adr20_pct": 5.140973253387751,
+    "range10_pct": 14.102018543876248,
+    "high10_prev": 26.6200008392334,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.8,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": true,
@@ -137,12 +171,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.1,
+   "score": 24.4,
    "drivers": [
-    "insider_activity",
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "insider_activity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -241,7 +276,17 @@
     "green": false,
     "day_high": 25.020000457763672,
     "day_low": 23.834999084472656,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 33.39163920671545,
+    "adx14": 10.925738075313408,
+    "ema10": 24.99506039946905,
+    "sma200": 25.16125,
+    "perf_63d": -12.977369120174764,
+    "adr20_pct": 5.140973253387751,
+    "range10_pct": 14.102018543876248,
+    "high10_prev": 26.6200008392334,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -271,6 +316,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -278,7 +344,10 @@
     "S01": 0.5,
     "S02": 0.8,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": true,
@@ -615,11 +684,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.1,
+  "score": 24.4,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 5.9,
@@ -637,27 +706,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 7,
+    "independent": 7,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "insider_activity",
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -675,7 +745,432 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "d816c837e4a68143",
+   "symbols": [
+    "SBH",
+    "WRBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 consumer stocks we think twice about",
+   "summary": "Retailers are adapting their business models as technology changes how people shop. One initiative that has proven effective is the expansion into e-commerce, which has helped the industry sustain its same-store sales growth and keep pace with the S&amp;P 500’s 7.5% return over t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-consumer-stocks-think-twice-170729950.html?.tsrc=rss",
+   "published_at": "2026-10-30T17:07:29Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:04Z",
+   "fingerprint": "765f043101e57005",
+   "primary_source": false,
+   "cluster_id": "d816c837e4a68143",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "3 Verbraucheraktien, über die wir zweimal nachdenken"
+  },
+  {
+   "id": "bda6846c08cd60e0",
+   "symbols": [
+    "CL",
+    "WRBY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Colgate Q3 Earnings Beat Estimates on Organic Sales & Pricing Gains",
+   "summary": "CL's Q3 earnings and sales beat estimates, fueled by organic growth, pricing gains and productivity efforts, prompting a higher 2026 profitability outlook.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/colgate-q3-earnings-beat-estimates-143700828.html?.tsrc=rss",
+   "published_at": "2026-10-30T14:37:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:41Z",
+   "fingerprint": "1dc63c029bfe12ee",
+   "primary_source": false,
+   "cluster_id": "bda6846c08cd60e0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Colgate Q3-Ergebnisse schlagen Schätzungen für organische Verkäufe und Preissteigerungen"
+  },
+  {
+   "id": "c4420dbe319b5ff3",
+   "symbols": [
+    "WRBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How Tecovas went from online-only to 50+ stores nationwide",
+   "summary": "Tecovas CEO David Lafitte joins host Elizabeth Gore to talk about how the \"Warby Parker of cowboy boots\" grew into a Western lifestyle brand with 50+ stores nationwide, and why “radical hospitality” is critical to the company’s success.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/video/tecovas-went-online-only-50-100000106.html?.tsrc=rss",
+   "published_at": "2026-10-20T10:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:48Z",
+   "fingerprint": "38c26b4988f12822",
+   "primary_source": false,
+   "cluster_id": "c4420dbe319b5ff3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e9e3c42b56b552cc",
+   "symbols": [
+    "WRBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Samsung’s AI glasses make a bold bet against Meta",
+   "summary": "Samsung is bringing Gemini into Meta’s back yard",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "thestreet.com",
+   "url": "https://www.thestreet.com/investing/samsungs-ai-glasses-make-a-bold-bet-against-meta?.tsrc=rss",
+   "published_at": "2026-10-16T02:03:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:48Z",
+   "fingerprint": "7d592ee49650ed42",
+   "primary_source": false,
+   "cluster_id": "e9e3c42b56b552cc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6e1f0b473a0e01df",
+   "symbols": [
+    "WRBY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Warby Parker to Announce Third Quarter 2026 Financial Results on November 5, 2026",
+   "summary": "NEW YORK, October 15, 2026--Warby Parker Inc. (NYSE: WRBY) (the \"Company\"), a direct-to-consumer lifestyle brand focused on vision for all, today announced that its financial results for the third quarter ended September 30, 2026, will be released before market open on November 5",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/warby-parker-announce-third-quarter-200500421.html?.tsrc=rss",
+   "published_at": "2026-10-15T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:48Z",
+   "fingerprint": "5ea6a0b8aae595d1",
+   "primary_source": false,
+   "cluster_id": "6e1f0b473a0e01df",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "32e652d97f0c7cd9",
+   "symbols": [
+    "WRBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Tractor Supply, Warby Parker, and Sportsman's Warehouse Stocks Trade Down, What You Need To Know",
+   "summary": "A number of stocks fell in the afternoon session after major indices pulled back and retail equities faced pressure as the Bureau of Labor Statistics reported a hotter-than-expected September inflation print, pushing Treasury yields higher.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/tractor-supply-warby-parker-sportsmans-205207208.html?.tsrc=rss",
+   "published_at": "2026-10-14T20:52:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:48Z",
+   "fingerprint": "43c1414efae50701",
+   "primary_source": false,
+   "cluster_id": "32e652d97f0c7cd9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c7c06fb8a79e9694",
+   "symbols": [
+    "MCRI",
+    "WRBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Cash-Producing Stocks with Warning Signs",
+   "summary": "Generating cash is essential for any business, but not all cash-rich companies are great investments. Some produce plenty of cash but fail to allocate it effectively, leading to missed opportunities.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-cash-producing-stocks-warning-094647761.html?.tsrc=rss",
+   "published_at": "2026-10-14T09:46:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:33Z",
+   "fingerprint": "74abc57b211f7d36",
+   "primary_source": false,
+   "cluster_id": "c7c06fb8a79e9694",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7f97d7debe202ca4",
+   "symbols": [
+    "WRBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Stocks making big moves yesterday: FuelCell Energy, Carnival, Warby Parker, Fair Isaac Corporation, and monday.com",
+   "summary": "Check out the companies making headlines yesterday:",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-making-big-moves-yesterday-204513397.html?.tsrc=rss",
+   "published_at": "2026-09-30T20:45:13Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:48Z",
+   "fingerprint": "8fc2cf3d99bebf60",
+   "primary_source": false,
+   "cluster_id": "7f97d7debe202ca4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4c912583099de8c2",
+   "symbols": [
+    "WRBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Is Warby Parker (WRBY) Stock Soaring Today",
+   "summary": "Shares of eyewear retailer Warby Parker (NYSE:WRBY) jumped 10.4% in the afternoon session after the market continued to react to the company’s partnership with Google on AI-powered smart glasses. According to Barrons, the collaboration with Google centers on developing smart glas",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-warby-parker-wrby-stock-225602768.html?.tsrc=rss",
+   "published_at": "2026-09-29T22:56:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:48Z",
+   "fingerprint": "8360914a58fb5df0",
+   "primary_source": false,
+   "cluster_id": "4c912583099de8c2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7e76f47bbf745ba2",
+   "symbols": [
+    "WRBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Warby Parker Stock Surges on Meta’s AI Glasses Push. Why Smart Eyewear Is Booming.",
+   "summary": "Meta Platforms  ’ latest artificial-intelligence push is giving  Warby Parker  stock a solid lift.  The tech giant’s big crusade into smart eyewear has further legitimized the space, sparking high interest that could bode well for Warby’s coming smart glasses.  The lens maker’s s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/06c38d71-5929-3aab-bf75-b67f4e919bdf/warby-parker-stock-surges-on.html?.tsrc=rss",
+   "published_at": "2026-09-29T18:38:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:48Z",
+   "fingerprint": "31ba9b45b877cb55",
+   "primary_source": false,
+   "cluster_id": "7e76f47bbf745ba2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "832d0659babba481",
+   "symbols": [
+    "WRBY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Warby Parker (WRBY): Early-Stage Category Leader with High-Yield Earnings Potential",
+   "summary": "Brown Capital Management, an investment management company, released its second-quarter 2026 investor letter for “The Brown Capital Management Small Company Fund.” The letter can be downloaded here. For the quarter ended June 30, 2026, market volatility reflected uncertainty arou",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/warby-parker-wrby-early-stage-141715935.html?.tsrc=rss",
+   "published_at": "2026-09-29T14:17:15Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:48Z",
+   "fingerprint": "0706791f13951303",
+   "primary_source": false,
+   "cluster_id": "832d0659babba481",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dbd1b3af4c6cd736",
+   "symbols": [
+    "WRBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Warby Parker Stock Jumped Nearly 13% in a Day. Here’s Where the Stock Could Go by 2030",
+   "summary": "Key Stats for Warby Parker StockCurrent Price: $26. 27Target Price (Mid): ~$83Street Target: ~$30Potential Total Return: ~217%Annualized IRR: ~31% / yearWhat Happened?Warby Parker (WRBY) jumped 12.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/warby-parker-stock-jumped-nearly-13-in-a-day-heres-where-the-stock-could-go-by-2030?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-09-25T14:43:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:48Z",
+   "fingerprint": "60884141cc9b0eaa",
+   "primary_source": false,
+   "cluster_id": "dbd1b3af4c6cd736",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4d6569d1d64c1840",
+   "symbols": [
+    "WRBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Warby Parker (WRBY) Surges 12.5%: Is This an Indication of Further Gains?",
+   "summary": "Warby Parker (WRBY) witnessed a jump in share price last session on above-average trading volume. The latest trend in earnings estimate revisions for the stock doesn't suggest further strength down the road.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/warby-parker-wrby-surges-12-123200457.html?.tsrc=rss",
+   "published_at": "2026-09-25T12:32:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:48Z",
+   "fingerprint": "1d6a85fe31f06cc5",
+   "primary_source": false,
+   "cluster_id": "4d6569d1d64c1840",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8c2eb5526a3df264",
+   "symbols": [
+    "WRBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Warby Parker’s Unusual Options Activity Points to a Covered Call Bet: Bullish on Growth, Cautious on Valuation",
+   "summary": "Warby Parker's 1,500-contract December $22.50 call trade, tied to a stock purchase, signals an institutional covered call. The setup looks bullish on growth and earnings, but a rich valuation, slowing customer growth, and rising capex limit the stock's potential upside.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "barchart.com",
+   "url": "https://www.barchart.com/story/news/4683932/warby-parkers-unusual-options-activity-points-to-a-covered-call-bet-bullish-on-growth-cautious-on-valuation?.tsrc=rss",
+   "published_at": "2026-09-18T17:30:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:48Z",
+   "fingerprint": "f755c49d556a2a94",
+   "primary_source": false,
+   "cluster_id": "8c2eb5526a3df264",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "561f67d955a0f664",
+   "symbols": [
+    "WRBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Gap Inc. Appoints Kirsten Green to Board of Directors",
+   "summary": "Gap Inc. (NYSE: GAP) today announced the appointment of Kirsten Green, Founder and Managing Partner of Forerunner, to the company's Board of Directors, effective immediately.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gap-inc-appoints-kirsten-green-201500941.html?.tsrc=rss",
+   "published_at": "2026-09-15T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:48Z",
+   "fingerprint": "a4a816b4dab392be",
+   "primary_source": false,
+   "cluster_id": "561f67d955a0f664",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c3995234656a8531",
+   "symbols": [
+    "WRBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Warby Parker (WRBY) Heads To Goldman Conference But Is The Upside Already Priced In",
+   "summary": "Warby Parker (WRBY) is set to present at the Goldman Sachs Global Consumer and Retail Conference on September 15 in New York. The event will give investors fresh commentary on the eyewear retailer’s outlook and capital allocation priorities. Warby Parker shares closed at $25.71 a",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/warby-parker-wrby-heads-goldman-032140963.html?.tsrc=rss",
+   "published_at": "2026-09-15T03:21:40Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:48Z",
+   "fingerprint": "3a040b19a78718ea",
+   "primary_source": false,
+   "cluster_id": "c3995234656a8531",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a8c0d8191552d591",
+   "symbols": [
+    "TILE",
+    "WRBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Stock Under $50 to Keep an Eye On and 2 We Ignore",
+   "summary": "Stocks in the $10-50 range offer a sweet spot between affordability and stability as they’re typically more established than penny stocks. But their headline prices don’t guarantee quality, and investors should exercise caution as some have shaky business models.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-stock-under-50-keep-001704261.html?.tsrc=rss",
+   "published_at": "2026-09-11T00:17:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:44:55Z",
+   "fingerprint": "4ea676894a690d02",
+   "primary_source": false,
+   "cluster_id": "a8c0d8191552d591",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "687233b82cb58f16",
+   "symbols": [
+    "WRBY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Warby Parker Announces Participation in the Goldman Sachs 33rd Annual Global Retailing Conference",
+   "summary": "NEW YORK, September 08, 2026--Warby Parker Inc. (NYSE: WRBY) (the \"Company\"), a direct-to-consumer lifestyle brand focused on vision for all, today announced that the Company will be presenting at the Goldman Sachs 33rd Annual Global Retailing Conference on Tuesday, September 15,",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/warby-parker-announces-participation-goldman-203000569.html?.tsrc=rss",
+   "published_at": "2026-09-08T20:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:48Z",
+   "fingerprint": "64313239fc570ea0",
+   "primary_source": false,
+   "cluster_id": "687233b82cb58f16",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "854501731820cd3f",
+   "symbols": [
+    "WRBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Warby Parker Co-CEO Gilboa Sells 11,504 Shares for $278,000",
+   "summary": "Sale was non-discretionary, triggered by RSU vesting to cover tax withholding. Gilboa retains 40,406 direct shares plus ~6.3 million derivative securities.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/coverage/filings/2026/09/08/warby-parker-co-ceo-gilboa-sells-11-504-shares-for-usd278-000/?.tsrc=rss",
+   "published_at": "2026-09-08T16:20:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:48Z",
+   "fingerprint": "b6718e1b6d31ac0a",
+   "primary_source": false,
+   "cluster_id": "854501731820cd3f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "9ed330c5bae71d82",

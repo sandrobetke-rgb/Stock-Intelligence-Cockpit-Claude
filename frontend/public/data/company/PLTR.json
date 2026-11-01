@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -59,7 +59,17 @@
     "green": false,
     "day_high": 193.9199981689453,
     "day_low": 180.80999755859375,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 1.7660545973133566,
+    "adx14": 20.38858928504383,
+    "ema10": 194.78871984817377,
+    "sma200": 153.56767459869386,
+    "perf_63d": 46.52606317114307,
+    "adr20_pct": 4.363367102422677,
+    "range10_pct": 10.355113266212301,
+    "high10_prev": 203.5500030517578,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -89,14 +99,40 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": true,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.8333333333333334,
+    "RSI2": 1.0,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": false,
@@ -158,11 +194,11 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 18,
+   "mentions_7d": 25,
    "manipulation_risk": "auffaellig",
-   "mentions_24h": 11,
-   "sentiment_7d": -0.06,
-   "bullish_7d": 1,
+   "mentions_24h": 12,
+   "sentiment_7d": -0.01,
+   "bullish_7d": 2,
    "bearish_7d": 1
   },
   "insider": {
@@ -261,7 +297,17 @@
     "green": false,
     "day_high": 193.9199981689453,
     "day_low": 180.80999755859375,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 1.7660545973133566,
+    "adx14": 20.38858928504383,
+    "ema10": 194.78871984817377,
+    "sma200": 153.56767459869386,
+    "perf_63d": 46.52606317114307,
+    "adr20_pct": 4.363367102422677,
+    "range10_pct": 10.355113266212301,
+    "high10_prev": 203.5500030517578,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -291,14 +337,40 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": true,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.8333333333333334,
+    "RSI2": 1.0,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": false,
@@ -702,6 +774,11 @@
   {
    "id": "215fddafaba72d91",
    "symbols": [
+    "AAPL",
+    "AMD",
+    "AMGN",
+    "AMZN",
+    "ANET",
     "GOOG",
     "GOOGL",
     "INTC",
@@ -1193,8 +1270,7 @@
    "cluster_id": "ab52ad496d882e0f",
    "independence": "original",
    "verification": "Unverified",
-   "feed": "yahoo_rss",
-   "title_de": "Nasdaq 100 Futures Dip auf schwache Intel, Amazon Einnahmen mit aufgeblähten Capex Sorgen Wiegen auf Sentiment - AMZN, INTC, SBUX, PLTR, ASTS im Fokus"
+   "feed": "yahoo_rss"
   },
   {
    "id": "da8643cef78126bc",
@@ -1217,8 +1293,7 @@
    "cluster_id": "da8643cef78126bc",
    "independence": "original",
    "verification": "Unverified",
-   "feed": "yahoo_rss",
-   "title_de": "JPMorgan ist bullish auf Palantir, prognostiziert über 30% Rally auf starke KI-Nachfrage"
+   "feed": "yahoo_rss"
   }
  ],
  "insiders": [
@@ -1624,22 +1699,23 @@
   }
  ],
  "social_detail": {
-  "mentions_24h": 11,
-  "mentions_7d": 18,
-  "mentions_30d": 18,
-  "change_vs_baseline_pct": 1000,
-  "engagement_7d": 64.0,
-  "sentiment_7d": -0.06,
+  "mentions_24h": 12,
+  "mentions_7d": 25,
+  "mentions_30d": 25,
+  "change_vs_baseline_pct": 546,
+  "engagement_7d": 91.0,
+  "sentiment_7d": -0.01,
   "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
-  "bullish_7d": 1,
+  "bullish_7d": 2,
   "bearish_7d": 1,
   "by_platform_7d": {
-   "reddit": 3,
-   "stocktwits": 15
+   "reddit": 4,
+   "stocktwits": 21
   },
   "communities_7d": {
-   "StockTwits": 15,
+   "StockTwits": 21,
    "r/wallstreetbets": 2,
+   "r/Daytrading": 1,
    "r/ValueInvesting": 1
   },
   "platforms": [
@@ -1658,7 +1734,17 @@
     "posted_at": "2026-11-01T01:13:34Z",
     "url": "https://stocktwits.com/thesupine/message/667859346",
     "text": "$PLTR $INTC $RDDT $GOOGL",
-    "engagement": 14.0,
+    "engagement": 15.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "JDKING",
+    "posted_at": "2026-10-30T16:35:40Z",
+    "url": "https://stocktwits.com/JDKING/message/667785500",
+    "text": "$INTC $ORCL $PLTR $QCOM $CRWD ENIUGH IS ENOUGH! !!",
+    "engagement": 7.0,
     "sentiment_label": null
    },
    {
@@ -1685,19 +1771,9 @@
     "platform": "stocktwits",
     "community": "StockTwits",
     "author": "AshHydrogen",
-    "posted_at": "2026-10-31T15:30:07Z",
-    "url": "https://stocktwits.com/AshHydrogen/message/667847784",
-    "text": "$PLTR Dr  Karp  and  team  have  not  changed  their  tune  in  20  years!!! \n$SPY  Palantir  needs  $5  Trillion  Market  Cap  like  $ANT.X  and  $MSFT  combined… \nhttps://media.stocktwits-cdn.com/api/3/media/3757780/medium.png",
-    "engagement": 5.0,
-    "sentiment_label": null
-   },
-   {
-    "platform": "stocktwits",
-    "community": "StockTwits",
-    "author": "RobertLemire",
-    "posted_at": "2026-10-31T13:37:46Z",
-    "url": "https://stocktwits.com/RobertLemire/message/667844926",
-    "text": "$SPY When considering the possibility of which companies, large and small, which may see serious pain in their SP&#39;s if things go south a bit with the ole AI situation, I&#39;m figuring those which will take the hardest hit will be the companies which have benefitted greatly from the trump/gop/maga fascism/communism.  \nLook at $ORCL, $DELL, $SPCX - SpaceQ-anon, $PLTR,  and many others which hav",
+    "posted_at": "2026-10-31T17:49:43Z",
+    "url": "https://stocktwits.com/AshHydrogen/message/667851251",
+    "text": "$PLTR  \n \n$SPY when are we getting FAKE AI CUSTOMERS FROM:  $MSFT $CRM $NOW ???… \n \nhttps://sih-st-charts.stocktwits-cdn.com/production/original_537983025.png",
     "engagement": 5.0,
     "sentiment_label": null
    }

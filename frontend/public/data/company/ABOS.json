@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 0.35199999809265137,
     "day_low": 0.20900000631809235,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 2.2878832707821175,
+    "adx14": 25.926902791444935,
+    "ema10": 1.7965419622612637,
+    "sma200": 2.501324999704957,
+    "perf_63d": -90.36697307280964,
+    "adr20_pct": 11.958033431427616,
+    "range10_pct": 55.55555392031153,
+    "high10_prev": 2.5199999809265137,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -139,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 17.6,
+   "score": 64.7,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 8,
    "independent_24h": 0
   },
   "political": {
@@ -228,7 +264,17 @@
     "green": false,
     "day_high": 0.35199999809265137,
     "day_low": 0.20900000631809235,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 2.2878832707821175,
+    "adx14": 25.926902791444935,
+    "ema10": 1.7965419622612637,
+    "sma200": 2.501324999704957,
+    "perf_63d": -90.36697307280964,
+    "adr20_pct": 11.958033431427616,
+    "range10_pct": 55.55555392031153,
+    "high10_prev": 2.5199999809265137,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -258,6 +304,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -265,7 +332,10 @@
     "S01": 0.5,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -604,11 +674,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 17.6,
+  "score": 64.7,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 100.0,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 100.0,
@@ -626,25 +696,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 8,
+    "independent": 8,
+    "duplicates": 1,
+    "sources": 5,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 10,
+    "independent": 10,
+    "duplicates": 1,
+    "sources": 5,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -663,7 +735,430 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "a354ee9e2f19650c",
+   "symbols": [
+    "ABOS",
+    "CIFR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "BC-Most Active Stocks",
+   "summary": "NEW YORK (AP) — prices for the Nasdaq composite, NYSE and NYSE American listed most active stocks. Nasdaq most active stocks:Stock Name Volume High Low Last Change  Intel Corp.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/bc-most-active-stocks-143026463.html?.tsrc=rss",
+   "published_at": "2026-10-30T14:30:26Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:33Z",
+   "fingerprint": "d74cfda6ac26a72a",
+   "primary_source": false,
+   "cluster_id": "a354ee9e2f19650c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "BC-Most Active Stocks"
+  },
+  {
+   "id": "b4ab759267d59615",
+   "symbols": [
+    "ABOS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acumen Pharmaceuticals Announces Topline Results from Phase 2 ALTITUDE-AD Clinical Trial of Sabirnetug (ACU193) for the Treatment of Early Alzheimer’s Disease; Trial Did Not Meet Primary Endpoint",
+   "summary": "-- Topline data show that ALTITUDE-AD did not meet the primary endpoint of change from baseline in cognitive and functional decline as measured by the Integrated Alzheimer’s Disease Rating Scale (iADRS) at 18 months compared to placebo at either dose; key secondary endpoints, inc",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/acumen-pharmaceuticals-announces-topline-results-110000122.html?.tsrc=rss",
+   "published_at": "2026-10-30T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "b7d4464e15dee5dd",
+   "primary_source": false,
+   "cluster_id": "b4ab759267d59615",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Acumen Pharmaceuticals gibt Topline-Ergebnisse aus der klinischen Phase-2-Studie ALTITUDE-AD von Sabirnetug (ACU193) zur Behandlung der frühen Alzheimer-Krankheit bekannt; Studie hat den primären Endpunkt nicht erreicht"
+  },
+  {
+   "id": "acf87c35996f08b8",
+   "symbols": [
+    "ABOS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acumen Pharmaceuticals, Inc. Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Acumen Pharmaceuticals, Inc.'s Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-acumen-pharmaceuticals-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-26T16:42:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "faaf3116f05bd47c",
+   "primary_source": false,
+   "cluster_id": "acf87c35996f08b8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c4570c9a9990998a",
+   "symbols": [
+    "ABOS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acumen Pharmaceuticals (ABOS) Q3 2026 Earnings Call Transcript",
+   "summary": "Sabirnetug topline results expected November 2026 for early Alzheimer's disease trial.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/26/acumen-pharmaceuticals-abos-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-26T16:12:52Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "96a3e8c03b8db43f",
+   "primary_source": false,
+   "cluster_id": "c4570c9a9990998a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9bdaf4abed76ce3d",
+   "symbols": [
+    "ABOS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acumen Pharmaceuticals Reports Smaller Q3 Loss, Shares Rise as Phase 2 Alzheimer’s Data Approach",
+   "summary": "Acumen Pharmaceuticals Inc. (NASDAQ:ABOS) reported third-quarter 2026 financial results that exceeded analysts’ expectations, with a smaller net loss compared with the same period last year and an updated timetable for its Alzheimer’s disease clinical development programme.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "investorshub.advfn.com",
+   "url": "https://investorshub.advfn.com/market-news/article/38591/acumen-pharmaceuticals-reports-smaller-q3-loss-shares-rise-as-phase-2-alzheimers-data-approach?.tsrc=rss",
+   "published_at": "2026-10-26T14:09:24Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "0ff3b8f62027dcfb",
+   "primary_source": false,
+   "cluster_id": "9bdaf4abed76ce3d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7c76ebcabc44441f",
+   "symbols": [
+    "ABOS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acumen Pharmaceuticals Q3 Earnings Call Highlights",
+   "summary": "Acumen Pharmaceuticals (NASDAQ:ABOS) said it expects to report top-line results in November from its Phase II ALTITUDE-AD trial of sabirnetug, an investigational antibody designed to target soluble amyloid-beta oligomers in patients with Alzheimer’s disease. Chief Executive Offic",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-acumen-pharmaceuticals-q3-earnings-call-highlights-2026-10-26/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-26T14:02:30Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "bcafd3e2528fc37a",
+   "primary_source": false,
+   "cluster_id": "7c76ebcabc44441f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "baadec4e27a65452",
+   "symbols": [
+    "ABOS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Acumen Pharmaceuticals beats Q3 estimates, shares jump 6%",
+   "summary": "Investing.com -- On Monday, Acumen Pharmaceuticals Inc. (NASDAQ:ABOS) reported third quarter results that exceeded analyst expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/acumen-pharmaceuticals-beats-q3-estimates-120730960.html?.tsrc=rss",
+   "published_at": "2026-10-26T12:07:30Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "cc2230cd76b13976",
+   "primary_source": false,
+   "cluster_id": "baadec4e27a65452",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fb2a32bf9ffde23a",
+   "symbols": [
+    "ABOS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acumen Pharmaceuticals Reports Third Quarter 2026 Financial Results and Business Highlights",
+   "summary": "Expect to report topline results for ALTITUDE-AD, a Phase 2 study to investigate sabirnetug (ACU193) for the treatment of early Alzheimer’s disease, in November 2026IND filing for the Enhanced Brain Delivery™ (EBD®) program lead clinical candidate targeted for mid-2027Cash, cash ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/acumen-pharmaceuticals-reports-third-quarter-110000467.html?.tsrc=rss",
+   "published_at": "2026-10-26T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "e0282586ae0fbdfb",
+   "primary_source": false,
+   "cluster_id": "c96ff6ddddc9ee39",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cf3aec9159d2880c",
+   "symbols": [
+    "ABOS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Acumen Pharmaceuticals to Present Preliminary Baseline Characteristics and Data on Care Experiences and Participation in Phase 2 ALTITUDE-AD Trial at the 19th Annual Clinical Trials on Alzheimer’s Disease (CTAD) Conference",
+   "summary": "NEWTON, Mass., Oct. 22, 2026 (GLOBE NEWSWIRE) -- Acumen Pharmaceuticals, Inc. (NASDAQ: ABOS) (Acumen), a clinical-stage biopharmaceutical company developing novel therapeutics that target soluble amyloid beta oligomers (AβOs) for the treatment of Alzheimer’s disease (AD), will pr",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/acumen-pharmaceuticals-present-preliminary-baseline-113000839.html?.tsrc=rss",
+   "published_at": "2026-10-22T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "9123a891bb89945b",
+   "primary_source": false,
+   "cluster_id": "cf3aec9159d2880c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c26ccbad672a7c2e",
+   "symbols": [
+    "ABOS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acumen Pharmaceuticals to Report Third Quarter Financial Results on October 26, 2026",
+   "summary": "NEWTON, Mass., Oct. 19, 2026 (GLOBE NEWSWIRE) -- Acumen Pharmaceuticals, Inc. (NASDAQ: ABOS) (“Acumen” or the “Company”), a clinical-stage biopharmaceutical company developing novel therapeutics that target toxic soluble amyloid beta oligomers for the treatment of Alzheimer’s dis",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/acumen-pharmaceuticals-report-third-quarter-200000600.html?.tsrc=rss",
+   "published_at": "2026-10-19T20:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "935f7d5c83ee0eb9",
+   "primary_source": false,
+   "cluster_id": "c26ccbad672a7c2e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1c049382b0c18afd",
+   "symbols": [
+    "ABOS",
+    "PRTA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "4 Alzheimer's Drug Stocks to Watch on World Alzheimer's Day",
+   "summary": "Four biotech stocks advance Alzheimer's therapies, from marketed treatments to experimental programs targeting amyloid and tau.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/4-alzheimers-drug-stocks-watch-164000961.html?.tsrc=rss",
+   "published_at": "2026-09-21T16:40:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:32:38Z",
+   "fingerprint": "56065ad7a6d051f7",
+   "primary_source": false,
+   "cluster_id": "1c049382b0c18afd",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a2e590563af1ce31",
+   "symbols": [
+    "ABOS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Acumen Pharmaceuticals to Hold Virtual Investor Day on September 16, 2026",
+   "summary": "NEWTON, Mass., Sept. 10, 2026 (GLOBE NEWSWIRE) -- Acumen Pharmaceuticals, Inc. (NASDAQ: ABOS), (“Acumen” or the “Company”), a clinical-stage biopharmaceutical company developing novel therapeutics that target toxic soluble amyloid beta oligomers for the treatment of Alzheimer’s d",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/acumen-pharmaceuticals-hold-virtual-investor-200000224.html?.tsrc=rss",
+   "published_at": "2026-09-10T20:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "690c9eb93309d096",
+   "primary_source": false,
+   "cluster_id": "a2e590563af1ce31",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cdb2f72e36457fb0",
+   "symbols": [
+    "ABOS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Acumen Pharmaceuticals to Participate in Upcoming Investor Conferences",
+   "summary": "NEWTON, Mass., Sept. 02, 2026 (GLOBE NEWSWIRE) -- Acumen Pharmaceuticals, Inc. (NASDAQ: ABOS), a clinical-stage biopharmaceutical company developing novel therapeutics that target toxic soluble amyloid beta oligomers for the treatment of Alzheimer’s disease, announced today that ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/acumen-pharmaceuticals-participate-upcoming-investor-200000120.html?.tsrc=rss",
+   "published_at": "2026-09-02T20:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "f881eabbd9c18e2b",
+   "primary_source": false,
+   "cluster_id": "cdb2f72e36457fb0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "61ceeedf7c21db45",
+   "symbols": [
+    "ABOS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acumen Pharmaceuticals Inc (ABOS) (Q2 2026) Earnings Call Highlights: Advancing Sabirnetug ...",
+   "summary": "Acumen Pharmaceuticals Inc (ABOS) reports strong progress on its lead Alzheimer's candidate and next-generation pipeline, with cash runway into early 2027.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/acumen-pharmaceuticals-inc-abos-q2-230426972.html?.tsrc=rss",
+   "published_at": "2026-08-12T23:04:26Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "ecd8e7b837b23afb",
+   "primary_source": false,
+   "cluster_id": "61ceeedf7c21db45",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a733e8219dc0cbae",
+   "symbols": [
+    "ABOS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acumen Pharmaceuticals, Inc. Q2 2026 Earnings Call Summary",
+   "summary": "Moby summary of Acumen Pharmaceuticals, Inc.'s Q2 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-acumen-pharmaceuticals-inc-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-08-12T16:56:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "367549182ee5651d",
+   "primary_source": false,
+   "cluster_id": "a733e8219dc0cbae",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bb82ab8574289252",
+   "symbols": [
+    "ABOS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acumen Pharmaceuticals Q2 Earnings Call Highlights",
+   "summary": "Acumen Pharmaceuticals (NASDAQ:ABOS) said it remains on track to report top-line results late in 2026 from its Phase II ALTITUDE-AD study of sabirnetug, an investigational antibody designed to selectively target synaptotoxic amyloid-beta oligomers in early Alzheimer’s disease. Ch",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/acumen-pharmaceuticals-q2-earnings-call-highlights-2026-08-12/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-12T13:03:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "fccfa4f1402cc1e3",
+   "primary_source": false,
+   "cluster_id": "bb82ab8574289252",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c96ff6ddddc9ee39",
+   "symbols": [
+    "ABOS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acumen Pharmaceuticals Reports Second Quarter 2026 Financial Results and Business Highlights",
+   "summary": "Expect to report topline results for ALTITUDE-AD, a Phase 2 study to investigate sabirnetug (ACU193) for the treatment of early Alzheimer’s disease, in late 2026Two candidates nominated for development in Acumen’s Enhanced Brain Delivery™ (EBD™) program; lead clinical candidate I",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/acumen-pharmaceuticals-reports-second-quarter-110000467.html?.tsrc=rss",
+   "published_at": "2026-08-12T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "466a373bf606184b",
+   "primary_source": false,
+   "cluster_id": "c96ff6ddddc9ee39",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8c611e7c0a9765ad",
+   "symbols": [
+    "ABOS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acumen Pharmaceuticals to Report Second Quarter Financial Results on August 12, 2026",
+   "summary": "NEWTON, Mass., Aug. 05, 2026 (GLOBE NEWSWIRE) -- Acumen Pharmaceuticals, Inc. (NASDAQ: ABOS) (“Acumen” or the “Company”), a clinical-stage biopharmaceutical company developing novel therapeutics that target toxic soluble amyloid beta oligomers for the treatment of Alzheimer’s dis",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/acumen-pharmaceuticals-report-second-quarter-200000098.html?.tsrc=rss",
+   "published_at": "2026-08-05T20:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "b9cbb6a666296c9f",
+   "primary_source": false,
+   "cluster_id": "8c611e7c0a9765ad",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "98bff9db4b974b7c",
+   "symbols": [
+    "ABOS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Acumen Pharmaceuticals (ABOS) Stock Outpacing Its Medical Peers This Year?",
+   "summary": "Here is how Acumen Pharmaceuticals, Inc. (ABOS) and Amarin (AMRN) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acumen-pharmaceuticals-abos-stock-outpacing-134003051.html?.tsrc=rss",
+   "published_at": "2026-07-31T13:40:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:26Z",
+   "fingerprint": "57f2013bc53a40f8",
+   "primary_source": false,
+   "cluster_id": "98bff9db4b974b7c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

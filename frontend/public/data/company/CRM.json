@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 3.4514522847672735,
    "rvol": 1.1075229816069971,
    "ema10": 238.51809753046095,
-   "ema21": 238.26939862947611,
+   "ema21": 238.26939862961947,
    "sma50": 238.74723571777344,
-   "sma200": 197.64256080627442
+   "sma200": 197.64256134033204
   },
   "market_cap": 188606906368.0,
   "market_cap_currency": "USD",
@@ -34,17 +34,17 @@
    "tech": {
     "close": 229.1699981689453,
     "change_pct": -0.7492402655994157,
-    "ema20": 238.37701433986396,
-    "ema50": 230.943869026463,
-    "ema200": 214.10594453165987,
+    "ema20": 238.37701433995028,
+    "ema50": 230.9438690630688,
+    "ema200": 214.1059452377241,
     "sma50": 238.74723571777344,
-    "rsi14": 42.40753162093359,
-    "rsi_min5": 42.40753162093359,
-    "atr14": 8.98582740186896,
-    "atr_pct": 3.921031318961988,
+    "rsi14": 42.40753162118496,
+    "rsi_min5": 42.40753162118496,
+    "atr14": 8.985827402977552,
+    "atr_pct": 3.92103131944573,
     "rvol": 1.1075229816069971,
     "vol30": 8381493.333333333,
-    "dist_ema200_pct": 7.035794204704082,
+    "dist_ema200_pct": 7.035793851728611,
     "dist_52w_high_pct": 14.424580165374312,
     "high_52w": 267.7988593124239,
     "macd_above_signal": false,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 234.6199951171875,
     "day_low": 227.67999267578125,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 5.115999506625158,
+    "adx14": 20.12248118039672,
+    "ema10": 238.51809753046095,
+    "sma200": 197.64256134033204,
+    "perf_63d": 23.45963018382957,
+    "adr20_pct": 3.4514522847672735,
+    "range10_pct": 12.166728448129449,
+    "high10_prev": 252.4199981689453,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,14 +98,40 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.8333333333333334,
+    "RSI2": 1.0,
+    "QM": 0.0
    },
    "filter": {
     "Tag grün": false,
@@ -108,9 +144,9 @@
    "plan": {
     "trigger": 234.6199951171875,
     "entry_max": 239.31239501953127,
-    "stop": 221.14125401438406,
-    "risk_per_share": 13.47874110280344,
-    "target_1": 261.5774773227944,
+    "stop": 221.14125401272116,
+    "risk_per_share": 13.478741104466337,
+    "target_1": 261.5774773261202,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -138,11 +174,11 @@
    ]
   },
   "market_intelligence": {
-   "score": 56.2,
+   "score": 62.6,
    "drivers": [
     "news_flow",
     "source_diversity",
-    "freshness"
+    "social_attention"
    ],
    "independent_7d": 19,
    "independent_24h": 1
@@ -156,12 +192,12 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 2,
+   "mentions_7d": 31,
    "manipulation_risk": "unauffällig",
-   "mentions_24h": 1,
-   "sentiment_7d": 0.0,
-   "bullish_7d": 0,
-   "bearish_7d": 0
+   "mentions_24h": 2,
+   "sentiment_7d": -0.03,
+   "bullish_7d": 3,
+   "bearish_7d": 6
   },
   "insider": {
    "window_days": 90,
@@ -205,9 +241,9 @@
   "adr20": 3.4514522847672735,
   "rvol": 1.1075229816069971,
   "ema10": 238.51809753046095,
-  "ema21": 238.26939862947611,
+  "ema21": 238.26939862961947,
   "sma50": 238.74723571777344,
-  "sma200": 197.64256080627442,
+  "sma200": 197.64256134033204,
   "volatility_ann": 57.398839709347705,
   "avg_dollar_volume_20d": 1694969214.7603607,
   "move_zscore": -0.20721360484461582,
@@ -215,17 +251,17 @@
    "tech": {
     "close": 229.1699981689453,
     "change_pct": -0.7492402655994157,
-    "ema20": 238.37701433986396,
-    "ema50": 230.943869026463,
-    "ema200": 214.10594453165987,
+    "ema20": 238.37701433995028,
+    "ema50": 230.9438690630688,
+    "ema200": 214.1059452377241,
     "sma50": 238.74723571777344,
-    "rsi14": 42.40753162093359,
-    "rsi_min5": 42.40753162093359,
-    "atr14": 8.98582740186896,
-    "atr_pct": 3.921031318961988,
+    "rsi14": 42.40753162118496,
+    "rsi_min5": 42.40753162118496,
+    "atr14": 8.985827402977552,
+    "atr_pct": 3.92103131944573,
     "rvol": 1.1075229816069971,
     "vol30": 8381493.333333333,
-    "dist_ema200_pct": 7.035794204704082,
+    "dist_ema200_pct": 7.035793851728611,
     "dist_52w_high_pct": 14.424580165374312,
     "high_52w": 267.7988593124239,
     "macd_above_signal": false,
@@ -239,7 +275,17 @@
     "green": false,
     "day_high": 234.6199951171875,
     "day_low": 227.67999267578125,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 5.115999506625158,
+    "adx14": 20.12248118039672,
+    "ema10": 238.51809753046095,
+    "sma200": 197.64256134033204,
+    "perf_63d": 23.45963018382957,
+    "adr20_pct": 3.4514522847672735,
+    "range10_pct": 12.166728448129449,
+    "high10_prev": 252.4199981689453,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -269,14 +315,40 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.8333333333333334,
+    "RSI2": 1.0,
+    "QM": 0.0
    },
    "filter": {
     "Tag grün": false,
@@ -289,9 +361,9 @@
    "plan": {
     "trigger": 234.6199951171875,
     "entry_max": 239.31239501953127,
-    "stop": 221.14125401438406,
-    "risk_per_share": 13.47874110280344,
-    "target_1": 261.5774773227944,
+    "stop": 221.14125401272116,
+    "risk_per_share": 13.478741104466337,
+    "target_1": 261.5774773261202,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -614,7 +686,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 56.2,
+  "score": 62.6,
   "components": {
    "news_flow": 100.0,
    "freshness": 50,
@@ -622,7 +694,7 @@
    "primary_sources": 0,
    "analyst_activity": 35,
    "price_volume_anomaly": 6.2,
-   "social_attention": 39.6,
+   "social_attention": 100.0,
    "insider_activity": null
   },
   "windows": {
@@ -657,7 +729,7 @@
   "drivers": [
    "news_flow",
    "source_diversity",
-   "freshness"
+   "social_attention"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -1293,21 +1365,21 @@
   }
  ],
  "social_detail": {
-  "mentions_24h": 1,
-  "mentions_7d": 2,
-  "mentions_30d": 2,
-  "change_vs_baseline_pct": 600,
-  "engagement_7d": 4.0,
-  "sentiment_7d": 0.0,
-  "sentiment_basis": "algorithmisch (Lexikon)",
-  "bullish_7d": 0,
-  "bearish_7d": 0,
+  "mentions_24h": 2,
+  "mentions_7d": 31,
+  "mentions_30d": 31,
+  "change_vs_baseline_pct": -52,
+  "engagement_7d": 48.0,
+  "sentiment_7d": -0.03,
+  "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
+  "bullish_7d": 3,
+  "bearish_7d": 6,
   "by_platform_7d": {
-   "stocktwits": 1,
+   "stocktwits": 30,
    "reddit": 1
   },
   "communities_7d": {
-   "StockTwits": 1,
+   "StockTwits": 30,
    "r/ValueInvesting": 1
   },
   "platforms": [
@@ -1320,22 +1392,52 @@
    {
     "platform": "stocktwits",
     "community": "StockTwits",
+    "author": "MakeWiseDecisions2027",
+    "posted_at": "2026-10-30T16:57:52Z",
+    "url": "https://stocktwits.com/MakeWiseDecisions2027/message/667788837",
+    "text": "$RZLV RZLV is 2 cheap.  SOLD some of my other holdings today to add more RZLV $SHOP $NOW $CRM",
+    "engagement": 16.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
     "author": "AshHydrogen",
     "posted_at": "2026-10-31T17:49:43Z",
     "url": "https://stocktwits.com/AshHydrogen/message/667851251",
     "text": "$PLTR  \n \n$SPY when are we getting FAKE AI CUSTOMERS FROM:  $MSFT $CRM $NOW ???… \n \nhttps://sih-st-charts.stocktwits-cdn.com/production/original_537983025.png",
+    "engagement": 5.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "KornieAwareness7",
+    "posted_at": "2026-10-30T13:31:09Z",
+    "url": "https://stocktwits.com/KornieAwareness7/message/667752998",
+    "text": "$CRWD $NET $CRM \n\nWatching rs",
     "engagement": 4.0,
     "sentiment_label": null
    },
    {
-    "platform": "reddit",
-    "community": "r/ValueInvesting",
-    "author": "Interesting-Rush7842",
-    "posted_at": "2026-10-28T13:48:41Z",
-    "url": "https://www.reddit.com/r/ValueInvesting/comments/1xhokka/adobe_through_my_5number_value_filter_4_greens_1/",
-    "text": "Adobe through my 5-number value filter: 4 greens, 1 yellow. Comment a ticker and I'll run yours.    Before I spend time reading a 10-K, a company has to pass a first filter: five numbers from classic value investing books. I look at them before I read the story, so a good narrative can't win me over. If most of them are red, I move on.   Here's Adobe (ADBE). Price $246.09 (Oct 28), financials thro",
-    "engagement": 0.0,
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "AshHydrogen",
+    "posted_at": "2026-10-30T01:45:25Z",
+    "url": "https://stocktwits.com/AshHydrogen/message/667723137",
+    "text": "$PLTR SOVEREIGN AI $SPY EVERYONE SIGNING UP!!! \n \nDon’t waste your time with $CRM $MSFT not $NOW !!! \n \nhttps://x.com/chadwahl/status/2115879002112229513?a=uqD_MeqP-06hEtI1hTQ&amp;s=46",
+    "engagement": 4.0,
     "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "KornieAwareness7",
+    "posted_at": "2026-10-30T11:37:20Z",
+    "url": "https://stocktwits.com/KornieAwareness7/message/667741160",
+    "text": "$CRM Business software maker Salesforce (CRM.N), opens new tab said on Thursday it would buy defense technology company ​Rune Technologies to expand its Missionforce ‌business, which serves the US military and government agencies.",
+    "engagement": 3.0,
+    "sentiment_label": "Bullish"
    }
   ]
  },

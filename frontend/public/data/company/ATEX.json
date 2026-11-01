@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 91.57499694824219,
     "day_low": 85.94000244140625,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 74.67652585060226,
+    "adx14": 14.198258273754524,
+    "ema10": 84.61918549457995,
+    "sma200": 65.35552505493165,
+    "perf_63d": -5.206485392042792,
+    "adr20_pct": 6.625945014905443,
+    "range10_pct": 35.14546966850358,
+    "high10_prev": 91.9800033569336,
+    "pullback_ema20": false,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.6666666666666666,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.16666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -139,14 +173,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 22.2,
+   "score": 34.8,
    "drivers": [
     "news_flow",
-    "price_volume_anomaly",
-    "source_diversity"
+    "freshness",
+    "price_volume_anomaly"
    ],
-   "independent_7d": 1,
-   "independent_24h": 0
+   "independent_7d": 2,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -238,7 +272,17 @@
     "green": true,
     "day_high": 91.57499694824219,
     "day_low": 85.94000244140625,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 74.67652585060226,
+    "adx14": 14.198258273754524,
+    "ema10": 84.61918549457995,
+    "sma200": 65.35552505493165,
+    "perf_63d": -5.206485392042792,
+    "adr20_pct": 6.625945014905443,
+    "range10_pct": 35.14546966850358,
+    "high10_prev": 91.9800033569336,
+    "pullback_ema20": false,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -268,6 +312,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -275,7 +340,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.6666666666666666,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.16666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -614,10 +682,10 @@
   ]
  },
  "intelligence_detail": {
-  "score": 22.2,
+  "score": 34.8,
   "components": {
-   "news_flow": 43.0,
-   "freshness": 0,
+   "news_flow": 68.2,
+   "freshness": 50,
    "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
@@ -627,15 +695,6 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
-    "primary": 0,
-    "analyst_changes": 0,
-    "verified": 0
-   },
-   "7d": {
     "signals": 1,
     "independent": 1,
     "duplicates": 0,
@@ -644,9 +703,18 @@
     "analyst_changes": 0,
     "verified": 0
    },
+   "7d": {
+    "signals": 2,
+    "independent": 2,
+    "duplicates": 0,
+    "sources": 1,
+    "primary": 0,
+    "analyst_changes": 0,
+    "verified": 0
+   },
    "30d": {
-    "signals": 5,
-    "independent": 5,
+    "signals": 6,
+    "independent": 6,
     "duplicates": 0,
     "sources": 2,
     "primary": 0,
@@ -656,8 +724,8 @@
   },
   "drivers": [
    "news_flow",
-   "price_volume_anomaly",
-   "source_diversity"
+   "freshness",
+   "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -676,6 +744,29 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "af336780782aafaf",
+   "symbols": [
+    "ATEX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Anterix (ATEX) Stock Could Be Overvalued After Its 348% Run",
+   "summary": "Anterix has seen its share price move sharply over the past year, which naturally puts the focus on whether that kind of run is backed up by the earnings the business is generating. With the stock now watched more closely by a wider group of investors, the key issue is how its cu",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/anterix-atex-stock-could-overvalued-070646394.html?.tsrc=rss",
+   "published_at": "2026-11-01T07:06:46Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:05:10Z",
+   "fingerprint": "fb272b652b1ac45e",
+   "primary_source": false,
+   "cluster_id": "af336780782aafaf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Anterix (ATEX) Aktie könnte nach seinem 348% Run überbewertet werden"
+  },
   {
    "id": "1a7595930aed21be",
    "symbols": [
@@ -794,6 +885,7 @@
   {
    "id": "d974c019ac69e221",
    "symbols": [
+    "ADTN",
     "ATEX"
    ],
    "category": "market",

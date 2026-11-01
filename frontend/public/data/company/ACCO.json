@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 2.9879573319228685,
    "rvol": 8.065717706531862,
    "ema10": 4.65866352702883,
-   "ema21": 4.5490538210900935,
+   "ema21": 4.549053821090092,
    "sma50": 4.376400003433227,
-   "sma200": 3.8562734711170195
+   "sma200": 3.856273467540741
   },
   "market_cap": 507878304.0,
   "market_cap_currency": "USD",
@@ -35,16 +35,16 @@
     "close": 5.5,
     "change_pct": 26.14678512788695,
     "ema20": 4.556336336538588,
-    "ema50": 4.401466320430568,
-    "ema200": 3.9995313736848788,
+    "ema50": 4.401466320411495,
+    "ema200": 3.9995313633066525,
     "sma50": 4.376400003433227,
-    "rsi14": 77.73399006881084,
-    "rsi_min5": 45.22601016429666,
-    "atr14": 0.19780593658498,
-    "atr_pct": 3.596471574272363,
+    "rsi14": 77.73399006883156,
+    "rsi_min5": 45.226010164294735,
+    "atr14": 0.19780593658485432,
+    "atr_pct": 3.5964715742700784,
     "rvol": 8.065717706531862,
     "vol30": 796803.3333333334,
-    "dist_ema200_pct": 37.51611091708222,
+    "dist_ema200_pct": 37.51611127391736,
     "dist_52w_high_pct": 0.0,
     "high_52w": 5.5,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 5.5,
     "day_low": 4.96999979019165,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 96.24856900977626,
+    "adx14": 22.294439041821708,
+    "ema10": 4.65866352702883,
+    "sma200": 3.856273467540741,
+    "perf_63d": 29.612912099519683,
+    "adr20_pct": 2.9879573319228685,
+    "range10_pct": 9.468818813770085,
+    "high10_prev": 4.739999771118164,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,16 +98,41 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": false
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": true,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
-    "S03"
+    "S03",
+    "DSM"
    ],
    "near": {
     "S01": 0.0,
     "S02": 0.5,
     "S03": 1.0,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 1.0,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": true,
@@ -110,9 +145,9 @@
    "plan": {
     "trigger": 5.5,
     "entry_max": 5.61,
-    "stop": 5.20329109512253,
-    "risk_per_share": 0.2967089048774696,
-    "target_1": 6.093417809754939,
+    "stop": 5.203291095122719,
+    "risk_per_share": 0.2967089048772813,
+    "target_1": 6.093417809754563,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -141,12 +176,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 17.6,
+   "score": 67.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 8,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -210,9 +247,9 @@
   "adr20": 2.9879573319228685,
   "rvol": 8.065717706531862,
   "ema10": 4.65866352702883,
-  "ema21": 4.5490538210900935,
+  "ema21": 4.549053821090092,
   "sma50": 4.376400003433227,
-  "sma200": 3.8562734711170195,
+  "sma200": 3.856273467540741,
   "volatility_ann": 57.49218930559606,
   "avg_dollar_volume_20d": 4455434.951198101,
   "move_zscore": 7.219543231987954,
@@ -221,16 +258,16 @@
     "close": 5.5,
     "change_pct": 26.14678512788695,
     "ema20": 4.556336336538588,
-    "ema50": 4.401466320430568,
-    "ema200": 3.9995313736848788,
+    "ema50": 4.401466320411495,
+    "ema200": 3.9995313633066525,
     "sma50": 4.376400003433227,
-    "rsi14": 77.73399006881084,
-    "rsi_min5": 45.22601016429666,
-    "atr14": 0.19780593658498,
-    "atr_pct": 3.596471574272363,
+    "rsi14": 77.73399006883156,
+    "rsi_min5": 45.226010164294735,
+    "atr14": 0.19780593658485432,
+    "atr_pct": 3.5964715742700784,
     "rvol": 8.065717706531862,
     "vol30": 796803.3333333334,
-    "dist_ema200_pct": 37.51611091708222,
+    "dist_ema200_pct": 37.51611127391736,
     "dist_52w_high_pct": 0.0,
     "high_52w": 5.5,
     "macd_above_signal": true,
@@ -244,7 +281,17 @@
     "green": true,
     "day_high": 5.5,
     "day_low": 4.96999979019165,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 96.24856900977626,
+    "adx14": 22.294439041821708,
+    "ema10": 4.65866352702883,
+    "sma200": 3.856273467540741,
+    "perf_63d": 29.612912099519683,
+    "adr20_pct": 2.9879573319228685,
+    "range10_pct": 9.468818813770085,
+    "high10_prev": 4.739999771118164,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -274,16 +321,41 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": false
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": true,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
-    "S03"
+    "S03",
+    "DSM"
    ],
    "near": {
     "S01": 0.0,
     "S02": 0.5,
     "S03": 1.0,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 1.0,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": true,
@@ -296,9 +368,9 @@
    "plan": {
     "trigger": 5.5,
     "entry_max": 5.61,
-    "stop": 5.20329109512253,
-    "risk_per_share": 0.2967089048774696,
-    "target_1": 6.093417809754939,
+    "stop": 5.203291095122719,
+    "risk_per_share": 0.2967089048772813,
+    "target_1": 6.093417809754563,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -622,11 +694,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 17.6,
+  "score": 67.1,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 80,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 100.0,
@@ -635,35 +707,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 8,
+    "independent": 8,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 13,
+    "independent": 13,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -681,7 +755,408 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "0a9c680e429a5184",
+   "symbols": [
+    "ACCO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACCO: 3 Key Takeaways for Long-Term Investors",
+   "summary": "Established office brands are funding the transition to higher-margin tech accessories, a dual-engine strategy that could reshape profitability.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/takeaways/2026/10/31/acco-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+   "published_at": "2026-10-31T14:53:30Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "06310ef969e9b719",
+   "primary_source": false,
+   "cluster_id": "0a9c680e429a5184",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "ACCO: 3 wichtige Takeaways für langfristige Investoren"
+  },
+  {
+   "id": "43bb214987241c6f",
+   "symbols": [
+    "ACCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACCO (ACCO) Q3 2026 Earnings Call Transcript",
+   "summary": "Trust acquisition expands tech peripherals to $500M, offsetting consumer spending weakness.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/30/acco-acco-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-30T17:14:41Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "63f9919baa90f635",
+   "primary_source": false,
+   "cluster_id": "43bb214987241c6f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cf49dc3ed3ce7e43",
+   "symbols": [
+    "ACCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What Acco Brands (ACCO) Said on Its Q3 Earnings Call",
+   "summary": "Acco Brands (NYSE:ACCO) said third-quarter sales met its outlook, while adjusted earnings per share exceeded expectations because of tariff refunds. The company also highlighted progress in building its Technology Peripherals platform through the October 1 acquisition of Trust, a",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-acco-brands-acco-said-on-its-q3-earnings-call-2026-10-30/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-30T14:14:43Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "8180a101c4107112",
+   "primary_source": false,
+   "cluster_id": "cf49dc3ed3ce7e43",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Was Acco Brands (ACCO) zu seinem Q3-Gewinnaufruf sagte"
+  },
+  {
+   "id": "c9b6bbe1a7d055ad",
+   "symbols": [
+    "ACCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACCO Brands Corporation Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of ACCO Brands Corporation's Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-acco-brands-corporation-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-30T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "def5c4a22ec8d6f4",
+   "primary_source": false,
+   "cluster_id": "c9b6bbe1a7d055ad",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b6c6ff321445bc44",
+   "symbols": [
+    "ACCO",
+    "ALTO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acco Brands (ACCO) Tops Q3 Earnings Estimates",
+   "summary": "Acco (ACCO) delivered earnings and revenue surprises of +47.37% and -0.89%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acco-brands-acco-tops-q3-203501530.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:35:01Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:26:52Z",
+   "fingerprint": "56c2603d29e637ac",
+   "primary_source": false,
+   "cluster_id": "b6c6ff321445bc44",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "931c25a466e4e63e",
+   "symbols": [
+    "ACCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acco: Q3 Earnings Snapshot",
+   "summary": "(ACCO) on Thursday reported third-quarter earnings of $11.The Lake Zurich, Illinois-based company said it had net income of 12 cents per share.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acco-q3-earnings-snapshot-203235681.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:32:35Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "c4510ff7274dc057",
+   "primary_source": false,
+   "cluster_id": "931c25a466e4e63e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "39e26de7e9361074",
+   "symbols": [
+    "ACCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACCO Brands Reports Third Quarter Results",
+   "summary": "LAKE ZURICH, Ill., October 29, 2026--ACCO Brands Reports Third Quarter Results",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acco-brands-reports-third-quarter-200500586.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "76c6eac39330e9f9",
+   "primary_source": false,
+   "cluster_id": "39e26de7e9361074",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a93e14edb165d49b",
+   "symbols": [
+    "ACCO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Kensington and EPOS Showcase End-to-End Professional Workspace Technology at Pepcom Holiday Spectacular! 2026",
+   "summary": "First Joint Exhibition Highlights Kensington Docking, Input, Security, Privacy, and Ergonomic Solutions Alongside EPOS Enterprise Headsets for Hybrid Work and AI-Enabled Collaboration Kensington Pro Fit Ergo KM620-RC Wireless Rechargeable EQ Desktop Set The Pro Fit Ergo KM620-RC ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/kensington-epos-showcase-end-end-120000773.html?.tsrc=rss",
+   "published_at": "2026-10-28T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "1548473c69e6ea36",
+   "primary_source": false,
+   "cluster_id": "a93e14edb165d49b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e6762a5a12867616",
+   "symbols": [
+    "ACCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Betterware de Mexico SAPI de C (BWMX) Lags Q3 Earnings Estimates",
+   "summary": "Betterware de Mexico SAPI de C (BWMX) delivered earnings and revenue surprises of -20.83% and +6.57%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/betterware-mexico-sapi-c-bwmx-210003962.html?.tsrc=rss",
+   "published_at": "2026-10-22T21:00:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "b0792218f600da80",
+   "primary_source": false,
+   "cluster_id": "e6762a5a12867616",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4cc35d595f3abb19",
+   "symbols": [
+    "ACCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACCO Brands Corporation Announces Third Quarter 2026 Earnings Webcast",
+   "summary": "LAKE ZURICH, Ill., October 16, 2026--ACCO Brands Corporation Announces Third Quarter 2026 Earnings Webcast",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acco-brands-corporation-announces-third-110000795.html?.tsrc=rss",
+   "published_at": "2026-10-16T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "68770a7dbfce06d5",
+   "primary_source": false,
+   "cluster_id": "4cc35d595f3abb19",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f26677068d4fd6da",
+   "symbols": [
+    "ACCO",
+    "PBI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Pitney Bowes (PBI) vs. BRC and ACCO: Can Stronger Cash Flow Extend the Turnaround Into Sustainable Growth?",
+   "summary": "Is PBI a good stock to buy? We came across a bullish thesis on Pitney Bowes Inc. on Hidden Rock Capital’s Newsletter’s Substack by Hidden Rock Capital. In this article, we will summarize the bulls’ thesis on PBI. Pitney Bowes Inc.’s share was trading at $16.48 as of October 7th 2",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/pitney-bowes-pbi-vs-brc-164531781.html?.tsrc=rss",
+   "published_at": "2026-10-14T16:45:31Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:47Z",
+   "fingerprint": "cde59886f35f3754",
+   "primary_source": false,
+   "cluster_id": "f26677068d4fd6da",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b7a65c805280cbc8",
+   "symbols": [
+    "ACCO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "EPOS Launches IMPACT 400 Wireless Headset for Open Offices and Hybrid Work",
+   "summary": "EPOS IMPACT 400 Wireless Headset Designed for open offices and hybrid professionals, the EPOS IMPACT 400 Wireless Headset gives organizations a wireless option for equipping employees who need clear calls, fewer distractions, and reliable performance throughout the workday. New B",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/epos-launches-impact-400-wireless-120000202.html?.tsrc=rss",
+   "published_at": "2026-10-06T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "ad705f3590fa2c21",
+   "primary_source": false,
+   "cluster_id": "b7a65c805280cbc8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1f674521028371ae",
+   "symbols": [
+    "ACCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACCO Brands Announces the Closing of the Trust Acquisition",
+   "summary": "LAKE ZURICH, Ill., October 02, 2026--ACCO Brands Announces the Closing of the Trust Acquisition",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acco-brands-announces-closing-trust-105000603.html?.tsrc=rss",
+   "published_at": "2026-10-02T10:50:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "e1cd4ceede4104b0",
+   "primary_source": false,
+   "cluster_id": "1f674521028371ae",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a6e8649b24881d1d",
+   "symbols": [
+    "ACCO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "PowerA Brings the Magic of Harry Potter™ to Gaming Accessories Through New Partnership with Warner Bros. Discovery Global Consumer Products",
+   "summary": "PowerA, a global leader in officially licensed gaming accessories, today announced a new multi-year licensing partnership with Warner Bros. Discovery Global Consumer Products to develop a collection of Harry Potter™-inspired gaming accessories for Nintendo Switch™ and XBOX™ platf",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/powera-brings-magic-harry-potter-130000656.html?.tsrc=rss",
+   "published_at": "2026-09-15T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "74be4146e5f618c2",
+   "primary_source": false,
+   "cluster_id": "a6e8649b24881d1d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bcd2945bee473971",
+   "symbols": [
+    "ACCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACCO Brands to Acquire Trust",
+   "summary": "LAKE ZURICH, Ill., August 14, 2026--ACCO Brands to Acquire Trust",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/acco-brands-acquire-trust-105000280.html?.tsrc=rss",
+   "published_at": "2026-08-14T10:50:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "c1e5748b120dbb3f",
+   "primary_source": false,
+   "cluster_id": "bcd2945bee473971",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "230f8470a99bf2e8",
+   "symbols": [
+    "ACCO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "American Fusion Inc. (OTC: AMFN) Appoints Niclas von Schantz as Strategic Advisor for Brand, Commercialization and International Market Development",
+   "summary": "Senior Brand and Commercialization Specialist Brings More Than 25 Years of Experience Across 100+ Brands and 50+ Markets, Including Caterpillar, Vattenfall, Mazda, Uponor and ACCO BrandsSOUTHLAKE, Texas, Aug. 12, 2026 (GLOBE NEWSWIRE) -- American Fusion Inc. (OTC: AMFN) (“America",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/american-fusion-inc-otc-amfn-120000903.html?.tsrc=rss",
+   "published_at": "2026-08-12T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "bfb027fff38c487e",
+   "primary_source": false,
+   "cluster_id": "230f8470a99bf2e8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5ba819c772eb4588",
+   "symbols": [
+    "ACCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Should You Buy, Sell or Hold SharkNinja Stock Post Q2 Earnings?",
+   "summary": "SN's Q2 strength, raised 2026 outlook and global expansion support its growth story, while valuation remains attractive.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/buy-sell-hold-sharkninja-stock-153900066.html?.tsrc=rss",
+   "published_at": "2026-08-10T15:39:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "76211a0f4146866d",
+   "primary_source": false,
+   "cluster_id": "5ba819c772eb4588",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "49eebb61be1a4dc4",
+   "symbols": [
+    "ACCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACCO (ACCO) Q2 2026 Earnings Call Transcript",
+   "summary": "EPOS integration exceeded expectations as cost cuts offset soft international demand.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/07/acco-acco-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-08T02:30:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:29Z",
+   "fingerprint": "a99893f254424af2",
+   "primary_source": false,
+   "cluster_id": "49eebb61be1a4dc4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "2b8adfba69bcaa2e",

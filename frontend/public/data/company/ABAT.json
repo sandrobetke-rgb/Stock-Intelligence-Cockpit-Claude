@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 1.5,
     "day_low": 1.399999976158142,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 23.16236554568438,
+    "adx14": 43.064955324001836,
+    "ema10": 1.5047761133929092,
+    "sma200": 2.928624992966652,
+    "perf_63d": -33.878509696783944,
+    "adr20_pct": 7.132860743494582,
+    "range10_pct": 29.055124629090145,
+    "high10_prev": 1.6390000581741333,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.3,
     "S03": 0.3333333333333333,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -236,7 +270,17 @@
     "green": false,
     "day_high": 1.5,
     "day_low": 1.399999976158142,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 23.16236554568438,
+    "adx14": 43.064955324001836,
+    "ema10": 1.5047761133929092,
+    "sma200": 2.928624992966652,
+    "perf_63d": -33.878509696783944,
+    "adr20_pct": 7.132860743494582,
+    "range10_pct": 29.055124629090145,
+    "high10_prev": 1.6390000581741333,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -266,6 +310,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -273,7 +338,10 @@
     "S01": 0.5,
     "S02": 0.3,
     "S03": 0.3333333333333333,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -643,10 +711,10 @@
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -671,7 +739,448 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "ae499f35cde65dca",
+   "symbols": [
+    "ABAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "American Battery Technology Maps U.S. Battery Metals Push With Recycling, Nevada Lithium",
+   "summary": "American Battery Technology (NASDAQ:ABAT) is advancing a U.S.-based battery-materials strategy built around lithium-ion battery recycling and the development of its Tonopah Flats Lithium Project in Nevada, Chief Financial Officer Alex Flores said during a company presentation. Fl",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-american-battery-technology-maps-us-battery-metals-push-with-recycling-nevada-lithium-2026-10-21/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-21T22:02:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "c72b19bb66730ebc",
+   "primary_source": false,
+   "cluster_id": "ae499f35cde65dca",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "82320f86846acd13",
+   "symbols": [
+    "ABAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "American Battery granted export license for $100M in black mass",
+   "summary": "The permit allows ABTC to continue operations at its critical mineral recycling facility. The company says battery collection and shredding infrastructure has developed faster than domestic downstream refining capacity.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "wastedive.com",
+   "url": "https://www.wastedive.com/news/american-battery-granted-export-license-100m-in-black-mass/832013/?.tsrc=rss",
+   "published_at": "2026-10-02T14:27:57Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "3495593a5d881760",
+   "primary_source": false,
+   "cluster_id": "82320f86846acd13",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0b761437ba5941ca",
+   "symbols": [
+    "ABAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "American Battery Technology Shares Rise 10% After Receiving Export Approval",
+   "summary": "American Battery Technology Co (NASDAQ:ABAT) shares rose 10% in premarket trading on Thursday after the company received US government approval to export up to $100 million of recycled black mass material. The approval from the US Department of Commerce’s Bureau of Industry and S",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "investorshub.advfn.com",
+   "url": "https://investorshub.advfn.com/market-news/article/37316/american-battery-technology-shares-rise-10-after-receiving-export-approval?.tsrc=rss",
+   "published_at": "2026-10-01T13:26:20Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "b6a24f7852c51a21",
+   "primary_source": false,
+   "cluster_id": "0b761437ba5941ca",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "49819962a083dc01",
+   "symbols": [
+    "ABAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "American Battery Technology Company Receives Approval for Sale of $100 Million of Exported Recycled Black Mass Critical Minerals with License from U.S. Department of Commerce",
+   "summary": "Significant scale-up of commercial operations at American Battery Technology Company’s domestic U.S. critical mineral recycling facility, demonstrated by its over 400% year-over-year revenue growth and leadership in domestic critical mineral manufacturing American Battery Technol",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/american-battery-technology-company-receives-100000504.html?.tsrc=rss",
+   "published_at": "2026-10-01T10:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "a5dea20ebd0ae37c",
+   "primary_source": false,
+   "cluster_id": "49819962a083dc01",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8d223a6d4a6d95be",
+   "symbols": [
+    "ABAT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "American Battery Technology Co (ABAT) (Q4 2026) Earnings Call Highlights: Record Revenue Growth ...",
+   "summary": "American Battery Technology Co (ABAT) reports a 400% revenue surge to $21.7 million and its first-ever positive adjusted gross profit in fiscal year 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/american-battery-technology-co-abat-070017870.html?.tsrc=rss",
+   "published_at": "2026-09-22T07:00:17Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "af4cad3833fea9e1",
+   "primary_source": false,
+   "cluster_id": "8d223a6d4a6d95be",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "586f466e3c8042f4",
+   "symbols": [
+    "ABAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "American Battery Technology (ABAT) Turns A Profit, But Faces A New Export Threat",
+   "summary": "On September 14, American Battery Technology Company (NASDAQ:ABAT) held its fiscal year 2026 earnings call, and for once the numbers matched the ambition. Revenue at its flagship recycling facility jumped more than 400% to $21.7 million, and the company posted its first-ever adju",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/american-battery-technology-abat-turns-141323855.html?.tsrc=rss",
+   "published_at": "2026-09-16T14:13:23Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "4543a3da60d7f3bc",
+   "primary_source": false,
+   "cluster_id": "586f466e3c8042f4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "999588e82004b271",
+   "symbols": [
+    "ABAT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ABAT Q4 2026 Earnings Call Transcript",
+   "summary": "Recycling facility turns profitable as Tonopah lithium project advances toward federal permits.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/09/15/abat-q4-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-09-15T16:12:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "66532b77dc7da785",
+   "primary_source": false,
+   "cluster_id": "999588e82004b271",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "df1792ff90088b72",
+   "symbols": [
+    "ABAT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "American Battery Technology Company Common Stock Q4 2026 Earnings Call Summary",
+   "summary": "Moby summary of American Battery Technology Company Common Stock's Q4 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-american-battery-technology-company-common-stock-q4-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-09-15T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "feac02edb5bb5f67",
+   "primary_source": false,
+   "cluster_id": "df1792ff90088b72",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ca2701a8df8d4f2b",
+   "symbols": [
+    "ABAT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "American Battery Technology Q4 Earnings Call Highlights",
+   "summary": "American Battery Technology (NASDAQ:ABAT) reported a more than 400% increase in fiscal 2026 revenue to $21.7 million, driven by higher throughput at its first lithium-ion battery recycling facility, expanded byproduct manufacturing and improved product pricing, Chief Executive Of",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-american-battery-technology-q4-earnings-call-highlights-2026-09-14/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-09-14T22:03:21Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "55861c6d7e92cf43",
+   "primary_source": false,
+   "cluster_id": "ca2701a8df8d4f2b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e0b18d9c2da5aeff",
+   "symbols": [
+    "ABAT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "American Battery Technology Company Reports FY 26 Financial Results, Delivering 407% Revenue Growth and Positive Adjusted Gross Profit",
+   "summary": "Revenue Increased Year-Over-Year to $21.7 Million and Adjusted Gross Profit Turned Positive, Marking a Key Milestone in the Scale-Up of America's Domestic Critical Mineral Manufacturing IndustryRENO, Nev., Sept. 14, 2026 (GLOBE NEWSWIRE) -- American Battery Technology Company (NA",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/american-battery-technology-company-reports-113000750.html?.tsrc=rss",
+   "published_at": "2026-09-14T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "80f41cac45c7fd22",
+   "primary_source": false,
+   "cluster_id": "e0b18d9c2da5aeff",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c68d6ca98d247747",
+   "symbols": [
+    "ABAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "American Battery Technology Company Achieves Major Milestone with U.S. BLM Acceptance of Plan of Operations for Tonopah Flats Lithium Project",
+   "summary": "U.S. Bureau of Land Management certifies acceptance of the company's Tonopah Flats Lithium Project mine and refinery Plan of Operations, advancing permitting for one of the nation's largest known lithium resources and a globally significant project supporting domestic critical mi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/american-battery-technology-company-achieves-124500991.html?.tsrc=rss",
+   "published_at": "2026-09-08T12:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "61311bf1d20f8c58",
+   "primary_source": false,
+   "cluster_id": "c68d6ca98d247747",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0636e13da4f6b712",
+   "symbols": [
+    "ABAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "American Battery Technology Company Hosts DOE Leadership to Showcase Commercial Technologies Strengthening U.S. Critical Minerals Supply Chains",
+   "summary": "U.S. Department of Energy Assistant Secretary Audrey Robertson joins federal and state leaders for a tour of DOE-supported technologies advancing battery recycling, domestic lithium production, and U.S. critical minerals supply chains U.S. Department of Energy Leaders Tour Americ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/american-battery-technology-company-hosts-123100854.html?.tsrc=rss",
+   "published_at": "2026-08-31T12:31:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "09f9a16553c64c78",
+   "primary_source": false,
+   "cluster_id": "0636e13da4f6b712",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d6242625aa8401bd",
+   "symbols": [
+    "ABAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Trump's $500 Million Critical Minerals Push: 5 Battery Stocks That Could Benefit",
+   "summary": "The U.S. government’s latest $500 million investment in critical minerals wasn’t directed at publicly traded companies — but public market investors shouldn’t ignore it. By backing lithium processing, cobalt refining and battery recycling projects, the Donald Trump administration",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/economy/policy/articles/trumps-500-million-critical-minerals-154336383.html?.tsrc=rss",
+   "published_at": "2026-08-20T15:43:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "279f998a8b7dea0d",
+   "primary_source": false,
+   "cluster_id": "d6242625aa8401bd",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5cab490940c5a312",
+   "symbols": [
+    "ABAT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "American Battery Technology Company Announces Highest Ever Gross Profit and Successful Appeal for Reinstatement of $57 Million US Department of Energy Grant in Fourth Quarter FY2026 Financial Results",
+   "summary": "Increase in gross profit of 86% through continued scale-up and implementation of operational efficiencies at its domestic-US critical mineral recycling facility, and reinstatement of competitive $57 million grant from U.S. Department of EnergyReno, Nev., Aug. 20, 2026 (GLOBE NEWS",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/american-battery-technology-company-announces-120000937.html?.tsrc=rss",
+   "published_at": "2026-08-20T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "28c6fa3d88b54850",
+   "primary_source": false,
+   "cluster_id": "5cab490940c5a312",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ff8cab299da041e9",
+   "symbols": [
+    "ABAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why American Battery Technology Company’s (ABAT) Restored DOE Grant Matters for Its Lithium Growth Plan",
+   "summary": "American Battery Technology Company (NASDAQ:ABAT) is one of the best battery recycling stocks to buy. On June 8, American Battery Technology Company said it won its appeal with the U.S. Department of Energy and had its grant reinstated for a $115 million commercial-scale critical",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-american-battery-technology-company-121936121.html?.tsrc=rss",
+   "published_at": "2026-07-03T12:19:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "f5ea671de294d831",
+   "primary_source": false,
+   "cluster_id": "ff8cab299da041e9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bdf7de336de3c50d",
+   "symbols": [
+    "ABAT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "American Battery announces reinstated $57M grant from DOE",
+   "summary": "American Battery Technology Co. won its appeal after the agency canceled the grant last year. It will continue plans to build a $115 million commercial-scale lithium refinery alongside its lithium-ion battery recycling efforts.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "wastedive.com",
+   "url": "https://www.wastedive.com/news/american-battery-announces-reinstated-57m-grant-from-doe/822326/?.tsrc=rss",
+   "published_at": "2026-06-09T11:46:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "a0c989e507b6e002",
+   "primary_source": false,
+   "cluster_id": "bdf7de336de3c50d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1f12f645b4a6a5c0",
+   "symbols": [
+    "ABAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "A Look At American Battery Technology (ABAT) Valuation After DOE Grant Reinstatement",
+   "summary": "American Battery Technology (ABAT) stock is back in focus after the company won its appeal with the US Department of Energy, securing full reinstatement of a competitive grant for its Tonopah Flats lithium refinery project. See our latest analysis for American Battery Technology.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/look-american-battery-technology-abat-051233359.html?.tsrc=rss",
+   "published_at": "2026-06-09T05:12:33Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "0ae2750ff76b1c88",
+   "primary_source": false,
+   "cluster_id": "1f12f645b4a6a5c0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a764f299733b8d2d",
+   "symbols": [
+    "ABAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ABTC wins back $115m DoE grant for Tonopah Lithium refinery",
+   "summary": "Situated in Nevada’s Big Smoky Valley near Tonopah, the site comprises 517 unpatented lode mining claims.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "mining-technology.com",
+   "url": "https://www.mining-technology.com/news/abtc-wins-doe-grant-tonopah-lithium-refinery/?.tsrc=rss",
+   "published_at": "2026-06-08T14:03:28Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "b6a768d6dacbc3b1",
+   "primary_source": false,
+   "cluster_id": "a764f299733b8d2d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5c90d853f779217b",
+   "symbols": [
+    "ABAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ABAT Stock On Track For Biggest One-Day Percentage Gains In 8 Months — DOE Reverses Course On Lithium Project Funding",
+   "summary": "Following an appeal submission and an informal dispute resolution review that spread over several months, the U.S. Department of Energy concluded that the continuation of the company’s project is warranted.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/abat-stock-on-track-for-biggest-one-day-percentage-gains-in-8-months-doe-reverses-course-on-lithium-project-funding/cZ0v285R7G7?.tsrc=rss",
+   "published_at": "2026-06-08T11:48:49Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "28e5a4aa3a402bac",
+   "primary_source": false,
+   "cluster_id": "5c90d853f779217b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "96184bfe7e1b96c0",
+   "symbols": [
+    "ABAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "American Battery Technology Company Wins Appeal and Has US Department of Energy Grant Reinstated for $115 million Project for Commercial Scale Critical Mineral Lithium Refinery",
+   "summary": "Reno, Nev., June 08, 2026 (GLOBE NEWSWIRE) -- Reinstatement advances the company’s Tonopah Flats Lithium Project – one of the largest identified critical mineral lithium resources in the United States – strengthening domestic battery metals supply chains and national energy secur",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/energy/articles/american-battery-technology-company-wins-095100446.html?.tsrc=rss",
+   "published_at": "2026-06-08T09:51:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "0342d48ae43c1c5f",
+   "primary_source": false,
+   "cluster_id": "96184bfe7e1b96c0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "5f79bad6e7464a34",

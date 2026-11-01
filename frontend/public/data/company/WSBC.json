@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,7 +24,7 @@
    "adr20": 1.904710379424137,
    "rvol": 0.5742444605258624,
    "ema10": 38.39876706411221,
-   "ema21": 38.19751094720068,
+   "ema21": 38.19751094720065,
    "sma50": 38.750150985717774,
    "sma200": 36.57849232673645
   },
@@ -34,17 +34,17 @@
    "tech": {
     "close": 38.4900016784668,
     "change_pct": -1.0539841422354423,
-    "ema20": 38.196194947609925,
-    "ema50": 38.49332834285548,
-    "ema200": 36.74428815840947,
+    "ema20": 38.1961949476099,
+    "ema50": 38.493328342695186,
+    "ema200": 36.74428814535533,
     "sma50": 38.750150985717774,
-    "rsi14": 52.56800062776384,
-    "rsi_min5": 52.56800062776384,
-    "atr14": 0.7783943027815226,
-    "atr_pct": 2.022328575831148,
+    "rsi14": 52.56800062776359,
+    "rsi_min5": 52.56800062776359,
+    "atr14": 0.7783943027816654,
+    "atr_pct": 2.0223285758315193,
     "rvol": 0.5742444605258624,
     "vol30": 786850.0,
-    "dist_ema200_pct": 4.7509792883490665,
+    "dist_ema200_pct": 4.75097932556392,
     "dist_52w_high_pct": 9.69933420920831,
     "high_52w": 42.62427230341836,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 39.09000015258789,
     "day_low": 38.380001068115234,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 29.848937362185367,
+    "adx14": 21.607195803812072,
+    "ema10": 38.39876706411221,
+    "sma200": 36.57849232673645,
+    "perf_63d": -7.085994732131661,
+    "adr20_pct": 1.904710379424137,
+    "range10_pct": 7.5790587681772825,
+    "high10_prev": 39.459999084472656,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 39.09000015258789,
     "entry_max": 39.87180015563965,
-    "stop": 37.92240869841561,
-    "risk_per_share": 1.1675914541722818,
-    "target_1": 41.425183060932454,
+    "stop": 37.922408698415396,
+    "risk_per_share": 1.167591454172495,
+    "target_1": 41.42518306093288,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -138,11 +172,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 4.8,
+   "score": 33.7,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 3,
    "independent_24h": 0
   },
   "political": {
@@ -196,7 +232,7 @@
   "adr20": 1.904710379424137,
   "rvol": 0.5742444605258624,
   "ema10": 38.39876706411221,
-  "ema21": 38.19751094720068,
+  "ema21": 38.19751094720065,
   "sma50": 38.750150985717774,
   "sma200": 36.57849232673645,
   "volatility_ann": 18.3027895466262,
@@ -206,17 +242,17 @@
    "tech": {
     "close": 38.4900016784668,
     "change_pct": -1.0539841422354423,
-    "ema20": 38.196194947609925,
-    "ema50": 38.49332834285548,
-    "ema200": 36.74428815840947,
+    "ema20": 38.1961949476099,
+    "ema50": 38.493328342695186,
+    "ema200": 36.74428814535533,
     "sma50": 38.750150985717774,
-    "rsi14": 52.56800062776384,
-    "rsi_min5": 52.56800062776384,
-    "atr14": 0.7783943027815226,
-    "atr_pct": 2.022328575831148,
+    "rsi14": 52.56800062776359,
+    "rsi_min5": 52.56800062776359,
+    "atr14": 0.7783943027816654,
+    "atr_pct": 2.0223285758315193,
     "rvol": 0.5742444605258624,
     "vol30": 786850.0,
-    "dist_ema200_pct": 4.7509792883490665,
+    "dist_ema200_pct": 4.75097932556392,
     "dist_52w_high_pct": 9.69933420920831,
     "high_52w": 42.62427230341836,
     "macd_above_signal": true,
@@ -230,7 +266,17 @@
     "green": false,
     "day_high": 39.09000015258789,
     "day_low": 38.380001068115234,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 29.848937362185367,
+    "adx14": 21.607195803812072,
+    "ema10": 38.39876706411221,
+    "sma200": 36.57849232673645,
+    "perf_63d": -7.085994732131661,
+    "adr20_pct": 1.904710379424137,
+    "range10_pct": 7.5790587681772825,
+    "high10_prev": 39.459999084472656,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -260,6 +306,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -267,7 +334,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -280,9 +350,9 @@
    "plan": {
     "trigger": 39.09000015258789,
     "entry_max": 39.87180015563965,
-    "stop": 37.92240869841561,
-    "risk_per_share": 1.1675914541722818,
-    "target_1": 41.425183060932454,
+    "stop": 37.922408698415396,
+    "risk_per_share": 1.167591454172495,
+    "target_1": 41.42518306093288,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -519,11 +589,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 4.8,
+  "score": 33.7,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 86.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 27.4,
@@ -541,26 +611,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 20,
+    "independent": 20,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -578,7 +650,452 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "2790c829448ae6e7",
+   "symbols": [
+    "WSBC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is WesBanco (WSBC) Still A Bargain After Strong Q3 Growth?",
+   "summary": "WesBanco has delivered a strong share price run in recent years, and that puts fresh attention on whether the current valuation is aligned with the returns the bank earns on its capital. With the stock trading around US$39.05, the question for you is how well that price tracks th",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wesbanco-wsbc-still-bargain-strong-020818024.html?.tsrc=rss",
+   "published_at": "2026-10-26T02:08:18Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "e6f2827f1badecaa",
+   "primary_source": false,
+   "cluster_id": "2790c829448ae6e7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f377b3d3e1069032",
+   "symbols": [
+    "WSBC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Earnings Beat Might Change The Case For Investing In WesBanco Stock (WSBC)",
+   "summary": "WesBanco reported third quarter 2026 net interest income of US$226.88 million and net income of US$89.51 million, with basic earnings per share from continuing operations of US$0.89. Across the first nine months of 2026, WesBanco's net interest income of US$664.44 million and bas",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/earnings-beat-might-change-case-010741237.html?.tsrc=rss",
+   "published_at": "2026-10-26T01:07:41Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "f76693cdc0c98015",
+   "primary_source": false,
+   "cluster_id": "f377b3d3e1069032",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "17f9a15370a1996a",
+   "symbols": [
+    "WSBC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WesBanco (WSBC) Beat Expectations, Is The Stock Still A Bargain?",
+   "summary": "WesBanco (WSBC) has drawn fresh attention after reporting third quarter 2026 results, with higher net interest income and net income, and a market reaction that rewarded the earnings surprise. At a share price of $39.05, WesBanco has given investors a 17.13% year-to-date share pr",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wesbanco-wsbc-beat-expectations-stock-002237344.html?.tsrc=rss",
+   "published_at": "2026-10-26T00:22:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "abc951d21d90aff9",
+   "primary_source": false,
+   "cluster_id": "17f9a15370a1996a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "412776e35c8cefdf",
+   "symbols": [
+    "WSBC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WSBC Q3 deep dive: loan growth and expansion markets drive positive market response",
+   "summary": "Regional banking company WesBanco (NASDAQ:WSBC) fell short of the market’s revenue expectations in Q3 2026, with sales flat year on year at $264.1 million. Its non-GAAP profit of $0.89 per share was 1.6% above analysts’ consensus estimates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wsbc-q3-deep-dive-loan-025639131.html?.tsrc=rss",
+   "published_at": "2026-10-24T02:56:39Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "c006ef5dfcda3d11",
+   "primary_source": false,
+   "cluster_id": "412776e35c8cefdf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "aca2f49c6febc249",
+   "symbols": [
+    "WSBC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "The 5 most interesting analyst questions from WesBanco’s Q3 earnings call",
+   "summary": "WesBanco’s third quarter results were met with a positive market reaction, as the company’s non-GAAP earnings per share slightly exceeded Wall Street’s consensus while revenue remained flat year over year. Management highlighted disciplined execution and a relationship-focused st",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/5-most-interesting-analyst-questions-122439321.html?.tsrc=rss",
+   "published_at": "2026-10-23T12:24:39Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "08d13d7e2df35af7",
+   "primary_source": false,
+   "cluster_id": "aca2f49c6febc249",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5fb6335b755044ee",
+   "symbols": [
+    "WSBC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WesBanco (WSBC) Stock Climbs As Q3 Results Highlight Profit Strength",
+   "summary": "WesBanco just released its Q3 2026 scorecard and the stock reacted quickly. Shares closed at US$39.13, up 3.9% on the day, as traders responded to the headline profit figures. The key point is that the main story sits in profitability, not just the earnings beat. Net income to co",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wesbanco-wsbc-stock-climbs-q3-011546744.html?.tsrc=rss",
+   "published_at": "2026-10-23T01:15:46Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "1d3f818709590492",
+   "primary_source": false,
+   "cluster_id": "5fb6335b755044ee",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c1ece1ccc5916cec",
+   "symbols": [
+    "WSBC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WesBanco (WSBC) Q3 2026 Earnings Call Transcript",
+   "summary": "Commercial lending surged 11% as Florida and Tennessee expansions gained traction.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/22/wesbanco-wsbc-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-22T23:58:27Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "5dc0cb2b9401e6c6",
+   "primary_source": false,
+   "cluster_id": "c1ece1ccc5916cec",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "348182200c4db9d0",
+   "symbols": [
+    "WSBC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What WesBanco (WSBC) Said on Its Q3 Earnings Call",
+   "summary": "WesBanco (NASDAQ:WSBC) reported third-quarter results that reflected continued loan growth, stable credit metrics and expanding activity in targeted markets, while management said elevated commercial real estate payoffs remained a constraint on reported growth. For the quarter en",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-wesbanco-wsbc-said-on-its-q3-earnings-call-2026-10-22/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-22T21:04:33Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "1b3b85ae8cf56e5f",
+   "primary_source": false,
+   "cluster_id": "348182200c4db9d0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d54429beb6aa8b0e",
+   "symbols": [
+    "WSBC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WesBanco, Inc. Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of WesBanco, Inc.'s Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-wesbanco-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-22T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "c838365f32a01e2d",
+   "primary_source": false,
+   "cluster_id": "d54429beb6aa8b0e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e285d2e7d9f32c9e",
+   "symbols": [
+    "WSBC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WesBanco (WSBC) Reports Q3 Earnings: What Key Metrics Have to Say",
+   "summary": "While the top- and bottom-line numbers for WesBanco (WSBC) give a sense of how the business performed in the quarter ended September 2026, it could be worth looking at how some of its key metrics compare to Wall Street estimates and year-ago values.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wesbanco-wsbc-reports-q3-earnings-230002850.html?.tsrc=rss",
+   "published_at": "2026-10-21T23:00:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "5771eabc4f646815",
+   "primary_source": false,
+   "cluster_id": "e285d2e7d9f32c9e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e93db9f5a9e7c467",
+   "symbols": [
+    "WSBC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WesBanco (NASDAQ:WSBC) misses Q3 2026 sales expectations",
+   "summary": "Regional banking company WesBanco (NASDAQ:WSBC) fell short of the market’s revenue expectations in Q3 2026 as sales rose 4.3% year on year to $272.7 million. Its non-GAAP profit of $0.89 per share was 1.6% above analysts’ consensus estimates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wesbanco-nasdaq-wsbc-misses-q3-205315471.html?.tsrc=rss",
+   "published_at": "2026-10-21T20:53:15Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "4fc009706ec2b886",
+   "primary_source": false,
+   "cluster_id": "e93db9f5a9e7c467",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1f2f008156ebf86e",
+   "symbols": [
+    "JMSB",
+    "WSBC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WesBanco (WSBC) Q3 Earnings Surpass Estimates",
+   "summary": "WesBanco (WSBC) delivered earnings and revenue surprises of +2.30% and -1.30%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wesbanco-wsbc-q3-earnings-surpass-205007486.html?.tsrc=rss",
+   "published_at": "2026-10-21T20:50:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:41Z",
+   "fingerprint": "f9bef1d623a2903a",
+   "primary_source": false,
+   "cluster_id": "1f2f008156ebf86e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f6707be4aacd14c2",
+   "symbols": [
+    "WSBC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WesBanco: Q3 Earnings Snapshot",
+   "summary": "(WSBC) on Wednesday reported third-quarter earnings of $89.The bank, based in Wheeling, West Virginia, said it had earnings of 88 cents per share.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wesbanco-q3-earnings-snapshot-203224902.html?.tsrc=rss",
+   "published_at": "2026-10-21T20:32:24Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "e4acae2ca11228fa",
+   "primary_source": false,
+   "cluster_id": "f6707be4aacd14c2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2c2abbc80aea01ec",
+   "symbols": [
+    "WSBC"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "WesBanco Bank Earns Ninth \"Outstanding\" FDIC Community Reinvestment Act Rating",
+   "summary": "WesBanco Bank, Inc., a subsidiary of WesBanco, Inc. (NASDAQ: WSBC), has once again earned the highest composite rating of \"Outstanding\" from the Federal Deposit Insurance Corporation (FDIC) for its work in meeting the credit needs of the communities in which it operates, includin",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/economy/policy/articles/wesbanco-bank-earns-ninth-outstanding-131000484.html?.tsrc=rss",
+   "published_at": "2026-10-20T13:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "f0761c0cd4f269c2",
+   "primary_source": false,
+   "cluster_id": "2c2abbc80aea01ec",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6e608b2b18cd75c7",
+   "symbols": [
+    "WSBC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WesBanco (WSBC) Reports Q3: Everything You Need To Know Ahead Of Earnings",
+   "summary": "Regional banking company WesBanco (NASDAQ:WSBC) will be reporting earnings this Wednesday afternoon. Here’s what to expect.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wesbanco-wsbc-reports-q3-everything-030149696.html?.tsrc=rss",
+   "published_at": "2026-10-20T03:01:49Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "0028d2987a1fe147",
+   "primary_source": false,
+   "cluster_id": "6e608b2b18cd75c7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e7a71243580dc789",
+   "symbols": [
+    "WSBC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Dime Community (DCOM) to Report Q3 Results: Wall Street Expects Earnings Growth",
+   "summary": "Dime Community (DCOM) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dime-community-dcom-report-q3-130022938.html?.tsrc=rss",
+   "published_at": "2026-10-15T13:00:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "9c3d568487f574a8",
+   "primary_source": false,
+   "cluster_id": "e7a71243580dc789",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cded6fd3ac5e9ec6",
+   "symbols": [
+    "HWC",
+    "WSBC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Earnings Preview: WesBanco (WSBC) Q3 Earnings Expected to Decline",
+   "summary": "WesBanco (WSBC) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/earnings-preview-wesbanco-wsbc-q3-130018389.html?.tsrc=rss",
+   "published_at": "2026-10-14T13:00:18Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:10:42Z",
+   "fingerprint": "0749be937e6c363c",
+   "primary_source": false,
+   "cluster_id": "cded6fd3ac5e9ec6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e0f9924c0524ed62",
+   "symbols": [
+    "WSBC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WesBanco (WSBC) Stock May Be 29% Undervalued Given Its Equity Returns",
+   "summary": "WesBanco has quietly put up a strong 3 year share price run, which naturally raises the question of whether the returns it earns on its capital are enough to support where the stock trades today. After that kind of move, investors start to ask what is really driving the valuation",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wesbanco-wsbc-stock-may-29-191458093.html?.tsrc=rss",
+   "published_at": "2026-10-09T19:14:58Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "e009a14400bf90e3",
+   "primary_source": false,
+   "cluster_id": "e0f9924c0524ed62",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7f2ba4e83316073d",
+   "symbols": [
+    "WSBC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WesBanco (WSBC) Expands Its Commercial Footprint, Is The Stock Still A Bargain?",
+   "summary": "WesBanco (WSBC) has drawn fresh attention after recent trading left the share price at $36.96, with the bank’s returns over the past month and past 3 months inviting closer inspection. Recent trading leaves WesBanco’s share price up 10.86% year to date, while a weaker 30-day shar",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wesbanco-wsbc-expands-commercial-footprint-161919215.html?.tsrc=rss",
+   "published_at": "2026-10-09T16:19:19Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:50Z",
+   "fingerprint": "7d49e5618df7bdf1",
+   "primary_source": false,
+   "cluster_id": "7f2ba4e83316073d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "730e6c97230e6ec0",
+   "symbols": [
+    "GHC",
+    "GHM",
+    "WSBC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "2 Growth Stocks Set to Flourish and 1 Facing Headwinds",
+   "summary": "Growth is oxygen. But when it evaporates, the consequences can be severe - ask anyone who bought Cisco in the Dot-Com Bubble or newer investors who lived through the 2020 to 2022 COVID cycle.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/2-growth-stocks-set-flourish-135209839.html?.tsrc=rss",
+   "published_at": "2026-10-08T13:52:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:28Z",
+   "fingerprint": "ed5cc7b11981572f",
+   "primary_source": false,
+   "cluster_id": "730e6c97230e6ec0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [

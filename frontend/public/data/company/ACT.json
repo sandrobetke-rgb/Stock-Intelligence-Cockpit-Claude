@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 2.228326367107779,
    "rvol": 0.8461422105348894,
    "ema10": 47.29357772056521,
-   "ema21": 46.98154536471841,
+   "ema21": 46.98154536473796,
    "sma50": 47.545399856567386,
-   "sma200": 44.041143131256106
+   "sma200": 44.041143341064455
   },
   "market_cap": 6486479360.0,
   "market_cap_currency": "USD",
@@ -34,17 +34,17 @@
    "tech": {
     "close": 47.18000030517578,
     "change_pct": -1.8310466978144757,
-    "ema20": 46.98835773365412,
-    "ema50": 47.00320389493026,
-    "ema200": 44.26295197808456,
+    "ema20": 46.98835773366564,
+    "ema50": 47.00320390247159,
+    "ema200": 44.26295205648341,
     "sma50": 47.545399856567386,
-    "rsi14": 51.29575024005914,
-    "rsi_min5": 51.29575024005914,
-    "atr14": 1.134943925699922,
-    "atr_pct": 2.4055615056352924,
+    "rsi14": 51.29575023862985,
+    "rsi_min5": 51.29575023862985,
+    "atr14": 1.1349439257583294,
+    "atr_pct": 2.4055615057590893,
     "rvol": 0.8461422105348894,
     "vol30": 418823.3333333333,
-    "dist_ema200_pct": 6.590270636570983,
+    "dist_ema200_pct": 6.5902704477775575,
     "dist_52w_high_pct": 6.232419980851889,
     "high_52w": 50.31589841130723,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 47.79999923706055,
     "day_low": 46.869998931884766,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 18.39734482829924,
+    "adx14": 15.921676380433016,
+    "ema10": 47.29357772056521,
+    "sma200": 44.041143341064455,
+    "perf_63d": -0.9839436957768344,
+    "adr20_pct": 2.228326367107779,
+    "range10_pct": 8.227700350914823,
+    "high10_prev": 48.66999816894531,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.0
    },
    "filter": {
     "Tag grün": false,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 47.79999923706055,
     "entry_max": 48.75599922180176,
-    "stop": 46.09758334851066,
-    "risk_per_share": 1.7024158885498863,
-    "target_1": 51.20483101416032,
+    "stop": 46.09758334842305,
+    "risk_per_share": 1.7024158886374963,
+    "target_1": 51.20483101433554,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -137,12 +171,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 6.8,
+   "score": 49.7,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 4,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -206,9 +242,9 @@
   "adr20": 2.228326367107779,
   "rvol": 0.8461422105348894,
   "ema10": 47.29357772056521,
-  "ema21": 46.98154536471841,
+  "ema21": 46.98154536473796,
   "sma50": 47.545399856567386,
-  "sma200": 44.041143131256106,
+  "sma200": 44.041143341064455,
   "volatility_ann": 22.764256053816837,
   "avg_dollar_volume_20d": 19903238.65673065,
   "move_zscore": -1.2768686637271078,
@@ -216,17 +252,17 @@
    "tech": {
     "close": 47.18000030517578,
     "change_pct": -1.8310466978144757,
-    "ema20": 46.98835773365412,
-    "ema50": 47.00320389493026,
-    "ema200": 44.26295197808456,
+    "ema20": 46.98835773366564,
+    "ema50": 47.00320390247159,
+    "ema200": 44.26295205648341,
     "sma50": 47.545399856567386,
-    "rsi14": 51.29575024005914,
-    "rsi_min5": 51.29575024005914,
-    "atr14": 1.134943925699922,
-    "atr_pct": 2.4055615056352924,
+    "rsi14": 51.29575023862985,
+    "rsi_min5": 51.29575023862985,
+    "atr14": 1.1349439257583294,
+    "atr_pct": 2.4055615057590893,
     "rvol": 0.8461422105348894,
     "vol30": 418823.3333333333,
-    "dist_ema200_pct": 6.590270636570983,
+    "dist_ema200_pct": 6.5902704477775575,
     "dist_52w_high_pct": 6.232419980851889,
     "high_52w": 50.31589841130723,
     "macd_above_signal": true,
@@ -240,7 +276,17 @@
     "green": false,
     "day_high": 47.79999923706055,
     "day_low": 46.869998931884766,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 18.39734482829924,
+    "adx14": 15.921676380433016,
+    "ema10": 47.29357772056521,
+    "sma200": 44.041143341064455,
+    "perf_63d": -0.9839436957768344,
+    "adr20_pct": 2.228326367107779,
+    "range10_pct": 8.227700350914823,
+    "high10_prev": 48.66999816894531,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -270,6 +316,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -277,7 +344,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.0
    },
    "filter": {
     "Tag grün": false,
@@ -290,9 +360,9 @@
    "plan": {
     "trigger": 47.79999923706055,
     "entry_max": 48.75599922180176,
-    "stop": 46.09758334851066,
-    "risk_per_share": 1.7024158885498863,
-    "target_1": 51.20483101416032,
+    "stop": 46.09758334842305,
+    "risk_per_share": 1.7024158886374963,
+    "target_1": 51.20483101433554,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -528,48 +598,50 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.8,
+  "score": 49.7,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 99.8,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
-   "analyst_activity": 0,
+   "analyst_activity": 35,
    "price_volume_anomaly": 38.3,
    "social_attention": null,
    "insider_activity": null
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 12,
+    "independent": 12,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 2,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -587,7 +659,421 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "eea0dbe109d889e2",
+   "symbols": [
+    "ACT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Enact Holdings (ACT) Trading At A Premium After BofA Cut?",
+   "summary": "Enact Holdings has delivered a powerful long term share price run, and with the stock recently closing at US$47.18, the real question for you is whether that level is still grounded in what the business earns today. After a strong multi year climb and fresh regulatory scrutiny of",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/enact-holdings-act-trading-premium-020912712.html?.tsrc=rss",
+   "published_at": "2026-11-01T02:09:12Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:38Z",
+   "fingerprint": "1e196e74742ddd00",
+   "primary_source": false,
+   "cluster_id": "eea0dbe109d889e2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Handelt Enact Holdings (ACT) nach dem BofA-Schnitt mit einer Prämie?"
+  },
+  {
+   "id": "83e1b963b5767aa2",
+   "symbols": [
+    "ACT",
+    "ESNT",
+    "NMIH"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "BofA cuts mortgage insurer ratings, citing regulatory overhang; stocks drop",
+   "summary": "Investing.com -- Shares of private mortgage insurers retreated in Friday trading after BofA Securities downgraded several prominent lenders in the space, citing emerging regulatory headwinds that threaten to cap equity multiples. Enact Holdings Inc (NASDAQ:ACT) fell 1.8%, NMI Hol",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/bofa-cuts-mortgage-insurer-ratings-151411172.html?.tsrc=rss",
+   "published_at": "2026-10-30T15:14:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:42Z",
+   "fingerprint": "ecb79fdbee53ecd4",
+   "primary_source": false,
+   "cluster_id": "83e1b963b5767aa2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "BofA kürzt Ratings von Hypothekenversicherern unter Berufung auf regulatorische Überhänge; Aktienrückgang"
+  },
+  {
+   "id": "0dccf5a860096127",
+   "symbols": [
+    "ACT",
+    "LMND"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Lemonade (LMND) Expected to Beat Earnings Estimates: Can the Stock Move Higher?",
+   "summary": "Lemonade (LMND) possesses the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/lemonade-lmnd-expected-beat-earnings-130033141.html?.tsrc=rss",
+   "published_at": "2026-10-29T13:00:33Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:55Z",
+   "fingerprint": "7d1d10aa328985bd",
+   "primary_source": false,
+   "cluster_id": "0dccf5a860096127",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bc7c5162b213e4b8",
+   "symbols": [
+    "ACT",
+    "PRU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Enact Holdings, Inc. (ACT) Earnings Expected to Grow: Should You Buy?",
+   "summary": "Enact Holdings (ACT) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/enact-holdings-inc-act-earnings-130006682.html?.tsrc=rss",
+   "published_at": "2026-10-28T13:00:06Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:36Z",
+   "fingerprint": "2c7fd9ccf44cdbab",
+   "primary_source": false,
+   "cluster_id": "bc7c5162b213e4b8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b4ba76e8185d4e14",
+   "symbols": [
+    "ACT",
+    "ESNT",
+    "RDN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why a Trump Executive Order Is Sending Some Housing Stocks Higher",
+   "summary": "The order, however, won’t have a dramatic impact on home affordability.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/bd505a7c-ab4f-39ca-9c9b-78a3f0ef9edc/why-a-trump-executive-order.html?.tsrc=rss",
+   "published_at": "2026-10-23T17:19:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:42Z",
+   "fingerprint": "7ba825a7a1c7f6e2",
+   "primary_source": false,
+   "cluster_id": "b4ba76e8185d4e14",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f3212a3b1d61b332",
+   "symbols": [
+    "ACT",
+    "NP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Neptune Insurance Holdings Inc. (NP) Q3 Earnings and Revenues Surpass Estimates",
+   "summary": "Neptune Insurance Holdings Inc. (NP) delivered earnings and revenue surprises of +6.25% and +8.37%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/neptune-insurance-holdings-inc-np-204503923.html?.tsrc=rss",
+   "published_at": "2026-10-20T20:45:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:31Z",
+   "fingerprint": "c718c14536d0a148",
+   "primary_source": false,
+   "cluster_id": "f3212a3b1d61b332",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9c5f427453ec7a3b",
+   "symbols": [
+    "ACT",
+    "HPK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Unpopular Stock That Should Get More Attention and 2 Facing Challenges",
+   "summary": "When Wall Street turns bearish on a stock, it’s worth paying attention. These calls stand out because analysts rarely issue grim ratings on companies for fear their firms will lose out in other business lines such as M&amp;A advisory.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-unpopular-stock-more-attention-091750561.html?.tsrc=rss",
+   "published_at": "2026-10-20T09:17:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:10:26Z",
+   "fingerprint": "e26c182c85b43e05",
+   "primary_source": false,
+   "cluster_id": "9c5f427453ec7a3b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0c25d8734259eef1",
+   "symbols": [
+    "ACT",
+    "CCB",
+    "MATW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Stocks Under $50 with Warning Signs",
+   "summary": "Stocks trading between $10 and $50 can be particularly interesting as they frequently represent businesses that have survived their early challenges. However, investors should remain vigilant as some may still have unproven business models, leaving them vulnerable to the ebbs and",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-stocks-under-50-warning-112827113.html?.tsrc=rss",
+   "published_at": "2026-10-15T11:28:27Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:09Z",
+   "fingerprint": "67da2da9298d13a4",
+   "primary_source": false,
+   "cluster_id": "0c25d8734259eef1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3bb6899603613044",
+   "symbols": [
+    "ACT",
+    "AIZ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "PRU Outperforms Industry, Trades at a Discount: Time to Exit or Hold?",
+   "summary": "Prudential Financial's retirement growth, higher investment income and efficiency initiatives support earnings, but Japan's sales suspension poses a significant risk.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/pru-outperforms-industry-trades-discount-155700908.html?.tsrc=rss",
+   "published_at": "2026-10-12T15:57:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:00Z",
+   "fingerprint": "98babbc7015e2b2a",
+   "primary_source": false,
+   "cluster_id": "3bb6899603613044",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "156eaf347bcca2c7",
+   "symbols": [
+    "ACT",
+    "HMN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Safe-and-Steady Stock with Competitive Advantages and 2 We Turn Down",
+   "summary": "Low-volatility stocks may offer stability, but that often comes at the cost of slower growth and the upside potential of more dynamic companies.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-safe-steady-stock-competitive-094303860.html?.tsrc=rss",
+   "published_at": "2026-10-12T09:43:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:10:18Z",
+   "fingerprint": "f8d9e7b291248044",
+   "primary_source": false,
+   "cluster_id": "156eaf347bcca2c7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f98d1fb136fd3b2e",
+   "symbols": [
+    "ACT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What Makes Enact Holdings (ACT) a New Buy Stock",
+   "summary": "Enact Holdings (ACT) has been upgraded to a Zacks Rank #2 (Buy), reflecting growing optimism about the company's earnings prospects. This might drive the stock higher in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/makes-enact-holdings-act-buy-150008820.html?.tsrc=rss",
+   "published_at": "2026-10-06T15:00:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:38Z",
+   "fingerprint": "c6080d82fb641140",
+   "primary_source": false,
+   "cluster_id": "f98d1fb136fd3b2e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dcddd815927e396d",
+   "symbols": [
+    "ACT"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "AM Best Affirms Credit Ratings of Enact Re Ltd.",
+   "summary": "OLDWICK, N.J., October 02, 2026--AM Best has affirmed the Financial Strength Rating (FSR) of A- (Excellent) and the Long-Term Issuer Credit Rating (Long-Term ICR) of \"a-\" (Excellent) of Enact Re Ltd. (ERL) (Bermuda). The outlook of these Credit Ratings (ratings) is stable.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/am-best-affirms-credit-ratings-131400817.html?.tsrc=rss",
+   "published_at": "2026-10-02T13:14:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:38Z",
+   "fingerprint": "f4db0567384701d8",
+   "primary_source": false,
+   "cluster_id": "dcddd815927e396d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b116cd345693748f",
+   "symbols": [
+    "ACT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Enact Mortgage Insurance Enters Into a Forward Quota Share Reinsurance Transaction as Part of its Diversified Credit Risk Transfer Program",
+   "summary": "Secures approximately 35% of quota share reinsurance coverage from a panel of third-party reinsurance providersRALEIGH, N.C., Oct. 01, 2026 (GLOBE NEWSWIRE) -- Enact Holdings, Inc. (Nasdaq: ACT) (Enact), a leading provider of private mortgage insurance through its insurance subsi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/enact-mortgage-insurance-enters-forward-201500262.html?.tsrc=rss",
+   "published_at": "2026-10-01T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:38Z",
+   "fingerprint": "b679a196f932bcfd",
+   "primary_source": false,
+   "cluster_id": "b116cd345693748f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6df6f61b1e020305",
+   "symbols": [
+    "ACT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are Finance Stocks Lagging  Reinsurance Group of America (RGA) This Year?",
+   "summary": "Here is how Reinsurance Group (RGA) and Enact Holdings, Inc. (ACT) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/finance-stocks-lagging-reinsurance-group-183935704.html?.tsrc=rss",
+   "published_at": "2026-10-01T18:39:35Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:38Z",
+   "fingerprint": "f2d818b92145f712",
+   "primary_source": false,
+   "cluster_id": "6df6f61b1e020305",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ce9f817ade94d795",
+   "symbols": [
+    "ACT",
+    "ESNT",
+    "STC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "NMI Holdings, MGIC Investment, Essent Group, Enact Holdings, and Stewart Information Services Stocks Trade Down, What You Need To Know",
+   "summary": "A number of stocks fell in the afternoon session after investors weighed higher mortgage rates, softer housing demand, and lingering policy risk around private mortgage insurance. The slide looked sector-wide rather than name-specific: mortgage insurers (NMIH, MTG, ESNT, RDN, ACT",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/nmi-holdings-mgic-investment-essent-002113447.html?.tsrc=rss",
+   "published_at": "2026-10-01T00:21:13Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:42Z",
+   "fingerprint": "a4b695efcd60e74e",
+   "primary_source": false,
+   "cluster_id": "ce9f817ade94d795",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d9f41b8d2d732d99",
+   "symbols": [
+    "ACT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Spotting Winners: Enact Holdings (NASDAQ:ACT) And Property & Casualty Insurance Stocks In Q2",
+   "summary": "Earnings results often indicate what direction a company will take in the months ahead. With Q2 behind us, let’s have a look at Enact Holdings (NASDAQ:ACT) and its peers.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/spotting-winners-enact-holdings-nasdaq-191836046.html?.tsrc=rss",
+   "published_at": "2026-09-28T19:18:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:38Z",
+   "fingerprint": "381685926ddb74de",
+   "primary_source": false,
+   "cluster_id": "d9f41b8d2d732d99",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "24aeb01d1b18fb7f",
+   "symbols": [
+    "ACT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Reasons to Avoid ACT and 1 Stock to Buy Instead",
+   "summary": "Enact Holdings has followed the market’s trajectory closely, rising in tandem with the S&amp;P 500 over the past six months. The stock has climbed by 17.3% to $47.26 per share while the index has gained 16.9%.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-reasons-avoid-act-1-001637012.html?.tsrc=rss",
+   "published_at": "2026-09-26T00:16:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:38Z",
+   "fingerprint": "2b1cc89345a23d3f",
+   "primary_source": false,
+   "cluster_id": "24aeb01d1b18fb7f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "840a2d13713b75d8",
+   "symbols": [
+    "ACT",
+    "PUBM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Momentum  Stock on Our Buy List and 2 Facing Headwinds",
+   "summary": "Each stock in this article is trading near its 52-week high. These elevated prices usually indicate some degree of investor confidence, business improvements, or favorable market conditions.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-momentum-stock-buy-list-084854785.html?.tsrc=rss",
+   "published_at": "2026-09-24T08:48:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:06:53Z",
+   "fingerprint": "f4dc2bb005d5847b",
+   "primary_source": false,
+   "cluster_id": "840a2d13713b75d8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "3ec54568c8bddf15",

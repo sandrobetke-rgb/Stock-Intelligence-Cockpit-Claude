@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 56.45000076293945,
     "day_low": 55.439998626708984,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 87.27865133077998,
+    "adx14": 29.04643991724754,
+    "ema10": 54.88169359514111,
+    "sma200": 47.220300102233885,
+    "perf_63d": -1.7953613360177867,
+    "adr20_pct": 2.4201063557014546,
+    "range10_pct": 9.990303786806741,
+    "high10_prev": 56.70000076293945,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": true,
@@ -137,11 +171,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 3.8,
+   "score": 47.3,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 15,
    "independent_24h": 0
   },
   "political": {
@@ -240,7 +276,17 @@
     "green": false,
     "day_high": 56.45000076293945,
     "day_low": 55.439998626708984,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 87.27865133077998,
+    "adx14": 29.04643991724754,
+    "ema10": 54.88169359514111,
+    "sma200": 47.220300102233885,
+    "perf_63d": -1.7953613360177867,
+    "adr20_pct": 2.4201063557014546,
+    "range10_pct": 9.990303786806741,
+    "high10_prev": 56.70000076293945,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -270,6 +316,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -277,7 +344,10 @@
     "S01": 0.5,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": true,
@@ -614,11 +684,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 3.8,
+  "score": 47.3,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 80,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 21.3,
@@ -636,25 +706,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 15,
+    "independent": 15,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 20,
+    "independent": 20,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -673,7 +745,465 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "6d498498939634cb",
+   "symbols": [
+    "ACIW",
+    "AME",
+    "GDDY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "GDDY Q3 Earnings Beat Estimates on Revenue Growth and Airo Gains",
+   "summary": "GoDaddy's Q3 2026 earnings beat estimates as revenues increased 6%, fueled by accelerating Airo adoption, stronger customer monetization, and broad segment growth.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gddy-q3-earnings-beat-estimates-153500219.html?.tsrc=rss",
+   "published_at": "2026-10-30T15:35:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:05Z",
+   "fingerprint": "d8007c3474008b87",
+   "primary_source": false,
+   "cluster_id": "6d498498939634cb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "GDDY Q3-Ergebnisse schlagen Schätzungen für Umsatzwachstum und Airo-Gewinne"
+  },
+  {
+   "id": "e6e242402b0f7440",
+   "symbols": [
+    "ACIW",
+    "AME"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Reddit Q3 Earnings Beat on Ad Growth and Strong Monetization",
+   "summary": "RDDT's Q3 2026 earnings beat estimates as ad revenues surge 54% and monetization improves, despite search traffic headwinds and rising operating costs.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/reddit-q3-earnings-beat-ad-152700692.html?.tsrc=rss",
+   "published_at": "2026-10-30T15:27:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:05Z",
+   "fingerprint": "8ef0a318e756b00b",
+   "primary_source": false,
+   "cluster_id": "e6e242402b0f7440",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Reddit Q3 Einnahmen schlagen auf Anzeigenwachstum und starke Monetarisierung"
+  },
+  {
+   "id": "a33bb883c42cc5ee",
+   "symbols": [
+    "ACIW",
+    "AME",
+    "VRT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Vertiv Q3 Earnings Beat on Robust Sales Growth and Strong AI Demand",
+   "summary": "VRT's Q3 earnings increase 78% as AI-driven data center demand fuels 61.2% sales growth, stronger margins, and an upgraded 2026 outlook.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/vertiv-q3-earnings-beat-robust-164200602.html?.tsrc=rss",
+   "published_at": "2026-10-29T16:42:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:05Z",
+   "fingerprint": "c819011d31c08cca",
+   "primary_source": false,
+   "cluster_id": "a33bb883c42cc5ee",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bc1da92a8a188f06",
+   "symbols": [
+    "ACIW",
+    "AME",
+    "GEN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "GEN Q2 Earnings Beat Estimates on Financial Wellness Strength",
+   "summary": "Gen Digital beats Q2 estimates as financial wellness demand drives double-digit growth, record Cyber Safety margins and higher fiscal 2027 results.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gen-q2-earnings-beat-estimates-135700442.html?.tsrc=rss",
+   "published_at": "2026-10-29T13:57:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:05Z",
+   "fingerprint": "7d721c7e890a0489",
+   "primary_source": false,
+   "cluster_id": "bc1da92a8a188f06",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e81e4abc1a1cb0a3",
+   "symbols": [
+    "ACIW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Icon Solutions Appoints Raquel Guillot as Southern Europe Sales Director to Drive Global Adoption of the Icon Payments Framework",
+   "summary": "LONDON, October 29, 2026--Icon Solutions – the UK fintech enabling banks globally to design and implement state-of-the-art payment systems – has appointed Raquel Guillot as Southern Europe Sales Director, to drive adoption of the Icon Payments Framework (IPF) across the region.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/icon-solutions-appoints-raquel-guillot-093000924.html?.tsrc=rss",
+   "published_at": "2026-10-29T09:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "ef55ced0706f15c0",
+   "primary_source": false,
+   "cluster_id": "e81e4abc1a1cb0a3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b95887215c7ed89f",
+   "symbols": [
+    "ACIW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is ACI Worldwide (ACIW) Undervalued As Its Colombia Stablecoin Pilot Raises Bigger Questions?",
+   "summary": "ACI Worldwide (ACIW) moved into the spotlight after launching a pilot with Circle in Colombia that connects USDC stablecoin settlement to banks through ACI Connetic, alongside the country’s Bre-B instant payments network. Against that backdrop, ACI Worldwide’s 1 month share price",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/aci-worldwide-aciw-undervalued-colombia-021013805.html?.tsrc=rss",
+   "published_at": "2026-10-29T02:10:13Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "406266ec54ab72b9",
+   "primary_source": false,
+   "cluster_id": "b95887215c7ed89f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9e38b0a55c336b71",
+   "symbols": [
+    "ACIW",
+    "AME",
+    "TEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "TE Connectivity Q4 Earnings Beat Estimates, Revenues Increase Y/Y",
+   "summary": "TEL's Q4 earnings and revenues beat estimates, fueled by AI demand and transportation growth, while its fiscal 2027 outlook signals continued momentum.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/te-connectivity-q4-earnings-beat-170500186.html?.tsrc=rss",
+   "published_at": "2026-10-28T17:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:05Z",
+   "fingerprint": "2cbadacab2ce0ada",
+   "primary_source": false,
+   "cluster_id": "9e38b0a55c336b71",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "83ae2b6d0659f76e",
+   "symbols": [
+    "ACIW",
+    "AME",
+    "TER"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Teradyne Q3 Earnings Beat Estimates, Revenues Increase Year over Year",
+   "summary": "TER's Q3 2026 earnings surge 169.4% as AI-driven demand fuels record revenues in Memory and Integrated Systems Test, boosting sales and profitability.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/teradyne-q3-earnings-beat-estimates-170300299.html?.tsrc=rss",
+   "published_at": "2026-10-28T17:03:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:05Z",
+   "fingerprint": "62715417a6536eb9",
+   "primary_source": false,
+   "cluster_id": "83ae2b6d0659f76e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8449f0cab5fadc04",
+   "symbols": [
+    "ACIW",
+    "AME",
+    "CSGP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "CoStar Group Q3 Earnings Beat Estimates, Revenues Increase Y/Y",
+   "summary": "CSGP's Q3 2026 earnings beat estimates as cost cuts boost margins, revenues increase 14.1%, and management raises its full-year profit outlook.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/costar-group-q3-earnings-beat-170200829.html?.tsrc=rss",
+   "published_at": "2026-10-28T17:02:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:05Z",
+   "fingerprint": "0835e65670e8593b",
+   "primary_source": false,
+   "cluster_id": "8449f0cab5fadc04",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d01d7e84e5aacdb9",
+   "symbols": [
+    "ACIW",
+    "NXPI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "NXPI Q3 Earnings Beat Estimates on Auto and Industrial Growth",
+   "summary": "NXP Semiconductors beats Q3 estimates as automotive, industrial and data center demand accelerates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nxpi-q3-earnings-beat-estimates-145800548.html?.tsrc=rss",
+   "published_at": "2026-10-28T14:58:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:19Z",
+   "fingerprint": "04a4b5ef1c4bdf09",
+   "primary_source": false,
+   "cluster_id": "d01d7e84e5aacdb9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5704e7cb4078a412",
+   "symbols": [
+    "ACIW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACI Worldwide and Circle explore USDC settlement in Latin America",
+   "summary": "The initial focus is Colombia, where ACI Worldwide developed the central infrastructure supporting Bre-B, the country’s interoperable instant-payments ecosystem.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "electronicpaymentsinternational.com",
+   "url": "https://www.electronicpaymentsinternational.com/news/aci-worldwide-circle-explore-usdc-settlement-in-latin-america/?.tsrc=rss",
+   "published_at": "2026-10-28T07:28:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "cdbc94e2d28b72ea",
+   "primary_source": false,
+   "cluster_id": "5704e7cb4078a412",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "647e980ee7b9a1de",
+   "symbols": [
+    "ACIW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Circle Pushes Deeper Into Latin America With USDC Settlement in Colombia",
+   "summary": "A collaboration with payments-tech firm ACI Worldwide will pilot folding USDC settlement into Colombia’s instant-payments network.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "decrypt.co",
+   "url": "https://decrypt.co/381982/circle-pushes-deeper-latin-america-usdc-settlement-colombia?.tsrc=rss",
+   "published_at": "2026-10-27T17:45:18Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "665d78bf87695256",
+   "primary_source": false,
+   "cluster_id": "647e980ee7b9a1de",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2456c08dd09d8b19",
+   "symbols": [
+    "ACIW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "RMBS Q3 Earnings Beat on Record Product Revenues, AI Demand",
+   "summary": "Rambus posts record Q3 2026 revenues as AI-driven memory demand fuels product growth, stronger profitability and record operating cash flow.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/rmbs-q3-earnings-beat-record-143000014.html?.tsrc=rss",
+   "published_at": "2026-10-27T14:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "9d7b3e636df41abc",
+   "primary_source": false,
+   "cluster_id": "2456c08dd09d8b19",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1bb01e71a2a46059",
+   "symbols": [
+    "ACIW",
+    "CVLT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Commvault Systems (CVLT) Beats Q2 Earnings and Revenue Estimates",
+   "summary": "Commvault (CVLT) delivered earnings and revenue surprises of +10.40% and +0.51%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/commvault-systems-cvlt-beats-q2-115501163.html?.tsrc=rss",
+   "published_at": "2026-10-27T11:55:01Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:43Z",
+   "fingerprint": "c9c368cec2e7b53f",
+   "primary_source": false,
+   "cluster_id": "1bb01e71a2a46059",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e417111e36a5fb05",
+   "symbols": [
+    "ACIW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Circle Stock In Focus After ACI Worldwide Deal Brings USDC Settlement To Colombian Banks",
+   "summary": "ACI stated that its Connetic supports different payment networks and other digital asset suppliers, making USDC a part but not exclusive to the firm.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/circle-stock-in-focus-after-aci-worldwide-deal-brings-usdc-settlement-to-colombian-banks/cZUeE0zRBCE?.tsrc=rss",
+   "published_at": "2026-10-27T11:39:39Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "d6399691f97ff0b2",
+   "primary_source": false,
+   "cluster_id": "e417111e36a5fb05",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3c691fece7da6c18",
+   "symbols": [
+    "ACIW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are Computer and Technology Stocks Lagging  Analog Devices (ADI) This Year?",
+   "summary": "Here is how Analog Devices (ADI) and ACI Worldwide (ACIW) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/computer-technology-stocks-lagging-analog-124002769.html?.tsrc=rss",
+   "published_at": "2026-10-23T12:40:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "62160862f97ca1a9",
+   "primary_source": false,
+   "cluster_id": "3c691fece7da6c18",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7c372fc3e530b19f",
+   "symbols": [
+    "ACIW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACI Worldwide to Report Third Quarter 2026 Financial Results",
+   "summary": "OMAHA, Neb., October 22, 2026--ACI Worldwide (NASDAQ: ACIW), an original innovator in global payments technology, announced today that it will report its financial results for the third quarter 2026 on November 5, 2026. Management will host a conference call at 8:30 a.m. ET to di",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/aci-worldwide-report-third-quarter-103200089.html?.tsrc=rss",
+   "published_at": "2026-10-22T10:32:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "6ad46809ac1237e7",
+   "primary_source": false,
+   "cluster_id": "7c372fc3e530b19f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "915bf7feda2b0818",
+   "symbols": [
+    "ACIW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACI Worldwide (ACIW) Stock Looks About Right As Its 162% Run Tests Value",
+   "summary": "ACI Worldwide has delivered powerful gains in recent years, and a strong run like that naturally raises a simple question for investors. Is the current share price still grounded in the company’s earnings profile, or has enthusiasm moved ahead of what the business is generating t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/aci-worldwide-aciw-stock-looks-001533589.html?.tsrc=rss",
+   "published_at": "2026-10-21T00:15:33Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "51e4570ac174eb96",
+   "primary_source": false,
+   "cluster_id": "915bf7feda2b0818",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6dc0eb1c74346094",
+   "symbols": [
+    "ACIW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Smarsh Taps Former ACI Worldwide Executive Alessandro Silva as Chief Growth Officer to Drive Next Phase of Global Expansion",
+   "summary": "PORTLAND, Ore., October 15, 2026--Smarsh, the global leader in communications data and intelligence, today announced the appointment of Alessandro Silva as Chief Growth Officer. In this newly created role, Silva will unite Smarsh’s Enterprise, Corporate, Public Sector, and Global",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/smarsh-taps-former-aci-worldwide-120000446.html?.tsrc=rss",
+   "published_at": "2026-10-15T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "31ce2787606a5adc",
+   "primary_source": false,
+   "cluster_id": "6dc0eb1c74346094",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d774c58bbda99709",
+   "symbols": [
+    "ACIW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Cognizant’s AI-Led Delivery Shift Altering The Investment Case For Cognizant Technology Solutions (CTSH)?",
+   "summary": "Cognizant recently worked with ACI Worldwide to deploy the BASE24-eps payments platform on AWS in a non-production test, where it ran at more than double its target transaction load for 30 minutes and processed over 4.6 million transactions with no failures using managed services",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/cognizant-ai-led-delivery-shift-190859908.html?.tsrc=rss",
+   "published_at": "2026-10-04T19:08:59Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:34Z",
+   "fingerprint": "badb1f0135820eae",
+   "primary_source": false,
+   "cluster_id": "d774c58bbda99709",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

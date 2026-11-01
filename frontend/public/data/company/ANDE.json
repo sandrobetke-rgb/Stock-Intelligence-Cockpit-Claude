@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 3.162047137959098,
    "rvol": 0.9550246581814961,
    "ema10": 64.4335896471962,
-   "ema21": 65.23038961602869,
+   "ema21": 65.23038961602819,
    "sma50": 66.87704315185547,
-   "sma200": 68.8869361114502
+   "sma200": 68.88693616867066
   },
   "market_cap": 2184289280.0,
   "market_cap_currency": "USD",
@@ -34,17 +34,17 @@
    "tech": {
     "close": 64.29000091552734,
     "change_pct": 2.9133978858016274,
-    "ema20": 65.16620105774557,
-    "ema50": 66.66084499708865,
-    "ema200": 65.39839573511038,
+    "ema20": 65.16620105774534,
+    "ema50": 66.66084499658318,
+    "ema200": 65.39839577960602,
     "sma50": 66.87704315185547,
-    "rsi14": 44.60985809559154,
-    "rsi_min5": 35.56856384649363,
-    "atr14": 2.048693801520984,
-    "atr_pct": 3.186644536236401,
+    "rsi14": 44.609858095529944,
+    "rsi_min5": 35.56856384622908,
+    "atr14": 2.0486938015177416,
+    "atr_pct": 3.1866445362313573,
     "rvol": 0.9550246581814961,
     "vol30": 339506.6666666667,
-    "dist_ema200_pct": -1.6948348764891485,
+    "dist_ema200_pct": -1.6948349433738241,
     "dist_52w_high_pct": 21.23320778263249,
     "high_52w": 81.62069205269967,
     "macd_above_signal": false,
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 64.47000122070312,
     "day_low": 62.77000045776367,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 65.59736954833313,
+    "adx14": 15.062470273607689,
+    "ema10": 64.4335896471962,
+    "sma200": 68.88693616867066,
+    "perf_63d": -7.692092819046847,
+    "adr20_pct": 3.162047137959098,
+    "range10_pct": 7.779027225781232,
+    "high10_prev": 66.91999816894531,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.0,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": true,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 64.47000122070312,
     "entry_max": 65.75940124511719,
-    "stop": 61.39696051842165,
-    "risk_per_share": 3.0730407022814745,
-    "target_1": 70.61608262526607,
+    "stop": 61.39696051842651,
+    "risk_per_share": 3.0730407022766144,
+    "target_1": 70.61608262525635,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -178,7 +212,7 @@
     "time": "nach Börsenschluss",
     "fiscal_quarter": "Sep/2026",
     "eps_forecast": null,
-    "estimates": 1,
+    "estimates": 2,
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/ande/earnings",
@@ -207,9 +241,9 @@
   "adr20": 3.162047137959098,
   "rvol": 0.9550246581814961,
   "ema10": 64.4335896471962,
-  "ema21": 65.23038961602869,
+  "ema21": 65.23038961602819,
   "sma50": 66.87704315185547,
-  "sma200": 68.8869361114502,
+  "sma200": 68.88693616867066,
   "volatility_ann": 35.92459911517734,
   "avg_dollar_volume_20d": 21850743.16871643,
   "move_zscore": 1.2873840987841592,
@@ -217,17 +251,17 @@
    "tech": {
     "close": 64.29000091552734,
     "change_pct": 2.9133978858016274,
-    "ema20": 65.16620105774557,
-    "ema50": 66.66084499708865,
-    "ema200": 65.39839573511038,
+    "ema20": 65.16620105774534,
+    "ema50": 66.66084499658318,
+    "ema200": 65.39839577960602,
     "sma50": 66.87704315185547,
-    "rsi14": 44.60985809559154,
-    "rsi_min5": 35.56856384649363,
-    "atr14": 2.048693801520984,
-    "atr_pct": 3.186644536236401,
+    "rsi14": 44.609858095529944,
+    "rsi_min5": 35.56856384622908,
+    "atr14": 2.0486938015177416,
+    "atr_pct": 3.1866445362313573,
     "rvol": 0.9550246581814961,
     "vol30": 339506.6666666667,
-    "dist_ema200_pct": -1.6948348764891485,
+    "dist_ema200_pct": -1.6948349433738241,
     "dist_52w_high_pct": 21.23320778263249,
     "high_52w": 81.62069205269967,
     "macd_above_signal": false,
@@ -241,7 +275,17 @@
     "green": true,
     "day_high": 64.47000122070312,
     "day_low": 62.77000045776367,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 65.59736954833313,
+    "adx14": 15.062470273607689,
+    "ema10": 64.4335896471962,
+    "sma200": 68.88693616867066,
+    "perf_63d": -7.692092819046847,
+    "adr20_pct": 3.162047137959098,
+    "range10_pct": 7.779027225781232,
+    "high10_prev": 66.91999816894531,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -271,6 +315,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -278,7 +343,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.0,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": true,
@@ -291,9 +359,9 @@
    "plan": {
     "trigger": 64.47000122070312,
     "entry_max": 65.75940124511719,
-    "stop": 61.39696051842165,
-    "risk_per_share": 3.0730407022814745,
-    "target_1": 70.61608262526607,
+    "stop": 61.39696051842651,
+    "risk_per_share": 3.0730407022766144,
+    "target_1": 70.61608262525635,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -806,6 +874,28 @@
    "primary_source": false,
    "cluster_id": "e58574089a9e5241",
    "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c7928817f2669850",
+   "symbols": [
+    "ANDE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "The Andersons, Inc. Declares Cash Dividend for Fourth Quarter 2026",
+   "summary": "The Andersons, Inc. (Nasdaq: ANDE) announces a fourth quarter 2026 cash dividend of 20 cents ($0.20) per share payable on October 22, 2026, to shareholders of record as of October 01, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/andersons-inc-declares-cash-dividend-200500069.html?.tsrc=rss",
+   "published_at": "2026-08-20T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:04:35Z",
+   "fingerprint": "895f1e6bc0cb660e",
+   "primary_source": false,
+   "cluster_id": "e58574089a9e5241",
+   "independence": "copy",
    "verification": "Outdated",
    "feed": "yahoo_rss"
   },

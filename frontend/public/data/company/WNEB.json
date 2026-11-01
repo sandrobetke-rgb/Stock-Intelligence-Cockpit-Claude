@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -26,7 +26,7 @@
    "ema10": 13.814326387221989,
    "ema21": 13.756417064736798,
    "sma50": 13.749400005340576,
-   "sma200": 13.542732000350952
+   "sma200": 13.542732014656067
   },
   "market_cap": 277037280.0,
   "market_cap_currency": "USD",
@@ -35,16 +35,16 @@
     "close": 13.970000267028809,
     "change_pct": -0.7812475658614426,
     "ema20": 13.75823922281637,
-    "ema50": 13.754861584069193,
-    "ema200": 13.310641323300977,
+    "ema50": 13.754861584088172,
+    "ema200": 13.310641325876086,
     "sma50": 13.749400005340576,
-    "rsi14": 56.08132175689114,
-    "rsi_min5": 51.292428127331945,
-    "atr14": 0.30933272638644294,
-    "atr_pct": 2.214264283992265,
+    "rsi14": 56.08132175690105,
+    "rsi_min5": 51.29242812733452,
+    "atr14": 0.3093327263863592,
+    "atr_pct": 2.2142642839916657,
     "rvol": 0.7850225952227243,
     "vol30": 41463.333333333336,
-    "dist_ema200_pct": 4.9536226520775495,
+    "dist_ema200_pct": 4.953622631772969,
     "dist_52w_high_pct": 6.461019258318068,
     "high_52w": 14.934950280897846,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 14.100000381469727,
     "day_low": 13.949999809265137,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 56.2114394668182,
+    "adx14": 12.00944554661661,
+    "ema10": 13.814326387221989,
+    "sma200": 13.542732014656067,
+    "perf_63d": 7.095358367468818,
+    "adr20_pct": 2.0459273571390098,
+    "range10_pct": 7.018870227741747,
+    "high10_prev": 14.180000305175781,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 14.100000381469727,
     "entry_max": 14.38200038909912,
-    "stop": 13.636001291890063,
-    "risk_per_share": 0.46399908957966396,
-    "target_1": 15.027998560629054,
+    "stop": 13.636001291890187,
+    "risk_per_share": 0.4639990895795396,
+    "target_1": 15.027998560628806,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -137,11 +171,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 3.3,
+   "score": 36.2,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 4,
    "independent_24h": 0
   },
   "political": {
@@ -207,7 +243,7 @@
   "ema10": 13.814326387221989,
   "ema21": 13.756417064736798,
   "sma50": 13.749400005340576,
-  "sma200": 13.542732000350952,
+  "sma200": 13.542732014656067,
   "volatility_ann": 19.992618923450827,
   "avg_dollar_volume_20d": 518774.3475532532,
   "move_zscore": -0.6203249647957056,
@@ -216,16 +252,16 @@
     "close": 13.970000267028809,
     "change_pct": -0.7812475658614426,
     "ema20": 13.75823922281637,
-    "ema50": 13.754861584069193,
-    "ema200": 13.310641323300977,
+    "ema50": 13.754861584088172,
+    "ema200": 13.310641325876086,
     "sma50": 13.749400005340576,
-    "rsi14": 56.08132175689114,
-    "rsi_min5": 51.292428127331945,
-    "atr14": 0.30933272638644294,
-    "atr_pct": 2.214264283992265,
+    "rsi14": 56.08132175690105,
+    "rsi_min5": 51.29242812733452,
+    "atr14": 0.3093327263863592,
+    "atr_pct": 2.2142642839916657,
     "rvol": 0.7850225952227243,
     "vol30": 41463.333333333336,
-    "dist_ema200_pct": 4.9536226520775495,
+    "dist_ema200_pct": 4.953622631772969,
     "dist_52w_high_pct": 6.461019258318068,
     "high_52w": 14.934950280897846,
     "macd_above_signal": true,
@@ -239,7 +275,17 @@
     "green": false,
     "day_high": 14.100000381469727,
     "day_low": 13.949999809265137,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 56.2114394668182,
+    "adx14": 12.00944554661661,
+    "ema10": 13.814326387221989,
+    "sma200": 13.542732014656067,
+    "perf_63d": 7.095358367468818,
+    "adr20_pct": 2.0459273571390098,
+    "range10_pct": 7.018870227741747,
+    "high10_prev": 14.180000305175781,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -269,6 +315,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -276,7 +343,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -289,9 +359,9 @@
    "plan": {
     "trigger": 14.100000381469727,
     "entry_max": 14.38200038909912,
-    "stop": 13.636001291890063,
-    "risk_per_share": 0.46399908957966396,
-    "target_1": 15.027998560629054,
+    "stop": 13.636001291890187,
+    "risk_per_share": 0.4639990895795396,
+    "target_1": 15.027998560628806,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -527,11 +597,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 3.3,
+  "score": 36.2,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 99.8,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 18.6,
@@ -549,25 +619,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 5,
+    "independent": 5,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -586,7 +658,296 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "3d088350f2c86305",
+   "symbols": [
+    "WNEB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Western New England Bancorp (WNEB) Stock Eyes Q3 Earnings Strength And Premium P E",
+   "summary": "Western New England Bancorp stock inched up 2.4% to US$14.08 after the Q3 2026 report, a calm move following what was a punchy quarter. Earnings per share landed at about US$0.32 and net income reached roughly US$6.3m, helped by a healthier net interest margin of 3.09%. Traders r",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/western-england-bancorp-wneb-stock-231541587.html?.tsrc=rss",
+   "published_at": "2026-10-29T23:15:41Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "583a3c1d3159ba7b",
+   "primary_source": false,
+   "cluster_id": "3d088350f2c86305",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "704be900ded25650",
+   "symbols": [
+    "WNEB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Western New England Bancorp: Q3 Earnings Snapshot",
+   "summary": "(AP) — Western New England Bancorp (WNEB) on Tuesday reported net income of $6.The bank, based in Westfield, Massachusetts, said it had earnings of 32 cents per share.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/western-england-bancorp-q3-earnings-183607976.html?.tsrc=rss",
+   "published_at": "2026-10-28T18:36:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "0c2007fc4e1099ce",
+   "primary_source": false,
+   "cluster_id": "704be900ded25650",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5eb047a17916379e",
+   "symbols": [
+    "WNEB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Western New England Bancorp (WNEB) Q3 Earnings: Taking a Look at Key Metrics Versus Estimates",
+   "summary": "The headline numbers for Western New England Bancorp (WNEB) give insight into how the company performed in the quarter ended September 2026, but it may be worthwhile to compare some of its key metrics to Wall Street estimates and the year-ago actuals.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/western-england-bancorp-wneb-q3-230002403.html?.tsrc=rss",
+   "published_at": "2026-10-27T23:00:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "304ad90e4aacb97d",
+   "primary_source": false,
+   "cluster_id": "5eb047a17916379e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ef6f5438a28de55a",
+   "symbols": [
+    "WNEB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Western New England Bancorp (WNEB) Q3 Earnings and Revenues Surpass Estimates",
+   "summary": "Western New England Bancorp (WNEB) delivered earnings and revenue surprises of +23.08% and +1.16%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/western-england-bancorp-wneb-q3-212011143.html?.tsrc=rss",
+   "published_at": "2026-10-27T21:20:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "73a12c6504de0fe7",
+   "primary_source": false,
+   "cluster_id": "ef6f5438a28de55a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "532f9a4154438fd7",
+   "symbols": [
+    "WNEB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Nu  (NU) Surges 13.0%: Is This an Indication of Further Gains?",
+   "summary": "Nu (NU) was a big mover last session on higher-than-average trading volume. The latest trend in earnings estimate revisions might not help the stock continue moving higher in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nu-nu-surges-13-0-102600777.html?.tsrc=rss",
+   "published_at": "2026-10-06T10:26:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "2c6babc3cda18b08",
+   "primary_source": false,
+   "cluster_id": "532f9a4154438fd7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "77126a2ba85f4844",
+   "symbols": [
+    "FBIZ",
+    "WINA",
+    "WNEB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Get Paid by September 1st with These 4 Dividend Stocks. But There’s a Catch.",
+   "summary": "Four dividend stocks share the same August 12 record date, which means buyers have until August 11 to qualify, but each name comes with a hidden risk that the upcoming payout will not cancel out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/08/06/get-paid-by-september-1st-with-these-4-dividend-stocks-but-theres-a-catch/?.tsrc=rss",
+   "published_at": "2026-08-07T00:02:49Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:01Z",
+   "fingerprint": "0793f7c542ce3548",
+   "primary_source": false,
+   "cluster_id": "77126a2ba85f4844",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3f5f58f78dc221e7",
+   "symbols": [
+    "WNEB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Western New England Bancorp (WNEB) Q2 Earnings: How Key Metrics Compare to Wall Street Estimates",
+   "summary": "Although the revenue and EPS for Western New England Bancorp (WNEB) give a sense of how its business performed in the quarter ended June 2026, it might be worth considering how some key metrics compare with Wall Street estimates and the year-ago numbers.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/western-england-bancorp-wneb-q2-233001633.html?.tsrc=rss",
+   "published_at": "2026-07-28T23:30:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "6bac76a7e2b70be0",
+   "primary_source": false,
+   "cluster_id": "3f5f58f78dc221e7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6fad39e14da25813",
+   "symbols": [
+    "WNEB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Western New England Bancorp (WNEB) Q2 Earnings Miss Estimates",
+   "summary": "Western New England Bancorp (WNEB) delivered earnings and revenue surprises of -28.00% and +0.57%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/western-england-bancorp-wneb-q2-220015983.html?.tsrc=rss",
+   "published_at": "2026-07-28T22:00:15Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "e579ab8cbfb59b50",
+   "primary_source": false,
+   "cluster_id": "6fad39e14da25813",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3a081fb6f724431e",
+   "symbols": [
+    "WNEB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Western New England Bancorp, Inc. Reports Results for Three and Six Months Ended June 30, 2026 and Declares Quarterly Cash Dividend",
+   "summary": "WESTFIELD, Mass., July 28, 2026 (GLOBE NEWSWIRE) -- Western New England Bancorp, Inc. (the “Company” or “WNEB”) (NasdaqGS: WNEB), the holding company for Westfield Bank (the “Bank”), announced today the unaudited results of operations for the three and six months ended June 30, 2",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/western-england-bancorp-inc-reports-200500308.html?.tsrc=rss",
+   "published_at": "2026-07-28T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "5cc815fcbdac45cd",
+   "primary_source": false,
+   "cluster_id": "3a081fb6f724431e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "959e76cfdf38089e",
+   "symbols": [
+    "WNEB"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Western New England Bancorp (WNEB) Upgraded to Buy: Here's What You Should Know",
+   "summary": "Western New England Bancorp (WNEB) has been upgraded to a Zacks Rank #2 (Buy), reflecting growing optimism about the company's earnings prospects. This might drive the stock higher in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/western-england-bancorp-wneb-upgraded-160003038.html?.tsrc=rss",
+   "published_at": "2026-06-12T16:00:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "7d66fec47041d598",
+   "primary_source": false,
+   "cluster_id": "959e76cfdf38089e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f5b397c73583cd23",
+   "symbols": [
+    "WNEB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Western New England Bancorp (WNEB) Q1 Earnings and Revenues Beat Estimates",
+   "summary": "Western New England Bancorp (WNEB) delivered earnings and revenue surprises of +14.29% and +0.69%, respectively, for the quarter ended March 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/western-england-bancorp-wneb-q1-230010184.html?.tsrc=rss",
+   "published_at": "2026-04-28T23:00:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "e137f88bf9b95c9d",
+   "primary_source": false,
+   "cluster_id": "f5b397c73583cd23",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f0beef46b1a64784",
+   "symbols": [
+    "WNEB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Western New England Bancorp (NASDAQ:WNEB) Is Due To Pay A Dividend Of $0.07",
+   "summary": "The board of Western New England Bancorp, Inc. ( NASDAQ:WNEB ) has announced that it will pay a dividend of $0.07 per...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/western-england-bancorp-nasdaq-wneb-130116192.html?.tsrc=rss",
+   "published_at": "2026-01-31T13:01:16Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "14e410ab0fb8440d",
+   "primary_source": false,
+   "cluster_id": "f0beef46b1a64784",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "30931a8e4909b941",
+   "symbols": [
+    "WNEB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Western New England Bancorp (WNEB) Q4 Earnings and Revenues Top Estimates",
+   "summary": "Western New England Bancorp (WNEB) delivered earnings and revenue surprises of +23.81% and +0.95%, respectively, for the quarter ended December 2025. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/western-england-bancorp-wneb-q4-222502501.html?.tsrc=rss",
+   "published_at": "2026-01-27T22:25:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:46Z",
+   "fingerprint": "91eaf4c3de1e4834",
+   "primary_source": false,
+   "cluster_id": "30931a8e4909b941",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

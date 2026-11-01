@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -35,16 +35,16 @@
     "close": 4.050000190734863,
     "change_pct": 0.49627741650823953,
     "ema20": 3.9379447931053244,
-    "ema50": 3.8226037297091033,
-    "ema200": 3.363933811079081,
+    "ema50": 3.8226037297106052,
+    "ema200": 3.36393381348802,
     "sma50": 3.82260000705719,
-    "rsi14": 56.04576218733487,
-    "rsi_min5": 55.38500423236799,
-    "atr14": 0.21239823250106543,
-    "atr_pct": 5.244400555510252,
+    "rsi14": 56.04576218733492,
+    "rsi_min5": 55.38500423236803,
+    "atr14": 0.212398232501065,
+    "atr_pct": 5.244400555510241,
     "rvol": 1.9360166773572802,
     "vol30": 3825673.3333333335,
-    "dist_ema200_pct": 20.39476452825051,
+    "dist_ema200_pct": 20.394764442034898,
     "dist_52w_high_pct": 19.88806072819799,
     "high_52w": 5.055426478934822,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 4.21999979019165,
     "day_low": 3.869999885559082,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 32.085706591791734,
+    "adx14": 18.46182070939456,
+    "ema10": 4.033940571446822,
+    "sma200": 3.4084739798307417,
+    "perf_63d": 15.686677788395853,
+    "adr20_pct": 5.286729186407164,
+    "range10_pct": 16.84782915028591,
+    "high10_prev": 4.300000190734863,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [
@@ -97,7 +128,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.6666666666666666,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": true,
@@ -110,9 +144,9 @@
    "plan": {
     "trigger": 4.300000190734863,
     "entry_max": 4.386000194549561,
-    "stop": 3.981402841983265,
-    "risk_per_share": 0.3185973487515983,
-    "target_1": 4.93719488823806,
+    "stop": 3.981402841983266,
+    "risk_per_share": 0.3185973487515974,
+    "target_1": 4.937194888238058,
     "trigger_basis": "letztes Higher High"
    }
   },
@@ -141,12 +175,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 8.3,
+   "score": 54.1,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 5,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -221,16 +257,16 @@
     "close": 4.050000190734863,
     "change_pct": 0.49627741650823953,
     "ema20": 3.9379447931053244,
-    "ema50": 3.8226037297091033,
-    "ema200": 3.363933811079081,
+    "ema50": 3.8226037297106052,
+    "ema200": 3.36393381348802,
     "sma50": 3.82260000705719,
-    "rsi14": 56.04576218733487,
-    "rsi_min5": 55.38500423236799,
-    "atr14": 0.21239823250106543,
-    "atr_pct": 5.244400555510252,
+    "rsi14": 56.04576218733492,
+    "rsi_min5": 55.38500423236803,
+    "atr14": 0.212398232501065,
+    "atr_pct": 5.244400555510241,
     "rvol": 1.9360166773572802,
     "vol30": 3825673.3333333335,
-    "dist_ema200_pct": 20.39476452825051,
+    "dist_ema200_pct": 20.394764442034898,
     "dist_52w_high_pct": 19.88806072819799,
     "high_52w": 5.055426478934822,
     "macd_above_signal": true,
@@ -244,7 +280,17 @@
     "green": false,
     "day_high": 4.21999979019165,
     "day_low": 3.869999885559082,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 32.085706591791734,
+    "adx14": 18.46182070939456,
+    "ema10": 4.033940571446822,
+    "sma200": 3.4084739798307417,
+    "perf_63d": 15.686677788395853,
+    "adr20_pct": 5.286729186407164,
+    "range10_pct": 16.84782915028591,
+    "high10_prev": 4.300000190734863,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -274,6 +320,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [
@@ -283,7 +350,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.6666666666666666,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": true,
@@ -296,9 +366,9 @@
    "plan": {
     "trigger": 4.300000190734863,
     "entry_max": 4.386000194549561,
-    "stop": 3.981402841983265,
-    "risk_per_share": 0.3185973487515983,
-    "target_1": 4.93719488823806,
+    "stop": 3.981402841983266,
+    "risk_per_share": 0.3185973487515974,
+    "target_1": 4.937194888238058,
     "trigger_basis": "letztes Higher High"
    }
   }
@@ -622,11 +692,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 8.3,
+  "score": 54.1,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 60,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 46.8,
@@ -635,34 +705,36 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 5,
+    "independent": 5,
+    "duplicates": 1,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 7,
+    "independent": 7,
+    "duplicates": 1,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -681,7 +753,428 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "51d8738d4012207d",
+   "symbols": [
+    "WTI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "W&T Offshore (WTI) Q3 2026 Earnings Call Transcript",
+   "summary": "Production beat guidance by 4% while net debt fell 20% on strong cash generation.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/31/wt-offshore-wti-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-31T16:28:21Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "260b9639b952dd51",
+   "primary_source": false,
+   "cluster_id": "51d8738d4012207d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cda82242add5bacb",
+   "symbols": [
+    "WTI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What W&T Offshore (WTI) Said on Its Q3 Earnings Call",
+   "summary": "W&amp;T Offshore (NYSE:WTI) reported third-quarter production above its guidance range and said it strengthened its balance sheet as it generated free cash flow, reduced net debt and built cash for potential acquisitions. Chairman and CEO Tracy Krohn said production totaled 38,20",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-wt-offshore-wti-said-on-its-q3-earnings-call-2026-10-31/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-31T07:14:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "680dc9020cdfe588",
+   "primary_source": false,
+   "cluster_id": "cda82242add5bacb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Was W & T Offshore (WTI) über seinen Q3-Gewinnaufruf gesagt hat"
+  },
+  {
+   "id": "0a798f5526c34e8a",
+   "symbols": [
+    "WTI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "W&T Offshore (WTI) Q3 Results Highlight Cash Flow Behind The Loss",
+   "summary": "W&amp;T Offshore stock barely budged after its Q3 2026 report, closing at US$4.04, up just 0.25%. On the surface you see a small move and a quarterly loss of US$13.6 million and it feels like another forgettable Gulf of Mexico quarter. Step back a bit and the story changes. Adjus",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/w-t-offshore-wti-q3-051255999.html?.tsrc=rss",
+   "published_at": "2026-10-31T05:12:55Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "ba3bf54f1d13659a",
+   "primary_source": false,
+   "cluster_id": "0a798f5526c34e8a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "W & T Offshore (WTI) Q3 Ergebnisse Highlight Cash-Flow hinter dem Verlust"
+  },
+  {
+   "id": "3d2913a4ea2505b1",
+   "symbols": [
+    "WTI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "W&T: Q3 Earnings Snapshot",
+   "summary": "HOUSTON (AP) — HOUSTON (AP) — W&amp;T Offshore Inc. (WTI) on Thursday reported a loss of $13.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/w-t-q3-earnings-snapshot-205554961.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:55:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "48f7900991a457c9",
+   "primary_source": false,
+   "cluster_id": "3d2913a4ea2505b1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "607d2a0ed7406b46",
+   "symbols": [
+    "WTI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "W&T Offshore Announces Third Quarter 2026 Results and Declares Dividend for Fourth Quarter of 2026",
+   "summary": "HOUSTON, Oct. 29, 2026 (GLOBE NEWSWIRE) -- W&amp;T Offshore, Inc. (NYSE: WTI) (“W&amp;T,” the “Company,” “we” or “us”) today reported operational and financial results for the third quarter of 2026 and declared a fourth quarter 2026 dividend of $0.01 per share. This press release",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/w-t-offshore-announces-third-204500554.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "986ecf59e21b2b08",
+   "primary_source": false,
+   "cluster_id": "7af71194a81dcbea",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e61507f986a0fde7",
+   "symbols": [
+    "WTI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "W&T Offshore Announces Timing of Third Quarter 2026 Earnings Release and Conference Call",
+   "summary": "HOUSTON, Oct. 20, 2026 (GLOBE NEWSWIRE) -- W&amp;T Offshore, Inc. (NYSE: WTI) (the “Company”) today announced the timing of its third quarter 2026 earnings release and conference call. The Company said it will issue its third quarter 2026 earnings release on Thursday, October 29,",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/w-t-offshore-announces-timing-104500860.html?.tsrc=rss",
+   "published_at": "2026-10-20T10:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "7f82c4a955a6c4c4",
+   "primary_source": false,
+   "cluster_id": "e61507f986a0fde7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ebb86372d2dc17e4",
+   "symbols": [
+    "WTI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "W&T Offshore Completes Conversion of Revolving Credit Facility to Reserve-Based Lending Structure, Enhancing Financial Flexibility",
+   "summary": "Eliminates cash sweep, quarterly clean-down and asset coverage test; increases restricted payments capacity 50% to $15 million with no change to pricing or financial covenants and no amendment feesHOUSTON, Oct. 07, 2026 (GLOBE NEWSWIRE) -- W&amp;T Offshore, Inc. (NYSE: WTI) (“W&a",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/w-t-offshore-completes-conversion-204500043.html?.tsrc=rss",
+   "published_at": "2026-10-07T20:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "59e7b2ef5de3446c",
+   "primary_source": false,
+   "cluster_id": "ebb86372d2dc17e4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4173f06c0c7503af",
+   "symbols": [
+    "WTI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are You Looking for a Top Momentum Pick? Why W&T Offshore (WTI) is a Great Choice",
+   "summary": "Does W&amp;T Offshore (WTI) have what it takes to be a top stock pick for momentum investors? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/looking-top-momentum-pick-why-160004228.html?.tsrc=rss",
+   "published_at": "2026-09-16T16:00:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "1dd9ea0e3ce10e55",
+   "primary_source": false,
+   "cluster_id": "4173f06c0c7503af",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "353818382a2e3d3a",
+   "symbols": [
+    "WTI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Offshore Oil Stocks Rally While the Broad Market Slips: Transocean Climbs 6%, Valaris Rises 6%, W&T Offshore Gains 6%",
+   "summary": "Transocean, Valaris, and W&amp;T Offshore surged an identical 6% in Tuesday's session despite operating in completely different layers of the offshore energy business, and the reason behind that synchronized move tells investors something important about where this rally can and ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/09/15/offshore-oil-stocks-rally-while-the-broad-market-slips-transocean-climbs-6-valaris-rises-6-wt-offshore-gains-6/?.tsrc=rss",
+   "published_at": "2026-09-15T16:03:15Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "a3049385f016142b",
+   "primary_source": false,
+   "cluster_id": "353818382a2e3d3a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c9cbb5809131bb92",
+   "symbols": [
+    "WTI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Venture Global's China Gas Agreement Expands Long-Term LNG Sales",
+   "summary": "VG's new 20-year China Gas deal adds 0.5 MTPA of U.S. LNG sales from 2030, strengthening long-term contracted volume and revenue visibility.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/venture-globals-china-gas-agreement-150400967.html?.tsrc=rss",
+   "published_at": "2026-09-15T15:04:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "dda53821630e5d64",
+   "primary_source": false,
+   "cluster_id": "c9cbb5809131bb92",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6a05c4dafaf92931",
+   "symbols": [
+    "WTI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zacks Industry Outlook W&T Offshore, APA and Diamondback",
+   "summary": "W&amp;T Offshore, APA and Diamondback have been highlighted in this Industry Outlook article.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/zacks-industry-outlook-w-t-080900061.html?.tsrc=rss",
+   "published_at": "2026-09-14T08:09:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "98cf7c3027b4e14c",
+   "primary_source": false,
+   "cluster_id": "6a05c4dafaf92931",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d54467b2ae2ee866",
+   "symbols": [
+    "WTI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 U.S. E&P Stocks That Look Well Placed for the Road Ahead",
+   "summary": "Following a careful analysis of the Zacks Oil and Gas - Exploration and Production - United States industry, we advise tracking shares of WTI, APA and FANG.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/3-u-e-p-stocks-141700266.html?.tsrc=rss",
+   "published_at": "2026-09-11T14:17:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "450642d8a8b08054",
+   "primary_source": false,
+   "cluster_id": "d54467b2ae2ee866",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "86dc1a3af6e3459f",
+   "symbols": [
+    "WTI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Social Buzz: Wallstreetbets Stocks Mixed Premarket Friday; Oracle to Rise, Adobe to Fall",
+   "summary": "The most-talked-about stocks in the Reddit subforum Wallstreetbets were mixed hours before Friday's",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/social-buzz-wallstreetbets-stocks-mixed-103802922.html?.tsrc=rss",
+   "published_at": "2026-09-11T10:38:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "5c0ad445e8f30019",
+   "primary_source": false,
+   "cluster_id": "86dc1a3af6e3459f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dd2021ec67c28c00",
+   "symbols": [
+    "WTI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "W&T Offshore (WTI) Turns A Profit While Short Sellers Still Circle",
+   "summary": "On August 5, W&amp;T Offshore (NYSE:WTI) announced second-quarter 2026 results that erased a rough start to the year and tacked on an 12th straight quarterly dividend. Net income landed at $12.6 million, a sharp reversal from the $22.5 million loss the company posted just three m",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/w-t-offshore-wti-turns-042615779.html?.tsrc=rss",
+   "published_at": "2026-09-10T04:26:15Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "0102ece8f1232723",
+   "primary_source": false,
+   "cluster_id": "dd2021ec67c28c00",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b6d504881bcbe5ab",
+   "symbols": [
+    "WTI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Why Is W&T (WTI) Up 16.5% Since Last Earnings Report?",
+   "summary": "W&amp;T (WTI) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-w-t-wti-16-153035625.html?.tsrc=rss",
+   "published_at": "2026-09-04T15:30:35Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "89888ac94755106e",
+   "primary_source": false,
+   "cluster_id": "b6d504881bcbe5ab",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4b25326b8ec4a743",
+   "symbols": [
+    "WTI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is WTI Worth Buying Now as Relative Value Meets Balance-Sheet Risk?",
+   "summary": "WTI trades at a relative sales-multiple discount as cash flow and liquidity improve, but debt and retirement obligations keep the investment case mixed.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wti-worth-buying-now-relative-151600039.html?.tsrc=rss",
+   "published_at": "2026-08-11T15:16:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "51ae26b6c204e801",
+   "primary_source": false,
+   "cluster_id": "4b25326b8ec4a743",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f59fd9dd2a691686",
+   "symbols": [
+    "WTI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "W&T Offshore Q2 Earnings Call Highlights",
+   "summary": "W&amp;T Offshore (NYSE:WTI) reported second-quarter 2026 net income of $12.6 million, or $0.08 per share, alongside adjusted EBITDA of more than $54 million, Chairman and CEO Tracy Krohn said during the company’s earnings call. The adjusted EBITDA result was in line with the firs",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/wt-offshore-q2-earnings-call-highlights-2026-08-09/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-09T17:03:57Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "5456772f7e90f96f",
+   "primary_source": false,
+   "cluster_id": "f59fd9dd2a691686",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "234fff780105c379",
+   "symbols": [
+    "WTI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WTI Q2 Earnings Beat Estimates on Strong Oil Pricing & Cost Control",
+   "summary": "W&amp;T Offshore Q2 adjusted earnings returns to profitability as higher oil prices and disciplined costs lift revenues, EBITDA and free cash flow.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/wti-q2-earnings-beat-estimates-135500586.html?.tsrc=rss",
+   "published_at": "2026-08-07T13:55:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "0b4aa151453abddf",
+   "primary_source": false,
+   "cluster_id": "234fff780105c379",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7af71194a81dcbea",
+   "symbols": [
+    "WTI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "W&T Offshore Announces Second Quarter 2026 Results and Declares Dividend for Third Quarter of 2026",
+   "summary": "HOUSTON, Aug. 05, 2026 (GLOBE NEWSWIRE) -- W&amp;T Offshore, Inc. (NYSE: WTI) (“W&amp;T,” the “Company,” “we” or “us”) today reported operational and financial results for the second quarter of 2026 and declared a third quarter 2026 dividend of $0.01 per share. This press release",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/w-t-offshore-announces-second-204500414.html?.tsrc=rss",
+   "published_at": "2026-08-05T20:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:53Z",
+   "fingerprint": "4e68e64e87ea213a",
+   "primary_source": false,
+   "cluster_id": "7af71194a81dcbea",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

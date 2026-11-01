@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -35,16 +35,16 @@
     "close": 45.9900016784668,
     "change_pct": -0.476081822905261,
     "ema20": 44.56929077946445,
-    "ema50": 44.59646344530842,
-    "ema200": 45.24709554017448,
+    "ema50": 44.596463445277486,
+    "ema200": 45.24709553842626,
     "sma50": 42.917724609375,
-    "rsi14": 61.428563954884346,
-    "rsi_min5": 59.67073251259305,
-    "atr14": 1.4176857961426281,
-    "atr_pct": 3.08259566080079,
+    "rsi14": 61.42856395488281,
+    "rsi_min5": 59.670732512591606,
+    "atr14": 1.4176857961426343,
+    "atr_pct": 3.082595660800804,
     "rvol": 1.0858595767054595,
     "vol30": 1544463.3333333333,
-    "dist_ema200_pct": 1.6418869088131949,
+    "dist_ema200_pct": 1.6418869127403424,
     "dist_52w_high_pct": 33.183208370967996,
     "high_52w": 68.83000598682453,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 47.099998474121094,
     "day_low": 45.810001373291016,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 57.449222081172046,
+    "adx14": 32.356702851935694,
+    "ema10": 45.411109159001214,
+    "sma200": 47.44915273666382,
+    "perf_63d": -16.318481949895492,
+    "adr20_pct": 3.12209212452255,
+    "range10_pct": 6.36098669837768,
+    "high10_prev": 46.29999923706055,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.8,
     "S03": 0.6666666666666666,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 47.099998474121094,
     "entry_max": 48.04199844360352,
-    "stop": 44.97346977990715,
-    "risk_per_share": 2.1265286942139454,
-    "target_1": 51.353055862548985,
+    "stop": 44.97346977990714,
+    "risk_per_share": 2.1265286942139525,
+    "target_1": 51.353055862549,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -137,12 +171,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 3.7,
+   "score": 29.5,
    "drivers": [
-    "social_attention",
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "social_attention"
    ],
-   "independent_7d": 0,
+   "independent_7d": 3,
    "independent_24h": 0
   },
   "political": {
@@ -225,16 +260,16 @@
     "close": 45.9900016784668,
     "change_pct": -0.476081822905261,
     "ema20": 44.56929077946445,
-    "ema50": 44.59646344530842,
-    "ema200": 45.24709554017448,
+    "ema50": 44.596463445277486,
+    "ema200": 45.24709553842626,
     "sma50": 42.917724609375,
-    "rsi14": 61.428563954884346,
-    "rsi_min5": 59.67073251259305,
-    "atr14": 1.4176857961426281,
-    "atr_pct": 3.08259566080079,
+    "rsi14": 61.42856395488281,
+    "rsi_min5": 59.670732512591606,
+    "atr14": 1.4176857961426343,
+    "atr_pct": 3.082595660800804,
     "rvol": 1.0858595767054595,
     "vol30": 1544463.3333333333,
-    "dist_ema200_pct": 1.6418869088131949,
+    "dist_ema200_pct": 1.6418869127403424,
     "dist_52w_high_pct": 33.183208370967996,
     "high_52w": 68.83000598682453,
     "macd_above_signal": true,
@@ -248,7 +283,17 @@
     "green": false,
     "day_high": 47.099998474121094,
     "day_low": 45.810001373291016,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 57.449222081172046,
+    "adx14": 32.356702851935694,
+    "ema10": 45.411109159001214,
+    "sma200": 47.44915273666382,
+    "perf_63d": -16.318481949895492,
+    "adr20_pct": 3.12209212452255,
+    "range10_pct": 6.36098669837768,
+    "high10_prev": 46.29999923706055,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -278,6 +323,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -285,7 +351,10 @@
     "S01": 0.0,
     "S02": 0.8,
     "S03": 0.6666666666666666,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -298,9 +367,9 @@
    "plan": {
     "trigger": 47.099998474121094,
     "entry_max": 48.04199844360352,
-    "stop": 44.97346977990715,
-    "risk_per_share": 2.1265286942139454,
-    "target_1": 51.353055862548985,
+    "stop": 44.97346977990714,
+    "risk_per_share": 2.1265286942139525,
+    "target_1": 51.353055862549,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -622,11 +691,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 3.7,
+  "score": 29.5,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 86.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 6.8,
@@ -644,27 +713,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 18,
+    "independent": 18,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "social_attention",
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "social_attention"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -682,7 +752,450 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "780c5daf6da6f0da",
+   "symbols": [
+    "YOU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Trending Stock CLEAR Secure, Inc. (YOU) a Buy Now?",
+   "summary": "Clear Secure (YOU) has received quite a bit of attention from Zacks.com users lately. Therefore, it is wise to be aware of the facts that can impact the stock's prospects.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/trending-stock-clear-secure-inc-120004705.html?.tsrc=rss",
+   "published_at": "2026-10-28T12:00:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "3c01c766ef0adeed",
+   "primary_source": false,
+   "cluster_id": "780c5daf6da6f0da",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7b7a111636d978fd",
+   "symbols": [
+    "YOU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Clear Secure (YOU) Outpaced the Stock Market Today",
+   "summary": "The latest trading day saw Clear Secure (YOU) settling at $46.07, representing a +1.52% change from its previous close.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-clear-secure-outpaced-stock-205004670.html?.tsrc=rss",
+   "published_at": "2026-10-26T20:50:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "cf62e204737d945d",
+   "primary_source": false,
+   "cluster_id": "7b7a111636d978fd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fe221edc6c06de0f",
+   "symbols": [
+    "YOU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Cybersecurity Stocks Retail Investors Are Watching As Identity And Network Security Matter More",
+   "summary": "Markets are on edge as cyber risk, AI uncertainty, geopolitical shocks, and policy questions all collide, yet this kind of stress can quietly reset which stocks investors pay most attention to. Security-focused businesses exposed to these headlines may see their importance reasse",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-cybersecurity-stocks-retail-investors-150904076.html?.tsrc=rss",
+   "published_at": "2026-10-25T15:09:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "a1eb0b8a9a6e7194",
+   "primary_source": false,
+   "cluster_id": "fe221edc6c06de0f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9e72da591113648f",
+   "symbols": [
+    "FROG",
+    "YOU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 software stocks with competitive advantages",
+   "summary": "Software is rapidly reducing operating expenses for businesses. This secular theme has materialized in superior earnings growth and stock price performance for most SaaS companies, and over the last six months, the industry’s 54.6% return has topped the S&amp;P 500 by 45.5 percen",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-software-stocks-competitive-advantages-190439047.html?.tsrc=rss",
+   "published_at": "2026-10-23T19:04:39Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:42Z",
+   "fingerprint": "2ec290ca1bbbe294",
+   "primary_source": false,
+   "cluster_id": "9e72da591113648f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2b1557ab6afa8fb0",
+   "symbols": [
+    "YOU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "CLEAR To Announce Third Quarter 2026 Financial Results On November 4, 2026",
+   "summary": "Clear Secure, Inc. (NYSE: YOU), the secure identity company, today announced that it will report financial results for the third quarter ending September 30, 2026 at approximately 6:00 a.m. ET on Wednesday, November 4, 2026. At 8:00 a.m. ET, results will be discussed via live web",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/clear-announce-third-quarter-2026-100000840.html?.tsrc=rss",
+   "published_at": "2026-10-21T10:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "6b5f6a5e82729166",
+   "primary_source": false,
+   "cluster_id": "2b1557ab6afa8fb0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7c06accc279b3fb6",
+   "symbols": [
+    "YOU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Clear Secure (YOU) Stock Looks Undervalued Based On Its Earnings￼",
+   "summary": "Clear Secure has logged strong multi year share returns, and that price strength now puts a spotlight on whether the current valuation lines up with what its earnings can reasonably support. With the stock recently closing at US$45.18, investors are asking if the story in the sha",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/clear-secure-stock-looks-undervalued-130956833.html?.tsrc=rss",
+   "published_at": "2026-10-20T13:09:56Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "8dbe636aa8256a3f",
+   "primary_source": false,
+   "cluster_id": "7c06accc279b3fb6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "daf70800969de28c",
+   "symbols": [
+    "YOU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Clear Secure (YOU) Climbed, What Is Driving Fresh Attention?",
+   "summary": "Clear Secure (YOU) is back in focus after the U.S. Department of Veterans Affairs rolled out CLEAR1 as an identity verification option for VA.gov users, coinciding with positive expectations ahead of the next earnings report. Recent trading has reflected that optimism. Clear Secu",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/clear-secure-climbed-driving-fresh-121008440.html?.tsrc=rss",
+   "published_at": "2026-10-20T12:10:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "469d405260ae8fc2",
+   "primary_source": false,
+   "cluster_id": "daf70800969de28c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "91ec60d3b1c46fd2",
+   "symbols": [
+    "YOU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How Investors May Respond To Clear Secure (YOU) VA.gov Identity Rollout",
+   "summary": "GovCIO and the U.S. Department of Veterans Affairs have already rolled out Clear Secure's CLEAR1 platform on VA.gov and at six pilot medical centers, giving Veterans an optional, no cost digital and in person identity verification choice that uses biometrics and government ID. Th",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/investors-may-respond-clear-secure-111047962.html?.tsrc=rss",
+   "published_at": "2026-10-20T11:10:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "f1395a0323c32c07",
+   "primary_source": false,
+   "cluster_id": "91ec60d3b1c46fd2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1f950ad2a40a520b",
+   "symbols": [
+    "YOU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Clear Secure (YOU) Exceeds Market Returns: Some Facts to Consider",
+   "summary": "Clear Secure (YOU) reached $45.18 at the closing of the latest trading day, reflecting a +2.85% change compared to its last close.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/clear-secure-exceeds-market-returns-205003836.html?.tsrc=rss",
+   "published_at": "2026-10-19T20:50:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "7c662a127c8f46f4",
+   "primary_source": false,
+   "cluster_id": "1f950ad2a40a520b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "95636512bb7c8efa",
+   "symbols": [
+    "YOU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Reasons YOU Has Explosive Upside Potential",
+   "summary": "What a brutal six months it’s been for CLEAR Secure. The stock has dropped 22.8% and now trades at $43.89, rattling many shareholders. This may have investors wondering how to approach the situation.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-reasons-explosive-upside-potential-174455651.html?.tsrc=rss",
+   "published_at": "2026-10-19T17:44:55Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "d30ae72f0908c75d",
+   "primary_source": false,
+   "cluster_id": "95636512bb7c8efa",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bfbf6a82588460dd",
+   "symbols": [
+    "YOU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Most-Watched Stock CLEAR Secure, Inc. (YOU) Worth Betting on Now?",
+   "summary": "Clear Secure (YOU) has been one of the stocks most watched by Zacks.com users lately. So, it is worth exploring what lies ahead for the stock.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/most-watched-stock-clear-secure-120006053.html?.tsrc=rss",
+   "published_at": "2026-10-16T12:00:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "5597bb7e142e9e0c",
+   "primary_source": false,
+   "cluster_id": "bfbf6a82588460dd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2ac19f33e2b9467d",
+   "symbols": [
+    "YOU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Clear Secure (YOU) Increases Despite Market Slip: Here's What You Need to Know",
+   "summary": "Clear Secure (YOU) closed at $43.52 in the latest trading session, marking a +2.5% move from the prior day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/clear-secure-increases-despite-market-205004526.html?.tsrc=rss",
+   "published_at": "2026-10-13T20:50:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "087454c8572a917e",
+   "primary_source": false,
+   "cluster_id": "2ac19f33e2b9467d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "895a5f7b1579ace4",
+   "symbols": [
+    "YOU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "2 Cash-Producing Stocks for Long-Term Investors and 1 We Ignore",
+   "summary": "A company that generates cash isn’t automatically a winner. Some businesses stockpile cash but fail to reinvest wisely, limiting their ability to expand.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/2-cash-producing-stocks-long-083504259.html?.tsrc=rss",
+   "published_at": "2026-10-13T08:35:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "b1091a88df1e5ee7",
+   "primary_source": false,
+   "cluster_id": "895a5f7b1579ace4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "31c63f85cc66c4d1",
+   "symbols": [
+    "YOU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why the Market Dipped But Clear Secure (YOU) Gained Today",
+   "summary": "In the most recent trading session, Clear Secure (YOU) closed at $42.58, indicating a +2.6% shift from the previous trading day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-market-dipped-clear-secure-205004264.html?.tsrc=rss",
+   "published_at": "2026-10-07T20:50:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "8b75d78123d800c4",
+   "primary_source": false,
+   "cluster_id": "31c63f85cc66c4d1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e0ac7ef7ee714ef1",
+   "symbols": [
+    "YOU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "U.S. Department of Veterans Affairs Selects CLEAR for New Pilot Initiative to Modernize the Veteran Experience on VA.gov",
+   "summary": "CLEAR (NYSE: YOU), the secure identity company, announced today that the U.S. Department of Veterans Affairs (VA) has integrated CLEAR1, CLEAR's secure identity platform, as part of a pilot to reimagine the Veteran experience across digital and physical touchpoints. The pilot pro",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/u-department-veterans-affairs-selects-120000913.html?.tsrc=rss",
+   "published_at": "2026-10-07T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "91e02372c436213a",
+   "primary_source": false,
+   "cluster_id": "e0ac7ef7ee714ef1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8e4adaeeba3abc7c",
+   "symbols": [
+    "YOU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "CLEAR Secure, Inc. (YOU) is Attracting Investor Attention: Here is What You Should Know",
+   "summary": "Recently, Zacks.com users have been paying close attention to Clear Secure (YOU). This makes it worthwhile to examine what the stock has in store.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/clear-secure-inc-attracting-investor-120008473.html?.tsrc=rss",
+   "published_at": "2026-10-05T12:00:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "bdfe365ac66173dd",
+   "primary_source": false,
+   "cluster_id": "8e4adaeeba3abc7c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b1a9c2643858e895",
+   "symbols": [
+    "YOU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 US Growth Tech Stocks Retail Investors Are Watching After Cooling Inflation",
+   "summary": "Rate hike odds just swung sharply, inflation cooled and the latest jobs report underwhelmed, so interest rate sensitive growth and technology stocks are suddenly back in focus for anyone watching the Fed. This mix of softer data and slower wage gains is reshuffling which companie",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-us-growth-tech-stocks-110717740.html?.tsrc=rss",
+   "published_at": "2026-10-05T11:07:17Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "b9fd9a08ba674209",
+   "primary_source": false,
+   "cluster_id": "b1a9c2643858e895",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d78bddc0902c530d",
+   "symbols": [
+    "XPOF",
+    "YOU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Safe-and-Steady Stock with Impressive Fundamentals and 2 We Brush Off",
+   "summary": "A stock with low volatility can be reassuring, but it doesn’t always mean strong long-term performance. Investors who prioritize stability may miss out on higher-reward opportunities elsewhere.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-safe-steady-stock-impressive-111803368.html?.tsrc=rss",
+   "published_at": "2026-10-02T11:18:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:03Z",
+   "fingerprint": "c6528bd54c74c1c9",
+   "primary_source": false,
+   "cluster_id": "d78bddc0902c530d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8a86eb664d6e8644",
+   "symbols": [
+    "YOU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Clear Secure (YOU) Rises Higher Than Market: Key Facts",
+   "summary": "Clear Secure (YOU) closed at $39.6 in the latest trading session, marking a +2.72% move from the prior day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/clear-secure-rises-higher-market-205005383.html?.tsrc=rss",
+   "published_at": "2026-09-25T20:50:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "76f0ea5eeb6fce3a",
+   "primary_source": false,
+   "cluster_id": "8a86eb664d6e8644",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "61d864bc85f0dfae",
+   "symbols": [
+    "YOU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "CLEAR Secure, Inc. (YOU) Is a Trending Stock: Facts to Know Before Betting on It",
+   "summary": "Clear Secure (YOU) has been one of the stocks most watched by Zacks.com users lately. So, it is worth exploring what lies ahead for the stock.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/clear-secure-inc-trending-stock-120005089.html?.tsrc=rss",
+   "published_at": "2026-09-24T12:00:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:08Z",
+   "fingerprint": "b36d49f4f19489d3",
+   "primary_source": false,
+   "cluster_id": "61d864bc85f0dfae",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

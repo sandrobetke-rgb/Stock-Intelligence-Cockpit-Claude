@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 7.349999904632568,
     "day_low": 7.090000152587891,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 19.294751039686446,
+    "adx14": 42.1781855354717,
+    "ema10": 7.208211525101995,
+    "sma200": 5.342400000095368,
+    "perf_63d": 26.584511875302375,
+    "adr20_pct": 3.3803987520220957,
+    "range10_pct": 8.905111562145706,
+    "high10_prev": 7.460000038146973,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
@@ -97,7 +128,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.0,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.0
    },
    "filter": {
     "Tag grün": false,
@@ -141,11 +175,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 4.0,
+   "score": 20.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -230,7 +266,17 @@
     "green": false,
     "day_high": 7.349999904632568,
     "day_low": 7.090000152587891,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 19.294751039686446,
+    "adx14": 42.1781855354717,
+    "ema10": 7.208211525101995,
+    "sma200": 5.342400000095368,
+    "perf_63d": 26.584511875302375,
+    "adr20_pct": 3.3803987520220957,
+    "range10_pct": 8.905111562145706,
+    "high10_prev": 7.460000038146973,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -260,6 +306,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
@@ -269,7 +336,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.0,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.0
    },
    "filter": {
     "Tag grün": false,
@@ -608,11 +678,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 4.0,
+  "score": 20.1,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 22.4,
@@ -630,26 +700,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -667,7 +739,383 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "bfe87c917a00ca9e",
+   "symbols": [
+    "YEXT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are Investors Undervaluing Yext (YEXT) Right Now?",
+   "summary": "Here at Zacks, our focus is on the proven Zacks Rank system, which emphasizes earnings estimates and estimate revisions to find great stocks. Nevertheless, we are always paying attention to the latest value, growth, and momentum trends to underscore strong picks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/investors-undervaluing-yext-yext-now-124003466.html?.tsrc=rss",
+   "published_at": "2026-10-27T12:40:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "667a182f83a738c3",
+   "primary_source": false,
+   "cluster_id": "bfe87c917a00ca9e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9049c880cdeddf38",
+   "symbols": [
+    "YEXT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Yext Board Approves Long-Term Performance Equity Award For CEO",
+   "summary": "NEW YORK, October 14, 2026--Yext, Inc. (NYSE: YEXT), the enterprise marketing platform for an agentic world (\"Yext\" or \"Company\"), announced that the Board of Directors (the \"Board\") has approved a new, long-term performance equity package (the \"Compensation Package\") for its CEO",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/yext-board-approves-long-term-200500476.html?.tsrc=rss",
+   "published_at": "2026-10-14T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "21afbce664a2bbc8",
+   "primary_source": false,
+   "cluster_id": "9049c880cdeddf38",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b23746ba6b4b87b9",
+   "symbols": [
+    "YEXT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Should Value Investors Buy Yext (YEXT) Stock?",
+   "summary": "Here at Zacks, our focus is on the proven Zacks Rank system, which emphasizes earnings estimates and estimate revisions to find great stocks. Nevertheless, we are always paying attention to the latest value, growth, and momentum trends to underscore strong picks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/value-investors-buy-yext-yext-124004611.html?.tsrc=rss",
+   "published_at": "2026-10-09T12:40:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "e798030e5c5c815f",
+   "primary_source": false,
+   "cluster_id": "b23746ba6b4b87b9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ad03c2606de4ce70",
+   "symbols": [
+    "YEXT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Yext Signs Definitive Agreement to Acquire Flamel.ai, Extending Its Agentic Marketing Platform Into Local Paid Media",
+   "summary": "NEW YORK, September 30, 2026--Yext, Inc. (NYSE: YEXT), the enterprise marketing platform for an agentic world, has signed a definitive agreement to acquire Flamel.ai. Flamel.ai helps multi-location brands run localized paid campaigns across Google, Meta, and ChatGPT. This news wa",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/yext-signs-definitive-agreement-acquire-200500346.html?.tsrc=rss",
+   "published_at": "2026-09-30T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "b5ce71de3b35082c",
+   "primary_source": false,
+   "cluster_id": "ad03c2606de4ce70",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "acac0d6597d11aee",
+   "symbols": [
+    "YEXT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Yext Announces Multiplayer Agent Harness Purpose-built for Marketing Growth",
+   "summary": "NEW YORK, September 30, 2026--Yext, Inc (NYSE: YEXT) continues to rapidly expand its leading agentic marketing platform by announcing a multiplayer agent harness built for marketing teams. The new agent harness creates a shared, context-rich workspace in Scout where corporate tea",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/yext-announces-multiplayer-agent-harness-120000987.html?.tsrc=rss",
+   "published_at": "2026-09-30T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "dfe5b3609cc39326",
+   "primary_source": false,
+   "cluster_id": "acac0d6597d11aee",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4d9c018f3f790a8d",
+   "symbols": [
+    "YEXT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Yext (YEXT) Reports a 31% Adjusted EBITDA Margin as Revenue Contracts. Can Enterprise Retention Restore Growth?",
+   "summary": "Yext, Inc. (NYSE:YEXT) has established a more profitable operating model before restoring consolidated growth. Fiscal second-quarter 2027 revenue declined 1.8% year over year to $111.1 million, while annual recurring revenue, or ARR, decreased approximately 1% to $440.8 million. ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/yext-yext-reports-31-adjusted-034936612.html?.tsrc=rss",
+   "published_at": "2026-09-09T03:49:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "8e6871a9c971fdc7",
+   "primary_source": false,
+   "cluster_id": "4d9c018f3f790a8d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2be67900ba99199c",
+   "symbols": [
+    "YEXT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Earnings Estimates Rising for Yext (YEXT): Will It Gain?",
+   "summary": "Yext (YEXT) shares have started gaining and might continue moving higher in the near term, as indicated by solid earnings estimate revisions.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/earnings-estimates-rising-yext-yext-162002151.html?.tsrc=rss",
+   "published_at": "2026-09-07T16:20:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "81980c1211824127",
+   "primary_source": false,
+   "cluster_id": "2be67900ba99199c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1797ff9c90aca344",
+   "symbols": [
+    "YEXT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Yext (YEXT) Stock Undervalued Right Now?",
+   "summary": "Here at Zacks, our focus is on the proven Zacks Rank system, which emphasizes earnings estimates and estimate revisions to find great stocks. Nevertheless, we are always paying attention to the latest value, growth, and momentum trends to underscore strong picks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/yext-yext-stock-undervalued-now-134005313.html?.tsrc=rss",
+   "published_at": "2026-09-07T13:40:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "1b9bc54c6a8c1e69",
+   "primary_source": false,
+   "cluster_id": "1797ff9c90aca344",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "011bdcfe43b648d9",
+   "symbols": [
+    "YEXT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Yext (YEXT) Q2 Earnings Beat Estimates",
+   "summary": "Yext (YEXT) delivered earnings and revenue surprises of +23.53% and -0.18%, respectively, for the quarter ended July 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/yext-yext-q2-earnings-beat-131002407.html?.tsrc=rss",
+   "published_at": "2026-09-01T13:10:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "131812b9387f067d",
+   "primary_source": false,
+   "cluster_id": "011bdcfe43b648d9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fafcba17c1e48adc",
+   "symbols": [
+    "YEXT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Yext Expands Agentic Capabilities to Grow AI Visibility for Enterprise Brands and Small Businesses",
+   "summary": "NEW YORK, September 01, 2026--Yext (NYSE: YEXT) today announced that it has expanded its agentic marketing platform to optimize more sources that AI cites and also launched an early version of a new SMB product: Corvo AI is a proactive agent purpose-built for small business owner",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/yext-expands-agentic-capabilities-grow-120000210.html?.tsrc=rss",
+   "published_at": "2026-09-01T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "725315cea17e7b4f",
+   "primary_source": false,
+   "cluster_id": "fafcba17c1e48adc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "13af57e9b68cbc67",
+   "symbols": [
+    "YEXT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Yext Announces Second Quarter Fiscal 2027 Results",
+   "summary": "NEW YORK, September 01, 2026--Yext, Inc. (NYSE: YEXT), the enterprise agentic marketing platform, today announced its results for the three months ended July 31, 2026, or Yext's second quarter, of fiscal year 2027.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/yext-announces-second-quarter-fiscal-120000593.html?.tsrc=rss",
+   "published_at": "2026-09-01T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "e59d022bd49a98fb",
+   "primary_source": false,
+   "cluster_id": "13af57e9b68cbc67",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "892308ad15ab454a",
+   "symbols": [
+    "YEXT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Yext to Announce Second Quarter Fiscal Year 2027 Financial Results on September 1, 2026",
+   "summary": "NEW YORK, August 18, 2026--Yext, Inc. (NYSE: YEXT), the enterprise agentic marketing platform, today announced that its second quarter fiscal year 2027 results will be released on Tuesday, September 1, 2026, before market open.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/yext-announce-second-quarter-fiscal-200500056.html?.tsrc=rss",
+   "published_at": "2026-08-18T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "1cefb2d6ac3e3f2d",
+   "primary_source": false,
+   "cluster_id": "892308ad15ab454a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "361e90d726cfe0e2",
+   "symbols": [
+    "YEXT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Yext (YEXT) a Great Value Stock Right Now?",
+   "summary": "Here at Zacks, our focus is on the proven Zacks Rank system, which emphasizes earnings estimates and estimate revisions to find great stocks. Nevertheless, we are always paying attention to the latest value, growth, and momentum trends to underscore strong picks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/yext-yext-great-value-stock-134004428.html?.tsrc=rss",
+   "published_at": "2026-07-31T13:40:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "2d5bf550aa651e89",
+   "primary_source": false,
+   "cluster_id": "361e90d726cfe0e2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7478ab9fb921b925",
+   "symbols": [
+    "YEXT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "New Strong Buy Stocks for July 22nd",
+   "summary": "HTLD, YEXT, ANIX, WVE and LCNB have been added to the Zacks Rank #1 (Strong Buy) List on July 22, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/strong-buy-stocks-july-22nd-111500924.html?.tsrc=rss",
+   "published_at": "2026-07-22T11:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "fc43417d92653b72",
+   "primary_source": false,
+   "cluster_id": "7478ab9fb921b925",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d5ce50feb89c8519",
+   "symbols": [
+    "LCNB",
+    "YEXT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Best Value Stocks to Buy for July 22nd",
+   "summary": "YEXT, APOG and LCNB made it to the Zacks Rank #1 (Strong Buy) value stocks list on July 22, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-value-stocks-buy-july-090400087.html?.tsrc=rss",
+   "published_at": "2026-07-22T09:04:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:38Z",
+   "fingerprint": "17a0d7b120a23f41",
+   "primary_source": false,
+   "cluster_id": "d5ce50feb89c8519",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "92fc882e40e723ed",
+   "symbols": [
+    "YEXT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Best Value Stocks to Buy for July 20th",
+   "summary": "YEXT, VSNT and BCC made it to the Zacks Rank #1 (Strong Buy) value stocks list on July 20, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-value-stocks-buy-july-102500196.html?.tsrc=rss",
+   "published_at": "2026-07-20T10:25:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "7ca8b9afdb07d4bd",
+   "primary_source": false,
+   "cluster_id": "92fc882e40e723ed",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c12d5f709f689f63",
+   "symbols": [
+    "YEXT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "New Strong Buy Stocks for July 20th",
+   "summary": "KTTA, NTRS, YEXT, AEHR and STT have been added to the Zacks Rank #1 (Strong Buy) List on July 20, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/strong-buy-stocks-july-20th-090300372.html?.tsrc=rss",
+   "published_at": "2026-07-20T09:03:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:07Z",
+   "fingerprint": "75d441dcf04f7689",
+   "primary_source": false,
+   "cluster_id": "c12d5f709f689f63",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

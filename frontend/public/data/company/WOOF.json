@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 2.625,
     "day_low": 2.561000108718872,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 94.8262121531507,
+    "adx14": 22.68115181017735,
+    "ema10": 2.4863503824769393,
+    "sma200": 2.6677499973773955,
+    "perf_63d": -10.309284600904922,
+    "adr20_pct": 4.038712765221669,
+    "range10_pct": 17.073169442331036,
+    "high10_prev": 2.640000104904175,
+    "pullback_ema20": false,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [
@@ -97,7 +128,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.6666666666666666,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": true,
@@ -141,11 +175,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.4,
+   "score": 31.2,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 3,
    "independent_24h": 0
   },
   "political": {
@@ -244,7 +280,17 @@
     "green": true,
     "day_high": 2.625,
     "day_low": 2.561000108718872,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 94.8262121531507,
+    "adx14": 22.68115181017735,
+    "ema10": 2.4863503824769393,
+    "sma200": 2.6677499973773955,
+    "perf_63d": -10.309284600904922,
+    "adr20_pct": 4.038712765221669,
+    "range10_pct": 17.073169442331036,
+    "high10_prev": 2.640000104904175,
+    "pullback_ema20": false,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -274,6 +320,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [
@@ -283,7 +350,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.6666666666666666,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": true,
@@ -622,11 +692,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.4,
+  "score": 31.2,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 86.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 13.7,
@@ -644,25 +714,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 16,
+    "independent": 16,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -681,7 +753,460 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "ed02f0661a0f9dd1",
+   "symbols": [
+    "FLO",
+    "TNDM",
+    "WOOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Russell 2000 stocks that fall short",
+   "summary": "The Russell 2000 (^RUT) is packed with potential breakout stocks, thanks to its focus on smaller companies with high growth potential. However, smaller size also means these businesses often lack the resilience and financial flexibility of large-cap firms, making careful selectio",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-russell-2000-stocks-fall-181434832.html?.tsrc=rss",
+   "published_at": "2026-10-28T18:14:34Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:28Z",
+   "fingerprint": "179415dd27d361ae",
+   "primary_source": false,
+   "cluster_id": "ed02f0661a0f9dd1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5353036a649efee1",
+   "symbols": [
+    "ARHS",
+    "WOOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WOOF or ARHS: Which Is the Better Value Stock Right Now?",
+   "summary": "WOOF vs. ARHS: Which Stock Is the Better Value Option?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/woof-arhs-better-value-stock-144003768.html?.tsrc=rss",
+   "published_at": "2026-10-26T14:40:03Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:27Z",
+   "fingerprint": "6f78f7a796ecef16",
+   "primary_source": false,
+   "cluster_id": "5353036a649efee1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3f4db893f1205695",
+   "symbols": [
+    "OSCR",
+    "WOOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Best Growth Stocks to Buy for October 26th",
+   "summary": "WOOF, FIVE and OSCR made it to the Zacks Rank #1 (Strong Buy) growth stocks list on October 26th, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-growth-stocks-buy-october-091000532.html?.tsrc=rss",
+   "published_at": "2026-10-26T09:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:27Z",
+   "fingerprint": "53bd1a846b790413",
+   "primary_source": false,
+   "cluster_id": "3f4db893f1205695",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9e3e423460d041df",
+   "symbols": [
+    "WOOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Best Growth Stocks to Buy for October 23rd",
+   "summary": "UGP, WOOF and MNDY made it to the Zacks Rank #1 (Strong Buy) growth stocks list on October 23, 2026",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-growth-stocks-buy-october-113300428.html?.tsrc=rss",
+   "published_at": "2026-10-23T11:33:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "4fddbd8fe164e64a",
+   "primary_source": false,
+   "cluster_id": "9e3e423460d041df",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f6f225a6f61c37e7",
+   "symbols": [
+    "GIC",
+    "OMCL",
+    "WOOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Small-Cap Stocks We Approach with Caution",
+   "summary": "Many small-cap stocks have limited Wall Street coverage, giving savvy investors the chance to act before everyone else catches on. But the flip side is that these businesses have increased downside risk because they lack the scale and staying power of their larger competitors.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-small-cap-stocks-approach-212553452.html?.tsrc=rss",
+   "published_at": "2026-10-22T21:25:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:29Z",
+   "fingerprint": "944acd2b856dbca2",
+   "primary_source": false,
+   "cluster_id": "f6f225a6f61c37e7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5db39000aca505b8",
+   "symbols": [
+    "WOOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Best Growth Stocks to Buy for October 21st",
+   "summary": "WOOF, ASAIY and BP made it to the Zacks Rank #1 (Strong Buy) growth stocks list on October 21, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-growth-stocks-buy-october-102700700.html?.tsrc=rss",
+   "published_at": "2026-10-21T10:27:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "f53153ac065d36ab",
+   "primary_source": false,
+   "cluster_id": "5db39000aca505b8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9480fd75fccb1437",
+   "symbols": [
+    "WOOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Best Growth Stocks to Buy for October 15th",
+   "summary": "WOOF, FIVE, and OSCR it to the Zacks Rank #1 (Strong Buy) growth stocks list on October 13,52026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-growth-stocks-buy-october-074000704.html?.tsrc=rss",
+   "published_at": "2026-10-15T07:40:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "ff435f7e1fc88e50",
+   "primary_source": false,
+   "cluster_id": "9480fd75fccb1437",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f061d29a7636c1af",
+   "symbols": [
+    "WOOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Paws on the Nice List: Petco Unveils \"Never Naughty, Always Nice\" Holiday Campaign Ft. Hundreds of Gifts at $10 or Less, Free Santa Photos and In-Store Events",
+   "summary": "Let's be real: between dangling baubles that double as cat paw magnets, stolen gingerbread figures, counter-surfing missions, and wrapping paper that is torn to shreds before breakfast, the holidays are gloriously unhinged for pet families nationwide.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/paws-nice-list-petco-unveils-120200636.html?.tsrc=rss",
+   "published_at": "2026-10-13T12:02:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "4ef9a7ff56667ec6",
+   "primary_source": false,
+   "cluster_id": "f061d29a7636c1af",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8d99f7547254561a",
+   "symbols": [
+    "WOOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Best Growth Stocks to Buy for October 13th",
+   "summary": "WOOF, FIVE, and OSCR it to the Zacks Rank #1 (Strong Buy) growth stocks list on October 13, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-growth-stocks-buy-october-091500838.html?.tsrc=rss",
+   "published_at": "2026-10-13T09:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "7a8ac5631db3d585",
+   "primary_source": false,
+   "cluster_id": "8d99f7547254561a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c75bd8ac3eaa56c0",
+   "symbols": [
+    "STAA",
+    "WOOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 of Wall Street’s Favorite Stocks Worth Investigating and 2 We Brush Off",
+   "summary": "Wall Street is overwhelmingly bullish on the stocks in this article, with price targets suggesting significant upside potential. However, it’s worth remembering that analysts rarely issue sell ratings, partly because their firms often seek other business from the same companies t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-wall-street-favorite-stocks-092703894.html?.tsrc=rss",
+   "published_at": "2026-10-12T09:27:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:07Z",
+   "fingerprint": "1aeff3b805a320ca",
+   "primary_source": false,
+   "cluster_id": "c75bd8ac3eaa56c0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1b1134d6d46d4e15",
+   "symbols": [
+    "ARHS",
+    "WOOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WOOF vs. ARHS: Which Stock Is the Better Value Option?",
+   "summary": "WOOF vs. ARHS: Which Stock Is the Better Value Option?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/woof-vs-arhs-stock-better-144004778.html?.tsrc=rss",
+   "published_at": "2026-10-09T14:40:04Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:27Z",
+   "fingerprint": "2602522967933727",
+   "primary_source": false,
+   "cluster_id": "1b1134d6d46d4e15",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e2157acc9edae279",
+   "symbols": [
+    "WOOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Best Growth Stocks to Buy for October 9th",
+   "summary": "WOOF, FIVE and OSCR made it to the Zacks Rank #1 (Strong Buy) growth stocks list on October 9th, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-growth-stocks-buy-october-084100964.html?.tsrc=rss",
+   "published_at": "2026-10-09T08:41:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "d10c2d3f71cac482",
+   "primary_source": false,
+   "cluster_id": "e2157acc9edae279",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d4814b40a5faea4d",
+   "symbols": [
+    "WOOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Best Growth Stocks to Buy for October 7th",
+   "summary": "WOOF, FIVE and OSCR made it to the Zacks Rank #1 (Strong Buy) growth stocks list on October 7th, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-growth-stocks-buy-october-060900286.html?.tsrc=rss",
+   "published_at": "2026-10-07T06:09:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "056876886676634d",
+   "primary_source": false,
+   "cluster_id": "d4814b40a5faea4d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0423184ad140d208",
+   "symbols": [
+    "OCUL",
+    "SFIX",
+    "WOOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Stocks Under $10 That Fall Short",
+   "summary": "Stocks trading in the $1-10 range are generally smaller players with less risk than their penny stock counterparts. But that doesn’t mean the underlying businesses are cheap, and we advise caution as many have questionable fundamentals.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-stocks-under-10-fall-113900461.html?.tsrc=rss",
+   "published_at": "2026-10-05T11:39:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:01Z",
+   "fingerprint": "4def3161ae395ead",
+   "primary_source": false,
+   "cluster_id": "0423184ad140d208",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bdfbfdcd6ff3926d",
+   "symbols": [
+    "WOOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Best Growth Stocks to Buy for October 5th",
+   "summary": "WOOF, FIVE and OSCR made it to the Zacks Rank #1 (Strong Buy) growth stocks list on October 5th, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-growth-stocks-buy-october-060800750.html?.tsrc=rss",
+   "published_at": "2026-10-05T06:08:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "e6e700f1fb54ff39",
+   "primary_source": false,
+   "cluster_id": "bdfbfdcd6ff3926d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8fd092a334fe13a2",
+   "symbols": [
+    "WOOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Down 12.7% in 4 Weeks, Here's Why You Should You Buy the Dip in Petco (WOOF)",
+   "summary": "Petco (WOOF) has become technically an oversold stock now, which implies exhaustion of the heavy selling pressure on it. This, combined with strong agreement among Wall Street analysts in revising earnings estimates higher, indicates a potential trend reversal for the stock in th",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/down-12-7-4-weeks-123502102.html?.tsrc=rss",
+   "published_at": "2026-10-02T12:35:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "0fd355972d17047d",
+   "primary_source": false,
+   "cluster_id": "8fd092a334fe13a2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b27edbfd36fc73b3",
+   "symbols": [
+    "CENT",
+    "CENTA",
+    "WOOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Chewy's Vet Care Posts Triple-Digit Growth as Clinic Scale Builds",
+   "summary": "CHWY's Vet Care business delivers triple-digit growth as strong clinic economics, customer satisfaction and retention support its health expansion.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/chewys-vet-care-posts-triple-140100354.html?.tsrc=rss",
+   "published_at": "2026-09-29T14:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:20Z",
+   "fingerprint": "d816683e1e515aa4",
+   "primary_source": false,
+   "cluster_id": "b27edbfd36fc73b3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ef71f047b0bcd2b4",
+   "symbols": [
+    "WOOF"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Moody’s upgrades Petco as operational turnaround fuels voluntary debt reduction",
+   "summary": "Investing.com -- Moody’s Ratings upgraded Petco Health and Wellness Company's (NASDAQ:WOOF) corporate family rating to B2 from B3, citing the pet retailer’s operational turnaround and ongoing balance sheet deleveraging. The rating agency also raised its ratings on Petco’s probabi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/moody-upgrades-petco-operational-turnaround-210345310.html?.tsrc=rss",
+   "published_at": "2026-09-28T21:03:45Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "5a5f3f8aa8e52dea",
+   "primary_source": false,
+   "cluster_id": "ef71f047b0bcd2b4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "28277582a644438b",
+   "symbols": [
+    "WOOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Best Growth Stocks to Buy for September 25th",
+   "summary": "WOOF, FIVE and OSCR made it to the Zacks Rank #1 (Strong Buy) growth stocks list on September 25th, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-growth-stocks-buy-september-074500434.html?.tsrc=rss",
+   "published_at": "2026-09-25T07:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "681413bc3bfa6205",
+   "primary_source": false,
+   "cluster_id": "28277582a644438b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "640e95bea47c0fc6",
+   "symbols": [
+    "WOOF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Best Value Stocks to Buy for September 25th",
+   "summary": "WOOF, THG and ANF made it to the Zacks Rank #1 (Strong Buy) value stocks list on September 25th, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-value-stocks-buy-september-070600045.html?.tsrc=rss",
+   "published_at": "2026-09-25T07:06:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:47Z",
+   "fingerprint": "b01922a394c6d115",
+   "primary_source": false,
+   "cluster_id": "640e95bea47c0fc6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "8df5fdb73e34a5c0",

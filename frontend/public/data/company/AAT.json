@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 2.248829923635404,
    "rvol": 1.377690135358847,
    "ema10": 21.54088101062349,
-   "ema21": 21.475913413622784,
+   "ema21": 21.475913413622788,
    "sma50": 21.673913955688477,
-   "sma200": 20.98992880821228
+   "sma200": 20.989928827285766
   },
   "market_cap": 1696024576.0,
   "market_cap_currency": "USD",
@@ -34,17 +34,17 @@
    "tech": {
     "close": 21.860000610351562,
     "change_pct": -2.060927825995107,
-    "ema20": 21.47307508581313,
-    "ema50": 21.73372873015067,
-    "ema200": 21.28773672566944,
+    "ema20": 21.473075085813136,
+    "ema50": 21.733728730190983,
+    "ema200": 21.28773671066856,
     "sma50": 21.673913955688477,
-    "rsi14": 54.8052210412949,
-    "rsi_min5": 46.77517302553437,
-    "atr14": 0.5117521358655339,
-    "atr_pct": 2.3410435570765693,
+    "rsi14": 54.805221041349725,
+    "rsi_min5": 46.77517302546539,
+    "atr14": 0.5117521358648557,
+    "atr_pct": 2.3410435570734665,
     "rvol": 1.377690135358847,
     "vol30": 441013.3333333333,
-    "dist_ema200_pct": 2.6882326292210657,
+    "dist_ema200_pct": 2.688232701582627,
     "dist_52w_high_pct": 14.528613808525236,
     "high_52w": 25.575811490152198,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 22.459999084472656,
     "day_low": 21.75,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 48.886529690681805,
+    "adx14": 21.349313573028716,
+    "ema10": 21.54088101062349,
+    "sma200": 20.989928827285766,
+    "perf_63d": -7.009144733313699,
+    "adr20_pct": 2.248829923635404,
+    "range10_pct": 9.563515553263958,
+    "high10_prev": 22.34000015258789,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.6666666666666666,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 22.459999084472656,
     "entry_max": 22.90919906616211,
-    "stop": 21.692370880674357,
-    "risk_per_share": 0.7676282037982993,
-    "target_1": 23.995255492069255,
+    "stop": 21.692370880675373,
+    "risk_per_share": 0.7676282037972832,
+    "target_1": 23.995255492067223,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -138,11 +172,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 8.5,
+   "score": 52.1,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 7,
    "independent_24h": 0
   },
   "political": {
@@ -193,9 +229,9 @@
   "adr20": 2.248829923635404,
   "rvol": 1.377690135358847,
   "ema10": 21.54088101062349,
-  "ema21": 21.475913413622784,
+  "ema21": 21.475913413622788,
   "sma50": 21.673913955688477,
-  "sma200": 20.98992880821228,
+  "sma200": 20.989928827285766,
   "volatility_ann": 20.3219133227665,
   "avg_dollar_volume_20d": 8987168.89342308,
   "move_zscore": -1.6098983627277141,
@@ -203,17 +239,17 @@
    "tech": {
     "close": 21.860000610351562,
     "change_pct": -2.060927825995107,
-    "ema20": 21.47307508581313,
-    "ema50": 21.73372873015067,
-    "ema200": 21.28773672566944,
+    "ema20": 21.473075085813136,
+    "ema50": 21.733728730190983,
+    "ema200": 21.28773671066856,
     "sma50": 21.673913955688477,
-    "rsi14": 54.8052210412949,
-    "rsi_min5": 46.77517302553437,
-    "atr14": 0.5117521358655339,
-    "atr_pct": 2.3410435570765693,
+    "rsi14": 54.805221041349725,
+    "rsi_min5": 46.77517302546539,
+    "atr14": 0.5117521358648557,
+    "atr_pct": 2.3410435570734665,
     "rvol": 1.377690135358847,
     "vol30": 441013.3333333333,
-    "dist_ema200_pct": 2.6882326292210657,
+    "dist_ema200_pct": 2.688232701582627,
     "dist_52w_high_pct": 14.528613808525236,
     "high_52w": 25.575811490152198,
     "macd_above_signal": true,
@@ -227,7 +263,17 @@
     "green": false,
     "day_high": 22.459999084472656,
     "day_low": 21.75,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 48.886529690681805,
+    "adx14": 21.349313573028716,
+    "ema10": 21.54088101062349,
+    "sma200": 20.989928827285766,
+    "perf_63d": -7.009144733313699,
+    "adr20_pct": 2.248829923635404,
+    "range10_pct": 9.563515553263958,
+    "high10_prev": 22.34000015258789,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -257,6 +303,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -264,7 +331,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.6666666666666666,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -277,9 +347,9 @@
    "plan": {
     "trigger": 22.459999084472656,
     "entry_max": 22.90919906616211,
-    "stop": 21.692370880674357,
-    "risk_per_share": 0.7676282037982993,
-    "target_1": 23.995255492069255,
+    "stop": 21.692370880675373,
+    "risk_per_share": 0.7676282037972832,
+    "target_1": 23.995255492067223,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -602,11 +672,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 8.5,
+  "score": 52.1,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 80,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 48.3,
@@ -624,25 +694,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 7,
+    "independent": 7,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 10,
+    "independent": 10,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -661,7 +733,434 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "e7bc78da83f522fa",
+   "symbols": [
+    "AAT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "American Assets Trust Q3 Earnings Call Highlights",
+   "summary": "American Assets Trust (NYSE:AAT) reported third-quarter 2026 funds from operations of $0.56 per diluted share, exceeding its internal projections by about $0.05 per share, as leasing activity, hotel performance and one-time items supported results. President and CEO Adam Wyll sai",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-american-assets-trust-q3-earnings-call-highlights-2026-10-28/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-29T01:04:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "3b52ac9c2fb0cd61",
+   "primary_source": false,
+   "cluster_id": "e7bc78da83f522fa",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c7c27ad006b6f6f6",
+   "symbols": [
+    "AAT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "American Assets Trust: Q3 Earnings Snapshot",
+   "summary": "SAN DIEGO (AP) — SAN DIEGO (AP) — American Assets Trust Inc. (AAT) on Tuesday reported a key measure of profitability in its third quarter.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/american-assets-trust-q3-earnings-183340170.html?.tsrc=rss",
+   "published_at": "2026-10-28T18:33:40Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "e1d9c278c9ff3d2d",
+   "primary_source": false,
+   "cluster_id": "c7c27ad006b6f6f6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8e2d1ae54578592d",
+   "symbols": [
+    "AAT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "American Assets Trust (AAT) Q3 2026 Earnings Call Transcript",
+   "summary": "Office occupancy surged 400 basis points as leasing demand held steady in coastal markets.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/28/american-assets-trust-aat-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-28T17:34:40Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "f7cc88077dfa2037",
+   "primary_source": false,
+   "cluster_id": "8e2d1ae54578592d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "180e6d60c2b82225",
+   "symbols": [
+    "AAT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "American Assets Trust, Inc. Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of American Assets Trust, Inc.'s Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-american-assets-trust-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-28T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "257fbf712ad8ca8d",
+   "primary_source": false,
+   "cluster_id": "180e6d60c2b82225",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5535fdfbbb6a3d4d",
+   "symbols": [
+    "AAT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "American Assets Trust (AAT) Reports Q3 Earnings: What Key Metrics Have to Say",
+   "summary": "Although the revenue and EPS for American Assets Trust (AAT) give a sense of how its business performed in the quarter ended September 2026, it might be worth considering how some key metrics compare with Wall Street estimates and the year-ago numbers.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/american-assets-trust-aat-reports-230002147.html?.tsrc=rss",
+   "published_at": "2026-10-27T23:00:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "2f14e3de9750e3cf",
+   "primary_source": false,
+   "cluster_id": "5535fdfbbb6a3d4d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e7db145a85d856c0",
+   "symbols": [
+    "AAT",
+    "KRG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "American Assets Trust (AAT) Q3 FFO and Revenues Beat Estimates",
+   "summary": "American Assets Trust (AAT) delivered FFO and revenue surprises of +12.00% and +3.96%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/american-assets-trust-aat-q3-212004580.html?.tsrc=rss",
+   "published_at": "2026-10-27T21:20:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:23Z",
+   "fingerprint": "b2cd9e91cd94d04f",
+   "primary_source": false,
+   "cluster_id": "e7db145a85d856c0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9f511845fc96a07a",
+   "symbols": [
+    "AAT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "American Assets Trust, Inc. Reports Third Quarter 2026 Financial Results",
+   "summary": "SAN DIEGO, Oct. 27, 2026 (GLOBE NEWSWIRE) -- American Assets Trust, Inc. (NYSE: AAT) (the “company”) today reported financial results for its third quarter ended September 30, 2026. Third Quarter Highlights Net income available to common stockholders of $7.7 million and $18.0 mil",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/american-assets-trust-inc-reports-201500391.html?.tsrc=rss",
+   "published_at": "2026-10-27T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "057ddf7612b8e2e5",
+   "primary_source": false,
+   "cluster_id": "9f511845fc96a07a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "02ab06c6afb8e89a",
+   "symbols": [
+    "AAT",
+    "BXMT",
+    "IVR",
+    "REFI",
+    "RHP",
+    "SPG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "High-Yield REITs vs. 10-Year Treasuries: Which Is the Better Buy?",
+   "summary": "With attractive yields and shifting interest-rate expectations, are high-yield REITs or 10-year Treasuries the better investment for income and long-term appreciation?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/high-yield-reits-vs-10-205900173.html?.tsrc=rss",
+   "published_at": "2026-10-16T20:59:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:57Z",
+   "fingerprint": "ec8f8ba3fbdbc183",
+   "primary_source": false,
+   "cluster_id": "02ab06c6afb8e89a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bd9ea9df46a625d8",
+   "symbols": [
+    "AAT",
+    "BFST",
+    "CIVB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Applied Digital Q1 Earnings Miss on Higher Costs, Revenues Beat",
+   "summary": "APLD's Q1 revenues surge 322% on HPC fit-out and rental growth, but higher costs, interest expense and fair-value losses widen its loss.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/applied-digital-q1-earnings-miss-140100245.html?.tsrc=rss",
+   "published_at": "2026-10-08T14:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:28:26Z",
+   "fingerprint": "ac307f4046e1eaff",
+   "primary_source": false,
+   "cluster_id": "bd9ea9df46a625d8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7a63f5af41618396",
+   "symbols": [
+    "AAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Brookfield Infrastructure Partners (BIP) Stock Outpacing Its Finance Peers This Year?",
+   "summary": "Here is how Brookfield Infrastructure Partners (BIP) and American Assets Trust (AAT) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/brookfield-infrastructure-partners-bip-stock-130002172.html?.tsrc=rss",
+   "published_at": "2026-10-05T13:00:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "47957eca755939e2",
+   "primary_source": false,
+   "cluster_id": "7a63f5af41618396",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "808a54b9d59f86f9",
+   "symbols": [
+    "AAT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "American Assets Trust, Inc. Announces Third Quarter 2026 Earnings Release Date and Conference Call Information",
+   "summary": "SAN DIEGO, Sept. 30, 2026 (GLOBE NEWSWIRE) -- American Assets Trust, Inc. (NYSE:AAT) (the “Company”) will announce its third quarter 2026 earnings in a press release to be issued after the market closes on Tuesday, October 27, 2026. Senior management will hold a conference call f",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/american-assets-trust-inc-announces-201500999.html?.tsrc=rss",
+   "published_at": "2026-09-30T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "088e71b0690e99b5",
+   "primary_source": false,
+   "cluster_id": "808a54b9d59f86f9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e2f5ab7546f4c0d4",
+   "symbols": [
+    "AAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why American Assets Trust (AAT) Is Back In The Spotlight",
+   "summary": "American Assets Trust (AAT) just drew attention after founder and Executive Chairman Ernest S. Rady bought 50,000 shares on September 14 at US$21.65, increasing his beneficial ownership to 24%. American Assets Trust’s stock has been under pressure in the short term, with the shar",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-american-assets-trust-aat-090942355.html?.tsrc=rss",
+   "published_at": "2026-09-26T09:09:42Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "d56a4f26e51e23e6",
+   "primary_source": false,
+   "cluster_id": "e2f5ab7546f4c0d4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d360a762867513ea",
+   "symbols": [
+    "AAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "American Assets Trust Executive Chairman Rady Buys Over $1 Million Shares. Does This Make AAT a Buy?",
+   "summary": "Rady's $1.1 million purchase brings his total beneficial stake to 24% of the REIT, signaling confidence in the premium property portfolio.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/coverage/filings/2026/09/25/american-assets-trust-executive-chairman-rady-buys-over-usd1-million-shares-does-this-make-aat-a-buy/?.tsrc=rss",
+   "published_at": "2026-09-25T21:51:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "f39730df1b0f7d27",
+   "primary_source": false,
+   "cluster_id": "d360a762867513ea",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bd8e0b22c04f26ad",
+   "symbols": [
+    "AAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "American Assets Trust Founder Ernest Rady Buy $3.7 Million Shares in a Resoundingly Bullish Move",
+   "summary": "Executive Chairman's purchase increases his stake to 14.4 million shares, representing 23% of the firm's equity through multiple family trusts and controlled entities.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/coverage/filings/2026/09/03/american-assets-trust-founder-ernest-rady-buy-usd3-7-million-shares-in-a-resoundingly-bullish-move/?.tsrc=rss",
+   "published_at": "2026-09-03T19:49:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "e7f0ac6f1b56f693",
+   "primary_source": false,
+   "cluster_id": "bd8e0b22c04f26ad",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fdc3992c4536b68b",
+   "symbols": [
+    "AAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "American Assets Trust Executive Chairman Rady Buys 100,000 Shares. Is This a Bullish Signal?",
+   "summary": "Rady's $2.3 million purchase brings his total beneficial ownership to $318.99 million, signaling confidence in the REIT's premium property portfolio.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/coverage/filings/2026/08/29/american-assets-trust-executive-chairman-rady-buys-100-000-shares-is-this-a-bullish-signal/?.tsrc=rss",
+   "published_at": "2026-08-29T18:39:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "98da8a522f021f66",
+   "primary_source": false,
+   "cluster_id": "fdc3992c4536b68b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8cb1843e7afeac06",
+   "symbols": [
+    "AAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "American Assets Trust Executive Chairman Rady Buys $1.8 Million Shares. What Is This Telling Investors?",
+   "summary": "Rady's open-market purchase increases his indirect exposure to AAT's real estate portfolio spanning office, retail, and residential properties in high-barrier markets.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/coverage/filings/2026/08/28/american-assets-trust-executive-chairman-rady-buys-usd1-8-million-shares-what-is-this-telling-investors/?.tsrc=rss",
+   "published_at": "2026-08-28T17:45:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "be106381411e2e82",
+   "primary_source": false,
+   "cluster_id": "8cb1843e7afeac06",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2b495c1d6ba473df",
+   "symbols": [
+    "AAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "American Assets Trust Executive Chairman Rady Buys $1. Million Shares. Is This a Sign for Investors to Buy?",
+   "summary": "Rady's $1.1 million purchase at $22.75 per share comes as the REIT trades near its 52-week high, following a 15% annual gain. His 23% ownership stake signals confidence in the San Diego-based real estate firm.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/coverage/filings/2026/08/22/american-assets-trust-executive-chairman-rady-buys-usd1-million-shares-is-this-a-sign-for-investors-to-buy/?.tsrc=rss",
+   "published_at": "2026-08-22T20:48:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "3a89a524940874c4",
+   "primary_source": false,
+   "cluster_id": "2b495c1d6ba473df",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9bec1dc8a26d20e1",
+   "symbols": [
+    "AAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are Finance Stocks Lagging  Brookfield Infrastructure Partners (BIP) This Year?",
+   "summary": "Here is how Brookfield Infrastructure Partners (BIP) and American Assets Trust (AAT) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/finance-stocks-lagging-brookfield-infrastructure-134004195.html?.tsrc=rss",
+   "published_at": "2026-08-10T13:40:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "9c96f3f807f63192",
+   "primary_source": false,
+   "cluster_id": "9bec1dc8a26d20e1",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8ddf6239fe6ed8a4",
+   "symbols": [
+    "AAT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Down 10.2% in 4 Weeks, Here's Why You Should You Buy the Dip in American Assets Trust (AAT)",
+   "summary": "American Assets Trust (AAT) is technically in oversold territory now, so the heavy selling pressure might have exhausted. This along with strong agreement among Wall Street analysts in raising earnings estimates could lead to a trend reversal for the stock.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/down-10-2-4-weeks-133502983.html?.tsrc=rss",
+   "published_at": "2026-08-07T13:35:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:22Z",
+   "fingerprint": "13826d64f71a38d2",
+   "primary_source": false,
+   "cluster_id": "8ddf6239fe6ed8a4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 140.1999969482422,
     "day_low": 134.5,
-    "history_ok": false
+    "history_ok": false,
+    "rsi2": 3.4356387751160895,
+    "adx14": 18.58283572855247,
+    "ema10": 145.80756612128744,
+    "sma200": null,
+    "perf_63d": 17.628571253469637,
+    "adr20_pct": 4.29984181063635,
+    "range10_pct": 17.83308098572882,
+    "high10_prev": 166.17999267578125,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -157,10 +191,10 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 58,
+   "mentions_7d": 64,
    "manipulation_risk": "auffaellig",
-   "mentions_24h": 44,
-   "sentiment_7d": 0.15,
+   "mentions_24h": 50,
+   "sentiment_7d": 0.13,
    "bullish_7d": 15,
    "bearish_7d": 7
   },
@@ -240,7 +274,17 @@
     "green": false,
     "day_high": 140.1999969482422,
     "day_low": 134.5,
-    "history_ok": false
+    "history_ok": false,
+    "rsi2": 3.4356387751160895,
+    "adx14": 18.58283572855247,
+    "ema10": 145.80756612128744,
+    "sma200": null,
+    "perf_63d": 17.628571253469637,
+    "adr20_pct": 4.29984181063635,
+    "range10_pct": 17.83308098572882,
+    "high10_prev": 166.17999267578125,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -270,6 +314,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -277,7 +342,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -681,6 +749,11 @@
   {
    "id": "215fddafaba72d91",
    "symbols": [
+    "AAPL",
+    "AMD",
+    "AMGN",
+    "AMZN",
+    "ANET",
     "GOOG",
     "GOOGL",
     "INTC",
@@ -712,6 +785,7 @@
   {
    "id": "edf756fb6efc4ace",
    "symbols": [
+    "AMZN",
     "SPCX"
    ],
    "category": "market",
@@ -1231,22 +1305,23 @@
   }
  ],
  "social_detail": {
-  "mentions_24h": 44,
-  "mentions_7d": 58,
-  "mentions_30d": 60,
-  "change_vs_baseline_pct": 2100,
-  "engagement_7d": 205.0,
-  "sentiment_7d": 0.15,
+  "mentions_24h": 50,
+  "mentions_7d": 64,
+  "mentions_30d": 66,
+  "change_vs_baseline_pct": 2400,
+  "engagement_7d": 213.0,
+  "sentiment_7d": 0.13,
   "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
   "bullish_7d": 15,
   "bearish_7d": 7,
   "by_platform_7d": {
-   "stocktwits": 56,
-   "reddit": 2
+   "stocktwits": 61,
+   "reddit": 3
   },
   "communities_7d": {
-   "StockTwits": 56,
+   "StockTwits": 61,
    "r/ValueInvesting": 1,
+   "r/Daytrading": 1,
    "r/StockMarket": 1
   },
   "platforms": [
@@ -1271,6 +1346,16 @@
    {
     "platform": "stocktwits",
     "community": "StockTwits",
+    "author": "EconomyEngine",
+    "posted_at": "2026-11-01T03:13:31Z",
+    "url": "https://stocktwits.com/EconomyEngine/message/667860789",
+    "text": "$QQQ $SPY $TSLA $SPCX \nDemocrats are furious about the DOGE efforts to expose the fraud at USAID.",
+    "engagement": 11.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
     "author": "TehDeeBjorn",
     "posted_at": "2026-11-01T01:02:54Z",
     "url": "https://stocktwits.com/TehDeeBjorn/message/667859212",
@@ -1282,10 +1367,10 @@
     "platform": "stocktwits",
     "community": "StockTwits",
     "author": "EconomyEngine",
-    "posted_at": "2026-11-01T03:13:31Z",
-    "url": "https://stocktwits.com/EconomyEngine/message/667860789",
-    "text": "$QQQ $SPY $TSLA $SPCX \nDemocrats are furious about the DOGE efforts to expose the fraud at USAID.",
-    "engagement": 10.0,
+    "posted_at": "2026-11-01T02:52:40Z",
+    "url": "https://stocktwits.com/EconomyEngine/message/667860585",
+    "text": "$QQQ $SPY $TSLA $SPCX \nMeanwhile, the Associated Press...",
+    "engagement": 9.0,
     "sentiment_label": null
    },
    {
@@ -1297,16 +1382,6 @@
     "text": "$SPCX Elon just hinted at a partnership with $LLY for drug development",
     "engagement": 9.0,
     "sentiment_label": "Bullish"
-   },
-   {
-    "platform": "stocktwits",
-    "community": "StockTwits",
-    "author": "trumpdisasterprez",
-    "posted_at": "2026-10-30T16:55:10Z",
-    "url": "https://stocktwits.com/trumpdisasterprez/message/667788430",
-    "text": "$TMUS $VZ $T $SPCX",
-    "engagement": 9.0,
-    "sentiment_label": null
    }
   ]
  },

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 208.3000030517578,
     "day_low": 193.44000244140625,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 77.40602651454871,
+    "adx14": 31.103403793760904,
+    "ema10": 185.10769229953522,
+    "sma200": 203.91714988708497,
+    "perf_63d": -13.13330801468945,
+    "adr20_pct": 4.190611264150926,
+    "range10_pct": 22.42298012637869,
+    "high10_prev": 199.8800048828125,
+    "pullback_ema20": false,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [
@@ -97,7 +128,10 @@
     "S01": 0.0,
     "S02": 0.3,
     "S03": 0.6666666666666666,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -140,11 +174,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 1.2,
+   "score": 44.8,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 9,
    "independent_24h": 0
   },
   "political": {
@@ -229,7 +265,17 @@
     "green": false,
     "day_high": 208.3000030517578,
     "day_low": 193.44000244140625,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 77.40602651454871,
+    "adx14": 31.103403793760904,
+    "ema10": 185.10769229953522,
+    "sma200": 203.91714988708497,
+    "perf_63d": -13.13330801468945,
+    "adr20_pct": 4.190611264150926,
+    "range10_pct": 22.42298012637869,
+    "high10_prev": 199.8800048828125,
+    "pullback_ema20": false,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -259,6 +305,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [
@@ -268,7 +335,10 @@
     "S01": 0.0,
     "S02": 0.3,
     "S03": 0.6666666666666666,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -606,11 +676,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 1.2,
+  "score": 44.8,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 80,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 7.0,
@@ -628,25 +698,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 9,
+    "independent": 9,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 16,
+    "independent": 16,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -665,7 +737,383 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "bfc0c8cf77708eb0",
+   "symbols": [
+    "ABG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Asbury Automotive Group Named in Best Companies to Work For List by U.S. News & World Report",
+   "summary": "ATLANTA, October 29, 2026--Asbury Automotive Group, Inc. (NYSE: ABG), one of the largest automotive retail and service companies in the U.S., announced that it has been named by U.S. News & World Report as one of the 2026-2027 Best Companies to Work For in two categories – Best C",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/asbury-automotive-group-named-best-120000061.html?.tsrc=rss",
+   "published_at": "2026-10-29T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:24Z",
+   "fingerprint": "6122144e6fd1d850",
+   "primary_source": false,
+   "cluster_id": "bfc0c8cf77708eb0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "722341c8a09b37a0",
+   "symbols": [
+    "ABG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Asbury Automotive Group (ABG) Stock Jumps As Q3 Earnings Mask Leverage Risk",
+   "summary": "Asbury Automotive Group just ripped higher, with the stock jumping 12.7% in regular trading to close near US$195 after its Q3 2026 release. That is a sharp move for an auto retailer that had drifted over the past quarter. The headlines look muscular. Revenue printed at US$4.4b an",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/asbury-automotive-group-abg-stock-121158644.html?.tsrc=rss",
+   "published_at": "2026-10-28T12:11:58Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:24Z",
+   "fingerprint": "7435a8333c1e462d",
+   "primary_source": false,
+   "cluster_id": "722341c8a09b37a0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8de4ff100650fe64",
+   "symbols": [
+    "ABG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Asbury Automotive Group (ABG) Stock May Look Cheap After Target Price Increase",
+   "summary": "Asbury Automotive Group has seen its share price fall over the past year, even after a sharp rebound in the past week. This puts fresh attention on whether the current level really lines up with what its earnings can support. With the stock closing at US$194.99, the question for ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/asbury-automotive-group-abg-stock-091144709.html?.tsrc=rss",
+   "published_at": "2026-10-28T09:11:44Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:24Z",
+   "fingerprint": "069848e50e65c645",
+   "primary_source": false,
+   "cluster_id": "8de4ff100650fe64",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "20ab68eb91793063",
+   "symbols": [
+    "ABG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Asbury Automotive (ABG) Q3 2026 Earnings Call Transcript",
+   "summary": "EV sales plunged 76% as revenue declined 8%, but management eyes SG&amp;A efficiency gains ahead.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/asbury-automotive-abg-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-27T18:14:23Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:24Z",
+   "fingerprint": "ef94dce05568a638",
+   "primary_source": false,
+   "cluster_id": "20ab68eb91793063",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7ce2874d46372e8c",
+   "symbols": [
+    "ABG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What Asbury Automotive Group (ABG) Said on Its Q3 Earnings Call",
+   "summary": "Asbury Automotive Group (NYSE:ABG) reported third-quarter 2026 adjusted earnings per share of $6.16, adjusted net income of $111 million and adjusted EBITDA of $218 million, as the auto retailer completed the rollout of its Tekion dealership-management platform across its active ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-asbury-automotive-group-abg-said-on-its-q3-earnings-call-2026-10-27/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-27T17:05:24Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:24Z",
+   "fingerprint": "15753eb5bd865478",
+   "primary_source": false,
+   "cluster_id": "7ce2874d46372e8c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ad180f3e121e86b8",
+   "symbols": [
+    "ABG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Asbury Automotive Group, Inc. Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Asbury Automotive Group, Inc.'s Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-asbury-automotive-group-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-27T16:55:21Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:24Z",
+   "fingerprint": "f7bdf430f09c62b1",
+   "primary_source": false,
+   "cluster_id": "ad180f3e121e86b8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "72e5ec93a1caad39",
+   "symbols": [
+    "ABG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compared to Estimates, Asbury Automotive (ABG) Q3 Earnings: A Look at Key Metrics",
+   "summary": "The headline numbers for Asbury Automotive (ABG) give insight into how the company performed in the quarter ended September 2026, but it may be worthwhile to compare some of its key metrics to Wall Street estimates and the year-ago actuals.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/compared-estimates-asbury-automotive-abg-130003352.html?.tsrc=rss",
+   "published_at": "2026-10-27T13:00:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:24Z",
+   "fingerprint": "0c032c96ff9110a9",
+   "primary_source": false,
+   "cluster_id": "72e5ec93a1caad39",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0ca3cea65406115a",
+   "symbols": [
+    "ABG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Asbury Automotive Group (ABG) Misses Q3 Earnings and Revenue Estimates",
+   "summary": "Asbury Automotive (ABG) delivered earnings and revenue surprises of -4.64% and -0.41%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/asbury-automotive-group-abg-misses-111502109.html?.tsrc=rss",
+   "published_at": "2026-10-27T11:15:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:24Z",
+   "fingerprint": "a87c8ec4a16d02a5",
+   "primary_source": false,
+   "cluster_id": "0ca3cea65406115a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f67c040e9fe8557b",
+   "symbols": [
+    "ABG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Asbury Automotive: Q3 Earnings Snapshot",
+   "summary": "ATLANTA (AP) — ATLANTA (AP) — Asbury Automotive Group Inc. (ABG) on Tuesday reported third-quarter profit of $105.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/asbury-automotive-q3-earnings-snapshot-111128024.html?.tsrc=rss",
+   "published_at": "2026-10-27T11:11:28Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:24Z",
+   "fingerprint": "27b06a7ae420733c",
+   "primary_source": false,
+   "cluster_id": "f67c040e9fe8557b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dee816fd5cd1a330",
+   "symbols": [
+    "ABG",
+    "GPI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Earnings Preview: Group 1 Automotive (GPI) Q3 Earnings Expected to Decline",
+   "summary": "Group 1 Automotive (GPI) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/earnings-preview-group-1-automotive-130012115.html?.tsrc=rss",
+   "published_at": "2026-10-21T13:00:12Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:44Z",
+   "fingerprint": "b50dee18b28415c5",
+   "primary_source": false,
+   "cluster_id": "dee816fd5cd1a330",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "902b01e904fb3980",
+   "symbols": [
+    "ABG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "The Presidio Group Exclusively Advised Asbury Automotive Group on the Sale of Kia of Owings Mills to Stivers Automotive Group",
+   "summary": "OWINGS MILLS, Md., October 21, 2026--The Presidio Group LLC (\"Presidio\"), an independent merchant banking firm focused on mergers and acquisitions, capital raising and investments in the automotive retail and consumer mobility sectors, exclusively advised Asbury Automotive Group ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/presidio-group-exclusively-advised-asbury-123400373.html?.tsrc=rss",
+   "published_at": "2026-10-21T12:34:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:24Z",
+   "fingerprint": "86fcf9e25afda421",
+   "primary_source": false,
+   "cluster_id": "902b01e904fb3980",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9967241a4ba05f0a",
+   "symbols": [
+    "ABG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Analysts Estimate Asbury Automotive Group (ABG) to Report a Decline in Earnings: What to Look Out for",
+   "summary": "Asbury Automotive (ABG) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/analysts-estimate-asbury-automotive-group-130009558.html?.tsrc=rss",
+   "published_at": "2026-10-20T13:00:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:24Z",
+   "fingerprint": "000130a4d33ddc9e",
+   "primary_source": false,
+   "cluster_id": "9967241a4ba05f0a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0402975481b02a3f",
+   "symbols": [
+    "ABG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Dave Cantin Group Names Former Asbury Automotive Executive Sid Barron Senior Vice President of Strategic Initiatives",
+   "summary": "Industry veteran and former Hank Aaron business partner brings 40 years of industry experience in manufacturer relations, dealer group corporate development, dealership ownership and operations Dave Cantin Group names Sid Barron SVP of Strategic Initiatives Dave Cantin Group name",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/dave-cantin-group-names-former-120000423.html?.tsrc=rss",
+   "published_at": "2026-10-20T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:24Z",
+   "fingerprint": "6f6d92945e74dc12",
+   "primary_source": false,
+   "cluster_id": "0402975481b02a3f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e3bfca0f66324603",
+   "symbols": [
+    "ABG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Asbury Automotive (ABG) Using Mega-Dealership Investments To Redefine Its Competitive Edge?",
+   "summary": "Asbury Automotive Group recently marked the grand opening of its redeveloped Herb Chambers Toyota dealership in Medford, converting a former five-acre office campus into a more than 200,000-square-foot facility with expanded showroom, parking for over 570 vehicles, and 37 service",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/asbury-automotive-abg-using-mega-200955616.html?.tsrc=rss",
+   "published_at": "2026-10-09T20:09:55Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:24Z",
+   "fingerprint": "a67b81eb7c26dbd2",
+   "primary_source": false,
+   "cluster_id": "e3bfca0f66324603",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3c3200209214cac8",
+   "symbols": [
+    "ABG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Asbury Automotive Group Schedules Release of Third Quarter 2026 Financial Results",
+   "summary": "ATLANTA, October 06, 2026--Asbury Automotive Group Schedules Release of Third Quarter 2026 Financial Results",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/asbury-automotive-group-schedules-release-110000514.html?.tsrc=rss",
+   "published_at": "2026-10-06T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:24Z",
+   "fingerprint": "2dd4b2fe8ef39956",
+   "primary_source": false,
+   "cluster_id": "3c3200209214cac8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ecb0c85c7a29d140",
+   "symbols": [
+    "ABG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Large Cap Bank Stocks Worth Watching As Rate Bets Shift",
+   "summary": "Central banks are pulling multiple levers at once, inflation refuses to fade neatly, and every new data release has traders on edge. As a result, pricing for some large-cap financial stocks is shifting faster than many portfolios. That shake-up can reward investors who spot where",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-large-cap-bank-stocks-120844525.html?.tsrc=rss",
+   "published_at": "2026-10-05T12:08:44Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:24Z",
+   "fingerprint": "88e2adb85b0d915f",
+   "primary_source": false,
+   "cluster_id": "ecb0c85c7a29d140",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e937985a9f2264ba",
+   "symbols": [
+    "ABG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Mudd Advertising Announces 2026 Mudd Summit Featuring Keynote Speaker David W. Hult, Executive Chairman of Asbury Automotive Group",
+   "summary": "Mudd Advertising is set to host the 2026 Mudd Summit, a premier annual gathering for automotive leaders, innovators, and dealership professionals nationwide. This year's event spotlights keynote speaker David W. Hult, Executive Chairman of Asbury Automotive Group, a Fortune 500 c",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/mudd-advertising-announces-2026-mudd-140600486.html?.tsrc=rss",
+   "published_at": "2026-10-01T14:06:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:24Z",
+   "fingerprint": "d43220ff05fd7fca",
+   "primary_source": false,
+   "cluster_id": "e937985a9f2264ba",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

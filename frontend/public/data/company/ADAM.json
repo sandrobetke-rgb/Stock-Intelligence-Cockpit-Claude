@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 3.5033597757173935,
    "rvol": 1.6197322551082907,
    "ema10": 7.427835201831354,
-   "ema21": 7.647623683954442,
+   "ema21": 7.647623683954422,
    "sma50": 8.327705001831054,
-   "sma200": 8.105452725887298
+   "sma200": 8.10545271873474
   },
   "market_cap": 590593024.0,
   "market_cap_currency": "USD",
@@ -34,17 +34,17 @@
    "tech": {
     "close": 6.539999961853027,
     "change_pct": -8.913647378647427,
-    "ema20": 7.628429789357192,
-    "ema50": 8.082041897307846,
-    "ema200": 7.972857548752975,
+    "ema20": 7.62842978935718,
+    "ema50": 8.082041897248256,
+    "ema200": 7.9728575471919605,
     "sma50": 8.327705001831054,
-    "rsi14": 24.51732747558856,
-    "rsi_min5": 24.51732747558856,
-    "atr14": 0.30437981226068295,
-    "atr_pct": 4.654125596882125,
+    "rsi14": 24.517327475247612,
+    "rsi_min5": 24.517327475247612,
+    "atr14": 0.304379812259741,
+    "atr_pct": 4.654125596867722,
     "rvol": 1.6197322551082907,
     "vol30": 1222273.3333333333,
-    "dist_ema200_pct": -17.97169431584864,
+    "dist_ema200_pct": -17.971694299788233,
     "dist_52w_high_pct": 34.6755769619477,
     "high_52w": 10.011569421812412,
     "macd_above_signal": false,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 7.179999828338623,
     "day_low": 6.539999961853027,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 1.5656291615685092,
+    "adx14": 32.26780111030551,
+    "ema10": 7.427835201831354,
+    "sma200": 8.10545271873474,
+    "perf_63d": -28.309211944493875,
+    "adr20_pct": 3.5033597757173935,
+    "range10_pct": 14.142853873116623,
+    "high10_prev": 7.989999771118164,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 7.179999828338623,
     "entry_max": 7.323599824905395,
-    "stop": 6.723430109947598,
-    "risk_per_share": 0.4565697183910249,
-    "target_1": 8.093139265120673,
+    "stop": 6.723430109949011,
+    "risk_per_share": 0.4565697183896118,
+    "target_1": 8.093139265117847,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -138,11 +172,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 17.6,
+   "score": 50.0,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 3,
    "independent_24h": 0
   },
   "political": {
@@ -193,9 +229,9 @@
   "adr20": 3.5033597757173935,
   "rvol": 1.6197322551082907,
   "ema10": 7.427835201831354,
-  "ema21": 7.647623683954442,
+  "ema21": 7.647623683954422,
   "sma50": 8.327705001831054,
-  "sma200": 8.105452725887298,
+  "sma200": 8.10545271873474,
   "volatility_ann": 35.291336355529175,
   "avg_dollar_volume_20d": 8203217.576434612,
   "move_zscore": -4.009475980310227,
@@ -203,17 +239,17 @@
    "tech": {
     "close": 6.539999961853027,
     "change_pct": -8.913647378647427,
-    "ema20": 7.628429789357192,
-    "ema50": 8.082041897307846,
-    "ema200": 7.972857548752975,
+    "ema20": 7.62842978935718,
+    "ema50": 8.082041897248256,
+    "ema200": 7.9728575471919605,
     "sma50": 8.327705001831054,
-    "rsi14": 24.51732747558856,
-    "rsi_min5": 24.51732747558856,
-    "atr14": 0.30437981226068295,
-    "atr_pct": 4.654125596882125,
+    "rsi14": 24.517327475247612,
+    "rsi_min5": 24.517327475247612,
+    "atr14": 0.304379812259741,
+    "atr_pct": 4.654125596867722,
     "rvol": 1.6197322551082907,
     "vol30": 1222273.3333333333,
-    "dist_ema200_pct": -17.97169431584864,
+    "dist_ema200_pct": -17.971694299788233,
     "dist_52w_high_pct": 34.6755769619477,
     "high_52w": 10.011569421812412,
     "macd_above_signal": false,
@@ -227,7 +263,17 @@
     "green": false,
     "day_high": 7.179999828338623,
     "day_low": 6.539999961853027,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 1.5656291615685092,
+    "adx14": 32.26780111030551,
+    "ema10": 7.427835201831354,
+    "sma200": 8.10545271873474,
+    "perf_63d": -28.309211944493875,
+    "adr20_pct": 3.5033597757173935,
+    "range10_pct": 14.142853873116623,
+    "high10_prev": 7.989999771118164,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -257,6 +303,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -264,7 +331,10 @@
     "S01": 0.5,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -277,9 +347,9 @@
    "plan": {
     "trigger": 7.179999828338623,
     "entry_max": 7.323599824905395,
-    "stop": 6.723430109947598,
-    "risk_per_share": 0.4565697183910249,
-    "target_1": 8.093139265120673,
+    "stop": 6.723430109949011,
+    "risk_per_share": 0.4565697183896118,
+    "target_1": 8.093139265117847,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -602,11 +672,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 17.6,
+  "score": 50.0,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 86.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 100.0,
@@ -624,26 +694,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -661,7 +733,392 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "ea92e660a2e5f773",
+   "symbols": [
+    "ADAM",
+    "GNL",
+    "IVR",
+    "ORC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Office Properties Income Trust Lost Its Dividend. These 5 Stocks Show Warning Signs",
+   "summary": "Office Properties Income Trust shareholders watched a double-digit yield turn into a bankruptcy, and five dividend payers right now share the same warning signs that preceded that collapse.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/29/office-properties-income-trust-lost-its-dividend-these-5-stocks-show-warning-signs/?.tsrc=rss",
+   "published_at": "2026-10-29T14:17:59Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:38Z",
+   "fingerprint": "447438a31fea3d9b",
+   "primary_source": false,
+   "cluster_id": "ea92e660a2e5f773",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "eecd6266a49c4980",
+   "symbols": [
+    "ADAM",
+    "MITT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adamas Trust (ADAM) Q3 Earnings Match Estimates",
+   "summary": "Adamas Trust (ADAM) delivered earnings and revenue surprises of 0.00% and -3.18%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/adamas-trust-adam-q3-earnings-223002604.html?.tsrc=rss",
+   "published_at": "2026-10-28T22:30:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:49Z",
+   "fingerprint": "029f6d6d23e6c0ce",
+   "primary_source": false,
+   "cluster_id": "eecd6266a49c4980",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a33b8fa81d36c01a",
+   "symbols": [
+    "ADAM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adamas Trust: Q3 Earnings Snapshot",
+   "summary": "NEW YORK (AP) — NEW YORK (AP) — Adamas Trust, Inc. (ADAM) on Wednesday reported a third-quarter loss of $159.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adamas-trust-q3-earnings-snapshot-204931546.html?.tsrc=rss",
+   "published_at": "2026-10-28T20:49:31Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "71fe8d103b2cd48f",
+   "primary_source": false,
+   "cluster_id": "a33b8fa81d36c01a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c3d5cf169295703d",
+   "symbols": [
+    "ADAM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adamas Trust 2026 Third Quarter Conference Call Scheduled for Thursday, October 29, 2026",
+   "summary": "NEW YORK, Oct. 19, 2026 (GLOBE NEWSWIRE) -- Adamas Trust, Inc. (Nasdaq: ADAM) (the “Company”) is scheduled to report financial results for the three and nine months ended September 30, 2026 after the close of market on October 28, 2026. Adamas Trust’s executive management will ho",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/adamas-trust-2026-third-quarter-200500072.html?.tsrc=rss",
+   "published_at": "2026-10-19T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "49f9caa4adcebc74",
+   "primary_source": false,
+   "cluster_id": "c3d5cf169295703d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "62e0cf8cbfe14599",
+   "symbols": [
+    "ACR",
+    "ADAM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ACRES Commercial (ACR) Moves 9.5% Higher: Will This Strength Last?",
+   "summary": "ACRES Commercial (ACR) was a big mover last session on higher-than-average trading volume. The latest trend in earnings estimate revisions might not help the stock continue moving higher in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acres-commercial-acr-moves-9-122100164.html?.tsrc=rss",
+   "published_at": "2026-10-01T12:21:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:36Z",
+   "fingerprint": "f050c5653694821a",
+   "primary_source": false,
+   "cluster_id": "62e0cf8cbfe14599",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6ea30cf9b6813321",
+   "symbols": [
+    "ADAM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adamas Trust Inc's Dividend Analysis",
+   "summary": "This article first appeared on GuruFocus.  Adamas Trust Inc (NASDAQ:ADAM) recently announced a total dividend of $0.30 per share, with the ex-dividend date set for Sept. 22, 2026.  The distribution consists entirely of a $0.30 per share cash dividend, payable on Oct. 28, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adamas-trust-incs-dividend-analysis-110448489.html?.tsrc=rss",
+   "published_at": "2026-09-22T11:04:48Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "83952c6b7a0097ca",
+   "primary_source": false,
+   "cluster_id": "6ea30cf9b6813321",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "83db875b83e5bed5",
+   "symbols": [
+    "ADAM",
+    "ILPT",
+    "KREF",
+    "MITT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "5 Cheap REITs With Dividends Above 3% to Buy on the Dip",
+   "summary": "These five cheap real estate stocks offer dividend yields above 3% and could become attractive buy-the-dip opportunities if higher interest rates spark another REIT selloff.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/5-cheap-reits-dividends-above-225600081.html?.tsrc=rss",
+   "published_at": "2026-09-17T22:56:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:01Z",
+   "fingerprint": "795becc680cd26d3",
+   "primary_source": false,
+   "cluster_id": "83db875b83e5bed5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "68c6e365d39ba915",
+   "symbols": [
+    "ADAM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adamas Trust Declares Third Quarter 2026 Preferred Stock Dividends",
+   "summary": "NEW YORK, Sept. 10, 2026 (GLOBE NEWSWIRE) -- Adamas Trust, Inc. (Nasdaq: ADAM) (the “Company” or “Adamas”) announced today that its Board of Directors (the “Board”) declared cash dividends on the Company’s 8.000% Series D Fixed-to-Floating Rate Cumulative Redeemable Preferred Sto",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/adamas-trust-declares-third-quarter-200500165.html?.tsrc=rss",
+   "published_at": "2026-09-10T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "313c472c2635a0be",
+   "primary_source": false,
+   "cluster_id": "68c6e365d39ba915",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e7fc33ebc73b488f",
+   "symbols": [
+    "ADAM",
+    "EFC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zacks Industry Outlook Highlights Ellington Financial and Adamas Trust",
+   "summary": "Ellington Financial and Adamas Trust stand out as mREITs navigating mortgage rate volatility through portfolio growth, liquidity and risk management.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/zacks-industry-outlook-highlights-ellington-074100137.html?.tsrc=rss",
+   "published_at": "2026-09-10T07:41:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:16Z",
+   "fingerprint": "e75bf47a1d666f3a",
+   "primary_source": false,
+   "cluster_id": "e7fc33ebc73b488f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ad010ee878b1a5a6",
+   "symbols": [
+    "ADAM",
+    "EFC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "2 mREIT Stocks to Invest in Despite Challenging Industry Trends",
+   "summary": "While the volatile mortgage market is likely to hurt the Zacks REIT and Equity Trust industry, companies like EFC and ADAM are poised to navigate the challenges.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/2-mreit-stocks-invest-despite-134700904.html?.tsrc=rss",
+   "published_at": "2026-09-09T13:47:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:16Z",
+   "fingerprint": "31d33202d3588090",
+   "primary_source": false,
+   "cluster_id": "ad010ee878b1a5a6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c90779d8ba55f3d6",
+   "symbols": [
+    "ADAM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Implied Volatility Surging for Adamas Trust Stock Options",
+   "summary": "Investors need to pay close attention to ADAM stock based on the movements in the options market lately.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/options/articles/implied-volatility-surging-adamas-trust-152500800.html?.tsrc=rss",
+   "published_at": "2026-09-08T15:25:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "f08b79add11fbc02",
+   "primary_source": false,
+   "cluster_id": "c90779d8ba55f3d6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8dd2fb832d04a655",
+   "symbols": [
+    "ADAM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are Finance Stocks Lagging  Interactive Brokers (IBKR) This Year?",
+   "summary": "Here is how Interactive Brokers Group, Inc. (IBKR) and Adamas Trust (ADAM) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/finance-stocks-lagging-interactive-brokers-134002343.html?.tsrc=rss",
+   "published_at": "2026-09-02T13:40:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "06530e8086806e4d",
+   "primary_source": false,
+   "cluster_id": "8dd2fb832d04a655",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c947323bd83c0f03",
+   "symbols": [
+    "ADAM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are Finance Stocks Lagging  Adamas Trust, Inc. (ADAM) This Year?",
+   "summary": "Here is how Adamas Trust (ADAM) and Interactive Brokers Group, Inc. (IBKR) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/finance-stocks-lagging-adamas-trust-134003691.html?.tsrc=rss",
+   "published_at": "2026-08-17T13:40:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "592462cc704d7525",
+   "primary_source": false,
+   "cluster_id": "c947323bd83c0f03",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8ed1a19f0ac56eff",
+   "symbols": [
+    "ADAM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adamas Trust, Inc. Announces Pricing of Public Offering of Senior Notes",
+   "summary": "NEW YORK, Aug. 12, 2026 (GLOBE NEWSWIRE) -- Adamas Trust, Inc. (Nasdaq: ADAM) (the “Company”) announced today the pricing of an underwritten public offering of $90 million aggregate principal amount of its 9.600% senior notes due 2031 (the “Notes”). The Company has granted the un",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adamas-trust-inc-announces-pricing-124000465.html?.tsrc=rss",
+   "published_at": "2026-08-12T12:40:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "ecb3d7df3c107310",
+   "primary_source": false,
+   "cluster_id": "8ed1a19f0ac56eff",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7deff5e67f9d060c",
+   "symbols": [
+    "ADAM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adamas Trust Increases Quarterly Common Stock Dividend by 11.1% to $0.30 Per Share",
+   "summary": "NEW YORK, Aug. 11, 2026 (GLOBE NEWSWIRE) -- Adamas Trust, Inc. (Nasdaq: ADAM) (the “Company” or “Adamas”) announced today that its Board of Directors declared a regular quarterly cash dividend of $0.30 per share on shares of its common stock for the quarter ending September 30, 2",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/adamas-trust-increases-quarterly-common-120000347.html?.tsrc=rss",
+   "published_at": "2026-08-11T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "858f2180a81c9d29",
+   "primary_source": false,
+   "cluster_id": "7deff5e67f9d060c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3e8e38662f2dea48",
+   "symbols": [
+    "ADAM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is the Options Market Predicting a Spike in Adamas Trust Stock?",
+   "summary": "Investors need to pay close attention to ADAM stock based on the movements in the options market lately.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/options/articles/options-market-predicting-spike-adamas-152000367.html?.tsrc=rss",
+   "published_at": "2026-08-04T15:20:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "0513d58a2a89c980",
+   "primary_source": false,
+   "cluster_id": "3e8e38662f2dea48",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "326a07235e30ca92",
+   "symbols": [
+    "ADAM"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Adamas Trust (ADAM) Upgraded to Strong Buy: What Does It Mean for the Stock?",
+   "summary": "Adamas Trust (ADAM) has been upgraded to a Zacks Rank #1 (Strong Buy), reflecting growing optimism about the company's earnings prospects. This might drive the stock higher in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adamas-trust-adam-upgraded-strong-160002107.html?.tsrc=rss",
+   "published_at": "2026-07-31T16:00:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:39Z",
+   "fingerprint": "5fe46d20d258bf4d",
+   "primary_source": false,
+   "cluster_id": "326a07235e30ca92",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 0.9100000262260437,
     "day_low": 0.8420000076293945,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 7.776004540293556,
+    "adx14": 40.42515255863938,
+    "ema10": 0.9625505153385902,
+    "sma200": 1.9361449962854385,
+    "perf_63d": -31.25983945981483,
+    "adr20_pct": 8.123179064278732,
+    "range10_pct": 30.536134066271337,
+    "high10_prev": 1.1200000047683716,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -139,12 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 7.3,
+   "score": 39.9,
    "drivers": [
-    "price_volume_anomaly",
-    "social_attention"
+    "news_flow",
+    "source_diversity",
+    "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 4,
    "independent_24h": 0
   },
   "political": {
@@ -244,7 +279,17 @@
     "green": false,
     "day_high": 0.9100000262260437,
     "day_low": 0.8420000076293945,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 7.776004540293556,
+    "adx14": 40.42515255863938,
+    "ema10": 0.9625505153385902,
+    "sma200": 1.9361449962854385,
+    "perf_63d": -31.25983945981483,
+    "adr20_pct": 8.123179064278732,
+    "range10_pct": 30.536134066271337,
+    "high10_prev": 1.1200000047683716,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -274,6 +319,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -281,7 +347,10 @@
     "S01": 0.5,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -620,11 +689,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 7.3,
+  "score": 39.9,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 99.8,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 29.5,
@@ -642,27 +711,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 20,
+    "independent": 18,
+    "duplicates": 2,
+    "sources": 3,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly",
-   "social_attention"
+   "news_flow",
+   "source_diversity",
+   "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -680,7 +750,450 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "a1e92dad533b8106",
+   "symbols": [
+    "ZENA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ZenaTech Targets $55M Run Rate as Drone Network, Defense Push Accelerate",
+   "summary": "ZenaTech (NASDAQ:ZENA) outlined its expansion strategy across drone services, commercial software and defense applications during a company presentation, highlighting acquisitions, revenue growth and plans to pursue U.S. government opportunities. Linda Montgomery, vice president ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-zenatech-targets-55m-run-rate-as-drone-network-defense-push-accelerate-2026-10-29/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-29T21:14:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "adf8ce84b15e54af",
+   "primary_source": false,
+   "cluster_id": "a1e92dad533b8106",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0d7b7c4ce8060a27",
+   "symbols": [
+    "ZENA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ZenaTech Anticipates Faster Survey Delivery and Increased Capacity with AI and Drone Automation",
+   "summary": "Australian acquisitions of Byrne Consultants and Hopkins Consultants expected to expand global Drone as a Service network for planned adoption of proprietary AI software and drone-based surveyingVANCOUVER, British Columbia, Oct. 29, 2026 (GLOBE NEWSWIRE) -- ZenaTech, Inc. (Nasdaq",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/zenatech-anticipates-faster-survey-delivery-123000309.html?.tsrc=rss",
+   "published_at": "2026-10-29T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "203192db3a01889f",
+   "primary_source": false,
+   "cluster_id": "0d7b7c4ce8060a27",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f05ffe4f9a1e92d2",
+   "symbols": [
+    "USAU",
+    "ZENA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Presenting on Emerging Growth Conference 97 Day 2 on October 29; Register to live stream",
+   "summary": "MIAMI, Oct. 28, 2026 (GLOBE NEWSWIRE) -- EmergingGrowth.com a leading independent small cap media portal announces the schedule of the 97th Emerging Growth Conference on October 28 & 29, 2026. The Emerging Growth Conference identifies companies in a wide range of growth sectors, ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/presenting-emerging-growth-conference-97-110000442.html?.tsrc=rss",
+   "published_at": "2026-10-28T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:45:52Z",
+   "fingerprint": "87a6f26e5994942f",
+   "primary_source": false,
+   "cluster_id": "f05ffe4f9a1e92d2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "420a0f4548153496",
+   "symbols": [
+    "ZENA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ZenaTech Targets Adjusted EBITDA Breakeven in 2027 Following 425% First-Half Revenue Growth",
+   "summary": "Preliminary Q3 2026 revenue estimate of C$13.4–C$14.8 million (US$9.5–US$10.5 million), representing 44%–59% sequential growth, as management balances breakeven target with strategic growth opportunitiesVANCOUVER, British Columbia, Oct. 26, 2026 (GLOBE NEWSWIRE) -- ZenaTech, Inc.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/zenatech-targets-adjusted-ebitda-breakeven-130000847.html?.tsrc=rss",
+   "published_at": "2026-10-26T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "4594f9b8cdd1ed77",
+   "primary_source": false,
+   "cluster_id": "420a0f4548153496",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9f7344d64daf22ac",
+   "symbols": [
+    "EFOR",
+    "ZENA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "SSi Falls 32% in Three Months: Should You Buy the Dip or Wait?",
+   "summary": "SSII's rising revenues and robotic surgery adoption signal growth, but widening losses and financing pressures pose challenges to profitability.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ssi-falls-32-three-months-164500614.html?.tsrc=rss",
+   "published_at": "2026-10-23T16:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:17Z",
+   "fingerprint": "94ca19189a87cf4f",
+   "primary_source": false,
+   "cluster_id": "9f7344d64daf22ac",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0a75df8b2cd928a0",
+   "symbols": [
+    "ZENA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Down 34.9% in 4 Weeks, Here's Why You Should You Buy the Dip in ZenaTech, Inc. (ZENA)",
+   "summary": "ZenaTech, Inc. (ZENA) has become technically an oversold stock now, which implies exhaustion of the heavy selling pressure on it. This, combined with strong agreement among Wall Street analysts in revising earnings estimates higher, indicates a potential trend reversal for the st",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/down-34-9-4-weeks-123501294.html?.tsrc=rss",
+   "published_at": "2026-10-22T12:35:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "fa6d75ce3d7e0bdf",
+   "primary_source": false,
+   "cluster_id": "a567a23357a32d58",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "42736137c9c90d57",
+   "symbols": [
+    "ZENA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ZenaTech Unveils its Proprietary AI Software Suite Designed to Accelerate Land Survey Delivery for Drone as a Service Commercial, Municipal and Infrastructure Clients",
+   "summary": "Planned integration of automated LiDAR point cloud classification and feature extraction across ZenaTech’s Drone as a Service locations is designed to cut survey post-processing time and support scalable, recurring revenueVANCOUVER, British Columbia, Oct. 22, 2026 (GLOBE NEWSWIRE",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/zenatech-unveils-proprietary-ai-software-114500286.html?.tsrc=rss",
+   "published_at": "2026-10-22T11:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "442df2e5cd8026f0",
+   "primary_source": false,
+   "cluster_id": "42736137c9c90d57",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4aef4740021f6fae",
+   "symbols": [
+    "ZENA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ZenaTech Details Drone Services Growth, Acquisitions and Defense Expansion",
+   "summary": "ZenaTech (NASDAQ:ZENA) outlined its strategy to build a global drone services platform through acquisitions, internally developed drone technology and expansion into commercial, government and defense markets. Linda Montgomery, the company’s vice president of corporate developmen",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-zenatech-details-drone-services-growth-acquisitions-and-defense-expansion-2026-10-21/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-22T04:02:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "ecda9fa64a7fec00",
+   "primary_source": false,
+   "cluster_id": "4aef4740021f6fae",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a567a23357a32d58",
+   "symbols": [
+    "ZENA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Down 34.4% in 4 Weeks, Here's Why You Should You Buy the Dip in ZenaTech, Inc. (ZENA)",
+   "summary": "ZenaTech, Inc. (ZENA) is technically in oversold territory now, so the heavy selling pressure might have exhausted. This along with strong agreement among Wall Street analysts in raising earnings estimates could lead to a trend reversal for the stock.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/down-34-4-4-weeks-123502937.html?.tsrc=rss",
+   "published_at": "2026-10-21T12:35:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "fa6d75ce3d7e0bdf",
+   "primary_source": false,
+   "cluster_id": "a567a23357a32d58",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e195642f23832a84",
+   "symbols": [
+    "ZENA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ZenaTech Issues Open Letter to Shareholders of Boardwalktech Software Corp. Regarding Failure to Hold 2026 AGM and Continuing Corporate Governance Deficiencies",
+   "summary": "Boardwalktech's Board schedules a January 2027 Special Meeting to avoid AGM and force higher voting thresholds which is oppressive to all shareholders.ZenaTech submits formal complaint to British Columbia Securities Commission and TSX Venture Exchange requesting regulatory interv",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zenatech-issues-open-letter-shareholders-202800700.html?.tsrc=rss",
+   "published_at": "2026-10-20T20:28:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "42f00129556201b8",
+   "primary_source": false,
+   "cluster_id": "e195642f23832a84",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bea89493d344e951",
+   "symbols": [
+    "ZENA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ZenaTech Details ZenaWorx Drone-Based Construction Intelligence Platform Targeting AI Data Center Development",
+   "summary": "Drone-captured LiDAR, 3D progress monitoring and digital terrain modeling are designed to support construction visibility and recurring service relationships from earthworks through structural developmentVANCOUVER, British Columbia, Oct. 20, 2026 (GLOBE NEWSWIRE) -- ZenaTech, Inc",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/zenatech-details-zenaworx-drone-based-121500524.html?.tsrc=rss",
+   "published_at": "2026-10-20T12:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "e204acd0704afab2",
+   "primary_source": false,
+   "cluster_id": "bea89493d344e951",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "daec09959d98462f",
+   "symbols": [
+    "ZENA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Here's Why ZenaTech, Inc. (ZENA) is Poised for a Turnaround After Losing 29.0% in 4 Weeks",
+   "summary": "ZenaTech, Inc. (ZENA) has become technically an oversold stock now, which implies exhaustion of the heavy selling pressure on it. This, combined with strong agreement among Wall Street analysts in revising earnings estimates higher, indicates a potential trend reversal for the st",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/heres-why-zenatech-inc-zena-123502110.html?.tsrc=rss",
+   "published_at": "2026-10-19T12:35:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "3015f5a80046bcb7",
+   "primary_source": false,
+   "cluster_id": "daec09959d98462f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "550e5703edad238c",
+   "symbols": [
+    "ZENA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Boardwalktech Announces Shareholder Meeting",
+   "summary": "Cupertino, California--(Newsfile Corp. - October 16, 2026) - Boardwalktech Software Corp. (TSXV: BWLK) (OTCQB: BWLKF) (\"Boardwalktech\" or the \"Company\"), the leading provider of patented digital-ledger and AI-enabled Enterprise Software Solutions for Intelligent Information Manag",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/boardwalktech-announces-shareholder-meeting-110000416.html?.tsrc=rss",
+   "published_at": "2026-10-16T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "2ec76f4363a57d19",
+   "primary_source": false,
+   "cluster_id": "550e5703edad238c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "51fbd9a62988be86",
+   "symbols": [
+    "ZENA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ZenaTech Extends Use of Tillerstack’s Orsa+ AI Software and Plans Healthcare Teaching Applications Combined with Stacklens™ Smart Glasses",
+   "summary": "Existing industrial software use supports planned hands-free AI applications across field service and healthcare educationVANCOUVER, British Columbia, Oct. 15, 2026 (GLOBE NEWSWIRE) -- ZenaTech, Inc. (Nasdaq: ZENA) (FSE: 49Q) (BMV: ZENA) (“ZenaTech” or the “Company”), a technolog",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/zenatech-extends-tillerstack-orsa-ai-121500821.html?.tsrc=rss",
+   "published_at": "2026-10-15T12:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "130bbeec57f7b8fb",
+   "primary_source": false,
+   "cluster_id": "51fbd9a62988be86",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a21b4714e4d54f51",
+   "symbols": [
+    "ZENA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ZenaTech, Inc. (ZENA) May Find a Bottom Soon, Here's Why You Should Buy the Stock Now",
+   "summary": "ZenaTech, Inc. (ZENA) witnesses a hammer chart pattern, indicating support found by the stock after losing some value lately. This coupled with an upward trend in earnings estimate revisions could mean a trend reversal for the stock in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zenatech-inc-zena-may-bottom-125502004.html?.tsrc=rss",
+   "published_at": "2026-10-14T12:55:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "a7c6f1082ac6b5f6",
+   "primary_source": false,
+   "cluster_id": "a21b4714e4d54f51",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7376d091b8672bd0",
+   "symbols": [
+    "ZENA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ZenaTech Reports Over 27% Organic Growth Across Existing Drone as a Service Operations and Estimates Q3, 2026 Total Revenue in Range of C$13.4 Million to C$14.8 Million",
+   "summary": "Vancouver, British Columbia — ZenaTech, Inc. (NASDAQ:ZENA) (FSE: 49Q) (BMV: ZENA) (“ZenaTech”), a technology solution provider specializing in AI (Artificial Intelligence) drone, Drone as a Service (DaaS), enterprise SaaS, and Quantum Computing solutions, announces organic revenu",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "investorshub.advfn.com",
+   "url": "https://investorshub.advfn.com/market-news/article/38038/zenatech-reports-over-27-organic-growth-across-existing-drone-as-a-service-operations-and-estimates-q3-2026-total-revenue-in-range-of-c13-4-million-to-c14-8-million?.tsrc=rss",
+   "published_at": "2026-10-13T16:13:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "d3329275788beb93",
+   "primary_source": false,
+   "cluster_id": "9af82ac74202c033",
+   "independence": "syndicated",
+   "verification": "Partially Verified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e96e4bd03167f367",
+   "symbols": [
+    "ZENA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ZenaTech Reports 27.1% Organic Drone Services Growth and Raises Third-Quarter Revenue Outlook",
+   "summary": "ZenaTech, Inc. (NASDAQ:ZENA) has reported average organic revenue growth of 27.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "investorshub.advfn.com",
+   "url": "https://investorshub.advfn.com/market-news/article/37978/zenatech-reports-27-1-organic-drone-services-growth-and-raises-third-quarter-revenue-outlook?.tsrc=rss",
+   "published_at": "2026-10-13T12:24:45Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "9b90c5cd38abb4b8",
+   "primary_source": false,
+   "cluster_id": "e96e4bd03167f367",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9af82ac74202c033",
+   "symbols": [
+    "ZENA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ZenaTech Reports Over 27% Organic Growth Across Existing Drone as a Service Operations and Estimates Q3 2026 Total Revenue in Range of C$13.4 Million to C$14.8 Million",
+   "summary": "VANCOUVER, British Columbia, Oct. 13, 2026 (GLOBE NEWSWIRE) -- ZenaTech, Inc. (Nasdaq: ZENA) (FSE: 49Q) (BMV: ZENA) (“ZenaTech”), a technology solution provider specializing in AI (Artificial Intelligence) drone, Drone as a Service (DaaS), enterprise SaaS, and Quantum Computing s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/zenatech-reports-over-27-organic-113000764.html?.tsrc=rss",
+   "published_at": "2026-10-13T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "d3329275788beb93",
+   "primary_source": false,
+   "cluster_id": "9af82ac74202c033",
+   "independence": "original",
+   "verification": "Partially Verified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dedcf12b9d7390fa",
+   "symbols": [
+    "ZENA"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "ZenaTech, Inc. (ZENA) Upgraded to Buy: What Does It Mean for the Stock?",
+   "summary": "ZenaTech, Inc. (ZENA) has been upgraded to a Zacks Rank #2 (Buy), reflecting growing optimism about the company's earnings prospects. This might drive the stock higher in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zenatech-inc-zena-upgraded-buy-150003974.html?.tsrc=rss",
+   "published_at": "2026-10-09T15:00:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "dc5b82c1731b760d",
+   "primary_source": false,
+   "cluster_id": "dedcf12b9d7390fa",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c720697d34756c21",
+   "symbols": [
+    "ZENA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ZenaTech Unveils Stacklens™, AI-Powered Smart Safety Glasses Built for Field Technicians and Industrial Workers",
+   "summary": "Hands-free AI assistant, live video support and thermal imaging in certified safety eyewear bring the smart-glasses category to the jobsite VANCOUVER, British Columbia, Oct. 09, 2026 (GLOBE NEWSWIRE) -- ZenaTech, Inc. (Nasdaq: ZENA) (FSE: 49Q) (BMV: ZENA) (“ZenaTech” or the “Comp",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/zenatech-unveils-stacklens-ai-powered-142100941.html?.tsrc=rss",
+   "published_at": "2026-10-09T14:21:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "8960f814d659d4a8",
+   "primary_source": false,
+   "cluster_id": "c720697d34756c21",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

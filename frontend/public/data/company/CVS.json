@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 2.3214382082608775,
    "rvol": 0.9658744038859118,
    "ema10": 91.0487462847229,
-   "ema21": 90.57568621518259,
+   "ema21": 90.57568621518757,
    "sma50": 90.66841705322265,
-   "sma200": 87.60737297058105
+   "sma200": 87.60737339019775
   },
   "market_cap": 115427074048.0,
   "market_cap_currency": "USD",
@@ -34,17 +34,17 @@
    "tech": {
     "close": 90.25,
     "change_pct": -0.0885661789361114,
-    "ema20": 90.59869002013232,
-    "ema50": 91.30218383589423,
-    "ema200": 87.92498794452416,
+    "ema20": 90.59869002013502,
+    "ema50": 91.30218384187938,
+    "ema200": 87.92498807972302,
     "sma50": 90.66841705322265,
-    "rsi14": 48.917134606532365,
-    "rsi_min5": 47.95918117223009,
-    "atr14": 2.1495510238704227,
-    "atr_pct": 2.3817739876680584,
+    "rsi14": 48.917134606126986,
+    "rsi_min5": 47.95918117169683,
+    "atr14": 2.149551023821647,
+    "atr_pct": 2.381773987614013,
     "rvol": 0.9658744038859118,
     "vol30": 8567426.666666666,
-    "dist_ema200_pct": 2.6443131922210705,
+    "dist_ema200_pct": 2.6443130343888788,
     "dist_52w_high_pct": 17.36651646077313,
     "high_52w": 109.21722785311053,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 91.94999694824219,
     "day_low": 89.9000015258789,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 25.862974857417612,
+    "adx14": 18.050984698762367,
+    "ema10": 91.0487462847229,
+    "sma200": 87.60737339019775,
+    "perf_63d": -13.735570390707174,
+    "adr20_pct": 2.3214382082608775,
+    "range10_pct": 5.907306650872268,
+    "high10_prev": 94.83999633789062,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.8,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -108,9 +142,9 @@
    "plan": {
     "trigger": 91.94999694824219,
     "entry_max": 93.78899688720703,
-    "stop": 88.72567041243656,
-    "risk_per_share": 3.2243265358056306,
-    "target_1": 98.39865001985345,
+    "stop": 88.72567041250971,
+    "risk_per_share": 3.224326535732473,
+    "target_1": 98.39865001970713,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -139,11 +173,11 @@
    ]
   },
   "market_intelligence": {
-   "score": 55.6,
+   "score": 60.3,
    "drivers": [
     "news_flow",
     "source_diversity",
-    "analyst_activity"
+    "social_attention"
    ],
    "independent_7d": 16,
    "independent_24h": 0
@@ -156,7 +190,14 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 30,
+   "manipulation_risk": "auffaellig",
+   "mentions_24h": 3,
+   "sentiment_7d": 0.0,
+   "bullish_7d": 2,
+   "bearish_7d": 0
+  },
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
@@ -210,9 +251,9 @@
   "adr20": 2.3214382082608775,
   "rvol": 0.9658744038859118,
   "ema10": 91.0487462847229,
-  "ema21": 90.57568621518259,
+  "ema21": 90.57568621518757,
   "sma50": 90.66841705322265,
-  "sma200": 87.60737297058105,
+  "sma200": 87.60737339019775,
   "volatility_ann": 27.021346589064173,
   "avg_dollar_volume_20d": 748289447.1940231,
   "move_zscore": -0.052030882309403045,
@@ -220,17 +261,17 @@
    "tech": {
     "close": 90.25,
     "change_pct": -0.0885661789361114,
-    "ema20": 90.59869002013232,
-    "ema50": 91.30218383589423,
-    "ema200": 87.92498794452416,
+    "ema20": 90.59869002013502,
+    "ema50": 91.30218384187938,
+    "ema200": 87.92498807972302,
     "sma50": 90.66841705322265,
-    "rsi14": 48.917134606532365,
-    "rsi_min5": 47.95918117223009,
-    "atr14": 2.1495510238704227,
-    "atr_pct": 2.3817739876680584,
+    "rsi14": 48.917134606126986,
+    "rsi_min5": 47.95918117169683,
+    "atr14": 2.149551023821647,
+    "atr_pct": 2.381773987614013,
     "rvol": 0.9658744038859118,
     "vol30": 8567426.666666666,
-    "dist_ema200_pct": 2.6443131922210705,
+    "dist_ema200_pct": 2.6443130343888788,
     "dist_52w_high_pct": 17.36651646077313,
     "high_52w": 109.21722785311053,
     "macd_above_signal": true,
@@ -244,7 +285,17 @@
     "green": false,
     "day_high": 91.94999694824219,
     "day_low": 89.9000015258789,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 25.862974857417612,
+    "adx14": 18.050984698762367,
+    "ema10": 91.0487462847229,
+    "sma200": 87.60737339019775,
+    "perf_63d": -13.735570390707174,
+    "adr20_pct": 2.3214382082608775,
+    "range10_pct": 5.907306650872268,
+    "high10_prev": 94.83999633789062,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -274,6 +325,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -281,7 +353,10 @@
     "S01": 0.0,
     "S02": 0.8,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.6666666666666666,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -294,9 +369,9 @@
    "plan": {
     "trigger": 91.94999694824219,
     "entry_max": 93.78899688720703,
-    "stop": 88.72567041243656,
-    "risk_per_share": 3.2243265358056306,
-    "target_1": 98.39865001985345,
+    "stop": 88.72567041250971,
+    "risk_per_share": 3.224326535732473,
+    "target_1": 98.39865001970713,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -620,7 +695,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 55.6,
+  "score": 60.3,
   "components": {
    "news_flow": 100.0,
    "freshness": 0,
@@ -628,7 +703,7 @@
    "primary_sources": 0,
    "analyst_activity": 70,
    "price_volume_anomaly": 1.6,
-   "social_attention": null,
+   "social_attention": 100.0,
    "insider_activity": null
   },
   "windows": {
@@ -663,7 +738,7 @@
   "drivers": [
    "news_flow",
    "source_diversity",
-   "analyst_activity"
+   "social_attention"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -877,6 +952,7 @@
   {
    "id": "ec7b27edd636b56d",
    "symbols": [
+    "ADUS",
     "CI",
     "CVS",
     "DGX",
@@ -1092,6 +1168,81 @@
    "report_date": "2026-06-30"
   }
  ],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 3,
+  "mentions_7d": 30,
+  "mentions_30d": 30,
+  "change_vs_baseline_pct": -22,
+  "engagement_7d": 61.0,
+  "sentiment_7d": 0.0,
+  "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
+  "bullish_7d": 2,
+  "bearish_7d": 0,
+  "by_platform_7d": {
+   "stocktwits": 30
+  },
+  "communities_7d": {
+   "StockTwits": 30
+  },
+  "platforms": [
+   "stocktwits"
+  ],
+  "manipulation_flags": [
+   "Wenige Accounts erzeugen Großteil der Erwähnungen"
+  ],
+  "manipulation_risk": "auffaellig",
+  "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "DefenseMania",
+    "posted_at": "2026-10-30T18:52:06Z",
+    "url": "https://stocktwits.com/DefenseMania/message/667807753",
+    "text": "$COST Grand Opening  today of  NEW Costco Warehouse , Camarillo California , friend told me there were 2 separate lines wrapped around the whole warehouse by 6am.\nCRAZY 💰💰💰💰💰💰💰💰\n$KR $WMT $CVS",
+    "engagement": 7.0,
+    "sentiment_label": "Bullish"
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "UncleSteven",
+    "posted_at": "2026-10-29T15:09:46Z",
+    "url": "https://stocktwits.com/UncleSteven/message/667650065",
+    "text": "$EBAY  up, not surprised. Sports card values are booming and eBay is the # one source for buying and selling. \n \nAt $CVS yesterday while dropping offsome $UPS , I saw a box of sports cards at the checkout. It told you how many packs in the box. But it didn&#39;t say how many cards in each pack. This is getting real bad. First they nix printing the odds and now they don&#39;t even tell you how many",
+    "engagement": 3.0,
+    "sentiment_label": "Bullish"
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "TopOptionsAIerts",
+    "posted_at": "2026-10-31T08:52:09Z",
+    "url": "https://stocktwits.com/TopOptionsAIerts/message/667841191",
+    "text": "$CVS NOV20 94C · still actionable\n\nZone: $89.62 to $90.88\nInvalidation: close under $89.55\nObjectives: $93.07, then $94.77\n\nThe math: up 3.1% to the first objective and 5.0% to the second, against 0.8% risk on the invalidation, better than 6 to 1 to the second.\n\nI like this swing because Friday held the $89.55 low after a week of selling from $95.26. Earnings land Nov 4, so the Nov 20 expiry gives",
+    "engagement": 2.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "thatsolardude365",
+    "posted_at": "2026-10-31T08:23:13Z",
+    "url": "https://stocktwits.com/thatsolardude365/message/667840981",
+    "text": "$CVS: Smith turns on a legal line: was the Aetna Better Health call telemarketing, or a health care message? The complaint alleges telemarketing needing signed written consent. No ruling yet, nothing to claim. Open Class Actions.",
+    "engagement": 2.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "thatsolardude365",
+    "posted_at": "2026-10-31T08:02:16Z",
+    "url": "https://stocktwits.com/thatsolardude365/message/667840844",
+    "text": "$CVS: tomorrow is the last opt-out day in the digital privacy settlement, Nov 1. Staying in? Claims close Nov 16, up to $5 no proof for US site or app use before July 27. Open Class Actions.",
+    "engagement": 2.0,
+    "sentiment_label": null
+   }
+  ]
+ },
  "history": []
 }

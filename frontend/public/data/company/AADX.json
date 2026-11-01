@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 11.869999885559082,
     "day_low": 10.800000190734863,
-    "history_ok": false
+    "history_ok": false,
+    "rsi2": 44.93598384924687,
+    "adx14": 26.288010128809532,
+    "ema10": 10.955622092717622,
+    "sma200": null,
+    "perf_63d": -41.987512919508795,
+    "adr20_pct": 7.114732861656421,
+    "range10_pct": 26.914902014018203,
+    "high10_prev": 11.930000305175781,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -139,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 7.4,
+   "score": 23.6,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -242,7 +278,17 @@
     "green": false,
     "day_high": 11.869999885559082,
     "day_low": 10.800000190734863,
-    "history_ok": false
+    "history_ok": false,
+    "rsi2": 44.93598384924687,
+    "adx14": 26.288010128809532,
+    "ema10": 10.955622092717622,
+    "sma200": null,
+    "perf_63d": -41.987512919508795,
+    "adr20_pct": 7.114732861656421,
+    "range10_pct": 26.914902014018203,
+    "high10_prev": 11.930000305175781,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -272,6 +318,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -279,7 +346,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -618,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 7.4,
+  "score": 23.6,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 42.0,
@@ -640,26 +710,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 7,
+    "independent": 6,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -677,7 +749,429 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "47620c0a4a0b9919",
+   "symbols": [
+    "AADX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "AUSA: Applied Aerospace and Defense President + CSO Chris Rogers",
+   "summary": "Applied Aerospace and Defense President + CSO Chris Rogers joins J.D. Durkin at AUSA 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/video/ausa-applied-aerospace-defense-president-180948728.html?.tsrc=rss",
+   "published_at": "2026-10-26T18:09:48Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "52a031444afb18c5",
+   "primary_source": false,
+   "cluster_id": "47620c0a4a0b9919",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f36475f374e75674",
+   "symbols": [
+    "AADX",
+    "ENS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Top 3 EV Stocks To Watch In October 2026",
+   "summary": "Oil prices recently topped $110 a barrel as conflict risks around Iran and Saudi energy facilities resurfaced, reminding markets how exposed transport and logistics remain to fuel costs. Electric and self-driving vehicle stocks sit right in that crossfire, as businesses and gover",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/top-3-ev-stocks-watch-131427016.html?.tsrc=rss",
+   "published_at": "2026-10-22T13:14:27Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:30Z",
+   "fingerprint": "016b5418f90172bc",
+   "primary_source": false,
+   "cluster_id": "f36475f374e75674",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c8be8862f1649e35",
+   "symbols": [
+    "AADX",
+    "ENS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Applied Aerospace Defense And 2 Other Top EV Stocks To Watch",
+   "summary": "Oil prices have surged above $111 a barrel after attacks on Saudi energy infrastructure, putting clean transport back in the spotlight as fuel costs bite and energy security feels fragile. Electric and self-driving vehicle stocks sit right at that crossroads of efficiency and res",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/applied-aerospace-defense-2-other-081254106.html?.tsrc=rss",
+   "published_at": "2026-10-22T08:12:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:30Z",
+   "fingerprint": "1ccb5432bcb523ef",
+   "primary_source": false,
+   "cluster_id": "067de58d1e4e0901",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "865345fdc3d34304",
+   "symbols": [
+    "AADX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Applied Aerospace & Defense Schedules Conference Call to Discuss Third Quarter 2026 Financial Results",
+   "summary": "HUNTSVILLE, Ala., October 20, 2026--Applied Aerospace & Defense (\"Applied\" or the \"Company\"), a premier provider of advanced manufacturing solutions for mission-critical space and defense applications, announced it will report financial results for the third quarter ended on Sept",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/applied-aerospace-defense-schedules-conference-120000563.html?.tsrc=rss",
+   "published_at": "2026-10-20T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "bd5066c7408bfb83",
+   "primary_source": false,
+   "cluster_id": "865345fdc3d34304",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "067de58d1e4e0901",
+   "symbols": [
+    "AADX",
+    "ENS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Applied Aerospace Defense And 2 Other EV Stocks To Watch",
+   "summary": "Gas prices have stayed above $4 a gallon for a record stretch in 2026 as conflict in the Middle East disrupts oil flows and squeezes drivers. That kind of pain at the pump keeps attention on electric and self driving transport companies that do not rely on crude in the same way. ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/applied-aerospace-defense-2-other-001242172.html?.tsrc=rss",
+   "published_at": "2026-10-15T00:12:42Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:30Z",
+   "fingerprint": "68d9e6cafc2b3da8",
+   "primary_source": false,
+   "cluster_id": "067de58d1e4e0901",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a748081b5b499bc6",
+   "symbols": [
+    "AADX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Applied Aerospace & Defense Outlook Supported by Defense Demand and Backlog, RBC Says",
+   "summary": "Applied Aerospace & Defense (AADX) expects mid-teens organic revenue growth in 2027 and 2028, with m",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/applied-aerospace-defense-outlook-supported-152710137.html?.tsrc=rss",
+   "published_at": "2026-10-13T15:27:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "49d28fbfde576534",
+   "primary_source": false,
+   "cluster_id": "a748081b5b499bc6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "67cbf53ced06d1eb",
+   "symbols": [
+    "AADX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Space Stocks To Watch With Up To 28% Revenue Growth",
+   "summary": "SpaceX’s plan to extend Starlink into direct mobile service has turned low Earth orbit into prime economic real estate. Suddenly, the companies building rockets, satellites, and ground systems look less like science projects and more like critical digital infrastructure. That shi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-space-stocks-watch-28-201039081.html?.tsrc=rss",
+   "published_at": "2026-10-09T20:10:39Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "978bb6519f0dcdd6",
+   "primary_source": false,
+   "cluster_id": "67cbf53ced06d1eb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7adcc983f62b211f",
+   "symbols": [
+    "AADX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Applied Aerospace & Defense (AADX) Could Be 49% Below Fair Value On Backlog Narrative",
+   "summary": "Index additions put Applied Aerospace & Defense on more investor radars Applied Aerospace & Defense (AADX) was added to a wide slate of Russell indices on 18 September 2026, including the Russell 2000, Russell 2500, Russell 3000 and related growth and value benchmarks. The reclas",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/applied-aerospace-defense-aadx-could-042454582.html?.tsrc=rss",
+   "published_at": "2026-09-25T04:24:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "7ab744ced65c0190",
+   "primary_source": false,
+   "cluster_id": "7adcc983f62b211f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "49808ccf7dbb5693",
+   "symbols": [
+    "AADX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can Applied Aerospace (AADX) Turn Record Backlog Into Real Profit?",
+   "summary": "In the specialized market of advanced aerospace and defense manufacturing, long-term shareholder value is fundamentally driven by multi-year program visibility, operating leverage, and disciplined portfolio expansion. Applied Aerospace & Defense (NYSE:AADX) has built its foundati",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/applied-aerospace-aadx-turn-record-104421317.html?.tsrc=rss",
+   "published_at": "2026-09-23T10:44:21Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "593d4f8cc44d9db8",
+   "primary_source": false,
+   "cluster_id": "49808ccf7dbb5693",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5275bb85be161dd5",
+   "symbols": [
+    "AADX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Merchant Supplier, Massive Upside: Guggenheim Picks Applied Aerospace & Defense (AADX) as its Top Defense Bet",
+   "summary": "On September 15, Guggenheim analyst Michael Ciarmoli initiated coverage of almost two dozen defense stocks, with a bullish, sector-wide buy-the-pullback call. He issued 13 Buy ratings with an average upside of roughly 50%, with the standout being Applied Aerospace & Defense, Inc.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/merchant-supplier-massive-upside-guggenheim-015950441.html?.tsrc=rss",
+   "published_at": "2026-09-18T01:59:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "334edc9e26068f48",
+   "primary_source": false,
+   "cluster_id": "5275bb85be161dd5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4b24e192ce8b69e5",
+   "symbols": [
+    "AADX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "This Stock Can Rise 150%, Plus 12 More Aerospace Buys",
+   "summary": "Monday evening, Guggenheim analyst Michael Ciarmoli launched coverage of the Aerospace & Defense sector with a bevy of Buy-rated stocks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/6e887278-e7a1-38ff-a200-0a489ab208df/this-stock-can-rise-150%25%2C.html?.tsrc=rss",
+   "published_at": "2026-09-15T15:57:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "77f6a6c11f183c2a",
+   "primary_source": false,
+   "cluster_id": "4b24e192ce8b69e5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d80e4659434ef999",
+   "symbols": [
+    "AADX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Applied Aerospace & Defense (AADX) is Positioned for Accelerated Growth",
+   "summary": "Prosper Stars & Stripes, a long/short equity fund, recently released its second-quarter 2026 investor letter. The letter can be downloaded here. In Q2 2026, the portfolio delivered a strong net return of +30.1% compared to the Russell 2000 Index’s +21.5% return and the HFRX Equit",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/applied-aerospace-defense-aadx-positioned-134209081.html?.tsrc=rss",
+   "published_at": "2026-09-10T13:42:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "fec0022931129360",
+   "primary_source": false,
+   "cluster_id": "d80e4659434ef999",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e6aff965e3c3da18",
+   "symbols": [
+    "AADX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Applied Aerospace & Defense Appoints Elizabeth Robertson as Executive Vice President of Business Development",
+   "summary": "HUNTSVILLE, Ala., September 01, 2026--Applied Aerospace & Defense (\"Applied\"), a premier provider of advanced manufacturing for mission-critical space and defense applications, today announced that industry proven growth executive Elizabeth Robertson, has joined the company as ex",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/applied-aerospace-defense-appoints-elizabeth-130000216.html?.tsrc=rss",
+   "published_at": "2026-09-01T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "249570a47619cafc",
+   "primary_source": false,
+   "cluster_id": "e6aff965e3c3da18",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f8a813356bc14ccc",
+   "symbols": [
+    "AADX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Implied Volatility Surging for Applied Aerospace & Defense Stock Options",
+   "summary": "Investors need to pay close attention to AADX stock based on the movements in the options market lately.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/options/articles/implied-volatility-surging-applied-aerospace-135500341.html?.tsrc=rss",
+   "published_at": "2026-08-28T13:55:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "bf5f051f2437732c",
+   "primary_source": false,
+   "cluster_id": "f8a813356bc14ccc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d6f3dc9b943e59d8",
+   "symbols": [
+    "AADX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Can Applied Aerospace & Defense (AADX) Convert Its Backlog Into Durable Earnings Growth?",
+   "summary": "Baron Capital, an investment management company, released its Q2 2026 investor letter for the “Baron Small Cap Fund.” Baron Small Cap Fund gained 12.57% (Institutional Shares) in the second quarter, trailing the Russell 2000 Growth Index’s 25.71% return. A copy of the letter can ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/applied-aerospace-defense-aadx-convert-103704440.html?.tsrc=rss",
+   "published_at": "2026-08-19T10:37:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "3dee44a550ec60bc",
+   "primary_source": false,
+   "cluster_id": "d6f3dc9b943e59d8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "210b26caacff4f96",
+   "symbols": [
+    "AADX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Applied Aerospace & Defense Was Sliding This Week",
+   "summary": "It posted a much deeper-than-expected quarterly loss.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/08/14/why-applied-aerospace-defense-was-sliding-this-wee/?.tsrc=rss",
+   "published_at": "2026-08-14T17:19:30Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "d02f095cda7d9cf0",
+   "primary_source": false,
+   "cluster_id": "210b26caacff4f96",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7cf6d07891ef292e",
+   "symbols": [
+    "AADX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Applied Aerospace & Defense Has Positive Q2 Fundamentals, Morgan Stanley Says",
+   "summary": "Applied Aerospace & Defense (AADX) shows several positive fundamental dynamics coming out of Q2, des",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/applied-aerospace-defense-positive-q2-145951321.html?.tsrc=rss",
+   "published_at": "2026-08-13T14:59:51Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "694083ec2e44cf1e",
+   "primary_source": false,
+   "cluster_id": "7cf6d07891ef292e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "029716394895f168",
+   "symbols": [
+    "AADX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "SpaceX Supplier Tumbles After First Earnings Report Since IPO",
+   "summary": "Applied Aerospace & Defense fell about 10% on Wednesday after its first earnings report since going public in June.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/ccde2b0f-9a85-321d-aeac-85a34d4e58bd/spacex-supplier-tumbles-after.html?.tsrc=rss",
+   "published_at": "2026-08-13T13:35:58Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "208f93557250d333",
+   "primary_source": false,
+   "cluster_id": "029716394895f168",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "257cdc2e57a92598",
+   "symbols": [
+    "AADX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Applied Aerospace & Defense (AADX) Could Be 10% Undervalued On 2026 Revenue Guidance",
+   "summary": "Applied Aerospace & Defense (AADX) set fresh expectations for investors with new full year 2026 guidance, projecting total revenue between $670 million and $690 million in its first year as a public company. See our latest analysis for Applied Aerospace & Defense. The guidance up",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/applied-aerospace-defense-aadx-could-061219185.html?.tsrc=rss",
+   "published_at": "2026-08-13T06:12:19Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "783390865da5df56",
+   "primary_source": false,
+   "cluster_id": "257cdc2e57a92598",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "230772248ce803b6",

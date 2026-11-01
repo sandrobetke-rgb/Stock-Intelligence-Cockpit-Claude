@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 32.34000015258789,
     "day_low": 30.329999923706055,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 2.436966081038932,
+    "adx14": 29.85141580848643,
+    "ema10": 32.87641496869401,
+    "sma200": 22.498699998855592,
+    "perf_63d": 38.16489722594905,
+    "adr20_pct": 5.048978639405627,
+    "range10_pct": 13.564169376923484,
+    "high10_prev": 35.75,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,14 +98,40 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": true,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.0,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.5,
+    "RSI2": 1.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -138,12 +174,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 7.4,
+   "score": 43.9,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 4,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -153,7 +191,14 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 1,
+   "manipulation_risk": "unauffällig",
+   "mentions_24h": 0,
+   "sentiment_7d": 1.0,
+   "bullish_7d": 0,
+   "bearish_7d": 0
+  },
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
@@ -241,7 +286,17 @@
     "green": false,
     "day_high": 32.34000015258789,
     "day_low": 30.329999923706055,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 2.436966081038932,
+    "adx14": 29.85141580848643,
+    "ema10": 32.87641496869401,
+    "sma200": 22.498699998855592,
+    "perf_63d": 38.16489722594905,
+    "adr20_pct": 5.048978639405627,
+    "range10_pct": 13.564169376923484,
+    "high10_prev": 35.75,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -271,14 +326,40 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": true,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.0,
-    "S04": 0.8
+    "S04": 0.8,
+    "DSM": 0.5,
+    "RSI2": 1.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -616,48 +697,50 @@
   ]
  },
  "intelligence_detail": {
-  "score": 7.4,
+  "score": 43.9,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 99.8,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 41.8,
-   "social_attention": null,
+   "social_attention": 25.0,
    "insider_activity": null
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 17,
+    "independent": 17,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 2,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -675,7 +758,393 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "607b343469787984",
+   "symbols": [
+    "AMZN",
+    "CMRC",
+    "GOOG",
+    "GOOGL",
+    "INTC",
+    "NOW",
+    "ZETA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zeta Global and Commerce stocks trade down, what you need to know",
+   "summary": "A number of stocks fell in the afternoon session after underwhelming earnings reports from tech giants Amazon and Intel (after mediocre earnings reports from Alphabet and ServiceNow the previous day) sparked widespread investor anxiety regarding aggressive artificial intelligence",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zeta-global-commerce-stocks-trade-093129865.html?.tsrc=rss",
+   "published_at": "2026-10-31T09:31:29Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:07Z",
+   "fingerprint": "7815da11655a7445",
+   "primary_source": false,
+   "cluster_id": "607b343469787984",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Zeta Global und Commerce Aktien handeln nach unten, was Sie wissen müssen"
+  },
+  {
+   "id": "dafbb08c75f2e47f",
+   "symbols": [
+    "ONB",
+    "RPC",
+    "ZETA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 small-cap stock with competitive advantages and 2 facing challenges",
+   "summary": "Investors looking for hidden gems should keep an eye on small-cap stocks because they’re frequently overlooked by Wall Street. Many opportunities exist in this part of the market, but it is also a high-risk, high-reward environment due to the lack of reliable analyst price target",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-small-cap-stock-competitive-152329552.html?.tsrc=rss",
+   "published_at": "2026-10-30T15:23:29Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:13Z",
+   "fingerprint": "2f6a11bceca5b4d1",
+   "primary_source": false,
+   "cluster_id": "dafbb08c75f2e47f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "1 Small-Cap-Aktie mit Wettbewerbsvorteilen und 2 Herausforderungen"
+  },
+  {
+   "id": "ca0267e23fc57987",
+   "symbols": [
+    "ZETA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 AI Stocks Retail Investors Are Watching After Anthropic’s Nasdaq Filing",
+   "summary": "Anthropic’s plan to list on Nasdaq with a potential US$1.5 to US$2 trillion valuation, rapid revenue expansion to US$16.3b and a hefty US$80.7b first half loss has thrown a spotlight on how high the bar now sits for AI leaders. Investors are watching closely, not wanting to miss ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/3-ai-stocks-retail-investors-210919323.html?.tsrc=rss",
+   "published_at": "2026-10-27T21:09:19Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "8e1b419bdf9b18e6",
+   "primary_source": false,
+   "cluster_id": "ca0267e23fc57987",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "97b37077484b63dd",
+   "symbols": [
+    "ZETA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zeta Global to Announce Third Quarter 2026 Results on November 9, 2026",
+   "summary": "NEW YORK, October 26, 2026--Zeta Global to Announce Third Quarter 2026 Results on November 9, 2026",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/zeta-global-announce-third-quarter-200500178.html?.tsrc=rss",
+   "published_at": "2026-10-26T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "ff2c07452190e97e",
+   "primary_source": false,
+   "cluster_id": "97b37077484b63dd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3a8cd34085fec07e",
+   "symbols": [
+    "ZETA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Advertising software stocks Q2 teardown: Zeta Global (NYSE:ZETA) vs the rest",
+   "summary": "As the Q2 earnings season comes to a close, it’s time to take stock of this quarter’s best and worst performers in the advertising software industry, including Zeta Global (NYSE:ZETA) and its peers.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/advertising-software-stocks-q2-teardown-014439675.html?.tsrc=rss",
+   "published_at": "2026-10-24T01:44:39Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "65deeaa25caf54b4",
+   "primary_source": false,
+   "cluster_id": "3a8cd34085fec07e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "44be64a99e03513a",
+   "symbols": [
+    "ZETA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Goldman Sachs Sees a Shift in the Stock Market — and Names 2 Stocks to Buy Now",
+   "summary": "Long-term stock market performance depends on more than economic growth, interest rates, and corporate earnings. Broader trends that develop over many years can also create investment opportunities, particularly for companies positioned to benefit from lasting changes in consumer",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/goldman-sachs-sees-shift-stock-174800209.html?.tsrc=rss",
+   "published_at": "2026-10-22T17:48:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "94232b245b94bd2f",
+   "primary_source": false,
+   "cluster_id": "44be64a99e03513a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "692f60045eed098e",
+   "symbols": [
+    "ZETA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Goldman sees 41% upside in overlooked AI stock",
+   "summary": "Zeta Global’s growth and Palantir partnership have Goldman expecting another leg higher.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "thestreet.com",
+   "url": "https://www.thestreet.com/investing/goldman-sees-41-upside-in-zeta-global-overlooked-ai-stock?.tsrc=rss",
+   "published_at": "2026-10-20T22:07:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "519d93fbb1b69571",
+   "primary_source": false,
+   "cluster_id": "692f60045eed098e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "aa2ce7b0fa3f7dba",
+   "symbols": [
+    "ZETA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Meta Earnings Puts Adobe Stock And AI Ad Software Names In Focus",
+   "summary": "AI hype is colliding with earnings season, and Meta’s upcoming report has suddenly become a live stress test for the whole trade. After the sharp pullback in Nvidia and the Nasdaq 100, investors are asking which digital ad and social platforms look ready to handle heavier AI spen",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/meta-earnings-puts-adobe-stock-201147047.html?.tsrc=rss",
+   "published_at": "2026-10-18T20:11:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "ad3587596cb95e82",
+   "primary_source": false,
+   "cluster_id": "aa2ce7b0fa3f7dba",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e40e477b788da8be",
+   "symbols": [
+    "ZETA"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Goldman upgrades Zeta to Buy, cuts Klaviyo on visibility gap",
+   "summary": "Investing.com -- Goldman Sachs upgraded Zeta Global to Buy from Neutral and downgraded Klaviyo to Neutral from Buy on Friday, telling investors in a note that it sees greater visibility into upside to 2027 estimates for Zeta.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/goldman-upgrades-zeta-buy-cuts-134635046.html?.tsrc=rss",
+   "published_at": "2026-10-16T13:46:35Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "84f23bbec310f3c5",
+   "primary_source": false,
+   "cluster_id": "e40e477b788da8be",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e4324861d53846ae",
+   "symbols": [
+    "ASAN",
+    "ZETA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Software Stock Worth Investigating and 2 We Turn Down",
+   "summary": "Software is rapidly reducing operating expenses for businesses. Companies bringing it to life have been rewarded with explosive earnings growth, and the upward trend shows no signs of stopping as the industry has posted a 56.3% gain over the past six months, beating the S&amp;P 5",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-software-stock-worth-investigating-085847731.html?.tsrc=rss",
+   "published_at": "2026-10-14T08:58:47Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:34Z",
+   "fingerprint": "d237968ef1a658aa",
+   "primary_source": false,
+   "cluster_id": "e4324861d53846ae",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3b7d73d6cabd415b",
+   "symbols": [
+    "ZETA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "HackerOne Report Highlights Challenges of 'Exposure Debt': NYSE Content Update",
+   "summary": "The New York Stock Exchange (NYSE) provides a daily pre-market update directly from the NYSE Trading Floor. Access today's NYSE Pre-market update for market insights before trading begins.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/hackerone-report-highlights-challenges-exposure-125500386.html?.tsrc=rss",
+   "published_at": "2026-10-09T12:55:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "789b10694f353345",
+   "primary_source": false,
+   "cluster_id": "3b7d73d6cabd415b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c75a0eb42252766b",
+   "symbols": [
+    "ZETA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zeta Global Unveils AthenaOS to Connect AI, Data and Marketing Workflows",
+   "summary": "Zeta Global (NYSE:ZETA) unveiled AthenaOS, an AI-focused operating system intended to bring together customer data, intelligence, workflows and business applications across marketing and other enterprise functions. At the company’s Zeta Live event, Chief Technology Officer and He",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-zeta-global-unveils-athenaos-to-connect-ai-data-and-marketing-workflows-2026-10-08/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-08T23:02:14Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "e078326b374aac06",
+   "primary_source": false,
+   "cluster_id": "c75a0eb42252766b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5e12581fb527e532",
+   "symbols": [
+    "ZETA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zeta Global Teams Up with Fireworks to Unveil New Specialized Athena Inference Model Using NVIDIA Nemotron",
+   "summary": "NEW YORK, October 08, 2026--Zeta Global Teams Up with Fireworks to Unveil New Specialized Athena Inference Models Using NVIDIA Nemotron",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/zeta-global-teams-fireworks-unveil-131000047.html?.tsrc=rss",
+   "published_at": "2026-10-08T13:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "eef929212604a709",
+   "primary_source": false,
+   "cluster_id": "5e12581fb527e532",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "78f09e44b47f77d5",
+   "symbols": [
+    "ZETA"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Zeta Live 2026: Zeta Introduces AthenaOS, the Enterprise Intelligence Operating System that Turns Intelligence into Growth",
+   "summary": "NEW YORK, October 08, 2026--Zeta Live 2026: Zeta Introduces AthenaOS, the Enterprise Intelligence Operating System that Turns Intelligence into Growth",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/zeta-live-2026-zeta-introduces-131000057.html?.tsrc=rss",
+   "published_at": "2026-10-08T13:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "f9ea77fa467f7558",
+   "primary_source": false,
+   "cluster_id": "78f09e44b47f77d5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9e5eb2c753cc8ffd",
+   "symbols": [
+    "ZETA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zeta Global Announces Palantir's Dr. Alex Karp and Zeta’s David A. Steinberg Will Discuss Data Sovereignty and Enterprise AI at Zeta Live 2026",
+   "summary": "NEW YORK, October 07, 2026--Zeta Global Announces Palantir's Dr. Alex Karp and Zeta’s David A. Steinberg Will Discuss Data Sovereignty and Enterprise AI at Zeta Live 2026",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/zeta-global-announces-palantirs-dr-200500896.html?.tsrc=rss",
+   "published_at": "2026-10-07T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "03da80f312b2f660",
+   "primary_source": false,
+   "cluster_id": "9e5eb2c753cc8ffd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3eb5060b8356a71f",
+   "symbols": [
+    "ZETA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zeta Global Expands AI Arsenal With Digital Audience Buyout",
+   "summary": "Zeta Global Holdings Corp. (NYSE:ZETA) said Tuesday it agreed to acquire Digital Audience, a data infrastructure company, to expand its identity and activation capabilities across digital channels.Deal Expands Zeta’s AI InfrastructureDigital Audience is already integrated with Ze",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/zeta-global-expands-ai-arsenal-111643374.html?.tsrc=rss",
+   "published_at": "2026-10-07T11:16:43Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "04becd8782473dd9",
+   "primary_source": false,
+   "cluster_id": "3eb5060b8356a71f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f89620d48b73e1a6",
+   "symbols": [
+    "ZETA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zeta Global to Acquire Digital Audience, Extending the Zeta Data Cloud Across the Digital Ecosystem",
+   "summary": "NEW YORK, October 06, 2026--Zeta Global to Acquire Digital Audience, Extending the Zeta Data Cloud Across the Digital Ecosystem",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/zeta-global-acquire-digital-audience-200500520.html?.tsrc=rss",
+   "published_at": "2026-10-06T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:13Z",
+   "fingerprint": "d1c3e4eb91bc18be",
+   "primary_source": false,
+   "cluster_id": "f89620d48b73e1a6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "7c25580868cb9469",
@@ -953,6 +1422,39 @@
    "report_date": "2026-06-30"
   }
  ],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 0,
+  "mentions_7d": 1,
+  "mentions_30d": 1,
+  "change_vs_baseline_pct": -100,
+  "engagement_7d": 1.0,
+  "sentiment_7d": 1.0,
+  "sentiment_basis": "algorithmisch (Lexikon)",
+  "bullish_7d": 0,
+  "bearish_7d": 0,
+  "by_platform_7d": {
+   "stocktwits": 1
+  },
+  "communities_7d": {
+   "StockTwits": 1
+  },
+  "platforms": [
+   "stocktwits"
+  ],
+  "manipulation_flags": [],
+  "manipulation_risk": "unauffällig",
+  "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "KendallRoyWayStarRoyCo",
+    "posted_at": "2026-10-30T13:43:05Z",
+    "url": "https://stocktwits.com/KendallRoyWayStarRoyCo/message/667755786",
+    "text": "$ZETA \n\nstay strong 💪 but always have cash 💵 and if no cash then certainly hedges \n\n$PEP $NKE",
+    "engagement": 1.0,
+    "sentiment_label": null
+   }
+  ]
+ },
  "history": []
 }

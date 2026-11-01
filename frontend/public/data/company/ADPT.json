@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 27.969999313354492,
     "day_low": 26.170000076293945,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 21.17329175805834,
+    "adx14": 17.321785199601944,
+    "ema10": 26.63514483926214,
+    "sma200": 19.603250041007996,
+    "perf_63d": 15.274767140056667,
+    "adr20_pct": 6.102418606016455,
+    "range10_pct": 21.956337570284433,
+    "high10_prev": 29.049999237060547,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.6666666666666666,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": false,
@@ -139,12 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 16.2,
+   "score": 50.6,
    "drivers": [
+    "news_flow",
     "price_volume_anomaly",
-    "insider_activity"
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 4,
    "independent_24h": 0
   },
   "political": {
@@ -243,7 +278,17 @@
     "green": false,
     "day_high": 27.969999313354492,
     "day_low": 26.170000076293945,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 21.17329175805834,
+    "adx14": 17.321785199601944,
+    "ema10": 26.63514483926214,
+    "sma200": 19.603250041007996,
+    "perf_63d": 15.274767140056667,
+    "adr20_pct": 6.102418606016455,
+    "range10_pct": 21.956337570284433,
+    "high10_prev": 29.049999237060547,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -273,6 +318,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -280,7 +346,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.6666666666666666,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": false,
@@ -619,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 16.2,
+  "score": 50.6,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 99.8,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 63.8,
@@ -641,27 +710,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 8,
+    "independent": 8,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
    "price_volume_anomaly",
-   "insider_activity"
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -679,7 +749,451 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "5394b387b64b71e1",
+   "symbols": [
+    "ADPT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "TELO Genomics Expands Multi-Center Clinical Studies to Advance Comparative Validation of TELO-MRD Against Next-Generation Sequencing",
+   "summary": "In matched multi-center cohorts, Telo Genomics is expanding comparative evaluation of blood-based TELO-MRD against Adaptive Biotechnologies' clonoSEQ next-generation sequencing MRD testing.Vancouver, British Columbia--(Newsfile Corp. - October 29, 2026) - Telo Genomics Corp. (TSX",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/telo-genomics-expands-multi-center-103000726.html?.tsrc=rss",
+   "published_at": "2026-10-29T10:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:44Z",
+   "fingerprint": "e31c85ed15490a46",
+   "primary_source": false,
+   "cluster_id": "5394b387b64b71e1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1ef7eebf19a13460",
+   "symbols": [
+    "ADPT",
+    "IQV"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can You Still Buy Tempus AI Stock Today?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/tem/articles/621015/can-you-still-buy-tempus-ai-stock-today/2026-10-28?.tsrc=rss",
+   "published_at": "2026-10-28T11:56:06Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:02:07Z",
+   "fingerprint": "624322fcbc40eb85",
+   "primary_source": false,
+   "cluster_id": "1ef7eebf19a13460",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f54ef78629b1cc92",
+   "symbols": [
+    "ADPT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adaptive Biotechnologies Corp. (ADPT) Rallies on Earnings Beat, Raised Outlook, and Cash-Flow Targets",
+   "summary": "Fred Alger Management, an investment management company, released its third-quarter 2026 investor letter for “Alger Small Cap Growth Fund”. The letter can be downloaded here. U.S. equities rose modestly in Q3 2026, with the S&amp;P 500 up 2%, driven by strong earnings, consumer r",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adaptive-biotechnologies-corp-adpt-rallies-145442301.html?.tsrc=rss",
+   "published_at": "2026-10-27T14:54:42Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:44Z",
+   "fingerprint": "8e33303e94bc4a75",
+   "primary_source": false,
+   "cluster_id": "f54ef78629b1cc92",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4ba1400be147ea05",
+   "symbols": [
+    "ADPT",
+    "IQV",
+    "PSNL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What Happens To Tempus AI Stock If Its Cash Burn Continues?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/tem/articles/620504/what-happens-to-tempus-ai-stock-if-its-cash-burn-continues/2026-10-26?.tsrc=rss",
+   "published_at": "2026-10-26T12:47:57Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:02:07Z",
+   "fingerprint": "3e72255120cd0f5f",
+   "primary_source": false,
+   "cluster_id": "4ba1400be147ea05",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5613b74057c93566",
+   "symbols": [
+    "ADPT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Should You Be Worried About Tempus AI Stock?",
+   "summary": "Tempus AI (TEM) stock has lost 17.3% over the past month, while the S&amp;P 500 gained 0.6%. The company still grew sales 22% in its latest quarter, but the risk worth your attention lies with the few drugmakers that license its data. One of them is a very large client. Which dru",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/619366/should-you-be-worried-about-tempus-ai-stock/2026-10-20?.tsrc=rss",
+   "published_at": "2026-10-20T11:03:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:44Z",
+   "fingerprint": "6059195a54606e4b",
+   "primary_source": false,
+   "cluster_id": "5613b74057c93566",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e02ffdd8bdeea684",
+   "symbols": [
+    "ADPT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adaptive Biotechnologies to Report Third Quarter 2026 Financial Results on November 4, 2026",
+   "summary": "SEATTLE, Oct. 14, 2026 (GLOBE NEWSWIRE) -- Adaptive Biotechnologies Corporation (Nasdaq: ADPT), a commercial stage biotechnology company that aims to translate the genetics of the adaptive immune system into clinical products to diagnose and treat disease, today announced it will",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adaptive-biotechnologies-report-third-quarter-200500714.html?.tsrc=rss",
+   "published_at": "2026-10-14T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:44Z",
+   "fingerprint": "4d0f830b2ff7115b",
+   "primary_source": false,
+   "cluster_id": "e02ffdd8bdeea684",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3235a1b0d8500829",
+   "symbols": [
+    "ADPT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Could You Have Seen The Run In Tempus AI Stock Coming?",
+   "summary": "Tempus AI (TEM) stock returned 56.9% in the six months from April 9 to October 8, 2026. Partway through that timeline, on July 30, the company finally reported a quarterly profit following years of losses. Yet the stock's run began more than three months before that earnings repo",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/618134/could-you-have-seen-the-run-in-tempus-ai-stock-coming/2026-10-09?.tsrc=rss",
+   "published_at": "2026-10-09T14:19:13Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:44Z",
+   "fingerprint": "982267f6e2e0b613",
+   "primary_source": false,
+   "cluster_id": "3235a1b0d8500829",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5e9d4ae372718c2d",
+   "symbols": [
+    "ADPT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adaptive Biotechnologies (ADPT) Stock Sees Modest Fair Value Lift On MRD Optimism",
+   "summary": "Adaptive Biotechnologies now sits on a higher modeled fair value, with the price target moving from US$26.36 to US$28.31 per share. This shift reflects how analysts are weighing strong enthusiasm around the clonoSEQ minimal residual disease franchise against ongoing questions abo",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adaptive-biotechnologies-adpt-stock-sees-201801472.html?.tsrc=rss",
+   "published_at": "2026-10-08T20:18:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:44Z",
+   "fingerprint": "a719ea2c47908d0d",
+   "primary_source": false,
+   "cluster_id": "5e9d4ae372718c2d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e39f6e0747e69247",
+   "symbols": [
+    "ADPT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adaptive Biotechnologies (ADPT) Stock Could Be 26% Above Fair Value Despite Guideline Update",
+   "summary": "Adaptive Biotechnologies has seen its share price move sharply in recent years, and the question now is whether the cash flows the business can generate really back up that kind of ride. With the stock recently closing at US$29.57 and investor attention drawn to new clinical guid",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adaptive-biotechnologies-adpt-stock-could-210632932.html?.tsrc=rss",
+   "published_at": "2026-09-25T21:06:32Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:44Z",
+   "fingerprint": "f2555378c4e3528e",
+   "primary_source": false,
+   "cluster_id": "e39f6e0747e69247",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "49aa291b9d14d362",
+   "symbols": [
+    "ADPT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adaptive Biotechnologies Highlights Role of Highly Sensitive MRD Testing in New International Myeloma Society Definition of Cure",
+   "summary": "Definition requires five years off myeloma treatment with sustained MRD negativity, assessed with technology sensitive enough to identify one myeloma cell among one million cellsSEATTLE, Sept. 25, 2026 (GLOBE NEWSWIRE) -- Adaptive Biotechnologies Corporation (Nasdaq: ADPT), a com",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adaptive-biotechnologies-highlights-role-highly-120300680.html?.tsrc=rss",
+   "published_at": "2026-09-25T12:03:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:44Z",
+   "fingerprint": "759f53d513e235bf",
+   "primary_source": false,
+   "cluster_id": "49aa291b9d14d362",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e2e12329cf6c9e5d",
+   "symbols": [
+    "ADPT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adaptive Biotechnologies (ADPT) Jumped, So What Is Driving Attention Now?",
+   "summary": "Adaptive Biotechnologies (ADPT) is back in focus after the National Comprehensive Cancer Network updated multiple myeloma guidelines to more fully embed minimal residual disease testing and explicitly reference the company’s clonoSEQ assay. Investors have reacted quickly to the g",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adaptive-biotechnologies-adpt-jumped-driving-042420491.html?.tsrc=rss",
+   "published_at": "2026-09-25T04:24:20Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:44Z",
+   "fingerprint": "3543e9a46aaffd35",
+   "primary_source": false,
+   "cluster_id": "e2e12329cf6c9e5d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8057296190a94b33",
+   "symbols": [
+    "ADPT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "NCCN’s Myeloma MRD Update Spotlighting clonoSEQ Could Be A Game Changer For Adaptive Biotechnologies (ADPT)",
+   "summary": "Adaptive Biotechnologies recently highlighted updates to the National Comprehensive Cancer Network multiple myeloma guidelines, which now feature a dedicated page on minimal residual disease testing and specifically reference its FDA-cleared clonoSEQ assay with preferred high-sen",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/nccn-myeloma-mrd-spotlighting-clonoseq-111251774.html?.tsrc=rss",
+   "published_at": "2026-09-24T11:12:51Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:44Z",
+   "fingerprint": "0f409f4dfd961e73",
+   "primary_source": false,
+   "cluster_id": "8057296190a94b33",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "aed3fc8216b94748",
+   "symbols": [
+    "ADPT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adaptive Biotechnologies (ADPT): Can Blood Cancer Guidelines Boost Repeat Testing?",
+   "summary": "Adaptive Biotechnologies Corporation (NASDAQ:ADPT) highlighted updated National Comprehensive Cancer Network, or NCCN, multiple myeloma guidelines on September 17. According to the announcement, the recommendations specifically name clonoSEQ and expand testing time points to incl",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adaptive-biotechnologies-adpt-blood-cancer-002807566.html?.tsrc=rss",
+   "published_at": "2026-09-23T00:28:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:44Z",
+   "fingerprint": "8fb203e198f07b99",
+   "primary_source": false,
+   "cluster_id": "aed3fc8216b94748",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fabe3c2e1d8e7591",
+   "symbols": [
+    "ADPT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adaptive Biotechnologies Announces Update to NCCN Guidelines® for Multiple Myeloma, Strengthening MRD Testing Recommendations and Specifically Referencing clonoSEQ®",
+   "summary": "Updated guidelines establish a dedicated framework for routine MRD assessment across the multiple myeloma patient journey clonoSEQ named as an FDA-cleared assay for MRD assessment, with 10-6 sensitivity now preferred SEATTLE, Sept. 17, 2026 (GLOBE NEWSWIRE) -- Adaptive Biotechnol",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adaptive-biotechnologies-announces-nccn-guidelines-120000398.html?.tsrc=rss",
+   "published_at": "2026-09-17T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:44Z",
+   "fingerprint": "59bf75a0df1b51af",
+   "primary_source": false,
+   "cluster_id": "fabe3c2e1d8e7591",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d43937ea0d6e856e",
+   "symbols": [
+    "ADPT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adaptive Biotechnologies to Participate in the Morgan Stanley 24th Annual Global Healthcare Conference",
+   "summary": "SEATTLE, Sept. 01, 2026 (GLOBE NEWSWIRE) -- Adaptive Biotechnologies Corporation (Nasdaq: ADPT), a commercial stage biotechnology company that aims to translate the genetics of the adaptive immune system into clinical products to diagnose and treat disease, today announced it wil",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adaptive-biotechnologies-participate-morgan-stanley-200500093.html?.tsrc=rss",
+   "published_at": "2026-09-01T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:44Z",
+   "fingerprint": "553a5cedcee80620",
+   "primary_source": false,
+   "cluster_id": "d43937ea0d6e856e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c87d581b752f144f",
+   "symbols": [
+    "ADPT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What Is Really Moving Tempus AI Stock Right Now?",
+   "summary": "While traders pointed to external clinical-trial momentum as a major catalyst, Tempus's own recent guidance raise and narrowing losses provided the underlying backdrop.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/612597/what-is-really-moving-tempus-ai-stock-right-now/2026-08-24?.tsrc=rss",
+   "published_at": "2026-08-24T18:23:25Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:44Z",
+   "fingerprint": "ced1546addd84918",
+   "primary_source": false,
+   "cluster_id": "c87d581b752f144f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4bfc867204ae30f6",
+   "symbols": [
+    "ADPT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adaptive Biotechnologies Stock Has Doubled in the Past Year. Here’s What Could Come Next.",
+   "summary": "Adaptive Biotechnologies (ADPT) has surged 100% over the past year, driven by strong technical momentum. Shares recently hit a new 3-year high. Analyst sentiment is mixed with price targets ranging from $17 to $30. Investor focus has shifted from ADPT’s technology to its business",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "barchart.com",
+   "url": "https://www.barchart.com/story/news/3971554/adaptive-biotechnologies-stock-has-doubled-in-the-past-year-heres-what-could-come-next?.tsrc=rss",
+   "published_at": "2026-08-21T14:55:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:44Z",
+   "fingerprint": "86765a9c29dcb02a",
+   "primary_source": false,
+   "cluster_id": "4bfc867204ae30f6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5a99fd1f18cac1bf",
+   "symbols": [
+    "ADPT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Adaptive Biotechnologies Corporation (ADPT) Hit a 52 Week High, Can the Run Continue?",
+   "summary": "Adaptive Biotechnologies (ADPT) is at a 52-week high, but can investors hope for more gains in the future? We take a look at the company's fundamentals for clues.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/adaptive-biotechnologies-corporation-adpt-hit-131501212.html?.tsrc=rss",
+   "published_at": "2026-07-31T13:15:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:44Z",
+   "fingerprint": "3900812f64f04a5d",
+   "primary_source": false,
+   "cluster_id": "5a99fd1f18cac1bf",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e7e8627144cbe29a",
+   "symbols": [
+    "ADPT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adaptive Biotechnologies Corp (ADPT) (Q2 2026) Earnings Call Highlights: MRD Revenue Surges ...",
+   "summary": "Adaptive Biotechnologies Corp (ADPT) reports a strong Q2 with MRD revenue up 49% (ex-milestones) and raises full-year guidance, while progressing the separation of its Immune Medicine business.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adaptive-biotechnologies-corp-adpt-q2-050307312.html?.tsrc=rss",
+   "published_at": "2026-07-30T05:03:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:44Z",
+   "fingerprint": "2a6fe6390ba9e84f",
+   "primary_source": false,
+   "cluster_id": "e7e8627144cbe29a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2fa158f71e550efc",
+   "symbols": [
+    "ADPT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Adaptive Biotechnologies (ADPT) Reports Q2 Earnings: What Key Metrics Have to Say",
+   "summary": "While the top- and bottom-line numbers for Adaptive Biotechnologies (ADPT) give a sense of how the business performed in the quarter ended June 2026, it could be worth looking at how some of its key metrics compare to Wall Street estimates and year-ago values.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adaptive-biotechnologies-adpt-reports-q2-230004993.html?.tsrc=rss",
+   "published_at": "2026-07-29T23:00:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:44Z",
+   "fingerprint": "932a2a8de1189477",
+   "primary_source": false,
+   "cluster_id": "2fa158f71e550efc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "5a251ae9c8e79b56",

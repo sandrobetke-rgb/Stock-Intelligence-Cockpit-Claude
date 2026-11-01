@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 46.34000015258789,
     "day_low": 45.34000015258789,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 85.11952765309442,
+    "adx14": 13.404691036616073,
+    "ema10": 44.35082306179529,
+    "sma200": 46.206875019073486,
+    "perf_63d": 1.670378562387631,
+    "adr20_pct": 2.9405480036772627,
+    "range10_pct": 9.785198865896927,
+    "high10_prev": 46.0,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -138,11 +172,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 0.6,
+   "score": 16.8,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -241,7 +277,17 @@
     "green": true,
     "day_high": 46.34000015258789,
     "day_low": 45.34000015258789,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 85.11952765309442,
+    "adx14": 13.404691036616073,
+    "ema10": 44.35082306179529,
+    "sma200": 46.206875019073486,
+    "perf_63d": 1.670378562387631,
+    "adr20_pct": 2.9405480036772627,
+    "range10_pct": 9.785198865896927,
+    "high10_prev": 46.0,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -271,6 +317,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [],
@@ -278,7 +345,10 @@
     "S01": 0.0,
     "S02": 0.6,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -616,11 +686,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 0.6,
+  "score": 16.8,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 3.5,
@@ -638,25 +708,27 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 5,
+    "independent": 5,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -675,7 +747,384 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "4f66331bbc743773",
+   "symbols": [
+    "XPEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Mobileye Global (MBLY) Q3 Earnings and Revenues Beat Estimates",
+   "summary": "Mobileye (MBLY) delivered earnings and revenue surprises of +10.00% and +3.83%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/mobileye-global-mbly-q3-earnings-113508856.html?.tsrc=rss",
+   "published_at": "2026-10-29T11:35:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:02Z",
+   "fingerprint": "660afec5e41a5cf4",
+   "primary_source": false,
+   "cluster_id": "4f66331bbc743773",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "678f4529ca4e08e3",
+   "symbols": [
+    "XPEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "XPEL Announces Expansion into Brazil with Opening of São Paulo Headquarters, Warehouse and Training Center",
+   "summary": "SÃO PAULO, October 23, 2026--XPEL, Inc. (NASDAQ: XPEL), a global leader in protective films and coatings, today announced the official opening of its new Brazil headquarters, warehouse and training center in São Paulo, marking a significant milestone in the company's long-term co",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/xpel-announces-expansion-brazil-opening-124500684.html?.tsrc=rss",
+   "published_at": "2026-10-23T12:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:02Z",
+   "fingerprint": "2bd6de7f0e94a14b",
+   "primary_source": false,
+   "cluster_id": "678f4529ca4e08e3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c4cc74a43d1df3e7",
+   "symbols": [
+    "THRM",
+    "XPEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Gentherm (THRM) Lags Q3 Earnings Estimates",
+   "summary": "Gentherm (THRM) delivered earnings and revenue surprises of -50.00% and +0.17%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gentherm-thrm-lags-q3-earnings-102502347.html?.tsrc=rss",
+   "published_at": "2026-10-22T10:25:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:44:54Z",
+   "fingerprint": "7ac3528297a62daf",
+   "primary_source": false,
+   "cluster_id": "c4cc74a43d1df3e7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bb2f0aa462d38a1e",
+   "symbols": [
+    "XPEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "XPEL, Inc. to Host Conference Call to Discuss Third Quarter 2026 Results",
+   "summary": "SAN ANTONIO, October 21, 2026--XPEL, Inc. (Nasdaq: XPEL) a global provider of protective films and coatings, today announced it will host a conference call and webcast on Wednesday, November 4, 2026 at 8:30 a.m. Eastern Time to discuss the Company’s third quarter 2026 results.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xpel-inc-host-conference-call-123000000.html?.tsrc=rss",
+   "published_at": "2026-10-21T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:02Z",
+   "fingerprint": "fc1a83af18aee234",
+   "primary_source": false,
+   "cluster_id": "af53fbb6e490ef6c",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e898c657505177ef",
+   "symbols": [
+    "XPEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "XPEL (XPEL) Could Be 29% Undervalued As $110 Million Expansion Refocuses Valuation",
+   "summary": "XPEL (XPEL) is committing US$110 million to expand manufacturing in San Antonio and acquire a plant in China, a move that refocuses investor attention on its self-healing paint protection film business. The fresh US$110 million capacity build comes after a softer patch in the XPE",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xpel-xpel-could-29-undervalued-121258250.html?.tsrc=rss",
+   "published_at": "2026-10-15T12:12:58Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:02Z",
+   "fingerprint": "06a0c87b4c87c80d",
+   "primary_source": false,
+   "cluster_id": "e898c657505177ef",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0dce0c2f85c0ed29",
+   "symbols": [
+    "XPEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "34 Miles Out to Sea, Nowhere to Hide from the Sun: Tint World® and XPEL Team Up to Protect Historic Frying Pan Shoals Tower",
+   "summary": "SAN ANTONIO, September 10, 2026--Tint World® Automotive Styling Centers™ recently completed one of the more unconventional installations in the brand's history: applying protective window film to Frying Pan Shoals Tower, a decommissioned U.S. Coast Guard light station located 34 ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/34-miles-sea-nowhere-hide-123000804.html?.tsrc=rss",
+   "published_at": "2026-09-10T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:02Z",
+   "fingerprint": "d912436aced7a2d6",
+   "primary_source": false,
+   "cluster_id": "0dce0c2f85c0ed29",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5ea6928e01f5eca2",
+   "symbols": [
+    "XPEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "XPEL and Will Castro Return for Season 2 of 'Unique Academy USA,' Expanding Reach of Transformative Automotive Career Program",
+   "summary": "SAN ANTONIO, August 17, 2026--XPEL, Inc. (Nasdaq: XPEL), a leading provider of protective films and coatings, and acclaimed car customizer and TV personality, Will Castro, today announced that Season 2 of ‘Unique Academy USA’ will debut August 18th on the ROKU platform. The new s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/xpel-castro-return-season-2-123000454.html?.tsrc=rss",
+   "published_at": "2026-08-17T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:02Z",
+   "fingerprint": "60f8302053890867",
+   "primary_source": false,
+   "cluster_id": "5ea6928e01f5eca2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d40daf577ed1c9d6",
+   "symbols": [
+    "XPEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "XPEL (XPEL) Q2 2026 Earnings Call Transcript",
+   "summary": "Record revenue and manufacturing investments signal transformational growth ahead.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/12/xpel-xpel-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-12T18:14:15Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:02Z",
+   "fingerprint": "76e3339687170a8a",
+   "primary_source": false,
+   "cluster_id": "d40daf577ed1c9d6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7643ff96b8fc6b68",
+   "symbols": [
+    "XPEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Why XPEL (XPEL) Is Up 12.8% After Q2 Beat, Q3 Guidance And Board Change - And What's Next",
+   "summary": "XPEL, Inc. reported past second-quarter 2026 results showing revenue of US$143.05 million and net income of US$18.04 million, alongside Q3 revenue guidance of US$137 million to US$139 million and the resignation of director Mark Thornton due to his employer's new policy. The comb",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-xpel-xpel-12-8-041826857.html?.tsrc=rss",
+   "published_at": "2026-08-08T04:18:26Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:02Z",
+   "fingerprint": "ca8d4bccaf9165c2",
+   "primary_source": false,
+   "cluster_id": "7643ff96b8fc6b68",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1b221371b0e46eaa",
+   "symbols": [
+    "XPEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "San Antonio-based Xpel sets revenue record in Q2, beats expectations",
+   "summary": "The manufacturer of automotive protective films and coatings said revenue reached a record $143.1 million. It also set revenue records in the U.S. market and one of its divisions.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "expressnews.com",
+   "url": "https://www.expressnews.com/business/article/xpel-q2-earnings-san-antonio-record-22375199.php?.tsrc=rss",
+   "published_at": "2026-08-05T23:10:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:02Z",
+   "fingerprint": "68d8919ab54e4090",
+   "primary_source": false,
+   "cluster_id": "1b221371b0e46eaa",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "11dbcb4c65927ce2",
+   "symbols": [
+    "XPEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "XPEL Inc (XPEL) (Q2 2026) Earnings Call Highlights: Record Revenue and Strategic Manufacturing ...",
+   "summary": "XPEL Inc (XPEL) posts record Q2 revenue of $143.1 million, up 14.7% year-over-year, while advancing its manufacturing strategy to drive future margin expansion.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xpel-inc-xpel-q2-2026-210519702.html?.tsrc=rss",
+   "published_at": "2026-08-05T21:05:19Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:02Z",
+   "fingerprint": "4aa20515094bf4f0",
+   "primary_source": false,
+   "cluster_id": "11dbcb4c65927ce2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5afa15d381405809",
+   "symbols": [
+    "XPEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "XPEL Q2 Earnings Call Highlights",
+   "summary": "XPEL (NASDAQ:XPEL) reported record second-quarter revenue as growth in the United States, China and other Asia-Pacific markets offset continued pressure in dealerships, softer European results and a decline in India and Middle East revenue tied partly to vehicle availability. Rev",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/xpel-q2-earnings-call-highlights-2026-08-05/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-05T20:04:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:02Z",
+   "fingerprint": "b415fcd36b565b29",
+   "primary_source": false,
+   "cluster_id": "5afa15d381405809",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "41c877767b6c8c20",
+   "symbols": [
+    "XPEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "XPEL, Inc. Q2 2026 Earnings Call Summary",
+   "summary": "Moby summary of XPEL, Inc.'s Q2 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-xpel-inc-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-08-05T17:00:34Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:02Z",
+   "fingerprint": "1903f4138b2d5f01",
+   "primary_source": false,
+   "cluster_id": "41c877767b6c8c20",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8ce59afaa49a1d84",
+   "symbols": [
+    "XPEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "XPEL, Inc. (XPEL) Q2 Earnings and Revenues Top Estimates",
+   "summary": "XPEL (XPEL) delivered earnings and revenue surprises of +11.48% and +7.15%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xpel-inc-xpel-q2-earnings-130011893.html?.tsrc=rss",
+   "published_at": "2026-08-05T13:00:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:02Z",
+   "fingerprint": "7c891a6903981ad4",
+   "primary_source": false,
+   "cluster_id": "8ce59afaa49a1d84",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "76a82b126ee95aa2",
+   "symbols": [
+    "XPEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "XPEL Reports Record Revenue of $143.1 million; Revenue Growth of 14.7% in Second Quarter 2026",
+   "summary": "SAN ANTONIO, August 05, 2026--XPEL, Inc. (Nasdaq: XPEL) (the \"Company\"), a global provider of protective films and coatings, announced consolidated results1 for the second quarter and six months ended June 30, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xpel-reports-record-revenue-143-113000510.html?.tsrc=rss",
+   "published_at": "2026-08-05T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:02Z",
+   "fingerprint": "a5f54fe3d4d0e6af",
+   "primary_source": false,
+   "cluster_id": "76a82b126ee95aa2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0cd472925f65d90f",
+   "symbols": [
+    "OPLN",
+    "XPEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "OPENLANE (OPLN) Q2 Earnings and Revenues Surpass Estimates",
+   "summary": "OPENLANE (OPLN) delivered earnings and revenue surprises of +14.29% and +6.35%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/openlane-opln-q2-earnings-revenues-122504130.html?.tsrc=rss",
+   "published_at": "2026-08-04T12:25:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:19Z",
+   "fingerprint": "da0ae5c42af4008d",
+   "primary_source": false,
+   "cluster_id": "0cd472925f65d90f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "af53fbb6e490ef6c",
+   "symbols": [
+    "XPEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "XPEL, Inc. to Host Conference Call to Discuss Second Quarter 2026 Results",
+   "summary": "SAN ANTONIO, July 23, 2026--XPEL, Inc. (Nasdaq: XPEL) a global provider of protective films and coatings, today announced it will host a conference call and webcast on Wednesday, August 5, 2026 at 8:30 a.m. Eastern Time to discuss the Company’s second quarter 2026 results.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xpel-inc-host-conference-call-123000301.html?.tsrc=rss",
+   "published_at": "2026-07-23T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:02Z",
+   "fingerprint": "968fe47467793216",
+   "primary_source": false,
+   "cluster_id": "af53fbb6e490ef6c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "ad2271f7b2c65d17",

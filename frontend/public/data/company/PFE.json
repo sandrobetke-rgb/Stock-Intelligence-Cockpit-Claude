@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -35,16 +35,16 @@
     "close": 30.520000457763672,
     "change_pct": 1.9031708858236351,
     "ema20": 29.38957764291125,
-    "ema50": 28.464536277832334,
-    "ema200": 26.44058913980407,
+    "ema50": 28.464536277849405,
+    "ema200": 26.440589132389604,
     "sma50": 28.54659996032715,
-    "rsi14": 66.57803656125033,
-    "rsi_min5": 56.53523938349963,
-    "atr14": 0.5745406168187436,
-    "atr_pct": 1.8825052693359052,
+    "rsi14": 66.57803656125046,
+    "rsi_min5": 56.53523938349966,
+    "atr14": 0.5745406168187448,
+    "atr_pct": 1.8825052693359094,
     "rvol": 1.553046045763341,
     "vol30": 30175973.333333332,
-    "dist_ema200_pct": 15.428594636790427,
+    "dist_ema200_pct": 15.42859466915889,
     "dist_52w_high_pct": 0.48907602920488236,
     "high_52w": 30.670000076293945,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 30.670000076293945,
     "day_low": 30.139999389648438,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 87.68753276850734,
+    "adx14": 29.180257781946345,
+    "ema10": 29.816426456107276,
+    "sma200": 26.32670521736145,
+    "perf_63d": 21.93367806836415,
+    "adr20_pct": 1.8385214471230866,
+    "range10_pct": 4.175226726119541,
+    "high10_prev": 30.440000534057617,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,16 +98,41 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": false
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": true,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
-    "S03"
+    "S03",
+    "DSM"
    ],
    "near": {
     "S01": 0.0,
     "S02": 0.7,
     "S03": 1.0,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 1.0,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.6666666666666666
    },
    "filter": {
     "Tag grün": true,
@@ -159,11 +194,11 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 32,
+   "mentions_7d": 37,
    "manipulation_risk": "unauffällig",
-   "mentions_24h": 5,
-   "sentiment_7d": 0.38,
-   "bullish_7d": 9,
+   "mentions_24h": 7,
+   "sentiment_7d": 0.35,
+   "bullish_7d": 10,
    "bearish_7d": 0
   },
   "insider": {
@@ -233,16 +268,16 @@
     "close": 30.520000457763672,
     "change_pct": 1.9031708858236351,
     "ema20": 29.38957764291125,
-    "ema50": 28.464536277832334,
-    "ema200": 26.44058913980407,
+    "ema50": 28.464536277849405,
+    "ema200": 26.440589132389604,
     "sma50": 28.54659996032715,
-    "rsi14": 66.57803656125033,
-    "rsi_min5": 56.53523938349963,
-    "atr14": 0.5745406168187436,
-    "atr_pct": 1.8825052693359052,
+    "rsi14": 66.57803656125046,
+    "rsi_min5": 56.53523938349966,
+    "atr14": 0.5745406168187448,
+    "atr_pct": 1.8825052693359094,
     "rvol": 1.553046045763341,
     "vol30": 30175973.333333332,
-    "dist_ema200_pct": 15.428594636790427,
+    "dist_ema200_pct": 15.42859466915889,
     "dist_52w_high_pct": 0.48907602920488236,
     "high_52w": 30.670000076293945,
     "macd_above_signal": true,
@@ -256,7 +291,17 @@
     "green": true,
     "day_high": 30.670000076293945,
     "day_low": 30.139999389648438,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 87.68753276850734,
+    "adx14": 29.180257781946345,
+    "ema10": 29.816426456107276,
+    "sma200": 26.32670521736145,
+    "perf_63d": 21.93367806836415,
+    "adr20_pct": 1.8385214471230866,
+    "range10_pct": 4.175226726119541,
+    "high10_prev": 30.440000534057617,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -286,16 +331,41 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": false
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": true,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
-    "S03"
+    "S03",
+    "DSM"
    ],
    "near": {
     "S01": 0.0,
     "S02": 0.7,
     "S03": 1.0,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 1.0,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.6666666666666666
    },
    "filter": {
     "Tag grün": true,
@@ -1270,21 +1340,21 @@
   }
  ],
  "social_detail": {
-  "mentions_24h": 5,
-  "mentions_7d": 32,
-  "mentions_30d": 32,
-  "change_vs_baseline_pct": 30,
-  "engagement_7d": 116.0,
-  "sentiment_7d": 0.38,
+  "mentions_24h": 7,
+  "mentions_7d": 37,
+  "mentions_30d": 37,
+  "change_vs_baseline_pct": 63,
+  "engagement_7d": 144.0,
+  "sentiment_7d": 0.35,
   "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
-  "bullish_7d": 9,
+  "bullish_7d": 10,
   "bearish_7d": 0,
   "by_platform_7d": {
-   "stocktwits": 31,
+   "stocktwits": 36,
    "reddit": 1
   },
   "communities_7d": {
-   "StockTwits": 31,
+   "StockTwits": 36,
    "r/ValueInvesting": 1
   },
   "platforms": [
@@ -1311,7 +1381,27 @@
     "posted_at": "2026-10-30T21:35:07Z",
     "url": "https://stocktwits.com/MJStock/message/667826858",
     "text": "$TGTX $PFE was nicely green today also",
+    "engagement": 10.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "1of402Phase2TrialUSA",
+    "posted_at": "2026-10-30T21:43:09Z",
+    "url": "https://stocktwits.com/1of402Phase2TrialUSA/message/667827379",
+    "text": "$INO $MRNA $$SPY $PFE Inovio beat the majors to the 1st DNA Medicine FDA approved in the World. With a big pipeline of Cancer killing Vaccines. Awarded today after trading! Congrats Inovio!!!! Let’s devour those 30% of float Shirts Monday morning. I’m good with $25 a share🚀🚀🚀",
     "engagement": 9.0,
+    "sentiment_label": "Bullish"
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "framus_morrigan",
+    "posted_at": "2026-10-31T09:01:37Z",
+    "url": "https://stocktwits.com/framus_morrigan/message/667841248",
+    "text": "$PFE Monthly candles chart. Nice candle. Keep going!",
+    "engagement": 8.0,
     "sentiment_label": null
    },
    {
@@ -1322,26 +1412,6 @@
     "url": "https://stocktwits.com/Dl71174/message/667834860",
     "text": "$INO $LLY $PFE $PGEN \nConference call before Market opens 8:00 a.m. for the first FDA approved non surgical respiratory treatment.\nThe approval caused the only other treatment $PGEN to collapse 27% after hours 👍 $INO",
     "engagement": 8.0,
-    "sentiment_label": null
-   },
-   {
-    "platform": "stocktwits",
-    "community": "StockTwits",
-    "author": "1of402Phase2TrialUSA",
-    "posted_at": "2026-10-30T21:43:09Z",
-    "url": "https://stocktwits.com/1of402Phase2TrialUSA/message/667827379",
-    "text": "$INO $MRNA $$SPY $PFE Inovio beat the majors to the 1st DNA Medicine FDA approved in the World. With a big pipeline of Cancer killing Vaccines. Awarded today after trading! Congrats Inovio!!!! Let’s devour those 30% of float Shirts Monday morning. I’m good with $25 a share🚀🚀🚀",
-    "engagement": 8.0,
-    "sentiment_label": "Bullish"
-   },
-   {
-    "platform": "stocktwits",
-    "community": "StockTwits",
-    "author": "framus_morrigan",
-    "posted_at": "2026-10-31T09:01:37Z",
-    "url": "https://stocktwits.com/framus_morrigan/message/667841248",
-    "text": "$PFE Monthly candles chart. Nice candle. Keep going!",
-    "engagement": 7.0,
     "sentiment_label": null
    }
   ]

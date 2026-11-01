@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 10.694999694824219,
     "day_low": 9.899999618530273,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 24.414703869906575,
+    "adx14": 40.67817956382765,
+    "ema10": 11.356183271384708,
+    "sma200": 21.13307499885559,
+    "perf_63d": -60.07707378770909,
+    "adr20_pct": 8.348359205954413,
+    "range10_pct": 36.09022024958812,
+    "high10_prev": 12.670000076293945,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -139,12 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 12.0,
+   "score": 33.1,
    "drivers": [
+    "news_flow",
     "social_attention",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -250,7 +285,17 @@
     "green": false,
     "day_high": 10.694999694824219,
     "day_low": 9.899999618530273,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 24.414703869906575,
+    "adx14": 40.67817956382765,
+    "ema10": 11.356183271384708,
+    "sma200": 21.13307499885559,
+    "perf_63d": -60.07707378770909,
+    "adr20_pct": 8.348359205954413,
+    "range10_pct": 36.09022024958812,
+    "high10_prev": 12.670000076293945,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -280,6 +325,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -287,7 +353,10 @@
     "S01": 0.5,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.3333333333333333,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -626,11 +695,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 12.0,
+  "score": 33.1,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 37.1,
@@ -648,25 +717,26 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
    "social_attention",
    "price_volume_anomaly"
   ],
@@ -686,7 +756,450 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "0fe90e7127fbfb1c",
+   "symbols": [
+    "WYFI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WhiteFiber Announces Third Quarter 2026 Earnings Conference Call",
+   "summary": "WhiteFiber, Inc. (NASDAQ: WYFI), a leading provider of AI infrastructure and HPC solutions, today announced that it will host a conference call on November 10, 2026, at 9:00 a.m. Eastern Time to discuss its results for the third quarter ended September 30, 2026. A press release a",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/whitefiber-announces-third-quarter-2026-203000963.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:56Z",
+   "fingerprint": "7145c357b778ac36",
+   "primary_source": false,
+   "cluster_id": "0fe90e7127fbfb1c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1f8dfbf8f95eff63",
+   "symbols": [
+    "NN",
+    "WYFI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Spartacus Acquisition (NN) Surges 11.9%: Is This an Indication of Further Gains?",
+   "summary": "Spartacus Acquisition (NN) witnessed a jump in share price last session on above-average trading volume. The latest trend in earnings estimate revisions for the stock doesn't suggest further strength down the road.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/spartacus-acquisition-nn-surges-11-141500748.html?.tsrc=rss",
+   "published_at": "2026-10-27T14:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:27Z",
+   "fingerprint": "b88b3f70f6791f55",
+   "primary_source": false,
+   "cluster_id": "1f8dfbf8f95eff63",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fa0fddc40303f93f",
+   "symbols": [
+    "WYFI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Clockwork.io Raises $31M as LinkedIn, Together AI and WhiteFiber Adopt Its Resilience Software to Stop Wasting GPU-Hours",
+   "summary": "Clockwork.io, whose fault-tolerance software keeps AI training, reinforcement learning and inference workloads running through infrastructure failures, today announced $31 million in new funding, production deployments at LinkedIn and Together AI, and expanded adoption by WhiteFi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/clockwork-io-raises-31m-linkedin-130000766.html?.tsrc=rss",
+   "published_at": "2026-10-05T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:56Z",
+   "fingerprint": "eff80998f62d8a81",
+   "primary_source": false,
+   "cluster_id": "fa0fddc40303f93f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "daddeb3e3a9d4e03",
+   "symbols": [
+    "BTBT",
+    "WYFI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Bit Digital (BTBT) Stock Fair Value Moves Lower As WhiteFiber And ETH Debate Continues",
+   "summary": "Bit Digital is back in focus after a reset to the analyst fair value estimate, with the modelled equity value per share reduced from US$4.10 to US$3.63. That shift lines up with Street price targets clustered in the US$3 to US$4 range and reflects an active debate over how much c",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/bit-digital-btbt-stock-fair-042508663.html?.tsrc=rss",
+   "published_at": "2026-10-02T04:25:08Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:47:38Z",
+   "fingerprint": "6ca0fb94c8d61478",
+   "primary_source": false,
+   "cluster_id": "daddeb3e3a9d4e03",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9bbddfddc3e66d46",
+   "symbols": [
+    "WYFI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WYFI Stock Rallies 56% in 6 Months: Here's What You Should Know",
+   "summary": "WhiteFiber is shifting NC-1 into revenue generation while expanding its cloud contract base and planning NC-2 and NC-3 data center campuses.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wyfi-stock-rallies-56-6-140100411.html?.tsrc=rss",
+   "published_at": "2026-09-30T14:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:56Z",
+   "fingerprint": "4ab95f4893db9396",
+   "primary_source": false,
+   "cluster_id": "9bbddfddc3e66d46",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4d897898246aee19",
+   "symbols": [
+    "WYFI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WhiteFiber Launches WhiteFiber Continuum, the Highest Performing Distributed GPU Supercluster Architecture",
+   "summary": "WhiteFiber, Inc. (NASDAQ: WYFI), a provider of AI infrastructure solutions, today announced the commercial availability of WhiteFiber Continuum, its highest-performance cross-data-center networking solution and the first commercially available distributed GPU supercluster archite",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/whitefiber-launches-whitefiber-continuum-highest-123000069.html?.tsrc=rss",
+   "published_at": "2026-09-23T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:56Z",
+   "fingerprint": "24d3017dd701b516",
+   "primary_source": false,
+   "cluster_id": "4d897898246aee19",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "55b9b87d6e5ae66a",
+   "symbols": [
+    "WYFI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "B. Riley keeps WhiteFiber at Buy, $38 target as North Carolina financing nears",
+   "summary": "The firm sees NC-1 project financing and two pending property acquisitions setting the pace for WhiteFiber’s 2027 data-center expansion.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "blockspace.media",
+   "url": "https://blockspace.media/insight/b-riley-whitefiber-north-carolina-financing-2027/?.tsrc=rss",
+   "published_at": "2026-09-10T22:15:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:56Z",
+   "fingerprint": "a837f5bbdb9f3b5e",
+   "primary_source": false,
+   "cluster_id": "55b9b87d6e5ae66a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2ddae5998ace699f",
+   "symbols": [
+    "WYFI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "BTBT, WULF Stocks Defy Market Sell-Off After Bullish Wall Street Backing On Pivot Away From Bitcoin Mining",
+   "summary": "Freedom Capital found a “defensible floor” for WULF around $14 a share, where it traded for four straight sessions last week.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/bit-digital-tera-wulf-land-new-buy-ratings-as-firms-look-past-bitcoin-mining/cZtE2uJRJUw?.tsrc=rss",
+   "published_at": "2026-09-08T17:04:29Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:56Z",
+   "fingerprint": "27edc0c881aaee6d",
+   "primary_source": false,
+   "cluster_id": "2ddae5998ace699f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "aed4d0f0aee4dd1b",
+   "symbols": [
+    "WYFI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WhiteFiber’s Cloud and Colocation Revenue Grew With 6 Million Shares Sold Short. Is This AI Data-Center Bet a Squeeze or a Trap?",
+   "summary": "WhiteFiber’s August 12 filing showed that second-quarter colocation and cloud-services revenue both increased, while 6.04 million shares were sold short at the August 14 settlement. That pairing captures the market’s argument over an ambitious AI-infrastructure buildout. WhiteFib",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/whitefiber-cloud-colocation-revenue-grew-101709645.html?.tsrc=rss",
+   "published_at": "2026-09-05T10:17:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:56Z",
+   "fingerprint": "ebfc3afaf73939dd",
+   "primary_source": false,
+   "cluster_id": "aed4d0f0aee4dd1b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1aa328145f658396",
+   "symbols": [
+    "WYFI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WYFI Stock Jumps 12% in 6 Months: Here's What You Should Know",
+   "summary": "WhiteFiber gains 12% in six months as NC-1 contracts, cloud deals and AI infrastructure scarcity boost revenue visibility and expansion potential.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wyfi-stock-jumps-12-6-142100436.html?.tsrc=rss",
+   "published_at": "2026-08-28T14:21:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:56Z",
+   "fingerprint": "684478ec5da1c00c",
+   "primary_source": false,
+   "cluster_id": "1aa328145f658396",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "50add13b4da2a8c1",
+   "symbols": [
+    "WYFI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WhiteFiber (WYFI) Secures Funding And Capacity, Is The Stock A Bargain?",
+   "summary": "WhiteFiber (WYFI) is back on investor radar after completing a $270 million Rule 144A convertible bond offering and securing a Krambu partnership for future high density GPU data center capacity. See our latest analysis for WhiteFiber. Despite the Krambu agreement and the $270 mi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/whitefiber-wyfi-secures-funding-capacity-110948304.html?.tsrc=rss",
+   "published_at": "2026-08-24T11:09:48Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:56Z",
+   "fingerprint": "f0259df57291c830",
+   "primary_source": false,
+   "cluster_id": "50add13b4da2a8c1",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "10893fec340d556f",
+   "symbols": [
+    "WYFI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WhiteFiber (WYFI) Is Down 29.8% After Securing 100MW Krambu AI Infrastructure Deal - What's Changed",
+   "summary": "WhiteFiber, Inc. previously completed a US$270 million Rule 144A convertible senior unsecured bond offering with a 5% coupon, due September 1, 2032, shortly after announcing a US$250 million convertible notes plan and releasing higher revenue but wider loss figures for the June 3",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/whitefiber-wyfi-down-29-8-060857717.html?.tsrc=rss",
+   "published_at": "2026-08-23T06:08:57Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:56Z",
+   "fingerprint": "c054a8ae8b80d6f3",
+   "primary_source": false,
+   "cluster_id": "10893fec340d556f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cb7c9678367743a1",
+   "symbols": [
+    "WYFI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WhiteFiber Announces Closing of Upsized $310.0 Million Convertible Senior Notes Offering",
+   "summary": "WhiteFiber, Inc. (Nasdaq: WYFI) (\"WhiteFiber\" or the \"Company\"), a provider of artificial intelligence (\"AI\") infrastructure and high-performance computing (\"HPC\") solutions, today announced the closing of its previously announced upsized private placement (the \"offering\") of $31",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/whitefiber-announces-closing-upsized-310-200100066.html?.tsrc=rss",
+   "published_at": "2026-08-21T20:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:56Z",
+   "fingerprint": "eba3fe7c9c24dc5b",
+   "primary_source": false,
+   "cluster_id": "cb7c9678367743a1",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7d908c1d70f63c5c",
+   "symbols": [
+    "WYFI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WYFI Stock Crashed More Than 22% In Pre-Market Today – What’s The Latest On Its Convertible Note Offering?",
+   "summary": "WhiteFiber priced its convertible note offering at a 25% premium to the stock’s last closing price, but the offer was upsized to $270 million from the previously announced $250 million.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/wyfi-stock-crashed-more-than-22-in-pre-market-today-what-s-the-latest-on-its-convertible-note-offering/cZYdSbnRJlc?.tsrc=rss",
+   "published_at": "2026-08-19T13:26:25Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:56Z",
+   "fingerprint": "886ce20041ae609d",
+   "primary_source": false,
+   "cluster_id": "7d908c1d70f63c5c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "263408439e57bbbc",
+   "symbols": [
+    "WYFI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WhiteFiber Announces Pricing of Upsized $270.0 Million Convertible Senior Notes Offering",
+   "summary": "WhiteFiber, Inc. (Nasdaq: WYFI) (\"WhiteFiber\" or the \"Company\"), a provider of artificial intelligence (\"AI\") infrastructure and high-performance computing (\"HPC\") solutions, today announced the pricing of $270.0 million principal amount of 5.00% Convertible Senior Notes due 2032",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/whitefiber-announces-pricing-upsized-270-113000590.html?.tsrc=rss",
+   "published_at": "2026-08-19T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:56Z",
+   "fingerprint": "16231a3bb75202dd",
+   "primary_source": false,
+   "cluster_id": "263408439e57bbbc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "210aa0c9791bf722",
+   "symbols": [
+    "WYFI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "WhiteFiber Announces Proposed Private Placement of $250.0 Million of Convertible Senior Notes",
+   "summary": "WhiteFiber, Inc. (Nasdaq: WYFI) (\"WhiteFiber\" or the \"Company\"), a provider of artificial intelligence (\"AI\") infrastructure and high-performance computing (\"HPC\") solutions, today announced that it intends to offer, subject to market conditions and other factors, $250.0 million ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/whitefiber-announces-proposed-private-placement-200100096.html?.tsrc=rss",
+   "published_at": "2026-08-18T20:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:56Z",
+   "fingerprint": "2a9bff7f09d51739",
+   "primary_source": false,
+   "cluster_id": "210aa0c9791bf722",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e1878a1b8225c67f",
+   "symbols": [
+    "WYFI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Unifi to Sell $60M in Non-strategic Real Estate to Alleviate Debt",
+   "summary": "Repreve maker Unifi has entered an agreement to sell two non-strategic real estate assets in Yadkin County, North Carolina, in an effort to reduce debt.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "wwd.com",
+   "url": "https://wwd.com/sourcing-journal/industry-news/unifi-repreve-real-estate-warehouse-debt-domestic-production-1239128594/?.tsrc=rss",
+   "published_at": "2026-08-18T18:58:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:56Z",
+   "fingerprint": "69c70b3ca99e124f",
+   "primary_source": false,
+   "cluster_id": "e1878a1b8225c67f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2aa09d99c9816e51",
+   "symbols": [
+    "WYFI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WhiteFiber named exclusive operator for Krambu’s planned 100MW GPU buildout",
+   "summary": "Krambu will develop the data centers while WhiteFiber markets and operates the GPU capacity. The agreement adds a 2027 pipeline opportunity, but no sites, customers, financing or revenue have been…",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "blockspace.media",
+   "url": "https://blockspace.media/insight/whitefiber-named-exclusive-operator-krambu-gpu-buildout/?.tsrc=rss",
+   "published_at": "2026-08-18T14:40:34Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:56Z",
+   "fingerprint": "4dabdc7048412ed5",
+   "primary_source": false,
+   "cluster_id": "2aa09d99c9816e51",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7c025a27f7c75fc2",
+   "symbols": [
+    "WYFI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Needham raises WhiteFiber target to $41 after North Carolina site deal",
+   "summary": "The analyst moved 60 MW of planned 2027 capacity into its forecast, lifting revenue and adjusted EBITDA estimates while retaining a Buy rating.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "blockspace.media",
+   "url": "https://blockspace.media/insight/needham-raises-whitefiber-target-north-carolina/?.tsrc=rss",
+   "published_at": "2026-08-17T17:27:27Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:56Z",
+   "fingerprint": "8e293bd23daac1b0",
+   "primary_source": false,
+   "cluster_id": "7c025a27f7c75fc2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4a35ec307ffb869e",
+   "symbols": [
+    "WYFI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "WhiteFiber agrees to buy two North Carolina data-center sites for $60 million",
+   "summary": "The Yadkin County properties would add at least 60 MW of initial gross utility capacity, with ready-for-service capacity targeted for the third quarter of 2027.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "blockspace.media",
+   "url": "https://blockspace.media/insight/whitefiber-acquires-north-carolina-data-center-sites/?.tsrc=rss",
+   "published_at": "2026-08-17T14:26:35Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:56Z",
+   "fingerprint": "7a3c00f1228a1928",
+   "primary_source": false,
+   "cluster_id": "4a35ec307ffb869e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "641db7b783524ad0",

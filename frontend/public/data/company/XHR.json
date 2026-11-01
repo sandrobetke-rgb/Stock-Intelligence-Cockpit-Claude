@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -35,16 +35,16 @@
     "close": 20.450000762939453,
     "change_pct": -1.3030818502055563,
     "ema20": 19.39368322281714,
-    "ema50": 18.914223625860032,
-    "ema200": 17.49533260562309,
+    "ema50": 18.91422362582614,
+    "ema200": 17.495332599630164,
     "sma50": 18.519420166015625,
-    "rsi14": 74.21147510002383,
-    "rsi_min5": 74.21147510002383,
-    "atr14": 0.5041171026501033,
-    "atr_pct": 2.4651202143898714,
+    "rsi14": 74.21147510002535,
+    "rsi_min5": 74.21147510002535,
+    "atr14": 0.5041171026500915,
+    "atr_pct": 2.465120214389813,
     "rvol": 0.6530133928571429,
     "vol30": 888236.6666666666,
-    "dist_ema200_pct": 16.888322296694813,
+    "dist_ema200_pct": 16.88832233673425,
     "dist_52w_high_pct": 6.584794514047109,
     "high_52w": 21.891511833172146,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 20.959999084472656,
     "day_low": 20.15999984741211,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 42.09586416461473,
+    "adx14": 30.979471153449843,
+    "ema10": 19.949197621477712,
+    "sma200": 17.358951859474182,
+    "perf_63d": 0.5238793776077388,
+    "adr20_pct": 2.5792260758163414,
+    "range10_pct": 12.619802157782,
+    "high10_prev": 21.149999618530273,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
@@ -97,7 +128,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -110,9 +144,9 @@
    "plan": {
     "trigger": 18.559999465942383,
     "entry_max": 18.93119945526123,
-    "stop": 17.803823811967227,
-    "risk_per_share": 0.7561756539751556,
-    "target_1": 20.072350773892694,
+    "stop": 17.803823811967245,
+    "risk_per_share": 0.7561756539751379,
+    "target_1": 20.07235077389266,
     "trigger_basis": "letztes Higher High"
    }
   },
@@ -140,11 +174,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 5.4,
+   "score": 21.6,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -214,16 +250,16 @@
     "close": 20.450000762939453,
     "change_pct": -1.3030818502055563,
     "ema20": 19.39368322281714,
-    "ema50": 18.914223625860032,
-    "ema200": 17.49533260562309,
+    "ema50": 18.91422362582614,
+    "ema200": 17.495332599630164,
     "sma50": 18.519420166015625,
-    "rsi14": 74.21147510002383,
-    "rsi_min5": 74.21147510002383,
-    "atr14": 0.5041171026501033,
-    "atr_pct": 2.4651202143898714,
+    "rsi14": 74.21147510002535,
+    "rsi_min5": 74.21147510002535,
+    "atr14": 0.5041171026500915,
+    "atr_pct": 2.465120214389813,
     "rvol": 0.6530133928571429,
     "vol30": 888236.6666666666,
-    "dist_ema200_pct": 16.888322296694813,
+    "dist_ema200_pct": 16.88832233673425,
     "dist_52w_high_pct": 6.584794514047109,
     "high_52w": 21.891511833172146,
     "macd_above_signal": true,
@@ -237,7 +273,17 @@
     "green": false,
     "day_high": 20.959999084472656,
     "day_low": 20.15999984741211,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 42.09586416461473,
+    "adx14": 30.979471153449843,
+    "ema10": 19.949197621477712,
+    "sma200": 17.358951859474182,
+    "perf_63d": 0.5238793776077388,
+    "adr20_pct": 2.5792260758163414,
+    "range10_pct": 12.619802157782,
+    "high10_prev": 21.149999618530273,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -267,6 +313,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
@@ -276,7 +343,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.5,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -289,9 +359,9 @@
    "plan": {
     "trigger": 18.559999465942383,
     "entry_max": 18.93119945526123,
-    "stop": 17.803823811967227,
-    "risk_per_share": 0.7561756539751556,
-    "target_1": 20.072350773892694,
+    "stop": 17.803823811967245,
+    "risk_per_share": 0.7561756539751379,
+    "target_1": 20.07235077389266,
     "trigger_basis": "letztes Higher High"
    }
   }
@@ -614,11 +684,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 5.4,
+  "score": 21.6,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 30.7,
@@ -636,26 +706,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -673,7 +745,273 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "4570d0bea5784b5e",
+   "symbols": [
+    "XHR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xenia Hotels And Resorts (XHR) Stock May Be 32% Undervalued On Steady Cash Flow",
+   "summary": "Xenia Hotels & Resorts has delivered strong share price gains in recent years, which puts fresh focus on whether the current US$19.84 level is adequately backed by the cash it can generate. With the spotlight on cash flows rather than headlines, the question now is how well the u",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xenia-hotels-resorts-xhr-stock-121202823.html?.tsrc=rss",
+   "published_at": "2026-10-27T12:12:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "e15e6cdf051acc57",
+   "primary_source": false,
+   "cluster_id": "4570d0bea5784b5e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c9160b0de51e6560",
+   "symbols": [
+    "XHR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Xenia Hotels & Resorts (XHR) Stock Still Looks Undervalued After 75% Gain",
+   "summary": "Xenia Hotels & Resorts has delivered a 74.6% return over the past 3 years, which naturally puts a spotlight on whether the current share price around US$17.89 is still in line with what its sales can support. For a hotel-focused real estate business where revenue per room and occ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xenia-hotels-resorts-xhr-stock-201623868.html?.tsrc=rss",
+   "published_at": "2026-09-23T20:16:23Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "ccce1e384a0d0668",
+   "primary_source": false,
+   "cluster_id": "c9160b0de51e6560",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b4a93d3437fae986",
+   "symbols": [
+    "XHR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xenia Hotels & Resorts Declares Dividend for Third Quarter 2026",
+   "summary": "Xenia Hotels & Resorts, Inc. (NYSE: XHR) (\"Xenia\" or the \"Company\") today announced that its Board of Directors authorized a cash dividend of $0.14 per share of the Company's common stock for the third quarter 2026. The dividend will be paid on October 15, 2026 to all holders of ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/xenia-hotels-resorts-declares-dividend-203000797.html?.tsrc=rss",
+   "published_at": "2026-09-21T20:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "da34140320d2f026",
+   "primary_source": false,
+   "cluster_id": "b4a93d3437fae986",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "67f490decfd9e940",
+   "symbols": [
+    "XHR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xenia Hotels & Resorts Announces Timing of Third Quarter 2026 Earnings Release and Conference Call",
+   "summary": "Xenia Hotels & Resorts, Inc. (NYSE: XHR) (\"Xenia\" or the \"Company\") will report financial results for the third quarter 2026 before the market opens on Tuesday, November 3, 2026. Management will discuss the Company's results during a conference call at 1:00 pm (Eastern Time) that",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xenia-hotels-resorts-announces-timing-103000783.html?.tsrc=rss",
+   "published_at": "2026-09-10T10:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "60fb14899dbfc8a2",
+   "primary_source": false,
+   "cluster_id": "67f490decfd9e940",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bf03fa14b3468527",
+   "symbols": [
+    "MIAX",
+    "XHR"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Robinhood upgraded, Uber initiated: Wall Street's top analyst calls",
+   "summary": "Robinhood upgraded, Uber initiated: Wall Street's top analyst calls",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/robinhood-upgraded-uber-initiated-wall-133650211.html?.tsrc=rss",
+   "published_at": "2026-09-01T13:36:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:47Z",
+   "fingerprint": "eeef92b031529097",
+   "primary_source": false,
+   "cluster_id": "bf03fa14b3468527",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "18cc79ea8a963239",
+   "symbols": [
+    "XHR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Here Are Tuesday’s Top Wall Street Analyst Research Calls: Akamai Technologies, Arista Networks, Booking Holdings, Cisco Systems, Dell Technologies, Duolingo, Robinhood Markets, PG&E, and More",
+   "summary": "Wall Street analysts reshuffled their ratings on September 1st with some dramatic target price swings, including one major utility stock getting its target slashed nearly in half while a red-hot language app saw its target doubled overnight.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/09/01/here-are-tuesdays-top-wall-street-analyst-research-calls-akamai-technologies-arista-networks-booking-holdings-cisco-systems-dell-technologies-duolingo-robinhood-markets-pge-and-more/?.tsrc=rss",
+   "published_at": "2026-09-01T11:57:32Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "285f68a484afc98e",
+   "primary_source": false,
+   "cluster_id": "18cc79ea8a963239",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dace1de55bc68052",
+   "symbols": [
+    "XHR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xenia Hotels (XHR) Q2 2026 Earnings Call Transcript",
+   "summary": "RevPAR growth accelerated to 5.5% as management raised full-year guidance.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/03/xenia-hotels-xhr-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-04T00:16:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "a34a087491db137e",
+   "primary_source": false,
+   "cluster_id": "dace1de55bc68052",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "98666a186dac1447",
+   "symbols": [
+    "XHR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xenia Hotels & Resorts Q2 Earnings Call Highlights",
+   "summary": "Xenia Hotels & Resorts (NYSE:XHR) reported second-quarter results that modestly exceeded its prior expectations, supported by rate-driven room revenue growth and continued strength in higher-end leisure and group demand. The company raised the midpoint of its full-year 2026 Adjus",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/xenia-hotels-resorts-q2-earnings-call-highlights-2026-08-01/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-01T07:03:42Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "84ecbbd84e9a0782",
+   "primary_source": false,
+   "cluster_id": "98666a186dac1447",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "84d7f40fadec863f",
+   "symbols": [
+    "XHR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xenia Hotels & Resorts Inc (XHR) (Q2 2026) Earnings Call Highlights: Strong RevPAR Growth ...",
+   "summary": "Xenia Hotels & Resorts Inc (XHR) reports robust Q2 2026 results with 5.2% RevPAR growth and 120 basis point margin expansion, while navigating labor cost pressures and market competition.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xenia-hotels-resorts-inc-xhr-010108753.html?.tsrc=rss",
+   "published_at": "2026-07-31T01:01:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "648a1de18df9fd90",
+   "primary_source": false,
+   "cluster_id": "84d7f40fadec863f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "42c92ed5f6cd94a6",
+   "symbols": [
+    "XHR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xenia Hotels & Resorts, Inc. Q2 2026 Earnings Call Summary",
+   "summary": "Moby summary of Xenia Hotels & Resorts, Inc.'s Q2 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-xenia-hotels-resorts-inc-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-07-30T21:24:38Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "f2125d039a3ced8d",
+   "primary_source": false,
+   "cluster_id": "42c92ed5f6cd94a6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c2b814a8d587b292",
+   "symbols": [
+    "XHR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Xenia Hotels & Resorts Reports Second Quarter 2026 Results",
+   "summary": "Xenia Hotels & Resorts, Inc. (NYSE: XHR) (\"Xenia\" or the \"Company\") today announced results for the quarter ended June 30, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/xenia-hotels-resorts-reports-second-103000377.html?.tsrc=rss",
+   "published_at": "2026-07-30T10:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "5b3b97a1f8d79c39",
+   "primary_source": false,
+   "cluster_id": "c2b814a8d587b292",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fcbf974aa035196c",
+   "symbols": [
+    "XHR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Portland riverfront hotel sells for dramatically less than last sale price",
+   "summary": "An Oregon winery owner has snapped up a Portland riverfront hotel for far less than its 2015 value.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "oregonlive.com",
+   "url": "https://www.oregonlive.com/business/2026/07/winery-owner-buys-portland-riverfront-hotel.html?.tsrc=rss",
+   "published_at": "2026-07-22T23:17:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:02:59Z",
+   "fingerprint": "72fa9be080e204da",
+   "primary_source": false,
+   "cluster_id": "fcbf974aa035196c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

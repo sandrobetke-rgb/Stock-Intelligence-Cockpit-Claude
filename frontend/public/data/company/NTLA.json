@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 13.15999984741211,
     "day_low": 12.039999961853027,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 32.583532554548526,
+    "adx14": 14.962063807330196,
+    "ema10": 12.251075552498333,
+    "sma200": 13.080324983596801,
+    "perf_63d": 15.784584373343025,
+    "adr20_pct": 7.225283509323314,
+    "range10_pct": 31.758031010460307,
+    "high10_prev": 13.9399995803833,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.16666666666666666,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -139,11 +173,11 @@
    ]
   },
   "market_intelligence": {
-   "score": 42.1,
+   "score": 47.9,
    "drivers": [
     "news_flow",
-    "price_volume_anomaly",
-    "source_diversity"
+    "social_attention",
+    "price_volume_anomaly"
    ],
    "independent_7d": 5,
    "independent_24h": 0
@@ -156,7 +190,14 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 30,
+   "manipulation_risk": "unauffällig",
+   "mentions_24h": 1,
+   "sentiment_7d": 0.0,
+   "bullish_7d": 5,
+   "bearish_7d": 5
+  },
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
@@ -244,7 +285,17 @@
     "green": false,
     "day_high": 13.15999984741211,
     "day_low": 12.039999961853027,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 32.583532554548526,
+    "adx14": 14.962063807330196,
+    "ema10": 12.251075552498333,
+    "sma200": 13.080324983596801,
+    "perf_63d": 15.784584373343025,
+    "adr20_pct": 7.225283509323314,
+    "range10_pct": 31.758031010460307,
+    "high10_prev": 13.9399995803833,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -274,6 +325,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -281,7 +353,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.16666666666666666,
+    "RSI2": 0.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -620,7 +695,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 42.1,
+  "score": 47.9,
   "components": {
    "news_flow": 100.0,
    "freshness": 0,
@@ -628,7 +703,7 @@
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 42.9,
-   "social_attention": null,
+   "social_attention": 100.0,
    "insider_activity": 10
   },
   "windows": {
@@ -662,8 +737,8 @@
   },
   "drivers": [
    "news_flow",
-   "price_volume_anomaly",
-   "source_diversity"
+   "social_attention",
+   "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -888,6 +963,7 @@
   {
    "id": "079c8bd1407a711a",
    "symbols": [
+    "ADMA",
     "NTLA"
    ],
    "category": "market",
@@ -1113,6 +1189,79 @@
    "report_date": "2026-06-30"
   }
  ],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 1,
+  "mentions_7d": 30,
+  "mentions_30d": 30,
+  "change_vs_baseline_pct": -76,
+  "engagement_7d": 83.0,
+  "sentiment_7d": 0.0,
+  "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
+  "bullish_7d": 5,
+  "bearish_7d": 5,
+  "by_platform_7d": {
+   "stocktwits": 30
+  },
+  "communities_7d": {
+   "StockTwits": 30
+  },
+  "platforms": [
+   "stocktwits"
+  ],
+  "manipulation_flags": [],
+  "manipulation_risk": "unauffällig",
+  "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "BarKnar",
+    "posted_at": "2026-10-29T12:08:44Z",
+    "url": "https://stocktwits.com/BarKnar/message/667624605",
+    "text": "$NTLA Intellia Therapeutics Announces Upcoming Lonvoguran Ziclumeran (Lonvo-z) Investor Event and Seven Presentations at ACAAI 2026",
+    "engagement": 10.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "BarKnar",
+    "posted_at": "2026-10-29T16:16:57Z",
+    "url": "https://stocktwits.com/BarKnar/message/667659215",
+    "text": "$NTLA sooo, Intellia friends, the game is on. \nAccording to the pressrelease ,    i am pretty sure that q3 presentation wil be given after ACAAI.\nWhich creates another momentum . Also interviews will be given.  This is a well Orchestrated PR action. As  expected btw.   Well done Intellia.",
+    "engagement": 7.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "Shirzo",
+    "posted_at": "2026-10-30T10:43:09Z",
+    "url": "https://stocktwits.com/Shirzo/message/667737945",
+    "text": "$NTLA buy time before 5th November",
+    "engagement": 6.0,
+    "sentiment_label": "Bullish"
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "dayfader47",
+    "posted_at": "2026-10-29T20:32:15Z",
+    "url": "https://stocktwits.com/dayfader47/message/667692972",
+    "text": "$NTLA hey, overcrowded AI position money, plenty of upside left over here!",
+    "engagement": 6.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "BarKnar",
+    "posted_at": "2026-10-29T15:05:47Z",
+    "url": "https://stocktwits.com/BarKnar/message/667649534",
+    "text": "$NTLA At the exact moment the ACAAI embargo is lifted, Intellia&#39;s investor webcast begins. That is no coincidence. The webcast will likely include the presentation of four-year safety and efficacy data, as well as updated attack-free and long-term prophylaxis-free (LTP-free) rates.\n\n08.00 uur MT – Mountain Time (Phoenix)\n10.00 uur EST – Eastern Standard Time (New York/Boston)",
+    "engagement": 5.0,
+    "sentiment_label": null
+   }
+  ]
+ },
  "history": []
 }

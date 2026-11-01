@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -23,10 +23,10 @@
    "perf_63d": -3.5214374942074134,
    "adr20": 1.4852544984482208,
    "rvol": 0.7894481766192709,
-   "ema10": 132.1625563289543,
-   "ema21": 130.46367702768825,
+   "ema10": 132.16255632895434,
+   "ema21": 130.46367702814547,
    "sma50": 129.78087173461915,
-   "sma200": 139.03656200408935
+   "sma200": 139.03656269073485
   },
   "market_cap": 28193853440.0,
   "market_cap_currency": "USD",
@@ -34,17 +34,17 @@
    "tech": {
     "close": 135.49000549316406,
     "change_pct": 0.7210832514831456,
-    "ema20": 130.5421832064173,
-    "ema50": 131.24867700850186,
-    "ema200": 135.69347792045176,
+    "ema20": 130.54218320671526,
+    "ema50": 131.24867706378754,
+    "ema200": 135.6934784689235,
     "sma50": 129.78087173461915,
-    "rsi14": 66.78556029666063,
-    "rsi_min5": 58.56424495590569,
-    "atr14": 2.0644430134730705,
-    "atr_pct": 1.5236865671078808,
+    "rsi14": 66.78556033264906,
+    "rsi_min5": 58.56424497293349,
+    "atr14": 2.0644430146036123,
+    "atr_pct": 1.5236865679422906,
     "rvol": 0.7894481766192709,
     "vol30": 1604086.6666666667,
-    "dist_ema200_pct": -0.14995004211402208,
+    "dist_ema200_pct": -0.14995044570697003,
     "dist_52w_high_pct": 12.212251077404146,
     "high_52w": 154.3381703666057,
     "macd_above_signal": true,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 136.11000061035156,
     "day_low": 134.8000030517578,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 91.39984729895718,
+    "adx14": 25.57909297631534,
+    "ema10": 132.16255632895434,
+    "sma200": 139.03656269073485,
+    "perf_63d": -3.5214374942074134,
+    "adr20_pct": 1.4852544984482208,
+    "range10_pct": 6.489604731515097,
+    "high10_prev": 134.72000122070312,
+    "pullback_ema20": false,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": true,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
@@ -97,7 +128,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": true,
@@ -110,9 +144,9 @@
    "plan": {
     "trigger": 133.1300048828125,
     "entry_max": 135.79260498046875,
-    "stop": 130.0333403626029,
-    "risk_per_share": 3.0966645202096004,
-    "target_1": 139.3233339232317,
+    "stop": 130.0333403609071,
+    "risk_per_share": 3.09666452190541,
+    "target_1": 139.32333392662332,
     "trigger_basis": "letztes Higher High"
    }
   },
@@ -141,7 +175,7 @@
    ]
   },
   "market_intelligence": {
-   "score": 36.5,
+   "score": 35.3,
    "drivers": [
     "news_flow",
     "price_volume_anomaly",
@@ -158,7 +192,14 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 1,
+   "manipulation_risk": "unauffällig",
+   "mentions_24h": 0,
+   "sentiment_7d": 0.0,
+   "bullish_7d": 0,
+   "bearish_7d": 0
+  },
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
@@ -211,10 +252,10 @@
   "perf_63d": -3.5214374942074134,
   "adr20": 1.4852544984482208,
   "rvol": 0.7894481766192709,
-  "ema10": 132.1625563289543,
-  "ema21": 130.46367702768825,
+  "ema10": 132.16255632895434,
+  "ema21": 130.46367702814547,
   "sma50": 129.78087173461915,
-  "sma200": 139.03656200408935,
+  "sma200": 139.03656269073485,
   "volatility_ann": 16.865126339601655,
   "avg_dollar_volume_20d": 169159757.4292755,
   "move_zscore": 0.6787284908213662,
@@ -222,17 +263,17 @@
    "tech": {
     "close": 135.49000549316406,
     "change_pct": 0.7210832514831456,
-    "ema20": 130.5421832064173,
-    "ema50": 131.24867700850186,
-    "ema200": 135.69347792045176,
+    "ema20": 130.54218320671526,
+    "ema50": 131.24867706378754,
+    "ema200": 135.6934784689235,
     "sma50": 129.78087173461915,
-    "rsi14": 66.78556029666063,
-    "rsi_min5": 58.56424495590569,
-    "atr14": 2.0644430134730705,
-    "atr_pct": 1.5236865671078808,
+    "rsi14": 66.78556033264906,
+    "rsi_min5": 58.56424497293349,
+    "atr14": 2.0644430146036123,
+    "atr_pct": 1.5236865679422906,
     "rvol": 0.7894481766192709,
     "vol30": 1604086.6666666667,
-    "dist_ema200_pct": -0.14995004211402208,
+    "dist_ema200_pct": -0.14995044570697003,
     "dist_52w_high_pct": 12.212251077404146,
     "high_52w": 154.3381703666057,
     "macd_above_signal": true,
@@ -246,7 +287,17 @@
     "green": false,
     "day_high": 136.11000061035156,
     "day_low": 134.8000030517578,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 91.39984729895718,
+    "adx14": 25.57909297631534,
+    "ema10": 132.16255632895434,
+    "sma200": 139.03656269073485,
+    "perf_63d": -3.5214374942074134,
+    "adr20_pct": 1.4852544984482208,
+    "range10_pct": 6.489604731515097,
+    "high10_prev": 134.72000122070312,
+    "pullback_ema20": false,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -276,6 +327,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": true,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
@@ -285,7 +357,10 @@
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 1.0
+    "S04": 1.0,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.5
    },
    "filter": {
     "Tag grün": true,
@@ -298,9 +373,9 @@
    "plan": {
     "trigger": 133.1300048828125,
     "entry_max": 135.79260498046875,
-    "stop": 130.0333403626029,
-    "risk_per_share": 3.0966645202096004,
-    "target_1": 139.3233339232317,
+    "stop": 130.0333403609071,
+    "risk_per_share": 3.09666452190541,
+    "target_1": 139.32333392662332,
     "trigger_basis": "letztes Higher High"
    }
   }
@@ -624,7 +699,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 36.5,
+  "score": 35.3,
   "components": {
    "news_flow": 100.0,
    "freshness": 0,
@@ -632,7 +707,7 @@
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 20.4,
-   "social_attention": null,
+   "social_attention": 25.0,
    "insider_activity": null
   },
   "windows": {
@@ -1103,6 +1178,39 @@
    "report_date": "2026-06-30"
   }
  ],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 0,
+  "mentions_7d": 1,
+  "mentions_30d": 1,
+  "change_vs_baseline_pct": -100,
+  "engagement_7d": 0.0,
+  "sentiment_7d": 0.0,
+  "sentiment_basis": "algorithmisch (Lexikon)",
+  "bullish_7d": 0,
+  "bearish_7d": 0,
+  "by_platform_7d": {
+   "reddit": 1
+  },
+  "communities_7d": {
+   "r/Daytrading": 1
+  },
+  "platforms": [
+   "reddit"
+  ],
+  "manipulation_flags": [],
+  "manipulation_risk": "unauffällig",
+  "top_posts": [
+   {
+    "platform": "reddit",
+    "community": "r/Daytrading",
+    "author": "max_intense",
+    "posted_at": "2026-10-30T22:09:45Z",
+    "url": "https://www.reddit.com/r/Daytrading/comments/1xjsxz6/you_could_find_success_if_you_change_your_market/",
+    "text": "You could find success if you change your market    I started scalping low float momentum stocks 6 months ago and I had very little success.    I switched over to SPY, scalping 0 DTE and have had success. Will this success last for the next 6 months?    I’ll keep track and see…   If it weren’t for this switch, I would still be going in circles with small caps.   Try other styles and markets.     &",
+    "engagement": 0.0,
+    "sentiment_label": null
+   }
+  ]
+ },
  "history": []
 }

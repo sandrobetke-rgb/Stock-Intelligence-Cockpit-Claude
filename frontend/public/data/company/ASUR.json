@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 9.819999694824219,
     "day_low": 8.449999809265137,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 99.22020310525245,
+    "adx14": 30.06794608683385,
+    "ema10": 7.652258398440542,
+    "sma200": 8.457299993038177,
+    "perf_63d": 7.42008677565118,
+    "adr20_pct": 4.353150805786143,
+    "range10_pct": 6.552707113914558,
+    "high10_prev": 7.480000019073486,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": true,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.6666666666666666,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.8333333333333334,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.8333333333333334
    },
    "filter": {
     "Tag grün": true,
@@ -139,14 +173,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 57.6,
+   "score": 69.4,
    "drivers": [
     "news_flow",
     "price_volume_anomaly",
-    "source_diversity"
+    "freshness"
    ],
-   "independent_7d": 5,
-   "independent_24h": 0
+   "independent_7d": 8,
+   "independent_24h": 3
   },
   "political": {
    "relevance": 0,
@@ -238,7 +272,17 @@
     "green": true,
     "day_high": 9.819999694824219,
     "day_low": 8.449999809265137,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 99.22020310525245,
+    "adx14": 30.06794608683385,
+    "ema10": 7.652258398440542,
+    "sma200": 8.457299993038177,
+    "perf_63d": 7.42008677565118,
+    "adr20_pct": 4.353150805786143,
+    "range10_pct": 6.552707113914558,
+    "high10_prev": 7.480000019073486,
+    "pullback_ema20": true,
+    "trend": "side"
    },
    "criteria": {
     "S01": {
@@ -268,6 +312,27 @@
      "OBV steigend": true,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": true,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -275,7 +340,10 @@
     "S01": 0.0,
     "S02": 0.4,
     "S03": 0.6666666666666666,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.8333333333333334,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.8333333333333334
    },
    "filter": {
     "Tag grün": true,
@@ -614,10 +682,10 @@
   ]
  },
  "intelligence_detail": {
-  "score": 57.6,
+  "score": 69.4,
   "components": {
    "news_flow": 100.0,
-   "freshness": 0,
+   "freshness": 100.0,
    "source_diversity": 60,
    "primary_sources": 0,
    "analyst_activity": 0,
@@ -627,17 +695,17 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 5,
-    "independent": 5,
+    "signals": 8,
+    "independent": 8,
     "duplicates": 0,
     "sources": 3,
     "primary": 0,
@@ -645,8 +713,8 @@
     "verified": 0
    },
    "30d": {
-    "signals": 11,
-    "independent": 11,
+    "signals": 14,
+    "independent": 14,
     "duplicates": 0,
     "sources": 3,
     "primary": 0,
@@ -657,7 +725,7 @@
   "drivers": [
    "news_flow",
    "price_volume_anomaly",
-   "source_diversity"
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -676,6 +744,75 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "bb9598e93c8d77e1",
+   "symbols": [
+    "ASUR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Penny Stocks For November 2026",
+   "summary": "AI infrastructure spending has come under pressure after a sharp US$2t wipeout in Nasdaq-100 value, as investors question which projects truly justify their price tags. That kind of rethink can push attention toward smaller, more financially disciplined companies. Well funded pen",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-penny-stocks-november-2026-032211304.html?.tsrc=rss",
+   "published_at": "2026-11-01T03:22:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:05:08Z",
+   "fingerprint": "2f1c3fc09af7a8e5",
+   "primary_source": false,
+   "cluster_id": "bb9598e93c8d77e1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "3 Penny Stocks für November 2026"
+  },
+  {
+   "id": "5c417464532d7339",
+   "symbols": [
+    "ASUR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ASUR Q3 deep dive: cross-sell expansion and marketplace partnerships fuel growth",
+   "summary": "HR software provider Asure Software (NASDAQ:ASUR) reported revenue ahead of Wall Street’s expectations in Q3 2026, with sales up 10.4% year on year to $40.02 million. Guidance for next quarter’s revenue was optimistic at $43 million at the midpoint, 2.9% above analysts’ estimates",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/asur-q3-deep-dive-cross-221900906.html?.tsrc=rss",
+   "published_at": "2026-10-31T22:19:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:05:08Z",
+   "fingerprint": "a8e87711d02dfe68",
+   "primary_source": false,
+   "cluster_id": "5c417464532d7339",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "ASUR Q3 Deep Dive: Cross-Selling-Expansion und Marktplatz-Partnerschaften fördern Wachstum"
+  },
+  {
+   "id": "9c48c8e7ff189c8a",
+   "symbols": [
+    "ASUR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Asure Software (ASUR) stock is up today",
+   "summary": "Shares of HR software provider Asure Software (NASDAQ:ASUR) jumped 21.9% in the morning session after the company reported third-quarter 2026 financial results showing double-digit recurring revenue growth and a significantly narrowed net loss.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-asure-software-asur-stock-153929859.html?.tsrc=rss",
+   "published_at": "2026-10-31T15:39:29Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:05:08Z",
+   "fingerprint": "4cefc1d33f2d318e",
+   "primary_source": false,
+   "cluster_id": "9c48c8e7ff189c8a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Warum Asure Software (ASUR) heute auf Lager ist"
+  },
   {
    "id": "c2f08e452389dbc5",
    "symbols": [
@@ -718,8 +855,7 @@
    "cluster_id": "295589e73ef6c3e0",
    "independence": "original",
    "verification": "Unverified",
-   "feed": "yahoo_rss",
-   "title_de": "Was Asure Software (ASUR) auf seinem Q3-Gewinnaufruf gesagt hat"
+   "feed": "yahoo_rss"
   },
   {
    "id": "d69e010a0e549ac6",

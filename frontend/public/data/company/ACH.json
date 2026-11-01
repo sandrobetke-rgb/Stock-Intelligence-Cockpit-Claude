@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": true,
     "day_high": 0.25,
     "day_low": 0.23000000417232513,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 93.90251712271454,
+    "adx14": 68.53912490979074,
+    "ema10": 0.24685761926301447,
+    "sma200": 2.2384500043094158,
+    "perf_63d": -92.66862188541268,
+    "adr20_pct": 16.2952261356994,
+    "range10_pct": 52.6315764707211,
+    "high10_prev": 0.28999999165534973,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.5,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": true,
@@ -139,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 4.8,
+   "score": 21.0,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -242,7 +278,17 @@
     "green": true,
     "day_high": 0.25,
     "day_low": 0.23000000417232513,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 93.90251712271454,
+    "adx14": 68.53912490979074,
+    "ema10": 0.24685761926301447,
+    "sma200": 2.2384500043094158,
+    "perf_63d": -92.66862188541268,
+    "adr20_pct": 16.2952261356994,
+    "range10_pct": 52.6315764707211,
+    "high10_prev": 0.28999999165534973,
+    "pullback_ema20": true,
+    "trend": "down"
    },
    "criteria": {
     "S01": {
@@ -272,6 +318,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": false,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": true,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": false,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": false,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": false,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -279,7 +346,10 @@
     "S01": 0.5,
     "S02": 0.4,
     "S03": 0.3333333333333333,
-    "S04": 0.2
+    "S04": 0.2,
+    "DSM": 0.5,
+    "RSI2": 0.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": true,
@@ -618,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 4.8,
+  "score": 21.0,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 27.2,
@@ -640,26 +710,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 5,
+    "independent": 5,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -677,7 +749,428 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "f9bcb3989c0cc826",
+   "symbols": [
+    "ACH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Accendra Health Receives Continued Listing Standard Notice from NYSE Regarding Market Capitalization and Stockholders’ Equity; Intends to Submit Business Plan and Return to Compliance with NYSE Listing Standard​",
+   "summary": "RICHMOND, Va., October 30, 2026--Accendra Health, Inc. (NYSE: ACH) (the Company) today announced that on October 27, 2026, it received a notice (the \"Notice\") from the New York Stock Exchange (the \"NYSE\") notifying the Company that it is not in compliance with Section 802.01B of ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/accendra-health-receives-continued-listing-204500800.html?.tsrc=rss",
+   "published_at": "2026-10-30T20:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:31Z",
+   "fingerprint": "57fa38b96b4c54c9",
+   "primary_source": false,
+   "cluster_id": "f9bcb3989c0cc826",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Accendra Health erhält Continued Listing Standard Notice von der NYSE In Bezug auf Marktkapitalisierung und Aktien der Aktionäre; beabsichtigt, einen Geschäftsplan einzureichen und zur Einhaltung des NYSE Listing Standard zurückzukehren"
+  },
+  {
+   "id": "6db05a63e68fd380",
+   "symbols": [
+    "ACH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Accendra Health Announces Third Quarter 2026 Earnings Release Date and Conference Call",
+   "summary": "RICHMOND, Va., October 22, 2026--Accendra Health, Inc. (NYSE: ACH) (the \"Company\") plans to release financial results for the third quarter of 2026 on Thursday, November 5, 2026, after trading ends on the New York Stock Exchange.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/accendra-health-announces-third-quarter-200500258.html?.tsrc=rss",
+   "published_at": "2026-10-22T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:31Z",
+   "fingerprint": "5099f47c8dd91b92",
+   "primary_source": false,
+   "cluster_id": "a9a1a345483666b0",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "27dc61e9d6517c51",
+   "symbols": [
+    "ACH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Accendra Health Receives Continued Listing Standard Notice from NYSE; Intends to Cure Deficiency and Return to Compliance with NYSE Listing Standard",
+   "summary": "RICHMOND, Va., October 09, 2026--Accendra Health, Inc. (NYSE: ACH) (the Company) today announced that on October 6, 2026, it received a notice (the \"Notice\") from the New York Stock Exchange (the \"NYSE\") notifying the Company that it is not in compliance with the NYSE’s continued",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/accendra-health-receives-continued-listing-200500054.html?.tsrc=rss",
+   "published_at": "2026-10-09T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:31Z",
+   "fingerprint": "9df1c221fc87b002",
+   "primary_source": false,
+   "cluster_id": "27dc61e9d6517c51",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "448887e45087775e",
+   "symbols": [
+    "ACH",
+    "ARDX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "New Strong Sell Stocks for October 9th",
+   "summary": "ACH, ARDX and DPRO have been added to the Zacks Rank #5 (Strong Sell) List on October 9th, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/strong-sell-stocks-october-9th-091200441.html?.tsrc=rss",
+   "published_at": "2026-10-09T09:12:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:25Z",
+   "fingerprint": "66add60da8a5c7ed",
+   "primary_source": false,
+   "cluster_id": "448887e45087775e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "52bcd32e5b61ff7f",
+   "symbols": [
+    "ACH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "New Strong Sell Stocks for October 6th",
+   "summary": "VLVLY, ACH and CCJ have been added to the Zacks Rank #5 (Strong Sell) List on October 6th, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/strong-sell-stocks-october-6th-064000775.html?.tsrc=rss",
+   "published_at": "2026-10-06T06:40:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:31Z",
+   "fingerprint": "1eadf3dd5c149066",
+   "primary_source": false,
+   "cluster_id": "52bcd32e5b61ff7f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6c5bbb760b54f836",
+   "symbols": [
+    "ACH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Accendra Health Names Kenneth Gardner-Smith as President and Chief Executive Officer to Lead the Company’s Next Chapter of Growth",
+   "summary": "RICHMOND, Va., September 17, 2026--Accendra Health, Inc. (NYSE: ACH) (the \"Company\") today named Kenneth Gardner-Smith as the Company’s next President and Chief Executive Officer. Gardner-Smith, who has served on the Company’s Board of Directors since March 2022, is expected to a",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/accendra-health-names-kenneth-gardner-103000681.html?.tsrc=rss",
+   "published_at": "2026-09-17T10:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:31Z",
+   "fingerprint": "062e2bcbe55225cd",
+   "primary_source": false,
+   "cluster_id": "6c5bbb760b54f836",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5b24166f072682cd",
+   "symbols": [
+    "ACH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Accendra Health drops equity issuance plan as CEO succession process advances",
+   "summary": "Accendra Health (NYSE:ACH) has abandoned plans to establish an at-the-market equity issuance programme, citing recent market conditions, while also providing an updated timetable for appointing a successor to Chief Executive Christopher Pesicka. The proposed programme would have ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "investorshub.advfn.com",
+   "url": "https://investorshub.advfn.com/market-news/article/34394/accendra-health-drops-equity-issuance-plan-as-ceo-succession-process-advances?.tsrc=rss",
+   "published_at": "2026-08-17T12:29:15Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:31Z",
+   "fingerprint": "37327e39d89d3517",
+   "primary_source": false,
+   "cluster_id": "5b24166f072682cd",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "08baffb9c76349c1",
+   "symbols": [
+    "ACH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Accendra Health Updates on Capital Allocation and CEO Succession Timing Plans",
+   "summary": "RICHMOND, Va., August 17, 2026--Accendra Health (the \"Company\") is providing an update on its capital allocation plans and the timeline for the replacement of its chief executive officer.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/accendra-health-updates-capital-allocation-103000625.html?.tsrc=rss",
+   "published_at": "2026-08-17T10:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:31Z",
+   "fingerprint": "37d2762ab4b5da6f",
+   "primary_source": false,
+   "cluster_id": "08baffb9c76349c1",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ef405eb1d4ec99bb",
+   "symbols": [
+    "ACH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Accendra Health Announces Adoption of Tax Asset Preservation Plan To Protect Long Term Shareholder Value",
+   "summary": "RICHMOND, Va., August 10, 2026--Accendra Health, Inc. (NYSE: ACH) (the Company) announced today that its Board of Directors adopted a Section 382 Rights Agreement (the \"Tax Asset Preservation Plan\") designed to protect long-term shareholder value by facilitating the Company’s abi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/accendra-health-announces-adoption-tax-105000361.html?.tsrc=rss",
+   "published_at": "2026-08-10T10:50:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:31Z",
+   "fingerprint": "33cb3180e0040be7",
+   "primary_source": false,
+   "cluster_id": "ef405eb1d4ec99bb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2025f3de1a5a9e12",
+   "symbols": [
+    "ACH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Accendra Health Reports Second Quarter 2026 Financial Results",
+   "summary": "RICHMOND, Va., August 10, 2026--Accendra Health, Inc. (NYSE: ACH) (the Company) today reported financial results for the second quarter ended June 30, 2026. Unless otherwise noted, the results herein reflect the Company’s continuing operations, which represent what was previously",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/accendra-health-reports-second-quarter-104500970.html?.tsrc=rss",
+   "published_at": "2026-08-10T10:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:31Z",
+   "fingerprint": "3319a7a2f804dc9a",
+   "primary_source": false,
+   "cluster_id": "2025f3de1a5a9e12",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "04ccff1861cdd2d0",
+   "symbols": [
+    "ACH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Accendra Health’s Ed Pesicka Announces Intent to Retire; Board of Directors Has Begun Successor Search",
+   "summary": "RICHMOND, Va., August 10, 2026--Accendra Health, Inc. (NYSE: ACH) (the Company) today announced that President and Chief Executive Officer Edward A. Pesicka has informed the Board of Directors of his plan to retire by the end of 2026, after more than seven years with the Company.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/accendra-health-ed-pesicka-announces-103000022.html?.tsrc=rss",
+   "published_at": "2026-08-10T10:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:31Z",
+   "fingerprint": "6287010c0ba490d3",
+   "primary_source": false,
+   "cluster_id": "04ccff1861cdd2d0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "73fbc72ec5a85a89",
+   "symbols": [
+    "ACH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ICU Medical (ICUI) Tops Q2 Earnings and Revenue Estimates",
+   "summary": "ICU Medical (ICUI) delivered earnings and revenue surprises of +24.08% and +2.33%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/icu-medical-icui-tops-q2-231004729.html?.tsrc=rss",
+   "published_at": "2026-08-06T23:10:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:31Z",
+   "fingerprint": "fcb147bf26f89736",
+   "primary_source": false,
+   "cluster_id": "73fbc72ec5a85a89",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "073e89ec3658dbe9",
+   "symbols": [
+    "ACH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Accendra Health Announces Leadership Appointments in IT and Procurement",
+   "summary": "RICHMOND, Va., July 27, 2026--Accendra Health today announced key leadership appointments in Information Technology and Procurement, reinforcing our commitment to building a stronger operational foundation and positioning the company for long-term growth. These appointments refle",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/accendra-health-announces-leadership-appointments-200500302.html?.tsrc=rss",
+   "published_at": "2026-07-27T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:31Z",
+   "fingerprint": "db6a6d1423ef4529",
+   "primary_source": false,
+   "cluster_id": "073e89ec3658dbe9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a9a1a345483666b0",
+   "symbols": [
+    "ACH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Accendra Health Announces Second Quarter 2026 Earnings Release Date and Conference Call",
+   "summary": "RICHMOND, Va., July 27, 2026--Accendra Health, Inc. (NYSE: ACH) (the \"Company\") plans to release financial results for the second quarter of 2026 on Monday, August 10, 2026, before trading begins on the New York Stock Exchange.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/accendra-health-announces-second-quarter-131500868.html?.tsrc=rss",
+   "published_at": "2026-07-27T13:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:31Z",
+   "fingerprint": "7961525e38fddb92",
+   "primary_source": false,
+   "cluster_id": "a9a1a345483666b0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b0cc2fcf67021df3",
+   "symbols": [
+    "ACH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Accendra Health (ACH) is One of The 15 Best NYSE Penny Stocks According to Hedge Funds",
+   "summary": "Accendra Health Inc. (NYSE:ACH) is one of the 15 best NYSE penny stocks to buy according to hedge funds. On June 23, Accendra Health Inc. (NYSE:ACH) disclosed the final settlement of its previously disclosed offer, involving its outstanding 4.5% senior notes due 2029 and 6.625% s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/accendra-health-ach-one-15-172115150.html?.tsrc=rss",
+   "published_at": "2026-07-12T17:21:15Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:31Z",
+   "fingerprint": "4d90b78465ecc7a3",
+   "primary_source": false,
+   "cluster_id": "b0cc2fcf67021df3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "04f87d2bba996779",
+   "symbols": [
+    "ACH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is the Options Market Predicting a Spike in Accendra Health Stock?",
+   "summary": "Investors need to pay close attention to ACH stock based on the movements in the options market lately.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/options/articles/options-market-predicting-spike-accendra-130100729.html?.tsrc=rss",
+   "published_at": "2026-07-02T13:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:31Z",
+   "fingerprint": "01afefe6e984d95b",
+   "primary_source": false,
+   "cluster_id": "04f87d2bba996779",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "68ad93704d6f447a",
+   "symbols": [
+    "ACH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Alchemy Pay Adds Illinois License as U.S. Regulatory Coverage Reaches 18 States",
+   "summary": "Alchemy Pay (CRYPTO: $ACH) has added Illinois to its U.S. regulatory map, giving the fiat-crypto payments company a...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "cryptoprowl.com",
+   "url": "https://www.cryptoprowl.com/releases/alchemy-pay-adds-illinois-license-as-us-regulatory-coverage-reaches-18-states-5977?.tsrc=rss",
+   "published_at": "2026-06-24T18:59:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:31Z",
+   "fingerprint": "571479209a94a2a4",
+   "primary_source": false,
+   "cluster_id": "68ad93704d6f447a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2453e214704befe1",
+   "symbols": [
+    "ACH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Accendra Health Announces Expiration and Final Results of Offers and Consent Solicitations",
+   "summary": "RICHMOND, Va., June 24, 2026--Accendra Health, Inc. (NYSE: ACH) (the \"Company\") today announced the expiration and final results of the previously announced offers to exchange (the \"Exchange Offers\") any and all of the Company’s outstanding 4.500% Senior Notes due 2029 (the \"2029",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/accendra-health-announces-expiration-final-011500683.html?.tsrc=rss",
+   "published_at": "2026-06-24T01:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:31Z",
+   "fingerprint": "baa18df0467828b2",
+   "primary_source": false,
+   "cluster_id": "2453e214704befe1",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1cb0d662d672e2cb",
+   "symbols": [
+    "ACH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Accendra Health Announces Early Results of Exchange Offers",
+   "summary": "Accendra Health (ACH) said Wednesday that holders of nearly all of its outstanding 4.5% senior notes",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/accendra-health-announces-early-results-111802951.html?.tsrc=rss",
+   "published_at": "2026-06-10T11:18:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:31Z",
+   "fingerprint": "f60e0f97a7d27da1",
+   "primary_source": false,
+   "cluster_id": "1cb0d662d672e2cb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "04506a4e5b17b4be",

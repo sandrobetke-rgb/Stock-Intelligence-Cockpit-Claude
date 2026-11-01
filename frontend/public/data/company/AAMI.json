@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 3.354433287144822,
    "rvol": 1.6185015983123892,
    "ema10": 91.96033190686808,
-   "ema21": 92.38853286386826,
+   "ema21": 92.38853286389292,
    "sma50": 92.53608505249024,
-   "sma200": 73.69044610977173
+   "sma200": 73.69044626235961
   },
   "market_cap": 3155782144.0,
   "market_cap_currency": "USD",
@@ -34,17 +34,17 @@
    "tech": {
     "close": 88.91999816894531,
     "change_pct": -2.628122573258107,
-    "ema20": 92.38003298007894,
-    "ema50": 91.26292098656614,
-    "ema200": 76.31399747143143,
+    "ema20": 92.38003298009357,
+    "ema50": 91.26292099405293,
+    "ema200": 76.31399753774868,
     "sma50": 92.53608505249024,
-    "rsi14": 39.177071151732875,
-    "rsi_min5": 39.177071151732875,
-    "atr14": 3.261457807384658,
-    "atr_pct": 3.667856359137555,
+    "rsi14": 39.17707115333351,
+    "rsi_min5": 39.17707115333351,
+    "atr14": 3.2614578072553027,
+    "atr_pct": 3.667856358992081,
     "rvol": 1.6185015983123892,
     "vol30": 394076.6666666667,
-    "dist_ema200_pct": 16.518595690434125,
+    "dist_ema200_pct": 16.518595589178876,
     "dist_52w_high_pct": 9.64605911850186,
     "high_52w": 98.4129715886621,
     "macd_above_signal": false,
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 90.44000244140625,
     "day_low": 87.25,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 4.92193060010284,
+    "adx14": 11.488395886569997,
+    "ema10": 91.96033190686808,
+    "sma200": 73.69044626235961,
+    "perf_63d": -0.8501845194243018,
+    "adr20_pct": 3.354433287144822,
+    "range10_pct": 12.098835789880091,
+    "high10_prev": 96.40499877929688,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,14 +98,40 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": false
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.6666666666666666,
+    "RSI2": 1.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -108,9 +144,9 @@
    "plan": {
     "trigger": 90.44000244140625,
     "entry_max": 92.24880249023438,
-    "stop": 85.54781573032926,
-    "risk_per_share": 4.892186711076988,
-    "target_1": 100.22437586356023,
+    "stop": 85.5478157305233,
+    "risk_per_share": 4.892186710882953,
+    "target_1": 100.22437586317216,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -137,12 +173,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 8.6,
+   "score": 58.1,
    "drivers": [
+    "news_flow",
+    "source_diversity",
     "price_volume_anomaly"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 7,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -206,9 +244,9 @@
   "adr20": 3.354433287144822,
   "rvol": 1.6185015983123892,
   "ema10": 91.96033190686808,
-  "ema21": 92.38853286386826,
+  "ema21": 92.38853286389292,
   "sma50": 92.53608505249024,
-  "sma200": 73.69044610977173,
+  "sma200": 73.69044626235961,
   "volatility_ann": 25.53594046080495,
   "avg_dollar_volume_20d": 36605191.58176422,
   "move_zscore": -1.6337817096281475,
@@ -216,17 +254,17 @@
    "tech": {
     "close": 88.91999816894531,
     "change_pct": -2.628122573258107,
-    "ema20": 92.38003298007894,
-    "ema50": 91.26292098656614,
-    "ema200": 76.31399747143143,
+    "ema20": 92.38003298009357,
+    "ema50": 91.26292099405293,
+    "ema200": 76.31399753774868,
     "sma50": 92.53608505249024,
-    "rsi14": 39.177071151732875,
-    "rsi_min5": 39.177071151732875,
-    "atr14": 3.261457807384658,
-    "atr_pct": 3.667856359137555,
+    "rsi14": 39.17707115333351,
+    "rsi_min5": 39.17707115333351,
+    "atr14": 3.2614578072553027,
+    "atr_pct": 3.667856358992081,
     "rvol": 1.6185015983123892,
     "vol30": 394076.6666666667,
-    "dist_ema200_pct": 16.518595690434125,
+    "dist_ema200_pct": 16.518595589178876,
     "dist_52w_high_pct": 9.64605911850186,
     "high_52w": 98.4129715886621,
     "macd_above_signal": false,
@@ -240,7 +278,17 @@
     "green": false,
     "day_high": 90.44000244140625,
     "day_low": 87.25,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 4.92193060010284,
+    "adx14": 11.488395886569997,
+    "ema10": 91.96033190686808,
+    "sma200": 73.69044626235961,
+    "perf_63d": -0.8501845194243018,
+    "adr20_pct": 3.354433287144822,
+    "range10_pct": 12.098835789880091,
+    "high10_prev": 96.40499877929688,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -270,14 +318,40 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": false,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": false
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": false
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.0,
     "S02": 0.5,
     "S03": 0.3333333333333333,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.6666666666666666,
+    "RSI2": 1.0,
+    "QM": 0.16666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -290,9 +364,9 @@
    "plan": {
     "trigger": 90.44000244140625,
     "entry_max": 92.24880249023438,
-    "stop": 85.54781573032926,
-    "risk_per_share": 4.892186711076988,
-    "target_1": 100.22437586356023,
+    "stop": 85.5478157305233,
+    "risk_per_share": 4.892186710882953,
+    "target_1": 100.22437586317216,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -528,11 +602,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 8.6,
+  "score": 58.1,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 80,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 49.0,
@@ -541,34 +615,36 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 7,
+    "independent": 7,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 14,
+    "independent": 14,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
+   "source_diversity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -587,7 +663,432 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "8739ddb4f462a6b3",
+   "symbols": [
+    "AAMI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acadian Asset Management (AAMI) As Dividend Lands, Is Its 31x P/E Too Pricey?",
+   "summary": "Acadian Asset Management (AAMI) drew fresh attention after its board approved a quarterly interim dividend of $0.10 per share, payable on December 23, 2026, to shareholders of record on December 11. The dividend decision comes after a sharp rise in Acadian Asset Management’s shar",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acadian-asset-management-aami-dividend-151758275.html?.tsrc=rss",
+   "published_at": "2026-10-31T15:17:58Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "482c17d140060c28",
+   "primary_source": false,
+   "cluster_id": "8739ddb4f462a6b3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Acadian Asset Management (AAMI) als Dividende Lands, ist seine 31x P / E zu teuer?"
+  },
+  {
+   "id": "6c10f0ee38477938",
+   "symbols": [
+    "AAMI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acadian Asset Management Q3 Earnings Call Highlights",
+   "summary": "Acadian Asset Management (NYSE:AAMI) reported record assets under management, higher management fees and increased profitability for the third quarter of 2026, supported by positive client flows and strong investment performance across its systematic strategies. President and Chi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-acadian-asset-management-q3-earnings-call-highlights-2026-10-30/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-30T05:14:15Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "fcc1284b2ce65f3f",
+   "primary_source": false,
+   "cluster_id": "6c10f0ee38477938",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "faec936b7999f7f2",
+   "symbols": [
+    "AAMI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acadian (AAMI) Q3 2026 Earnings Call Transcript",
+   "summary": "Record EPS of $1.36 and 44% AUM growth highlight strong alpha generation across strategies.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/29/acadian-aami-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-29T20:58:59Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "c197889ca409fff4",
+   "primary_source": false,
+   "cluster_id": "faec936b7999f7f2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9b3b275eed233860",
+   "symbols": [
+    "AAMI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acadian Asset Management Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Acadian Asset Management's Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-acadian-asset-management-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-29T20:50:26Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "a59b7d4bf81a2ca1",
+   "primary_source": false,
+   "cluster_id": "9b3b275eed233860",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5714e1af8151b192",
+   "symbols": [
+    "AAMI",
+    "OPRT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acadian Asset Management (AAMI) Surpasses Q3 Earnings Estimates",
+   "summary": "Acadian Asset Management (AAMI) delivered earnings and revenue surprises of +11.48% and -2.38%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acadian-asset-management-aami-surpasses-133002061.html?.tsrc=rss",
+   "published_at": "2026-10-29T13:30:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:20Z",
+   "fingerprint": "43052481e42c73e0",
+   "primary_source": false,
+   "cluster_id": "5714e1af8151b192",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "82428729436bd0b7",
+   "symbols": [
+    "AAMI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acadian Asset Management: Q3 Earnings Snapshot",
+   "summary": "BOSTON (AP) — BOSTON (AP) — Acadian Asset Management Inc. (AAMI) on Thursday reported third-quarter profit of $35.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acadian-asset-management-q3-earnings-114702590.html?.tsrc=rss",
+   "published_at": "2026-10-29T11:47:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "cc0eebf49ba0a441",
+   "primary_source": false,
+   "cluster_id": "82428729436bd0b7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2e13877f440d4d19",
+   "symbols": [
+    "AAMI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acadian Asset Management Inc. Reports Third Quarter Ended September 30, 2026 Results",
+   "summary": "BOSTON, October 29, 2026--Acadian Asset Management Inc. (NYSE: AAMI) today announced its results for the third quarter ended September 30, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acadian-asset-management-inc-reports-113000425.html?.tsrc=rss",
+   "published_at": "2026-10-29T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "80b33d96f6cb52e8",
+   "primary_source": false,
+   "cluster_id": "2e13877f440d4d19",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4fe1290580f457aa",
+   "symbols": [
+    "AAMI",
+    "CBU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Acadian Asset Management (AAMI) Earnings Expected to Grow: Should You Buy?",
+   "summary": "Acadian Asset Management (AAMI) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acadian-asset-management-aami-earnings-130006654.html?.tsrc=rss",
+   "published_at": "2026-10-22T13:00:06Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:08Z",
+   "fingerprint": "4900d7eaaf3179da",
+   "primary_source": false,
+   "cluster_id": "4fe1290580f457aa",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "89e55b34a83f9507",
+   "symbols": [
+    "AAMI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Implied Volatility Surging for Acadian Asset Management Stock Options",
+   "summary": "Investors need to pay close attention to AAMI stock based on the movements in the options market lately.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/options/articles/implied-volatility-surging-acadian-asset-120000274.html?.tsrc=rss",
+   "published_at": "2026-10-22T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "493579e54af20b76",
+   "primary_source": false,
+   "cluster_id": "89e55b34a83f9507",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "beebd5299ecccc17",
+   "symbols": [
+    "AAMI",
+    "FCBM",
+    "WLTH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Financial Stocks Tied To Rising Treasury Yields Retail Investors Should Screen",
+   "summary": "US net interest costs are climbing toward record territory, Treasury yields sit around 5%, and debt-to-GDP projections are forcing investors to rethink how they price risk. That mix creates potential openings for those who understand which financial stocks might benefit from rich",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-financial-stocks-tied-rising-161108153.html?.tsrc=rss",
+   "published_at": "2026-10-17T16:11:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:06Z",
+   "fingerprint": "53303dd9691bc752",
+   "primary_source": false,
+   "cluster_id": "beebd5299ecccc17",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bb8d0345832aa4d2",
+   "symbols": [
+    "AAMI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are Finance Stocks Lagging  Acadian Asset Management Inc. (AAMI) This Year?",
+   "summary": "Here is how Acadian Asset Management (AAMI) and Grupo Aval Acciones y Valores S.A. (AVAL) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/finance-stocks-lagging-acadian-asset-124003159.html?.tsrc=rss",
+   "published_at": "2026-10-15T12:40:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "d7856c11c8cd9544",
+   "primary_source": false,
+   "cluster_id": "bb8d0345832aa4d2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c8bc01872910b95e",
+   "symbols": [
+    "AAMI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Canoe Financial launches quantitative investment solutions sub-advised by Acadian Asset Management",
+   "summary": "CALGARY, Alberta, Oct. 15, 2026 (GLOBE NEWSWIRE) -- Canoe Financial LP (“Canoe Financial”) announces the expansion of its equity fund lineup with the launch of Canoe Quantitative Global Equity Fund and Canoe Quantitative International Equity Fund, both sub-advised by Acadian Asse",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/canoe-financial-launches-quantitative-investment-123000221.html?.tsrc=rss",
+   "published_at": "2026-10-15T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "f4746abdfe398b64",
+   "primary_source": false,
+   "cluster_id": "c8bc01872910b95e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4170fa3bd1f09302",
+   "symbols": [
+    "AAMI"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Acadian Asset Management Inc. to Report Financial and Operating Results for the Third Quarter Ended September 30, 2026",
+   "summary": "BOSTON, October 14, 2026--Acadian Asset Management Inc. (NYSE: AAMI) will announce its financial and operating results for the third quarter ended September 30, 2026, on Thursday, October 29, 2026. The Company will announce its results through a press release and related slide pr",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acadian-asset-management-inc-report-123000328.html?.tsrc=rss",
+   "published_at": "2026-10-14T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "14881dff322b61ec",
+   "primary_source": false,
+   "cluster_id": "4170fa3bd1f09302",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a7aa806db275f359",
+   "symbols": [
+    "AAMI",
+    "VCTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Higher Treasury Yields Could Boost Victory Capital Stock and Bond Fund Platforms",
+   "summary": "Surging 10- and 30-year Treasury yields have pushed borrowing costs and discount rates sharply higher, and that now feeds directly into how investors value every future dollar of earnings. Some businesses feel that pressure; others may find fresh demand as investors rediscover bo",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/higher-treasury-yields-could-boost-141212677.html?.tsrc=rss",
+   "published_at": "2026-10-02T14:12:12Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:46:03Z",
+   "fingerprint": "b05b253b01dd441e",
+   "primary_source": false,
+   "cluster_id": "a7aa806db275f359",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "74256db2b6711cf5",
+   "symbols": [
+    "AAMI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Acadian Asset Management Inc. (AAMI) Stock Outpacing Its Finance Peers This Year?",
+   "summary": "Here is how Acadian Asset Management (AAMI) and Grupo Aval Acciones y Valores S.A. (AVAL) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acadian-asset-management-inc-aami-124005685.html?.tsrc=rss",
+   "published_at": "2026-09-29T12:40:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "6cc314864c787374",
+   "primary_source": false,
+   "cluster_id": "74256db2b6711cf5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3dd8987a17bae2b7",
+   "symbols": [
+    "AAMI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Acadian Asset Management (AAMI) Shares Just Moved, So What Is Driving Attention?",
+   "summary": "Acadian Asset Management (AAMI) has caught investor attention after a sharp one day move of 3.7%, adding to gains over the past week and over the past 3 months. That move comes on top of a strong run for Acadian Asset Management, with the share price delivering a 28.9% 90 day ret",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acadian-asset-management-aami-shares-161315347.html?.tsrc=rss",
+   "published_at": "2026-09-22T16:13:15Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "6a2d97311b749ad7",
+   "primary_source": false,
+   "cluster_id": "3dd8987a17bae2b7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e983b907dc4c6ddf",
+   "symbols": [
+    "AAMI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Acadian Asset Management Inc. (AAMI) Outperforming Other Finance Stocks This Year?",
+   "summary": "Here is how Acadian Asset Management (AAMI) and Citigroup (C) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/acadian-asset-management-inc-aami-134002833.html?.tsrc=rss",
+   "published_at": "2026-08-19T13:40:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "0c18f666bd6c5d45",
+   "primary_source": false,
+   "cluster_id": "e983b907dc4c6ddf",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "30ab80d908fc029c",
+   "symbols": [
+    "AAMI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Synchrony and OpenAI Partner to Drive Growth in Agentic Commerce",
+   "summary": "SYF is partnering with OpenAI to bring financing, rewards and loyalty into AI-led shopping as agentic commerce gains traction.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/synchrony-openai-partner-drive-growth-150800192.html?.tsrc=rss",
+   "published_at": "2026-08-18T15:08:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "10ff0bbaacfb43b9",
+   "primary_source": false,
+   "cluster_id": "30ab80d908fc029c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2b6068a3a10bb698",
+   "symbols": [
+    "AAMI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Twilio Vaults 25% On Earnings, Hits Highs; Two More Stocks On Watch",
+   "summary": "Twilio stock is at levels last seen in January 2022. Twilio, Acadian Asset Manager and Ternium are showing relative strength at new highs.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/c41c04f9-9733-37ba-9dcb-c020b2f228a3/twilio-vaults-25%25-on.html?.tsrc=rss",
+   "published_at": "2026-08-10T18:02:49Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:20Z",
+   "fingerprint": "bd0e15e851365198",
+   "primary_source": false,
+   "cluster_id": "2b6068a3a10bb698",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

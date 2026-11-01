@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -58,7 +58,17 @@
     "green": false,
     "day_high": 29.014999389648438,
     "day_low": 28.260000228881836,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 33.73684658604026,
+    "adx14": 22.27346553252264,
+    "ema10": 28.03763006197896,
+    "sma200": 25.222250003814697,
+    "perf_63d": 31.178364561758865,
+    "adr20_pct": 4.080364900340272,
+    "range10_pct": 18.283878782261166,
+    "high10_prev": 29.5,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -88,6 +98,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": true,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -95,7 +126,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.6666666666666666,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.6666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -138,12 +172,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 10.7,
+   "score": 48.5,
    "drivers": [
+    "news_flow",
     "price_volume_anomaly",
-    "insider_activity"
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 5,
    "independent_24h": 0
   },
   "political": {
@@ -236,7 +271,17 @@
     "green": false,
     "day_high": 29.014999389648438,
     "day_low": 28.260000228881836,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 33.73684658604026,
+    "adx14": 22.27346553252264,
+    "ema10": 28.03763006197896,
+    "sma200": 25.222250003814697,
+    "perf_63d": 31.178364561758865,
+    "adr20_pct": 4.080364900340272,
+    "range10_pct": 18.283878782261166,
+    "high10_prev": 29.5,
+    "pullback_ema20": false,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -266,6 +311,27 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": false,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": false,
+     "unter EMA 10": false
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": true,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": true,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
    "hits": [],
@@ -273,7 +339,10 @@
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.6666666666666666,
-    "S04": 0.4
+    "S04": 0.4,
+    "DSM": 0.6666666666666666,
+    "RSI2": 0.3333333333333333,
+    "QM": 0.6666666666666666
    },
    "filter": {
     "Tag grün": false,
@@ -611,11 +680,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 10.7,
+  "score": 48.5,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 60,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 60.9,
@@ -633,27 +702,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 5,
+    "independent": 5,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 14,
+    "independent": 14,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
    "price_volume_anomaly",
-   "insider_activity"
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -671,7 +741,429 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "0d22298909403f53",
+   "symbols": [
+    "RXRX",
+    "ZYME"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zymeworks Inc. (ZYME) to Report Q3 Results: Wall Street Expects Earnings Growth",
+   "summary": "Zymeworks (ZYME) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zymeworks-inc-zyme-report-q3-130010784.html?.tsrc=rss",
+   "published_at": "2026-10-29T13:00:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:53Z",
+   "fingerprint": "30273b46e25e9021",
+   "primary_source": false,
+   "cluster_id": "0d22298909403f53",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b4ec18099b83359e",
+   "symbols": [
+    "ZYME"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zymeworks Highlights ZW191 Ovarian Cancer Responses, Roche Deal Upside",
+   "summary": "Zymeworks (NASDAQ:ZYME) outlined a partnering-focused research strategy, presented updated clinical data for its ZW191 antibody-drug conjugate in platinum-resistant ovarian cancer, and discussed its recently announced collaboration with Roche for the DLL3-targeting T-cell engager",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-zymeworks-highlights-zw191-ovarian-cancer-responses-roche-deal-upside-2026-10-27/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-27T23:04:18Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "5e1f5b7244090c2d",
+   "primary_source": false,
+   "cluster_id": "b4ec18099b83359e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fc297c80a59bab3d",
+   "symbols": [
+    "ZYME"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Faeth Appoints Adam Schayowitz, Ph.D., MBA, Head of Research and Development at Zymeworks, to Board of Directors",
+   "summary": "AUSTIN, Texas, October 27, 2026--Faeth Therapeutics (Nasdaq: FTH), a clinical-stage oncology company developing multi-node therapies for cancer patients, including its lead program PIKTOR, today announced the appointment of Adam Schayowitz, Ph.D., MBA, to its Board of Directors. ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/faeth-appoints-adam-schayowitz-ph-110000310.html?.tsrc=rss",
+   "published_at": "2026-10-27T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "19c5241e09203b86",
+   "primary_source": false,
+   "cluster_id": "fc297c80a59bab3d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6e0925fbaaefb5b1",
+   "symbols": [
+    "ZYME"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How Investors Are Reacting To Zymeworks (ZYME) Roche Licensing Deal",
+   "summary": "Zymeworks announced a global collaboration and license agreement giving Roche exclusive worldwide rights to develop and commercialize DLL3-targeting trispecific T-cell engager ZW209, alongside new Phase 1 ESMO 2026 data on ovarian cancer ADC ZW191 showing activity across folate r",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/investors-reacting-zymeworks-zyme-roche-221846984.html?.tsrc=rss",
+   "published_at": "2026-10-26T22:18:46Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "c890a11bc25b3b8a",
+   "primary_source": false,
+   "cluster_id": "6e0925fbaaefb5b1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c6a7db69a0b7c581",
+   "symbols": [
+    "ZYME"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Another autoimmune CAR-T death; Treasury zeroes in on China deals",
+   "summary": "A patient who received Bristol Myers’ zola-cel died 44 days later. Elsewhere, Gilead paid nearly $1.3 billion for a potential threat to J&amp;J’s newly approved psoriasis pill.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "biopharmadive.com",
+   "url": "https://www.biopharmadive.com/news/autoimmune-bristol-death-treasury-china-gilead-pepstar-zymeworks/833901/?.tsrc=rss",
+   "published_at": "2026-10-26T13:59:35Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "9653460e60f75897",
+   "primary_source": false,
+   "cluster_id": "c6a7db69a0b7c581",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f671769e92608650",
+   "symbols": [
+    "ZYME"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zymeworks Presents New Phase 1 Data for Folate Receptor Alpha-Targeting Antibody-Drug Conjugate ZW191 at ESMO Congress 2026",
+   "summary": "ZW191 demonstrates compelling anti-tumor activity in heavily pretreated patients with platinum-resistant ovarian cancer across folate receptor alpha (FRα) expression levelsConfirmed objective response rates (cORR) of 64.5% at the 6.4 mg/kg dose in patients with high-grade serous ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zymeworks-presents-phase-1-data-063000700.html?.tsrc=rss",
+   "published_at": "2026-10-24T06:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "d0520fb2f2eac068",
+   "primary_source": false,
+   "cluster_id": "f671769e92608650",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bd760d3f3dd769d8",
+   "symbols": [
+    "MRK.DE",
+    "ZYME"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Stocktwits Biotech Dealmaker: Gilead And Roche Double Down On Early-Stage Assets Over Full Buyouts This Week",
+   "summary": "Inflammation, cancer therapies called antibody-drug conjugates, and next-generation T-cell engagers with possibilities in treating cancer drew the biggest capital in the relatively slow week for biotech dealmaking.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/stocktwits-biotech-dealmaker-gilead-and-roche-double-down-on-early-stage-assets-over-full-buyouts-this-week/cZUGPL8RBUe?.tsrc=rss",
+   "published_at": "2026-10-24T00:01:57Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:03Z",
+   "fingerprint": "965516da5fe2a35c",
+   "primary_source": false,
+   "cluster_id": "bd760d3f3dd769d8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0769ed6c453d2133",
+   "symbols": [
+    "ZYME"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zymeworks stock surges on $813M Roche licensing deal",
+   "summary": "Investing.com -- Zymeworks Inc (NASDAQ:ZYME) shares rose 5.5% in premarket trading Friday following the announcement of a global license and collaboration agreement with Roche for ZW209, a T cell engager targeting DLL3, in a deal worth up to $813 million.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zymeworks-stock-surges-813m-roche-132515260.html?.tsrc=rss",
+   "published_at": "2026-10-23T13:25:15Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "bdbd1e0fdd35f250",
+   "primary_source": false,
+   "cluster_id": "0769ed6c453d2133",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d8e3e18f0ac71dbf",
+   "symbols": [
+    "ZYME"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zymeworks Signs Roche Deal with $55 Million Upfront, Up to $718 Million in Milestones",
+   "summary": "Zymeworks (ZYME) said Friday it signed an exclusive global license and collaboration agreement with",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zymeworks-signs-roche-deal-55-104942113.html?.tsrc=rss",
+   "published_at": "2026-10-23T10:49:42Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "b3dbcbf36f784a4c",
+   "primary_source": false,
+   "cluster_id": "d8e3e18f0ac71dbf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a9dd07b72cb1b947",
+   "symbols": [
+    "ZYME"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zymeworks Enters into an Exclusive Global License and Collaboration Agreement with Roche for ZW209, a Trispecific T cell Engager Targeting DLL3",
+   "summary": "Zymeworks to receive a $55 million upfront payment and a $40 million payment upon initiation of the Phase 1b trial, with potential for up to $718 million in additional development, commercial and sales-based milestones Zymeworks also eligible to receive tiered high-single-digit t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zymeworks-enters-exclusive-global-license-100000900.html?.tsrc=rss",
+   "published_at": "2026-10-23T10:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "8539de3591f6d60f",
+   "primary_source": false,
+   "cluster_id": "a9dd07b72cb1b947",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "72bb1d6c09d6a8a1",
+   "symbols": [
+    "ZYME"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zymeworks Appoints Suzanne Monahan as Senior Vice President, Commercial and General Manager, Theravance Biopharma",
+   "summary": "VANCOUVER, British Columbia , Oct. 19, 2026 (GLOBE NEWSWIRE) -- Zymeworks Inc. (Nasdaq: ZYME), a biotechnology company managing a portfolio of licensed healthcare assets while developing a diverse pipeline of novel, multifunctional biotherapeutics, today announced that Suzanne Mo",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zymeworks-appoints-suzanne-monahan-senior-100000346.html?.tsrc=rss",
+   "published_at": "2026-10-19T10:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "850aeb0da7b1aa0a",
+   "primary_source": false,
+   "cluster_id": "72bb1d6c09d6a8a1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "23bef3c2d98df239",
+   "symbols": [
+    "ZYME"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zymeworks Announces Participation in Upcoming Investor Conferences and Date of Third Quarter 2026 Financial Results",
+   "summary": "Zymeworks to Report Third Quarter 2026 Financial Results on November 9, 2026VANCOUVER, British Columbia, Oct. 15, 2026 (GLOBE NEWSWIRE) -- Zymeworks Inc. (Nasdaq: ZYME), a biotechnology company managing a portfolio of licensed healthcare assets while developing a diverse pipeline",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zymeworks-announces-participation-upcoming-investor-100000006.html?.tsrc=rss",
+   "published_at": "2026-10-15T10:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "88a5d0be1e4f9198",
+   "primary_source": false,
+   "cluster_id": "23bef3c2d98df239",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3cae62af37a872ef",
+   "symbols": [
+    "ZYME"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zymeworks (ZYME) Could Be 39% Undervalued On 2026 Revenue Guidance And CIO Hire",
+   "summary": "Zymeworks (ZYME) drew fresh attention after issuing 2026 revenue guidance of US$278 million to US$292 million and announcing Stuart Knight as Executive Vice President and Chief Information Officer to oversee AI focused technology efforts. The revenue outlook and leadership hire c",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zymeworks-zyme-could-39-undervalued-032127744.html?.tsrc=rss",
+   "published_at": "2026-10-09T03:21:27Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "8d55ddafc6020e02",
+   "primary_source": false,
+   "cluster_id": "3cae62af37a872ef",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3c57175c8516d1f8",
+   "symbols": [
+    "ZYME"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zymeworks Completes Theravance Deal, Adds YUPELRI Cash Flow and Raises 2026 Outlook",
+   "summary": "Zymeworks (NASDAQ:ZYME) said it has completed its acquisition of Theravance Biopharma, adding the COPD medicine YUPELRI, an acquired research portfolio, collaboration and royalty economics, Irish tax attributes and a commercial organization to its business. Management said the tr",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-zymeworks-completes-theravance-deal-adds-yupelri-cash-flow-and-raises-2026-outlook-2026-10-02/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-02T23:02:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "577fa0bd04c7e6d8",
+   "primary_source": false,
+   "cluster_id": "3c57175c8516d1f8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c985a6f1ea73aa8e",
+   "symbols": [
+    "ZYME"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Zymeworks Announces Updated 2026 Financial Guidance and Final Transaction Details Following Theravance Biopharma Acquisition",
+   "summary": "Acquisition diversifies durable cash flows and advances Zymeworks’ strategy to build a productive R&amp;D company with a growing portfolio of revenue-generating assetsYUPELRI® expected to contribute immediately accretive revenue and cash flow to Zymeworks with base case mid-teens",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zymeworks-announces-updated-2026-financial-100000975.html?.tsrc=rss",
+   "published_at": "2026-09-28T10:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "fe327f11e3c6758b",
+   "primary_source": false,
+   "cluster_id": "c985a6f1ea73aa8e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "81fab7635e01bfd6",
+   "symbols": [
+    "ZYME"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zymeworks Completes Acquisition of Theravance Biopharma",
+   "summary": "Conference call with Zymeworks management on September 28 at 8:30 am Eastern Time (ET) VANCOUVER, British Columbia, Sept. 23, 2026 (GLOBE NEWSWIRE) -- Zymeworks Inc. (Nasdaq: ZYME), a biotechnology company managing a portfolio of licensed healthcare assets while developing a dive",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zymeworks-completes-acquisition-theravance-biopharma-200100390.html?.tsrc=rss",
+   "published_at": "2026-09-23T20:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "18c1790d0f9e1f43",
+   "primary_source": false,
+   "cluster_id": "81fab7635e01bfd6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f3265190cfd8e295",
+   "symbols": [
+    "ZYME"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Jazz Pharmaceuticals Sees $3B-$5B Ziihera Opportunity as Pipeline Expands",
+   "summary": "Jazz Pharmaceuticals (NASDAQ:JAZZ) outlined development and commercial plans for its oncology, epilepsy and sleep franchises during a discussion with Deutsche Bank analyst David Hoang, emphasizing the expansion potential of HER2-targeted therapy Ziihera and ongoing lifecycle work",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-jazz-pharmaceuticals-sees-3b-5b-ziihera-opportunity-as-pipeline-expands-2026-09-20/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-09-20T20:02:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "2efbbe5f2c79024f",
+   "primary_source": false,
+   "cluster_id": "f3265190cfd8e295",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0d6966c22efbfa5a",
+   "symbols": [
+    "ANIK",
+    "ZYME"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "JAZZ Rises on Updated OS Results From Gastric Cancer Study",
+   "summary": "Jazz up as updated HERIZON-GEA-01 results show statistically significant OS benefits for Ziihera-based regimens in first-line HER2+ gastroesophageal adenocarcinoma.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/jazz-rises-updated-os-results-160200444.html?.tsrc=rss",
+   "published_at": "2026-09-01T16:02:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:11Z",
+   "fingerprint": "5d31276bddc3a6b1",
+   "primary_source": false,
+   "cluster_id": "0d6966c22efbfa5a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8af3eb11ad2129b5",
+   "symbols": [
+    "ZYME"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zymeworks (ZYME), What Is Behind The Renewed Attention?",
+   "summary": "Why Zymeworks Stock Is Back in Focus After FDA Approval Zymeworks (ZYME) moved into the spotlight after the FDA approved zanidatamab for first line HER2 positive gastroesophageal adenocarcinoma, putting fresh attention on what this decision might imply for future revenue potentia",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/zymeworks-zyme-behind-renewed-attention-190541497.html?.tsrc=rss",
+   "published_at": "2026-08-28T19:05:41Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T09:03:18Z",
+   "fingerprint": "59d6dc9cc8fc47ed",
+   "primary_source": false,
+   "cluster_id": "8af3eb11ad2129b5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "6dc2d036678de5b1",

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:48:59Z",
+ "generated_at": "2026-11-01T09:00:23Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -59,7 +59,17 @@
     "green": false,
     "day_high": 253.8699951171875,
     "day_low": 228.56500244140625,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 3.23828103819622,
+    "adx14": 20.177363964659275,
+    "ema10": 264.5830380938826,
+    "sma200": 198.34017517089845,
+    "perf_63d": -14.009503280695345,
+    "adr20_pct": 5.388033716582152,
+    "range10_pct": 16.98066506097502,
+    "high10_prev": 285.0,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -89,14 +99,40 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.6666666666666666,
+    "RSI2": 1.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -140,14 +176,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 68.5,
+   "score": 63.5,
    "drivers": [
     "news_flow",
     "source_diversity",
     "price_volume_anomaly"
    ],
    "independent_7d": 19,
-   "independent_24h": 2
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -261,7 +297,17 @@
     "green": false,
     "day_high": 253.8699951171875,
     "day_low": 228.56500244140625,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 3.23828103819622,
+    "adx14": 20.177363964659275,
+    "ema10": 264.5830380938826,
+    "sma200": 198.34017517089845,
+    "perf_63d": -14.009503280695345,
+    "adr20_pct": 5.388033716582152,
+    "range10_pct": 16.98066506097502,
+    "high10_prev": 285.0,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -291,14 +337,40 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": true
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": false,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": false,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": true
     }
    },
-   "hits": [],
+   "hits": [
+    "RSI2"
+   ],
    "near": {
     "S01": 0.0,
     "S02": 0.7,
     "S03": 0.3333333333333333,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.6666666666666666,
+    "RSI2": 1.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -637,10 +709,10 @@
   ]
  },
  "intelligence_detail": {
-  "score": 68.5,
+  "score": 63.5,
   "components": {
    "news_flow": 100.0,
-   "freshness": 100.0,
+   "freshness": 50,
    "source_diversity": 100.0,
    "primary_sources": 0,
    "analyst_activity": 0,
@@ -650,10 +722,10 @@
   },
   "windows": {
    "24h": {
-    "signals": 2,
-    "independent": 2,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 2,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -950,8 +1022,7 @@
    "cluster_id": "ad844614c3ec522c",
    "independence": "original",
    "verification": "Unverified",
-   "feed": "yahoo_rss",
-   "title_de": "ServiceNow-Aktie ist am schlechtesten in S & P 500, nachdem eine wichtige Umsatzmaßnahme kurz gefallen ist"
+   "feed": "yahoo_rss"
   },
   {
    "id": "2f5990184a3d5fbd",
