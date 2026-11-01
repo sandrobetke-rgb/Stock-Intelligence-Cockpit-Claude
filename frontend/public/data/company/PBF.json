@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:00:56Z",
+ "generated_at": "2026-11-01T06:27:44Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 5.795393722268771,
    "rvol": 1.018537309046123,
    "ema10": 78.19675277369348,
-   "ema21": 79.33267321026959,
+   "ema21": 79.33267321026538,
    "sma50": 77.39560012817383,
-   "sma200": 53.36892599105835
+   "sma200": 53.36892582893372
   },
   "market_cap": 9245873152.0,
   "market_cap_currency": "USD",
@@ -55,13 +55,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 6.3,
+   "score": 60.2,
    "drivers": [
-    "price_volume_anomaly",
-    "insider_activity"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 19,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -125,9 +126,9 @@
   "adr20": 5.795393722268771,
   "rvol": 1.018537309046123,
   "ema10": 78.19675277369348,
-  "ema21": 79.33267321026959,
+  "ema21": 79.33267321026538,
   "sma50": 77.39560012817383,
-  "sma200": 53.36892599105835,
+  "sma200": 53.36892582893372,
   "volatility_ann": 63.26292022774241,
   "avg_dollar_volume_20d": 230478518.35769653,
   "move_zscore": 0.8171635659786189
@@ -451,49 +452,50 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.3,
+  "score": 60.2,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 100.0,
    "primary_sources": 0,
-   "analyst_activity": 0,
+   "analyst_activity": 35,
    "price_volume_anomaly": 24.5,
    "social_attention": null,
    "insider_activity": 40
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 19,
+    "independent": 19,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 5,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 19,
+    "independent": 19,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 5,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly",
-   "insider_activity"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -511,7 +513,457 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "b6432e7be70917be",
+   "symbols": [
+    "PBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "PBF Energy (PBF) Stock Price Trails Its Q3 Earnings Windfall",
+   "summary": "PBF Energy just printed one of the heaviest hitting refining quarters of the year in Q3 2026, and the stock only moved 3.2% higher to US$77.98. For a refiner that reported adjusted earnings of US$12.78 per share on roughly US$12.1b in revenue, that is a surprisingly muted cheer. ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/pbf-energy-pbf-stock-price-071201866.html?.tsrc=rss",
+   "published_at": "2026-10-31T07:12:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:45Z",
+   "fingerprint": "37e5ea048b989dc0",
+   "primary_source": false,
+   "cluster_id": "b6432e7be70917be",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "PBF Energy (PBF) Aktienkurs Trails seine Q3 Gewinn Windfall"
+  },
+  {
+   "id": "b7acb4f519a5ae08",
+   "symbols": [
+    "COLL",
+    "FLG",
+    "ICFI",
+    "KALU",
+    "MYRG",
+    "OSG",
+    "PBF"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Operating Leverage and Financial Strength Anchor Champion Homes (SKY) Investment Thesis",
+   "summary": "Third Avenue Management, an investment management company, released its third-quarter 2026 investor letter for the “Third Avenue Small-Cap Value Fund”. The letter can be downloaded here. The Third Avenue Small-Cap Value Fund returned -3.31% in Q3 2026, outperforming its benchmark",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/operating-leverage-financial-strength-anchor-162919940.html?.tsrc=rss",
+   "published_at": "2026-10-30T16:29:19Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:05Z",
+   "fingerprint": "e82b87be517e3a24",
+   "primary_source": false,
+   "cluster_id": "b7acb4f519a5ae08",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Operating Leverage und Financial Strength Anchor Champion Homes (SKY) Investment Thesis"
+  },
+  {
+   "id": "6f01d4c9fa8f4e01",
+   "symbols": [
+    "COLL",
+    "FLG",
+    "ICFI",
+    "KALU",
+    "MYRG",
+    "OSG",
+    "PBF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Versigent (VGNT) is Unlocking Value Through Independent Growth and Capital Allocation",
+   "summary": "Third Avenue Management, an investment management company, released its third-quarter 2026 investor letter for the “Third Avenue Small-Cap Value Fund”. The letter can be downloaded here. The Third Avenue Small-Cap Value Fund returned -3.31% in Q3 2026, outperforming its benchmark",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/versigent-vgnt-unlocking-value-independent-161748267.html?.tsrc=rss",
+   "published_at": "2026-10-30T16:17:48Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:05Z",
+   "fingerprint": "34f9794a237ea9fd",
+   "primary_source": false,
+   "cluster_id": "6f01d4c9fa8f4e01",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Versigent (VGNT) erschließt Wert durch unabhängiges Wachstum und Kapitalallokation"
+  },
+  {
+   "id": "4a1a9270c22d6d8b",
+   "symbols": [
+    "PBF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "DT Midstream Stock Plus 2 Top Pipeline Stocks",
+   "summary": "Middle East flare ups around Saudi refineries and key shipping routes have pushed oil back into the spotlight, and attention is swinging to the companies that move the fuel rather than just those that find it. When flows are at risk, pipes and storage matter. That is where US mid",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/dt-midstream-stock-plus-2-151327272.html?.tsrc=rss",
+   "published_at": "2026-10-30T15:13:27Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:45Z",
+   "fingerprint": "75ea935aa040dee7",
+   "primary_source": false,
+   "cluster_id": "4a1a9270c22d6d8b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "DT Midstream Stock Plus 2 Top Pipeline Stocks"
+  },
+  {
+   "id": "df2a1c5b1ed95437",
+   "symbols": [
+    "PBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "PBF Energy Q3 Earnings Call Highlights",
+   "summary": "PBF Energy (NYSE:PBF) reported third-quarter adjusted net income of $12.78 per share and adjusted EBITDA of approximately $2.3 billion, as tight refined-product supplies and firm demand supported strong market conditions. The company also continued to reduce leverage, cutting net",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-pbf-energy-q3-earnings-call-highlights-2026-10-30/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-30T14:14:46Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:45Z",
+   "fingerprint": "0d18402ecdbe0f60",
+   "primary_source": false,
+   "cluster_id": "df2a1c5b1ed95437",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5456acb7be774ac3",
+   "symbols": [
+    "PBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "PBF Q3 Earnings Call Highlights: Refining Strength and Debt Cuts",
+   "summary": "PBF Energy beat Q3 earnings estimates as tight refining supplies boost margins, while debt cuts, higher throughput and cost savings strengthen its outlook.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/pbf-q3-earnings-call-highlights-131200064.html?.tsrc=rss",
+   "published_at": "2026-10-30T13:12:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:45Z",
+   "fingerprint": "e8709c18dd6d7d06",
+   "primary_source": false,
+   "cluster_id": "5456acb7be774ac3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "PBF Q3 Ergebnisaufruf Highlights: Verfeinerung der Stärke und Schuldenschnitte"
+  },
+  {
+   "id": "f1ba275f05a2b300",
+   "symbols": [
+    "PBF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "PBF Energy (PBF) May Find a Bottom Soon, Here's Why You Should Buy the Stock Now",
+   "summary": "PBF Energy (PBF) witnesses a hammer chart pattern, indicating support found by the stock after losing some value lately. This coupled with an upward trend in earnings estimate revisions could mean a trend reversal for the stock in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/pbf-energy-pbf-may-bottom-125502209.html?.tsrc=rss",
+   "published_at": "2026-10-30T12:55:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:45Z",
+   "fingerprint": "3325256d0db734d9",
+   "primary_source": false,
+   "cluster_id": "f1ba275f05a2b300",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "PBF Energy (PBF) kann bald einen Boden finden, hier ist, warum Sie die Aktie jetzt kaufen sollten"
+  },
+  {
+   "id": "72ac3be9ba65ba43",
+   "symbols": [
+    "GIII",
+    "GNW",
+    "PARR",
+    "PBF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zacks.com featured highlights include G-III Apparel, HF Sinclair, Par Pacific, Genworth Financial and PBF Energy",
+   "summary": "Five stocks with low price-to-sales ratios stand out for their strong operating fundamentals, strategic initiatives and potential to create shareholder value.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-com-featured-highlights-g-095800602.html?.tsrc=rss",
+   "published_at": "2026-10-30T09:58:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:30Z",
+   "fingerprint": "4b3b3f334d548281",
+   "primary_source": false,
+   "cluster_id": "72ac3be9ba65ba43",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Zu den Highlights von Zacks.com gehören G-III Apparel, HF Sinclair, Par Pacific, Genworth Financial und PBF Energy."
+  },
+  {
+   "id": "929f9dc03880c6cb",
+   "symbols": [
+    "PBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "PBF Energy Inc. Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of PBF Energy Inc.'s Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-pbf-energy-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-29T21:09:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:45Z",
+   "fingerprint": "4e2242321cb1173f",
+   "primary_source": false,
+   "cluster_id": "929f9dc03880c6cb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4499b5da2b8dbaec",
+   "symbols": [
+    "PBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "PBF Energy (PBF) Q3 2026 Earnings Call Transcript",
+   "summary": "CEO Matthew Lucey discusses $12.78 EPS, $2B debt reduction, and 18% dividend hike.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/29/pbf-energy-pbf-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-29T17:44:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:45Z",
+   "fingerprint": "dbe5f745348e83b7",
+   "primary_source": false,
+   "cluster_id": "4499b5da2b8dbaec",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "04377da22c426e26",
+   "symbols": [
+    "GIII",
+    "GNW",
+    "PARR",
+    "PBF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "5 Low Price-to-Sales Stocks to Sharpen Your Investment Strategy",
+   "summary": "Discover low P/S stocks, including GIII, DINO, PARR, GNW and PBF, with solid fundamentals, growth catalysts and potential to deliver attractive returns.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/5-low-price-sales-stocks-143500223.html?.tsrc=rss",
+   "published_at": "2026-10-29T14:35:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:30Z",
+   "fingerprint": "5756ea9d170bd73c",
+   "primary_source": false,
+   "cluster_id": "04377da22c426e26",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ad01ef5dff9ef9c9",
+   "symbols": [
+    "PARR",
+    "PBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "PBF Energy (PBF) Beats Q3 Earnings and Revenue Estimates",
+   "summary": "PBF Energy (PBF) delivered earnings and revenue surprises of +12.70% and +12.29%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/pbf-energy-pbf-beats-q3-113509643.html?.tsrc=rss",
+   "published_at": "2026-10-29T11:35:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:42Z",
+   "fingerprint": "a02fa853efe6849e",
+   "primary_source": false,
+   "cluster_id": "ad01ef5dff9ef9c9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c5606c2e1afe911d",
+   "symbols": [
+    "MPC",
+    "PBF",
+    "PSX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "This Is Why MPC Stock Is a Smart Buy Before Q3 Earnings Release",
+   "summary": "As Marathon Petroleum gears up to report third-quarter earnings on Nov. 3, let's find out how the expectations stack up. Also, know how to play the stock ahead of results.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-mpc-stock-smart-buy-112200967.html?.tsrc=rss",
+   "published_at": "2026-10-29T11:22:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:02Z",
+   "fingerprint": "7c412eac2aebebef",
+   "primary_source": false,
+   "cluster_id": "c5606c2e1afe911d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8bddc72ad04faccc",
+   "symbols": [
+    "PBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "PBF Energy: Q3 Earnings Snapshot",
+   "summary": "(PBF) on Thursday reported third-quarter profit of $1.The Parsippany, New Jersey-based company said it had net income of $12.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/pbf-energy-q3-earnings-snapshot-104425583.html?.tsrc=rss",
+   "published_at": "2026-10-29T10:44:25Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:45Z",
+   "fingerprint": "501c8b69810f271d",
+   "primary_source": false,
+   "cluster_id": "8bddc72ad04faccc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e4451bb381a91cd1",
+   "symbols": [
+    "PBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "PBF Energy Announces Third Quarter 2026 Results, Declares Dividend of $0.325 per Share",
+   "summary": "PBF Energy Inc. (NYSE:PBF) today reported third quarter 2026 income from operations of $2,100.9 million as compared to income from operations of $285.9 million for the third quarter of 2025. Excluding special items, third quarter 2026 income from operations was $2,111.9 million a",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/pbf-energy-announces-third-quarter-103000610.html?.tsrc=rss",
+   "published_at": "2026-10-29T10:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:45Z",
+   "fingerprint": "4880469fae79a380",
+   "primary_source": false,
+   "cluster_id": "e4451bb381a91cd1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "50cbebd8a894f69f",
+   "symbols": [
+    "PBF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How Investors May Respond To PBF Energy (PBF) Martinez Refinery Restart",
+   "summary": "PBF Energy has returned its Martinez refinery to full production after the 2025 fire, operating in a refining market supported by resilient fuel demand, favorable crack spreads and ongoing cost efficiency efforts. The combination of restored capacity, significant insurance procee",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/investors-may-respond-pbf-energy-220635992.html?.tsrc=rss",
+   "published_at": "2026-10-28T22:06:35Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:45Z",
+   "fingerprint": "a28d56d98862efe0",
+   "primary_source": false,
+   "cluster_id": "50cbebd8a894f69f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "888578ced2b2f7b3",
+   "symbols": [
+    "PBF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "PBF Energy (PBF) Stock Dropped, So What Is Driving Attention Now?",
+   "summary": "PBF Energy (PBF) has drawn fresh attention after its Martinez refinery returned to full production following repairs from the February 2025 fire, marking a key operational shift for the refiner. Recent trading has cooled some of the excitement around PBF Energy, with the share pr",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/pbf-energy-pbf-stock-dropped-210943843.html?.tsrc=rss",
+   "published_at": "2026-10-28T21:09:43Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:45Z",
+   "fingerprint": "3b348579de0be7e2",
+   "primary_source": false,
+   "cluster_id": "888578ced2b2f7b3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "62aafdc22991a682",
+   "symbols": [
+    "MPC",
+    "PBF",
+    "VLO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Did Valero Stock Fall?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/vlo/articles/621052/why-did-valero-stock-fall/2026-10-28?.tsrc=rss",
+   "published_at": "2026-10-28T18:01:17Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:02Z",
+   "fingerprint": "0542de0a1f325d8d",
+   "primary_source": false,
+   "cluster_id": "62aafdc22991a682",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "98782bcec5a159ba",
+   "symbols": [
+    "PBF",
+    "VLO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Phillips 66 Q3 Earnings Beat Estimates on Strong Refining Margins",
+   "summary": "PSX's Q3 earnings surged on stronger refining margins and higher volumes, driving a massive profit jump, robust cash flow and shareholder returns.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/phillips-66-q3-earnings-beat-152900870.html?.tsrc=rss",
+   "published_at": "2026-10-28T15:29:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:25Z",
+   "fingerprint": "f8db9c6c3dab0fa1",
+   "primary_source": false,
+   "cluster_id": "98782bcec5a159ba",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "d1ef3f4ebeb625e3",

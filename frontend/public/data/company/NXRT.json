@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:00:56Z",
+ "generated_at": "2026-11-01T06:27:44Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,7 +24,7 @@
    "adr20": 3.8869151998287412,
    "rvol": 0.4685487662775722,
    "ema10": 18.392638538488637,
-   "ema21": 18.87137932363165,
+   "ema21": 18.87137932360056,
    "sma50": 20.59180595397949,
    "sma200": 25.013601503372193
   },
@@ -55,12 +55,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 5.0,
+   "score": 20.3,
    "drivers": [
-    "price_volume_anomaly",
-    "insider_activity"
+    "news_flow",
+    "source_diversity",
+    "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -125,7 +126,7 @@
   "adr20": 3.8869151998287412,
   "rvol": 0.4685487662775722,
   "ema10": 18.392638538488637,
-  "ema21": 18.87137932363165,
+  "ema21": 18.87137932360056,
   "sma50": 20.59180595397949,
   "sma200": 25.013601503372193,
   "volatility_ann": 37.891785690681836,
@@ -451,11 +452,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 5.0,
+  "score": 20.3,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 19.9,
@@ -473,27 +474,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly",
-   "insider_activity"
+   "news_flow",
+   "source_diversity",
+   "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -511,7 +513,412 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "d2cb724dd7eb4a55",
+   "symbols": [
+    "NXRT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "NexPoint Residential Trust, Inc. Announces Quarterly Dividend",
+   "summary": "NexPoint Residential Trust, Inc. (NYSE: NXRT) (\"NXRT\") announced today that its board of directors approved a dividend of $0.53 per share of NXRT common stock, payable on December 31, 2026, to stockholders of record on December 15, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/nexpoint-residential-trust-inc-announces-210000676.html?.tsrc=rss",
+   "published_at": "2026-10-27T21:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:57Z",
+   "fingerprint": "9d9631e248ce077d",
+   "primary_source": false,
+   "cluster_id": "d2cb724dd7eb4a55",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c977234568391002",
+   "symbols": [
+    "NXRT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "NexPoint Residential Trust, Inc. Announces Third Quarter 2026 Earnings Conference Call",
+   "summary": "NexPoint Residential Trust, Inc. (\"NXRT\" or the \"Company\") (NYSE: NXRT) announced today that the Company is scheduled to host a conference call on Tuesday, November 3, 2026, at 11:00 a.m. ET (10:00 am CT), to discuss third quarter 2026 financial results.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/nexpoint-residential-trust-inc-announces-130000310.html?.tsrc=rss",
+   "published_at": "2026-10-06T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:57Z",
+   "fingerprint": "daf8a96e4bbb6f90",
+   "primary_source": false,
+   "cluster_id": "c977234568391002",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d5fc11b3677edb77",
+   "symbols": [
+    "NXRT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "NexPoint Residential Trust (NXRT) Stock Fair Value Falls After Analyst Target Cuts",
+   "summary": "The fair value price target for NexPoint Residential Trust has been revised from US$30.40 to US$26.50, a reduction of about 13% in the updated model. This shift lines up with recent analyst commentary that centers on interest rate sensitivity, high leverage and a cluster of Hold ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nexpoint-residential-trust-nxrt-stock-071037299.html?.tsrc=rss",
+   "published_at": "2026-10-01T07:10:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:57Z",
+   "fingerprint": "8c2a57c7f54882ad",
+   "primary_source": false,
+   "cluster_id": "d5fc11b3677edb77",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "80e27beb60d986fc",
+   "symbols": [
+    "NXRT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "NexPoint Residential (NXRT) Sees Improving Occupancy Despite Sliding Profits",
+   "summary": "On August 4, NexPoint Residential Trust Inc. (NYSE:NXRT) reported second-quarter 2026 results that pull in two directions at once. Occupancy inched higher, rent premiums on renovated units kept climbing, and the company deployed its first loan under a brand new lending program. A",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/nexpoint-residential-nxrt-sees-improving-043533232.html?.tsrc=rss",
+   "published_at": "2026-09-10T04:35:33Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:57Z",
+   "fingerprint": "e70899c720e94c1a",
+   "primary_source": false,
+   "cluster_id": "80e27beb60d986fc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2f8ecddbdd48bd5a",
+   "symbols": [
+    "AMSF",
+    "ATRC",
+    "MATW",
+    "NABL",
+    "NXRT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Bloom Energy, Illumina, and Everpure Set to Join S&P 500; Others to Join S&P 100, S&P MidCap 400, and S&P SmallCap 600",
+   "summary": "S&amp;P Dow Jones Indices will make the following changes to the S&amp;P 500, S&amp;P 100, S&amp;P MidCap 400, and S&amp;P SmallCap 600 indices effective prior to the open of trading on Monday, September 21, 2026, to coincide with the quarterly rebalance. The changes ensure that ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/bloom-energy-illumina-everpure-set-231500760.html?.tsrc=rss",
+   "published_at": "2026-09-04T23:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:05Z",
+   "fingerprint": "f6f353c288c4f9ee",
+   "primary_source": false,
+   "cluster_id": "2f8ecddbdd48bd5a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "53e4818101b6fb45",
+   "symbols": [
+    "NREF",
+    "NXRT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "NexPoint Real Estate Finance (NREF) Q2 2026 Earnings Call Transcript",
+   "summary": "Life science and residential assets now drive over 75% of the portfolio.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/13/nexpoint-real-estate-finance-nref-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-13T16:13:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:36Z",
+   "fingerprint": "ea2f6fbaba37f468",
+   "primary_source": false,
+   "cluster_id": "53e4818101b6fb45",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "acce98bb40cf7479",
+   "symbols": [
+    "NXRT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is NexPoint Residential Trust (NXRT) Stock Undervalued Right Now?",
+   "summary": "Here at Zacks, our focus is on the proven Zacks Rank system, which emphasizes earnings estimates and estimate revisions to find great stocks. Nevertheless, we are always paying attention to the latest value, growth, and momentum trends to underscore strong picks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nexpoint-residential-trust-nxrt-stock-134004589.html?.tsrc=rss",
+   "published_at": "2026-08-12T13:40:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:57Z",
+   "fingerprint": "c826aa1c9aeddddd",
+   "primary_source": false,
+   "cluster_id": "acce98bb40cf7479",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d49d8fa7242e0d29",
+   "symbols": [
+    "NXRT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "NexPoint Residential Trust (NXRT) Q2 2026 Earnings Call Transcript",
+   "summary": "Interest rate headwinds and Nashville weakness force FFO guidance cut.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/11/nexpoint-residential-trust-nxrt-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-11T16:46:46Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:57Z",
+   "fingerprint": "4b169bec92defc51",
+   "primary_source": false,
+   "cluster_id": "d49d8fa7242e0d29",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4e58f0dbda969420",
+   "symbols": [
+    "MSBI",
+    "NXRT",
+    "OPBK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "New Strong Buy Stocks for August 7th",
+   "summary": "EDRY, OPBK, SUPN, MSBI and NXRT have been added to the Zacks Rank #1 (Strong Buy) List on August 7th, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/strong-buy-stocks-august-7th-084600026.html?.tsrc=rss",
+   "published_at": "2026-08-07T08:46:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:09:11Z",
+   "fingerprint": "38b96de5d6992548",
+   "primary_source": false,
+   "cluster_id": "4e58f0dbda969420",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4771f7f25022f2a6",
+   "symbols": [
+    "BCAL",
+    "NXRT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Best Value Stocks to Buy for August 7th",
+   "summary": "BCAL, SUPN and NXRT made it to the Zacks Rank #1 (Strong Buy) value stocks list on August 7th, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-value-stocks-buy-august-074500164.html?.tsrc=rss",
+   "published_at": "2026-08-07T07:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:28:14Z",
+   "fingerprint": "a1e8bf697eadf051",
+   "primary_source": false,
+   "cluster_id": "4771f7f25022f2a6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4e859edf465653d9",
+   "symbols": [
+    "NXRT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Best Income Stocks to Buy for August 7th",
+   "summary": "NXRT, QUAD and MSBI made it to the Zacks Rank #1 (Strong Buy) income stocks list on August 7th, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-income-stocks-buy-august-065700718.html?.tsrc=rss",
+   "published_at": "2026-08-07T06:57:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:57Z",
+   "fingerprint": "cd176777d07bc010",
+   "primary_source": false,
+   "cluster_id": "4e859edf465653d9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fe3417b210263560",
+   "symbols": [
+    "NXRT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "NexPoint Residential Trust Inc. (NXRT) Loses 15.6% in 4 Weeks, Here's Why a Trend Reversal May be Around the Corner",
+   "summary": "NexPoint Residential Trust Inc. (NXRT) has become technically an oversold stock now, which implies exhaustion of the heavy selling pressure on it. This, combined with strong agreement among Wall Street analysts in revising earnings estimates higher, indicates a potential trend re",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nexpoint-residential-trust-inc-nxrt-133501342.html?.tsrc=rss",
+   "published_at": "2026-08-05T13:35:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:57Z",
+   "fingerprint": "b51979596b3c38eb",
+   "primary_source": false,
+   "cluster_id": "fe3417b210263560",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e2012d5027a20ce8",
+   "symbols": [
+    "NXRT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "NexPoint Residential Trust, Inc. Q2 2026 Earnings Call Summary",
+   "summary": "Moby summary of NexPoint Residential Trust, Inc.'s Q2 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-nexpoint-residential-trust-inc-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-08-05T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:57Z",
+   "fingerprint": "5bd96c67a71908a4",
+   "primary_source": false,
+   "cluster_id": "e2012d5027a20ce8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e79f702d1164cedb",
+   "symbols": [
+    "NXRT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "NexPoint Residential Trust Q2 Earnings Call Highlights",
+   "summary": "NexPoint Residential Trust (NYSE:NXRT) lowered its full-year 2026 core funds from operations guidance after higher projected interest expense and softer-than-expected revenue in several markets, despite management pointing to improving leasing trends and lower operating-cost grow",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/nexpoint-residential-trust-q2-earnings-call-highlights-2026-08-05/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-05T12:04:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:57Z",
+   "fingerprint": "ba05da65c4b2eaa9",
+   "primary_source": false,
+   "cluster_id": "e79f702d1164cedb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "38a0881b10936eed",
+   "symbols": [
+    "NXRT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "NexPoint Residential Trust Inc (NXRT) (Q2 2026) Earnings Call Highlights: Core FFO Beats, ...",
+   "summary": "NexPoint Residential Trust Inc (NXRT) posts a penny beat on core FFO but lowers full-year guidance as higher interest expenses and Nashville weakness offset improving leasing momentum.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/nexpoint-residential-trust-inc-nxrt-230056373.html?.tsrc=rss",
+   "published_at": "2026-08-04T23:00:56Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:57Z",
+   "fingerprint": "b1771b7bd92a2380",
+   "primary_source": false,
+   "cluster_id": "38a0881b10936eed",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "be1e924a220cebbb",
+   "symbols": [
+    "NXRT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "NexPoint Residential Trust Inc. (NXRT) Q2 FFO and Revenues Beat Estimates",
+   "summary": "NexPoint Residential Trust Inc. (NXRT) delivered FFO and revenue surprises of +8.20% and +1.10%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/nexpoint-residential-trust-inc-nxrt-133501991.html?.tsrc=rss",
+   "published_at": "2026-08-04T13:35:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:57Z",
+   "fingerprint": "b4547be135f208c8",
+   "primary_source": false,
+   "cluster_id": "be1e924a220cebbb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "894bd6d2b987898b",
+   "symbols": [
+    "NXRT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "NEXPOINT RESIDENTIAL TRUST, INC. REPORTS SECOND QUARTER 2026 RESULTS",
+   "summary": "NexPoint Residential Trust, Inc. (NYSE:NXRT) reported financial results for the second quarter ended June 30, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/nexpoint-residential-trust-inc-reports-121500569.html?.tsrc=rss",
+   "published_at": "2026-08-04T12:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:57Z",
+   "fingerprint": "f54b633fc6e5bcd9",
+   "primary_source": false,
+   "cluster_id": "894bd6d2b987898b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "47c2c8b13a0f77eb",
+   "symbols": [
+    "NXRT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Independence Realty Trust (IRT) Q2 FFO Beat Estimates",
+   "summary": "Independence Realty Trust (IRT) delivered FFO and revenue surprises of +3.70% and -1.14%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/independence-realty-trust-irt-q2-214503977.html?.tsrc=rss",
+   "published_at": "2026-08-03T21:45:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:57Z",
+   "fingerprint": "ee67d2a2173ff798",
+   "primary_source": false,
+   "cluster_id": "47c2c8b13a0f77eb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "bbede6a3e611b623",

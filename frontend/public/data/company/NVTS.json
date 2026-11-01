@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:00:56Z",
+ "generated_at": "2026-11-01T06:27:44Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -55,11 +55,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 8.4,
+   "score": 44.9,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 5,
    "independent_24h": 0
   },
   "political": {
@@ -450,11 +452,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 8.4,
+  "score": 44.9,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 47.8,
@@ -472,26 +474,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 5,
+    "independent": 5,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 20,
+    "independent": 20,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 5,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -509,7 +513,456 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "eae4d221a2c25158",
+   "symbols": [
+    "AMAT",
+    "LRCX",
+    "NVTS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "NVTS Gears Up to Report Q3 Earnings: Buy, Sell or Hold the Stock?",
+   "summary": "Navitas Semiconductor's NVIDIA 800V ecosystem inclusion strengthens its AI power opportunity, but a business shift and premium valuation pose risks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nvts-gears-report-q3-earnings-132000073.html?.tsrc=rss",
+   "published_at": "2026-10-30T13:20:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:04Z",
+   "fingerprint": "6f43a4f9e11e6b7f",
+   "primary_source": false,
+   "cluster_id": "eae4d221a2c25158",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "NVTS rüstet sich für den Bericht Q3-Ergebnisse: Kaufen, verkaufen oder halten Sie die Aktie?"
+  },
+  {
+   "id": "db5bf73f0140bba0",
+   "symbols": [
+    "MPWR",
+    "NVTS",
+    "NXPI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Allegro MicroSystems Sinks 7% Despite Earnings Beat as Demand Signals “Strengthened Significantly”",
+   "summary": "Key TakeawaysAllegro MicroSystems fell 7%, even though sales rose 29% to $277 million and beat estimates. Its guidance implies year-over-year sales growth slowing to 23% next quarter, from 29%.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/allegro-microsystems-sinks-7-despite-earnings-beat-as-demand-signals-strengthened-significantly?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-30T13:13:07Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:02Z",
+   "fingerprint": "1fdfeb351af68b1f",
+   "primary_source": false,
+   "cluster_id": "db5bf73f0140bba0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Allegro MicroSystems sinkt trotz Gewinnüberschuss um 7%, da die Nachfragesignale \"deutlich gestärkt\" werden"
+  },
+  {
+   "id": "3a9fc52c36b8f8d0",
+   "symbols": [
+    "NVTS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "NVTS vs. SMTC: Which Semiconductor Stock Should You Buy Right Now?",
+   "summary": "Semtech's AI data center growth, rising 1.6T demand and lower valuation give it an edge over Navitas Semiconductor.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nvts-vs-smtc-semiconductor-stock-133900392.html?.tsrc=rss",
+   "published_at": "2026-10-28T13:39:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:50Z",
+   "fingerprint": "7d75db409bd9de99",
+   "primary_source": false,
+   "cluster_id": "3a9fc52c36b8f8d0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "552d6af2e9a0153a",
+   "symbols": [
+    "NVTS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Navitas Is Up 12% in 2026, 73% Off Its High: Is the “Power Wall” Pitch a Buy?",
+   "summary": "Key TakeawaysNavitas stock is up 12% in 2026 through Tuesday’s close, but it’s 73% below the high it hit in June during the AI power-chip boom. Buying Claros and new 800-volt designs with Nvidia and Microchip make its AI data-center pitch bigger, but quarterly revenue is still ar",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/navitas-is-up-12-in-2026-73-off-its-high-is-the-power-wall-pitch-a-buy?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-28T10:39:30Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:50Z",
+   "fingerprint": "71d8e5c3cb632c3d",
+   "primary_source": false,
+   "cluster_id": "552d6af2e9a0153a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "701d75c2a7b8c090",
+   "symbols": [
+    "AXTI",
+    "NVTS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "AXTI Stock Before Q3 Earnings Release: To Buy or Not to Buy?",
+   "summary": "AXT faces a key Q3 earnings test as AI-driven InP demand boosts growth prospects, while export permit risks and a lofty valuation cloud the case for buying.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/axti-stock-q3-earnings-release-151100172.html?.tsrc=rss",
+   "published_at": "2026-10-27T15:11:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:28:01Z",
+   "fingerprint": "d66feb3d2db195d9",
+   "primary_source": false,
+   "cluster_id": "701d75c2a7b8c090",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3fc5c67d7ba00164",
+   "symbols": [
+    "NVTS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How AI Power Board Launches At Navitas Semiconductor (NVTS) Has Changed Its Investment Story",
+   "summary": "Navitas Semiconductor recently announced an ultra high voltage 2,300 V SiC power module family and a 24 kW, 800 V to 12 V DC-DC power delivery board for AI data centers, grid infrastructure and high power energy systems. The pairing of new SiC modules with an NVIDIA backed 800 V ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/ai-power-board-launches-navitas-031654170.html?.tsrc=rss",
+   "published_at": "2026-10-24T03:16:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:50Z",
+   "fingerprint": "e52ce1be38c1b70c",
+   "primary_source": false,
+   "cluster_id": "3fc5c67d7ba00164",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f1705ccf778673f9",
+   "symbols": [
+    "NVTS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Navitas Just Dropped 23% in a Month. Is It Time to Sell, or Load Up?",
+   "summary": "Key TakeawaysNavitas Semiconductor stock fell 23% in the past month, with the damage done on Oct. 12, 14 and 16, days with no company news.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/navitas-just-dropped-23-in-a-month-is-it-time-to-sell-or-load-up?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-23T17:57:26Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:50Z",
+   "fingerprint": "09c60c9791560ddc",
+   "primary_source": false,
+   "cluster_id": "f1705ccf778673f9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b023584d3dbc35e2",
+   "symbols": [
+    "NVTS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Navitas Gains After Nvidia 800V Board Launch: “AI Infrastructure Power Wall”",
+   "summary": "Key TakeawaysNavitas and Nvidia unveiled a 24 kW board that converts 800V directly to 12V, targeting 97% efficiency at full load. Q2 revenue was $10.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/navitas-gains-after-nvidia-800v-board-launch-ai-infrastructure-power-wall?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-22T09:14:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:50Z",
+   "fingerprint": "6968ae34a5498049",
+   "primary_source": false,
+   "cluster_id": "b023584d3dbc35e2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cca2bf67042c1c91",
+   "symbols": [
+    "NVTS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Navitas Unveils Next-Generation Ultra-High-Voltage SiC Power Module to Advance Energy and Grid Infrastructure Efficiency",
+   "summary": "Navitas Unveils Next-Generation Ultra-High-Voltage SiC Power Module to Advance Energy and Grid Infrastructure Efficiency Latest 2300 V, 8 mΩ full-bridge SiCPAK™ G power module leverages proprietary GeneSiC™ Trench-Assisted Planar™ technology to deliver the industry's leading RDSO",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/navitas-unveils-next-generation-ultra-123000560.html?.tsrc=rss",
+   "published_at": "2026-10-21T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:50Z",
+   "fingerprint": "923644305a9394f4",
+   "primary_source": false,
+   "cluster_id": "cca2bf67042c1c91",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c4c8739b1c26f11c",
+   "symbols": [
+    "NVTS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Navitas Semiconductor’s Claros Deal Targets AI Data Center Power Bottlenecks",
+   "summary": "Navitas Semiconductor (NASDAQ:NVTS) said its completed acquisition of Claros expands its power-semiconductor portfolio to address AI infrastructure from electrical-grid conversion through processor-level power regulation. During a webinar focused on AI data-center power requireme",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-navitas-semiconductors-claros-deal-targets-ai-data-center-power-bottlenecks-2026-10-20/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-20T17:03:27Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:50Z",
+   "fingerprint": "1b97aa226e704d34",
+   "primary_source": false,
+   "cluster_id": "c4c8739b1c26f11c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8c52ff7d1d8f43fd",
+   "symbols": [
+    "NVTS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Navitas Stock Is Down 26% Since September 30. Time to Sell or Load Up?",
+   "summary": "Key Stats for Navitas StockCurrent Price: $8. 63Target Price (Mid): ~$18Street Target: ~$14Potential Total Return: ~104%Annualized IRR: ~19% / yearWhat Happened?Navitas Semiconductor (NVTS) rose 3.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/navitas-stock-is-down-26-since-september-30-time-to-sell-or-load-up?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-20T03:12:49Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:50Z",
+   "fingerprint": "bc5740d49da112a4",
+   "primary_source": false,
+   "cluster_id": "8c52ff7d1d8f43fd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "030cde8971dc4afc",
+   "symbols": [
+    "NVTS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Navitas Is Positioned for Growth Acceleration as Strategic Pivot Delivers Results",
+   "summary": "Navitas is partnering with Nvidia on AI data center power",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "barchart.com",
+   "url": "https://www.barchart.com/story/news/7870974/navitas-is-positioned-for-growth-acceleration-as-strategic-pivot-delivers-results?.tsrc=rss",
+   "published_at": "2026-10-15T13:42:58Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:50Z",
+   "fingerprint": "b4cadd3386cd8709",
+   "primary_source": false,
+   "cluster_id": "030cde8971dc4afc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "df5e26f00c6ff03d",
+   "symbols": [
+    "NVTS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Will NVTS' NVIDIA Partnership Strengthen Its 800V Strategy?",
+   "summary": "Navitas Semiconductor teams up with NVIDIA on a 24-kW 800V-to-12V power board, aiming to boost efficiency and reduce board space in next-generation AI systems.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/nvts-nvidia-partnership-strengthen-800v-131300427.html?.tsrc=rss",
+   "published_at": "2026-10-15T13:13:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:50Z",
+   "fingerprint": "3b8343b130c79fce",
+   "primary_source": false,
+   "cluster_id": "df5e26f00c6ff03d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2fa1af5dfc133c9e",
+   "symbols": [
+    "NVTS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Navitas Semiconductor (NVTS) Shares Moved After Its Latest Update",
+   "summary": "Navitas Semiconductor (NVTS) has put its AI data center ambitions in focus after unveiling a 24 kW 800 V-to-12 V DC-DC power delivery board, co-developed with NVIDIA for the MGX ecosystem. Despite the Nvidia collaboration and AI data center push, Navitas Semiconductor’s share pri",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-navitas-semiconductor-nvts-shares-161754731.html?.tsrc=rss",
+   "published_at": "2026-10-14T16:17:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:50Z",
+   "fingerprint": "56fb9591c2e59f9f",
+   "primary_source": false,
+   "cluster_id": "2fa1af5dfc133c9e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2ea010c3b4056110",
+   "symbols": [
+    "NVTS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "High Voltage Returns: Navitas Rewires AI Data Centers",
+   "summary": "Navitas Semiconductor unveiled a 24-kilowatt power delivery board with NVIDIA for AI data centers, as investors weigh its consumer electronics pivot against growing enterprise demand and high short interest.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/articles/high-voltage-returns-navitas-rewires-ai-data-centers/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-14T14:25:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:50Z",
+   "fingerprint": "693ee6c7632e8055",
+   "primary_source": false,
+   "cluster_id": "2ea010c3b4056110",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9f31aa9ec3aa82b4",
+   "symbols": [
+    "NVTS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can Navitas Semiconductor (NVTS) Turn NVIDIA-Aligned 800V AI Power Designs Into Durable Competitive Advantage?",
+   "summary": "In early October 2026, Navitas Semiconductor announced a new 24 kW, 800 V-to-12 V GaNFast DC-DC power delivery board, developed with NVIDIA to support the NVIDIA MGX ecosystem and future 800 VDC AI data-center architectures, following earlier 800 V-to-6 V collaboration work. The ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/navitas-semiconductor-nvts-turn-nvidia-142034941.html?.tsrc=rss",
+   "published_at": "2026-10-14T14:20:34Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:50Z",
+   "fingerprint": "cf917cee966ac301",
+   "primary_source": false,
+   "cluster_id": "9f31aa9ec3aa82b4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e20fecb3ca42a327",
+   "symbols": [
+    "NVTS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Overlord Labs Names Navitas Semiconductor CEO Chris Allexandre to Board of Directors",
+   "summary": "Overlord Labs, Inc., a fabless semiconductor company building battery intelligence for the next generation of compute-intensive, battery-powered devices, today announced the appointment of Chris Allexandre, President and Chief Executive Officer of Navitas Semiconductor, to its Bo",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/overlord-labs-names-navitas-semiconductor-130000641.html?.tsrc=rss",
+   "published_at": "2026-10-14T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:50Z",
+   "fingerprint": "73df447245123aa0",
+   "primary_source": false,
+   "cluster_id": "e20fecb3ca42a327",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5d45de4fcb897529",
+   "symbols": [
+    "NVTS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Navitas Semiconductor (NVTS) Stock Looks Cheap On Its 77% Three Year Run",
+   "summary": "Navitas Semiconductor has ridden a sharp three year share price gain of 76.8%, helped by a series of AI focused power projects, and that kind of move naturally raises the question of whether the current US$10.45 price still lines up with what its balance sheet is worth. For inves",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/navitas-semiconductor-nvts-stock-looks-121056498.html?.tsrc=rss",
+   "published_at": "2026-10-14T12:10:56Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:50Z",
+   "fingerprint": "e38bf0ccf5692be2",
+   "primary_source": false,
+   "cluster_id": "5d45de4fcb897529",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "61a368a6dcded0f7",
+   "symbols": [
+    "AGIO",
+    "NVTS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "4 High-Risk Stocks Built for Big Returns",
+   "summary": "These speculative investments could turbocharge a portfolio to market-beating returns.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/10/14/4-high-risk-stocks-built-for-big-returns/?.tsrc=rss",
+   "published_at": "2026-10-14T10:28:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:26:27Z",
+   "fingerprint": "656f5b54325fdace",
+   "primary_source": false,
+   "cluster_id": "61a368a6dcded0f7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e6714af70fce86f2",
+   "symbols": [
+    "NVTS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is NVIDIA’s Open‑Weight AI Push via Reflection AI Recasting Its Full‑Stack Narrative (NVDA)?",
+   "summary": "In recent days, partners including Mirantis, Navitas Semiconductor, HARTING, Lenovo, Cisco and others have announced past collaborations that embed NVIDIA’s GPUs, networking and DSX AI Factory software deeper into AI data center designs, power systems and orchestration stacks. At",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-open-weight-ai-push-031855835.html?.tsrc=rss",
+   "published_at": "2026-10-14T03:18:55Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:30:50Z",
+   "fingerprint": "134e16ea48f21f17",
+   "primary_source": false,
+   "cluster_id": "e6714af70fce86f2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

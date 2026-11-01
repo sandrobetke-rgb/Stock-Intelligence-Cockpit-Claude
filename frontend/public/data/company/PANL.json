@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:00:56Z",
+ "generated_at": "2026-11-01T06:27:44Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 3.5028896829494016,
    "rvol": 0.9160945736217335,
    "ema10": 7.980560270589043,
-   "ema21": 8.036904707302826,
+   "ema21": 8.036904707306618,
    "sma50": 8.170787715911866,
-   "sma200": 7.706282620429993
+   "sma200": 7.706282663345337
   },
   "market_cap": 521171232.0,
   "market_cap_currency": "USD",
@@ -55,12 +55,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.0,
+   "score": 40.8,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "freshness",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 4,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -118,9 +120,9 @@
   "adr20": 3.5028896829494016,
   "rvol": 0.9160945736217335,
   "ema10": 7.980560270589043,
-  "ema21": 8.036904707302826,
+  "ema21": 8.036904707306618,
   "sma50": 8.170787715911866,
-  "sma200": 7.706282620429993,
+  "sma200": 7.706282663345337,
   "volatility_ann": 35.96873683132033,
   "avg_dollar_volume_20d": 2903718.996350765,
   "move_zscore": -0.3847296876208064
@@ -444,11 +446,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.0,
+  "score": 40.8,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 99.8,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 11.5,
@@ -457,35 +459,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 6,
+    "independent": 6,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "freshness",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -503,7 +507,465 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "e893c39d3c00dcf2",
+   "symbols": [
+    "HSHP",
+    "PANL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Shipping Stocks With Direct Exposure To Freight Rates And Trade Route Pressure",
+   "summary": "Global shipping and maritime logistics operators are suddenly back in the spotlight as failed G20 talks and fresh worries around key sea routes put trade routes, freight costs, and delivery timelines under pressure. That mix creates both potential winners and possible traps for a",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-shipping-stocks-direct-exposure-021121909.html?.tsrc=rss",
+   "published_at": "2026-11-01T02:11:21Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:10:32Z",
+   "fingerprint": "37cdaeb1c4756100",
+   "primary_source": false,
+   "cluster_id": "e893c39d3c00dcf2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "3 Versandbestände mit direkter Exposition gegenüber Frachtraten und Handelsroutendruck"
+  },
+  {
+   "id": "8965e7001ec11a3b",
+   "symbols": [
+    "PANL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Capital Clean Energy Carriers Corp. (CCEC) Q3 Earnings and Revenues Beat Estimates",
+   "summary": "Capital Clean Energy Carriers Corp. (CCEC) delivered earnings and revenue surprises of +11.77% and +5.71%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/capital-clean-energy-carriers-corp-131501158.html?.tsrc=rss",
+   "published_at": "2026-10-30T13:15:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:40Z",
+   "fingerprint": "b0b30ba24afeb6ad",
+   "primary_source": false,
+   "cluster_id": "8965e7001ec11a3b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Capital Clean Energy Carriers Corp. (CCEC) Q3 Gewinne und Einnahmen schlagen Schätzungen"
+  },
+  {
+   "id": "510c311b63935050",
+   "symbols": [
+    "PANL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "PANGAEA LOGISTICS SOLUTIONS ANNOUNCES THIRD QUARTER 2026 CONFERENCE CALL DATE",
+   "summary": "Pangaea Logistics Solutions (Nasdaq: PANL, or \"the Company\"), a global provider of comprehensive maritime logistics solutions, today announced that it will issue third quarter 2026 results after the market closes on Thursday, November 5, 2026. A conference call will be held the n",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/pangaea-logistics-solutions-announces-third-203000956.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:40Z",
+   "fingerprint": "adba28d3554fbcad",
+   "primary_source": false,
+   "cluster_id": "510c311b63935050",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "168253a2987a2b8c",
+   "symbols": [
+    "PANL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Seacor Marine (SMHI) Reports Q3 Loss, Beats Revenue Estimates",
+   "summary": "Seacor Marine (SMHI) delivered earnings and revenue surprises of +40.98% and +8.04%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/seacor-marine-smhi-reports-q3-204508074.html?.tsrc=rss",
+   "published_at": "2026-10-28T20:45:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:40Z",
+   "fingerprint": "256b2ecf8afa4698",
+   "primary_source": false,
+   "cluster_id": "168253a2987a2b8c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3d12c2b3948db6bc",
+   "symbols": [
+    "PANL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Reasons to Avoid PANL and 1 Stock to Buy Instead",
+   "summary": "Pangaea trades at $8.32 per share and has stayed right on track with the overall market, gaining 10.6% over the last six months. At the same time, the S&amp;P 500 has returned 12.8%.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-reasons-avoid-panl-1-190303120.html?.tsrc=rss",
+   "published_at": "2026-10-12T19:03:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:40Z",
+   "fingerprint": "f7c698b8401ff66f",
+   "primary_source": false,
+   "cluster_id": "3d12c2b3948db6bc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d290aa8e7f6aae41",
+   "symbols": [
+    "PANL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Diesel Prices Could Reshape RXO Stock And Other Transport Shares",
+   "summary": "Global diesel is suddenly back in focus. A fresh U.S. move to ease sanctions on Russian fuel exports could flood the market with supply, cool pump prices, and quietly reshape cost structures for transportation and logistics stocks tied to this story. For investors, that mix of re",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/diesel-prices-could-reshape-rxo-051219019.html?.tsrc=rss",
+   "published_at": "2026-10-10T05:12:19Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:40Z",
+   "fingerprint": "7547d263c023d1b5",
+   "primary_source": false,
+   "cluster_id": "d290aa8e7f6aae41",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "50e82fc22c657f54",
+   "symbols": [
+    "CCOI",
+    "GRC",
+    "PANL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Russell 2000 Stock on Our Buy List and 2 We Find Risky",
+   "summary": "The Russell 2000 (^RUT) is packed with potential breakout stocks, thanks to its focus on smaller companies with high growth potential. However, smaller size also means these businesses often lack the resilience and financial flexibility of large-cap firms, making careful selectio",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-russell-2000-stock-buy-153436305.html?.tsrc=rss",
+   "published_at": "2026-09-28T15:34:36Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:13Z",
+   "fingerprint": "4236fda4c11538f9",
+   "primary_source": false,
+   "cluster_id": "50e82fc22c657f54",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "94dae9878ead9f0b",
+   "symbols": [
+    "PANL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Logistics Stocks That Could Benefit From Easing US China Tariffs",
+   "summary": "Tariffs between the US and China are easing, a trade truce now stretches into early 2027 and a permanent Bilateral Trade Council is on the way. That combination removes some of the constant headline risk that has shadowed cross border commerce. If trade routes stay smoother, logi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/economy/policy/articles/3-logistics-stocks-could-benefit-200827844.html?.tsrc=rss",
+   "published_at": "2026-09-27T20:08:27Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:40Z",
+   "fingerprint": "8cd80a3ed93b1c23",
+   "primary_source": false,
+   "cluster_id": "94dae9878ead9f0b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a74c96fad00e880f",
+   "symbols": [
+    "PANL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Profitable Stocks We Think Twice About",
+   "summary": "While profitability is essential, it doesn’t guarantee long-term success. Some companies that rest on their margins will lose ground as competition intensifies — as Jeff Bezos said, “Your margin is my opportunity”.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-profitable-stocks-think-twice-115237783.html?.tsrc=rss",
+   "published_at": "2026-09-25T11:52:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:40Z",
+   "fingerprint": "07c11d9bc3b9ad0e",
+   "primary_source": false,
+   "cluster_id": "a74c96fad00e880f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "30efa0e2e8b5375c",
+   "symbols": [
+    "CNR",
+    "EVGO",
+    "PANL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 of Wall Street’s Favorite Stocks Worth Investigating and 2 We Turn Down",
+   "summary": "Wall Street has set ambitious price targets for the stocks in this article. While this suggests attractive upside potential, it’s important to remain skeptical because analysts face institutional pressures that can sometimes lead to overly optimistic forecasts.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-wall-street-favorite-stocks-105302154.html?.tsrc=rss",
+   "published_at": "2026-09-23T10:53:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:56Z",
+   "fingerprint": "50c574741d20322e",
+   "primary_source": false,
+   "cluster_id": "30efa0e2e8b5375c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a0fe0996144d9a7a",
+   "symbols": [
+    "PANL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Low-Volatility Stocks We Find Risky",
+   "summary": "Stability is great, but low-volatility stocks may struggle to deliver market-beating returns over time as they sometimes underperform during bull markets.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-low-volatility-stocks-risky-074225128.html?.tsrc=rss",
+   "published_at": "2026-09-21T07:42:25Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:40Z",
+   "fingerprint": "fb33a47e729f489e",
+   "primary_source": false,
+   "cluster_id": "a0fe0996144d9a7a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7d50f1aba954b27f",
+   "symbols": [
+    "EE",
+    "PANL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Logistics Stocks for Investors Tracking Russia Sanctions and Global Trade Shifts",
+   "summary": "Sanctions on Russia and Iran are no longer just a headline risk. They are starting to reshape who moves oil, metals and grains around the world, and at what price. When trade routes change, someone has to handle the detours, and that can shift attention to a different set of stoc",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-logistics-stocks-investors-tracking-091304367.html?.tsrc=rss",
+   "published_at": "2026-09-19T09:13:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:16Z",
+   "fingerprint": "793cd1ce2f608a77",
+   "primary_source": false,
+   "cluster_id": "7d50f1aba954b27f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6779813d4cf44af5",
+   "symbols": [
+    "PANL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Value Stock with Impressive Fundamentals and 2 We Question",
+   "summary": "The low valuation multiples for value stocks provide a margin of safety that growth stocks rarely offer. However, the challenge lies in determining whether these cheap assets are genuinely undervalued or simply on sale due to their potentially deteriorating business models.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-value-stock-impressive-fundamentals-145130155.html?.tsrc=rss",
+   "published_at": "2026-09-14T14:51:30Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:40Z",
+   "fingerprint": "6cba4a1ac6b4650c",
+   "primary_source": false,
+   "cluster_id": "6779813d4cf44af5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2fdc9113c3e692c6",
+   "symbols": [
+    "ASC",
+    "FLNG",
+    "LPG",
+    "NVGS",
+    "PANL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Dry Bulk, Gas, & Tanker Shipping Industry Leaders Presenting at Capital Link’s 18th Annual New York Maritime Forum – Wednesday, September 30, 2026, New York City",
+   "summary": "NEW YORK, Sept. 14, 2026 (GLOBE NEWSWIRE) -- Senior executives from leading Dry Bulk, Gas, & Tanker shipping companies will participate on panels at the 18th Annual Capital Link New York Maritime Forum, taking place on Wednesday, September 30, 2026, at the Metropolitan Club in Ne",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/dry-bulk-gas-tanker-shipping-130000735.html?.tsrc=rss",
+   "published_at": "2026-09-14T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:35Z",
+   "fingerprint": "71f86974b68f80e8",
+   "primary_source": false,
+   "cluster_id": "2fdc9113c3e692c6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6c5c72856bc6e74f",
+   "symbols": [
+    "ASC",
+    "FLNG",
+    "LPG",
+    "NVGS",
+    "PANL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Industry & Government Leaders Presenting at Capital Link’s 18th Annual New York Maritime Forum - September 30, 2026, in New York City",
+   "summary": "NEW YORK, Sept. 08, 2026 (GLOBE NEWSWIRE) -- Senior executives from leading shipping companies and the US Administration will participate in panels at Capital Link’s 18th Annual New York Maritime Forum, taking place on Wednesday, September 30, 2026, at the Metropolitan Club in Ne",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/industry-government-leaders-presenting-capital-130000337.html?.tsrc=rss",
+   "published_at": "2026-09-08T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:35Z",
+   "fingerprint": "486bbd8b9fc84f66",
+   "primary_source": false,
+   "cluster_id": "6c5c72856bc6e74f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "15f9f8bcfdae5759",
+   "symbols": [
+    "PANL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "2 Cash-Producing Stocks on Our Buy List and 1 We Turn Down",
+   "summary": "While strong cash flow is a key indicator of stability, it doesn’t always translate to superior returns. Some cash-heavy businesses struggle with inefficient spending, slowing demand, or weak competitive positioning.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/2-cash-producing-stocks-buy-130210877.html?.tsrc=rss",
+   "published_at": "2026-09-04T13:02:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:40Z",
+   "fingerprint": "87a8f7e435a41c91",
+   "primary_source": false,
+   "cluster_id": "15f9f8bcfdae5759",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "738366215be5b07b",
+   "symbols": [
+    "PANL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Stocks Under $10 with Questionable Fundamentals",
+   "summary": "Stocks under $10 pique our interest because they have room to grow (as well as the most affordable option contract premiums). That doesn’t mean they’re bargains though, and we urge investors to be careful as many have risky business models.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-stocks-under-10-questionable-143918208.html?.tsrc=rss",
+   "published_at": "2026-09-03T14:39:18Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:40Z",
+   "fingerprint": "332e6549db0fb870",
+   "primary_source": false,
+   "cluster_id": "738366215be5b07b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a142e96b818fcf91",
+   "symbols": [
+    "PANL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "2 Small-Cap Stocks Worth Investigating and 1 We Turn Down",
+   "summary": "Small-cap stocks can be incredibly lucrative investments because their lack of analyst coverage leads to frequent mispricings. However, these businesses (and their stock prices) often stay small because their subscale operations make it harder to expand their competitive moats.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/2-small-cap-stocks-worth-083844724.html?.tsrc=rss",
+   "published_at": "2026-08-25T08:38:44Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:40Z",
+   "fingerprint": "7f5f1dddc307955a",
+   "primary_source": false,
+   "cluster_id": "a142e96b818fcf91",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c9613ea93548f07f",
+   "symbols": [
+    "PANL",
+    "PJT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Growth Stock to Add to Your Roster and 2 That Underwhelm",
+   "summary": "Growth is a hallmark of all great companies, but the laws of gravity eventually take hold. Those who rode the COVID boom and ensuing tech selloff in 2022 will surely remember that the market’s punishment can be swift and severe when trajectories fall.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-growth-stock-add-roster-142536776.html?.tsrc=rss",
+   "published_at": "2026-08-24T14:25:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:40Z",
+   "fingerprint": "4bd10e0df5d6b1e4",
+   "primary_source": false,
+   "cluster_id": "c9613ea93548f07f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4c3386b98b1bf926",
+   "symbols": [
+    "PANL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Pangaea Logistics (PANL): Freight Rate Rally Drives Operational Strength Amid Margin Pressures",
+   "summary": "On August 11, Pangaea Logistics Solutions (NASDAQ:PANL) reported second-quarter results that showed just how much a freight market can swing in a shipper’s favor. Time charter equivalent rates jumped 50% year over year, and adjusted EBITDA grew by nearly $20 million to $35 millio",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/pangaea-logistics-panl-freight-rate-080500278.html?.tsrc=rss",
+   "published_at": "2026-08-20T08:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:40Z",
+   "fingerprint": "a0d17395c1ac1f89",
+   "primary_source": false,
+   "cluster_id": "4c3386b98b1bf926",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],
