@@ -23,10 +23,10 @@ function Overview({ d }: { d: SI }) {
     if (view === "sells") return st.filter((x) => x.sellers > 0).sort((a, b) => b.sellers - a.sellers || b.sold_out - a.sold_out);
     return [...st].sort((a, b) => b.holders - a.holders || b.value - a.value);
   }, [d, view]);
-  const quarter = d.managers.map((m) => m.report_date).sort().pop();
+  const quarter = d.managers.filter((m) => !m.stale).map((m) => m.report_date).sort().pop();
   return (
     <Page title="Superinvestoren"
-      intro={<>Was große Investoren laut ihrer Pflichtmeldung bei der SEC (13F) halten, gekauft und verkauft haben. Stand: Quartalsende {fmt.date(quarter)}, Veränderung gegenüber dem Vorquartal. {d.note}</>}>
+      intro={<>Was große Investoren laut ihrer Pflichtmeldung bei der SEC (13F) halten, gekauft und verkauft haben. Jüngster Stichtag: {fmt.date(quarter)}; jeder Investor wird mit seiner letzten Meldung gezählt, Veränderung jeweils gegenüber seinem Vorquartal. Wer länger nicht gemeldet hat, ist als veraltet markiert. {d.note}</>}>
       <Panel>
         <div className="filters inline" role="tablist">
           {([["buys", "Meistgekauft"], ["sells", "Meistverkauft"], ["held", "Am häufigsten gehalten"]] as const).map(([k, l]) => (
@@ -47,7 +47,7 @@ function Overview({ d }: { d: SI }) {
       <Panel title="Investoren" note="Klick auf einen Namen zeigt das komplette Depot. Die Liste lässt sich in backend/data/imports/superinvestors.csv erweitern.">
         <DataTable rows={d.managers} rowKey={(r) => String(r.cik)} initialSort={{ key: "v", dir: -1 }}
           cols={[
-            { key: "n", label: "Investor", render: (r) => <a href={`#/superinvestors/${r.cik}`}><strong>{r.manager}</strong></a>, sort: (r) => r.manager },
+            { key: "n", label: "Investor", render: (r) => <><a href={`#/superinvestors/${r.cik}`}><strong>{r.manager}</strong></a>{r.stale ? <div><Tag tone="warn">veraltet, nicht in Ranglisten</Tag></div> : null}</>, sort: (r) => r.manager },
             { key: "f", label: "Gesellschaft", render: (r) => r.fund },
             { key: "v", label: "Depotwert", num: true, render: (r) => fmt.big(r.portfolio_value, "USD"), sort: (r) => r.portfolio_value },
             { key: "h", label: "Positionen", num: true, render: (r) => r.holdings, sort: (r) => r.holdings },

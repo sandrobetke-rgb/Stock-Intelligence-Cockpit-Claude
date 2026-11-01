@@ -475,3 +475,19 @@ def test_13f_prefixed_namespaces_and_thousands():
     assert rows[0]["shares"] == 10000
     _value_in_dollars(rows, "2026-06-30")       # 0,20 USD je Aktie -> Meldung in Tausend
     assert rows[0]["value"] == 2_000_000
+
+
+def test_13f_stale_manager_excluded_from_rankings(monkeypatch):
+    from sic import superinvestors
+    rows = [{"cusip": "X", "issuer": "X", "title": "COM", "put_call": None, "shares": 10.0, "value": 100.0}]
+    (config.IMPORT_DIR / "superinvestors.csv").write_text(
+        "cik,manager,fund,expected_name\n1,A,A Fund,\n2,B,B Fund,\n")
+    from sic.util import write_json_atomic
+    write_json_atomic(config.STATE_DIR / "13f_index.json", {
+        "1": {"name": "A", "filings": [{"accession": "a1", "report_date": "2026-06-30", "filed_at": "2026-08-14"}]},
+        "2": {"name": "B", "filings": [{"accession": "b1", "report_date": "2023-12-31", "filed_at": "2024-02-14"}]}})
+    for k in ("1-a1", "2-b1"):
+        write_json_atomic(config.STATE_DIR / "13f" / f"{k}-v2.json", rows)
+    r = superinvestors.build({}, fetch=False)
+    assert [m["stale"] for m in r["managers"]] == [False, True]
+    assert r["stocks"][0]["holders"] == 1

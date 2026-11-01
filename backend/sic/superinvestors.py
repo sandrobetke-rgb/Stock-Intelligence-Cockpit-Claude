@@ -218,8 +218,14 @@ def build(universe: dict[str, dict], fetch: bool = True) -> dict:
 
     names = {r["cusip"]: r["issuer"] for _, _, cur, prev in raw for r in cur + (prev or [])}
     cmap = map_cusips(set(names), names, universe) if (fetch and names) else read_json(_cusip_file(), {})
+    from datetime import date, timedelta
+    newest = max((f["report_date"] for _, f, _, _ in raw), default=None)
+    stale_before = (date.fromisoformat(newest) - timedelta(days=120)).isoformat() if newest else ""
     agg: dict[str, dict] = {}
     for m, f, cur, prev in raw:
+        # Wer seit mehr als einem Quartal nicht mehr gemeldet hat (z. B. Fonds geschlossen), zählt
+        # nicht in die Kauf-/Verkaufs-Ranglisten, bleibt aber mit Hinweis sichtbar.
+        stale = f["report_date"] < stale_before
         pos = compare(cur, prev)
         for p in pos:
             p["symbol"] = cmap.get(p["cusip"])
@@ -232,8 +238,10 @@ def build(universe: dict[str, dict], fetch: bool = True) -> dict:
             "filing_url": FILING_DIR.format(cik=m["cik"], acc=acc.replace("-", "")) + f"{acc}-index.htm",
             "portfolio_value": round(cur_val, 0), "holdings": sum(1 for p in pos if p["action"] != "sold_out"),
             "new": sum(1 for p in pos if p["action"] == "new"), "sold_out": sum(1 for p in pos if p["action"] == "sold_out"),
-            "positions": pos,
+            "stale": stale, "positions": pos,
         })
+        if stale:
+            continue
         for p in pos:
             k = p["symbol"] or p["cusip"]
             a = agg.setdefault(k, {"symbol": p["symbol"], "cusip": p["cusip"], "issuer": p["issuer"], "in_universe": p["in_universe"],

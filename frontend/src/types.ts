@@ -134,7 +134,7 @@ export interface SiPosition {
 }
 export interface SiManager {
   cik: number; manager: string; fund: string; sec_name: string; report_date: string; filed_at: string; filing_url: string;
-  portfolio_value: number; holdings: number; new: number; sold_out: number; positions: SiPosition[];
+  portfolio_value: number; holdings: number; new: number; sold_out: number; stale?: boolean; positions: SiPosition[];
 }
 export interface SiHolder { manager: string; fund: string; action: SiPosition["action"]; weight_pct: number; shares_change_pct: number | null; value: number; report_date: string }
 export interface SiStock {
