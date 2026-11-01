@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T05:55:05Z",
+ "generated_at": "2026-11-01T06:00:56Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -55,9 +55,10 @@
    ]
   },
   "market_intelligence": {
-   "score": 6.9,
+   "score": 7.1,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -74,14 +75,28 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 1,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 19209.84,
    "distinct_buyers": 0,
    "other_transactions": 0
   },
   "superinvestors": null,
-  "events": [],
+  "events": [
+   {
+    "symbol": "PMT",
+    "type": "earnings",
+    "date": "2026-10-29",
+    "time": "Uhrzeit offen",
+    "fiscal_quarter": "Sep/2026",
+    "eps_forecast": 0.31,
+    "estimates": 2,
+    "confirmed": true,
+    "source": "Nasdaq-Earnings-Kalender",
+    "source_url": "https://www.nasdaq.com/market-activity/stocks/pmt/earnings",
+    "days_until": -3
+   }
+  ],
   "politicians": null,
   "first_seen": "2026-10-31",
   "archived_at": null,
@@ -430,7 +445,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.9,
+  "score": 7.1,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -439,7 +454,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 39.0,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 10
   },
   "windows": {
    "24h": {
@@ -471,7 +486,8 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -490,7 +506,29 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "54a0cd1f28da3be4",
+   "symbol": "PMT",
+   "insider": "Hendry Gregory L",
+   "owner_cik": 1486334,
+   "role": "Chief Accounting Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 1,
+   "shares": 2444.0,
+   "price": 7.86,
+   "value": 19209.84,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1464423/000146442326000085/0001464423-26-000085-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "big_stakes": [],

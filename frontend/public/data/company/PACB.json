@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T05:55:05Z",
+ "generated_at": "2026-11-01T06:00:56Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -55,9 +55,10 @@
    ]
   },
   "market_intelligence": {
-   "score": 7.0,
+   "score": 7.1,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -74,11 +75,11 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 1,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 2056921.02,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 1
   },
   "superinvestors": {
    "holders": 3,
@@ -87,7 +88,21 @@
    "sellers": 2,
    "sold_out": 0
   },
-  "events": [],
+  "events": [
+   {
+    "symbol": "PACB",
+    "type": "earnings",
+    "date": "2026-11-04",
+    "time": "nach Börsenschluss",
+    "fiscal_quarter": "Sep/2026",
+    "eps_forecast": -0.13,
+    "estimates": 1,
+    "confirmed": true,
+    "source": "Nasdaq-Earnings-Kalender",
+    "source_url": "https://www.nasdaq.com/market-activity/stocks/pacb/earnings",
+    "days_until": 3
+   }
+  ],
   "politicians": null,
   "first_seen": "2026-10-31",
   "archived_at": null,
@@ -436,7 +451,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 7.0,
+  "score": 7.1,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -445,7 +460,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 39.4,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 10
   },
   "windows": {
    "24h": {
@@ -477,7 +492,8 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -496,7 +512,50 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "07de64f41e5580b9",
+   "symbol": "PACB",
+   "insider": "Gibson James R Ii",
+   "owner_cik": 1384133,
+   "role": "See Remarks",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-06",
+   "filed_at": "2026-10-08",
+   "reporting_delay_days": 2,
+   "shares": 500000.0,
+   "price": 1.18,
+   "value": 590000.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1299130/000138413326000004/0001384133-26-000004-index.htm"
+  },
+  {
+   "id": "adfeb8c79371a39f",
+   "symbol": "PACB",
+   "insider": "Gibson James R Ii",
+   "owner_cik": 1384133,
+   "role": "See Remarks",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-06",
+   "filed_at": "2026-10-08",
+   "reporting_delay_days": 2,
+   "shares": 661815.0,
+   "price": 3.108,
+   "value": 2056921.02,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1299130/000138413326000004/0001384133-26-000004-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "big_stakes": [],

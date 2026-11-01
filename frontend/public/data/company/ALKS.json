@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T05:55:05Z",
+ "generated_at": "2026-11-01T06:00:56Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -53,14 +53,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 39.0,
+   "score": 31.8,
    "drivers": [
     "news_flow",
-    "freshness",
-    "source_diversity"
+    "source_diversity",
+    "insider_activity"
    ],
    "independent_7d": 4,
-   "independent_24h": 1
+   "independent_24h": 0
   },
   "political": {
    "relevance": 0,
@@ -74,9 +74,9 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 1,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 83455.02,
    "distinct_buyers": 0,
    "other_transactions": 2
   },
@@ -87,8 +87,25 @@
    "sellers": 1,
    "sold_out": 1
   },
-  "events": [],
-  "politicians": null,
+  "events": [
+   {
+    "symbol": "ALKS",
+    "type": "earnings",
+    "date": "2026-11-03",
+    "time": "vor Börseneröffnung",
+    "fiscal_quarter": "Sep/2026",
+    "eps_forecast": -0.08,
+    "estimates": 5,
+    "confirmed": true,
+    "source": "Nasdaq-Earnings-Kalender",
+    "source_url": "https://www.nasdaq.com/market-activity/stocks/alks/earnings",
+    "days_until": 2
+   }
+  ],
+  "politicians": {
+   "buys": 2,
+   "sells": 0
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
   "country": "Ireland"
@@ -434,23 +451,23 @@
   ]
  },
  "intelligence_detail": {
-  "score": 39.0,
+  "score": 31.8,
   "components": {
    "news_flow": 99.8,
-   "freshness": 50,
+   "freshness": 0,
    "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 1.0,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 10
   },
   "windows": {
    "24h": {
-    "signals": 1,
-    "independent": 1,
+    "signals": 0,
+    "independent": 0,
     "duplicates": 0,
-    "sources": 1,
+    "sources": 0,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -476,8 +493,8 @@
   },
   "drivers": [
    "news_flow",
-   "freshness",
-   "source_diversity"
+   "source_diversity",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -634,7 +651,9 @@
   {
    "id": "c0ce615dada4eb03",
    "symbols": [
-    "ALKS"
+    "ALKS",
+    "KTB",
+    "LUNR"
    ],
    "category": "market",
    "signal_type": "analyst_change",
@@ -915,10 +934,76 @@
    "currency": "USD",
    "source": "SEC EDGAR Form 4",
    "source_url": "https://www.sec.gov/Archives/edgar/data/1520262/000152026226000131/0001520262-26-000131-index.htm"
+  },
+  {
+   "id": "093c96cc0b27eded",
+   "symbol": "ALKS",
+   "insider": "Gaffin David Joseph",
+   "owner_cik": 1675905,
+   "role": "EVP, CLO, Alkermes, Inc.",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-02",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 0,
+   "shares": 2034.0,
+   "price": 41.03,
+   "value": 83455.02,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1520262/000152026226000127/0001520262-26-000127-index.htm"
   }
  ],
  "institutions": [],
- "political_trades": [],
+ "political_trades": [
+  {
+   "id": "bcbb26358a0050e6",
+   "politician": "Gilbert Cisneros",
+   "chamber": "Repräsentantenhaus",
+   "party": null,
+   "state": "CA31",
+   "symbol": "ALKS",
+   "in_universe": true,
+   "asset": "Main Street Trust > Bank of America Alkermes plc - Ordinary Shares",
+   "asset_type": "Aktie",
+   "owner": "Selbst",
+   "transaction_type": "purchase",
+   "transaction_date": "2026-09-29",
+   "disclosure_date": "2026-10-12",
+   "reporting_delay_days": 13,
+   "amount_range": [
+    1001.0,
+    15000.0
+   ],
+   "source_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035622.pdf",
+   "note": "Offizielle STOCK-Act-Meldung; Wertbandbreite, bis 45 Tage Meldeverzug"
+  },
+  {
+   "id": "8ebc8758d65dfd80",
+   "politician": "Gilbert Cisneros",
+   "chamber": "Repräsentantenhaus",
+   "party": null,
+   "state": "CA31",
+   "symbol": "ALKS",
+   "in_universe": true,
+   "asset": "Main Street Trust > Bank of America Alkermes plc - Ordinary Shares",
+   "asset_type": "Aktie",
+   "owner": "Selbst",
+   "transaction_type": "purchase",
+   "transaction_date": "2026-07-30",
+   "disclosure_date": "2026-09-04",
+   "reporting_delay_days": 36,
+   "amount_range": [
+    15001.0,
+    50000.0
+   ],
+   "source_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035190.pdf",
+   "note": "Offizielle STOCK-Act-Meldung; Wertbandbreite, bis 45 Tage Meldeverzug"
+  }
+ ],
  "big_stakes": [],
  "superinvestors": [
   {

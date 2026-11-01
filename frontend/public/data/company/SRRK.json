@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-11-01T05:55:05Z",
+ "generated_at": "2026-11-01T06:00:56Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "SRRK",
-  "name": "Scholar Rock Holding",
+  "name": "Scholar Rock Holding Corporation",
   "region": "US",
   "currency": "USD",
-  "sector": "Health Care",
-  "industry": null,
+  "sector": "Healthcare",
+  "industry": "Biotechnology",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 43.900001525878906,
    "price_date": "2026-10-30",
@@ -30,27 +28,30 @@
    "sma50": 48.46699996948242,
    "sma200": 48.205349903106686
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 5346374144.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
+   "score": 22.7,
+   "coverage_pct": 44,
    "model": "standard",
    "dimensions": {
     "revenue_growth": null,
     "profitability": null,
-    "financial_stability": null,
-    "cashflow": null,
-    "market_position": null,
+    "financial_stability": 66.5,
+    "cashflow": 0.0,
+    "market_position": 0.0,
     "growth_potential": null,
-    "management": null
+    "management": 0.0
    }
   },
   "risk": {
-   "score": null,
-   "level": "unbekannt",
-   "coverage_pct": 25,
-   "top_factors": []
+   "score": 36.9,
+   "level": "moderat",
+   "coverage_pct": 72,
+   "top_factors": [
+    "Verwässerung (Aktienanzahl yoy)",
+    "Zinsdeckung"
+   ]
   },
   "market_intelligence": {
    "score": 2.7,
@@ -86,11 +87,25 @@
    "sellers": 0,
    "sold_out": 0
   },
-  "events": [],
+  "events": [
+   {
+    "symbol": "SRRK",
+    "type": "earnings",
+    "date": "2026-11-10",
+    "time": "vor Börseneröffnung",
+    "fiscal_quarter": "Sep/2026",
+    "eps_forecast": -0.87,
+    "estimates": 8,
+    "confirmed": true,
+    "source": "Nasdaq-Earnings-Kalender",
+    "source_url": "https://www.nasdaq.com/market-activity/stocks/srrk/earnings",
+    "days_until": 9
+   }
+  ],
   "politicians": null,
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -117,9 +132,9 @@
   "move_zscore": -0.2104270445024238
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
+  "score": 22.7,
+  "status": "ok",
+  "coverage_pct": 44,
   "model": "standard",
   "dimensions": [
    {
@@ -180,33 +195,33 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 66.5,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "debt_to_equity",
       "label": "Verschuldung (Debt/Equity)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.444,
+      "points": 91.3,
+      "status": "ok"
      },
      {
       "key": "current_ratio",
       "label": "Liquidität (Current Ratio)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 6.95,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "interest_coverage",
       "label": "Zinsdeckung (EBIT/Zinsen)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -53.829,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -215,9 +230,9 @@
     "key": "cashflow",
     "label": "Cashflow",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "data",
+    "coverage": 40,
     "metrics": [
      {
       "key": "fcf_margin",
@@ -231,9 +246,9 @@
       "key": "ocf_positive",
       "label": "Operativer Cashflow positiv",
       "unit": "bool",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.0,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -242,17 +257,17 @@
     "key": "market_position",
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "gross_margin",
       "label": "Bruttomarge (Proxy Preissetzungsmacht)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.0,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -288,68 +303,68 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -153.954,
+      "points": 0.0,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 15.601,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/SRRK/financials",
+  "as_of": "2026-11-01T06:03:04Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": null,
-  "level": "unbekannt",
-  "coverage_pct": 25,
+  "score": 36.9,
+  "level": "moderat",
+  "coverage_pct": 72,
   "factors": [
    {
     "key": "leverage",
     "label": "Verschuldung (Debt/Equity)",
-    "value": null,
+    "value": 0.44,
     "unit": "x",
-    "severity": null,
+    "severity": 5.3,
     "weight": 0.15,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "liquidity",
     "label": "Liquidität (Current Ratio)",
-    "value": null,
+    "value": 6.95,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "interest",
     "label": "Zinsdeckung",
-    "value": null,
+    "value": -53.83,
     "unit": "x",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "cashflow",
@@ -372,11 +387,11 @@
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": 15.6,
     "unit": "%",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -408,11 +423,11 @@
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 6.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 55.6,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -424,7 +439,10 @@
     "status": "ok"
    }
   ],
-  "top_factors": [],
+  "top_factors": [
+   "Verwässerung (Aktienanzahl yoy)",
+   "Zinsdeckung"
+  ],
   "unknown_factors": [
    "Kunden- und Branchenabhängigkeit",
    "Rechtsstreitigkeiten"

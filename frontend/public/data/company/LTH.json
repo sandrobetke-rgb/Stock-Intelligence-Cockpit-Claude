@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T05:55:05Z",
+ "generated_at": "2026-11-01T06:00:56Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -55,13 +55,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 6.5,
+   "score": 62.6,
    "drivers": [
-    "price_volume_anomaly",
-    "insider_activity"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 10,
+   "independent_24h": 2
   },
   "political": {
    "relevance": 0,
@@ -82,8 +83,25 @@
    "other_transactions": 0
   },
   "superinvestors": null,
-  "events": [],
-  "politicians": null,
+  "events": [
+   {
+    "symbol": "LTH",
+    "type": "earnings",
+    "date": "2026-10-29",
+    "time": "Uhrzeit offen",
+    "fiscal_quarter": "Sep/2026",
+    "eps_forecast": 0.4,
+    "estimates": 3,
+    "confirmed": true,
+    "source": "Nasdaq-Earnings-Kalender",
+    "source_url": "https://www.nasdaq.com/market-activity/stocks/lth/earnings",
+    "days_until": -3
+   }
+  ],
+  "politicians": {
+   "buys": 13,
+   "sells": 1
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
   "country": "United States"
@@ -431,49 +449,50 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.5,
+  "score": 62.6,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 80,
    "primary_sources": 0,
-   "analyst_activity": 0,
+   "analyst_activity": 35,
    "price_volume_anomaly": 35.4,
    "social_attention": null,
    "insider_activity": 10
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 10,
+    "independent": 10,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 18,
+    "independent": 18,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 5,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly",
-   "insider_activity"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -491,7 +510,411 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "b9aeef576e10938b",
+   "symbols": [
+    "LTH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Life Time (LTH) Q3 Results Highlight Profit Strength And Cash Flow Questions",
+   "summary": "Life Time Group Holdings came into this Q3 2026 report riding a strong year, with the stock roughly flat on the day and easing just 0.6% from the prior close despite a double digit 7 day gain behind it. That muted reaction sits awkwardly against a health club operator that just r",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/life-time-lth-q3-results-161303574.html?.tsrc=rss",
+   "published_at": "2026-10-31T16:13:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:06Z",
+   "fingerprint": "64d0cfb77df71ac4",
+   "primary_source": false,
+   "cluster_id": "b9aeef576e10938b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Life Time (LTH) Q3-Ergebnisse unterstreichen Profitstärke und Cash Flow-Fragen"
+  },
+  {
+   "id": "6bf5b97595ec51f7",
+   "symbols": [
+    "LTH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Life Time (LTH) Q3 2026 Earnings Call Transcript",
+   "summary": "Premium pricing and member engagement drive revenue growth and margin expansion.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/31/life-time-lth-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-31T15:00:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:06Z",
+   "fingerprint": "32e046f01e086294",
+   "primary_source": false,
+   "cluster_id": "6bf5b97595ec51f7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "841f91603a05f4b6",
+   "symbols": [
+    "LTH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Life Time Group Q3 Earnings Call Highlights",
+   "summary": "Life Time Group (NYSE:LTH) reported third-quarter 2026 revenue growth of 14.2% to $893.5 million, supported by higher membership dues, growth in in-center businesses and continued expansion of its club network. Comparable center revenue increased 8.7%, exceeding the company’s exp",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-life-time-group-q3-earnings-call-highlights-2026-10-30/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-31T01:14:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:06Z",
+   "fingerprint": "dd59f845b3b03de3",
+   "primary_source": false,
+   "cluster_id": "841f91603a05f4b6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "56b0f8553965ea91",
+   "symbols": [
+    "LTH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Life Time Group Holdings (LTH) Is Back In The Spotlight",
+   "summary": "Life Time Group Holdings (LTH) is back in focus after Q3 2026 results topped analyst expectations on revenue and earnings, with key in-center metrics also ahead of forecasts and management lifting its full year outlook. The recent move in Life Time Group Holdings reflects that st",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-life-time-group-holdings-221950775.html?.tsrc=rss",
+   "published_at": "2026-10-30T22:19:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:06Z",
+   "fingerprint": "d91552d791d1df5a",
+   "primary_source": false,
+   "cluster_id": "56b0f8553965ea91",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Warum Life Time Group Holdings (LTH) wieder im Rampenlicht steht"
+  },
+  {
+   "id": "7e1b83d343f51e5a",
+   "symbols": [
+    "BATRA",
+    "CVNA",
+    "DELL",
+    "LTH"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "The Dealmaking 3: Texas Bevo Lab AI, Elastic & Audi F1, JOOLA in Pickleball Ratings",
+   "summary": "This week of The Dealmaking 3 with “The Sports Professor” Rick Horrow features the University of Texas launching a sports AI hub called Bevo Lab supported by Dell, Google Cloud, and SHI International, Elastic partnering with the Audi Revolut F1 Team and becoming the Official Race",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/dealmaking-3-texas-bevo-lab-221200371.html?.tsrc=rss",
+   "published_at": "2026-10-29T22:12:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:56Z",
+   "fingerprint": "47e077a44157cda9",
+   "primary_source": false,
+   "cluster_id": "7e1b83d343f51e5a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "The Dealmaking 3: Texas Bevo Lab AI, Elastic & Audi F1, JOOLA in Pickleball-Ratings"
+  },
+  {
+   "id": "2a128a8ac4cc5119",
+   "symbols": [
+    "LTH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Life Time Group Holdings (LTH) Q3 Earnings: Taking a Look at Key Metrics Versus Estimates",
+   "summary": "The headline numbers for Life Time Group Holdings (LTH) give insight into how the company performed in the quarter ended September 2026, but it may be worthwhile to compare some of its key metrics to Wall Street estimates and the year-ago actuals.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/life-time-group-holdings-lth-123006030.html?.tsrc=rss",
+   "published_at": "2026-10-29T12:30:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:06Z",
+   "fingerprint": "d64c179327a5df5c",
+   "primary_source": false,
+   "cluster_id": "2a128a8ac4cc5119",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "116ad38384112452",
+   "symbols": [
+    "LTH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Life Time Group Holdings, Inc. (LTH) Q3 Earnings and Revenues Beat Estimates",
+   "summary": "Life Time Group Holdings (LTH) delivered earnings and revenue surprises of +13.33% and +1.93%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/life-time-group-holdings-inc-113508210.html?.tsrc=rss",
+   "published_at": "2026-10-29T11:35:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:06Z",
+   "fingerprint": "ad7d407602533ed7",
+   "primary_source": false,
+   "cluster_id": "116ad38384112452",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1c0227fe6dd3f355",
+   "symbols": [
+    "LTH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Life Time Reports Third Quarter 2026 Financial Results",
+   "summary": "Life Time Group Holdings, Inc. (\"Life Time,\" \"we,\" \"our,\" \"us,\" or the \"Company\") (NYSE: LTH) today announced its financial results for the fiscal third quarter ended September 30, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/life-time-reports-third-quarter-104500928.html?.tsrc=rss",
+   "published_at": "2026-10-29T10:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:06Z",
+   "fingerprint": "0901c653fc1ac72e",
+   "primary_source": false,
+   "cluster_id": "1c0227fe6dd3f355",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5fe403dd3f44cf44",
+   "symbols": [
+    "LTH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "These 2 Stocks Are Beating the S&P 500 Over the Past 5 Years -- And Neither Has Anything to Do With AI",
+   "summary": "Life Time is a Wall Street darling, but its debt is 8.0x EBIT and its gross margin has shrunk. Meanwhile, Urban Outfitters’ debt-to-EBIT ratio is just 1.9x. The latter’s asset-light business makes it the better buy.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "barchart.com",
+   "url": "https://www.barchart.com/story/news/8481893/these-2-stocks-are-beating-the-s-p-500-over-the-past-5-years-and-neither-has-anything-to-do-with-ai?.tsrc=rss",
+   "published_at": "2026-10-27T17:04:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:06Z",
+   "fingerprint": "35b4638561ca297f",
+   "primary_source": false,
+   "cluster_id": "5fe403dd3f44cf44",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "85c04dc1d87a3c82",
+   "symbols": [
+    "LTH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Barclays initiates Life Time at overweight on affluent member insulation; stock up",
+   "summary": "Investing.com -- Life Time Group Holdings Inc (NYSE:LTH) shares climbed 5% Monday after Barclays initiated coverage of the fitness operator with an Overweight rating, citing an affluent member base that insulates the business from broader consumer spending pressures. Analyst Bran",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/barclays-initiates-life-time-overweight-162836507.html?.tsrc=rss",
+   "published_at": "2026-10-26T16:28:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:06Z",
+   "fingerprint": "08363c12d9a666e1",
+   "primary_source": false,
+   "cluster_id": "85c04dc1d87a3c82",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "69c93954f5c8e075",
+   "symbols": [
+    "LTH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Life Time Earns Spot on Fortune's 100 Fastest-Growing Companies List for 2026",
+   "summary": "Life Time Group Holdings, Inc. (\"Life Time\" or the \"Company\") (NYSE: LTH) today announced that it has been named to the 2026 Fortune 100 Fastest-Growing Companies list. This marks the Company's second consecutive year on the list.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/life-time-earns-spot-fortunes-190100396.html?.tsrc=rss",
+   "published_at": "2026-10-22T19:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:06Z",
+   "fingerprint": "bcf5879893d7f5ac",
+   "primary_source": false,
+   "cluster_id": "69c93954f5c8e075",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cf79f172de330c68",
+   "symbols": [
+    "LTH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What Does Life Time's Falling Multiple Really Say?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/619982/what-does-life-times-falling-multiple-really-say/2026-10-22?.tsrc=rss",
+   "published_at": "2026-10-22T18:32:17Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:06Z",
+   "fingerprint": "041af82b2cf49c7b",
+   "primary_source": false,
+   "cluster_id": "cf79f172de330c68",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ff37b3d51fc2dc45",
+   "symbols": [
+    "LTH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Life Time Makes it Easier for Members to Find Competitive Matches with DUPR In-App Integration",
+   "summary": "Life Time (NYSE: LTH), the nation's premier healthy lifestyle brand and one of North America's largest providers of pickleball, is expanding its strategic alliance with Dynamic Universal Pickleball Rating (DUPR), the world's most widely adopted pickleball rating system, to delive",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/life-time-makes-easier-members-111400391.html?.tsrc=rss",
+   "published_at": "2026-10-21T11:14:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:06Z",
+   "fingerprint": "e941e5a3cd472970",
+   "primary_source": false,
+   "cluster_id": "ff37b3d51fc2dc45",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "72ee5300fc3c864e",
+   "symbols": [
+    "LTH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Life Time Big Sugar Classic Crowns 2026 Grand Prix Champions as Northwest Arkansas Draws 4,200+ Athletes Together in Weeklong Celebration of Cycling",
+   "summary": "Life Time (NYSE: LTH), the nation's premier healthy way of life brand, brought professional athletes, recreational riders, industry leaders and fans together in Northwest Arkansas last week for the 2026 Life Time Big Sugar Classic.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/life-time-big-sugar-classic-152500621.html?.tsrc=rss",
+   "published_at": "2026-10-20T15:25:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:06Z",
+   "fingerprint": "6d2244b8aceb745c",
+   "primary_source": false,
+   "cluster_id": "72ee5300fc3c864e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fa3118a5f13df968",
+   "symbols": [
+    "FWRG",
+    "LTH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Prediction: These 3 Stocks Will 10X in the Next 20 Years",
+   "summary": "Three under-the-radar consumer companies are each building something today that could compound into a big return over the next two decades.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/10/20/prediction-these-3-stocks-will-10x-in-the-next-20/?.tsrc=rss",
+   "published_at": "2026-10-20T06:50:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:55Z",
+   "fingerprint": "e92d207f2a124450",
+   "primary_source": false,
+   "cluster_id": "fa3118a5f13df968",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4516995d856080fb",
+   "symbols": [
+    "LTH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "LTH vs. MTN: Which Stock Is the Better Value Option?",
+   "summary": "LTH vs. MTN: Which Stock Is the Better Value Option?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/lth-vs-mtn-stock-better-144003090.html?.tsrc=rss",
+   "published_at": "2026-10-14T14:40:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:06Z",
+   "fingerprint": "a8b85cdb7e4f0091",
+   "primary_source": false,
+   "cluster_id": "4516995d856080fb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4974436301722fda",
+   "symbols": [
+    "LTH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Life Time LT Classic National Pickleball Tournament Returns with Most Significant Prize Purse Yet",
+   "summary": "Life Time (NYSE: LTH), the nation's premier healthy lifestyle brand and one of the largest operators of pickleball courts in North America, today announced the expansion of its LT Classic tournament into a quarterly tournament series beginning October 16th.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/life-time-lt-classic-national-162200868.html?.tsrc=rss",
+   "published_at": "2026-10-13T16:22:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:06Z",
+   "fingerprint": "994970b0bc5b008d",
+   "primary_source": false,
+   "cluster_id": "4974436301722fda",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4519ce6e186fdfd7",
+   "symbols": [
+    "LTH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Life Time Opens More Than 180,000-Square-Foot Athletic Country Club in Lakewood Ranch on Oct. 12",
+   "summary": "Life Time (NYSE: LTH), the nation's premier healthy lifestyle brand, today opened its Lakewood Ranch Athletic Country Club, a new wellness and social destination created for one of the nation's fastest-growing communities. Life Time's first ground-up athletic country club in the ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/life-time-opens-more-180-100200501.html?.tsrc=rss",
+   "published_at": "2026-10-12T10:02:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:06Z",
+   "fingerprint": "0cc8aaa4aa10389d",
+   "primary_source": false,
+   "cluster_id": "4519ce6e186fdfd7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "e12daffb62d5beff",
@@ -515,7 +938,316 @@
   }
  ],
  "institutions": [],
- "political_trades": [],
+ "political_trades": [
+  {
+   "id": "07a1d5921a90c0bd",
+   "politician": "April McClain Delaney",
+   "chamber": "Repräsentantenhaus",
+   "party": null,
+   "state": "MD06",
+   "symbol": "LTH",
+   "in_universe": true,
+   "asset": "Life Time Group Holdings, Inc. Common Stock",
+   "asset_type": "Aktie",
+   "owner": "Kind",
+   "transaction_type": "sale",
+   "transaction_date": "2026-08-25",
+   "disclosure_date": "2026-09-09",
+   "reporting_delay_days": 15,
+   "amount_range": [
+    100001.0,
+    250000.0
+   ],
+   "source_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035408.pdf",
+   "note": "Offizielle STOCK-Act-Meldung; Wertbandbreite, bis 45 Tage Meldeverzug"
+  },
+  {
+   "id": "07945c90cb89ee9e",
+   "politician": "April McClain Delaney",
+   "chamber": "Repräsentantenhaus",
+   "party": null,
+   "state": "MD06",
+   "symbol": "LTH",
+   "in_universe": true,
+   "asset": "Life Time Group Holdings, Inc. Common Stock",
+   "asset_type": "Aktie",
+   "owner": "Kind",
+   "transaction_type": "purchase",
+   "transaction_date": "2026-08-24",
+   "disclosure_date": "2026-09-09",
+   "reporting_delay_days": 16,
+   "amount_range": [
+    1001.0,
+    15000.0
+   ],
+   "source_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035408.pdf",
+   "note": "Offizielle STOCK-Act-Meldung; Wertbandbreite, bis 45 Tage Meldeverzug"
+  },
+  {
+   "id": "5553aa2b7540a229",
+   "politician": "April McClain Delaney",
+   "chamber": "Repräsentantenhaus",
+   "party": null,
+   "state": "MD06",
+   "symbol": "LTH",
+   "in_universe": true,
+   "asset": "Life Time Group Holdings, Inc. Common Stock",
+   "asset_type": "Aktie",
+   "owner": "Kind",
+   "transaction_type": "purchase",
+   "transaction_date": "2026-08-07",
+   "disclosure_date": "2026-09-09",
+   "reporting_delay_days": 33,
+   "amount_range": [
+    1001.0,
+    15000.0
+   ],
+   "source_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035408.pdf",
+   "note": "Offizielle STOCK-Act-Meldung; Wertbandbreite, bis 45 Tage Meldeverzug"
+  },
+  {
+   "id": "bb865b29b52bb3fd",
+   "politician": "April McClain Delaney",
+   "chamber": "Repräsentantenhaus",
+   "party": null,
+   "state": "MD06",
+   "symbol": "LTH",
+   "in_universe": true,
+   "asset": "Life Time Group Holdings, Inc. Common Stock",
+   "asset_type": "Aktie",
+   "owner": "Kind",
+   "transaction_type": "purchase",
+   "transaction_date": "2026-08-06",
+   "disclosure_date": "2026-09-09",
+   "reporting_delay_days": 34,
+   "amount_range": [
+    1001.0,
+    15000.0
+   ],
+   "source_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035408.pdf",
+   "note": "Offizielle STOCK-Act-Meldung; Wertbandbreite, bis 45 Tage Meldeverzug"
+  },
+  {
+   "id": "311ffe78c3696fa9",
+   "politician": "April McClain Delaney",
+   "chamber": "Repräsentantenhaus",
+   "party": null,
+   "state": "MD06",
+   "symbol": "LTH",
+   "in_universe": true,
+   "asset": "Life Time Group Holdings, Inc. Common Stock",
+   "asset_type": "Aktie",
+   "owner": "Kind",
+   "transaction_type": "purchase",
+   "transaction_date": "2026-08-03",
+   "disclosure_date": "2026-09-09",
+   "reporting_delay_days": 37,
+   "amount_range": [
+    15001.0,
+    50000.0
+   ],
+   "source_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035408.pdf",
+   "note": "Offizielle STOCK-Act-Meldung; Wertbandbreite, bis 45 Tage Meldeverzug"
+  },
+  {
+   "id": "1c87c64191800ec9",
+   "politician": "April McClain Delaney",
+   "chamber": "Repräsentantenhaus",
+   "party": null,
+   "state": "MD06",
+   "symbol": "LTH",
+   "in_universe": true,
+   "asset": "Life Time Group Holdings, Inc. Common Stock",
+   "asset_type": "Aktie",
+   "owner": "Kind",
+   "transaction_type": "purchase",
+   "transaction_date": "2026-07-31",
+   "disclosure_date": "2026-08-03",
+   "reporting_delay_days": 3,
+   "amount_range": [
+    15001.0,
+    50000.0
+   ],
+   "source_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035118.pdf",
+   "note": "Offizielle STOCK-Act-Meldung; Wertbandbreite, bis 45 Tage Meldeverzug"
+  },
+  {
+   "id": "780c9d1790ba22a7",
+   "politician": "April McClain Delaney",
+   "chamber": "Repräsentantenhaus",
+   "party": null,
+   "state": "MD06",
+   "symbol": "LTH",
+   "in_universe": true,
+   "asset": "Life Time Group Holdings, Inc. Common Stock",
+   "asset_type": "Aktie",
+   "owner": "Kind",
+   "transaction_type": "purchase",
+   "transaction_date": "2026-07-30",
+   "disclosure_date": "2026-08-03",
+   "reporting_delay_days": 4,
+   "amount_range": [
+    1001.0,
+    15000.0
+   ],
+   "source_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035118.pdf",
+   "note": "Offizielle STOCK-Act-Meldung; Wertbandbreite, bis 45 Tage Meldeverzug"
+  },
+  {
+   "id": "a8bc94f749afd410",
+   "politician": "April McClain Delaney",
+   "chamber": "Repräsentantenhaus",
+   "party": null,
+   "state": "MD06",
+   "symbol": "LTH",
+   "in_universe": true,
+   "asset": "Life Time Group Holdings, Inc. Common Stock",
+   "asset_type": "Aktie",
+   "owner": "Kind",
+   "transaction_type": "purchase",
+   "transaction_date": "2026-07-29",
+   "disclosure_date": "2026-08-03",
+   "reporting_delay_days": 5,
+   "amount_range": [
+    1001.0,
+    15000.0
+   ],
+   "source_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035118.pdf",
+   "note": "Offizielle STOCK-Act-Meldung; Wertbandbreite, bis 45 Tage Meldeverzug"
+  },
+  {
+   "id": "0ce846949d6b4143",
+   "politician": "April McClain Delaney",
+   "chamber": "Repräsentantenhaus",
+   "party": null,
+   "state": "MD06",
+   "symbol": "LTH",
+   "in_universe": true,
+   "asset": "Life Time Group Holdings, Inc. Common Stock",
+   "asset_type": "Aktie",
+   "owner": "Kind",
+   "transaction_type": "purchase",
+   "transaction_date": "2026-07-28",
+   "disclosure_date": "2026-08-03",
+   "reporting_delay_days": 6,
+   "amount_range": [
+    1001.0,
+    15000.0
+   ],
+   "source_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035118.pdf",
+   "note": "Offizielle STOCK-Act-Meldung; Wertbandbreite, bis 45 Tage Meldeverzug"
+  },
+  {
+   "id": "0cc948390e87fa85",
+   "politician": "April McClain Delaney",
+   "chamber": "Repräsentantenhaus",
+   "party": null,
+   "state": "MD06",
+   "symbol": "LTH",
+   "in_universe": true,
+   "asset": "Life Time Group Holdings, Inc. Common Stock",
+   "asset_type": "Aktie",
+   "owner": "Kind",
+   "transaction_type": "purchase",
+   "transaction_date": "2026-07-27",
+   "disclosure_date": "2026-08-03",
+   "reporting_delay_days": 7,
+   "amount_range": [
+    1001.0,
+    15000.0
+   ],
+   "source_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035118.pdf",
+   "note": "Offizielle STOCK-Act-Meldung; Wertbandbreite, bis 45 Tage Meldeverzug"
+  },
+  {
+   "id": "8080cbd1d74f7df3",
+   "politician": "April McClain Delaney",
+   "chamber": "Repräsentantenhaus",
+   "party": null,
+   "state": "MD06",
+   "symbol": "LTH",
+   "in_universe": true,
+   "asset": "Life Time Group Holdings, Inc. Common Stock",
+   "asset_type": "Aktie",
+   "owner": "Kind",
+   "transaction_type": "purchase",
+   "transaction_date": "2026-07-24",
+   "disclosure_date": "2026-08-03",
+   "reporting_delay_days": 10,
+   "amount_range": [
+    15001.0,
+    50000.0
+   ],
+   "source_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035118.pdf",
+   "note": "Offizielle STOCK-Act-Meldung; Wertbandbreite, bis 45 Tage Meldeverzug"
+  },
+  {
+   "id": "7d19ec87d3acf598",
+   "politician": "April McClain Delaney",
+   "chamber": "Repräsentantenhaus",
+   "party": null,
+   "state": "MD06",
+   "symbol": "LTH",
+   "in_universe": true,
+   "asset": "Life Time Group Holdings, Inc. Common Stock",
+   "asset_type": "Aktie",
+   "owner": "Kind",
+   "transaction_type": "purchase",
+   "transaction_date": "2026-07-21",
+   "disclosure_date": "2026-08-03",
+   "reporting_delay_days": 13,
+   "amount_range": [
+    1001.0,
+    15000.0
+   ],
+   "source_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035118.pdf",
+   "note": "Offizielle STOCK-Act-Meldung; Wertbandbreite, bis 45 Tage Meldeverzug"
+  },
+  {
+   "id": "126b35d09c3e44cc",
+   "politician": "April McClain Delaney",
+   "chamber": "Repräsentantenhaus",
+   "party": null,
+   "state": "MD06",
+   "symbol": "LTH",
+   "in_universe": true,
+   "asset": "Life Time Group Holdings, Inc. Common Stock",
+   "asset_type": "Aktie",
+   "owner": "Kind",
+   "transaction_type": "purchase",
+   "transaction_date": "2026-07-20",
+   "disclosure_date": "2026-08-03",
+   "reporting_delay_days": 14,
+   "amount_range": [
+    1001.0,
+    15000.0
+   ],
+   "source_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035118.pdf",
+   "note": "Offizielle STOCK-Act-Meldung; Wertbandbreite, bis 45 Tage Meldeverzug"
+  },
+  {
+   "id": "bc03c16d06f5e776",
+   "politician": "April McClain Delaney",
+   "chamber": "Repräsentantenhaus",
+   "party": null,
+   "state": "MD06",
+   "symbol": "LTH",
+   "in_universe": true,
+   "asset": "Life Time Group Holdings, Inc. Common Stock",
+   "asset_type": "Aktie",
+   "owner": "Kind",
+   "transaction_type": "purchase",
+   "transaction_date": "2026-07-17",
+   "disclosure_date": "2026-08-03",
+   "reporting_delay_days": 17,
+   "amount_range": [
+    1001.0,
+    15000.0
+   ],
+   "source_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035118.pdf",
+   "note": "Offizielle STOCK-Act-Meldung; Wertbandbreite, bis 45 Tage Meldeverzug"
+  }
+ ],
  "big_stakes": [],
  "superinvestors": [],
  "social_detail": null,

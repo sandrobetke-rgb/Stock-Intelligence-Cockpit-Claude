@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T05:55:05Z",
+ "generated_at": "2026-11-01T06:00:56Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -54,12 +54,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 17.6,
+   "score": 67.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 11,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -77,7 +79,7 @@
    "buy_value": 0,
    "sell_value": 0,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 1
   },
   "superinvestors": {
    "holders": 1,
@@ -86,7 +88,21 @@
    "sellers": 1,
    "sold_out": 0
   },
-  "events": [],
+  "events": [
+   {
+    "symbol": "LAUR",
+    "type": "earnings",
+    "date": "2026-10-29",
+    "time": "Uhrzeit offen",
+    "fiscal_quarter": "Sep/2026",
+    "eps_forecast": 0.48,
+    "estimates": 3,
+    "confirmed": true,
+    "source": "Nasdaq-Earnings-Kalender",
+    "source_url": "https://www.nasdaq.com/market-activity/stocks/laur/earnings",
+    "days_until": -3
+   }
+  ],
   "politicians": null,
   "first_seen": "2026-10-31",
   "archived_at": null,
@@ -434,11 +450,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 17.6,
+  "score": 67.1,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 80,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 100.0,
@@ -447,35 +463,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 11,
+    "independent": 11,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 19,
+    "independent": 19,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 5,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -493,8 +511,458 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
- "insiders": [],
+ "signals": [
+  {
+   "id": "42874c13ba855767",
+   "symbols": [
+    "LAUR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "LAUR Q3 deep dive: Campus expansion and online growth drive enrollment gains, margins advance",
+   "summary": "Higher education company Laureate Education (NASDAQ:LAUR) beat Wall Street’s revenue expectations in Q3 2026, with sales up 21.2% year on year to $485.1 million. The company expects the full year’s revenue to be around $1.93 billion, close to analysts’ estimates. Its non-GAAP pro",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/laur-q3-deep-dive-campus-034700674.html?.tsrc=rss",
+   "published_at": "2026-11-01T03:47:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:34Z",
+   "fingerprint": "9d4e9398a3fe9018",
+   "primary_source": false,
+   "cluster_id": "42874c13ba855767",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "LAUR Q3 Deep Dive: Campus-Erweiterung und Online-Wachstum treiben Einschreibungsgewinne, Margen voran"
+  },
+  {
+   "id": "17e7d19adac5921b",
+   "symbols": [
+    "LAUR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Laureate Education (LAUR) Stock May Trade Below Fair Value Following Buyback News",
+   "summary": "Laureate Education has posted a very large 5 year share price gain, yet the recent pullback and fresh earnings news put a sharper spotlight on whether the current valuation is actually supported by its profit stream. With the stock now trading around US$33.22 after declines over ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/laureate-education-laur-stock-may-221903605.html?.tsrc=rss",
+   "published_at": "2026-10-30T22:19:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:34Z",
+   "fingerprint": "1514cf0b2d030310",
+   "primary_source": false,
+   "cluster_id": "17e7d19adac5921b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Laureate Education (LAUR) Aktien können nach Rückkaufnachrichten unter dem Fair Value gehandelt werden"
+  },
+  {
+   "id": "35ab1d2a9a3053c2",
+   "symbols": [
+    "LAUR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Laureate Education, Inc. Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Laureate Education, Inc.'s Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-laureate-education-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-29T22:48:23Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:34Z",
+   "fingerprint": "4e7c18d798a6b2d1",
+   "primary_source": false,
+   "cluster_id": "35ab1d2a9a3053c2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "08af83e135d4f014",
+   "symbols": [
+    "LAUR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Laureate Education (LAUR) Q3 2026 Earnings Call Transcript",
+   "summary": "Enrollment surged 6% to 539,600 students as Mexico and Peru expansion accelerated.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/29/laureate-education-laur-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-29T18:29:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:34Z",
+   "fingerprint": "f75ca966cf087c68",
+   "primary_source": false,
+   "cluster_id": "08af83e135d4f014",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d0f32b102569aa52",
+   "symbols": [
+    "LAUR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What Laureate Education (LAUR) Said on Its Q3 Earnings Call",
+   "summary": "Laureate Education (NASDAQ:LAUR) reported third-quarter 2026 revenue of $485 million and adjusted EBITDA of $147 million, with both figures exceeding the company’s prior guidance, helped by favorable foreign exchange rates. Net income for the quarter was $101 million, or $0.73 pe",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-laureate-education-laur-said-on-its-q3-earnings-call-2026-10-29/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-29T18:14:46Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:34Z",
+   "fingerprint": "8b2e3857ed0e41fe",
+   "primary_source": false,
+   "cluster_id": "d0f32b102569aa52",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fddda78af0032209",
+   "symbols": [
+    "LAUR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Laureate Education (NASDAQ:LAUR) beats Q3 2026 sales expectations",
+   "summary": "Higher education company Laureate Education (NASDAQ:LAUR) beat Wall Street’s revenue expectations in Q3 2026, with revenue up 21.2% year on year to $485.1 million. The company expects the full year’s revenue to be around $1.93 billion, close to analysts’ consensus estimates. Its ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/laureate-education-nasdaq-laur-beats-122449817.html?.tsrc=rss",
+   "published_at": "2026-10-29T12:24:49Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:34Z",
+   "fingerprint": "b32cd1d90357c52c",
+   "primary_source": false,
+   "cluster_id": "fddda78af0032209",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "008e354deeb71c03",
+   "symbols": [
+    "LAUR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Laureate Education (LAUR) Q3 Earnings and Revenues Top Estimates",
+   "summary": "Laureate Education (LAUR) delivered earnings and revenue surprises of +8.33% and +1.52%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/laureate-education-laur-q3-earnings-113507102.html?.tsrc=rss",
+   "published_at": "2026-10-29T11:35:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:34Z",
+   "fingerprint": "8295845b5c6d10c8",
+   "primary_source": false,
+   "cluster_id": "008e354deeb71c03",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e2ae21ee9b9fe482",
+   "symbols": [
+    "LAUR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Laureate Education Reports Financial Results for The Third Quarter And Nine Months Ended September 30, 2026",
+   "summary": "Company Reaffirms Full-Year 2026 GuidanceAnnounces $150 Million Increase in Share Repurchase Authorization MIAMI, Oct. 29, 2026 (GLOBE NEWSWIRE) -- Laureate Education, Inc. (NASDAQ: LAUR), which operates five higher education institutions across Mexico and Peru, today announced f",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/laureate-education-reports-financial-results-113000861.html?.tsrc=rss",
+   "published_at": "2026-10-29T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:34Z",
+   "fingerprint": "918d1585f58a2620",
+   "primary_source": false,
+   "cluster_id": "e2ae21ee9b9fe482",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2e94cd4caefc42cf",
+   "symbols": [
+    "LAUR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Laureate Education: Q3 Earnings Snapshot",
+   "summary": "MIAMI (AP) — MIAMI (AP) — Laureate Education Inc. (LAUR) on Thursday reported third-quarter profit of $101.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/laureate-education-q3-earnings-snapshot-112342512.html?.tsrc=rss",
+   "published_at": "2026-10-29T11:23:42Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:34Z",
+   "fingerprint": "73867ad2a0c7264a",
+   "primary_source": false,
+   "cluster_id": "2e94cd4caefc42cf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ef5d4a3daea1ec71",
+   "symbols": [
+    "LAUR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Laureate Education (LAUR) reports earnings tomorrow: what to expect",
+   "summary": "Higher education company Laureate Education (NASDAQ:LAUR) will be announcing earnings results this Thursday before the bell. Here’s what to expect.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/laureate-education-laur-reports-earnings-040634197.html?.tsrc=rss",
+   "published_at": "2026-10-28T04:06:34Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:34Z",
+   "fingerprint": "dd06e643f1389538",
+   "primary_source": false,
+   "cluster_id": "ef5d4a3daea1ec71",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2bc9968a1498a225",
+   "symbols": [
+    "LAUR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "TAL or LAUR: Which Is the Better Value Stock Right Now?",
+   "summary": "TAL vs. LAUR: Which Stock Is the Better Value Option?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/tal-laur-better-value-stock-144003643.html?.tsrc=rss",
+   "published_at": "2026-10-26T14:40:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:34Z",
+   "fingerprint": "c425ba02f1c4439e",
+   "primary_source": false,
+   "cluster_id": "2bc9968a1498a225",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8cf0de68fb7f98d9",
+   "symbols": [
+    "LAUR",
+    "NBHC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 low-volatility stocks we’re skeptical of",
+   "summary": "Stability is great, but low-volatility stocks may struggle to deliver market-beating returns over time as they sometimes underperform during bull markets.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-low-volatility-stocks-skeptical-193353607.html?.tsrc=rss",
+   "published_at": "2026-10-22T19:33:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:34Z",
+   "fingerprint": "31ae8d61672b30e4",
+   "primary_source": false,
+   "cluster_id": "8cf0de68fb7f98d9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "31fe75c1580fb454",
+   "symbols": [
+    "APEI",
+    "CVSA",
+    "LAUR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "The One Reason To Invest In Covista Stock",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/619939/the-one-reason-to-invest-in-covista-stock/2026-10-22?.tsrc=rss",
+   "published_at": "2026-10-22T15:33:57Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:18Z",
+   "fingerprint": "8ab159b2976cb17b",
+   "primary_source": false,
+   "cluster_id": "31fe75c1580fb454",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3103c0bc476b8efc",
+   "symbols": [
+    "LAUR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Laureate Education (LAUR) Reports Next Week: Wall Street Expects Earnings Growth",
+   "summary": "Laureate Education (LAUR) possesses the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/laureate-education-laur-reports-next-130012885.html?.tsrc=rss",
+   "published_at": "2026-10-22T13:00:12Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:34Z",
+   "fingerprint": "4701065179590757",
+   "primary_source": false,
+   "cluster_id": "3103c0bc476b8efc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cbdfd67d9947d288",
+   "symbols": [
+    "LAUR",
+    "LRN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "K12 (LRN) Q1 Earnings and Revenues Top Estimates",
+   "summary": "K12 (LRN) delivered earnings and revenue surprises of +5.39% and +4.61%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/k12-lrn-q1-earnings-revenues-204502158.html?.tsrc=rss",
+   "published_at": "2026-10-20T20:45:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:34Z",
+   "fingerprint": "9768f0b86df2a0e7",
+   "primary_source": false,
+   "cluster_id": "cbdfd67d9947d288",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "571209e2769b3e20",
+   "symbols": [
+    "LAUR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Laureate Education (LAUR) a Solid Growth Stock? 3 Reasons to Think \"Yes\"",
+   "summary": "Laureate Education (LAUR) is well positioned to outperform the market, as it exhibits above-average growth in financials.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/laureate-education-laur-solid-growth-154501622.html?.tsrc=rss",
+   "published_at": "2026-10-19T15:45:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:34Z",
+   "fingerprint": "fecd7395a4f220ab",
+   "primary_source": false,
+   "cluster_id": "571209e2769b3e20",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "83f41a925da7b294",
+   "symbols": [
+    "LAUR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Laureate Education (LAUR) Stock Outpacing Its Consumer Discretionary Peers This Year?",
+   "summary": "Here is how Laureate Education (LAUR) and Newsmax (NMAX) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/laureate-education-laur-stock-outpacing-124001083.html?.tsrc=rss",
+   "published_at": "2026-10-19T12:40:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:34Z",
+   "fingerprint": "80569dbc4dfb8b9a",
+   "primary_source": false,
+   "cluster_id": "83f41a925da7b294",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "842d59ffc5e74eb7",
+   "symbols": [
+    "APEI",
+    "LAUR",
+    "LINC",
+    "MH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "5 Schools Stocks Navigating Costs and Changing Education Demand",
+   "summary": "Although regulatory and cost pressures are hurting the Zacks Schools industry, rising demand for career-focused education, healthcare and digital learning supports stocks like LAUR, MH, STRA, APEI and LINC.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/5-schools-stocks-navigating-costs-162800533.html?.tsrc=rss",
+   "published_at": "2026-10-08T16:28:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:18Z",
+   "fingerprint": "02429a4ee5a90f84",
+   "primary_source": false,
+   "cluster_id": "842d59ffc5e74eb7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "26d55bce44c4d011",
+   "symbols": [
+    "LAUR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Growth Stock with Explosive Upside and 2 That Underwhelm",
+   "summary": "Growth is a hallmark of all great companies, but the laws of gravity eventually take hold. Those who rode the COVID boom and ensuing tech selloff in 2022 will surely remember that the market’s punishment can be swift and severe when trajectories fall.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-growth-stock-explosive-upside-125609594.html?.tsrc=rss",
+   "published_at": "2026-10-08T12:56:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:34Z",
+   "fingerprint": "36ff29a1cc9b06fe",
+   "primary_source": false,
+   "cluster_id": "26d55bce44c4d011",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
+ "insiders": [
+  {
+   "id": "56abf0bd49eaee6d",
+   "symbol": "LAUR",
+   "insider": "Munoz George",
+   "owner_cik": 1238129,
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-09-30",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 2,
+   "shares": 556.0,
+   "price": 38.16,
+   "value": 21216.96,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/912766/000123812926000012/0001238129-26-000012-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "big_stakes": [],

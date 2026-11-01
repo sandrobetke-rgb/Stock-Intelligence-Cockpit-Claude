@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-11-01T05:55:05Z",
+ "generated_at": "2026-11-01T06:00:56Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "STNE",
-  "name": "Stoneco Class A",
+  "name": "StoneCo Ltd.",
   "region": "US",
   "currency": "USD",
-  "sector": "Financials",
-  "industry": null,
+  "sector": "Technology",
+  "industry": "Software - Infrastructure",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 7.75,
    "price_date": "2026-10-30",
@@ -30,28 +28,29 @@
    "sma50": 10.12179998397827,
    "sma200": 11.258077063560485
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 1787116160.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
-   "model": "financial",
+   "score": 65.4,
+   "coverage_pct": 100,
+   "model": "standard",
    "dimensions": {
-    "revenue_growth": null,
-    "profitability": null,
-    "financial_stability": null,
-    "cashflow": null,
-    "market_position": null,
-    "growth_potential": null,
-    "management": null
+    "revenue_growth": 75.8,
+    "profitability": 95.7,
+    "financial_stability": 37.6,
+    "cashflow": 42.8,
+    "market_position": 100.0,
+    "growth_potential": 28.5,
+    "management": 90.6
    }
   },
   "risk": {
-   "score": 48.0,
-   "level": "erhoeht",
-   "coverage_pct": 45,
+   "score": 44.4,
+   "level": "moderat",
+   "coverage_pct": 96,
    "top_factors": [
-    "Volatilität (63T, annualisiert)"
+    "Volatilität (63T, annualisiert)",
+    "Free-Cashflow-Marge"
    ]
   },
   "market_intelligence": {
@@ -78,7 +77,7 @@
    "buy_value": 0,
    "sell_value": 0,
    "distinct_buyers": 0,
-   "other_transactions": 1
+   "other_transactions": 2
   },
   "superinvestors": {
    "holders": 1,
@@ -87,11 +86,25 @@
    "sellers": 1,
    "sold_out": 1
   },
-  "events": [],
+  "events": [
+   {
+    "symbol": "STNE",
+    "type": "earnings",
+    "date": "2026-11-12",
+    "time": "nach Börsenschluss",
+    "fiscal_quarter": "Sep/2026",
+    "eps_forecast": 0.49,
+    "estimates": 3,
+    "confirmed": true,
+    "source": "Nasdaq-Earnings-Kalender",
+    "source_url": "https://www.nasdaq.com/market-activity/stocks/stne/earnings",
+    "days_until": 11
+   }
+  ],
   "politicians": null,
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "Cayman Islands"
  },
  "memberships": [
   {
@@ -118,34 +131,34 @@
   "move_zscore": -0.6090705799233765
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
-  "model": "financial",
+  "score": 65.4,
+  "status": "ok",
+  "coverage_pct": 100,
+  "model": "standard",
   "dimensions": [
    {
     "key": "revenue_growth",
     "label": "Umsatzwachstum",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 75.8,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_cagr",
       "label": "Umsatz-CAGR (mehrjährig)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 14.118,
+      "points": 76.5,
+      "status": "ok"
      },
      {
       "key": "revenue_growth_yoy",
       "label": "Umsatzwachstum Vorjahr",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 16.002,
+      "points": 74.3,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -154,25 +167,25 @@
     "key": "profitability",
     "label": "Profitabilität/Margen",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 95.7,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
+     {
+      "key": "operating_margin",
+      "label": "Operative Marge",
+      "unit": "%",
+      "value": 51.978,
+      "points": 100.0,
+      "status": "ok"
+     },
      {
       "key": "net_margin",
       "label": "Nettomarge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     },
-     {
-      "key": "roe",
-      "label": "Eigenkapitalrendite",
-      "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 17.312,
+      "points": 89.2,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -181,17 +194,33 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 37.6,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
-      "key": "share_change_yoy",
-      "label": "Aktienanzahl Veränderung",
-      "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "key": "debt_to_equity",
+      "label": "Verschuldung (Debt/Equity)",
+      "unit": "x",
+      "value": 1.599,
+      "points": 50.0,
+      "status": "ok"
+     },
+     {
+      "key": "current_ratio",
+      "label": "Liquidität (Current Ratio)",
+      "unit": "x",
+      "value": 1.37,
+      "points": 51.5,
+      "status": "ok"
+     },
+     {
+      "key": "interest_coverage",
+      "label": "Zinsdeckung (EBIT/Zinsen)",
+      "unit": "x",
+      "value": 2.451,
+      "points": 7.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -200,37 +229,71 @@
     "key": "cashflow",
     "label": "Cashflow",
     "weight": 0.1,
-    "score": null,
-    "basis": "not_applicable",
-    "coverage": null,
-    "metrics": [],
+    "score": 42.8,
+    "basis": "data",
+    "coverage": 100,
+    "metrics": [
+     {
+      "key": "fcf_margin",
+      "label": "Free-Cashflow-Marge",
+      "unit": "%",
+      "value": -3.821,
+      "points": 4.7,
+      "status": "ok"
+     },
+     {
+      "key": "ocf_positive",
+      "label": "Operativer Cashflow positiv",
+      "unit": "bool",
+      "value": 1.0,
+      "points": 100.0,
+      "status": "ok"
+     }
+    ],
     "manual": null
    },
    {
     "key": "market_position",
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
-    "score": null,
-    "basis": "not_applicable",
-    "coverage": null,
-    "metrics": [],
+    "score": 100.0,
+    "basis": "proxy",
+    "coverage": 100,
+    "metrics": [
+     {
+      "key": "gross_margin",
+      "label": "Bruttomarge (Proxy Preissetzungsmacht)",
+      "unit": "%",
+      "value": 71.558,
+      "points": 100.0,
+      "status": "ok"
+     }
+    ],
     "manual": null
    },
    {
     "key": "growth_potential",
     "label": "Wachstumspotenzial",
     "weight": 0.2,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 28.5,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_growth_forward",
       "label": "Erwartetes Umsatzwachstum (Yahoo)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 1.6,
+      "points": 22.0,
+      "status": "ok"
+     },
+     {
+      "key": "reinvestment",
+      "label": "Reinvestition (F&E + Capex in % Umsatz)",
+      "unit": "%",
+      "value": 8.87,
+      "points": 38.2,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -239,59 +302,95 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 90.6,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 21.098,
+      "points": 84.4,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -12.974,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/STNE/financials",
+  "as_of": "2026-11-01T06:03:04Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "BRL",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": 48.0,
-  "level": "erhoeht",
-  "coverage_pct": 45,
+  "score": 44.4,
+  "level": "moderat",
+  "coverage_pct": 96,
   "factors": [
+   {
+    "key": "leverage",
+    "label": "Verschuldung (Debt/Equity)",
+    "value": 1.6,
+    "unit": "x",
+    "severity": 48.1,
+    "weight": 0.15,
+    "status": "ok"
+   },
+   {
+    "key": "liquidity",
+    "label": "Liquidität (Current Ratio)",
+    "value": 1.37,
+    "unit": "x",
+    "severity": 48.5,
+    "weight": 0.1,
+    "status": "ok"
+   },
+   {
+    "key": "interest",
+    "label": "Zinsdeckung",
+    "value": 2.45,
+    "unit": "x",
+    "severity": 89.6,
+    "weight": 0.08,
+    "status": "ok"
+   },
+   {
+    "key": "cashflow",
+    "label": "Free-Cashflow-Marge",
+    "value": -3.82,
+    "unit": "%",
+    "severity": 75.3,
+    "weight": 0.12,
+    "status": "ok"
+   },
    {
     "key": "margin_trend",
     "label": "Margenentwicklung (Vorjahr, Pp.)",
-    "value": null,
+    "value": -0.25,
     "unit": "Pp",
-    "severity": null,
+    "severity": 29.6,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": -12.97,
     "unit": "%",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -314,11 +413,11 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 3.31,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
@@ -340,7 +439,8 @@
    }
   ],
   "top_factors": [
-   "Volatilität (63T, annualisiert)"
+   "Volatilität (63T, annualisiert)",
+   "Free-Cashflow-Marge"
   ],
   "unknown_factors": [
    "Kunden- und Branchenabhängigkeit",
@@ -428,6 +528,27 @@
    "currency": "USD",
    "source": "SEC EDGAR Form 4",
    "source_url": "https://www.sec.gov/Archives/edgar/data/1745431/000207097926000284/0002070979-26-000284-index.htm"
+  },
+  {
+   "id": "8c687067de748066",
+   "symbol": "STNE",
+   "insider": "Ilg Thomas Gregor",
+   "owner_cik": 2123336,
+   "role": "Chief Risk Officer",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-06",
+   "filed_at": "2026-10-07",
+   "reporting_delay_days": 1,
+   "shares": 18339.0,
+   "price": 0.0,
+   "value": null,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1745431/000207097926000282/0002070979-26-000282-index.htm"
   }
  ],
  "institutions": [],

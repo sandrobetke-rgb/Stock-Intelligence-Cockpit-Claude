@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T05:55:05Z",
+ "generated_at": "2026-11-01T06:00:56Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -55,13 +55,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 3.0,
+   "score": 41.9,
    "drivers": [
-    "price_volume_anomaly",
-    "insider_activity"
+    "news_flow",
+    "freshness",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 6,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -75,11 +76,11 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 1,
+   "open_market_sells": 5,
    "buy_value": 0,
-   "sell_value": 343289.7,
+   "sell_value": 2576598.1,
    "distinct_buyers": 0,
-   "other_transactions": 1
+   "other_transactions": 2
   },
   "superinvestors": {
    "holders": 0,
@@ -88,7 +89,21 @@
    "sellers": 1,
    "sold_out": 1
   },
-  "events": [],
+  "events": [
+   {
+    "symbol": "LIF",
+    "type": "earnings",
+    "date": "2026-11-09",
+    "time": "Uhrzeit offen",
+    "fiscal_quarter": "Sep/2026",
+    "eps_forecast": null,
+    "estimates": null,
+    "confirmed": true,
+    "source": "Nasdaq-Earnings-Kalender",
+    "source_url": "https://www.nasdaq.com/market-activity/stocks/lif/earnings",
+    "days_until": 8
+   }
+  ],
   "politicians": null,
   "first_seen": "2026-10-31",
   "archived_at": null,
@@ -437,49 +452,50 @@
   ]
  },
  "intelligence_detail": {
-  "score": 3.0,
+  "score": 41.9,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 14.9,
    "social_attention": null,
-   "insider_activity": 10
+   "insider_activity": 50
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 6,
+    "independent": 6,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 12,
+    "independent": 12,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly",
-   "insider_activity"
+   "news_flow",
+   "freshness",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -497,7 +513,407 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "b33eb384a8cce056",
+   "symbols": [
+    "LIF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Greatland Resources And 2 More Australian Undervalued Stocks",
+   "summary": "China’s factory activity has slipped again as new export orders weaken, which keeps pressure on global growth expectations and has pushed many Australian stocks with solid cash generation into the bargain bin. That gap between dependable cash coming in and discounted share prices",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/greatland-resources-2-more-australian-081107148.html?.tsrc=rss",
+   "published_at": "2026-10-31T08:11:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:48Z",
+   "fingerprint": "0121292ccc94eb7c",
+   "primary_source": false,
+   "cluster_id": "b33eb384a8cce056",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Greatland Resources und 2 weitere australische unterbewertete Aktien"
+  },
+  {
+   "id": "e851adf73f422a5d",
+   "symbols": [
+    "LIF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Australian Tech Stocks With Up To 45% Fair Value Upside",
+   "summary": "Recent weakness in global tech shares, as investors question huge AI spending, has pushed many Australian technology stocks out of favour. That pullback has left a pocket of listed software, hardware and semiconductor businesses trading below what their underlying operations migh",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/3-australian-tech-stocks-45-011446244.html?.tsrc=rss",
+   "published_at": "2026-10-31T01:14:46Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:48Z",
+   "fingerprint": "a00300a3641fbde0",
+   "primary_source": false,
+   "cluster_id": "e851adf73f422a5d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "3 Australische Tech-Aktien mit bis zu 45% Fair Value Upside"
+  },
+  {
+   "id": "837b566c54f25aac",
+   "symbols": [
+    "LIF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Top 3 Australian Undervalued Stocks To Watch In October 2026",
+   "summary": "Power is quietly becoming the new choke point for global AI growth, with Anthropic flagging natural gas access as a key hurdle for future data centres. That type of bottleneck can push attention back toward Australian businesses that already generate solid cash and trade below es",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/top-3-australian-undervalued-stocks-150843864.html?.tsrc=rss",
+   "published_at": "2026-10-28T15:08:43Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:48Z",
+   "fingerprint": "2b0cfb5a3aad653b",
+   "primary_source": false,
+   "cluster_id": "837b566c54f25aac",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "073bc5a280120a72",
+   "symbols": [
+    "LIF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Life360 Appoints Advertising Leader Donna Sharp as General Manager of Life360 Ads",
+   "summary": "Former MediaLink and UTA executive, an early advisor to Life360 Ads, joins to scale the company’s advertising platformSAN FRANCISCO, Oct. 27, 2026 (GLOBE NEWSWIRE) -- Life360 (Nasdaq: LIF), the leading family connection and safety company, today announced the appointment of Donna",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/life360-appoints-advertising-leader-donna-160000305.html?.tsrc=rss",
+   "published_at": "2026-10-27T16:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:48Z",
+   "fingerprint": "ab062c71a63611cb",
+   "primary_source": false,
+   "cluster_id": "073bc5a280120a72",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "93c8a16dbf460e91",
+   "symbols": [
+    "LIF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Australian Undervalued Stocks Trading Up To 48% Below Fair Value",
+   "summary": "Bond investors are increasingly focused on the heavy funding needs tied to artificial intelligence infrastructure, which keeps long term yields under pressure and raises questions about how dependable future cash flows really are. That mood creates an opening for Australian compa",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-australian-undervalued-stocks-trading-140836685.html?.tsrc=rss",
+   "published_at": "2026-10-27T14:08:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:48Z",
+   "fingerprint": "8db094245723ee44",
+   "primary_source": false,
+   "cluster_id": "93c8a16dbf460e91",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "99cbcd198cb0f166",
+   "symbols": [
+    "LIF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Australian Undervalued Stocks To Own In October 2026",
+   "summary": "European natural gas prices have climbed to a four year high, and that kind of energy shock often pushes investors toward predictable cash flow rather than market stories. When money rotates away from crowded trades, solid Australian businesses whose future cash generation looks ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-australian-undervalued-stocks-own-120847005.html?.tsrc=rss",
+   "published_at": "2026-10-26T12:08:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:48Z",
+   "fingerprint": "53285c3ac69f4274",
+   "primary_source": false,
+   "cluster_id": "99cbcd198cb0f166",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f4f88d281e2f58bd",
+   "symbols": [
+    "LIF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Australian Tech Stocks To Watch In October 2026",
+   "summary": "AI security experts are scrambling to patch critical PHP flaws discovered by advanced models, and that puts Australian tech stocks in an interesting spotlight. When software risk suddenly grabs headlines, investors often reassess how they value the tools and hardware that keep di",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/australian-tech-stocks-watch-october-001658716.html?.tsrc=rss",
+   "published_at": "2026-10-24T00:16:58Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:48Z",
+   "fingerprint": "edcee0d0ce33185d",
+   "primary_source": false,
+   "cluster_id": "f4f88d281e2f58bd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c80041ac2d1428f0",
+   "symbols": [
+    "ALRM",
+    "LIF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What Does Alarm.com's Falling Multiple Really Say?",
+   "summary": "Alarm.com Holdings (ALRM) appears to fit a common investing rule: a lower price-to-earnings multiple, representing what investors pay for each dollar of profit, indicates a cheaper stock. Three years ago, the shares traded at 45.8 times profit, and today they trade at 24.0 times.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/619440/what-does-alarm-coms-falling-multiple-really-say/2026-10-20?.tsrc=rss",
+   "published_at": "2026-10-20T19:59:35Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:26:50Z",
+   "fingerprint": "125126e341db8406",
+   "primary_source": false,
+   "cluster_id": "c80041ac2d1428f0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "51dd26c28f5db80c",
+   "symbols": [
+    "LIF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Ansell Heads These 3 Australian Undervalued Stocks To Watch",
+   "summary": "Oil sitting above US$110 a barrel has pushed energy costs back into the spotlight. This matters for Australian investors because higher input prices can squeeze weaker businesses and reward those with solid, self funded cash generation. When share prices lag behind the cash flowi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ansell-heads-3-australian-undervalued-170936337.html?.tsrc=rss",
+   "published_at": "2026-10-20T17:09:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:48Z",
+   "fingerprint": "dcda136edd7fb5fc",
+   "primary_source": false,
+   "cluster_id": "51dd26c28f5db80c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "52c8a6ec29b70d32",
+   "symbols": [
+    "LIF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Australian Undervalued Stocks Trading At Least 26% Below Fair Value",
+   "summary": "Higher borrowing costs are back in focus after fresh U.S. inflation data increased the odds of another Federal Reserve rate hike this year. When interest rates stay elevated, Australian investors often pay closer attention to companies that generate solid cash and trade at a disc",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-australian-undervalued-stocks-trading-001630303.html?.tsrc=rss",
+   "published_at": "2026-10-18T00:16:30Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:48Z",
+   "fingerprint": "5d32faa7caa48b82",
+   "primary_source": false,
+   "cluster_id": "52c8a6ec29b70d32",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "83ec41734d5cc42d",
+   "symbols": [
+    "LIF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Australian Tech Stocks To Own In October 2026",
+   "summary": "AI spending and related debt are under fresh scrutiny after warnings that more than US$4 trillion of investment could face write downs by 2032, which has made investors more selective about where they put money in technology. That caution can work in your favour. When sentiment t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/3-australian-tech-stocks-own-231236116.html?.tsrc=rss",
+   "published_at": "2026-10-16T23:12:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:48Z",
+   "fingerprint": "a3ddc6b57167d607",
+   "primary_source": false,
+   "cluster_id": "83ec41734d5cc42d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "481c8818c4724e00",
+   "symbols": [
+    "LIF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Bravura Solutions Is Just One Of These 3 Australian Undervalued Tech Stocks",
+   "summary": "AI spending now accounts for a big slice of United States economic growth, with huge sums flowing into data centers, chips, and cloud infrastructure. That kind of investment focus can leave some Australian tech stocks overlooked, even when their valuations look appealing next to ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/bravura-solutions-just-one-3-221006668.html?.tsrc=rss",
+   "published_at": "2026-10-09T22:10:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:48Z",
+   "fingerprint": "a74d18aea0b8ab1d",
+   "primary_source": false,
+   "cluster_id": "481c8818c4724e00",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "44eeb65876b96f25",
+   "symbols": [
+    "LIF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Iress And 2 Other Australian Undervalued Tech Stocks",
+   "summary": "Global bond markets are under pressure as government borrowing costs climb to levels not seen in decades, which has pushed many growth stories out of favour. That kind of rate shock can leave solid Australian tech businesses trading at prices that look out of sync with their unde",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/iress-2-other-australian-undervalued-001240818.html?.tsrc=rss",
+   "published_at": "2026-10-02T00:12:40Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:48Z",
+   "fingerprint": "79c4be03a66bb166",
+   "primary_source": false,
+   "cluster_id": "44eeb65876b96f25",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c20e39110bcdffda",
+   "symbols": [
+    "LIF"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Analyst Earnings Upgrade Might Change The Case For Investing In Life360 (ASX:360)",
+   "summary": "Recently, Life360 was upgraded to a Zacks Rank #2 (Buy) after analysts raised their earnings estimates, signaling improved expectations for the company’s financial performance. This upward shift in earnings forecasts suggests analysts see Life360’s business fundamentals strengthe",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/analyst-earnings-upgrade-might-change-021127555.html?.tsrc=rss",
+   "published_at": "2026-09-24T02:11:27Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:48Z",
+   "fingerprint": "aa01fb5ac3330b26",
+   "primary_source": false,
+   "cluster_id": "c20e39110bcdffda",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bb971e088af1062c",
+   "symbols": [
+    "LIF"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Life360 (LIF) Upgraded to Buy: Here's Why",
+   "summary": "Life360 (LIF) has been upgraded to a Zacks Rank #2 (Buy), reflecting growing optimism about the company's earnings prospects. This might drive the stock higher in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/life360-lif-upgraded-buy-heres-160003700.html?.tsrc=rss",
+   "published_at": "2026-09-22T16:00:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:48Z",
+   "fingerprint": "ae206837c7b223db",
+   "primary_source": false,
+   "cluster_id": "bb971e088af1062c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a1d99f4f27da789b",
+   "symbols": [
+    "LIF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Life360’s Brian McDevitt: Context, Transparency Are the Antidotes for Location Data‘Creepiness’",
+   "summary": "AMENIA, NY — Location data earns its reputation as the advertising industry’s most sensitive signal. What Life360 has learned across 100 million monthly active users is that the same data that feels intrusive in one context feels genuinely helpful in another — and the difference ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "beet.tv",
+   "url": "https://www.beet.tv/2026/09/life360s-brian-mcdevitt-context-transparency-are-the-antidotes-for-location-datacreepiness.html?.tsrc=rss",
+   "published_at": "2026-09-20T15:58:16Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:48Z",
+   "fingerprint": "2b61e6827af889c3",
+   "primary_source": false,
+   "cluster_id": "a1d99f4f27da789b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "21b05f2663f2d5ec",
+   "symbols": [
+    "LIF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Leelyn Smith Names John Renaldi Chief AI Officer",
+   "summary": "Leelyn Smith, an integrated advisory firm serving families and business owners across the country, today announced the appointment of John Renaldi as Chief AI Officer.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/leelyn-smith-names-john-renaldi-160000882.html?.tsrc=rss",
+   "published_at": "2026-08-27T16:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:48Z",
+   "fingerprint": "f34c252ee57e81ea",
+   "primary_source": false,
+   "cluster_id": "21b05f2663f2d5ec",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "20bbdaa8608d0f05",
+   "symbols": [
+    "LIF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Life360 Announces New Pet Care Products So No One Forgets Fido This Back-To-School Season",
+   "summary": "New Features and QR Code Collar Tag Help Ensure Everyone’s Favorite Family Member is Connected and Cared For On and Off the App SAN FRANCISCO, Aug. 25, 2026 (GLOBE NEWSWIRE) -- Life360 (NASDAQ: LIF), the leading family connection and safety company, today announced the launch of ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/life360-announces-pet-care-products-120000996.html?.tsrc=rss",
+   "published_at": "2026-08-25T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:48Z",
+   "fingerprint": "5562ea7832521efb",
+   "primary_source": false,
+   "cluster_id": "20bbdaa8608d0f05",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "109afdec3730968d",
@@ -538,6 +954,111 @@
    "currency": "USD",
    "source": "SEC EDGAR Form 4",
    "source_url": "https://www.sec.gov/Archives/edgar/data/1581760/000158176026000171/0001581760-26-000171-index.htm"
+  },
+  {
+   "id": "3264e4c19ea897bd",
+   "symbol": "LIF",
+   "insider": "Haro Alex",
+   "owner_cik": 1932626,
+   "role": "Director",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-06",
+   "filed_at": "2026-10-08",
+   "reporting_delay_days": 2,
+   "shares": 50000.0,
+   "price": 2.53,
+   "value": 126500.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1581760/000158176026000169/0001581760-26-000169-index.htm"
+  },
+  {
+   "id": "ef69c29fbdba04e6",
+   "symbol": "LIF",
+   "insider": "Haro Alex",
+   "owner_cik": 1932626,
+   "role": "Director",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-06",
+   "filed_at": "2026-10-08",
+   "reporting_delay_days": 2,
+   "shares": 48608.0,
+   "price": 41.41,
+   "value": 2012857.28,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1581760/000158176026000169/0001581760-26-000169-index.htm"
+  },
+  {
+   "id": "3321f37790e7e642",
+   "symbol": "LIF",
+   "insider": "Haro Alex",
+   "owner_cik": 1932626,
+   "role": "Director",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-06",
+   "filed_at": "2026-10-08",
+   "reporting_delay_days": 2,
+   "shares": 1392.0,
+   "price": 42.36,
+   "value": 58965.12,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1581760/000158176026000169/0001581760-26-000169-index.htm"
+  },
+  {
+   "id": "8261ccc5361b5009",
+   "symbol": "LIF",
+   "insider": "Coghlan John Philip",
+   "owner_cik": 1185999,
+   "role": "Director",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-05",
+   "reporting_delay_days": 4,
+   "shares": 3800.0,
+   "price": 40.34,
+   "value": 153292.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1581760/000158176026000167/0001581760-26-000167-index.htm"
+  },
+  {
+   "id": "9e3e7eb9e836d33b",
+   "symbol": "LIF",
+   "insider": "Coghlan John Philip",
+   "owner_cik": 1185999,
+   "role": "Director",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-05",
+   "reporting_delay_days": 4,
+   "shares": 200.0,
+   "price": 40.97,
+   "value": 8194.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1581760/000158176026000167/0001581760-26-000167-index.htm"
   }
  ],
  "institutions": [],

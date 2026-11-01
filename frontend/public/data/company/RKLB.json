@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T05:55:05Z",
+ "generated_at": "2026-11-01T06:00:56Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -55,9 +55,11 @@
    ]
   },
   "market_intelligence": {
-   "score": 10.1,
+   "score": 15.1,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "social_attention",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -70,15 +72,18 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 3,
+   "manipulation_risk": "auffaellig"
+  },
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 3,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 9925448.62,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 1
   },
   "superinvestors": {
    "holders": 3,
@@ -87,7 +92,21 @@
    "sellers": 2,
    "sold_out": 0
   },
-  "events": [],
+  "events": [
+   {
+    "symbol": "RKLB",
+    "type": "earnings",
+    "date": "2026-11-09",
+    "time": "nach Börsenschluss",
+    "fiscal_quarter": "Sep/2026",
+    "eps_forecast": -0.05,
+    "estimates": 2,
+    "confirmed": true,
+    "source": "Nasdaq-Earnings-Kalender",
+    "source_url": "https://www.nasdaq.com/market-activity/stocks/rklb/earnings",
+    "days_until": 8
+   }
+  ],
   "politicians": null,
   "first_seen": "2026-10-31",
   "archived_at": null,
@@ -436,7 +455,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 10.1,
+  "score": 15.1,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -444,8 +463,8 @@
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 57.3,
-   "social_attention": null,
-   "insider_activity": null
+   "social_attention": 50.0,
+   "insider_activity": 30
   },
   "windows": {
    "24h": {
@@ -477,7 +496,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "social_attention",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -496,7 +517,92 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "0d91217ef69bf95f",
+   "symbol": "RKLB",
+   "insider": "Spice Adam C.",
+   "owner_cik": 1509421,
+   "role": "Chief Financial Officer",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 1,
+   "shares": 140157.0,
+   "price": 1.09,
+   "value": 152771.13,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1819994/000200101126000143/0002001011-26-000143-index.htm"
+  },
+  {
+   "id": "9c31c434c382ee89",
+   "symbol": "RKLB",
+   "insider": "Spice Adam C.",
+   "owner_cik": 1509421,
+   "role": "Chief Financial Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 1,
+   "shares": 39669.0,
+   "price": 70.2827,
+   "value": 2788044.43,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1819994/000200101126000143/0002001011-26-000143-index.htm"
+  },
+  {
+   "id": "44738336999e7d6c",
+   "symbol": "RKLB",
+   "insider": "Spice Adam C.",
+   "owner_cik": 1509421,
+   "role": "Chief Financial Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 1,
+   "shares": 85288.0,
+   "price": 70.8922,
+   "value": 6046253.95,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1819994/000200101126000143/0002001011-26-000143-index.htm"
+  },
+  {
+   "id": "554ddcef026857d9",
+   "symbol": "RKLB",
+   "insider": "Spice Adam C.",
+   "owner_cik": 1509421,
+   "role": "Chief Financial Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-02",
+   "reporting_delay_days": 1,
+   "shares": 15200.0,
+   "price": 71.7862,
+   "value": 1091150.24,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1819994/000200101126000143/0002001011-26-000143-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "big_stakes": [],
@@ -529,6 +635,61 @@
    "report_date": "2026-06-30"
   }
  ],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 0,
+  "mentions_7d": 3,
+  "mentions_30d": 5,
+  "change_vs_baseline_pct": -100,
+  "engagement_7d": 22.0,
+  "sentiment_7d": 0.67,
+  "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
+  "bullish_7d": 2,
+  "bearish_7d": 0,
+  "by_platform_7d": {
+   "stocktwits": 3
+  },
+  "communities_7d": {
+   "StockTwits": 3
+  },
+  "platforms": [
+   "stocktwits"
+  ],
+  "manipulation_flags": [
+   "Pump-typische Sprache"
+  ],
+  "manipulation_risk": "auffaellig",
+  "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "Moon_Seekr",
+    "posted_at": "2026-10-30T20:33:42Z",
+    "url": "https://stocktwits.com/Moon_Seekr/message/667821823",
+    "text": "$RKLB Added 290 shares @ $53.30\n\nLooking for  a Santa rally heading into Q4 and the space sector gets some support as we continue into Q3 Earnings this month among other names like $RDW. 🚀",
+    "engagement": 16.0,
+    "sentiment_label": "Bullish"
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "ToddyP1",
+    "posted_at": "2026-10-30T21:35:45Z",
+    "url": "https://stocktwits.com/ToddyP1/message/667826901",
+    "text": "$RDW $RKLB",
+    "engagement": 3.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "MOPMnomis43",
+    "posted_at": "2026-10-30T18:25:58Z",
+    "url": "https://stocktwits.com/MOPMnomis43/message/667803336",
+    "text": "$SPCE the only space ship taking humans to the edge of space in 2027\n\n$RKLB $SPCX $RDW",
+    "engagement": 3.0,
+    "sentiment_label": "Bullish"
+   }
+  ]
+ },
  "history": []
 }

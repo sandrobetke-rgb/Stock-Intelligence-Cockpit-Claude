@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T05:55:05Z",
+ "generated_at": "2026-11-01T06:00:56Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -55,11 +55,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 5.3,
+   "score": 42.3,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "analyst_activity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 5,
    "independent_24h": 0
   },
   "political": {
@@ -87,7 +89,33 @@
    "sellers": 0,
    "sold_out": 0
   },
-  "events": [],
+  "events": [
+   {
+    "symbol": "MGEE",
+    "type": "earnings",
+    "date": "2026-11-04",
+    "time": "Uhrzeit offen",
+    "fiscal_quarter": "Sep/2026",
+    "eps_forecast": 1.16,
+    "estimates": 3,
+    "confirmed": true,
+    "source": "Nasdaq-Earnings-Kalender",
+    "source_url": "https://www.nasdaq.com/market-activity/stocks/mgee/earnings",
+    "days_until": 3
+   },
+   {
+    "symbol": "MGEE",
+    "type": "ex_dividend",
+    "date": "2026-12-01",
+    "payment_date": "2026-12-15",
+    "amount": 0.5083,
+    "annual": 2.0332,
+    "confirmed": true,
+    "source": "Nasdaq-Dividendenkalender",
+    "source_url": "https://www.nasdaq.com/market-activity/stocks/mgee/dividend-history",
+    "days_until": 30
+   }
+  ],
   "politicians": null,
   "first_seen": "2026-10-31",
   "archived_at": null,
@@ -436,13 +464,13 @@
   ]
  },
  "intelligence_detail": {
-  "score": 5.3,
+  "score": 42.3,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
-   "analyst_activity": 0,
+   "analyst_activity": 35,
    "price_volume_anomaly": 29.9,
    "social_attention": null,
    "insider_activity": null
@@ -458,26 +486,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 5,
+    "independent": 5,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 10,
+    "independent": 10,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 2,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "analyst_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -495,7 +525,435 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "b22cee1df7c34110",
+   "symbols": [
+    "AEE",
+    "MGEE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ameren (AEE) Earnings Expected to Grow: What to Know Ahead of Next Week's Release",
+   "summary": "Ameren (AEE) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ameren-aee-earnings-expected-grow-130013660.html?.tsrc=rss",
+   "published_at": "2026-10-29T13:00:13Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T13:59:57Z",
+   "fingerprint": "5e09a682a18dd999",
+   "primary_source": false,
+   "cluster_id": "b22cee1df7c34110",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "347bc73237f842a9",
+   "symbols": [
+    "ED",
+    "MGEE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "4 Top Wind Energy Stocks to Bet on for Solid Long-Term Gains",
+   "summary": "U.S. wind power capacity is set to reach 179.1 GW by 2027. Clearway Energy, Consolidated Edison, OGE Energy and MGE Energy offer promising growth opportunities.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/4-top-wind-energy-stocks-142500282.html?.tsrc=rss",
+   "published_at": "2026-10-28T14:25:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:14Z",
+   "fingerprint": "9af31a7184e7b04c",
+   "primary_source": false,
+   "cluster_id": "347bc73237f842a9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7ffb443d52cdfee7",
+   "symbols": [
+    "ETR",
+    "MGEE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Earnings Preview: MGE (MGEE) Q3 Earnings Expected to Decline",
+   "summary": "MGE (MGEE) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/earnings-preview-mge-mgee-q3-130009191.html?.tsrc=rss",
+   "published_at": "2026-10-28T13:00:09Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:22Z",
+   "fingerprint": "b158a7b4d97cb1c9",
+   "primary_source": false,
+   "cluster_id": "7ffb443d52cdfee7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6f5b8bfb9d523a0a",
+   "symbols": [
+    "AEE",
+    "MGEE"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "MGE Energy (MGEE) vs. LNT and IDA: Can Rising Dividends and a 22% Valuation Discount Drive a Re-Rating?",
+   "summary": "Is MGEE a good stock to buy? We came across a bullish thesis on MGE Energy, Inc. on Quality At A Fair Price’s Substack by Longacres Finance. The thesis was published on August 25th, when the stock was trading at $79.01, and MGEE has lost 6.03% since then. The weakness may reflect",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/mge-energy-mgee-vs-lnt-205232539.html?.tsrc=rss",
+   "published_at": "2026-10-27T20:52:32Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T13:59:57Z",
+   "fingerprint": "6faccaff592d0b8a",
+   "primary_source": false,
+   "cluster_id": "6f5b8bfb9d523a0a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a9c500b9c1bf5df0",
+   "symbols": [
+    "AWR",
+    "ED",
+    "MGEE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "3 Utility Dividend Stocks For Steady Income While Rates Stay Higher",
+   "summary": "Rates stuck in a holding pattern, inflation still above target and the Fed hinting it may not be done yet. That mix keeps pressure on growth stories and puts steady cash payers back in the spotlight. Investors hunting for resilience and reliable income are watching this closely, ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-utility-dividend-stocks-steady-010911160.html?.tsrc=rss",
+   "published_at": "2026-10-26T01:09:11Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:14Z",
+   "fingerprint": "daa54351d1e1f08e",
+   "primary_source": false,
+   "cluster_id": "a9c500b9c1bf5df0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "01c4d5dd9ac369dc",
+   "symbols": [
+    "MGEE"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "MGE (MGEE) Upgraded to Buy: Here's Why",
+   "summary": "MGE (MGEE) might move higher on growing optimism about its earnings prospects, which is reflected by its upgrade to a Zacks Rank #2 (Buy).",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/mge-mgee-upgraded-buy-heres-150002568.html?.tsrc=rss",
+   "published_at": "2026-10-22T15:00:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:42Z",
+   "fingerprint": "1fa55902292b6804",
+   "primary_source": false,
+   "cluster_id": "01c4d5dd9ac369dc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fc3a028b1ffb0249",
+   "symbols": [
+    "MGEE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Why MGE (MGEE) is a Top Dividend Stock for Your Portfolio",
+   "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does MGE (MGEE) have what it takes? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-mge-mgee-top-dividend-144502743.html?.tsrc=rss",
+   "published_at": "2026-10-19T14:45:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:42Z",
+   "fingerprint": "a33a46718854ba47",
+   "primary_source": false,
+   "cluster_id": "fc3a028b1ffb0249",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5cb384b52dbfa40b",
+   "symbols": [
+    "MGEE",
+    "MSEX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Consolidated Edison Stock And 2 Utilities With Inflation Linked Revenue",
+   "summary": "Government bond yields are climbing, budgets are under strain and suddenly the “safe” corner of the market does not feel so simple anymore. For investors, that tension between higher income from bonds and pressure on equities creates a moment to reassess where regulated utilities",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/consolidated-edison-stock-2-utilities-191246995.html?.tsrc=rss",
+   "published_at": "2026-10-13T19:12:46Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:42Z",
+   "fingerprint": "f393732086be8472",
+   "primary_source": false,
+   "cluster_id": "5cb384b52dbfa40b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c1e898c41c2634ac",
+   "symbols": [
+    "MGEE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How Investors May Respond To MGE Energy (MGEE) Extending And Expanding Its Credit Facilities",
+   "summary": "MGE Energy, Inc. and its utility subsidiary Madison Gas and Electric Company recently amended and restated long-term revolving credit agreements, extending maturities to 2031 with potential extensions to 2033 and expanding one facility’s commitments from US$90,000,000 to US$210,0",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/investors-may-respond-mge-energy-150945070.html?.tsrc=rss",
+   "published_at": "2026-10-07T15:09:45Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:42Z",
+   "fingerprint": "d4868908c780beb3",
+   "primary_source": false,
+   "cluster_id": "c1e898c41c2634ac",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a2adc38745b14d47",
+   "symbols": [
+    "MGEE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "MGE (MGEE) Could Be a Great Choice",
+   "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does MGE (MGEE) have what it takes? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/mge-mgee-could-great-choice-144503907.html?.tsrc=rss",
+   "published_at": "2026-10-02T14:45:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:42Z",
+   "fingerprint": "f37ea170af544a81",
+   "primary_source": false,
+   "cluster_id": "a2adc38745b14d47",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1205eae42fc0d2b2",
+   "symbols": [
+    "MGEE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "3 Dividend Stocks That Could Hold Up Better As Rates Stay Higher",
+   "summary": "Rising US Treasury yields near 5.25%, an expensive oil market linked to the US–Iran war, and stubborn 3.7% inflation are squeezing many high‑valuation stocks, yet cash‑rich dividend payers can sometimes feel the pressure less intensely. Income hunters who ignore this shift risk m",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-dividend-stocks-could-hold-030957653.html?.tsrc=rss",
+   "published_at": "2026-09-30T03:09:57Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:42Z",
+   "fingerprint": "f099778081ea8d48",
+   "primary_source": false,
+   "cluster_id": "1205eae42fc0d2b2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e914cc542032e95f",
+   "symbols": [
+    "MGEE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Fed Hikes Interest Rates, Signals Another: 4 Low-Beta Defensive Picks",
+   "summary": "Fed hikes rates and signals another, putting MGEE, ADM, DOLE and DGX in focus as low-beta defensive picks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/economy/policy/articles/fed-hikes-interest-rates-signals-125600751.html?.tsrc=rss",
+   "published_at": "2026-09-17T12:56:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:42Z",
+   "fingerprint": "534f3f08b611c10a",
+   "primary_source": false,
+   "cluster_id": "e914cc542032e95f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "76ab05922b9d4e31",
+   "symbols": [
+    "MGEE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Are You Looking for a High-Growth Dividend Stock?",
+   "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does MGE (MGEE) have what it takes? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/looking-high-growth-dividend-stock-154503992.html?.tsrc=rss",
+   "published_at": "2026-09-16T15:45:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:42Z",
+   "fingerprint": "85a7524e6e3e9aa7",
+   "primary_source": false,
+   "cluster_id": "76ab05922b9d4e31",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "189352a85ed39c3b",
+   "symbols": [
+    "FMNB",
+    "MGEE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "3 Stocks to Grab that Declared Dividend Hikes Amid Market Volatility",
+   "summary": "FMNB, MGEE and NSSC are highlighted as dividend stocks amid market volatility, inflation and rate-hike fears.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-stocks-grab-declared-dividend-133200988.html?.tsrc=rss",
+   "published_at": "2026-09-08T13:32:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:34Z",
+   "fingerprint": "c91391a14c5d2a6e",
+   "primary_source": false,
+   "cluster_id": "189352a85ed39c3b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "78e32f86d006d7a9",
+   "symbols": [
+    "MGEE",
+    "PNW"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Wind Energy Stocks Worth Adding to Your Portfolio Right Now",
+   "summary": "Pinnacle West Capital, MGE Energy and Vestas Wind Systems offer exposure to expanding wind capacity, clean-energy investment and strong turbine demand.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/3-wind-energy-stocks-worth-155200908.html?.tsrc=rss",
+   "published_at": "2026-09-03T15:52:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:34Z",
+   "fingerprint": "f47871d038995314",
+   "primary_source": false,
+   "cluster_id": "78e32f86d006d7a9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7ffab19c919c271b",
+   "symbols": [
+    "MGEE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "MGE Energy (MGEE) Stock Looks Pricey On Fair Value Yet Steady On Earnings",
+   "summary": "MGE Energy stock has delivered a 15.2% gain over the past three years, yet current valuation checks point to a company that screens as relatively expensive on most measures, while the most recent Dividend Discount Model, or intrinsic value, estimate suggests the shares trade at a",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/mge-energy-mgee-stock-looks-050705085.html?.tsrc=rss",
+   "published_at": "2026-09-03T05:07:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:42Z",
+   "fingerprint": "a6ce71ec023b5916",
+   "primary_source": false,
+   "cluster_id": "7ffab19c919c271b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4ddd28a6cc52acbe",
+   "symbols": [
+    "MGEE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Realta Fusion & Madison Gas and Electric Announce Strategic Partnership to Explore 200-MWe Fusion Energy Power Plant in Wisconsin",
+   "summary": "Realta Fusion, the world's leading magnetic mirror fusion energy company, today announced a strategic partnership with Madison Gas and Electric (MGE) and its parent company, MGE Energy, Inc., to explore joint development of a 200-megawatt electric (MWe) fusion energy power plant ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/realta-fusion-madison-gas-electric-090000143.html?.tsrc=rss",
+   "published_at": "2026-09-02T09:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:42Z",
+   "fingerprint": "d992e2380f599d1c",
+   "primary_source": false,
+   "cluster_id": "4ddd28a6cc52acbe",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "687dc232c87dfcbf",
+   "symbols": [
+    "MGEE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Why MGE (MGEE) is a Great Dividend Stock Right Now",
+   "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does MGE (MGEE) have what it takes? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-mge-mgee-great-dividend-154503134.html?.tsrc=rss",
+   "published_at": "2026-08-31T15:45:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:42Z",
+   "fingerprint": "3679c91b068a7188",
+   "primary_source": false,
+   "cluster_id": "687dc232c87dfcbf",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1eb7a063a774671a",
+   "symbols": [
+    "MGEE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "MGE Energy Increases Dividend for 51st Consecutive Year",
+   "summary": "MADISON, Wis., August 21, 2026--MGE Energy Increases Dividend for 51st Consecutive Year",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/mge-energy-increases-dividend-51st-160000079.html?.tsrc=rss",
+   "published_at": "2026-08-21T16:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:42Z",
+   "fingerprint": "90b3a7e464d09b34",
+   "primary_source": false,
+   "cluster_id": "1eb7a063a774671a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

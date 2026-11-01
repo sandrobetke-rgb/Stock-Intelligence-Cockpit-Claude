@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T05:55:05Z",
+ "generated_at": "2026-11-01T06:00:56Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 2.0851099869364114,
    "rvol": 1.249732200242805,
    "ema10": 55.44098696344869,
-   "ema21": 54.95624706223006,
+   "ema21": 54.956247062230034,
    "sma50": 55.50220008850098,
-   "sma200": 53.74265029907227
+   "sma200": 53.74265027999878
   },
   "market_cap": 1086374528.0,
   "market_cap_currency": "USD",
@@ -55,12 +55,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 11.7,
+   "score": 51.0,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 6,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -70,7 +72,10 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 1,
+   "manipulation_risk": "unauffällig"
+  },
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
@@ -87,7 +92,33 @@
    "sellers": 1,
    "sold_out": 0
   },
-  "events": [],
+  "events": [
+   {
+    "symbol": "MSEX",
+    "type": "earnings",
+    "date": "2026-10-29",
+    "time": "Uhrzeit offen",
+    "fiscal_quarter": "Sep/2026",
+    "eps_forecast": null,
+    "estimates": null,
+    "confirmed": true,
+    "source": "Nasdaq-Earnings-Kalender",
+    "source_url": "https://www.nasdaq.com/market-activity/stocks/msex/earnings",
+    "days_until": -3
+   },
+   {
+    "symbol": "MSEX",
+    "type": "ex_dividend",
+    "date": "2026-11-16",
+    "payment_date": "2026-12-01",
+    "amount": 0.38,
+    "annual": 1.44,
+    "confirmed": true,
+    "source": "Nasdaq-Dividendenkalender",
+    "source_url": "https://www.nasdaq.com/market-activity/stocks/msex/dividend-history",
+    "days_until": 15
+   }
+  ],
   "politicians": null,
   "first_seen": "2026-10-31",
   "archived_at": null,
@@ -110,9 +141,9 @@
   "adr20": 2.0851099869364114,
   "rvol": 1.249732200242805,
   "ema10": 55.44098696344869,
-  "ema21": 54.95624706223006,
+  "ema21": 54.956247062230034,
   "sma50": 55.50220008850098,
-  "sma200": 53.74265029907227,
+  "sma200": 53.74265027999878,
   "volatility_ann": 18.666485471147517,
   "avg_dollar_volume_20d": 7725997.868461609,
   "move_zscore": 2.2125002525511195
@@ -436,48 +467,50 @@
   ]
  },
  "intelligence_detail": {
-  "score": 11.7,
+  "score": 51.0,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 66.4,
-   "social_attention": null,
+   "social_attention": 25.0,
    "insider_activity": null
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 6,
+    "independent": 6,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 10,
+    "independent": 10,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -495,7 +528,366 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "4fdc7a9eef26ddb8",
+   "symbols": [
+    "MSEX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Middlesex Water (MSEX) Stock Rallies As Q3 Results Face Debt Questions",
+   "summary": "Middlesex Water just reported Q3 2026 results and the stock answered first. Shares climbed 2.6% to US$56.79 into the close, a confident move for a regulated utility that usually trades on calm rather than excitement. The report itself leaned on one clear story. Earnings per share",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/middlesex-water-msex-stock-rallies-211048713.html?.tsrc=rss",
+   "published_at": "2026-10-31T21:10:48Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:09:12Z",
+   "fingerprint": "ccb9f1483b19c9be",
+   "primary_source": false,
+   "cluster_id": "4fdc7a9eef26ddb8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Middlesex Water (MSEX) Stock Rallyes als Q3 Ergebnisse Gesicht Schulden Fragen"
+  },
+  {
+   "id": "8583e9b70a538503",
+   "symbols": [
+    "MSEX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Middlesex Water (MSEX) Stock Could Be 39% Overvalued On Dividend Outlook",
+   "summary": "Middlesex Water has delivered a mixed ride for shareholders over recent years, with a modest gain in the past 12 months sitting against a much weaker longer term record. That split performance raises a simple question for income focused investors who look at this utility as a sou",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/middlesex-water-msex-stock-could-002014434.html?.tsrc=rss",
+   "published_at": "2026-10-31T00:20:14Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:09:12Z",
+   "fingerprint": "65e6a7fc91210182",
+   "primary_source": false,
+   "cluster_id": "8583e9b70a538503",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Middlesex Water (MSEX) Stock könnte bei Dividendenausblick 39% überbewertet sein"
+  },
+  {
+   "id": "9bc89e9e105e27fa",
+   "symbols": [
+    "MSEX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Middlesex Water: Q3 Earnings Snapshot",
+   "summary": "(MSEX) on Thursday reported earnings of $18 million in its third quarter.The Iselin, New Jersey-based company said it had net income of 95 cents per share.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/middlesex-water-q3-earnings-snapshot-201940303.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:19:40Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:09:12Z",
+   "fingerprint": "9836a31807151520",
+   "primary_source": false,
+   "cluster_id": "9bc89e9e105e27fa",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "690971ed836c1846",
+   "symbols": [
+    "MSEX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Middlesex Water Company Reports Third Quarter 2026 Earnings",
+   "summary": "Diluted earnings per share (“EPS”) of $0.95Invested $84 million in water and wastewater utility infrastructure during the nine months ended September 30, 2026Declared $0.38 common stock cash dividend, a 5.56% increase ISELIN, N.J., Oct. 29, 2026 (GLOBE NEWSWIRE) -- Middlesex Wate",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/middlesex-water-company-reports-third-200500547.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:09:12Z",
+   "fingerprint": "02faeebe1af0bb4a",
+   "primary_source": false,
+   "cluster_id": "690971ed836c1846",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "799675228ae9d1af",
+   "symbols": [
+    "MSEX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "NW Natural vs. Middlesex Water: Which Dividend Is Safer for Retirement?",
+   "summary": "A Pacific Northwest gas utility expanding into Texas squares off against a New Jersey water company staring down a quarter-billion-dollar cleanup bill, and for retirees living on dividends, picking the wrong one could cost them years of income growth.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/27/nw-natural-vs-middlesex-water-which-dividend-is-safer-for-retirement/?.tsrc=rss",
+   "published_at": "2026-10-27T14:50:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:09:12Z",
+   "fingerprint": "3fa21b09a4ce5953",
+   "primary_source": false,
+   "cluster_id": "799675228ae9d1af",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "94a6d1e902bfd462",
+   "symbols": [
+    "KTB",
+    "MCBS",
+    "MSEX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Middlesex Water, MetroCity Bankshares and Kontoor Brands Raised Their Dividends. Which Raise Is Built to Last?",
+   "summary": "A water utility, a community bank, and a denim maker all raised their dividends this week, but each payout runs on a completely different engine, and only one has the track record to prove it can survive whatever comes next.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/25/middlesex-water-metrocity-bankshares-and-kontoor-brands-raised-their-dividends-which-raise-is-built-to-last/?.tsrc=rss",
+   "published_at": "2026-10-25T22:00:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:28Z",
+   "fingerprint": "4339126b65531074",
+   "primary_source": false,
+   "cluster_id": "94a6d1e902bfd462",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "33a4935958195300",
+   "symbols": [
+    "MSEX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Middlesex Water Company Increases Common Dividend by 5.56%",
+   "summary": "54 Years of Dividend IncreasesISELIN, N.J., Oct. 23, 2026 (GLOBE NEWSWIRE) -- Middlesex Water Company (NASDAQ: MSEX) announced today that its Board of Directors has declared a quarterly cash dividend of $0.38 per share on its common stock, a 5.56% increase from the $0.36 per shar",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/middlesex-water-company-increases-common-200500015.html?.tsrc=rss",
+   "published_at": "2026-10-23T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:09:12Z",
+   "fingerprint": "9aed94c5ead0bf62",
+   "primary_source": false,
+   "cluster_id": "33a4935958195300",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5746676ae98dd959",
+   "symbols": [
+    "MSEX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Middlesex Water Company Names Rebecca Stenholm Vice President of Communications and Corporate Affairs",
+   "summary": "ISELIN, N.J., Oct. 20, 2026 (GLOBE NEWSWIRE) -- Middlesex Water Company (NASDAQ: MSEX) today announced the appointment of Rebecca Stenholm as Vice President of Communications and Corporate Affairs. In this role, Stenholm will lead the Company's internal and external communication",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/middlesex-water-company-names-rebecca-160200020.html?.tsrc=rss",
+   "published_at": "2026-10-20T16:02:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:09:12Z",
+   "fingerprint": "57c268f12749b72a",
+   "primary_source": false,
+   "cluster_id": "5746676ae98dd959",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3d13a73588cf371c",
+   "symbols": [
+    "MSEX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Middlesex Water Company to Report Third Quarter 2026 Earnings on October 29",
+   "summary": "ISELIN, N.J., Oct. 15, 2026 (GLOBE NEWSWIRE) -- Middlesex Water Company (NASDAQ: MSEX) plans to report its financial results for the third quarter ended September 30, 2026, after the market closes on Thursday, October 29, 2026. The press release and the company’s third quarter 20",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/middlesex-water-company-report-third-200500462.html?.tsrc=rss",
+   "published_at": "2026-10-15T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:09:12Z",
+   "fingerprint": "dc1062d303e80023",
+   "primary_source": false,
+   "cluster_id": "3d13a73588cf371c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5cb384b52dbfa40b",
+   "symbols": [
+    "MGEE",
+    "MSEX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Consolidated Edison Stock And 2 Utilities With Inflation Linked Revenue",
+   "summary": "Government bond yields are climbing, budgets are under strain and suddenly the “safe” corner of the market does not feel so simple anymore. For investors, that tension between higher income from bonds and pressure on equities creates a moment to reassess where regulated utilities",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/consolidated-edison-stock-2-utilities-191246995.html?.tsrc=rss",
+   "published_at": "2026-10-13T19:12:46Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:42Z",
+   "fingerprint": "f393732086be8472",
+   "primary_source": false,
+   "cluster_id": "5cb384b52dbfa40b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d35aa613064a1856",
+   "symbols": [
+    "MSEX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Tidewater Utilities Announces Second Customer Bill Credit Using PFAS Litigation Proceeds",
+   "summary": "DOVER, Del., Aug. 31, 2026 (GLOBE NEWSWIRE) -- Tidewater Utilities, Inc. (Tidewater), a water service provider and wholly owned subsidiary of Middlesex Water Company, today announced that it will refund approximately $0.5 million to customers through a bill credit. The refund is ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/tidewater-utilities-announces-second-customer-200500058.html?.tsrc=rss",
+   "published_at": "2026-08-31T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:09:12Z",
+   "fingerprint": "96786ebbff916d67",
+   "primary_source": false,
+   "cluster_id": "d35aa613064a1856",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "af744ed079563510",
+   "symbols": [
+    "AWR",
+    "MSEX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Can AWR Continue Raising Dividends for Long-Term Shareholders?",
+   "summary": "AWR's 72-year dividend growth streak, stronger cash flow and regulated growth opportunities support its long-term payout strategy.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/awr-continue-raising-dividends-long-181800998.html?.tsrc=rss",
+   "published_at": "2026-08-14T18:18:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:59Z",
+   "fingerprint": "4942144c4c1bfc0d",
+   "primary_source": false,
+   "cluster_id": "af744ed079563510",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "17c2b45bffd7917c",
+   "symbols": [
+    "MSEX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Should Middlesex Water’s Stronger Earnings and Steady Dividend Payout Require Action From Middlesex Water (MSEX) Investors?",
+   "summary": "Middlesex Water Company has already reported its second-quarter and first-half 2026 results, with sales rising to US$56.36 million and net income to US$14.77 million for the quarter, alongside a recently declared quarterly dividend of US$0.36 per share payable on September 1, 202",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/middlesex-water-stronger-earnings-steady-031922721.html?.tsrc=rss",
+   "published_at": "2026-08-06T03:19:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:09:12Z",
+   "fingerprint": "017cf3b22a772da0",
+   "primary_source": false,
+   "cluster_id": "17c2b45bffd7917c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "002678b54b80e3dd",
+   "symbols": [
+    "MSEX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Middlesex Water Company Reports Second Quarter 2026 Earnings",
+   "summary": "Diluted earnings per share (“EPS”) of $0.79Invested $53 million in water and wastewater utility infrastructure during the first half of 2026Declared $0.36 common stock cash dividend ISELIN, N.J., July 30, 2026 (GLOBE NEWSWIRE) -- Middlesex Water Company (“Middlesex” or the “Compa",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/middlesex-water-company-reports-second-201500785.html?.tsrc=rss",
+   "published_at": "2026-07-30T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:09:12Z",
+   "fingerprint": "dc31b4e4baa614f0",
+   "primary_source": false,
+   "cluster_id": "002678b54b80e3dd",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f01511f967ccaa27",
+   "symbols": [
+    "MSEX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Middlesex Water Company Declares Quarterly Cash Dividend",
+   "summary": "ISELIN, N.J., July 23, 2026 (GLOBE NEWSWIRE) -- Middlesex Water Company (NASDAQ: MSEX) announced today that its Board of Directors has declared a quarterly cash dividend of $0.36 per share on its common stock, payable September 1, 2026 to shareholders of record as of August 17, 2",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/middlesex-water-company-declares-quarterly-200700317.html?.tsrc=rss",
+   "published_at": "2026-07-23T20:07:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:09:12Z",
+   "fingerprint": "3556ba80c3f3b32c",
+   "primary_source": false,
+   "cluster_id": "f01511f967ccaa27",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3255db80dcb7ea0d",
+   "symbols": [
+    "MSEX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Middlesex Water Company to Report Second Quarter 2026 Earnings on July 30",
+   "summary": "ISELIN, N.J., July 16, 2026 (GLOBE NEWSWIRE) -- Middlesex Water Company (NASDAQ: MSEX) plans to report its financial results for the second quarter ended June 30, 2026, after the market closes on Thursday, July 30, 2026. The press release and the company’s second quarter 2026 For",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/middlesex-water-company-report-second-200500460.html?.tsrc=rss",
+   "published_at": "2026-07-16T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:09:12Z",
+   "fingerprint": "05b71c3d1014fac7",
+   "primary_source": false,
+   "cluster_id": "3255db80dcb7ea0d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],
@@ -511,6 +903,39 @@
    "report_date": "2026-06-30"
   }
  ],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 1,
+  "mentions_7d": 1,
+  "mentions_30d": 1,
+  "change_vs_baseline_pct": null,
+  "engagement_7d": 1.0,
+  "sentiment_7d": 1.0,
+  "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
+  "bullish_7d": 1,
+  "bearish_7d": 0,
+  "by_platform_7d": {
+   "stocktwits": 1
+  },
+  "communities_7d": {
+   "StockTwits": 1
+  },
+  "platforms": [
+   "stocktwits"
+  ],
+  "manipulation_flags": [],
+  "manipulation_risk": "unauffällig",
+  "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "DividendPower",
+    "posted_at": "2026-10-31T14:15:58Z",
+    "url": "https://stocktwits.com/DividendPower/message/667845803",
+    "text": "Recent Dividend Increases - Update 10/30/26 $ATR $GRC $MSEX $AUB $V @DividndDisruptr  \n \nhttps://www.dividendpower.org/dividend-increases/",
+    "engagement": 1.0,
+    "sentiment_label": "Bullish"
+   }
+  ]
+ },
  "history": []
 }

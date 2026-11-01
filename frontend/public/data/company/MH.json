@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T05:55:05Z",
+ "generated_at": "2026-11-01T06:00:56Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -55,11 +55,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 6.1,
+   "score": 34.9,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 3,
    "independent_24h": 0
   },
   "political": {
@@ -87,7 +89,21 @@
    "sellers": 1,
    "sold_out": 0
   },
-  "events": [],
+  "events": [
+   {
+    "symbol": "MH",
+    "type": "earnings",
+    "date": "2026-11-05",
+    "time": "vor Börseneröffnung",
+    "fiscal_quarter": "Sep/2026",
+    "eps_forecast": 0.7,
+    "estimates": 2,
+    "confirmed": true,
+    "source": "Nasdaq-Earnings-Kalender",
+    "source_url": "https://www.nasdaq.com/market-activity/stocks/mh/earnings",
+    "days_until": 4
+   }
+  ],
   "politicians": null,
   "first_seen": "2026-10-31",
   "archived_at": null,
@@ -436,11 +452,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.1,
+  "score": 34.9,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 86.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 34.6,
@@ -458,26 +474,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 10,
+    "independent": 10,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -495,7 +513,454 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "ed4e735786c2da06",
+   "symbols": [
+    "CVSA",
+    "MH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Covista (CVSA) Beats Q1 Earnings and Revenue Estimates",
+   "summary": "Covista (CVSA) delivered earnings and revenue surprises of +15.26% and +3.93%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/covista-cvsa-beats-q1-earnings-220505063.html?.tsrc=rss",
+   "published_at": "2026-10-29T22:05:05Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:44Z",
+   "fingerprint": "d48f6d9e057ce56e",
+   "primary_source": false,
+   "cluster_id": "ed4e735786c2da06",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Covista (CVSA) schlägt Q1-Ergebnisse und Einnahmenschätzungen"
+  },
+  {
+   "id": "f1025945585ed4e9",
+   "symbols": [
+    "MH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Microsoft (MSFT) Expands Copilot In Education, Is The AI Upside Already Priced In?",
+   "summary": "McGraw Hill’s new plugin for Microsoft 365 Copilot gives Microsoft (MSFT) another real-world anchor for its AI push, by tying Copilot usage directly to higher education workflows and licensed digital course materials. The recent McGraw Hill plugin news comes after a strong run in",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/microsoft-msft-expands-copilot-education-181104229.html?.tsrc=rss",
+   "published_at": "2026-10-29T18:11:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:46Z",
+   "fingerprint": "461d0bc154c26146",
+   "primary_source": false,
+   "cluster_id": "f1025945585ed4e9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2827264d7cbd6e3d",
+   "symbols": [
+    "MH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "McGraw Hill Announces Agentic AI Education Plugin for Microsoft Copilot",
+   "summary": "COLUMBUS, Ohio, October 29, 2026--McGraw Hill, Inc. (NYSE: MH), a leading global provider of education solutions for preK-12, higher education and professional learning, today announced that it will enable McGraw Hill’s higher education and school district customers who have a Mi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/mcgraw-hill-announces-agentic-ai-130000932.html?.tsrc=rss",
+   "published_at": "2026-10-29T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:46Z",
+   "fingerprint": "5a27dad91cafae60",
+   "primary_source": false,
+   "cluster_id": "2827264d7cbd6e3d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a45f360198047986",
+   "symbols": [
+    "MH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is McGraw Hill (MH) Fairly Valued As AI Tools And Refinancing Shift The Story?",
+   "summary": "McGraw Hill (MH) just rolled out new AI-powered tools inside its Connect higher education platform. The update pairs personalized study resources with a Breakout Learning partnership that adds discussion driven assignments and real-time AI feedback for instructors. Recent trading",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/mcgraw-hill-mh-fairly-valued-121847895.html?.tsrc=rss",
+   "published_at": "2026-10-18T12:18:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:46Z",
+   "fingerprint": "6641b4e70ddf6ab4",
+   "primary_source": false,
+   "cluster_id": "a45f360198047986",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c94257f3eb33857f",
+   "symbols": [
+    "MH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "McGraw Hill (MH) Unveils Learning Studio As AI Tools Reach More College Classrooms",
+   "summary": "McGraw Hill (NYSE:MH) has expanded its AI-powered tools for higher education within its Connect platform, including a new Learning Studio feature. The publisher introduced AI-generated study materials that aim to tailor practice questions and summaries to individual college stude",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/mcgraw-hill-mh-unveils-learning-042046043.html?.tsrc=rss",
+   "published_at": "2026-10-18T04:20:46Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:46Z",
+   "fingerprint": "9a06b3a0495f406c",
+   "primary_source": false,
+   "cluster_id": "c94257f3eb33857f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4a324dae03f139b0",
+   "symbols": [
+    "KLC",
+    "MH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "McGraw Hill, Inc. (MH) Surges 7.1%: Is This an Indication of Further Gains?",
+   "summary": "McGraw Hill, Inc. (MH) was a big mover last session on higher-than-average trading volume. The latest trend in earnings estimate revisions might not help the stock continue moving higher in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/mcgraw-hill-inc-mh-surges-133000677.html?.tsrc=rss",
+   "published_at": "2026-10-16T13:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:12Z",
+   "fingerprint": "ce24f9a7eb28b283",
+   "primary_source": false,
+   "cluster_id": "4a324dae03f139b0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e72958fa5951f17b",
+   "symbols": [
+    "MH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "McGraw Hill Expands AI-Powered Study and Student Engagement Tools for Higher Education",
+   "summary": "COLUMBUS, Ohio, October 16, 2026--McGraw Hill, Inc. (NYSE: MH), a leading global provider of education solutions for preK-12, higher education and professional learning, is expanding its AI-powered offerings for higher education with new capabilities designed to deliver more prec",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/mcgraw-hill-expands-ai-powered-130000889.html?.tsrc=rss",
+   "published_at": "2026-10-16T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:46Z",
+   "fingerprint": "91e3ada29078af56",
+   "primary_source": false,
+   "cluster_id": "e72958fa5951f17b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "726c679e31be7d30",
+   "symbols": [
+    "MH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "McGraw Hill, Inc. Announces Successful Completion of Refinancing Transactions",
+   "summary": "COLUMBUS, Ohio, October 09, 2026--McGraw Hill, Inc. (the \"Company\") announced today that it has completed a series of refinancing transactions that extend the maturities of certain of its outstanding indebtedness and enhance the Company’s financial flexibility.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/mcgraw-hill-inc-announces-successful-201500351.html?.tsrc=rss",
+   "published_at": "2026-10-09T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:46Z",
+   "fingerprint": "89a4a686fa6966e8",
+   "primary_source": false,
+   "cluster_id": "726c679e31be7d30",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "842d59ffc5e74eb7",
+   "symbols": [
+    "APEI",
+    "LAUR",
+    "LINC",
+    "MH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "5 Schools Stocks Navigating Costs and Changing Education Demand",
+   "summary": "Although regulatory and cost pressures are hurting the Zacks Schools industry, rising demand for career-focused education, healthcare and digital learning supports stocks like LAUR, MH, STRA, APEI and LINC.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/5-schools-stocks-navigating-costs-162800533.html?.tsrc=rss",
+   "published_at": "2026-10-08T16:28:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:18Z",
+   "fingerprint": "02429a4ee5a90f84",
+   "primary_source": false,
+   "cluster_id": "842d59ffc5e74eb7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3f2017f170c1bd83",
+   "symbols": [
+    "MH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "McGraw Hill to Release Fiscal Second Quarter 2027 Financial Results and Host Webcast on November 5, 2026",
+   "summary": "COLUMBUS, Ohio, October 05, 2026--McGraw Hill, Inc. (NYSE: MH; \"McGraw Hill\" or the \"Company\"), a leading global provider of education solutions for preK-12, higher education and professional learning, will report fiscal second quarter financial results for the period ended Septe",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/mcgraw-hill-release-fiscal-second-120000833.html?.tsrc=rss",
+   "published_at": "2026-10-05T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:46Z",
+   "fingerprint": "329ae419074995e1",
+   "primary_source": false,
+   "cluster_id": "3f2017f170c1bd83",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7ab4ef830a332c81",
+   "symbols": [
+    "MH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "McGraw Hill, Inc. Announces Further Deleveraging with Additional $50 Million of Debt Reduction",
+   "summary": "COLUMBUS, Ohio, October 01, 2026--McGraw Hill, Inc. (NYSE: MH) (\"McGraw Hill\" or the \"Company\") today announced that it has further strengthened its balance sheet with a $50 million prepayment of principal under its outstanding term loan facility (the \"Term Loan\").",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/mcgraw-hill-inc-announces-further-120000694.html?.tsrc=rss",
+   "published_at": "2026-10-01T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:46Z",
+   "fingerprint": "10f4ac0ee21c645a",
+   "primary_source": false,
+   "cluster_id": "7ab4ef830a332c81",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b7eccf55d7368689",
+   "symbols": [
+    "MH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "McGraw Hill, Inc. Announces Proposed Offering of Senior Secured Notes and Refinancing of Credit Facilities",
+   "summary": "COLUMBUS, Ohio, September 25, 2026--McGraw Hill, Inc. (the \"Company\") announced today that McGraw-Hill Education, Inc., the Company’s wholly-owned subsidiary (the \"Issuer\") intends, subject to market conditions, to offer $500 million in aggregate principal amount of senior secure",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/mcgraw-hill-inc-announces-proposed-122400632.html?.tsrc=rss",
+   "published_at": "2026-09-25T12:24:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:46Z",
+   "fingerprint": "e9b363e88755de9c",
+   "primary_source": false,
+   "cluster_id": "b7eccf55d7368689",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bf47999376a73772",
+   "symbols": [
+    "MH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "McGraw Hill's Emerge! K-5 Science of Reading Program Included on Pennsylvania's Curriculum Materials List for Evidence-Based Reading Instruction",
+   "summary": "COLUMBUS, Ohio, September 23, 2026--McGraw Hill, Inc. (NYSE: MH), a leading global provider of education solutions for preK-12, higher education and professional learning, today announced that its Emerge! K-5 literacy program has been included on the Pennsylvania Department of Ed",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/mcgraw-hills-emerge-k-5-130000218.html?.tsrc=rss",
+   "published_at": "2026-09-23T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:46Z",
+   "fingerprint": "3618349161fc3eba",
+   "primary_source": false,
+   "cluster_id": "bf47999376a73772",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f7b84ceca26a6e60",
+   "symbols": [
+    "MH"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "S&P Global Ratings Upgrades McGraw Hill",
+   "summary": "COLUMBUS, Ohio, September 21, 2026--McGraw Hill, Inc. (NYSE: MH; \"McGraw Hill\" and the \"Company\"), a leading global provider of education solutions for preK-12, higher education and professional learning, today announced that it has received upgraded ratings from S&amp;P Global R",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/p-global-ratings-upgrades-mcgraw-130000536.html?.tsrc=rss",
+   "published_at": "2026-09-21T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:46Z",
+   "fingerprint": "828addcbc2df11f9",
+   "primary_source": false,
+   "cluster_id": "f7b84ceca26a6e60",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a70327f61a729149",
+   "symbols": [
+    "MH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "McGraw Hill Acquires TeachFX, Expanding Commitment to Great Teaching with AI Coaching Tool Designed by Educators",
+   "summary": "COLUMBUS, Ohio, September 17, 2026--McGraw Hill, Inc. (NYSE: MH), a leading global provider of education solutions for preK-12, higher education and professional learning, today announced the acquisition of TeachFX, an AI-native instructional coaching platform that expands McGraw",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/mcgraw-hill-acquires-teachfx-expanding-123400885.html?.tsrc=rss",
+   "published_at": "2026-09-17T12:34:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:46Z",
+   "fingerprint": "9eae2a4f17b9f50c",
+   "primary_source": false,
+   "cluster_id": "a70327f61a729149",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7f019ed5f97ec48f",
+   "symbols": [
+    "MH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "McGraw Hill, Inc. to Host Investor Day on November 18, 2026",
+   "summary": "COLUMBUS, Ohio, September 14, 2026--McGraw Hill announced that it will host an Investor Day on Wednesday, November 18, 2026, in New York City.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/mcgraw-hill-inc-host-investor-120000295.html?.tsrc=rss",
+   "published_at": "2026-09-14T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:46Z",
+   "fingerprint": "86e14c4f5942ea33",
+   "primary_source": false,
+   "cluster_id": "7f019ed5f97ec48f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dfdbc83ff845a560",
+   "symbols": [
+    "MH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "McGraw Hill K-12 Math Programs Approved by Florida Department of Education Through State Adoption Process",
+   "summary": "COLUMBUS, Ohio, September 03, 2026--McGraw Hill K-12 math programs have been approved by the Florida Department of Education through the state's instructional materials adoption process.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/mcgraw-hill-k-12-math-125000873.html?.tsrc=rss",
+   "published_at": "2026-09-03T12:50:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:46Z",
+   "fingerprint": "372901ddce31089d",
+   "primary_source": false,
+   "cluster_id": "dfdbc83ff845a560",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "82ce2452da8fc396",
+   "symbols": [
+    "MH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "McGraw Hill (MH) Stock Looks Reasonable Despite Its Teachally AI Deal",
+   "summary": "McGraw Hill stock has fallen sharply year to date, yet a high value score and an overall verdict of about right on market multiples leave investors weighing whether recent weakness is offering value or simply reflecting fair pricing. The share price is down 21.4% year to date, wh",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/mcgraw-hill-mh-stock-looks-090648855.html?.tsrc=rss",
+   "published_at": "2026-09-03T09:06:48Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:46Z",
+   "fingerprint": "1887c7a0fe1f4fbb",
+   "primary_source": false,
+   "cluster_id": "82ce2452da8fc396",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "33a8e956433983f9",
+   "symbols": [
+    "MH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "McGraw Hill Acquires Teachally to Accelerate K-12 Curriculum Development and Expand AI Tools for Educators",
+   "summary": "COLUMBUS, Ohio, September 02, 2026--McGraw Hill announced the acquisition of Teachally, expanding the company's educator-first AI solutions with tools that simplify content creation.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/mcgraw-hill-acquires-teachally-accelerate-123000368.html?.tsrc=rss",
+   "published_at": "2026-09-02T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:46Z",
+   "fingerprint": "6b4c6c1683f09087",
+   "primary_source": false,
+   "cluster_id": "33a8e956433983f9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "87902ea7f52901a8",
+   "symbols": [
+    "MH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "$6.26 Billion K-12 Dual Language Immersion Market Outlook 2026-2030 Featuring Profiles of Pearson, McGraw Hill, and Houghton Mifflin Harcourt",
+   "summary": "Opportunities center on virtual, adaptive and gamified bilingual learning, hybrid classrooms and multilingual content, driven by global-ready curricula and expanding magnet schools K-12 Dual Language Immersion Market K-12 Dual Language Immersion Market Dublin, Sept. 02, 2026 (GLO",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/6-26-billion-k-12-120100709.html?.tsrc=rss",
+   "published_at": "2026-09-02T12:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:46Z",
+   "fingerprint": "7bc095c8efd110ab",
+   "primary_source": false,
+   "cluster_id": "87902ea7f52901a8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T05:55:05Z",
+ "generated_at": "2026-11-01T06:00:56Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 2.3072564658076575,
    "rvol": 1.1615566075916253,
    "ema10": 267.3071042553808,
-   "ema21": 264.4660814700932,
+   "ema21": 264.46608147010437,
    "sma50": 265.54567565917966,
-   "sma200": 245.33368034362792
+   "sma200": 245.33368057250976
   },
   "market_cap": 657677221888.0,
   "market_cap_currency": "USD",
@@ -53,7 +53,7 @@
    ]
   },
   "market_intelligence": {
-   "score": 61.5,
+   "score": 65.5,
    "drivers": [
     "news_flow",
     "source_diversity",
@@ -70,7 +70,10 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 29,
+   "manipulation_risk": "unauffällig"
+  },
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
@@ -88,7 +91,10 @@
    "sold_out": 0
   },
   "events": [],
-  "politicians": null,
+  "politicians": {
+   "buys": 1,
+   "sells": 2
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
   "country": "United States"
@@ -110,9 +116,9 @@
   "adr20": 2.3072564658076575,
   "rvol": 1.1615566075916253,
   "ema10": 267.3071042553808,
-  "ema21": 264.4660814700932,
+  "ema21": 264.46608147010437,
   "sma50": 265.54567565917966,
-  "sma200": 245.33368034362792,
+  "sma200": 245.33368057250976,
   "volatility_ann": 22.96452124783902,
   "avg_dollar_volume_20d": 1979475668.5556793,
   "move_zscore": -0.502370838129248
@@ -434,7 +440,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 61.5,
+  "score": 65.5,
   "components": {
    "news_flow": 100.0,
    "freshness": 100.0,
@@ -442,7 +448,7 @@
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 15.1,
-   "social_attention": null,
+   "social_attention": 100.0,
    "insider_activity": null
   },
   "windows": {
@@ -499,7 +505,8 @@
   {
    "id": "6b06982adcb3aef8",
    "symbols": [
-    "JNJ"
+    "JNJ",
+    "KO"
    ],
    "category": "market",
    "signal_type": "news",
@@ -545,7 +552,9 @@
   {
    "id": "3d5089b550a0bccd",
    "symbols": [
-    "JNJ"
+    "JNJ",
+    "KO",
+    "MDT"
    ],
    "category": "market",
    "signal_type": "news",
@@ -991,6 +1000,7 @@
    "id": "fc1cd566894b28bb",
    "symbols": [
     "JNJ",
+    "LQDA",
     "PFE"
    ],
    "category": "market",
@@ -1008,13 +1018,79 @@
    "cluster_id": "fc1cd566894b28bb",
    "independence": "original",
    "verification": "Unverified",
-   "feed": "yahoo_rss",
-   "title_de": "Was steckt hinter Liquidias Führung in seiner Branche?"
+   "feed": "yahoo_rss"
   }
  ],
  "insiders": [],
  "institutions": [],
- "political_trades": [],
+ "political_trades": [
+  {
+   "id": "38c07862e9e00704",
+   "politician": "Lloyd Doggett",
+   "chamber": "Repräsentantenhaus",
+   "party": null,
+   "state": "TX37",
+   "symbol": "JNJ",
+   "in_universe": true,
+   "asset": "D : Automatic reinvestment of dividends earned. Johnson & Johnson Common Stock",
+   "asset_type": "Aktie",
+   "owner": "Selbst",
+   "transaction_type": "purchase",
+   "transaction_date": "2026-09-08",
+   "disclosure_date": "2026-10-05",
+   "reporting_delay_days": 27,
+   "amount_range": [
+    1001.0,
+    15000.0
+   ],
+   "source_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035580.pdf",
+   "note": "Offizielle STOCK-Act-Meldung; Wertbandbreite, bis 45 Tage Meldeverzug"
+  },
+  {
+   "id": "a9926574da19569e",
+   "politician": "Thomas H. Kean Jr",
+   "chamber": "Repräsentantenhaus",
+   "party": null,
+   "state": "NJ07",
+   "symbol": "JNJ",
+   "in_universe": true,
+   "asset": "Family Partnership Johnson & Johnson Common Stock",
+   "asset_type": "Aktie",
+   "owner": "Selbst",
+   "transaction_type": "sale_partial",
+   "transaction_date": "2026-08-27",
+   "disclosure_date": "2026-09-12",
+   "reporting_delay_days": 16,
+   "amount_range": [
+    1001.0,
+    15000.0
+   ],
+   "source_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035431.pdf",
+   "note": "Offizielle STOCK-Act-Meldung; Wertbandbreite, bis 45 Tage Meldeverzug"
+  },
+  {
+   "id": "c97809e9e14a5614",
+   "politician": "Richard Dean Dr McCormick",
+   "chamber": "Repräsentantenhaus",
+   "party": null,
+   "state": "GA06",
+   "symbol": "JNJ",
+   "in_universe": true,
+   "asset": "Partners Roth IRA Johnson & Johnson Common Stock",
+   "asset_type": "Aktie",
+   "owner": "Selbst",
+   "transaction_type": "sale",
+   "transaction_date": "2026-07-30",
+   "disclosure_date": "2026-08-14",
+   "reporting_delay_days": 15,
+   "amount_range": [
+    1001.0,
+    15000.0
+   ],
+   "source_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035204.pdf",
+   "note": "Offizielle STOCK-Act-Meldung; Wertbandbreite, bis 45 Tage Meldeverzug"
+  }
+ ],
  "big_stakes": [],
  "superinvestors": [
   {
@@ -1045,6 +1121,79 @@
    "report_date": "2026-09-30"
   }
  ],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 3,
+  "mentions_7d": 29,
+  "mentions_30d": 29,
+  "change_vs_baseline_pct": -19,
+  "engagement_7d": 99.0,
+  "sentiment_7d": 0.05,
+  "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
+  "bullish_7d": 7,
+  "bearish_7d": 6,
+  "by_platform_7d": {
+   "stocktwits": 29
+  },
+  "communities_7d": {
+   "StockTwits": 29
+  },
+  "platforms": [
+   "stocktwits"
+  ],
+  "manipulation_flags": [],
+  "manipulation_risk": "unauffällig",
+  "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "dewmoore",
+    "posted_at": "2026-10-29T01:12:26Z",
+    "url": "https://stocktwits.com/dewmoore/message/667605698",
+    "text": "$SLS  For those FLEXING about how &quot;good&quot; standard options like Venetoclax are, let&#39;s look at the facts: \n \nStudy approved BAT options vs historical baselines (phase 2 BAT didn&#39;t make it past 5 to 8 months) \n• Azacitidine/Decitabine: 1–1.5 yrs max \n• LDAC: 6–12 mos   \n• Venetoclax combos: 1.5–2 yrs max \n \nHere’s the kicker: The REGAL protocol strictly BANNED anyone with a pending,",
+    "engagement": 21.0,
+    "sentiment_label": "Bullish"
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "SellasgpsCurativeBAT11",
+    "posted_at": "2026-10-29T19:38:36Z",
+    "url": "https://stocktwits.com/SellasgpsCurativeBAT11/message/667682845",
+    "text": "$SLS $JNJ $ABBV $PFE $BMY Sellas is in play right now. Institutional whales are gobbling up every loose share with their HFT trading desks before Data+ Deal.\nPrepare to be surprised here. 👇 ✌️🙏❤️‍🩹",
+    "engagement": 16.0,
+    "sentiment_label": "Bullish"
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "KingTrades09",
+    "posted_at": "2026-10-29T14:00:54Z",
+    "url": "https://stocktwits.com/KingTrades09/message/667639202",
+    "text": "$IBM $JNJ $WMT \nIf you followed me here.. you are banking.. \n\nSafe space",
+    "engagement": 6.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "Gfywoody",
+    "posted_at": "2026-10-29T10:24:57Z",
+    "url": "https://stocktwits.com/Gfywoody/message/667618621",
+    "text": "$JNJ Time to drop the Sellas buyout.",
+    "engagement": 5.0,
+    "sentiment_label": "Bullish"
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "Outcomes",
+    "posted_at": "2026-10-31T16:47:44Z",
+    "url": "https://stocktwits.com/Outcomes/message/667849681",
+    "text": "$MRNA  $PFE  $JNJ  $IBRX ….eureka!\n\nmRNA BAD. \n\nhttps://x.com/mercuryconsul/status/2116294593428017543?s=46",
+    "engagement": 4.0,
+    "sentiment_label": null
+   }
+  ]
+ },
  "history": []
 }

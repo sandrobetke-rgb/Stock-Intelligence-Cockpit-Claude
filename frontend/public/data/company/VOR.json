@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-11-01T05:55:05Z",
+ "generated_at": "2026-11-01T06:00:56Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "VOR",
-  "name": "Vor Biopharma",
+  "name": "Vor Biopharma Inc.",
   "region": "US",
   "currency": "USD",
-  "sector": "Health Care",
-  "industry": null,
+  "sector": "Healthcare",
+  "industry": "Biotechnology",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 19.68000030517578,
    "price_date": "2026-10-30",
@@ -30,27 +28,28 @@
    "sma50": 20.74810001373291,
    "sma200": 17.33582501411438
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 1209027968.0,
+  "market_cap_currency": "USD",
   "quality": {
    "score": null,
-   "coverage_pct": 0,
+   "coverage_pct": 28,
    "model": "standard",
    "dimensions": {
     "revenue_growth": null,
     "profitability": null,
-    "financial_stability": null,
-    "cashflow": null,
-    "market_position": null,
+    "financial_stability": 100.0,
+    "cashflow": 0.0,
+    "market_position": 0.0,
     "growth_potential": null,
-    "management": null
+    "management": 0.0
    }
   },
   "risk": {
-   "score": null,
-   "level": "unbekannt",
-   "coverage_pct": 25,
+   "score": 52.0,
+   "level": "erhoeht",
+   "coverage_pct": 49,
    "top_factors": [
+    "Verwässerung (Aktienanzahl yoy)",
     "Volatilität (63T, annualisiert)",
     "Handelsliquidität (Umsatz 20T)"
    ]
@@ -79,7 +78,7 @@
    "buy_value": 0,
    "sell_value": 0,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 1
   },
   "superinvestors": {
    "holders": 1,
@@ -88,11 +87,38 @@
    "sellers": 1,
    "sold_out": 0
   },
-  "events": [],
+  "events": [
+   {
+    "symbol": "VOR",
+    "type": "earnings",
+    "date": "2026-10-30",
+    "time": "Uhrzeit offen",
+    "fiscal_quarter": "Sep/2026",
+    "eps_forecast": -0.81,
+    "estimates": 4,
+    "confirmed": true,
+    "source": "Nasdaq-Earnings-Kalender",
+    "source_url": "https://www.nasdaq.com/market-activity/stocks/vor/earnings",
+    "days_until": -2
+   },
+   {
+    "symbol": "VOR",
+    "type": "earnings",
+    "date": "2026-11-12",
+    "time": "Uhrzeit offen",
+    "fiscal_quarter": "Sep/2026",
+    "eps_forecast": -0.81,
+    "estimates": 4,
+    "confirmed": true,
+    "source": "Nasdaq-Earnings-Kalender",
+    "source_url": "https://www.nasdaq.com/market-activity/stocks/vor/earnings",
+    "days_until": 11
+   }
+  ],
   "politicians": null,
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -121,7 +147,7 @@
  "quality_detail": {
   "score": null,
   "status": "insufficient_data",
-  "coverage_pct": 0,
+  "coverage_pct": 28,
   "model": "standard",
   "dimensions": [
    {
@@ -182,9 +208,9 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 100.0,
+    "basis": "data",
+    "coverage": 30,
     "metrics": [
      {
       "key": "debt_to_equity",
@@ -198,9 +224,9 @@
       "key": "current_ratio",
       "label": "Liquidität (Current Ratio)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 18.2,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "interest_coverage",
@@ -217,9 +243,9 @@
     "key": "cashflow",
     "label": "Cashflow",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "data",
+    "coverage": 40,
     "metrics": [
      {
       "key": "fcf_margin",
@@ -233,9 +259,9 @@
       "key": "ocf_positive",
       "label": "Operativer Cashflow positiv",
       "unit": "bool",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.0,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -244,17 +270,17 @@
     "key": "market_position",
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "gross_margin",
       "label": "Bruttomarge (Proxy Preissetzungsmacht)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.0,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -290,9 +316,9 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "proxy",
+    "coverage": 40,
     "metrics": [
      {
       "key": "roe",
@@ -306,25 +332,25 @@
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 520.635,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/VOR/financials",
+  "as_of": "2026-11-01T06:03:04Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": null,
-  "level": "unbekannt",
-  "coverage_pct": 25,
+  "score": 52.0,
+  "level": "erhoeht",
+  "coverage_pct": 49,
   "factors": [
    {
     "key": "leverage",
@@ -338,11 +364,11 @@
    {
     "key": "liquidity",
     "label": "Liquidität (Current Ratio)",
-    "value": null,
+    "value": 18.2,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "interest",
@@ -374,11 +400,11 @@
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": 520.63,
     "unit": "%",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -410,11 +436,11 @@
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 7.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 66.7,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -427,6 +453,7 @@
    }
   ],
   "top_factors": [
+   "Verwässerung (Aktienanzahl yoy)",
    "Volatilität (63T, annualisiert)",
    "Handelsliquidität (Umsatz 20T)"
   ],
@@ -496,7 +523,29 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "a1a3192b5947e1ad",
+   "symbol": "VOR",
+   "insider": "Ra Capital Management, L.P.",
+   "owner_cik": 1346824,
+   "role": "10%-Eigentümer",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-02",
+   "filed_at": "2026-10-05",
+   "reporting_delay_days": 3,
+   "shares": 500.0,
+   "price": 12.8,
+   "value": 6400.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1817229/000123191926001426/0001231919-26-001426-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "big_stakes": [],

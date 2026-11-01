@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T05:55:05Z",
+ "generated_at": "2026-11-01T06:00:56Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -54,24 +54,27 @@
    ]
   },
   "market_intelligence": {
-   "score": 41.4,
+   "score": 42.3,
    "drivers": [
     "news_flow",
-    "insider_activity",
-    "price_volume_anomaly"
+    "social_attention",
+    "insider_activity"
    ],
    "independent_7d": 5,
    "independent_24h": 0
   },
   "political": {
-   "relevance": 0,
+   "relevance": 5,
    "trump_bonus": 0,
    "trump_bonus_active": false,
    "direction": "keine",
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 3,
+   "manipulation_risk": "unauffällig"
+  },
   "insider": {
    "window_days": 90,
    "open_market_buys": 8,
@@ -350,7 +353,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 41.4,
+  "score": 42.3,
   "components": {
    "news_flow": 100.0,
    "freshness": 0,
@@ -358,7 +361,7 @@
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 28.7,
-   "social_attention": null,
+   "social_attention": 50.0,
    "insider_activity": 100.0
   },
   "windows": {
@@ -392,24 +395,56 @@
   },
   "drivers": [
    "news_flow",
-   "insider_activity",
-   "price_volume_anomaly"
+   "social_attention",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
  "political_detail": {
-  "relevance": 0,
+  "relevance": 5,
   "trump_bonus": 0,
   "trump_bonus_active": false,
   "direction": "keine",
   "positive_signals_30d": 0,
   "negative_signals_30d": 0,
-  "mentions_total": 0,
+  "mentions_total": 1,
   "events_30d": 0,
   "covered": true,
   "next_expiry": null
  },
- "trump_mentions": [],
+ "trump_mentions": [
+  {
+   "statement_id": "f7fcdfebc877b8c9",
+   "quote": "First Lady Melania Trump Secures Ceasefire Between Russia and Ukraine, Localized to Oleshky.  First Lady Melania Trump successfully secured a ceasefire between Russia and Ukraine, localized to the city of Oleshky. Both nations agreed to temporarily stop all military action in Oleshky to allow for humanitarian aid to enter and to prepare a civilian evacuation through a designated safe passageway. The localized ceasefire will begin on October 29, [&#8230;] \n The post  First Lady Melania Trump Secures Ceasefire Between Russia and Ukraine, Localized to Oleshky  appeared first on  The White House .",
+   "source_name": "The White House",
+   "source_url": "https://www.whitehouse.gov/briefings-statements/2026/10/first-lady-melania-trump-secures-ceasefire-between-russia-and-ukraine-localized-to-oleshky/",
+   "statement_at": "2026-10-23T13:16:54Z",
+   "date_only": false,
+   "timezone": "UTC",
+   "captured_at": "2026-11-01T06:00:56Z",
+   "verification": "Verified",
+   "direction": "neutral",
+   "direction_basis": "algorithmic",
+   "direction_cues": [],
+   "context": "whitehouse-news",
+   "sectors": [],
+   "id": "97df93019ff552a3",
+   "symbol": "CHCO",
+   "mention_type": "direct",
+   "mapping_verified": false,
+   "matched": "city",
+   "mapping_rationale": "Firmenname",
+   "ambiguous_name": true,
+   "bonus": {
+    "expires_at": "2026-10-28T13:16:54Z",
+    "age_days": 8.7,
+    "active": false,
+    "value": 0,
+    "reason": "Älter als 5 Kalendertage – verfallen"
+   },
+   "quote_de": "First Lady Melania Trump sichert sich Waffenstillstand zwischen Russland und der Ukraine, lokalisiert an Oleshky. First Lady Melania Trump hat erfolgreich einen Waffenstillstand zwischen Russland und der Ukraine, lokalisiert an der Stadt Oleshky. Beide Nationen stimmten zu, alle Militäraktionen in Oleshky vorübergehend einzustellen, um humanitäre Hilfe zu ermöglichen und eine zivile Evakuierung durch einen ausgewiesenen sicheren Durchgang vorzubereiten. Der lokalisierte Waffenstillstand wird am 29. Oktober beginnen. [&# 8230;] Der Posten First Lady Melania Trump sichert Waffenstillstand zwischen Russland und der Ukraine, lokalisiert an Oleshky, erschien zuerst im Weißen Haus ."
+  }
+ ],
  "political_events": [],
  "signals": [
   {
@@ -438,7 +473,8 @@
    "id": "44938e4819637bd9",
    "symbols": [
     "CHCO",
-    "HBT"
+    "HBT",
+    "LKFN"
    ],
    "category": "market",
    "signal_type": "news",
@@ -594,7 +630,8 @@
    "id": "474d958b43ecee9d",
    "symbols": [
     "CAC",
-    "CHCO"
+    "CHCO",
+    "MGRC"
    ],
    "category": "market",
    "signal_type": "company_news",
@@ -727,7 +764,8 @@
   {
    "id": "3902454d139d202a",
    "symbols": [
-    "CHCO"
+    "CHCO",
+    "MBIN"
    ],
    "category": "market",
    "signal_type": "news",
@@ -1029,6 +1067,59 @@
    "report_date": "2026-06-30"
   }
  ],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 0,
+  "mentions_7d": 3,
+  "mentions_30d": 3,
+  "change_vs_baseline_pct": -100,
+  "engagement_7d": 0.0,
+  "sentiment_7d": 0.33,
+  "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
+  "bullish_7d": 1,
+  "bearish_7d": 0,
+  "by_platform_7d": {
+   "stocktwits": 3
+  },
+  "communities_7d": {
+   "StockTwits": 3
+  },
+  "platforms": [
+   "stocktwits"
+  ],
+  "manipulation_flags": [],
+  "manipulation_risk": "unauffällig",
+  "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "Estimize",
+    "posted_at": "2026-10-28T11:18:09Z",
+    "url": "https://stocktwits.com/Estimize/message/667514948",
+    "text": "Wall St is expecting 2.38 EPS for $CHCO Q4 [Reporting 01/26 BMO]\nhttp://www.estimize.com/intro/chco?chart=historical&amp;metric_name=eps&amp;utm_co",
+    "engagement": 0.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "shoc24",
+    "posted_at": "2026-10-27T18:57:22Z",
+    "url": "https://stocktwits.com/shoc24/message/667474478",
+    "text": "$CHCO is expected to report earnings tomorrow before the open; the date is estimated. I’m bullish heading into the report: CHCO has beaten EPS estimates in 7 of its last 8 reports, according to Stock Meadow. Analysts expect EPS of $2.36. What are you watching for?",
+    "engagement": 0.0,
+    "sentiment_label": "Bullish"
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "StocktwitsEarnings",
+    "posted_at": "2026-10-26T14:58:30Z",
+    "url": "https://stocktwits.com/StocktwitsEarnings/message/667360812",
+    "text": "$CHCO Q3 &#39;26 Earnings Results &amp; Recap\n\n• Reported GAAP EPS of $2.43 up 0.83% YoY\n• Reported revenue of $84.04M up 37.12% YoY",
+    "engagement": 0.0,
+    "sentiment_label": null
+   }
+  ]
+ },
  "history": []
 }
