@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-11-01T02:25:50Z",
+ "generated_at": "2026-11-01T03:00:53Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "ORKA",
-  "name": "Oruka Therapeutics",
+  "name": "Oruka Therapeutics, Inc.",
   "region": "US",
   "currency": "USD",
-  "sector": "Health Care",
-  "industry": null,
+  "sector": "Healthcare",
+  "industry": "Biotechnology",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 96.87000274658203,
    "price_date": "2026-10-30",
@@ -30,33 +28,36 @@
    "sma50": 88.4734001159668,
    "sma200": 69.23279983520507
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 6413733888.0,
+  "market_cap_currency": "USD",
   "quality": {
    "score": null,
-   "coverage_pct": 0,
+   "coverage_pct": 40,
    "model": "standard",
    "dimensions": {
     "revenue_growth": null,
     "profitability": null,
-    "financial_stability": null,
-    "cashflow": null,
-    "market_position": null,
+    "financial_stability": 100.0,
+    "cashflow": 0.0,
+    "market_position": 0.0,
     "growth_potential": null,
-    "management": null
+    "management": 0.0
    }
   },
   "risk": {
-   "score": null,
-   "level": "unbekannt",
-   "coverage_pct": 25,
+   "score": 29.4,
+   "level": "moderat",
+   "coverage_pct": 64,
    "top_factors": [
-    "Volatilität (63T, annualisiert)"
+    "Verwässerung (Aktienanzahl yoy)",
+    "Volatilität (63T, annualisiert)",
+    "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)"
    ]
   },
   "market_intelligence": {
-   "score": 0.4,
+   "score": 5.9,
    "drivers": [
+    "insider_activity",
     "price_volume_anomaly"
    ],
    "independent_7d": 0,
@@ -74,16 +75,22 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 14,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 2036271.43,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 4
   },
-  "superinvestors": null,
+  "superinvestors": {
+   "holders": 1,
+   "buyers": 0,
+   "new_buyers": 0,
+   "sellers": 1,
+   "sold_out": 0
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -112,7 +119,7 @@
  "quality_detail": {
   "score": null,
   "status": "insufficient_data",
-  "coverage_pct": 0,
+  "coverage_pct": 40,
   "model": "standard",
   "dimensions": [
    {
@@ -173,25 +180,25 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 100.0,
+    "basis": "data",
+    "coverage": 70,
     "metrics": [
      {
       "key": "debt_to_equity",
       "label": "Verschuldung (Debt/Equity)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.004,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "current_ratio",
       "label": "Liquidität (Current Ratio)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 22.366,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "interest_coverage",
@@ -208,9 +215,9 @@
     "key": "cashflow",
     "label": "Cashflow",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "data",
+    "coverage": 40,
     "metrics": [
      {
       "key": "fcf_margin",
@@ -224,9 +231,9 @@
       "key": "ocf_positive",
       "label": "Operativer Cashflow positiv",
       "unit": "bool",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.0,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -235,17 +242,17 @@
     "key": "market_position",
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "gross_margin",
       "label": "Bruttomarge (Proxy Preissetzungsmacht)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.0,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -281,59 +288,59 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -22.48,
+      "points": 0.0,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 30.133,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/ORKA/financials",
+  "as_of": "2026-11-01T03:04:18Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": null,
-  "level": "unbekannt",
-  "coverage_pct": 25,
+  "score": 29.4,
+  "level": "moderat",
+  "coverage_pct": 64,
   "factors": [
    {
     "key": "leverage",
     "label": "Verschuldung (Debt/Equity)",
-    "value": null,
+    "value": 0.0,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.15,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "liquidity",
     "label": "Liquidität (Current Ratio)",
-    "value": null,
+    "value": 22.37,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "interest",
@@ -365,11 +372,11 @@
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": 30.13,
     "unit": "%",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -401,11 +408,11 @@
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 6.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 55.6,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -418,7 +425,9 @@
    }
   ],
   "top_factors": [
-   "Volatilität (63T, annualisiert)"
+   "Verwässerung (Aktienanzahl yoy)",
+   "Volatilität (63T, annualisiert)",
+   "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)"
   ],
   "unknown_factors": [
    "Kunden- und Branchenabhängigkeit",
@@ -426,7 +435,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 0.4,
+  "score": 5.9,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -435,7 +444,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 2.1,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 100.0
   },
   "windows": {
    "24h": {
@@ -467,6 +476,7 @@
    }
   },
   "drivers": [
+   "insider_activity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -486,10 +496,381 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "c83bded0c8acfb5d",
+   "symbol": "ORKA",
+   "insider": "Quinlan Paul T",
+   "role": "General Counsel",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-20",
+   "filed_at": "2026-10-20",
+   "reporting_delay_days": 0,
+   "shares": 9000.0,
+   "price": 7.8,
+   "value": 70200.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/907654/000090765426000110/0000907654-26-000110-index.htm"
+  },
+  {
+   "id": "29864f638020a6f2",
+   "symbol": "ORKA",
+   "insider": "Quinlan Paul T",
+   "role": "General Counsel",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-20",
+   "filed_at": "2026-10-20",
+   "reporting_delay_days": 0,
+   "shares": 400.0,
+   "price": 74.9007,
+   "value": 29960.28,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/907654/000090765426000110/0000907654-26-000110-index.htm"
+  },
+  {
+   "id": "8e3fc942db69b667",
+   "symbol": "ORKA",
+   "insider": "Quinlan Paul T",
+   "role": "General Counsel",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-20",
+   "filed_at": "2026-10-20",
+   "reporting_delay_days": 0,
+   "shares": 500.0,
+   "price": 76.118,
+   "value": 38059.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/907654/000090765426000110/0000907654-26-000110-index.htm"
+  },
+  {
+   "id": "1ac00900a5de9286",
+   "symbol": "ORKA",
+   "insider": "Quinlan Paul T",
+   "role": "General Counsel",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-20",
+   "filed_at": "2026-10-20",
+   "reporting_delay_days": 0,
+   "shares": 1000.0,
+   "price": 77.205,
+   "value": 77205.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/907654/000090765426000110/0000907654-26-000110-index.htm"
+  },
+  {
+   "id": "f268e80bfb1642e0",
+   "symbol": "ORKA",
+   "insider": "Quinlan Paul T",
+   "role": "General Counsel",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-20",
+   "filed_at": "2026-10-20",
+   "reporting_delay_days": 0,
+   "shares": 4100.0,
+   "price": 78.7895,
+   "value": 323036.95,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/907654/000090765426000110/0000907654-26-000110-index.htm"
+  },
+  {
+   "id": "853db301264acc0a",
+   "symbol": "ORKA",
+   "insider": "Quinlan Paul T",
+   "role": "General Counsel",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-20",
+   "filed_at": "2026-10-20",
+   "reporting_delay_days": 0,
+   "shares": 3000.0,
+   "price": 79.4912,
+   "value": 238473.6,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/907654/000090765426000110/0000907654-26-000110-index.htm"
+  },
+  {
+   "id": "69ef4d78cd5a0374",
+   "symbol": "ORKA",
+   "insider": "Goncalves Joana",
+   "role": "Chief Medical Officer",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-15",
+   "filed_at": "2026-10-15",
+   "reporting_delay_days": 0,
+   "shares": 3500.0,
+   "price": 7.8,
+   "value": 27300.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/907654/000090765426000108/0000907654-26-000108-index.htm"
+  },
+  {
+   "id": "531958fb074d5885",
+   "symbol": "ORKA",
+   "insider": "Goncalves Joana",
+   "role": "Chief Medical Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-15",
+   "filed_at": "2026-10-15",
+   "reporting_delay_days": 0,
+   "shares": 2853.0,
+   "price": 73.8894,
+   "value": 210806.46,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/907654/000090765426000108/0000907654-26-000108-index.htm"
+  },
+  {
+   "id": "e9a08507c56d8283",
+   "symbol": "ORKA",
+   "insider": "Goncalves Joana",
+   "role": "Chief Medical Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-15",
+   "filed_at": "2026-10-15",
+   "reporting_delay_days": 0,
+   "shares": 1847.0,
+   "price": 74.6924,
+   "value": 137956.86,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/907654/000090765426000108/0000907654-26-000108-index.htm"
+  },
+  {
+   "id": "429798e570609919",
+   "symbol": "ORKA",
+   "insider": "Goncalves Joana",
+   "role": "Chief Medical Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-15",
+   "filed_at": "2026-10-15",
+   "reporting_delay_days": 0,
+   "shares": 1400.0,
+   "price": 75.4834,
+   "value": 105676.76,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/907654/000090765426000108/0000907654-26-000108-index.htm"
+  },
+  {
+   "id": "64566213853159ca",
+   "symbol": "ORKA",
+   "insider": "Goncalves Joana",
+   "role": "Chief Medical Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-15",
+   "filed_at": "2026-10-15",
+   "reporting_delay_days": 0,
+   "shares": 700.0,
+   "price": 76.6652,
+   "value": 53665.64,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/907654/000090765426000108/0000907654-26-000108-index.htm"
+  },
+  {
+   "id": "c819c1cd03c8f523",
+   "symbol": "ORKA",
+   "insider": "Goncalves Joana",
+   "role": "Chief Medical Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-15",
+   "filed_at": "2026-10-15",
+   "reporting_delay_days": 0,
+   "shares": 200.0,
+   "price": 77.71,
+   "value": 15542.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/907654/000090765426000108/0000907654-26-000108-index.htm"
+  },
+  {
+   "id": "2b6f29884d12e1c4",
+   "symbol": "ORKA",
+   "insider": "Agarwal Arjun",
+   "role": "Senior Vice President, Finance",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-12",
+   "filed_at": "2026-10-13",
+   "reporting_delay_days": 1,
+   "shares": 8541.0,
+   "price": 12.5,
+   "value": 106762.5,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/907654/000090765426000106/0000907654-26-000106-index.htm"
+  },
+  {
+   "id": "59b54b0cc57a1a01",
+   "symbol": "ORKA",
+   "insider": "Agarwal Arjun",
+   "role": "Senior Vice President, Finance",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-12",
+   "filed_at": "2026-10-13",
+   "reporting_delay_days": 1,
+   "shares": 1458.0,
+   "price": 34.39,
+   "value": 50140.62,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/907654/000090765426000106/0000907654-26-000106-index.htm"
+  },
+  {
+   "id": "0038e102b29db593",
+   "symbol": "ORKA",
+   "insider": "Agarwal Arjun",
+   "role": "Senior Vice President, Finance",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-12",
+   "filed_at": "2026-10-13",
+   "reporting_delay_days": 1,
+   "shares": 5741.0,
+   "price": 80.0302,
+   "value": 459453.38,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/907654/000090765426000106/0000907654-26-000106-index.htm"
+  },
+  {
+   "id": "688e31490e7d59be",
+   "symbol": "ORKA",
+   "insider": "Agarwal Arjun",
+   "role": "Senior Vice President, Finance",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-12",
+   "filed_at": "2026-10-13",
+   "reporting_delay_days": 1,
+   "shares": 2100.0,
+   "price": 80.7601,
+   "value": 169596.21,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/907654/000090765426000106/0000907654-26-000106-index.htm"
+  },
+  {
+   "id": "aeef24f3d682499e",
+   "symbol": "ORKA",
+   "insider": "Agarwal Arjun",
+   "role": "Senior Vice President, Finance",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-12",
+   "filed_at": "2026-10-13",
+   "reporting_delay_days": 1,
+   "shares": 1958.0,
+   "price": 81.8551,
+   "value": 160272.29,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/907654/000090765426000106/0000907654-26-000106-index.htm"
+  },
+  {
+   "id": "4878d40047459e50",
+   "symbol": "ORKA",
+   "insider": "Agarwal Arjun",
+   "role": "Senior Vice President, Finance",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-12",
+   "filed_at": "2026-10-13",
+   "reporting_delay_days": 1,
+   "shares": 200.0,
+   "price": 82.835,
+   "value": 16567.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/907654/000090765426000106/0000907654-26-000106-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Andreas Halvorsen",
+   "fund": "Viking Global Investors",
+   "action": "reduced",
+   "weight_pct": 0.41,
+   "shares_change_pct": -43.6,
+   "value": 143086001.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

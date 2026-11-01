@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-11-01T02:25:50Z",
+ "generated_at": "2026-11-01T03:00:53Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "ONIT",
-  "name": "Onity Group Inc",
+  "name": "Onity Group Inc.",
   "region": "US",
   "currency": "USD",
-  "sector": "Financials",
-  "industry": null,
+  "sector": "Financial Services",
+  "industry": "Mortgage Finance",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 27.520000457763672,
    "price_date": "2026-10-30",
@@ -30,28 +28,30 @@
    "sma50": 30.406400032043457,
    "sma200": 37.936049966812135
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 229916400.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
+   "score": 59.7,
+   "coverage_pct": 100,
    "model": "financial",
    "dimensions": {
-    "revenue_growth": null,
-    "profitability": null,
-    "financial_stability": null,
+    "revenue_growth": 51.0,
+    "profitability": 76.2,
+    "financial_stability": 0.0,
     "cashflow": null,
     "market_position": null,
-    "growth_potential": null,
-    "management": null
+    "growth_potential": 98.5,
+    "management": 60.0
    }
   },
   "risk": {
-   "score": 41.7,
+   "score": 44.6,
    "level": "moderat",
-   "coverage_pct": 45,
+   "coverage_pct": 100,
    "top_factors": [
-    "Handelsliquidität (Umsatz 20T)"
+    "Verwässerung (Aktienanzahl yoy)",
+    "Handelsliquidität (Umsatz 20T)",
+    "Margenentwicklung (Vorjahr, Pp.)"
    ]
   },
   "market_intelligence": {
@@ -89,7 +89,7 @@
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -116,34 +116,34 @@
   "move_zscore": -0.35568419753696345
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
+  "score": 59.7,
+  "status": "ok",
+  "coverage_pct": 100,
   "model": "financial",
   "dimensions": [
    {
     "key": "revenue_growth",
     "label": "Umsatzwachstum",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 51.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_cagr",
       "label": "Umsatz-CAGR (mehrjährig)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 6.348,
+      "points": 45.4,
+      "status": "ok"
      },
      {
       "key": "revenue_growth_yoy",
       "label": "Umsatzwachstum Vorjahr",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 12.429,
+      "points": 64.1,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -152,25 +152,25 @@
     "key": "profitability",
     "label": "Profitabilität/Margen",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 76.2,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "net_margin",
       "label": "Nettomarge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 15.763,
+      "points": 52.5,
+      "status": "ok"
      },
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 30.175,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -179,17 +179,17 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 8.238,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -218,17 +218,17 @@
     "key": "growth_potential",
     "label": "Wachstumspotenzial",
     "weight": 0.2,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 98.5,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_growth_forward",
       "label": "Erwartetes Umsatzwachstum (Yahoo)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 14.7,
+      "points": 98.5,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -237,59 +237,59 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 60.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 30.175,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 8.238,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/ONIT/financials",
+  "as_of": "2026-11-01T03:04:18Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": 41.7,
+  "score": 44.6,
   "level": "moderat",
-  "coverage_pct": 45,
+  "coverage_pct": 100,
   "factors": [
    {
     "key": "margin_trend",
     "label": "Margenentwicklung (Vorjahr, Pp.)",
-    "value": null,
+    "value": -3.87,
     "unit": "Pp",
-    "severity": null,
+    "severity": 62.4,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": 8.24,
     "unit": "%",
-    "severity": null,
+    "severity": 82.4,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -312,20 +312,20 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 3.89,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 3.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 22.2,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -338,7 +338,9 @@
    }
   ],
   "top_factors": [
-   "Handelsliquidität (Umsatz 20T)"
+   "Verwässerung (Aktienanzahl yoy)",
+   "Handelsliquidität (Umsatz 20T)",
+   "Margenentwicklung (Vorjahr, Pp.)"
   ],
   "unknown_factors": [
    "Kunden- und Branchenabhängigkeit",

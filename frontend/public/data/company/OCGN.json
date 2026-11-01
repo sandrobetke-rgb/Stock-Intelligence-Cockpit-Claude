@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-11-01T02:25:50Z",
+ "generated_at": "2026-11-01T03:00:53Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "OCGN",
-  "name": "Ocugen",
+  "name": "Ocugen, Inc.",
   "region": "US",
   "currency": "USD",
-  "sector": "Health Care",
-  "industry": null,
+  "sector": "Healthcare",
+  "industry": "Biotechnology",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 0.703000009059906,
    "price_date": "2026-10-30",
@@ -30,35 +28,37 @@
    "sma50": 1.0339000010490418,
    "sma200": 1.4280749982595444
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 238292880.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
+   "score": 31.3,
+   "coverage_pct": 88,
    "model": "standard",
    "dimensions": {
-    "revenue_growth": null,
-    "profitability": null,
-    "financial_stability": null,
-    "cashflow": null,
-    "market_position": null,
-    "growth_potential": null,
-    "management": null
+    "revenue_growth": 86.1,
+    "profitability": 0.0,
+    "financial_stability": 13.7,
+    "cashflow": 0.0,
+    "market_position": 0.0,
+    "growth_potential": 66.8,
+    "management": 0.0
    }
   },
   "risk": {
-   "score": null,
-   "level": "unbekannt",
-   "coverage_pct": 25,
+   "score": 81.3,
+   "level": "hoch",
+   "coverage_pct": 85,
    "top_factors": [
+    "Free-Cashflow-Marge",
     "Volatilität (63T, annualisiert)",
-    "Handelsliquidität (Umsatz 20T)"
+    "Zinsdeckung"
    ]
   },
   "market_intelligence": {
-   "score": 6.8,
+   "score": 7.5,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -75,16 +75,16 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 2,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 499691.45,
    "distinct_buyers": 0,
    "other_transactions": 0
   },
   "superinvestors": null,
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -111,34 +111,34 @@
   "move_zscore": -1.2796541383981432
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
+  "score": 31.3,
+  "status": "ok",
+  "coverage_pct": 88,
   "model": "standard",
   "dimensions": [
    {
     "key": "revenue_growth",
     "label": "Umsatzwachstum",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 86.1,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_cagr",
       "label": "Umsatz-CAGR (mehrjährig)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 21.049,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "revenue_growth_yoy",
       "label": "Umsatzwachstum Vorjahr",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 8.829,
+      "points": 53.8,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -147,25 +147,25 @@
     "key": "profitability",
     "label": "Profitabilität/Margen",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "operating_margin",
       "label": "Operative Marge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -1425.697,
+      "points": 0.0,
+      "status": "ok"
      },
      {
       "key": "net_margin",
       "label": "Nettomarge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -1537.412,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -174,9 +174,9 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 13.7,
+    "basis": "data",
+    "coverage": 60,
     "metrics": [
      {
       "key": "debt_to_equity",
@@ -190,17 +190,17 @@
       "key": "current_ratio",
       "label": "Liquidität (Current Ratio)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 1.056,
+      "points": 27.4,
+      "status": "ok"
      },
      {
       "key": "interest_coverage",
       "label": "Zinsdeckung (EBIT/Zinsen)",
       "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -12.077,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -209,25 +209,25 @@
     "key": "cashflow",
     "label": "Cashflow",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "fcf_margin",
       "label": "Free-Cashflow-Marge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -1295.015,
+      "points": 0.0,
+      "status": "ok"
      },
      {
       "key": "ocf_positive",
       "label": "Operativer Cashflow positiv",
       "unit": "bool",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.0,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -236,17 +236,17 @@
     "key": "market_position",
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "gross_margin",
       "label": "Bruttomarge (Proxy Preissetzungsmacht)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.0,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -255,25 +255,25 @@
     "key": "growth_potential",
     "label": "Wachstumspotenzial",
     "weight": 0.2,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 66.8,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_growth_forward",
       "label": "Erwartetes Umsatzwachstum (Yahoo)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 8.4,
+      "points": 44.7,
+      "status": "ok"
      },
      {
       "key": "reinvestment",
       "label": "Reinvestition (F&E + Capex in % Umsatz)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 904.94,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -282,9 +282,9 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "proxy",
+    "coverage": 40,
     "metrics": [
      {
       "key": "roe",
@@ -298,25 +298,25 @@
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 7.212,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/OCGN/financials",
+  "as_of": "2026-11-01T03:04:18Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": null,
-  "level": "unbekannt",
-  "coverage_pct": 25,
+  "score": 81.3,
+  "level": "hoch",
+  "coverage_pct": 85,
   "factors": [
    {
     "key": "leverage",
@@ -330,47 +330,47 @@
    {
     "key": "liquidity",
     "label": "Liquidität (Current Ratio)",
-    "value": null,
+    "value": 1.06,
     "unit": "x",
-    "severity": null,
+    "severity": 72.6,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "interest",
     "label": "Zinsdeckung",
-    "value": null,
+    "value": -12.08,
     "unit": "x",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "cashflow",
     "label": "Free-Cashflow-Marge",
-    "value": null,
+    "value": -1295.01,
     "unit": "%",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.12,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "margin_trend",
     "label": "Margenentwicklung (Vorjahr, Pp.)",
-    "value": null,
+    "value": -75.34,
     "unit": "Pp",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": 7.21,
     "unit": "%",
-    "severity": null,
+    "severity": 72.1,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -393,20 +393,20 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 52.02,
     "unit": "x",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 7.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 66.7,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -419,8 +419,9 @@
    }
   ],
   "top_factors": [
+   "Free-Cashflow-Marge",
    "Volatilität (63T, annualisiert)",
-   "Handelsliquidität (Umsatz 20T)"
+   "Zinsdeckung"
   ],
   "unknown_factors": [
    "Kunden- und Branchenabhängigkeit",
@@ -428,7 +429,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.8,
+  "score": 7.5,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -437,7 +438,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 38.4,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 20
   },
   "windows": {
    "24h": {
@@ -469,7 +470,8 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -488,7 +490,48 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "9b2539e17ab5a59a",
+   "symbol": "OCGN",
+   "insider": "Musunuri Shankar",
+   "role": "Director, Chief Executive Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-09",
+   "filed_at": "2026-10-13",
+   "reporting_delay_days": 4,
+   "shares": 468727.0,
+   "price": 0.95,
+   "value": 445290.65,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1372299/000162828026065797/0001628280-26-065797-index.htm"
+  },
+  {
+   "id": "4fc1d7545bfa7b9f",
+   "symbol": "OCGN",
+   "insider": "Musunuri Shankar",
+   "role": "Director, Chief Executive Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-09",
+   "filed_at": "2026-10-13",
+   "reporting_delay_days": 4,
+   "shares": 57264.0,
+   "price": 0.95,
+   "value": 54400.8,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1372299/000162828026065797/0001628280-26-065797-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "superinvestors": [],

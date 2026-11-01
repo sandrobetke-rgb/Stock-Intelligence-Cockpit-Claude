@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-11-01T02:25:50Z",
+ "generated_at": "2026-11-01T03:00:53Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "PURR",
-  "name": "Hyperliquid Strategies Inc",
+  "name": "Hyperliquid Strategies Inc.",
   "region": "US",
   "currency": "USD",
-  "sector": "Health Care",
-  "industry": null,
+  "sector": "Financial Services",
+  "industry": "Capital Markets",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 11.010000228881836,
    "price_date": "2026-10-30",
@@ -30,26 +28,26 @@
    "sma50": 11.428899993896485,
    "sma200": 7.655824996232987
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 3063767040.0,
+  "market_cap_currency": "USD",
   "quality": {
    "score": null,
-   "coverage_pct": 0,
-   "model": "standard",
+   "coverage_pct": 28,
+   "model": "financial",
    "dimensions": {
     "revenue_growth": null,
-    "profitability": null,
+    "profitability": 95.3,
     "financial_stability": null,
     "cashflow": null,
     "market_position": null,
     "growth_potential": null,
-    "management": null
+    "management": 65.3
    }
   },
   "risk": {
-   "score": null,
-   "level": "unbekannt",
-   "coverage_pct": 25,
+   "score": 41.9,
+   "level": "moderat",
+   "coverage_pct": 60,
    "top_factors": [
     "Volatilität (63T, annualisiert)"
    ]
@@ -78,18 +76,18 @@
    "buy_value": 0,
    "sell_value": 0,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 4
   },
   "superinvestors": {
-   "holders": 1,
-   "buyers": 1,
-   "new_buyers": 1,
+   "holders": 2,
+   "buyers": 2,
+   "new_buyers": 2,
    "sellers": 0,
    "sold_out": 0
   },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -118,8 +116,8 @@
  "quality_detail": {
   "score": null,
   "status": "insufficient_data",
-  "coverage_pct": 0,
-  "model": "standard",
+  "coverage_pct": 28,
+  "model": "financial",
   "dimensions": [
    {
     "key": "revenue_growth",
@@ -152,25 +150,25 @@
     "key": "profitability",
     "label": "Profitabilität/Margen",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 95.3,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
-     {
-      "key": "operating_margin",
-      "label": "Operative Marge",
-      "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     },
      {
       "key": "net_margin",
       "label": "Nettomarge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 3229.831,
+      "points": 100.0,
+      "status": "ok"
+     },
+     {
+      "key": "roe",
+      "label": "Eigenkapitalrendite",
+      "unit": "%",
+      "value": 16.314,
+      "points": 90.6,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -184,25 +182,9 @@
     "coverage": 0,
     "metrics": [
      {
-      "key": "debt_to_equity",
-      "label": "Verschuldung (Debt/Equity)",
-      "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     },
-     {
-      "key": "current_ratio",
-      "label": "Liquidität (Current Ratio)",
-      "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     },
-     {
-      "key": "interest_coverage",
-      "label": "Zinsdeckung (EBIT/Zinsen)",
-      "unit": "x",
+      "key": "share_change_yoy",
+      "label": "Aktienanzahl Veränderung",
+      "unit": "%",
       "value": null,
       "points": null,
       "status": "unknown"
@@ -215,26 +197,9 @@
     "label": "Cashflow",
     "weight": 0.1,
     "score": null,
-    "basis": "unknown",
-    "coverage": 0,
-    "metrics": [
-     {
-      "key": "fcf_margin",
-      "label": "Free-Cashflow-Marge",
-      "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     },
-     {
-      "key": "ocf_positive",
-      "label": "Operativer Cashflow positiv",
-      "unit": "bool",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     }
-    ],
+    "basis": "not_applicable",
+    "coverage": null,
+    "metrics": [],
     "manual": null
    },
    {
@@ -242,18 +207,9 @@
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
     "score": null,
-    "basis": "unknown",
-    "coverage": 0,
-    "metrics": [
-     {
-      "key": "gross_margin",
-      "label": "Bruttomarge (Proxy Preissetzungsmacht)",
-      "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     }
-    ],
+    "basis": "not_applicable",
+    "coverage": null,
+    "metrics": [],
     "manual": null
    },
    {
@@ -271,14 +227,6 @@
       "value": null,
       "points": null,
       "status": "unknown"
-     },
-     {
-      "key": "reinvestment",
-      "label": "Reinvestition (F&E + Capex in % Umsatz)",
-      "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
      }
     ],
     "manual": null
@@ -287,17 +235,17 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 65.3,
+    "basis": "proxy",
+    "coverage": 60,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 16.314,
+      "points": 65.3,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
@@ -312,53 +260,17 @@
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/PURR/financials",
+  "as_of": "2026-11-01T03:04:18Z",
+  "fiscal_year_end": "2026-06-30",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": null,
-  "level": "unbekannt",
-  "coverage_pct": 25,
+  "score": 41.9,
+  "level": "moderat",
+  "coverage_pct": 60,
   "factors": [
-   {
-    "key": "leverage",
-    "label": "Verschuldung (Debt/Equity)",
-    "value": null,
-    "unit": "x",
-    "severity": null,
-    "weight": 0.15,
-    "status": "unknown"
-   },
-   {
-    "key": "liquidity",
-    "label": "Liquidität (Current Ratio)",
-    "value": null,
-    "unit": "x",
-    "severity": null,
-    "weight": 0.1,
-    "status": "unknown"
-   },
-   {
-    "key": "interest",
-    "label": "Zinsdeckung",
-    "value": null,
-    "unit": "x",
-    "severity": null,
-    "weight": 0.08,
-    "status": "unknown"
-   },
-   {
-    "key": "cashflow",
-    "label": "Free-Cashflow-Marge",
-    "value": null,
-    "unit": "%",
-    "severity": null,
-    "weight": 0.12,
-    "status": "unknown"
-   },
    {
     "key": "margin_trend",
     "label": "Margenentwicklung (Vorjahr, Pp.)",
@@ -398,11 +310,11 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 29.76,
     "unit": "x",
-    "severity": null,
+    "severity": 22.7,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
@@ -492,10 +404,100 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "3eb39ee6e1ea87fc",
+   "symbol": "PURR",
+   "insider": "Leibowitz Lawrence E",
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-15",
+   "reporting_delay_days": 14,
+   "shares": 1358.0,
+   "price": null,
+   "value": null,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2078856/000119312526423224/0001193125-26-423224-index.htm"
+  },
+  {
+   "id": "ee5ec6483d01c810",
+   "symbol": "PURR",
+   "insider": "Rosengren Eric S",
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-15",
+   "reporting_delay_days": 14,
+   "shares": 3056.0,
+   "price": null,
+   "value": null,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2078856/000119312526423227/0001193125-26-423227-index.htm"
+  },
+  {
+   "id": "f722d98c8c62add5",
+   "symbol": "PURR",
+   "insider": "King Thomas C.",
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-15",
+   "reporting_delay_days": 14,
+   "shares": 3056.0,
+   "price": null,
+   "value": null,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2078856/000119312526423228/0001193125-26-423228-index.htm"
+  },
+  {
+   "id": "131366573bdf82de",
+   "symbol": "PURR",
+   "insider": "Bhatt Nailesh",
+   "role": "Director",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-01",
+   "filed_at": "2026-10-15",
+   "reporting_delay_days": 14,
+   "shares": 2037.0,
+   "price": null,
+   "value": null,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2078856/000119312526423229/0001193125-26-423229-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "superinvestors": [
+  {
+   "manager": "Stanley Druckenmiller",
+   "fund": "Duquesne Family Office",
+   "action": "new",
+   "weight_pct": 0.53,
+   "shares_change_pct": null,
+   "value": 23150000.0,
+   "report_date": "2026-06-30"
+  },
   {
    "manager": "Jim Simons (Nachlass)",
    "fund": "Renaissance Technologies",

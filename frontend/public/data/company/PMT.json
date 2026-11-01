@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-11-01T02:25:50Z",
+ "generated_at": "2026-11-01T03:00:53Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "PMT",
-  "name": "Pennymac Mortgage Investment Trust",
+  "name": "PennyMac Mortgage Investment Trust",
   "region": "US",
   "currency": "USD",
-  "sector": "Financials",
-  "industry": null,
+  "sector": "Real Estate",
+  "industry": "REIT - Mortgage",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 7.46999979019165,
    "price_date": "2026-10-30",
@@ -25,32 +23,34 @@
    "perf_63d": -16.648301587551572,
    "adr20": 3.146980787603268,
    "rvol": 1.7799805944164218,
-   "ema10": 7.2182070302533825,
-   "ema21": 7.309962243482149,
+   "ema10": 7.218207030253375,
+   "ema21": 7.309962243437689,
    "sma50": 7.958005142211914,
-   "sma200": 9.576781234741212
+   "sma200": 9.576781258583068
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 651401600.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
-   "model": "financial",
+   "score": 52.4,
+   "coverage_pct": 62,
+   "model": "standard",
    "dimensions": {
-    "revenue_growth": null,
-    "profitability": null,
-    "financial_stability": null,
-    "cashflow": null,
-    "market_position": null,
+    "revenue_growth": 56.8,
+    "profitability": 100.0,
+    "financial_stability": 0.0,
+    "cashflow": 0.0,
+    "market_position": 93.0,
     "growth_potential": null,
-    "management": null
+    "management": 40.4
    }
   },
   "risk": {
-   "score": 21.5,
-   "level": "niedrig",
-   "coverage_pct": 45,
+   "score": 47.0,
+   "level": "erhoeht",
+   "coverage_pct": 74,
    "top_factors": [
+    "Verschuldung (Debt/Equity)",
+    "Free-Cashflow-Marge",
     "Handelsliquidität (Umsatz 20T)"
    ]
   },
@@ -83,7 +83,7 @@
   "superinvestors": null,
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -101,43 +101,43 @@
   "perf_63d": -16.648301587551572,
   "adr20": 3.146980787603268,
   "rvol": 1.7799805944164218,
-  "ema10": 7.2182070302533825,
-  "ema21": 7.309962243482149,
+  "ema10": 7.218207030253375,
+  "ema21": 7.309962243437689,
   "sma50": 7.958005142211914,
-  "sma200": 9.576781234741212,
+  "sma200": 9.576781258583068,
   "volatility_ann": 26.781995593750995,
   "avg_dollar_volume_20d": 21929756.68075323,
   "move_zscore": 0.722839559138654
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
-  "model": "financial",
+  "score": 52.4,
+  "status": "ok",
+  "coverage_pct": 62,
+  "model": "standard",
   "dimensions": [
    {
     "key": "revenue_growth",
     "label": "Umsatzwachstum",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 56.8,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_cagr",
       "label": "Umsatz-CAGR (mehrjährig)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 15.307,
+      "points": 81.2,
+      "status": "ok"
      },
      {
       "key": "revenue_growth_yoy",
       "label": "Umsatzwachstum Vorjahr",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -13.87,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -146,25 +146,25 @@
     "key": "profitability",
     "label": "Profitabilität/Margen",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 100.0,
+    "basis": "data",
+    "coverage": 40,
     "metrics": [
      {
-      "key": "net_margin",
-      "label": "Nettomarge",
+      "key": "operating_margin",
+      "label": "Operative Marge",
       "unit": "%",
       "value": null,
       "points": null,
       "status": "unknown"
      },
      {
-      "key": "roe",
-      "label": "Eigenkapitalrendite",
+      "key": "net_margin",
+      "label": "Nettomarge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 80.895,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -173,14 +173,30 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "data",
+    "coverage": 40,
     "metrics": [
      {
-      "key": "share_change_yoy",
-      "label": "Aktienanzahl Veränderung",
-      "unit": "%",
+      "key": "debt_to_equity",
+      "label": "Verschuldung (Debt/Equity)",
+      "unit": "x",
+      "value": 5.868,
+      "points": 0.0,
+      "status": "ok"
+     },
+     {
+      "key": "current_ratio",
+      "label": "Liquidität (Current Ratio)",
+      "unit": "x",
+      "value": null,
+      "points": null,
+      "status": "unknown"
+     },
+     {
+      "key": "interest_coverage",
+      "label": "Zinsdeckung (EBIT/Zinsen)",
+      "unit": "x",
       "value": null,
       "points": null,
       "status": "unknown"
@@ -192,20 +208,46 @@
     "key": "cashflow",
     "label": "Cashflow",
     "weight": 0.1,
-    "score": null,
-    "basis": "not_applicable",
-    "coverage": null,
-    "metrics": [],
+    "score": 0.0,
+    "basis": "data",
+    "coverage": 100,
+    "metrics": [
+     {
+      "key": "fcf_margin",
+      "label": "Free-Cashflow-Marge",
+      "unit": "%",
+      "value": -4563.285,
+      "points": 0.0,
+      "status": "ok"
+     },
+     {
+      "key": "ocf_positive",
+      "label": "Operativer Cashflow positiv",
+      "unit": "bool",
+      "value": 0.0,
+      "points": 0.0,
+      "status": "ok"
+     }
+    ],
     "manual": null
    },
    {
     "key": "market_position",
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
-    "score": null,
-    "basis": "not_applicable",
-    "coverage": null,
-    "metrics": [],
+    "score": 93.0,
+    "basis": "proxy",
+    "coverage": 100,
+    "metrics": [
+     {
+      "key": "gross_margin",
+      "label": "Bruttomarge (Proxy Preissetzungsmacht)",
+      "unit": "%",
+      "value": 61.477,
+      "points": 93.0,
+      "status": "ok"
+     }
+    ],
     "manual": null
    },
    {
@@ -223,6 +265,14 @@
       "value": null,
       "points": null,
       "status": "unknown"
+     },
+     {
+      "key": "reinvestment",
+      "label": "Reinvestition (F&E + Capex in % Umsatz)",
+      "unit": "%",
+      "value": null,
+      "points": null,
+      "status": "unknown"
      }
     ],
     "manual": null
@@ -231,42 +281,78 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 40.4,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 6.775,
+      "points": 27.1,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 0.179,
+      "points": 60.3,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/PMT/financials",
+  "as_of": "2026-11-01T03:04:18Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": 21.5,
-  "level": "niedrig",
-  "coverage_pct": 45,
+  "score": 47.0,
+  "level": "erhoeht",
+  "coverage_pct": 74,
   "factors": [
+   {
+    "key": "leverage",
+    "label": "Verschuldung (Debt/Equity)",
+    "value": 5.87,
+    "unit": "x",
+    "severity": 100.0,
+    "weight": 0.15,
+    "status": "ok"
+   },
+   {
+    "key": "liquidity",
+    "label": "Liquidität (Current Ratio)",
+    "value": null,
+    "unit": "x",
+    "severity": null,
+    "weight": 0.1,
+    "status": "unknown"
+   },
+   {
+    "key": "interest",
+    "label": "Zinsdeckung",
+    "value": null,
+    "unit": "x",
+    "severity": null,
+    "weight": 0.08,
+    "status": "unknown"
+   },
+   {
+    "key": "cashflow",
+    "label": "Free-Cashflow-Marge",
+    "value": -4563.29,
+    "unit": "%",
+    "severity": 100.0,
+    "weight": 0.12,
+    "status": "ok"
+   },
    {
     "key": "margin_trend",
     "label": "Margenentwicklung (Vorjahr, Pp.)",
@@ -279,11 +365,11 @@
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": 0.18,
     "unit": "%",
-    "severity": null,
+    "severity": 1.8,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -306,20 +392,20 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 5.42,
     "unit": "x",
-    "severity": null,
+    "severity": 0.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 6.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 55.6,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -332,6 +418,8 @@
    }
   ],
   "top_factors": [
+   "Verschuldung (Debt/Equity)",
+   "Free-Cashflow-Marge",
    "Handelsliquidität (Umsatz 20T)"
   ],
   "unknown_factors": [

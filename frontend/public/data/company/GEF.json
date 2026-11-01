@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:25:50Z",
+ "generated_at": "2026-11-01T03:00:53Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 2.768093029046301,
    "rvol": 0.9654878568385172,
    "ema10": 82.09857128456777,
-   "ema21": 81.91227490916637,
+   "ema21": 81.91227490916656,
    "sma50": 82.43989364624024,
-   "sma200": 73.60371566772461
+   "sma200": 73.60371578216552
   },
   "market_cap": 4660980736.0,
   "market_cap_currency": "USD",
@@ -53,9 +53,10 @@
    ]
   },
   "market_intelligence": {
-   "score": 1.0,
+   "score": 1.5,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -72,9 +73,9 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 1,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 163640.0,
    "distinct_buyers": 0,
    "other_transactions": 0
   },
@@ -100,9 +101,9 @@
   "adr20": 2.768093029046301,
   "rvol": 0.9654878568385172,
   "ema10": 82.09857128456777,
-  "ema21": 81.91227490916637,
+  "ema21": 81.91227490916656,
   "sma50": 82.43989364624024,
-  "sma200": 73.60371566772461,
+  "sma200": 73.60371578216552,
   "volatility_ann": 20.92435666144261,
   "avg_dollar_volume_20d": 28796788.229560852,
   "move_zscore": -0.18461589868579065
@@ -424,7 +425,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 1.0,
+  "score": 1.5,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -433,7 +434,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 5.5,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 10
   },
   "windows": {
    "24h": {
@@ -455,17 +456,18 @@
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -483,8 +485,342 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
- "insiders": [],
+ "signals": [
+  {
+   "id": "ac333a48a0c7781b",
+   "symbols": [
+    "BALL",
+    "GEF",
+    "PKG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Packaging Corp Q3 Earnings Beat Estimates on Favorable Price & Mix",
+   "summary": "PKG Q3'26 earnings beat estimates, driven by favorable price and mix, higher shipments, and contributions from Greif operations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/packaging-corp-q3-earnings-beat-134100565.html?.tsrc=rss",
+   "published_at": "2026-10-22T13:41:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:18Z",
+   "fingerprint": "08acc8ef136b1eac",
+   "primary_source": false,
+   "cluster_id": "ac333a48a0c7781b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8d51f8367ad0fa46",
+   "symbols": [
+    "GEF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is the Options Market Predicting a Spike in Greif Stock?",
+   "summary": "Investors need to pay close attention to GEF stock based on the movements in the options market lately.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/options/articles/options-market-predicting-spike-greif-133000833.html?.tsrc=rss",
+   "published_at": "2026-10-22T13:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:22Z",
+   "fingerprint": "9fd60dd0c7c3ef45",
+   "primary_source": false,
+   "cluster_id": "8d51f8367ad0fa46",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "73f0dd9d78a6af27",
+   "symbols": [
+    "BALL",
+    "GEF",
+    "GWW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Packaging Corp. Gears Up for Q3 Earnings: What to Expect?",
+   "summary": "PKG heads into Q3 earnings with revenue and profit growth expected, fueled by strong packaging demand, pricing gains and Greif acquisition benefits.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/packaging-corp-gears-q3-earnings-113500847.html?.tsrc=rss",
+   "published_at": "2026-10-16T11:35:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:18Z",
+   "fingerprint": "0e68771fd1d6c780",
+   "primary_source": false,
+   "cluster_id": "73f0dd9d78a6af27",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "70457fa25d6f07f0",
+   "symbols": [
+    "GEF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Greif Emissions Reduction Targets Validated by SBTi",
+   "summary": "Targets establish near- and long-term emissions reduction commitments that advance Greif’s climate strategy and support customers pursuing their own goalsDELAWARE, Ohio, Oct. 13, 2026 (GLOBE NEWSWIRE) -- Greif, Inc. (NYSE: GEF, GEF.B), a global leader in performance packaging pro",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/greif-emissions-reduction-targets-validated-120000502.html?.tsrc=rss",
+   "published_at": "2026-10-13T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:22Z",
+   "fingerprint": "d5ebbd48e7a8563d",
+   "primary_source": false,
+   "cluster_id": "70457fa25d6f07f0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c73692dca97fc38f",
+   "symbols": [
+    "GEF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Greif, Inc. Announces 2026 Fourth Quarter Earnings Release and Conference Call Dates",
+   "summary": "DELAWARE, Ohio, Sept. 30, 2026 (GLOBE NEWSWIRE) -- Greif, Inc. (NYSE: GEF, GEF.B), a global leader in industrial packaging products and services, announced today it will report the company’s 2026 fourth quarter financial results after the market closes on Tuesday, November 3, 202",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/greif-inc-announces-2026-fourth-120000721.html?.tsrc=rss",
+   "published_at": "2026-09-30T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:22Z",
+   "fingerprint": "d7519599ed474885",
+   "primary_source": false,
+   "cluster_id": "c73692dca97fc38f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f5bdbbd31d818af5",
+   "symbols": [
+    "GEF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Greif (GEF) Plans Coated Recycled Paperboard Exit. Can a Smaller Portfolio Earn Better Returns?",
+   "summary": "Greif, Inc. (NYSE:GEF) announced on September 16, 2026, that it plans to exit coated recycled paperboard by closing its Sweetwater mill in Austell, Georgia. Operations are expected to cease by year-end, affecting approximately 90 employees and removing about 120,000 tons of annua",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/greif-gef-plans-coated-recycled-233847283.html?.tsrc=rss",
+   "published_at": "2026-09-22T23:38:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:22Z",
+   "fingerprint": "cf7dc7b895666e9e",
+   "primary_source": false,
+   "cluster_id": "f5bdbbd31d818af5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "65b3681e13a7262c",
+   "symbols": [
+    "GEF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Greif Inc's Dividend Analysis",
+   "summary": "This article first appeared on GuruFocus.  Greif Inc (NYSE:GEF) recently announced a total dividend of $0.62 per share with the ex-dividend date set for 2026-09-17, including $0.62 per share cash dividend payable on 2026-10-01.  For income-focused investors, the ex-dividend date ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/greif-incs-dividend-analysis-110433029.html?.tsrc=rss",
+   "published_at": "2026-09-17T11:04:33Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:22Z",
+   "fingerprint": "15d6716bf01a96dd",
+   "primary_source": false,
+   "cluster_id": "65b3681e13a7262c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2870561dd2c7e10e",
+   "symbols": [
+    "GEF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Greif to Exit CRB Business, Close Sweetwater Paperboard Mill",
+   "summary": "DELAWARE, Ohio, Sept. 16, 2026 (GLOBE NEWSWIRE) -- Greif, Inc. (NYSE: GEF, GEF.B), a global leader in performance packaging products and services, announced today it will exit the coated recycled paperboard (CRB) market with the closure of its Sweetwater paperboard mill in Austel",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/greif-exit-crb-business-close-120000466.html?.tsrc=rss",
+   "published_at": "2026-09-16T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:22Z",
+   "fingerprint": "82e92e22ff2c3aed",
+   "primary_source": false,
+   "cluster_id": "2870561dd2c7e10e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ffaa29d128b96116",
+   "symbols": [
+    "GEF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Greif (GEF) On Its Fresh Dividend And The Valuation Debate",
+   "summary": "Greif (GEF) recently affirmed its shareholder return policy with a fresh quarterly dividend declaration tied to both share classes. That decision gives income focused investors a fresh reference point for assessing the stock. Greif’s share price has eased slightly in the past wee",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/greif-gef-fresh-dividend-valuation-010840989.html?.tsrc=rss",
+   "published_at": "2026-08-28T01:08:40Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:22Z",
+   "fingerprint": "7b429c854fadb0ad",
+   "primary_source": false,
+   "cluster_id": "ffaa29d128b96116",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f6423cd3298264b6",
+   "symbols": [
+    "GEF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Greif, Inc. Declares Quarterly Dividend",
+   "summary": "DELAWARE, Ohio, Aug. 25, 2026 (GLOBE NEWSWIRE) -- Greif, Inc. (NYSE: GEF, GEF.B), a global leader in industrial packaging products and services, announced today that its Board of Directors has declared quarterly cash dividends of $0.62 per share on its Class A Common Stock, and $",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/greif-inc-declares-quarterly-dividend-161800733.html?.tsrc=rss",
+   "published_at": "2026-08-25T16:18:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:22Z",
+   "fingerprint": "1a3167f6cb6267cf",
+   "primary_source": false,
+   "cluster_id": "f6423cd3298264b6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bda3e1e686b03d1c",
+   "symbols": [
+    "GEF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Greif Inc (GEF) Q3 2026 Earnings Call Highlights: Strong EBITDA Growth Amid Geopolitical Challenges",
+   "summary": "Greif Inc (GEF) reports robust financial performance with a 25% adjusted EBITDA growth, despite facing geopolitical disruptions and market uncertainties.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/greif-inc-gef-q3-2026-190222720.html?.tsrc=rss",
+   "published_at": "2026-07-29T19:02:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:22Z",
+   "fingerprint": "bec33cec9c235340",
+   "primary_source": false,
+   "cluster_id": "bda3e1e686b03d1c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8817e79ea810bbc7",
+   "symbols": [
+    "GEF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Greif, Inc. Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Greif, Inc.'s Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-greif-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-07-29T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:22Z",
+   "fingerprint": "f19844b8aaf8647a",
+   "primary_source": false,
+   "cluster_id": "8817e79ea810bbc7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "57037922aaaf6a99",
+   "symbols": [
+    "GEF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Packaging Corp Q2 Earnings Beat Estimates on Record Shipments",
+   "summary": "PKG's Q2 earnings beat estimates as record corrugated shipments and the Greif acquisition boost volumes despite pricing pressure and higher costs.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/packaging-corp-q2-earnings-beat-141200724.html?.tsrc=rss",
+   "published_at": "2026-07-23T14:12:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:22Z",
+   "fingerprint": "4f121c88b7307b53",
+   "primary_source": false,
+   "cluster_id": "57037922aaaf6a99",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "03a9e85b8af64946",
+   "symbols": [
+    "GEF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Packaging Corp Gears Up for Q2 Earnings: What to Expect?",
+   "summary": "PKG is set to post Q2 results on July 22, with revenues rising 10.7% as the Greif acquisition is expected to support earnings despite lower EPS estimates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/packaging-corp-gears-q2-earnings-140600512.html?.tsrc=rss",
+   "published_at": "2026-07-17T14:06:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:22Z",
+   "fingerprint": "9b65cd3a5a679c7b",
+   "primary_source": false,
+   "cluster_id": "03a9e85b8af64946",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
+ "insiders": [
+  {
+   "id": "00ccf142dc1c3069",
+   "symbol": "GEF",
+   "insider": "Bergwall Timothy",
+   "role": "SVP, Chief Commercial Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-12",
+   "filed_at": "2026-10-14",
+   "reporting_delay_days": 2,
+   "shares": 2000.0,
+   "price": 81.82,
+   "value": 163640.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/43920/000004392026000134/0000043920-26-000134-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "superinvestors": [],

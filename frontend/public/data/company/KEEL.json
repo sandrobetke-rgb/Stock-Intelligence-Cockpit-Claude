@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:25:50Z",
+ "generated_at": "2026-11-01T03:00:53Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -55,12 +55,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 10.3,
+   "score": 32.4,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 1,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -80,7 +82,13 @@
    "distinct_buyers": 0,
    "other_transactions": 0
   },
-  "superinvestors": null,
+  "superinvestors": {
+   "holders": 1,
+   "buyers": 1,
+   "new_buyers": 1,
+   "sellers": 0,
+   "sold_out": 0
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
   "country": "United States"
@@ -428,11 +436,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 10.3,
+  "score": 32.4,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 43.0,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 58.5,
@@ -441,35 +449,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 7,
+    "independent": 7,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -487,11 +497,463 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "7a47bdc535cfc649",
+   "symbols": [
+    "KEEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Keel Infrastructure (KEEL) Stock Gets Fair Value Trim As Analysts Weigh Funding Risks",
+   "summary": "The fair value estimate for Keel Infrastructure has shifted from US$6.55 to US$6.14, signalling a reset in the modelled price target for the stock. Analysts link this change to a more cautious view on funding costs and execution risk, even as they point to long term potential in ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/keel-infrastructure-keel-stock-gets-001933698.html?.tsrc=rss",
+   "published_at": "2026-11-01T00:19:33Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:48Z",
+   "fingerprint": "7c6c2eb57e438ba9",
+   "primary_source": false,
+   "cluster_id": "7a47bdc535cfc649",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Keel Infrastructure (KEEL) Stock erhält Fair Value Trim, da Analysten Finanzierungsrisiken wiegen"
+  },
+  {
+   "id": "711fe2954e5b3d9c",
+   "symbols": [
+    "KEEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Keel Infrastructure Schedules Third Quarter 2026 Conference Call on November 5, 2026",
+   "summary": "NEW YORK, Oct. 22, 2026 (GLOBE NEWSWIRE) -- Keel Infrastructure Corp. (Nasdaq: KEEL; TSX: KEEL) (\"Keel\" or the \"Company\"), a North American digital infrastructure and energy company, will report its third quarter 2026 financial results on Thursday, November 5 before the market op",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/keel-infrastructure-schedules-third-quarter-110000293.html?.tsrc=rss",
+   "published_at": "2026-10-22T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:48Z",
+   "fingerprint": "1026434b14ca5ee1",
+   "primary_source": false,
+   "cluster_id": "711fe2954e5b3d9c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "27e7a6c89405607b",
+   "symbols": [
+    "KEEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Keel Infrastructure (KEEL) Dropped, So What Is Behind The Latest Attention?",
+   "summary": "Keel Infrastructure (KEEL) is back in focus after local planners in Allentown, Pennsylvania granted conditional land development approval for a data center conversion of a vacant warehouse with a capacity of up to 80 MW. The conditional approval arrives after a sharp pullback, wi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/keel-infrastructure-keel-dropped-behind-211354434.html?.tsrc=rss",
+   "published_at": "2026-10-15T21:13:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:48Z",
+   "fingerprint": "c2dbf3f1b3c67b11",
+   "primary_source": false,
+   "cluster_id": "27e7a6c89405607b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a27921f8df8831ea",
+   "symbols": [
+    "KEEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Keel Infrastructure (KEEL) Stock May Still Look Pricey As 157% Run Lingers",
+   "summary": "Keel Infrastructure has seen its share price fall sharply in the short term after a strong multi year run. This puts fresh attention on whether the current US$2.55 price still lines up with what the business generates in sales. Over the past 3 years the stock has gained about 156",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/keel-infrastructure-keel-stock-may-201556194.html?.tsrc=rss",
+   "published_at": "2026-10-15T20:15:56Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:48Z",
+   "fingerprint": "817e4f1f92121d7f",
+   "primary_source": false,
+   "cluster_id": "a27921f8df8831ea",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a699308fa1ed9290",
+   "symbols": [
+    "KEEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "KEEL’s 80 MW Allentown data center site wins land-development approval: Report",
+   "summary": "KEEL, the former Bitfarms, is the intended operator of a 75 MW to 80 MW site in Allentown that cleared land-development review with a megawatt cap and generator limits. Its…",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "blockspace.media",
+   "url": "https://blockspace.media/insight/keel-allentown-data-center-conversion/?.tsrc=rss",
+   "published_at": "2026-10-14T14:51:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:48Z",
+   "fingerprint": "874281099af83d73",
+   "primary_source": false,
+   "cluster_id": "a699308fa1ed9290",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "eb5e2230394bbd6c",
+   "symbols": [
+    "KEEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Bitfarms Eyes AI Data Center Growth as Power, Permitting Shape Pipeline",
+   "summary": "Keel Infrastructure executives said demand for AI and high-performance computing infrastructure remains centered on speed to power, while developers face a more expensive financing environment and heightened political scrutiny around data center construction. Speaking at the KBW ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-bitfarms-eyes-ai-data-center-growth-as-power-permitting-shape-pipeline-2026-10-09/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-09T17:02:48Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:48Z",
+   "fingerprint": "2653e7190d5e7713",
+   "primary_source": false,
+   "cluster_id": "eb5e2230394bbd6c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "775531cbed1ae6f0",
+   "symbols": [
+    "KEEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "KEEL Stock Heads For Third Week Of Declines: Analyst Flags Concentration Risk",
+   "summary": "Northwise Project said in a post on X that it has accounted for five energy development sites for Keel Infrastructure in its latest model in September, but three of them are Pennsylvania campuses.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/keel-stock-heads-for-third-week-of-declines-analyst-flags-concentration-risk/cZDUIewRBZq?.tsrc=rss",
+   "published_at": "2026-10-08T05:44:52Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:48Z",
+   "fingerprint": "430a025b40db1afc",
+   "primary_source": false,
+   "cluster_id": "775531cbed1ae6f0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b7ad01bfa6d04256",
+   "symbols": [
+    "KEEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "KEEL Stock Up 27.7% Y/Y: Can the Momentum Last Throughout 2026?",
+   "summary": "Keel Infrastructure's HPC strategy gains traction as permitting advances, tenant talks progress and $819 million in liquidity supports site development.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/keel-stock-27-7-y-152400526.html?.tsrc=rss",
+   "published_at": "2026-09-29T15:24:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:48Z",
+   "fingerprint": "c7958fe9fd6ba505",
+   "primary_source": false,
+   "cluster_id": "b7ad01bfa6d04256",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a128c75b449c2bf0",
+   "symbols": [
+    "KEEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "KEEL Stock Edges Higher Overnight As Analyst Views Clash: One Sees Nearly 2X Upside, Another Flags Execution Risks",
+   "summary": "Jones initiated coverage with a ‘Buy’ rating and a $7.50 price target, implying upside of more than 97% from its last close.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/keel-stock-edges-higher-overnight-as-analyst-views-clash-one-sees-nearly-2-x-upside-another-flags-execution-risks/cZMSX4ZRBfQ?.tsrc=rss",
+   "published_at": "2026-09-28T01:45:42Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:48Z",
+   "fingerprint": "150dc0e74b4aaf99",
+   "primary_source": false,
+   "cluster_id": "a128c75b449c2bf0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "688b02040f360657",
+   "symbols": [
+    "KEEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Keel Infrastructure (KEEL) Lands Industry Index Spot And Backup Power Deal",
+   "summary": "Keel Infrastructure (NasdaqGM:KEEL) has been added to the S&amp;P Software & Services Select Industry Index, effective this week. The company entered a new agreement with PowerSecure Inc. to supply integrated backup power for its Moses Lake data center campus. PowerSecure's solut",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/keel-infrastructure-keel-lands-industry-211524580.html?.tsrc=rss",
+   "published_at": "2026-09-22T21:15:24Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:48Z",
+   "fingerprint": "81494c891a5f4620",
+   "primary_source": false,
+   "cluster_id": "688b02040f360657",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "901aef636236f064",
+   "symbols": [
+    "KEEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Bitcoin Mining Faces A Shakeout As CORZ, KEEL, IREN, CIFR Get Ready To Exit, Says CoinShares",
+   "summary": "CoinShares said on Tuesday that at least 35 EH/s of computing power will leave the listed miners in the third quarter.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/bitcoin-mining-shakeout-as-corz-keel-iren-cifr-exit-coin-shares/cZtnLkIRBcj?.tsrc=rss",
+   "published_at": "2026-09-15T16:15:46Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:48Z",
+   "fingerprint": "380ea3a6f07e49da",
+   "primary_source": false,
+   "cluster_id": "901aef636236f064",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "becbe2b9ef3a5e03",
+   "symbols": [
+    "KEEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "PowerSecure Builds Standby Power for Keel's Data Center Campus",
+   "summary": "Modular PowerBlocks will provide standby power and peak shaving at the campus",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/powersecure-builds-standby-power-keels-184114207.html?.tsrc=rss",
+   "published_at": "2026-09-10T18:41:14Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:48Z",
+   "fingerprint": "1e4ef66ebe5d459d",
+   "primary_source": false,
+   "cluster_id": "becbe2b9ef3a5e03",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8de26d52de7a5f12",
+   "symbols": [
+    "KEEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Southern Company's Unit PowerSecure Wins Data Center Power Project",
+   "summary": "SO's PowerSecure lands a data center deal with Keel Infrastructure, delivering scalable backup power and peak-shaving capabilities.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/southern-companys-unit-powersecure-wins-142900002.html?.tsrc=rss",
+   "published_at": "2026-09-10T14:29:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:48Z",
+   "fingerprint": "6e135e64a7bfd00b",
+   "primary_source": false,
+   "cluster_id": "8de26d52de7a5f12",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8dcc31533d7cff44",
+   "symbols": [
+    "KEEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "KEEL Stock On Track To Break 4-Day Rally: PowerSecure AI Data Center Deal Fails To Prevent Pull Back",
+   "summary": "With the support of a 2.2-gigawatt power pipeline, the deal is a part of Keel’s transition from Bitcoin mining to AI and HPC data centers.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/keel-stock-on-track-to-break-4-day-rally-power-secure-ai-data-center-deal-fails-to-prevent-pull-back/cZt7JySRJzo?.tsrc=rss",
+   "published_at": "2026-09-09T16:26:31Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:48Z",
+   "fingerprint": "8f0336edb85bcb24",
+   "primary_source": false,
+   "cluster_id": "8dcc31533d7cff44",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2eed38a09d655ac5",
+   "symbols": [
+    "KEEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "PowerSecure executes agreement with Keel Infrastructure to support Moses Lake Data Center Campus",
+   "summary": "PowerSecure, a subsidiary of Southern Company and a leading provider of resilient, innovative energy solutions, today announced it has entered into an agreement with Keel Infrastructure (Nasdaq, TSX: KEEL) to provide a fully integrated backup resiliency solution for Keel Infrastr",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/powersecure-executes-agreement-keel-infrastructure-140000776.html?.tsrc=rss",
+   "published_at": "2026-09-09T14:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:48Z",
+   "fingerprint": "e97adae229cc9769",
+   "primary_source": false,
+   "cluster_id": "2eed38a09d655ac5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cad1614aa867156a",
+   "symbols": [
+    "KEEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "KEEL Stock Jumps 56% in 6 Months: Here's What You Should Know",
+   "summary": "Keel's 56% six-month surge reflects its HPC/AI pivot, a 2.2-GW pipeline and progress at key data-center sites as tenant talks advance.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/keel-stock-jumps-56-6-155100830.html?.tsrc=rss",
+   "published_at": "2026-08-27T15:51:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:48Z",
+   "fingerprint": "0b8099dd6f8bb99f",
+   "primary_source": false,
+   "cluster_id": "cad1614aa867156a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c6f8ef6a21294e50",
+   "symbols": [
+    "KEEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can KEEL Stock Reverse 4 Weeks In The Red? Retail Eyes AI Deal Announcement Soon As Shares Climb",
+   "summary": "Keel Infrastructure stock has had a streak of red weeks recently, but a new deal could help reverse the trend.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/can-keel-stock-reverse-4-weeks-in-the-red-retail-eyes-ai-deal-announcement-soon-as-shares-climb/cZYN17CRJoM?.tsrc=rss",
+   "published_at": "2026-08-26T04:11:20Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:48Z",
+   "fingerprint": "2574ca0a11d75f9c",
+   "primary_source": false,
+   "cluster_id": "c6f8ef6a21294e50",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bd625ccbfdd27dcc",
+   "symbols": [
+    "KEEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "KEEL says Pennsylvania data center rules will not delay Panther Creek or Sharon",
+   "summary": "KEEL said its two Pennsylvania projects already follow the state’s new requirements on power costs, local approval and environmental protections, leaving current permitting schedules unchanged.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "blockspace.media",
+   "url": "https://blockspace.media/insight/keel-pennsylvania-data-center-rules-permitting-schedules/?.tsrc=rss",
+   "published_at": "2026-08-21T15:34:30Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:48Z",
+   "fingerprint": "649fe6185d20326c",
+   "primary_source": false,
+   "cluster_id": "bd625ccbfdd27dcc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "667c6fb4a8801bab",
+   "symbols": [
+    "KEEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "KEEL Stock Edges Higher Overnight: Second Insider Buy In A Week Sparks Bullish Retail Chatter",
+   "summary": "In a filing with the U.S. Securities and Exchange Commission, the company revealed that COO Liam Daniel Wilson purchased 30,769 shares of KEEL at a weighted average price of $3.25 per share, worth a total of about $107,691.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/keel-stock-edges-higher-overnight-second-insider-buy-in-a-week-sparks-bullish-retail-chatter/cZYBKZ9RJNR?.tsrc=rss",
+   "published_at": "2026-08-21T03:37:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:48Z",
+   "fingerprint": "2f4db53b60c7dce9",
+   "primary_source": false,
+   "cluster_id": "667c6fb4a8801bab",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fdd30811025a5870",
+   "symbols": [
+    "KEEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Keel Infrastructure Supports Governor Shapiro’s GRID Standards for Responsible Data Center Development",
+   "summary": "Panther Creek and Sharon permitting continue to proceed on schedule and are unaffected by Executive Order 2026-05NEW YORK, Aug. 20, 2026 (GLOBE NEWSWIRE) -- Keel Infrastructure Corp. (Nasdaq: KEEL; TSX: KEEL) (\"Keel\" or the \"Company\"), a North American digital infrastructure and ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/keel-infrastructure-supports-governor-shapiro-200500918.html?.tsrc=rss",
+   "published_at": "2026-08-20T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:48Z",
+   "fingerprint": "62ce06b1809ce7a2",
+   "primary_source": false,
+   "cluster_id": "fdd30811025a5870",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "George Soros",
+   "fund": "Soros Fund Management",
+   "action": "new",
+   "weight_pct": 0.01,
+   "shares_change_pct": null,
+   "value": 869036.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }
