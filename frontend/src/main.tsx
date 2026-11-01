@@ -116,6 +116,13 @@ function App() {
       </aside>
       <div className="main-col">
         <TickerBand />
+        {summary.data && !demo && (() => {
+          const ageH = (Date.now() - new Date(summary.data.generated_at).getTime()) / 36e5;
+          const wd = new Date().getDay();
+          return ageH > (wd === 0 || wd === 1 ? 60 : 30) ? (
+            <div className="demo-banner" role="alert">Die Daten sind {Math.round(ageH)} Stunden alt. Der letzte automatische Lauf ist vermutlich fehlgeschlagen. Bitte unter GitHub → Actions prüfen.</div>
+          ) : null;
+        })()}
         {demo ? (
           <div className="demo-banner" role="alert">
             DEMO-Daten: Alle Unternehmen (Ticker DMxx), Zitate und Kennzahlen sind synthetisch. Echte Daten erscheinen, sobald die

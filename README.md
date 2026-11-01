@@ -6,6 +6,54 @@ Unternehmensanalyse mit vier strikt getrennten Bewertungsdimensionen – **Compa
 
 Informations- und Analyseplattform. Keine Anlageberatung, keine Kauf-/Verkaufsempfehlung, keine Orderausführung.
 
+## Bedienung im Alltag
+
+**Adresse:** https://sandrobetke-rgb.github.io/Stock-Intelligence-Cockpit-Claude/
+
+| Wann | Was passiert automatisch |
+|---|---|
+| Mo–Fr 06:15 MEZ | Morgenlauf: Nachrichten, Insider, Politiker, Trump, Social Media, Termine; **Tagesbericht** per Push/E-Mail |
+| Mo–Fr 22:40 MEZ | Abendlauf: zusätzlich Kurse, Fundamentaldaten, Setups/Strategien, Superinvestoren; **Watchlist-Alarme** |
+| bei jeder Änderung im Repo | kurzer Lauf ohne Datenabruf (z. B. nach Speichern der Watchlist) |
+
+**Seiten:** Tagesbericht · Dashboard · Watchlist & Alarme · Swing-Setups · Signal-Zusammenfluss · Opportunity Radar ·
+Trump Mention Radar · Markt- & Wirtschaftsticker · Quality Stocks · Superinvestoren · Politiker-Trades ·
+Insider & Institutionen · Social Media · Fact-Checking · Risk Overview
+
+**Kennzeichnung an jeder Aktie:** ☆ Watchlist · **A–E** Qualitätsnote (Company Quality ≥80/65/50/35/darunter, ? = zu wenige Daten) ·
+**↗ ↘ →** Trend (über/unter EMA 200 mit EMA 20 vs. 50) · schwarzes Kürzel = heute erfülltes Setup bzw. Strategie ·
+„Zahlen in X T.“ / „Ex-Div.“ = anstehender Termin.
+
+**Setups/Strategien (Tagesbasis, nach US-Börsenschluss):**
+S01 Rebound · S02 Rising Star · S03 Breakout · S04 HHLL+OBV (deine TradingView-Screener) ·
+DSM Daily Swing Master · RSI2 Überdehnter Rücksetzer · QM Momentum-Breakout (regelbasierte Annäherungen).
+Einstiegsplan je Aktie: Auslöser, max. +2 %, Stopp 1,5 × ATR, Ziel 2:1, Stückzahl bei 1 % Risiko (Kapital im Browser eintragen).
+Trader XO (S04) ist durch EMA 12 > EMA 25 angenähert; „Daily Score 8+“ und „Trend-Bestätigter Rebound“ sind noch nicht abgebildet.
+
+### Secrets (GitHub → Settings → Secrets and variables → Actions)
+
+| Name | Pflicht | Zweck |
+|---|---|---|
+| `SIC_USER_AGENT` | ja | Kontaktangabe für SEC EDGAR, z. B. `StockIntelligenceCockpit/1.1 (mail@example.com)` |
+| `NTFY_TOPIC` | empfohlen | Push aufs Handy über die App ntfy (gleicher Themenname in der App abonnieren) |
+| `REDDIT_CLIENT_ID`, `REDDIT_CLIENT_SECRET` | empfohlen | eigener kostenloser Reddit-Zugang (reddit.com/prefs/apps, Typ „script“) |
+| `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASSWORD`, `ALERT_EMAIL_TO` | optional | Alarme und Tagesbericht per E-Mail |
+| `OPENFIGI_API_KEY` | optional | schnellere CUSIP-Zuordnung bei Superinvestoren |
+
+### Pflege per CSV (`backend/data/imports/`)
+
+`watchlist/*.csv` (vom Cockpit erzeugt) · `trump_statements.csv` (Truth-Social-Posts) · `aliases.csv` (Firmennamen für Trump/Social) ·
+`market_calendar.csv` (Termine) · `superinvestors.csv` (beobachtete Investoren) · `index_changes.csv`, `exclusions.csv` (Universum) ·
+`fact_checks.csv`, `quality_manual.csv`, `risk_manual.csv`, `insider_manual.csv` (BaFin), `institutional_holdings.csv`, `social_mentions.csv`.
+
+### Bekannte Grenzen (Stand 01.11.2026)
+
+- Senat (eFD), Truth Social und Reddit ohne eigenen Zugang blockieren Abrufe von GitHub-Servern.
+- X/Twitter ist nicht kostenlos angebunden; StockTwits dient als Ersatz.
+- Kurse/Fundamentaldaten (Yahoo), Termine (Nasdaq) und Indexlisten (Wikipedia/iShares) sind inoffizielle bzw. Proxy-Quellen.
+- 13F-Depots: Quartalsstand, bis 45 Tage verzögert. Politiker-Trades: bis 45 Tage verzögert, Wertbandbreiten.
+- Alle Scores sind ein Startmodell (Gewichte in `backend/sic/config.py`); keine Anlageberatung.
+
 ## Aufbau
 
 ```

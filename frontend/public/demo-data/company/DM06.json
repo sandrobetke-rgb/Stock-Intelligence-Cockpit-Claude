@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T08:25:02Z",
+ "generated_at": "2026-11-01T08:48:21Z",
  "schema_version": "1.1.0",
  "mode": "demo",
  "profile": {
@@ -59,7 +59,17 @@
     "green": false,
     "day_high": 177.55233032082978,
     "day_low": 174.66976323295114,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 8.881050496511122,
+    "adx14": 20.468208525156978,
+    "ema10": 178.71526325062837,
+    "sma200": 142.39095756964016,
+    "perf_63d": 26.06797487689374,
+    "adr20_pct": 1.8044284687084058,
+    "range10_pct": 7.025388376052177,
+    "high10_prev": 186.16669186808886,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -89,16 +99,41 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": false
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
-    "S03"
+    "S03",
+    "RSI2"
    ],
    "near": {
     "S01": 0.5,
     "S02": 0.7,
     "S03": 1.0,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.8333333333333334,
+    "RSI2": 1.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -242,7 +277,17 @@
     "green": false,
     "day_high": 177.55233032082978,
     "day_low": 174.66976323295114,
-    "history_ok": true
+    "history_ok": true,
+    "rsi2": 8.881050496511122,
+    "adx14": 20.468208525156978,
+    "ema10": 178.71526325062837,
+    "sma200": 142.39095756964016,
+    "perf_63d": 26.06797487689374,
+    "adr20_pct": 1.8044284687084058,
+    "range10_pct": 7.025388376052177,
+    "high10_prev": 186.16669186808886,
+    "pullback_ema20": true,
+    "trend": "up"
    },
    "criteria": {
     "S01": {
@@ -272,16 +317,41 @@
      "OBV steigend": false,
      "Trend-Signal (EMA12>EMA25)": true,
      "> 5 % unter 52W-Hoch": false
+    },
+    "DSM": {
+     "EMA 20 > EMA 50 > EMA 200": true,
+     "Rücksetzer an EMA 20 (3 T.)": true,
+     "Schluss über Vortageshoch": false,
+     "ATR% 1,5–5": true,
+     "RelVol ≥ 1": true,
+     "ADX ≥ 20": true
+    },
+    "RSI2": {
+     "über SMA 200": true,
+     "RSI(2) < 10": true,
+     "unter EMA 10": true
+    },
+    "QM": {
+     "Vorlauf ≥ 30 % (3 M.)": false,
+     "enge Konsolidierung": true,
+     "über EMA 10 und 20": false,
+     "Ausbruch über 10-T.-Hoch": false,
+     "RelVol ≥ 1,5": true,
+     "ADR ≥ 3,5 %": false
     }
    },
    "hits": [
-    "S03"
+    "S03",
+    "RSI2"
    ],
    "near": {
     "S01": 0.5,
     "S02": 0.7,
     "S03": 1.0,
-    "S04": 0.6
+    "S04": 0.6,
+    "DSM": 0.8333333333333334,
+    "RSI2": 1.0,
+    "QM": 0.3333333333333333
    },
    "filter": {
     "Tag grün": false,
@@ -499,7 +569,7 @@
   ],
   "source": "DEMO (synthetisch)",
   "source_url": null,
-  "as_of": "2026-11-01T08:25:02Z",
+  "as_of": "2026-11-01T08:48:21Z",
   "fiscal_year_end": "2025-12-31",
   "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
@@ -694,9 +764,9 @@
    "source": "demo-blog.example",
    "source_domain": "demo-blog.example",
    "url": "https://demo-blog.example/demo/5",
-   "published_at": "2026-10-13T19:37:58Z",
+   "published_at": "2026-10-13T20:01:17Z",
    "date_only": false,
-   "captured_at": "2026-11-01T08:25:03Z",
+   "captured_at": "2026-11-01T08:48:21Z",
    "fingerprint": "dd9cb7aaaffb0747",
    "primary_source": false,
    "cluster_id": "2ce945de1b7d570e",
@@ -715,9 +785,9 @@
    "source": "demo-blog.example",
    "source_domain": "demo-blog.example",
    "url": "https://demo-blog.example/demo/17",
-   "published_at": "2026-10-28T14:48:20Z",
+   "published_at": "2026-10-28T15:11:38Z",
    "date_only": false,
-   "captured_at": "2026-11-01T08:25:03Z",
+   "captured_at": "2026-11-01T08:48:21Z",
    "fingerprint": "f69b559af7f62a1b",
    "primary_source": false,
    "cluster_id": "15694c38efe5cd47",
@@ -736,9 +806,9 @@
    "source": "demo-news.example",
    "source_domain": "demo-news.example",
    "url": "https://demo-news.example/demo/33",
-   "published_at": "2026-10-08T00:15:38Z",
+   "published_at": "2026-10-08T00:38:56Z",
    "date_only": false,
-   "captured_at": "2026-11-01T08:25:03Z",
+   "captured_at": "2026-11-01T08:48:21Z",
    "fingerprint": "fc47fd60f6141cb1",
    "primary_source": false,
    "cluster_id": "54f6376ff94724e3",
@@ -757,9 +827,9 @@
    "source": "demo-news.example",
    "source_domain": "demo-news.example",
    "url": "https://demo-news.example/demo/34",
-   "published_at": "2026-10-09T00:42:40Z",
+   "published_at": "2026-10-09T01:05:58Z",
    "date_only": false,
-   "captured_at": "2026-11-01T08:25:03Z",
+   "captured_at": "2026-11-01T08:48:21Z",
    "fingerprint": "f69b559af7f62a1b",
    "primary_source": false,
    "cluster_id": "15694c38efe5cd47",
@@ -778,9 +848,9 @@
    "source": "demo-wire.example",
    "source_domain": "demo-wire.example",
    "url": "https://demo-wire.example/demo/53",
-   "published_at": "2026-10-23T19:05:27Z",
+   "published_at": "2026-10-23T19:28:45Z",
    "date_only": false,
-   "captured_at": "2026-11-01T08:25:03Z",
+   "captured_at": "2026-11-01T08:48:21Z",
    "fingerprint": "fc47fd60f6141cb1",
    "primary_source": false,
    "cluster_id": "54f6376ff94724e3",
@@ -799,9 +869,9 @@
    "source": "demo-times.example",
    "source_domain": "demo-times.example",
    "url": "https://demo-times.example/demo/91",
-   "published_at": "2026-10-25T21:26:45Z",
+   "published_at": "2026-10-25T21:50:03Z",
    "date_only": false,
-   "captured_at": "2026-11-01T08:25:03Z",
+   "captured_at": "2026-11-01T08:48:21Z",
    "fingerprint": "f69b559af7f62a1b",
    "primary_source": false,
    "cluster_id": "15694c38efe5cd47",
@@ -820,9 +890,9 @@
    "source": "demo-times.example",
    "source_domain": "demo-times.example",
    "url": "https://demo-times.example/demo/113",
-   "published_at": "2026-10-15T11:51:41Z",
+   "published_at": "2026-10-15T12:14:59Z",
    "date_only": false,
-   "captured_at": "2026-11-01T08:25:03Z",
+   "captured_at": "2026-11-01T08:48:21Z",
    "fingerprint": "f69b559af7f62a1b",
    "primary_source": false,
    "cluster_id": "15694c38efe5cd47",
@@ -841,9 +911,9 @@
    "source": "demo-news.example",
    "source_domain": "demo-news.example",
    "url": "https://demo-news.example/demo/122",
-   "published_at": "2026-10-14T23:51:00Z",
+   "published_at": "2026-10-15T00:14:18Z",
    "date_only": false,
-   "captured_at": "2026-11-01T08:25:03Z",
+   "captured_at": "2026-11-01T08:48:21Z",
    "fingerprint": "f69b559af7f62a1b",
    "primary_source": false,
    "cluster_id": "15694c38efe5cd47",

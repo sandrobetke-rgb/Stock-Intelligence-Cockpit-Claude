@@ -23,8 +23,15 @@ SETUP_INFO = {
     "S01": {"name": "S01 Rebound", "text": "Überverkaufte Umkehr: RSI war in den letzten 5 Tagen unter 35, heute Hammer- oder bullische Engulfing-Kerze."},
     "S02": {"name": "S02 Rising Star", "text": "Frisch über EMA 200: Kurs > EMA 200 (max. 5 % darüber), Kurs < EMA 50, RSI 45–62, RelVol > 0,8, EMA 20 > SMA 50, Marktkap. > 1 Mrd., Volumen 30T > 1 Mio., Kurs > 10, Tag positiv."},
     "S03": {"name": "S03 Breakout", "text": "Nahe 52-Wochen-Hoch (0–5 % darunter), MACD über Signallinie, Volumen über Schnitt."},
+    "DSM": {"name": "Daily Swing Master", "kind": "strategy", "text": "Trend-Pullback-Breakout: EMA 20 > EMA 50 > EMA 200, Rücksetzer an die EMA 20 in den letzten 3 Tagen, heute Schluss über dem Vortageshoch, ATR% 1,5–5, RelVol ≥ 1, ADX ≥ 20. Laut Strategie Stopp 2 × ATR, Ziel 2:1."},
+    "RSI2": {"name": "Überdehnter Rücksetzer", "kind": "strategy", "text": "Mean Reversion (Annäherung, RSI(2)-Ansatz): Kurs über SMA 200, RSI(2) unter 10, Schluss unter EMA 10. Kauf der Überdehnung im Aufwärtstrend, Ausstieg bei Rückkehr über EMA 10."},
+    "QM": {"name": "Momentum-Breakout (Qullamaggie)", "kind": "strategy", "text": "Starker Vorlauf (≥ 30 % in 3 Monaten), enge Konsolidierung nahe Hoch, Kurs über EMA 10 und 20, heute Ausbruch über das 10-Tage-Hoch mit RelVol ≥ 1,5, ADR ≥ 3,5 %."},
     "S04": {"name": "S04 HHLL + OBV", "text": "Höhere Hochs und höhere Tiefs, steigendes OBV, Trend-Signal (EMA 12 > EMA 25, Annäherung an Trader XO), mehr als 5 % Abstand zum 52-Wochen-Hoch. Einstieg über dem letzten Higher High."},
 }
+
+
+SETUP_INFO = {k: SETUP_INFO[k] for k in ("S01", "S02", "S03", "S04", "DSM", "RSI2", "QM")}
+SCREENERS = {"S01", "S02", "S03", "S04"}
 
 
 def _ema(s: pd.Series, n: int) -> pd.Series:
@@ -43,6 +50,18 @@ def _atr(df: pd.DataFrame, n: int = 14) -> pd.Series:
     pc = df["Close"].shift(1)
     tr = pd.concat([df["High"] - df["Low"], (df["High"] - pc).abs(), (df["Low"] - pc).abs()], axis=1).max(axis=1)
     return tr.ewm(alpha=1 / n, adjust=False).mean()
+
+
+def _adx(df: pd.DataFrame, n: int = 14) -> float:
+    h, l, c = df["High"], df["Low"], df["Close"]
+    up, dn = h.diff(), -l.diff()
+    plus = ((up > dn) & (up > 0)) * up
+    minus = ((dn > up) & (dn > 0)) * dn
+    atr = _atr(df, n)
+    pdi = 100 * plus.ewm(alpha=1 / n, adjust=False).mean() / atr
+    mdi = 100 * minus.ewm(alpha=1 / n, adjust=False).mean() / atr
+    dx = 100 * (pdi - mdi).abs() / (pdi + mdi).replace(0, np.nan)
+    return float(dx.ewm(alpha=1 / n, adjust=False).mean().iloc[-1])
 
 
 def _candles(df: pd.DataFrame) -> dict:
@@ -99,6 +118,13 @@ def evaluate(df: pd.DataFrame, market_cap: float | None = None) -> dict | None:
         "xo_bull_approx": ema[12] > ema[25], "higher_high": hh, "higher_low": hl, "last_higher_high": last_hh,
         **cdl, "day_high": float(high.iloc[-1]), "day_low": float(low.iloc[-1]),
         "history_ok": len(df) >= 220,   # EMA 200 braucht Vorlauf
+        "rsi2": float(_rsi(close, 2).iloc[-1]), "adx14": _adx(df), "ema10": float(_ema(close, 10).iloc[-1]),
+        "sma200": float(close.rolling(200).mean().iloc[-1]) if len(close) >= 200 else None,
+        "perf_63d": (last / float(close.iloc[-64]) - 1) * 100 if len(close) > 64 else None,
+        "adr20_pct": float(((high / low - 1) * 100).tail(20).mean()),
+        "range10_pct": (float(high.iloc[-11:-1].max()) / float(low.iloc[-11:-1].min()) - 1) * 100,
+        "high10_prev": float(high.iloc[-11:-1].max()),
+        "pullback_ema20": bool((low.tail(3) <= _ema(close, 20).tail(3) * 1.01).any()),
     }
     mc = market_cap
     crit = {
@@ -128,7 +154,35 @@ def evaluate(df: pd.DataFrame, market_cap: float | None = None) -> dict | None:
             "Trend-Signal (EMA12>EMA25)": t["xo_bull_approx"], "> 5 % unter 52W-Hoch": t["dist_52w_high_pct"] > 5,
         },
     }
+    sma200 = t["sma200"]
+    crit["DSM"] = {
+        "EMA 20 > EMA 50 > EMA 200": ema[20] > ema[50] > ema[200],
+        "Rücksetzer an EMA 20 (3 T.)": t["pullback_ema20"],
+        "Schluss über Vortageshoch": last > float(high.iloc[-2]),
+        "ATR% 1,5–5": 1.5 <= t["atr_pct"] <= 5,
+        "RelVol ≥ 1": (rvol or 0) >= 1.0,
+        "ADX ≥ 20": t["adx14"] >= 20,
+    }
+    crit["RSI2"] = {
+        "über SMA 200": sma200 is not None and last > sma200,
+        "RSI(2) < 10": t["rsi2"] < 10,
+        "unter EMA 10": last < t["ema10"],
+    }
+    crit["QM"] = {
+        "Vorlauf ≥ 30 % (3 M.)": (t["perf_63d"] or 0) >= 30,
+        "enge Konsolidierung": t["range10_pct"] <= max(2.5 * t["adr20_pct"], 8),
+        "über EMA 10 und 20": last > t["ema10"] and last > ema[20],
+        "Ausbruch über 10-T.-Hoch": last > t["high10_prev"],
+        "RelVol ≥ 1,5": (rvol or 0) >= 1.5,
+        "ADR ≥ 3,5 %": t["adr20_pct"] >= 3.5,
+    }
     hits = [k for k, c in crit.items() if all(c.values())]
+    if last > ema[200] and ema[20] > ema[50]:
+        t["trend"] = "up"
+    elif last < ema[200] and ema[20] < ema[50]:
+        t["trend"] = "down"
+    else:
+        t["trend"] = "side"
     flt = {
         "Tag grün": chg > 0,
         f"RelVol ≥ {FILTER['rvol_min']}": (rvol or 0) >= FILTER["rvol_min"],

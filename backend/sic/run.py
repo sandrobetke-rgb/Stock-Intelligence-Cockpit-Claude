@@ -379,7 +379,9 @@ def run(fetch: bool = True, skip_fundamentals: bool = False, skip_insider: bool 
         rep["sent"] = report.send_report(rep, os.environ.get("COCKPIT_URL")) if morning else False
         payloads["report.json"] = {"generated_at": iso(now), "schema_version": SCHEMA_VERSION, "mode": "live", **rep}
     payloads["quality-map.json"] = {"generated_at": iso(now), "schema_version": SCHEMA_VERSION, "mode": "live",
-                                    "q": {s["symbol"]: [s["quality"]["score"], s["quality"]["coverage_pct"]] for s in stocks_out}}
+                                    "q": {s["symbol"]: [s["quality"]["score"], s["quality"]["coverage_pct"],
+                                                        ((s.get("swing") or {}).get("tech") or {}).get("trend"),
+                                                        (s.get("swing") or {}).get("hits") or []] for s in stocks_out}}
     payloads["summary.json"]["steps"] = rl.steps
     result = publish(payloads, details)
     log.info("Veröffentlicht: %s | Fehler: %s", result["published"], [s for s in rl.steps if s["status"] == "error"])

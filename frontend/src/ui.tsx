@@ -109,6 +109,27 @@ export function QBadge({ symbol }: { symbol: string }) {
   return <span className={`qbadge ${g.tone}`} title={score == null ? "Company Quality: zu wenige Daten" : `Company Quality ${Math.round(score)} von 100 (Datenabdeckung ${cov} %)`}>{g.label}</span>;
 }
 
+const TREND: Record<string, [string, string, string]> = {
+  up: ["↗", "tr-up", "Aufwärtstrend (über EMA 200, EMA 20 > EMA 50): Long-Seite"],
+  down: ["↘", "tr-down", "Abwärtstrend (unter EMA 200, EMA 20 < EMA 50)"],
+  side: ["→", "tr-side", "Kein klarer Trend"],
+};
+
+/** Trend und aktuell erfüllte Setups/Strategien (Tagesbasis, letzter Börsenschluss). */
+export function SetupBadge({ symbol }: { symbol: string }) {
+  const q = useQuality();
+  const e = q?.[symbol];
+  if (!e) return null;
+  const trend = e[2] ? TREND[e[2]] : null;
+  const hits = e[3] ?? [];
+  return (
+    <>
+      {trend ? <span className={`trend ${trend[1]}`} title={trend[2]}>{trend[0]}</span> : null}
+      {hits.length ? <a className="setup-tag" href="#/swing" title="Heute erfüllte Setups/Strategien – Details auf der Aktienseite">{hits.join(" ")}</a> : null}
+    </>
+  );
+}
+
 /** Filter "Qualität ab" für Listen mit Aktienbezug. */
 export function QualitySelect({ value, onChange }: { value: number; onChange: (v: number) => void }) {
   return (
@@ -132,6 +153,7 @@ export function CompanyLink({ symbol, name, star = true }: { symbol: string; nam
       <a className="co-link" href={`#/company/${encodeURIComponent(symbol)}`}>
         <strong>{symbol}</strong>{name ? <span className="co-name"> {name}</span> : null}
       </a>
+      <SetupBadge symbol={symbol} />
     </span>
   );
 }

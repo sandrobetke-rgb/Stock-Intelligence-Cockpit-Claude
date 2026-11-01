@@ -59,7 +59,7 @@ def candidates(stocks: list[dict]) -> list[dict]:
     out = []
     for s in stocks:
         sw = s.get("swing") or {}
-        if s["status"] != "active" or not sw.get("hits") or not sw.get("filter_pass"):
+        if s["status"] != "active" or not set(sw.get("hits") or []) & {"S01", "S02", "S03", "S04"} or not sw.get("filter_pass"):
             continue
         if any(e["type"] == "earnings" and 0 <= e["days_until"] <= 5 for e in s.get("events") or []):
             continue

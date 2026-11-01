@@ -31,7 +31,7 @@ function SwingView({ rows, meta }: { rows: StockRow[]; meta: SwingMeta }) {
   const [capital, setCapital] = useState(readCap);
   const list = useMemo(() => rows.filter((r) => r.status === "active" && r.swing?.hits.length
     && (setup === "ALL" || r.swing.hits.includes(setup))
-    && (!onlyFilter || r.swing.filter_pass)
+    && (!onlyFilter || r.swing.filter_pass || (setup !== "ALL" && !setup.startsWith("S0")))
     && (!noEarnings || !(r.events ?? []).some((e) => e.type === "earnings" && e.days_until >= 0 && e.days_until <= 5))
     && (!minQ || (r.quality.score ?? -1) >= minQ)), [rows, setup, onlyFilter, noEarnings, minQ]);
   const counts = useMemo(() => Object.fromEntries(Object.keys(meta.setups).map((k) => [k, rows.filter((r) => r.swing?.hits.includes(k)).length])), [rows, meta]);
@@ -40,7 +40,7 @@ function SwingView({ rows, meta }: { rows: StockRow[]; meta: SwingMeta }) {
   const f = meta.filter;
   return (
     <Page title="Swing-Setups"
-      intro={<>Deine Screener S01–S04 auf Tagesbasis nach US-Börsenschluss ({fmt.date(rows.find((r) => r.market.price_date)?.market.price_date)}), mit Abendfilter und Einstiegsplan für den nächsten Handelstag.
+      intro={<>Deine Screener S01–S04 und deine Strategien (Daily Swing Master, Überdehnter Rücksetzer, Momentum-Breakout; regelbasierte Annäherung, bitte im Chart gegenprüfen) auf Tagesbasis nach US-Börsenschluss ({fmt.date(rows.find((r) => r.market.price_date)?.market.price_date)}), mit Abendfilter und Einstiegsplan für den nächsten Handelstag.
         Der Einstieg selbst bleibt deine Regel im Chart: 1H-Kerze schließt ab 16:00 MEZ über dem Auslöser, höchstens {meta.entry.max_above_trigger_pct} % darüber.</>}>
       {tomorrowFriday || isFriday ? <p className="state state-warn">{isFriday ? "Heute ist Freitag" : "Morgen ist Freitag"}: laut deinen Regeln keine neuen Trades. Die Liste gilt dann für Montag.</p> : null}
       <div className="filters">
@@ -50,7 +50,7 @@ function SwingView({ rows, meta }: { rows: StockRow[]; meta: SwingMeta }) {
             <button key={k} role="tab" aria-selected={setup === k} className={`tab ${setup === k ? "sel" : ""}`} onClick={() => setSetup(k)} title={v.text}>{v.name} ({counts[k]})</button>
           ))}
         </div>
-        <label className="check"><input type="checkbox" checked={onlyFilter} onChange={(e) => setOnlyFilter(e.target.checked)} /> Abendfilter (grün, RelVol ≥ {fmt.num(f.rvol_min, 1)}, RSI ≤ {f.rsi_max}, ATR% {fmt.num(f.atr_pct_min, 1)}–{fmt.num(f.atr_pct_max, 0)}, über EMA 200)</label>
+        <label className="check"><input type="checkbox" checked={onlyFilter} onChange={(e) => setOnlyFilter(e.target.checked)} /> Abendfilter für S01–S04 (grün, RelVol ≥ {fmt.num(f.rvol_min, 1)}, RSI ≤ {f.rsi_max}, ATR% {fmt.num(f.atr_pct_min, 1)}–{fmt.num(f.atr_pct_max, 0)}, über EMA 200)</label>
         <label className="check"><input type="checkbox" checked={noEarnings} onChange={(e) => setNoEarnings(e.target.checked)} /> Keine Zahlen in den nächsten 5 Tagen</label>
         <label>Quality ab<input type="number" min={0} max={100} step={10} value={minQ} onChange={(e) => setMinQ(Number(e.target.value))} /></label>
         <label>Kapital (für Stückzahl)<input type="number" min={0} step={1000} value={capital || ""} placeholder="z. B. 25000"

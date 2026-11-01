@@ -163,7 +163,7 @@ export function githubWatchlistUrl(symbols: string[]) {
 }
 
 // ------------------------------------------------------------ Qualität --
-type QMap = Record<string, [number | null, number]>;
+type QMap = Record<string, [number | null, number, ("up" | "down" | "side" | null)?, string[]?]>;
 let qPromise: Promise<QMap> | null = null;
 
 /** Company-Quality-Score je Aktie (für Kennzeichnung und Filter auf allen Seiten). */

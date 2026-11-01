@@ -676,3 +676,14 @@ def test_single_word_or_generic_names_are_not_verified():
     idx = build_alias_index(secs)
     hits = link_entities("Presidential Message on Reformation Day. American fishermen first.", idx, set(secs))
     assert all(not h["mapping_verified"] for h in hits) and "AIG" not in {h["symbol"] for h in hits}
+
+
+def test_strategies_and_trend():
+    from sic.setups import evaluate
+    up = list(np.linspace(50, 100, 300))
+    r = evaluate(_ohlc(up))
+    assert r["tech"]["trend"] == "up" and {"DSM", "RSI2", "QM"} <= set(r["criteria"])
+    # starker Rücksetzer im Aufwärtstrend -> RSI(2) sehr niedrig
+    r2 = evaluate(_ohlc(up + [97, 93, 90]))
+    assert r2["criteria"]["RSI2"]["RSI(2) < 10"] and r2["criteria"]["RSI2"]["über SMA 200"]
+    assert "RSI2" in r2["hits"]
