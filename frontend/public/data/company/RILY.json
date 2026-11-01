@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,96 @@
    "adr20": 5.483038553654195,
    "rvol": 1.4243794662892257,
    "ema10": 4.2772976232208375,
-   "ema21": 4.598401236139957,
+   "ema21": 4.598401236162351,
    "sma50": 5.6057999897003175,
    "sma200": 7.316449999809265
   },
   "market_cap": 137592160.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 4.059999942779541,
+    "change_pct": -8.144799260190394,
+    "ema20": 4.567678202014116,
+    "ema50": 5.386722386679214,
+    "ema200": 6.519721472086139,
+    "sma50": 5.6057999897003175,
+    "rsi14": 31.889644963285747,
+    "rsi_min5": 20.52420232739685,
+    "atr14": 0.2768900212207743,
+    "atr_pct": 6.819951357713835,
+    "rvol": 1.4243794662892257,
+    "vol30": 825150.0,
+    "dist_ema200_pct": -37.727402003870445,
+    "dist_52w_high_pct": 63.87900333226031,
+    "high_52w": 11.239999771118164,
+    "macd_above_signal": true,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 5.349999904632568,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 4.360000133514404,
+    "day_low": 4.0,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": false,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": false,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.3,
+    "S03": 0.6666666666666666,
+    "S04": 0.2
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 4.360000133514404,
+    "entry_max": 4.4472001361846925,
+    "stop": 3.944665101683243,
+    "risk_per_share": 0.4153350318311615,
+    "target_1": 5.190670197176727,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 58.2,
    "coverage_pct": 82,
@@ -125,12 +208,96 @@
   "adr20": 5.483038553654195,
   "rvol": 1.4243794662892257,
   "ema10": 4.2772976232208375,
-  "ema21": 4.598401236139957,
+  "ema21": 4.598401236162351,
   "sma50": 5.6057999897003175,
   "sma200": 7.316449999809265,
   "volatility_ann": 50.37207007535507,
   "avg_dollar_volume_20d": 4074139.187474251,
-  "move_zscore": -2.5667930607699665
+  "move_zscore": -2.5667930607699665,
+  "swing": {
+   "tech": {
+    "close": 4.059999942779541,
+    "change_pct": -8.144799260190394,
+    "ema20": 4.567678202014116,
+    "ema50": 5.386722386679214,
+    "ema200": 6.519721472086139,
+    "sma50": 5.6057999897003175,
+    "rsi14": 31.889644963285747,
+    "rsi_min5": 20.52420232739685,
+    "atr14": 0.2768900212207743,
+    "atr_pct": 6.819951357713835,
+    "rvol": 1.4243794662892257,
+    "vol30": 825150.0,
+    "dist_ema200_pct": -37.727402003870445,
+    "dist_52w_high_pct": 63.87900333226031,
+    "high_52w": 11.239999771118164,
+    "macd_above_signal": true,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 5.349999904632568,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 4.360000133514404,
+    "day_low": 4.0,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": false,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.3,
+    "S03": 0.6666666666666666,
+    "S04": 0.2
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 4.360000133514404,
+    "entry_max": 4.4472001361846925,
+    "stop": 3.944665101683243,
+    "risk_per_share": 0.4153350318311615,
+    "target_1": 5.190670197176727,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 58.2,
@@ -396,10 +563,10 @@
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -424,7 +591,426 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "507c5fc6543ec847",
+   "symbols": [
+    "RILY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "BRC Group Holdings, Inc. to Report Third Quarter 2026 Financial Results on Thursday, November 5, 2026",
+   "summary": "BRC Group Holdings, Inc. (NASDAQ: RILY) will release its financial results for the third quarter ended September 30, 2026, after market close on Thursday, November 5, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/brc-group-holdings-inc-report-130300528.html?.tsrc=rss",
+   "published_at": "2026-10-22T13:03:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:30Z",
+   "fingerprint": "69208f8c0df849aa",
+   "primary_source": false,
+   "cluster_id": "507c5fc6543ec847",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "27e223b6020f14ef",
+   "symbols": [
+    "RILY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "B. Riley Securities to Host Convergence Conference on December 2, 2026 in New York",
+   "summary": "B. Riley Securities, Inc., a leading full-service investment bank, today announced that it will host its Convergence Conference: Energy, Power, Infrastructure on Wednesday, December 2, 2026, in New York.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/b-riley-securities-host-convergence-130300629.html?.tsrc=rss",
+   "published_at": "2026-10-20T13:03:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:30Z",
+   "fingerprint": "8f080c33303be00a",
+   "primary_source": false,
+   "cluster_id": "27e223b6020f14ef",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1a13f6573b2865e4",
+   "symbols": [
+    "RILY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "B. Riley Securities Adds Senior Banker to Expand Technology, Media and Sports Advisory",
+   "summary": "B. Riley Securities, Inc., a leading full-service investment bank, today announced that Michael Masiuk has joined the firm's Investment Banking team as Managing Director, based in New York.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/b-riley-securities-adds-senior-130200790.html?.tsrc=rss",
+   "published_at": "2026-10-12T13:02:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:30Z",
+   "fingerprint": "53f45d0e05763624",
+   "primary_source": false,
+   "cluster_id": "1a13f6573b2865e4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6c8e652ce59281c4",
+   "symbols": [
+    "RILY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sangoma Technologies stock surges over 40% on BRC acquisition deal",
+   "summary": "Investing.com -- Sangoma Technologies Corp (NASDAQ:SANG) shares surged 44% in after-hours trading Monday following the announcement that BRC Group Holdings (NASDAQ:RILY) will acquire the company for approximately $204 million.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/sangoma-technologies-stock-surges-over-223123988.html?.tsrc=rss",
+   "published_at": "2026-09-28T22:31:23Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:30Z",
+   "fingerprint": "330be9268c421c66",
+   "primary_source": false,
+   "cluster_id": "6c8e652ce59281c4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8c128c2be0170126",
+   "symbols": [
+    "RILY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Sangoma Technologies Corporation Enters into Definitive Agreement to be Acquired by BRC Group Holdings, Inc.",
+   "summary": "TORONTO & LOS ANGELES, September 28, 2026--Sangoma Technologies Corporation (TSX: STC; NASDAQ: SANG) (\"Sangoma\"), a trusted industry leader uniquely offering businesses a choice of on-premises, cloud-based or hybrid communications solutions, and BRC Group Holdings, Inc. (NASDAQ: ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/sangoma-technologies-corporation-enters-definitive-214800797.html?.tsrc=rss",
+   "published_at": "2026-09-28T21:48:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:30Z",
+   "fingerprint": "a57fb8ff48a879a0",
+   "primary_source": false,
+   "cluster_id": "8c128c2be0170126",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "667242cd00401402",
+   "symbols": [
+    "RILY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "BRC Group Holdings, Inc. Agrees to Acquire Sangoma Technologies Corporation to Scale Communications Portfolio",
+   "summary": "BRC Group Holdings, Inc. (NASDAQ: RILY) (\"BRC\" or the \"Company\"), a diversified holding company, and Sangoma Technologies Corporation (TSX: STC; NASDAQ: SANG) (\"Sangoma\"), a trusted industry leader delivering cloud-based, on-premises, and hybrid communications solutions, today an",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/brc-group-holdings-inc-agrees-214600934.html?.tsrc=rss",
+   "published_at": "2026-09-28T21:46:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:30Z",
+   "fingerprint": "6eaac800cfb1aa6e",
+   "primary_source": false,
+   "cluster_id": "667242cd00401402",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fb0f4ec48e51197d",
+   "symbols": [
+    "RILY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "BRC Group Holdings, Inc. Announces Full Redemption of 6.50% Senior Notes Due 2026",
+   "summary": "BRC Group Holdings, Inc. (Nasdaq: RILY) (\"BRC\" or the \"Company\") today announced that it has called for the full redemption equal to $142,137,375 aggregate principal amount of its 6.50% Senior Notes due 2026 (the \"Notes\") on September 29, 2026 (the \"Redemption Date\").",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/brc-group-holdings-inc-announces-113100414.html?.tsrc=rss",
+   "published_at": "2026-08-28T11:31:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:30Z",
+   "fingerprint": "70d2f487b8c9071f",
+   "primary_source": false,
+   "cluster_id": "fb0f4ec48e51197d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0160305611b341c2",
+   "symbols": [
+    "RILY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "B. Riley Financial Q2 Earnings Call Highlights",
+   "summary": "B. Riley Financial (NASDAQ:RILY) reported second-quarter net income attributable to common shareholders of $19 million, or $0.45 per diluted share, as its capital markets, wealth management and communications businesses contributed to what Chairman, Founder and Co-CEO Bryant Rile",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/b-riley-financial-q2-earnings-call-highlights-2026-08-07/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-07T11:03:56Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:30Z",
+   "fingerprint": "e202d61ea1940d6d",
+   "primary_source": false,
+   "cluster_id": "0160305611b341c2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d447081e6716cf5a",
+   "symbols": [
+    "RILY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "BRC Group Holdings, Inc. Reports Second Quarter 2026 Financial Results",
+   "summary": "BRC Group Holdings, Inc. (Nasdaq: RILY) (\"BRCGH\" or the \"Company\"), a diversified holding company, today released its financial results for the three and six months ended June 30, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/brc-group-holdings-inc-reports-200100163.html?.tsrc=rss",
+   "published_at": "2026-08-06T20:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:30Z",
+   "fingerprint": "d8fdb01b5ba7ff85",
+   "primary_source": false,
+   "cluster_id": "0261060e6b41c10c",
+   "independence": "copy",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fb3e6b69048ec126",
+   "symbols": [
+    "RILY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "BRC Group Holdings, Inc. to Report Second Quarter 2026 Earnings on Thursday August 6, 2026",
+   "summary": "BRC Group Holdings, Inc. (NASDAQ: RILY) will host a conference call to review its second quarter 2026 financial results on August 6, 2026 at 4:30 p.m. Eastern time (1:30 p.m. Pacific time). The results will be released on the same day, shortly after market close.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/brc-group-holdings-inc-report-113200774.html?.tsrc=rss",
+   "published_at": "2026-07-23T11:32:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:30Z",
+   "fingerprint": "5cc48685fd2b6ff3",
+   "primary_source": false,
+   "cluster_id": "fb3e6b69048ec126",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2ad0e2978f3a528b",
+   "symbols": [
+    "RILY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "VSE Corporation (VSEC) Shares Skyrocket, What You Need To Know",
+   "summary": "Shares of aviation and fleet aftermarket services provider VSE Corporation (NASDAQ:VSEC) jumped 5.1% in the morning session after B. Riley Financial raised its price target on the stock to $258, citing a powerful mix of positive factors.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/vse-corporation-vsec-shares-skyrocket-225750327.html?.tsrc=rss",
+   "published_at": "2026-06-25T22:57:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:30Z",
+   "fingerprint": "c475c268cbc83440",
+   "primary_source": false,
+   "cluster_id": "2ad0e2978f3a528b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a9fa0c089e48de47",
+   "symbols": [
+    "RILY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "BRC Group Holdings, Inc. Provides Update on SpaceX Carried Interest Position",
+   "summary": "BRC Group Holdings, Inc. (Nasdaq: RILY) (\"BRC\" or the \"Company\") today provided supplemental information regarding its indirect economic interest in Space Exploration Technologies Corp. (\"SpaceX\"), following SpaceX's initial public offering on June 12, 2026 (the \"IPO\"). The Compa",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/brc-group-holdings-inc-provides-113100898.html?.tsrc=rss",
+   "published_at": "2026-06-15T11:31:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:30Z",
+   "fingerprint": "a4ff196ca2a999e7",
+   "primary_source": false,
+   "cluster_id": "a9fa0c089e48de47",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8d3e781473f515b4",
+   "symbols": [
+    "RILY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "B. Riley Securities to Host Mind, Muscle & Vision Healthcare Summit on July 16, 2026",
+   "summary": "B. Riley Securities, Inc. (\"B. Riley Securities\"), a leading full-service investment bank, today announced it will host the Mind, Muscle & Vision Summit – a premier single-day healthcare conference connecting institutional investors with management teams pioneering cutting-edge i",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/b-riley-securities-host-mind-200300367.html?.tsrc=rss",
+   "published_at": "2026-06-04T20:03:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:30Z",
+   "fingerprint": "e8c19f880c576af5",
+   "primary_source": false,
+   "cluster_id": "8d3e781473f515b4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "be5ea73daeb032ec",
+   "symbols": [
+    "RILY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "BRC Specialty Finance Provides $20 Million Senior Secured Term Loan Supporting AI-Driven HPC Data Center Infrastructure Provider",
+   "summary": "BRC Specialty Finance, the direct lending platform of BRC Group Holdings, Inc. (NASDAQ: RILY) (\"BRCGH\") and B. Riley Securities, Inc. (\"BRS\"), a leading full-service investment bank, today announced that BRS has assumed a $20 million advance under a $100 million senior secured de",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/brc-specialty-finance-provides-20-114400136.html?.tsrc=rss",
+   "published_at": "2026-06-03T11:44:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:30Z",
+   "fingerprint": "1d93ef286c54d1f5",
+   "primary_source": false,
+   "cluster_id": "be5ea73daeb032ec",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2a70fbe527a73ec8",
+   "symbols": [
+    "RILY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "B. Riley Securities Expands Executive Leadership Team with Return of Industry Leaders Patrice McNicoll and Matt Feinberg",
+   "summary": "B. Riley Securities, Inc. (\"B. Riley Securities,\" \"BRS\" or the \"Company\"), a leading full-service investment bank, today announced the return of two highly respected industry leaders to the firm, Patrice McNicoll and Matt Feinberg.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/b-riley-securities-expands-executive-113200342.html?.tsrc=rss",
+   "published_at": "2026-05-19T11:32:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:30Z",
+   "fingerprint": "617bfafb51917762",
+   "primary_source": false,
+   "cluster_id": "2a70fbe527a73ec8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e0242469b8dfdd00",
+   "symbols": [
+    "RILY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "B. Riley Financial Q1 Earnings Call Highlights",
+   "summary": "B. Riley Financial (NASDAQ:RILY) reported a sharp first-quarter profit and lower debt, with executives saying the firm has regained operating momentum after steps to strengthen its balance sheet and bring its financial reporting back to a normal cadence. Co-CEO Bryant Riley said ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/b-riley-financial-q1-earnings-call-highlights-2026-05-08/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-05-09T00:07:41Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:30Z",
+   "fingerprint": "f1f0baac2e954cac",
+   "primary_source": false,
+   "cluster_id": "e0242469b8dfdd00",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3b9e6aa2bdf33a3a",
+   "symbols": [
+    "RILY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "BRC Group (RILY) Q4 2025 Earnings Transcript",
+   "summary": "Need a quote from a Motley Fool analyst?  Bryant Riley: Thank you, and good afternoon.  With that, for nearly 30 years, BRC Group Holdings has been defined by a key principle, our willingness to be opportunistic.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/05/08/brc-group-rily-q4-2025-earnings-transcript/?.tsrc=rss",
+   "published_at": "2026-05-08T14:27:43Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:30Z",
+   "fingerprint": "66e9d0690e48353c",
+   "primary_source": false,
+   "cluster_id": "3b9e6aa2bdf33a3a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7c1a89f1f9502881",
+   "symbols": [
+    "RILY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "B. Riley Financial, Inc. Q1 2026 Earnings Call Summary",
+   "summary": "Moby summary of B. Riley Financial, Inc.'s Q1 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-b-riley-financial-inc-q1-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-05-08T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:30Z",
+   "fingerprint": "973fcd0a14cbedf8",
+   "primary_source": false,
+   "cluster_id": "7c1a89f1f9502881",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0261060e6b41c10c",
+   "symbols": [
+    "RILY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "BRC Group Holdings, Inc. Reports First Quarter 2026 Financial Results",
+   "summary": "BRC Group Holdings, Inc. (Nasdaq: RILY) (\"BRCGH\" or the \"Company\"), a diversified holding company, today announced the filing of its Quarterly Report on Form 10-Q for the three month period ended March 31, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/brc-group-holdings-inc-reports-200100858.html?.tsrc=rss",
+   "published_at": "2026-05-07T20:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:30Z",
+   "fingerprint": "8d9ba495bb4cae1f",
+   "primary_source": false,
+   "cluster_id": "0261060e6b41c10c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

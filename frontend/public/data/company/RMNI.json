@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,96 @@
    "adr20": 3.5730426184848434,
    "rvol": 4.584451228914176,
    "ema10": 4.210428537787849,
-   "ema21": 4.1964121981941584,
+   "ema21": 4.19641219821658,
    "sma50": 4.477700037956238,
    "sma200": 4.035475009679795
   },
   "market_cap": 459772160.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 4.960000038146973,
+    "change_pct": 24.310777601297563,
+    "ema20": 4.192559052285258,
+    "ema50": 4.335727214930496,
+    "ema200": 4.2028962163277575,
+    "sma50": 4.477700037956238,
+    "rsi14": 73.89733579463544,
+    "rsi_min5": 36.760621300421384,
+    "atr14": 0.21471181471810336,
+    "atr_pct": 4.328867198926846,
+    "rvol": 4.584451228914176,
+    "vol30": 371656.6666666667,
+    "dist_ema200_pct": 18.013859558985914,
+    "dist_52w_high_pct": 12.676053027315803,
+    "high_52w": 5.679999828338623,
+    "macd_above_signal": true,
+    "obv_rising": true,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 4.199999809265137,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": true,
+    "day_high": 5.244999885559082,
+    "day_low": 4.630000114440918,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": false,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": false,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": false,
+     "Tag positiv": true
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": true,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.0,
+    "S02": 0.4,
+    "S03": 0.6666666666666666,
+    "S04": 0.4
+   },
+   "filter": {
+    "Tag grün": true,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": false,
+    "ATR% 1.5–5.0": true,
+    "über EMA 200": true
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 5.244999885559082,
+    "entry_max": 5.349899883270264,
+    "stop": 4.922932163481927,
+    "risk_per_share": 0.32206772207715506,
+    "target_1": 5.889135329713392,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 48.0,
    "coverage_pct": 88,
@@ -56,11 +139,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 17.6,
+   "score": 65.3,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 6,
    "independent_24h": 0
   },
   "political": {
@@ -125,12 +210,96 @@
   "adr20": 3.5730426184848434,
   "rvol": 4.584451228914176,
   "ema10": 4.210428537787849,
-  "ema21": 4.1964121981941584,
+  "ema21": 4.19641219821658,
   "sma50": 4.477700037956238,
   "sma200": 4.035475009679795,
   "volatility_ann": 60.273737182416994,
   "avg_dollar_volume_20d": 1563957.9498660564,
-  "move_zscore": 6.4028156923771595
+  "move_zscore": 6.4028156923771595,
+  "swing": {
+   "tech": {
+    "close": 4.960000038146973,
+    "change_pct": 24.310777601297563,
+    "ema20": 4.192559052285258,
+    "ema50": 4.335727214930496,
+    "ema200": 4.2028962163277575,
+    "sma50": 4.477700037956238,
+    "rsi14": 73.89733579463544,
+    "rsi_min5": 36.760621300421384,
+    "atr14": 0.21471181471810336,
+    "atr_pct": 4.328867198926846,
+    "rvol": 4.584451228914176,
+    "vol30": 371656.6666666667,
+    "dist_ema200_pct": 18.013859558985914,
+    "dist_52w_high_pct": 12.676053027315803,
+    "high_52w": 5.679999828338623,
+    "macd_above_signal": true,
+    "obv_rising": true,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 4.199999809265137,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": true,
+    "day_high": 5.244999885559082,
+    "day_low": 4.630000114440918,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": false,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": false,
+     "Tag positiv": true
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": true,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.0,
+    "S02": 0.4,
+    "S03": 0.6666666666666666,
+    "S04": 0.4
+   },
+   "filter": {
+    "Tag grün": true,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": false,
+    "ATR% 1.5–5.0": true,
+    "über EMA 200": true
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 5.244999885559082,
+    "entry_max": 5.349899883270264,
+    "stop": 4.922932163481927,
+    "risk_per_share": 0.32206772207715506,
+    "target_1": 5.889135329713392,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 48.0,
@@ -451,13 +620,13 @@
   ]
  },
  "intelligence_detail": {
-  "score": 17.6,
+  "score": 65.3,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 80,
    "primary_sources": 0,
-   "analyst_activity": 0,
+   "analyst_activity": 35,
    "price_volume_anomaly": 100.0,
    "social_attention": null,
    "insider_activity": null
@@ -473,26 +642,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 6,
+    "independent": 6,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 10,
+    "independent": 10,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -510,7 +681,431 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "a4375688dd78fdff",
+   "symbols": [
+    "RMNI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Rimini Street (RMNI) Q3 2026 Earnings Call Transcript",
+   "summary": "SAP services revenue hit record levels as adjusted growth accelerated.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/30/rimini-street-rmni-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-30T13:44:46Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:36Z",
+   "fingerprint": "3dbd947f74235e95",
+   "primary_source": false,
+   "cluster_id": "a4375688dd78fdff",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e5fc56a8263bd15a",
+   "symbols": [
+    "RMNI",
+    "SAP.DE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Rimini Street, Inc. Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Rimini Street, Inc.'s Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-rimini-street-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-30T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:49Z",
+   "fingerprint": "421ad7c146c0b99e",
+   "primary_source": false,
+   "cluster_id": "e5fc56a8263bd15a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0b334256054ddc86",
+   "symbols": [
+    "RMNI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What Rimini Street (RMNI) Said on Its Q3 Earnings Call",
+   "summary": "Rimini Street (NASDAQ:RMNI) reported higher third-quarter revenue, billings and profitability, citing demand for its enterprise software support and modernization offerings, including record quarterly sales of services for SAP software. Revenue for the quarter ended Sept. 30 incr",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-rimini-street-rmni-said-on-its-q3-earnings-call-2026-10-29/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-30T01:14:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:36Z",
+   "fingerprint": "d6438f475a670801",
+   "primary_source": false,
+   "cluster_id": "0b334256054ddc86",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Was Rimini Street (RMNI) über seinen Q3-Gewinnaufruf sagte"
+  },
+  {
+   "id": "34487aecda190ceb",
+   "symbols": [
+    "CRWV",
+    "RMNI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Rimini Street (RMNI) Surpasses Q3 Earnings and Revenue Estimates",
+   "summary": "Rimini Street (RMNI) delivered earnings and revenue surprises of +20.00% and +1.22%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/rimini-street-rmni-surpasses-q3-220510663.html?.tsrc=rss",
+   "published_at": "2026-10-29T22:05:10Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:24Z",
+   "fingerprint": "4241b3b45d8dd269",
+   "primary_source": false,
+   "cluster_id": "34487aecda190ceb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Rimini Street (RMNI) übertrifft Ertrag und Einnahmenschätzungen des dritten Quartals"
+  },
+  {
+   "id": "40ec1a046864dfa1",
+   "symbols": [
+    "RMNI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Rimini Street: Q3 Earnings Snapshot",
+   "summary": "LAS VEGAS (AP) — LAS VEGAS (AP) — Rimini Street, Inc. (RMNI) on Thursday reported profit of $6.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/rimini-street-q3-earnings-snapshot-204951285.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:49:51Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:36Z",
+   "fingerprint": "82d0b22476c380b3",
+   "primary_source": false,
+   "cluster_id": "40ec1a046864dfa1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "067ac558dcb7bf07",
+   "symbols": [
+    "RMNI",
+    "SAP.DE"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Rimini Street Announces Fiscal Third Quarter 2026 Financial and Operating Results",
+   "summary": "LAS VEGAS, October 29, 2026--Rimini Street, Inc., (Nasdaq: RMNI), a global provider of end-to-end enterprise software support, managed services and Agentic AI ERP innovation solutions, and the leading third-party support provider for Oracle, SAP and VMware software, today announc",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/rimini-street-announces-fiscal-third-200100435.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:49Z",
+   "fingerprint": "d54d272c7909bfe0",
+   "primary_source": false,
+   "cluster_id": "067ac558dcb7bf07",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b2fdc0b85da556ce",
+   "symbols": [
+    "RMNI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Rimini Street Conference: AI, Managed Services Drive ERP Modernization Push",
+   "summary": "Rimini Street (NASDAQ:RMNI) outlined its strategy to expand beyond third-party enterprise software support by helping customers modernize existing ERP environments with managed services, integrations and artificial intelligence tools, according to comments from CFO Michael Perica",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-rimini-street-conference-ai-managed-services-drive-erp-modernization-push-2026-10-21/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-22T00:04:14Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:36Z",
+   "fingerprint": "694cdb6de6703df3",
+   "primary_source": false,
+   "cluster_id": "b2fdc0b85da556ce",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e71242fbee329ac3",
+   "symbols": [
+    "RMNI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Rimini Street to Report Third Quarter 2026 Financial Results on October 29, 2026",
+   "summary": "LAS VEGAS, October 19, 2026--Rimini Street, Inc. (Nasdaq: RMNI), the Software Support and Agentic AI ERP Company™ and the leading third-party support provider for Oracle, SAP and VMware software, today announced it will report earnings after market close on October 29, 2026. The ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/rimini-street-report-third-quarter-130000079.html?.tsrc=rss",
+   "published_at": "2026-10-19T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:36Z",
+   "fingerprint": "c6d863be01a90f6b",
+   "primary_source": false,
+   "cluster_id": "e71242fbee329ac3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4adbbcef42a1042c",
+   "symbols": [
+    "RMNI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Years of Proven Results Drive Continued Partnership Between Pyung Hwa Holdings and Rimini Street",
+   "summary": "LAS VEGAS, October 13, 2026--Rimini Street, Inc. (Nasdaq: RMNI), the Software Support and Agentic AI ERP Company™ and the leading third-party support provider for Oracle, SAP and VMware software, today announced continued success in its long-standing relationship with Pyung Hwa H",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/years-proven-results-drive-continued-130000388.html?.tsrc=rss",
+   "published_at": "2026-10-13T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:36Z",
+   "fingerprint": "0ebcf833cde384f3",
+   "primary_source": false,
+   "cluster_id": "4adbbcef42a1042c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3b55f1279abc2977",
+   "symbols": [
+    "RMNI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "New Global Survey Finds Majority of VMware Users Are Choosing Alternative Paths for Cost Control, Roadmap Flexibility and Better Support",
+   "summary": "LAS VEGAS, October 06, 2026--Rimini Street, Inc. (Nasdaq: RMNI), the Software Support and Agentic AI ERP Company™ and the leading third-party support provider for Oracle, SAP and VMware software, today announced findings from the 2026 IT Virtualization Survey – What’s Next for VM",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/global-survey-finds-majority-vmware-130000123.html?.tsrc=rss",
+   "published_at": "2026-10-06T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:36Z",
+   "fingerprint": "f9e15e513c47382c",
+   "primary_source": false,
+   "cluster_id": "3b55f1279abc2977",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a7b091e6e03886ac",
+   "symbols": [
+    "RMNI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Rimini Street and Datacom Announce Strategic Partnership to Accelerate AI Adoption and Drive IT Optimisation Across ANZ",
+   "summary": "SYDNEY, September 14, 2026--Rimini Street Inc. (Nasdaq: RMNI), the Software Support and Agentic AI ERP Company™ and the leading third-party support provider for Oracle and SAP software, today announced a strategic partnership with Datacom, one of Australasia’s largest homegrown t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/rimini-street-datacom-announce-strategic-200000839.html?.tsrc=rss",
+   "published_at": "2026-09-14T20:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:36Z",
+   "fingerprint": "cf6313fc2d89f042",
+   "primary_source": false,
+   "cluster_id": "a7b091e6e03886ac",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a7487ce08e41325a",
+   "symbols": [
+    "RMNI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Rimini Street Announces Stock Repurchase and Debt Reduction Transactions",
+   "summary": "LAS VEGAS, August 31, 2026--Rimini Street, Inc., (Nasdaq: RMNI), a global provider of end-to-end enterprise software support, managed services and Agentic AI ERP innovation solutions, and the leading third-party support provider for Oracle, SAP and VMware software, today announce",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/rimini-street-announces-stock-repurchase-130000850.html?.tsrc=rss",
+   "published_at": "2026-08-31T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:36Z",
+   "fingerprint": "372f7b6275cf41c5",
+   "primary_source": false,
+   "cluster_id": "a7487ce08e41325a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6121a6c88e725278",
+   "symbols": [
+    "RMNI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is the Options Market Predicting a Spike in Rimini Street Stock?",
+   "summary": "Investors need to pay close attention to RMNI stock based on the movements in the options market lately.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/options/articles/options-market-predicting-spike-rimini-142000286.html?.tsrc=rss",
+   "published_at": "2026-08-19T14:20:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:36Z",
+   "fingerprint": "fd1b6e197df1d8c8",
+   "primary_source": false,
+   "cluster_id": "6121a6c88e725278",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7a8ad5c05b637856",
+   "symbols": [
+    "RMNI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Rimini Street Unveils Agentic AI ERP Strategy to Modernize Legacy Systems",
+   "summary": "Rimini Street (NASDAQ:RMNI) outlined its strategy to expand beyond third-party enterprise software support into what it calls “Agentic AI ERP,” positioning the company as a provider of AI-enabled modernization for organizations that retain existing ERP systems. During a presentat",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/rimini-street-unveils-agentic-ai-erp-strategy-to-modernize-legacy-systems-2026-08-19/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-19T13:03:20Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:36Z",
+   "fingerprint": "ef30a8b639c152cd",
+   "primary_source": false,
+   "cluster_id": "7a8ad5c05b637856",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "970fe5e33ec5f3e2",
+   "symbols": [
+    "RMNI"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Rimini Street Expands C-Suite Leadership for Growth with Appointment of Two Proven Industry Veterans as Chief Operating Officer and Chief Delivery Officer",
+   "summary": "LAS VEGAS, August 12, 2026--Rimini Street, Inc. (Nasdaq: RMNI), the Software Support and Agentic AI ERP Company™ and the leading third-party support provider for Oracle, SAP and VMware software, today announced the appointment of Keith Costello as chief operating officer (COO) an",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/rimini-street-expands-c-suite-130000736.html?.tsrc=rss",
+   "published_at": "2026-08-12T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:36Z",
+   "fingerprint": "d9727b54975ef67b",
+   "primary_source": false,
+   "cluster_id": "970fe5e33ec5f3e2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "91756235dd6f5446",
+   "symbols": [
+    "RMNI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Khimji Ramdas Group Chooses Rimini Street to Reduce SAP Support Costs, Protect 700+ Customizations and Reinvest Savings in Innovation",
+   "summary": "LAS VEGAS, August 06, 2026--Rimini Street, Inc. (Nasdaq: RMNI), the Software Support and Agentic AI ERP Company™ and the leading third-party support provider for Oracle, SAP and VMware software, today announced that Khimji Ramdas Group, one of Oman’s largest privately held conglo",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/khimji-ramdas-group-chooses-rimini-130000740.html?.tsrc=rss",
+   "published_at": "2026-08-06T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:36Z",
+   "fingerprint": "1b6330cc0a3e26b8",
+   "primary_source": false,
+   "cluster_id": "91756235dd6f5446",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f8887289e3e5d7a1",
+   "symbols": [
+    "RMNI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Rimini Street Q2 Earnings Call Highlights",
+   "summary": "Rimini Street (NASDAQ:RMNI) reported second-quarter revenue growth and reiterated its full-year outlook, citing demand for its core support offerings, expansion of its enterprise software services portfolio and progress in selling AI-focused solutions. Revenue for the quarter end",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/rimini-street-q2-earnings-call-highlights-2026-07-30/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-01T01:02:49Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:36Z",
+   "fingerprint": "6425d40c37274159",
+   "primary_source": false,
+   "cluster_id": "f8887289e3e5d7a1",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dde881a7191f61ae",
+   "symbols": [
+    "RMNI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Rimini Street Inc (RMNI) (Q2 2026) Earnings Call Highlights: AI Innovation Drives Fourth ...",
+   "summary": "Rimini Street Inc (RMNI) reports 6.7% revenue growth and strong AI adoption, reiterating Rule of 20 guidance despite margin pressures.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/rimini-street-inc-rmni-q2-050056783.html?.tsrc=rss",
+   "published_at": "2026-07-31T05:00:56Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:36Z",
+   "fingerprint": "2584fcbb395e6846",
+   "primary_source": false,
+   "cluster_id": "dde881a7191f61ae",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "27e61326222ff1bc",
+   "symbols": [
+    "RMNI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Rimini Street, Inc. Q2 2026 Earnings Call Summary",
+   "summary": "Moby summary of Rimini Street, Inc.'s Q2 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-rimini-street-inc-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-07-31T04:08:35Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:36Z",
+   "fingerprint": "0320bf0cada17b96",
+   "primary_source": false,
+   "cluster_id": "27e61326222ff1bc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

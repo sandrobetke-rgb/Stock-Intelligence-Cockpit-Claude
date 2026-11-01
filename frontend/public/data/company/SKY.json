@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,96 @@
    "adr20": 3.5914714395301113,
    "rvol": 2.6168958742632613,
    "ema10": 80.31873562497061,
-   "ema21": 80.71744750764822,
+   "ema21": 80.71744750780333,
    "sma50": 83.97899993896485,
    "sma200": 82.35389995574951
   },
   "market_cap": 4597527552.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 84.69999694824219,
+    "change_pct": 4.503385267183169,
+    "ema20": 80.63506358273811,
+    "ema50": 82.56978933442763,
+    "ema200": 82.35001339770828,
+    "sma50": 83.97899993896485,
+    "rsi14": 57.83684754292564,
+    "rsi_min5": 45.28078068950787,
+    "atr14": 3.077694799678608,
+    "atr_pct": 3.6336421612379772,
+    "rvol": 2.6168958742632613,
+    "vol30": 555736.6666666666,
+    "dist_ema200_pct": 2.8536529061442772,
+    "dist_52w_high_pct": 14.591107681631833,
+    "high_52w": 99.16999816894531,
+    "macd_above_signal": true,
+    "obv_rising": true,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 80.5999984741211,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": true,
+    "day_high": 85.97000122070312,
+    "day_low": 80.0999984741211,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": true,
+     "Kurs < EMA 50": false,
+     "RSI 45–62": true,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": true,
+     "Tag positiv": true
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": true,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.0,
+    "S02": 0.7,
+    "S03": 0.6666666666666666,
+    "S04": 0.4
+   },
+   "filter": {
+    "Tag grün": true,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": true,
+    "über EMA 200": true
+   },
+   "filter_pass": true,
+   "plan": {
+    "trigger": 85.97000122070312,
+    "entry_max": 87.6894012451172,
+    "stop": 81.35345902118522,
+    "risk_per_share": 4.616542199517909,
+    "target_1": 95.20308561973894,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 46.1,
    "coverage_pct": 100,
@@ -54,11 +137,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 14.3,
+   "score": 54.8,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 5,
    "independent_24h": 0
   },
   "political": {
@@ -123,12 +208,96 @@
   "adr20": 3.5914714395301113,
   "rvol": 2.6168958742632613,
   "ema10": 80.31873562497061,
-  "ema21": 80.71744750764822,
+  "ema21": 80.71744750780333,
   "sma50": 83.97899993896485,
   "sma200": 82.35389995574951,
   "volatility_ann": 41.25395352336858,
   "avg_dollar_volume_20d": 48074144.34051514,
-  "move_zscore": 1.7329011826412597
+  "move_zscore": 1.7329011826412597,
+  "swing": {
+   "tech": {
+    "close": 84.69999694824219,
+    "change_pct": 4.503385267183169,
+    "ema20": 80.63506358273811,
+    "ema50": 82.56978933442763,
+    "ema200": 82.35001339770828,
+    "sma50": 83.97899993896485,
+    "rsi14": 57.83684754292564,
+    "rsi_min5": 45.28078068950787,
+    "atr14": 3.077694799678608,
+    "atr_pct": 3.6336421612379772,
+    "rvol": 2.6168958742632613,
+    "vol30": 555736.6666666666,
+    "dist_ema200_pct": 2.8536529061442772,
+    "dist_52w_high_pct": 14.591107681631833,
+    "high_52w": 99.16999816894531,
+    "macd_above_signal": true,
+    "obv_rising": true,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 80.5999984741211,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": true,
+    "day_high": 85.97000122070312,
+    "day_low": 80.0999984741211,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": true,
+     "Kurs < EMA 50": false,
+     "RSI 45–62": true,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": true,
+     "Tag positiv": true
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": true,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.0,
+    "S02": 0.7,
+    "S03": 0.6666666666666666,
+    "S04": 0.4
+   },
+   "filter": {
+    "Tag grün": true,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": true,
+    "über EMA 200": true
+   },
+   "filter_pass": true,
+   "plan": {
+    "trigger": 85.97000122070312,
+    "entry_max": 87.6894012451172,
+    "stop": 81.35345902118522,
+    "risk_per_share": 4.616542199517909,
+    "target_1": 95.20308561973894,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 46.1,
@@ -447,13 +616,13 @@
   ]
  },
  "intelligence_detail": {
-  "score": 14.3,
+  "score": 54.8,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 40,
    "primary_sources": 0,
-   "analyst_activity": 0,
+   "analyst_activity": 35,
    "price_volume_anomaly": 80.8,
    "social_attention": null,
    "insider_activity": null
@@ -469,26 +638,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 5,
+    "independent": 5,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 14,
+    "independent": 14,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 5,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -506,7 +677,474 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "220cb652c8700636",
+   "symbols": [
+    "CVCO",
+    "PATK",
+    "SKY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cavco Soars 12% on Earnings Beat as “Data Center Workforce Housing” Orders Arrive",
+   "summary": "Key TakeawaysCavco Industries stock jumped 12% after fiscal second-quarter EPS of $7. 17 beat the $5.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/cavco-soars-12-on-earnings-beat-as-data-center-workforce-housing-orders-arrive?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-30T17:37:14Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:40Z",
+   "fingerprint": "689b3278cfe30960",
+   "primary_source": false,
+   "cluster_id": "220cb652c8700636",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Cavco steigt um 12% auf die Einnahmen Beat als \"Data Center Workforce Housing\" Bestellungen ankommen"
+  },
+  {
+   "id": "b7acb4f519a5ae08",
+   "symbols": [
+    "COLL",
+    "FLG",
+    "ICFI",
+    "KALU",
+    "MYRG",
+    "OSG",
+    "PBF",
+    "QLYS",
+    "SKY"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Operating Leverage and Financial Strength Anchor Champion Homes (SKY) Investment Thesis",
+   "summary": "Third Avenue Management, an investment management company, released its third-quarter 2026 investor letter for the “Third Avenue Small-Cap Value Fund”. The letter can be downloaded here. The Third Avenue Small-Cap Value Fund returned -3.31% in Q3 2026, outperforming its benchmark",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/operating-leverage-financial-strength-anchor-162919940.html?.tsrc=rss",
+   "published_at": "2026-10-30T16:29:19Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:05Z",
+   "fingerprint": "e82b87be517e3a24",
+   "primary_source": false,
+   "cluster_id": "b7acb4f519a5ae08",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Operating Leverage und Financial Strength Anchor Champion Homes (SKY) Investment Thesis"
+  },
+  {
+   "id": "6f01d4c9fa8f4e01",
+   "symbols": [
+    "COLL",
+    "FLG",
+    "ICFI",
+    "KALU",
+    "MYRG",
+    "OSG",
+    "PBF",
+    "QLYS",
+    "SKY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Versigent (VGNT) is Unlocking Value Through Independent Growth and Capital Allocation",
+   "summary": "Third Avenue Management, an investment management company, released its third-quarter 2026 investor letter for the “Third Avenue Small-Cap Value Fund”. The letter can be downloaded here. The Third Avenue Small-Cap Value Fund returned -3.31% in Q3 2026, outperforming its benchmark",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/versigent-vgnt-unlocking-value-independent-161748267.html?.tsrc=rss",
+   "published_at": "2026-10-30T16:17:48Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:05Z",
+   "fingerprint": "34f9794a237ea9fd",
+   "primary_source": false,
+   "cluster_id": "6f01d4c9fa8f4e01",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Versigent (VGNT) erschließt Wert durch unabhängiges Wachstum und Kapitalallokation"
+  },
+  {
+   "id": "073f361d7847ee58",
+   "symbols": [
+    "SKY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 profitable stock to target this week and 2 we turn down",
+   "summary": "Not all profitable companies are built to last - some rely on outdated models or unsustainable advantages. Just because a business is in the green today doesn’t mean it will thrive tomorrow.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-profitable-stock-target-week-103525267.html?.tsrc=rss",
+   "published_at": "2026-10-29T10:35:25Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:34Z",
+   "fingerprint": "c3b8b382c4374991",
+   "primary_source": false,
+   "cluster_id": "073f361d7847ee58",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8e40b20ff559c0e5",
+   "symbols": [
+    "SKY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Analysts Estimate Champion Homes (SKY) to Report a Decline in Earnings: What to Look Out for",
+   "summary": "Champion Homes (SKY) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/analysts-estimate-champion-homes-sky-130011008.html?.tsrc=rss",
+   "published_at": "2026-10-27T13:00:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:34Z",
+   "fingerprint": "52e741b024ecf87f",
+   "primary_source": false,
+   "cluster_id": "8e40b20ff559c0e5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "742a9f94a375bbc7",
+   "symbols": [
+    "SKY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Champion Homes Announces Second Quarter Fiscal 2027 Earnings Release Date and Conference Call",
+   "summary": "TROY, Mich., October 21, 2026--Champion Homes, Inc. (NYSE: SKY) (\"Champion Homes\") will release its earnings results for the second quarter fiscal year 2027 after the market closes on Tuesday, November 3, 2026. Champion Homes will hold a conference call to discuss the results the",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/champion-homes-announces-second-quarter-201500006.html?.tsrc=rss",
+   "published_at": "2026-10-21T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:34Z",
+   "fingerprint": "55f372d4e0975855",
+   "primary_source": false,
+   "cluster_id": "742a9f94a375bbc7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "55d4eb39d2f6dfe4",
+   "symbols": [
+    "SKY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Winnebago Industries (WGO) Misses Q4 Earnings and Revenue Estimates",
+   "summary": "Winnebago (WGO) delivered earnings and revenue surprises of -2.00% and -2.96%, respectively, for the quarter ended August 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/winnebago-industries-wgo-misses-q4-111504076.html?.tsrc=rss",
+   "published_at": "2026-10-21T11:15:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:34Z",
+   "fingerprint": "6566e6f0bba16365",
+   "primary_source": false,
+   "cluster_id": "55d4eb39d2f6dfe4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3cea949d50e969e1",
+   "symbols": [
+    "CVCO",
+    "LEGH",
+    "SKY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Cavco Industries Stock Engineered To Make You Money?",
+   "summary": "Over the past year, Cavco Industries (CVCO) stock lost 1.5%, including dividends, while the S&amp;P 500 returned 16.2%. The company consistently repurchased its own stock during that period. Over the three years to June 2026, Cavco reduced its diluted share count by 11.1%, giving",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/619168/is-cavco-industries-stock-engineered-to-make-you-money/2026-10-19?.tsrc=rss",
+   "published_at": "2026-10-19T21:39:13Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:40Z",
+   "fingerprint": "7fdf9a7af574a406",
+   "primary_source": false,
+   "cluster_id": "3cea949d50e969e1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6d2ce7ab2a6a2523",
+   "symbols": [
+    "SKY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Champion Homes (SKY) Stock May Still Have Room To Run On Cash Flow",
+   "summary": "Champion Homes has delivered solid medium term gains for shareholders, yet the share price has slipped in recent months, which naturally raises the question of whether the current valuation is still well supported by its cash flows. With the intrinsic value estimate based on a Di",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/champion-homes-sky-stock-may-210922120.html?.tsrc=rss",
+   "published_at": "2026-10-17T21:09:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:34Z",
+   "fingerprint": "1cda6af71406aab2",
+   "primary_source": false,
+   "cluster_id": "6d2ce7ab2a6a2523",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "061266226de23141",
+   "symbols": [
+    "INVH",
+    "SKY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Mortgage Rates Squeeze FHA Buyers: 3 Housing Stocks to Watch",
+   "summary": "Mortgage rates near 7.5% are pushing first-time buyers out of the market, boosting affordability-focused housing stocks Sun Communities, Invitation Homes, and Champion Homes.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/articles/mortgage-rates-squeeze-fha-buyers-3-housing-stocks-to-watch/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-15T12:40:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:02:06Z",
+   "fingerprint": "b30fa92c96b3372d",
+   "primary_source": false,
+   "cluster_id": "061266226de23141",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "152a1c25b0306319",
+   "symbols": [
+    "SKY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Stocks making big moves yesterday: Champion Homes, Strategy, Penguin Solutions, Cognex, and FuelCell Energy",
+   "summary": "Check out the companies making headlines yesterday:",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-making-big-moves-yesterday-192009437.html?.tsrc=rss",
+   "published_at": "2026-10-08T19:20:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:34Z",
+   "fingerprint": "7084368a4b1a23a5",
+   "primary_source": false,
+   "cluster_id": "152a1c25b0306319",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1091739b63cacff0",
+   "symbols": [
+    "SKY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Champion Homes (SKY) Shares Are Trading Lower Today",
+   "summary": "Shares of modular home and building manufacturer Champion Homes (NYSE:SKY) fell 6.2% in the afternoon session after rising Treasury yields and climbing oil prices dampened investor sentiment ahead of the release of the Federal Reserve's September meeting minutes, as reported by A",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-champion-homes-sky-shares-205647133.html?.tsrc=rss",
+   "published_at": "2026-10-07T20:56:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:34Z",
+   "fingerprint": "b117c24ad6514630",
+   "primary_source": false,
+   "cluster_id": "1091739b63cacff0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ead2c1572241ae42",
+   "symbols": [
+    "SKY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "60 Percent of Community Banks See Stablecoins as a Threat to Deposits, Lending",
+   "summary": "A majority of U.S. community bankers are concerned that stablecoins could pull deposits out of traditional banks an...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "cryptoprowl.com",
+   "url": "https://www.cryptoprowl.com/releases/60-percent-of-community-banks-see-stablecoins-as-a-threat-to-deposits-lending-7258?.tsrc=rss",
+   "published_at": "2026-10-07T16:18:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:34Z",
+   "fingerprint": "bf3052bf2672208d",
+   "primary_source": false,
+   "cluster_id": "ead2c1572241ae42",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "55ff3190dd03201b",
+   "symbols": [
+    "SKY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Champion Homes Announces Definitive Agreement to Acquire Timberline Homes",
+   "summary": "TROY, Mich., October 05, 2026--Champion Homes, Inc. (NYSE: SKY) (\"Champion\" or \"the Company\") today announced that it has entered into a definitive agreement to acquire the assets of Timberline Homes, Inc. (THI), representing nine retail locations across key Southeastern U. S. ma",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/champion-homes-announces-definitive-agreement-201500407.html?.tsrc=rss",
+   "published_at": "2026-10-05T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:34Z",
+   "fingerprint": "dcddcd0e8adb19bb",
+   "primary_source": false,
+   "cluster_id": "55ff3190dd03201b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "97cc3b08414a7b94",
+   "symbols": [
+    "SBGI",
+    "SKY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Small-Cap Stocks with Open Questions",
+   "summary": "Many small-cap stocks have limited Wall Street coverage, giving savvy investors the chance to act before everyone else catches on. But the flip side is that these businesses have increased downside risk because they lack the scale and staying power of their larger competitors.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-small-cap-stocks-open-104802039.html?.tsrc=rss",
+   "published_at": "2026-09-29T10:48:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:04Z",
+   "fingerprint": "31cc6491952d6699",
+   "primary_source": false,
+   "cluster_id": "97cc3b08414a7b94",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "61fd4c33fba29fdb",
+   "symbols": [
+    "CVCO",
+    "SKY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Berkshire Buys Lennar Stock; Its Clayton Homes Unit Could Be Worth $25 Billion",
+   "summary": "Berkshire Hathaway has raised its stake in Lennar to 11%. Its Clayton Homes unit shows how substantial its housing business has become.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/7140e1b1-0e5e-3574-9264-dec82b78a090/berkshire-buys-lennar-stock%3B.html?.tsrc=rss",
+   "published_at": "2026-09-29T08:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:40Z",
+   "fingerprint": "72b8968950ed6de1",
+   "primary_source": false,
+   "cluster_id": "61fd4c33fba29fdb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5c4de27fd302385d",
+   "symbols": [
+    "SKY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Reasons to Avoid SKY and 1 Stock to Buy Instead",
+   "summary": "Champion Homes has followed the market’s trajectory closely, rising in tandem with the S&amp;P 500 over the past six months. The stock has climbed by 13.3% to $85.71 per share while the index has gained 16.9%.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-reasons-avoid-sky-1-004037182.html?.tsrc=rss",
+   "published_at": "2026-09-26T00:40:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:34Z",
+   "fingerprint": "dea4aaac025779c8",
+   "primary_source": false,
+   "cluster_id": "5c4de27fd302385d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0eb5d6dfcd3598f8",
+   "symbols": [
+    "SKY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Champion Homes (SKY), Why Is The Latest Attention Raising Bigger Questions?",
+   "summary": "Champion Homes (SKY) recently rebranded from Skyline Champion Corporation, a move that sharpens its identity around factory-built housing just as investors reassess the stock’s recent pullback and longer term total returns. The rebrand lands after a softer patch in the chart, wit",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/champion-homes-sky-why-latest-011516919.html?.tsrc=rss",
+   "published_at": "2026-09-25T01:15:16Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:34Z",
+   "fingerprint": "9ea4df66bd5bca6a",
+   "primary_source": false,
+   "cluster_id": "0eb5d6dfcd3598f8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4c8f1016f69b546b",
+   "symbols": [
+    "SKY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Champion® Homes Presents Visionary Solutions to America’s Affordable Housing Shortage at HUD Innovative Housing Showcase",
+   "summary": "TROY, Mich., September 22, 2026--Champion Homes, Inc. (NYSE: SKY) (\"Champion Homes\") today highlighted its trailblazing, offsite-built solutions to the nation’s affordable housing shortage at the U.S. Department of Housing and Urban Development (HUD) Innovative Housing Showcase i",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/champion-homes-presents-visionary-solutions-201000446.html?.tsrc=rss",
+   "published_at": "2026-09-22T20:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:34Z",
+   "fingerprint": "9bb62da95001737b",
+   "primary_source": false,
+   "cluster_id": "4c8f1016f69b546b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "015af7b2d37c7dd2",
+   "symbols": [
+    "SKY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Waller Manufactured Home Community Offers Homes Under $90K",
+   "summary": "A new manufactured home community in Waller County will offer homes starting in the high $80Ks, well below Houston's median price.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "credaily.com",
+   "url": "https://www.credaily.com/briefs/waller-manufactured-home-community-offers-homes-under-90k/?.tsrc=rss",
+   "published_at": "2026-09-18T16:32:13Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:34Z",
+   "fingerprint": "09a20c0c2a8680f1",
+   "primary_source": false,
+   "cluster_id": "015af7b2d37c7dd2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

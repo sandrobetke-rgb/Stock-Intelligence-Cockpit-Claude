@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,96 @@
    "adr20": 6.728840431711563,
    "rvol": 0.7479899324990382,
    "ema10": 1.1751330067914478,
-   "ema21": 1.3307924022022537,
+   "ema21": 1.3307924022049211,
    "sma50": 1.7607999873161315,
    "sma200": 2.6681749838590623
   },
   "market_cap": 110335608.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 1.090000033378601,
+    "change_pct": -6.034477177329478,
+    "ema20": 1.3164481215447386,
+    "ema50": 1.672873383922312,
+    "ema200": 2.262567185715988,
+    "sma50": 1.7607999873161315,
+    "rsi14": 25.163497098996046,
+    "rsi_min5": 23.865359072873176,
+    "atr14": 0.09893779860323683,
+    "atr_pct": 9.076861979220851,
+    "rvol": 0.7479899324990382,
+    "vol30": 3849880.0,
+    "dist_ema200_pct": -51.824633528675925,
+    "dist_52w_high_pct": 83.94698027242501,
+    "high_52w": 6.789999961853027,
+    "macd_above_signal": true,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 2.1500000953674316,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 1.1399999856948853,
+    "day_low": 1.0700000524520874,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": false,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": false,
+     "Volumen 30T > 1 Mio.": true,
+     "Kurs > 10": false,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": false
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.3,
+    "S03": 0.3333333333333333,
+    "S04": 0.2
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": false,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 1.1399999856948853,
+    "entry_max": 1.162799985408783,
+    "stop": 0.99159328779003,
+    "risk_per_share": 0.14840669790485528,
+    "target_1": 1.4368133815045958,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 18.5,
    "coverage_pct": 100,
@@ -56,11 +139,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 7.4,
+   "score": 31.0,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -125,12 +210,96 @@
   "adr20": 6.728840431711563,
   "rvol": 0.7479899324990382,
   "ema10": 1.1751330067914478,
-  "ema21": 1.3307924022022537,
+  "ema21": 1.3307924022049211,
   "sma50": 1.7607999873161315,
   "sma200": 2.6681749838590623,
   "volatility_ann": 68.02766849061179,
   "avg_dollar_volume_20d": 5033089.487708807,
-  "move_zscore": -1.4081675522110992
+  "move_zscore": -1.4081675522110992,
+  "swing": {
+   "tech": {
+    "close": 1.090000033378601,
+    "change_pct": -6.034477177329478,
+    "ema20": 1.3164481215447386,
+    "ema50": 1.672873383922312,
+    "ema200": 2.262567185715988,
+    "sma50": 1.7607999873161315,
+    "rsi14": 25.163497098996046,
+    "rsi_min5": 23.865359072873176,
+    "atr14": 0.09893779860323683,
+    "atr_pct": 9.076861979220851,
+    "rvol": 0.7479899324990382,
+    "vol30": 3849880.0,
+    "dist_ema200_pct": -51.824633528675925,
+    "dist_52w_high_pct": 83.94698027242501,
+    "high_52w": 6.789999961853027,
+    "macd_above_signal": true,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 2.1500000953674316,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 1.1399999856948853,
+    "day_low": 1.0700000524520874,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": false,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": true,
+     "Kurs > 10": false,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": false
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.3,
+    "S03": 0.3333333333333333,
+    "S04": 0.2
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": false,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 1.1399999856948853,
+    "entry_max": 1.162799985408783,
+    "stop": 0.99159328779003,
+    "risk_per_share": 0.14840669790485528,
+    "target_1": 1.4368133815045958,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 18.5,
@@ -451,11 +620,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 7.4,
+  "score": 31.0,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 42.2,
@@ -473,26 +642,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 6,
+    "independent": 6,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -510,7 +681,427 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "91cbefe0b2b3a743",
+   "symbols": [
+    "SIDU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sidus Space Appoints Hassan R. Baqar to Board of Directors",
+   "summary": "Sidus Space, Inc. (NASDAQ: SIDU) (\"Sidus\" or the \"Company\"), a vertically integrated space and defense technology company, today announced the appointment of Hassan R. Baqar to its Board of Directors, effective October 28, 2026. Mr. Baqar will serve on the Board's Audit Committee",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/sidus-space-appoints-hassan-r-123000224.html?.tsrc=rss",
+   "published_at": "2026-10-29T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:29Z",
+   "fingerprint": "bb8a02e36d9afb48",
+   "primary_source": false,
+   "cluster_id": "91cbefe0b2b3a743",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cea7a37deaa76627",
+   "symbols": [
+    "SIDU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ConnectM Appoints Leo Riera as Lead Independent Director; Former Bankers Trust Country Head Brings 40 Years of Capital Markets and Board Experience",
+   "summary": "MARLBOROUGH, Mass., Oct. 28, 2026 (GLOBE NEWSWIRE) -- ConnectM Technology Solutions, Inc. (OTCQX: CNTM) (“ConnectM” or the “Company”), a U.S.-based technology company that develops, sells and operates energy infrastructure powering the physical layer of the AI economy, today anno",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/connectm-appoints-leo-riera-lead-123000876.html?.tsrc=rss",
+   "published_at": "2026-10-28T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:29Z",
+   "fingerprint": "b7d7a1d2e29c8cd7",
+   "primary_source": false,
+   "cluster_id": "cea7a37deaa76627",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f967635d8624bd78",
+   "symbols": [
+    "SIDU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Momentus vs. Sidus Space: Which Space Stock Is a Better Buy Now?",
+   "summary": "MNTS and SIDU offer distinct growth opportunities in the commercial space industry, but which stock is better positioned to create long-term shareholder value? Let's dive in.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/momentus-vs-sidus-space-space-161900808.html?.tsrc=rss",
+   "published_at": "2026-10-15T16:19:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:29Z",
+   "fingerprint": "a9216dc6beb766af",
+   "primary_source": false,
+   "cluster_id": "f967635d8624bd78",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f51498fa4caa2b02",
+   "symbols": [
+    "SIDU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Sidus Space Secures More Than $3 Million in Space and Defense Manufacturing Awards in Third Quarter",
+   "summary": "Sidus Space, Inc. (NASDAQ: SIDU) (\"Sidus\" or the \"Company\"), an innovative space and defense technology company, today announced that it secured more than $3 million in space and defense hardware manufacturing contracts and purchase orders during the third quarter of 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/sidus-space-secures-more-3-123000932.html?.tsrc=rss",
+   "published_at": "2026-10-14T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:29Z",
+   "fingerprint": "d77eaaff0ef11ac7",
+   "primary_source": false,
+   "cluster_id": "f51498fa4caa2b02",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "159d035aed09fe10",
+   "symbols": [
+    "SIDU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sidus Space Appoints Larry G. Swets Jr., CFA, to Board of Directors and Audit Committee Chair",
+   "summary": "Sidus Space, Inc. (NASDAQ: SIDU) (\"Sidus\" or the \"Company\"), a vertically integrated space and defense technology company, today announced the appointment of Larry G. Swets Jr., CFA, to its Board of Directors as an independent director, effective October 5, 2026. Mr. Swets will c",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/sidus-space-appoints-larry-g-123100678.html?.tsrc=rss",
+   "published_at": "2026-10-12T12:31:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:29Z",
+   "fingerprint": "2d5badcf87e54b66",
+   "primary_source": false,
+   "cluster_id": "159d035aed09fe10",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "96ba8f4b5e59f74d",
+   "symbols": [
+    "SIDU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sidus Space to Present at The ThinkEquity Conference",
+   "summary": "Sidus Space, Inc. (NASDAQ: SIDU) (\"Sidus\" or the \"Company\"), an innovative space and defense technology company, today announced that Carol Craig, Founder, Chief Executive Officer and Chairman, and Alan Khalili, Chief Financial Officer, will present at The ThinkEquity Conference ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/sidus-space-present-thinkequity-conference-123100964.html?.tsrc=rss",
+   "published_at": "2026-10-09T12:31:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:29Z",
+   "fingerprint": "338e8c64529145bc",
+   "primary_source": false,
+   "cluster_id": "96ba8f4b5e59f74d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8fd16b81d827a07f",
+   "symbols": [
+    "SIDU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sidus Space Moves LizzieSat-5 To SpaceX Bandwagon-6, Aims Launch By April 2027",
+   "summary": "LizzieSat-5 will now fly on SpaceX’s Bandwagon-6 mission instead of its previously planned Transporter-18 launch, which was targeted for October 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/sidus-space-moves-lizzie-sat-5-to-space-x-bandwagon-6-aims-launch-by-april-2027/cZMSxGTRBQs?.tsrc=rss",
+   "published_at": "2026-09-28T14:45:23Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:29Z",
+   "fingerprint": "dcd07f8f58d93c46",
+   "primary_source": false,
+   "cluster_id": "8fd16b81d827a07f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a247a9c1ad6cc212",
+   "symbols": [
+    "SIDU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sidus Space to Launch LizzieSat-4 and LizzieSat-5 Together on SpaceX Bandwagon-6",
+   "summary": "Sidus Space, Inc. (NASDAQ: SIDU) (\"Sidus\" or the \"Company\"), a vertically integrated space and defense technology company, today announced that LizzieSat-4 and LizzieSat-5 are currently aligned with launch on the SpaceX Bandwagon-6 rideshare mission, targeted for no earlier than ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/sidus-space-launch-lizziesat-4-123100010.html?.tsrc=rss",
+   "published_at": "2026-09-28T12:31:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:29Z",
+   "fingerprint": "41e22295969dfb1f",
+   "primary_source": false,
+   "cluster_id": "a247a9c1ad6cc212",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f93d9d602d60a88b",
+   "symbols": [
+    "SIDU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sidus Space Signs Memorandum of Understanding with 3GM Plus to Support Development of Slovenian Small Satellite Capability",
+   "summary": "Sidus Space, Inc. (NASDAQ: SIDU), (the \"Company\" or \"Sidus\"), an innovative space and defense technology company, today announced the signing of a non-binding Memorandum of Understanding (\"MOU\") with 3GM Plus, a Slovenian company headquartered in Ljubljana, to collaborate on sate",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/sidus-space-signs-memorandum-understanding-123100642.html?.tsrc=rss",
+   "published_at": "2026-09-17T12:31:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:29Z",
+   "fingerprint": "35f01604c92456bc",
+   "primary_source": false,
+   "cluster_id": "f93d9d602d60a88b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c4a9b7c222b90569",
+   "symbols": [
+    "FJET",
+    "SIDU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Before Anything Flies to Space, It Has to Be Built, Tested, and Proven on the Ground, and That Quiet Bottleneck Is Becoming a Business",
+   "summary": "Equity Insider News Commentary -The space economy is usually measured in launches and satellites, but a large share of the real work happens long before a payload ever leaves the ground. Instruments, experiments, and hardware have to be assembled, integrated, tested, and validate",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/anything-flies-space-built-tested-131600937.html?.tsrc=rss",
+   "published_at": "2026-09-02T13:16:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:25Z",
+   "fingerprint": "54fd2f79466008f9",
+   "primary_source": false,
+   "cluster_id": "c4a9b7c222b90569",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "08b2a88c207ec4d5",
+   "symbols": [
+    "SIDU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sidus Space (SIDU) Moved, So What Is Catching The Market’s Attention?",
+   "summary": "Sidus Space (SIDU) has come into focus after reporting second quarter 2026 results that showed revenue of US$0.58 million and a net loss of US$4.78 million, alongside a lower basic loss per share. See our latest analysis for Sidus Space. The second quarter 2026 release comes afte",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/sidus-space-sidu-moved-catching-151132730.html?.tsrc=rss",
+   "published_at": "2026-08-19T15:11:32Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:29Z",
+   "fingerprint": "b67a1e9884e9ebd4",
+   "primary_source": false,
+   "cluster_id": "08b2a88c207ec4d5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5cd1d1e37391bbdf",
+   "symbols": [
+    "SIDU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Sidus Space (SIDU) Stock Looks Fairly Valued As Q2 Results Test Its Recovery",
+   "summary": "Sidus Space stock has more than doubled over the past year, yet its recent valuation checks suggest the shares are not an obvious bargain, which leaves investors weighing a strong price recovery against fairly cautious fundamentals. Sidus Space has returned 114.0% over the past y",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/sidus-space-sidu-stock-looks-110920943.html?.tsrc=rss",
+   "published_at": "2026-08-19T11:09:20Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:29Z",
+   "fingerprint": "4bd8476f28a35071",
+   "primary_source": false,
+   "cluster_id": "5cd1d1e37391bbdf",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4a40e6bd5708c452",
+   "symbols": [
+    "SIDU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Sidus Space, Inc. Q2 2026 Earnings Call Summary",
+   "summary": "Moby summary of Sidus Space, Inc.'s Q2 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-sidus-space-inc-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-08-15T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:29Z",
+   "fingerprint": "72997633224d22ec",
+   "primary_source": false,
+   "cluster_id": "4a40e6bd5708c452",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a5043c1b85a87389",
+   "symbols": [
+    "SIDU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Sidus Space Inc (SIDU) (Q2 2026) Earnings Call Highlights: $158. ...",
+   "summary": "Despite a 54% revenue decline, Sidus Space strengthens its balance sheet with a major capital raise and advances key technology milestones toward TRL 9.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/sidus-space-inc-sidu-q2-050027134.html?.tsrc=rss",
+   "published_at": "2026-08-15T05:00:27Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:29Z",
+   "fingerprint": "e1fa9faf11bc3afa",
+   "primary_source": false,
+   "cluster_id": "a5043c1b85a87389",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e0b011759e06a1a7",
+   "symbols": [
+    "SIDU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Sidus Space Q2 Earnings Call Highlights",
+   "summary": "Sidus Space (NASDAQ:SIDU) reported lower second-quarter revenue while strengthening its cash position through two equity offerings that generated $158.5 million in gross proceeds during the quarter. Management said the company is shifting its focus from technology demonstrations ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/sidus-space-q2-earnings-call-highlights-2026-08-14/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-14T22:04:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:29Z",
+   "fingerprint": "a72c104db2ee9983",
+   "primary_source": false,
+   "cluster_id": "e0b011759e06a1a7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5628d9f068989c77",
+   "symbols": [
+    "SIDU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "SIDUS SPACE REPORTS SECOND QUARTER 2026 FINANCIAL RESULTS",
+   "summary": "Sidus Space, Inc. (NASDAQ: SIDU), (the \"Company\" or \"Sidus\"), an innovative space and defense technology company, today announced its financial results for the second quarter ended June 30, 2026, and provided a business update highlighting a strengthened capital position, complet",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/sidus-space-reports-second-quarter-204500020.html?.tsrc=rss",
+   "published_at": "2026-08-14T20:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:29Z",
+   "fingerprint": "d3dc8bafac2da674",
+   "primary_source": false,
+   "cluster_id": "5628d9f068989c77",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e353d1d8c61cb386",
+   "symbols": [
+    "SIDU"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ahead of Sidus Space Earnings, Here's What Barchart Data Says Comes Next for SIDU Stock",
+   "summary": "Sidus Space is set to report its Q2 earnings on Aug. 14. Here’s why investors are cautioned against owning SIDU shares ahead of the earnings event.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "barchart.com",
+   "url": "https://www.barchart.com/story/news/3839461/ahead-of-sidus-space-earnings-here-s-what-barchart-data-says-comes-next-for-sidu-stock?.tsrc=rss",
+   "published_at": "2026-08-13T21:01:59Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:29Z",
+   "fingerprint": "74ce6131c70f8b9a",
+   "primary_source": false,
+   "cluster_id": "e353d1d8c61cb386",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "709cdea78457302a",
+   "symbols": [
+    "SIDU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sidus Space Appoints Alan Khalili as Chief Financial Officer to Drive Next Phase of Growth",
+   "summary": "Sidus Space, Inc. (NASDAQ: SIDU) (\"Sidus\" or the \"Company\"), an innovative space and defense technology company, today announced the appointment of Alan Khalili as Chief Financial Officer, effective July 27, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/sidus-space-appoints-alan-khalili-123000789.html?.tsrc=rss",
+   "published_at": "2026-07-24T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:29Z",
+   "fingerprint": "86b1a0c279530c08",
+   "primary_source": false,
+   "cluster_id": "709cdea78457302a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "700c1cda83bddc1f",
+   "symbols": [
+    "SIDU"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sidus Space Issues Letter to Shareholders Highlighting Progress and Next Phase of Growth",
+   "summary": "Sidus Space, Inc. (NASDAQ: SIDU) (\"Sidus\" or the \"Company\"), an innovative space and defense technology company, today announced that it has released a Letter to Shareholders from its Founder, Chief Executive Officer and Chairman, Carol Craig, detailing the Company's transition f",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/sidus-space-issues-letter-shareholders-123100261.html?.tsrc=rss",
+   "published_at": "2026-07-21T12:31:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:29Z",
+   "fingerprint": "b54a0e9f46816bbe",
+   "primary_source": false,
+   "cluster_id": "700c1cda83bddc1f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,96 @@
    "adr20": 4.461758804853722,
    "rvol": 1.1202871597456139,
    "ema10": 14.818202193440046,
-   "ema21": 15.158614194177977,
+   "ema21": 15.158614194143558,
    "sma50": 16.30500015258789,
-   "sma200": 16.44404478549957
+   "sma200": 16.444044823646546
   },
   "market_cap": 432097728.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 14.970000267028809,
+    "change_pct": -1.836063822761913,
+    "ema20": 15.123361145217991,
+    "ema50": 15.844354135179538,
+    "ema200": 16.37395292623986,
+    "sma50": 16.30500015258789,
+    "rsi14": 45.86560754775031,
+    "rsi_min5": 34.97675646886151,
+    "atr14": 0.7222381871362646,
+    "atr_pct": 4.824570302293067,
+    "rvol": 1.1202871597456139,
+    "vol30": 390076.6666666667,
+    "dist_ema200_pct": -8.574304967990741,
+    "dist_52w_high_pct": 37.95491800354335,
+    "high_52w": 24.127617830988978,
+    "macd_above_signal": true,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": true,
+    "higher_low": false,
+    "last_higher_high": 17.34000015258789,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": true,
+    "day_high": 15.119999885559082,
+    "day_low": 14.699999809265137,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": true,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": false,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": true,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": true,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.5,
+    "S03": 0.6666666666666666,
+    "S04": 0.4
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": false,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": true,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 15.119999885559082,
+    "entry_max": 15.422399883270264,
+    "stop": 14.036642604854684,
+    "risk_per_share": 1.0833572807043979,
+    "target_1": 17.286714446967878,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 38.1,
    "coverage_pct": 100,
@@ -139,12 +222,96 @@
   "adr20": 4.461758804853722,
   "rvol": 1.1202871597456139,
   "ema10": 14.818202193440046,
-  "ema21": 15.158614194177977,
+  "ema21": 15.158614194143558,
   "sma50": 16.30500015258789,
-  "sma200": 16.44404478549957,
+  "sma200": 16.444044823646546,
   "volatility_ann": 48.14545955927536,
   "avg_dollar_volume_20d": 5850229.580450058,
-  "move_zscore": -0.6053864656071892
+  "move_zscore": -0.6053864656071892,
+  "swing": {
+   "tech": {
+    "close": 14.970000267028809,
+    "change_pct": -1.836063822761913,
+    "ema20": 15.123361145217991,
+    "ema50": 15.844354135179538,
+    "ema200": 16.37395292623986,
+    "sma50": 16.30500015258789,
+    "rsi14": 45.86560754775031,
+    "rsi_min5": 34.97675646886151,
+    "atr14": 0.7222381871362646,
+    "atr_pct": 4.824570302293067,
+    "rvol": 1.1202871597456139,
+    "vol30": 390076.6666666667,
+    "dist_ema200_pct": -8.574304967990741,
+    "dist_52w_high_pct": 37.95491800354335,
+    "high_52w": 24.127617830988978,
+    "macd_above_signal": true,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": true,
+    "higher_low": false,
+    "last_higher_high": 17.34000015258789,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": true,
+    "day_high": 15.119999885559082,
+    "day_low": 14.699999809265137,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": true,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": true,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": true,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.5,
+    "S03": 0.6666666666666666,
+    "S04": 0.4
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": false,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": true,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 15.119999885559082,
+    "entry_max": 15.422399883270264,
+    "stop": 14.036642604854684,
+    "risk_per_share": 1.0833572807043979,
+    "target_1": 17.286714446967878,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 38.1,
@@ -647,7 +814,8 @@
    "id": "750e006115017427",
    "symbols": [
     "ASTE",
-    "CMCO"
+    "CMCO",
+    "REZI"
    ],
    "category": "market",
    "signal_type": "news",

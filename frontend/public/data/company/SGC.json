@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,96 @@
    "adr20": 3.115562145627048,
    "rvol": 1.244937113621829,
    "ema10": 12.690540147088452,
-   "ema21": 12.798915911189845,
+   "ema21": 12.798915911223803,
    "sma50": 12.687999973297119,
    "sma200": 11.709914860725403
   },
   "market_cap": 195966512.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 12.289999961853027,
+    "change_pct": -2.6148964080710435,
+    "ema20": 12.796015838967824,
+    "ema50": 12.77131491278845,
+    "ema200": 12.009143723719395,
+    "sma50": 12.687999973297119,
+    "rsi14": 38.84183516993794,
+    "rsi_min5": 38.84183516993794,
+    "atr14": 0.4145219832221342,
+    "atr_pct": 3.372839581031492,
+    "rvol": 1.244937113621829,
+    "vol30": 27616.666666666668,
+    "dist_ema200_pct": 2.3386866257492533,
+    "dist_52w_high_pct": 14.857766147754381,
+    "high_52w": 14.434669382977294,
+    "macd_above_signal": false,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": true,
+    "higher_low": false,
+    "last_higher_high": 13.59000015258789,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 12.640000343322754,
+    "day_low": 12.270000457763672,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": true,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": true,
+     "Marktkap. > 1 Mrd.": false,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": true,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": false,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": true,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.0,
+    "S02": 0.7,
+    "S03": 0.3333333333333333,
+    "S04": 0.4
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": true,
+    "über EMA 200": true
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 12.640000343322754,
+    "entry_max": 12.892800350189209,
+    "stop": 12.018217368489552,
+    "risk_per_share": 0.6217829748332022,
+    "target_1": 13.883566292989158,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 36.0,
    "coverage_pct": 100,
@@ -55,11 +138,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 6.4,
+   "score": 29.9,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -124,12 +209,96 @@
   "adr20": 3.115562145627048,
   "rvol": 1.244937113621829,
   "ema10": 12.690540147088452,
-  "ema21": 12.798915911189845,
+  "ema21": 12.798915911223803,
   "sma50": 12.687999973297119,
   "sma200": 11.709914860725403,
   "volatility_ann": 34.552783559863144,
   "avg_dollar_volume_20d": 307276.2018299103,
-  "move_zscore": -1.2013559928622066
+  "move_zscore": -1.2013559928622066,
+  "swing": {
+   "tech": {
+    "close": 12.289999961853027,
+    "change_pct": -2.6148964080710435,
+    "ema20": 12.796015838967824,
+    "ema50": 12.77131491278845,
+    "ema200": 12.009143723719395,
+    "sma50": 12.687999973297119,
+    "rsi14": 38.84183516993794,
+    "rsi_min5": 38.84183516993794,
+    "atr14": 0.4145219832221342,
+    "atr_pct": 3.372839581031492,
+    "rvol": 1.244937113621829,
+    "vol30": 27616.666666666668,
+    "dist_ema200_pct": 2.3386866257492533,
+    "dist_52w_high_pct": 14.857766147754381,
+    "high_52w": 14.434669382977294,
+    "macd_above_signal": false,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": true,
+    "higher_low": false,
+    "last_higher_high": 13.59000015258789,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 12.640000343322754,
+    "day_low": 12.270000457763672,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": true,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": true,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": true,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": false,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": true,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.0,
+    "S02": 0.7,
+    "S03": 0.3333333333333333,
+    "S04": 0.4
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": true,
+    "über EMA 200": true
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 12.640000343322754,
+    "entry_max": 12.892800350189209,
+    "stop": 12.018217368489552,
+    "risk_per_share": 0.6217829748332022,
+    "target_1": 13.883566292989158,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 36.0,
@@ -449,11 +618,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.4,
+  "score": 29.9,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 36.0,
@@ -471,26 +640,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -508,7 +679,448 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "58a3cfcb88754e8d",
+   "symbols": [
+    "SGC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Superior Group (SGC) Stock Sinks As Market Gains: Here's Why",
+   "summary": "Superior Group (SGC) closed at $12.62 in the latest trading session, marking a -1.64% move from the prior day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/superior-group-sgc-stock-sinks-211502728.html?.tsrc=rss",
+   "published_at": "2026-10-26T21:15:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:19Z",
+   "fingerprint": "2d079c1a2afb0e84",
+   "primary_source": false,
+   "cluster_id": "58a3cfcb88754e8d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1645ddcf3edba5a2",
+   "symbols": [
+    "SGC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Superior Group of Companies to Announce Third Quarter 2026 Results",
+   "summary": "ST. PETERSBURG, Fla., Oct. 26, 2026 (GLOBE NEWSWIRE) -- Superior Group of Companies, Inc. (NASDAQ: SGC) (the “Company”) today announced that it will release the results of its operations for the third quarter 2026 before the market open on Monday, November 9, 2026. Michael Bensto",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/superior-group-companies-announce-third-200500191.html?.tsrc=rss",
+   "published_at": "2026-10-26T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:19Z",
+   "fingerprint": "616c64ee169b4569",
+   "primary_source": false,
+   "cluster_id": "1645ddcf3edba5a2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "eaf74024e5b7ec90",
+   "symbols": [
+    "SGC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Superior Group (SGC) Stock Dips While Market Gains: Key Facts",
+   "summary": "In the latest trading session, Superior Group (SGC) closed at $13.31, marking a -1.19% move from the previous day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/superior-group-sgc-stock-dips-211504283.html?.tsrc=rss",
+   "published_at": "2026-10-19T21:15:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:19Z",
+   "fingerprint": "bce5daa63b60b1f7",
+   "primary_source": false,
+   "cluster_id": "eaf74024e5b7ec90",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8431ed0372deead3",
+   "symbols": [
+    "SGC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Here's Why Superior Group (SGC) Fell More Than Broader Market",
+   "summary": "Superior Group (SGC) concluded the recent trading session at $13.06, signifying a -1.51% move from its prior day's close.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/heres-why-superior-group-sgc-211505332.html?.tsrc=rss",
+   "published_at": "2026-10-13T21:15:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:19Z",
+   "fingerprint": "3c7889fcd95faba1",
+   "primary_source": false,
+   "cluster_id": "8431ed0372deead3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f6134015bb4a9d4a",
+   "symbols": [
+    "SGC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Superior Group (SGC) Declines More Than Market: Some Information for Investors",
+   "summary": "In the most recent trading session, Superior Group (SGC) closed at $12.55, indicating a -2.56% shift from the previous trading day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/superior-group-sgc-declines-more-211504939.html?.tsrc=rss",
+   "published_at": "2026-09-28T21:15:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:19Z",
+   "fingerprint": "6efb39bf60d50a5a",
+   "primary_source": false,
+   "cluster_id": "f6134015bb4a9d4a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c22a3f8aa00f34df",
+   "symbols": [
+    "SGC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is It Worth Investing in Superior Group (SGC) Based on Wall Street's Bullish Views?",
+   "summary": "According to the average brokerage recommendation (ABR), one should invest in Superior Group (SGC). It is debatable whether this highly sought-after metric is effective because Wall Street analysts' recommendations tend to be overly optimistic. Would it be worth investing in the ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/worth-investing-superior-group-sgc-133004687.html?.tsrc=rss",
+   "published_at": "2026-09-23T13:30:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:19Z",
+   "fingerprint": "d879ca4c8127fd37",
+   "primary_source": false,
+   "cluster_id": "c22a3f8aa00f34df",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4c95bc4844247acc",
+   "symbols": [
+    "SGC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Superior Group (SGC) Stock Moves 2.27%: What You Should Know",
+   "summary": "Superior Group (SGC) closed the most recent trading day at $12.62, moving +2.27% from the previous trading session.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/superior-group-sgc-stock-moves-221506511.html?.tsrc=rss",
+   "published_at": "2026-09-22T22:15:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:19Z",
+   "fingerprint": "25c7ef113202d5af",
+   "primary_source": false,
+   "cluster_id": "4c95bc4844247acc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "88f83beb7cec1117",
+   "symbols": [
+    "SGC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "lululemon Refreshes Product Strategy: Will New Styles Click?",
+   "summary": "LULU refreshes product strategy with new styles, faster replenishment and brand investments as it targets full-price sales growth.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/lululemon-refreshes-product-strategy-styles-150500473.html?.tsrc=rss",
+   "published_at": "2026-09-18T15:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:19Z",
+   "fingerprint": "dff01358294b388e",
+   "primary_source": false,
+   "cluster_id": "88f83beb7cec1117",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e595e2a14322e300",
+   "symbols": [
+    "SGC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ROST Sees Strong Closeout Supply: Is Off-Price Set to Benefit?",
+   "summary": "Ross Stores is poised to benefit from abundant closeout supply, stronger brands and disciplined pricing as value-conscious shoppers seek savings.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/rost-sees-strong-closeout-supply-143200059.html?.tsrc=rss",
+   "published_at": "2026-09-18T14:32:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:19Z",
+   "fingerprint": "d741d8137d43f370",
+   "primary_source": false,
+   "cluster_id": "e595e2a14322e300",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fb9ca5a1de97b91b",
+   "symbols": [
+    "SGC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Abercrombie & Fitch Stock Climbs 59% in 3 Months: Is There More Upside?",
+   "summary": "ANF's shares jump 58.9% in three months as brand momentum, full-price selling and new growth avenues support stronger performance.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/abercrombie-fitch-stock-climbs-59-140600824.html?.tsrc=rss",
+   "published_at": "2026-09-18T14:06:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:19Z",
+   "fingerprint": "53c76fe6ba45ccb0",
+   "primary_source": false,
+   "cluster_id": "fb9ca5a1de97b91b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a9d2cf2d13de6668",
+   "symbols": [
+    "SGC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "The Office Gurus Strengthens Executive Leadership Team to Accelerate Next Phase of Global Growth",
+   "summary": "Veteran BPO executives Mark Lyndsell and Troy Sanders join TOG as the company expands its global delivery capabilities and advances its Experience Process Outsourcing strategyST. PETERSBURG, Fla., Sept. 17, 2026 (GLOBE NEWSWIRE) -- The Office Gurus (TOG), a business segment of Su",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/office-gurus-strengthens-executive-leadership-120000455.html?.tsrc=rss",
+   "published_at": "2026-09-17T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:19Z",
+   "fingerprint": "de59c266df7d8d76",
+   "primary_source": false,
+   "cluster_id": "a9d2cf2d13de6668",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "80323d40c22718e3",
+   "symbols": [
+    "SGC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Superior Group (SGC) Suffers a Larger Drop Than the General Market: Key Insights",
+   "summary": "In the latest trading session, Superior Group (SGC) closed at $12.4, marking a -1.35% move from the previous day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/superior-group-sgc-suffers-larger-221503011.html?.tsrc=rss",
+   "published_at": "2026-09-16T22:15:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:19Z",
+   "fingerprint": "9d1d6b8f30ee9aa1",
+   "primary_source": false,
+   "cluster_id": "80323d40c22718e3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a1eea61ef16790e8",
+   "symbols": [
+    "SGC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can Ralph Lauren's Marketing Strategy Fuel Long-Term Growth?",
+   "summary": "RL is increasing marketing investment to strengthen brand desirability, attract consumers and drive long-term customer value.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/ralph-laurens-marketing-strategy-fuel-150400734.html?.tsrc=rss",
+   "published_at": "2026-09-15T15:04:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:19Z",
+   "fingerprint": "ee75dde8c15b04b8",
+   "primary_source": false,
+   "cluster_id": "a1eea61ef16790e8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "69ba4502476cf00e",
+   "symbols": [
+    "SGC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "GAP's Gross Margin Hits 41.4%: Can Expansion Continue in 2H 2026?",
+   "summary": "GAP's 41.4% adjusted gross margin rises year over year, but Old Navy investments, fuel costs and occupancy deleverage can pressure second-half gains.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gaps-gross-margin-hits-41-143400802.html?.tsrc=rss",
+   "published_at": "2026-09-15T14:34:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:19Z",
+   "fingerprint": "8febc13a3cc139b4",
+   "primary_source": false,
+   "cluster_id": "69ba4502476cf00e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cabe3e6d9018e769",
+   "symbols": [
+    "SGC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are Consumer Discretionary Stocks Lagging  Superior Group of Companies (SGC) This Year?",
+   "summary": "Here is how Superior Group (SGC) and American Outdoor Brands, Inc. (AOUT) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/consumer-discretionary-stocks-lagging-superior-134002282.html?.tsrc=rss",
+   "published_at": "2026-09-10T13:40:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:19Z",
+   "fingerprint": "04f6d7cbab49ee98",
+   "primary_source": false,
+   "cluster_id": "cabe3e6d9018e769",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9c4b8b61c7b39fa3",
+   "symbols": [
+    "SGC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can Ralph Lauren's Luxury Positioning Drive Brand Momentum?",
+   "summary": "RL's luxury positioning and brand strength are driving new customer gains, stronger core products and rapid growth in high-potential categories.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ralph-laurens-luxury-positioning-drive-171000337.html?.tsrc=rss",
+   "published_at": "2026-09-09T17:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:19Z",
+   "fingerprint": "36cca8d191a3ebd0",
+   "primary_source": false,
+   "cluster_id": "9c4b8b61c7b39fa3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "df79642700cade73",
+   "symbols": [
+    "SGC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "SGC or CTAS: Which Is the Better Value Stock Right Now?",
+   "summary": "SGC vs. CTAS: Which Stock Is the Better Value Option?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/sgc-ctas-better-value-stock-154003127.html?.tsrc=rss",
+   "published_at": "2026-09-09T15:40:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:19Z",
+   "fingerprint": "46c780b43269e52f",
+   "primary_source": false,
+   "cluster_id": "df79642700cade73",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7bf660accca55568",
+   "symbols": [
+    "SGC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Superior Group (SGC) Registers a Bigger Fall Than the Market: Important Facts to Note",
+   "summary": "Superior Group (SGC) concluded the recent trading session at $12.37, signifying a -2.83% move from its prior day's close.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/superior-group-sgc-registers-bigger-221502218.html?.tsrc=rss",
+   "published_at": "2026-09-08T22:15:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:19Z",
+   "fingerprint": "791f64c569c20d22",
+   "primary_source": false,
+   "cluster_id": "7bf660accca55568",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d524998097d97f3e",
+   "symbols": [
+    "SGC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Superior Group of Companies to Participate in Upcoming September Conferences",
+   "summary": "ST. PETERSBURG, Fla., Sept. 02, 2026 (GLOBE NEWSWIRE) -- Superior Group of Companies, Inc. (NASDAQ: SGC) today announced that Chairman and Chief Executive Officer, Michael Benstock, and President and Chief Financial Officer, Mike Koempel, will participate in both the Northcoast R",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/superior-group-companies-participate-upcoming-200500681.html?.tsrc=rss",
+   "published_at": "2026-09-02T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:19Z",
+   "fingerprint": "6b8ddd9f7b4d11f9",
+   "primary_source": false,
+   "cluster_id": "d524998097d97f3e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a943b1a7a850a576",
+   "symbols": [
+    "SGC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Ralph Lauren's AI Strategy Enhancing Customer Experience?",
+   "summary": "RL invests in AI, analytics and digital capabilities to improve customer experiences, brand discovery and operating efficiency.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/ralph-laurens-ai-strategy-enhancing-172200451.html?.tsrc=rss",
+   "published_at": "2026-09-02T17:22:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:19Z",
+   "fingerprint": "4cbec56e63a2c28e",
+   "primary_source": false,
+   "cluster_id": "a943b1a7a850a576",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

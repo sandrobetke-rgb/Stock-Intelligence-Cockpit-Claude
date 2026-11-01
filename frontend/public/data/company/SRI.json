@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,96 @@
    "adr20": 3.91362361885781,
    "rvol": 0.9341632236948006,
    "ema10": 5.936533034688451,
-   "ema21": 6.119181325137672,
+   "ema21": 6.119181325151966,
    "sma50": 6.6667999744415285,
    "sma200": 6.907799980640411
   },
   "market_cap": 162009920.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 5.679999828338623,
+    "change_pct": -6.885247260003746,
+    "ema20": 6.101883835651129,
+    "ema50": 6.487721460017064,
+    "ema200": 6.779731490063368,
+    "sma50": 6.6667999744415285,
+    "rsi14": 32.96036490331723,
+    "rsi_min5": 30.2311748249398,
+    "atr14": 0.2579573896565297,
+    "atr_pct": 4.541503476277062,
+    "rvol": 0.9341632236948006,
+    "vol30": 184196.66666666666,
+    "dist_ema200_pct": -16.22087339795909,
+    "dist_52w_high_pct": 41.503606529103806,
+    "high_52w": 9.710000038146973,
+    "macd_above_signal": true,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 6.900000095367432,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 6.099999904632568,
+    "day_low": 5.670000076293945,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": false,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": false,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": false
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.3,
+    "S03": 0.3333333333333333,
+    "S04": 0.2
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": false,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": true,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 6.099999904632568,
+    "entry_max": 6.22199990272522,
+    "stop": 5.713063820147774,
+    "risk_per_share": 0.38693608448479466,
+    "target_1": 6.873872073602158,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 31.0,
    "coverage_pct": 100,
@@ -56,11 +139,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 16.1,
+   "score": 44.9,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 3,
    "independent_24h": 0
   },
   "political": {
@@ -125,12 +210,96 @@
   "adr20": 3.91362361885781,
   "rvol": 0.9341632236948006,
   "ema10": 5.936533034688451,
-  "ema21": 6.119181325137672,
+  "ema21": 6.119181325151966,
   "sma50": 6.6667999744415285,
   "sma200": 6.907799980640411,
   "volatility_ann": 36.03054246466949,
   "avg_dollar_volume_20d": 1136057.4969124794,
-  "move_zscore": -3.0335350043127747
+  "move_zscore": -3.0335350043127747,
+  "swing": {
+   "tech": {
+    "close": 5.679999828338623,
+    "change_pct": -6.885247260003746,
+    "ema20": 6.101883835651129,
+    "ema50": 6.487721460017064,
+    "ema200": 6.779731490063368,
+    "sma50": 6.6667999744415285,
+    "rsi14": 32.96036490331723,
+    "rsi_min5": 30.2311748249398,
+    "atr14": 0.2579573896565297,
+    "atr_pct": 4.541503476277062,
+    "rvol": 0.9341632236948006,
+    "vol30": 184196.66666666666,
+    "dist_ema200_pct": -16.22087339795909,
+    "dist_52w_high_pct": 41.503606529103806,
+    "high_52w": 9.710000038146973,
+    "macd_above_signal": true,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 6.900000095367432,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 6.099999904632568,
+    "day_low": 5.670000076293945,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": false,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": false
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.3,
+    "S03": 0.3333333333333333,
+    "S04": 0.2
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": false,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": true,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 6.099999904632568,
+    "entry_max": 6.22199990272522,
+    "stop": 5.713063820147774,
+    "risk_per_share": 0.38693608448479466,
+    "target_1": 6.873872073602158,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 31.0,
@@ -451,11 +620,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 16.1,
+  "score": 44.9,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 86.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 91.0,
@@ -473,26 +642,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 5,
+    "independent": 5,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -510,7 +681,427 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "925500085927aa51",
+   "symbols": [
+    "SRI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Kodiak AI stock gains amid Stoneridge partnership announcement",
+   "summary": "Investing.com -- Kodiak AI Inc (NASDAQ:KDK) shares rose 5.7% Thursday following the company's announcement of a collaboration with Stoneridge Inc (NYSE:SRI) to advance autonomous commercial vehicles.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/kodiak-ai-stock-gains-amid-150009878.html?.tsrc=rss",
+   "published_at": "2026-10-29T15:00:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:03Z",
+   "fingerprint": "558e5d88f9f5256a",
+   "primary_source": false,
+   "cluster_id": "925500085927aa51",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "48d7e66be5d3d9c4",
+   "symbols": [
+    "SRI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Stoneridge and Kodiak AI Announce Collaboration to Advance Autonomous Commercial Vehicles",
+   "summary": "Stoneridge, Inc. (NYSE: SRI), a global supplier of safe and efficient electronic systems and technologies, today announced its collaboration with Kodiak AI, Inc. (Nasdaq: KDK), a leading provider of Physical AI-powered autonomous driving technology. The collaboration begins with ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/stoneridge-kodiak-ai-announce-collaboration-200000717.html?.tsrc=rss",
+   "published_at": "2026-10-28T20:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:03Z",
+   "fingerprint": "1ae66c1e20d14cbb",
+   "primary_source": false,
+   "cluster_id": "48d7e66be5d3d9c4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "be9b63ba4ce16051",
+   "symbols": [
+    "ROG",
+    "SRI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Rogers Corp. (ROG) Beats Q3 Earnings Estimates",
+   "summary": "Rogers Corp. (ROG) delivered earnings and revenue surprises of +16.81% and -0.80%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/rogers-corp-rog-beats-q3-212010351.html?.tsrc=rss",
+   "published_at": "2026-10-27T21:20:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:40Z",
+   "fingerprint": "a17278de77790a24",
+   "primary_source": false,
+   "cluster_id": "be9b63ba4ce16051",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f728f771152211d5",
+   "symbols": [
+    "SRI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Stoneridge, Inc. Schedules Third Quarter 2026 Financial Results and Earnings Conference Call",
+   "summary": "Stoneridge, Inc. (NYSE: SRI) will release third quarter financial results after the market close on Wednesday, November 4, 2026. The company will hold a conference call the following day, Thursday, November 5, at 8:00am ET, hosted by Natalia Noblet, president and Chief Executive ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/stoneridge-inc-schedules-third-quarter-120000430.html?.tsrc=rss",
+   "published_at": "2026-10-19T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:03Z",
+   "fingerprint": "2cf1910b8b35a3cd",
+   "primary_source": false,
+   "cluster_id": "a696c597b8c19ca9",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d8c89283824ce58f",
+   "symbols": [
+    "SRI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sparton Provides Status Update",
+   "summary": "TORONTO, ON / ACCESS Newswire / October 2, 2026 / (TSXV:SRI) (\"Sparton\" or the \"Company\"), compliance with Exchange Policy 3.3, Timely Disclosure, is providing a status update on the temporary suspension (halt) of trading in the securities of the Company, placed by CIRO on Septem",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/sparton-provides-status-154500365.html?.tsrc=rss",
+   "published_at": "2026-10-02T15:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:03Z",
+   "fingerprint": "6478f1638e9ba1d6",
+   "primary_source": false,
+   "cluster_id": "d8c89283824ce58f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "edf35c6e97235066",
+   "symbols": [
+    "SRI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Stoneridge Appoints Uwe Brandenburg as Global Vice President, Engineering & Innovation",
+   "summary": "Stoneridge, Inc. (NYSE: SRI), a global leader of safe, intelligent and efficient electronic technologies for the commercial vehicle and off-highway equipment markets, today announced the appointment of Uwe Brandenburg as Global Vice President, Engineering & Innovation, effective ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/stoneridge-appoints-uwe-brandenburg-global-210000772.html?.tsrc=rss",
+   "published_at": "2026-09-23T21:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:03Z",
+   "fingerprint": "1b5e17e72152f00f",
+   "primary_source": false,
+   "cluster_id": "edf35c6e97235066",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cd1675703fc5201f",
+   "symbols": [
+    "SRI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Stoneridge Simplifies Vehicle Complexity with New EVO ECU Platform for Commercial Vehicles, Buses and Off-Highway",
+   "summary": "Stoneridge, Inc. (NYSE: SRI), a leading supplier of safe, intelligent and efficient electronic technologies for commercial vehicles, buses, coaches and off-highway equipment, is debuting its highly advanced EVO ECU platform and demonstrating it aboard its Innovation Truck at IAA ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/stoneridge-simplifies-vehicle-complexity-evo-120000994.html?.tsrc=rss",
+   "published_at": "2026-09-14T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:03Z",
+   "fingerprint": "f34f58b4429d779c",
+   "primary_source": false,
+   "cluster_id": "cd1675703fc5201f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "34745aa0c396c270",
+   "symbols": [
+    "SRI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sparton Signs Definitive Morrison Silver Mine Option and Joint Venture Agreement with Glen Eagle; Appoints Vice President, Corporate Development",
+   "summary": "TORONTO, ON / ACCESS Newswire / September 1, 2026 / (TSXV:SRI) (\"Sparton\" or the \"Company\") is pleased to announce that it has entered into a definitive Option and Joint Venture Agreement (the \"Agreement\") with Glen Eagle Resources Inc. (TSXV:GER) (\"Glen Eagle\") relating to the p",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/sparton-signs-definitive-morrison-silver-141000364.html?.tsrc=rss",
+   "published_at": "2026-09-01T14:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:03Z",
+   "fingerprint": "c9c79192733d692f",
+   "primary_source": false,
+   "cluster_id": "34745aa0c396c270",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "65c8a9f9c8cdd535",
+   "symbols": [
+    "SRI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Stoneridge Appoints Vivek Anand as Vice President, Commercial Strategy & Global Sales",
+   "summary": "Stoneridge, Inc. (NYSE: SRI), a global leader of safe, intelligent and efficient electronic technologies for the commercial vehicle and off-highway equipment markets, today announced the appointment of Vivek Anand as Vice President, Commercial Strategy & Global Sales, effective N",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/stoneridge-appoints-vivek-anand-vice-210000287.html?.tsrc=rss",
+   "published_at": "2026-08-27T21:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:03Z",
+   "fingerprint": "bb1698a00728b422",
+   "primary_source": false,
+   "cluster_id": "65c8a9f9c8cdd535",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b2f432d79560079e",
+   "symbols": [
+    "SRI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Stoneridge to Debut EVO ECU Platform Designed to Simplify the Future of Commercial Vehicles at IAA Transportation",
+   "summary": "Stoneridge, Inc. (NYSE: SRI), a leading supplier of safe, intelligent and efficient electronic technologies for commercial vehicles, buses, coaches and off-highway equipment, today announced additional details of its new EVO ECU Platform, which will debut at IAA Transportation 20",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/stoneridge-debut-evo-ecu-platform-180000345.html?.tsrc=rss",
+   "published_at": "2026-08-10T18:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:03Z",
+   "fingerprint": "19b214f7cc59cb4c",
+   "primary_source": false,
+   "cluster_id": "b2f432d79560079e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "63408519b75f12fe",
+   "symbols": [
+    "SRI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Stoneridge Q2 Earnings Call Highlights",
+   "summary": "Stoneridge (NYSE:SRI) reported second-quarter 2026 results that exceeded its internal expectations, supported by organic sales growth, record MirrorEye revenue, improved cost discipline and stronger cash generation. The company reaffirmed its full-year revenue and adjusted EBITDA",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/stoneridge-q2-earnings-call-highlights-2026-08-09/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-09T08:03:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:03Z",
+   "fingerprint": "b2da2ff72208246a",
+   "primary_source": false,
+   "cluster_id": "63408519b75f12fe",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1a08e37aa29b5975",
+   "symbols": [
+    "SRI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Stoneridge Inc (SRI) (Q2 2026) Earnings Call Highlights: Record Mirror Eye Sales and Fastest ...",
+   "summary": "Stoneridge Inc (SRI) posts strongest quarterly performance in eight quarters, with adjusted EBITDA more than doubling to $5.5 million.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/stoneridge-inc-sri-q2-2026-190529535.html?.tsrc=rss",
+   "published_at": "2026-08-06T19:05:29Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:03Z",
+   "fingerprint": "b15bf0ef1d4d045d",
+   "primary_source": false,
+   "cluster_id": "1a08e37aa29b5975",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4387aa8128dfd9f7",
+   "symbols": [
+    "SRI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Stoneridge (SRI) Reports Q2 Loss, Tops Revenue Estimates",
+   "summary": "Stoneridge (SRI) delivered earnings and revenue surprises of -28.57% and +12.07%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/stoneridge-sri-reports-q2-loss-003514452.html?.tsrc=rss",
+   "published_at": "2026-08-06T00:35:14Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:03Z",
+   "fingerprint": "7708c4caaea4d70f",
+   "primary_source": false,
+   "cluster_id": "4387aa8128dfd9f7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7f4225356898134c",
+   "symbols": [
+    "SRI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Stoneridge Reports Second Quarter 2026 Results",
+   "summary": "Stoneridge, Inc. (NYSE: SRI) today announced financial results for the second quarter ended June 30, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/stoneridge-reports-second-quarter-2026-210000786.html?.tsrc=rss",
+   "published_at": "2026-08-05T21:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:03Z",
+   "fingerprint": "de3a2425d726d274",
+   "primary_source": false,
+   "cluster_id": "7f4225356898134c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "89edc238b8311079",
+   "symbols": [
+    "SRI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Stoneridge Announces Largest MirrorEye® Camera Monitor System Bus and Coach Program to Date",
+   "summary": "Stoneridge, Inc. today announced a major new program award for its MirrorEye Camera Monitor System (CMS), further strengthening the company's position as a leader in advanced vision and safety technologies.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/stoneridge-announces-largest-mirroreye-camera-180000645.html?.tsrc=rss",
+   "published_at": "2026-07-27T18:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:03Z",
+   "fingerprint": "c670675ec59823fd",
+   "primary_source": false,
+   "cluster_id": "89edc238b8311079",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a696c597b8c19ca9",
+   "symbols": [
+    "SRI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Stoneridge, Inc. Schedules Second Quarter 2026 Financial Results and Earnings Conference Call",
+   "summary": "Stoneridge, Inc. (NYSE: SRI) will release second quarter financial results after the market close on Wednesday, August 5, 2026. The company will hold a conference call on Thursday, August 6, at 8:00am ET hosted by Natalia Noblet, president and chief executive officer, and Scott H",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/stoneridge-inc-schedules-second-quarter-210000764.html?.tsrc=rss",
+   "published_at": "2026-07-22T21:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:03Z",
+   "fingerprint": "17b45e3c44732622",
+   "primary_source": false,
+   "cluster_id": "a696c597b8c19ca9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ce8d04276a1b3778",
+   "symbols": [
+    "SRI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Stoneridge to Showcase EVO ECU Platform and Next-Generation Vision Technology at IAA Transportation 2026",
+   "summary": "Stoneridge, Inc., a leading supplier of safe, intelligent and efficient electronic technologies for commercial vehicles, buses, coaches and the off-highway equipment, today announced its participation in IAA Transportation 2026, where the company will showcase major innovations d",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/stoneridge-showcase-evo-ecu-platform-120000099.html?.tsrc=rss",
+   "published_at": "2026-06-25T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:03Z",
+   "fingerprint": "c04a29b643df30c0",
+   "primary_source": false,
+   "cluster_id": "ce8d04276a1b3778",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6b7220f3fe754c67",
+   "symbols": [
+    "SRI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Stoneridge Appoints Scott Humphrey as Chief Financial Officer",
+   "summary": "Stoneridge, Inc. today announced the appointment of Scott Humphrey to the position of chief financial officer and treasurer. Humphrey will oversee the company's global finance organization and help advance the continued focus on operational excellence, strategic growth and delive",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/stoneridge-appoints-scott-humphrey-chief-210000115.html?.tsrc=rss",
+   "published_at": "2026-06-03T21:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:03Z",
+   "fingerprint": "ec6836e6f787a179",
+   "primary_source": false,
+   "cluster_id": "6b7220f3fe754c67",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "363e78d2a4c441a4",
+   "symbols": [
+    "SRI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Stoneridge (SRI) Q1 2026 Earnings Transcript",
+   "summary": "Need a quote from a Motley Fool analyst?  Before we begin, I would like to inform you that as a result of the sale of its Control Devices business segment on January 30, 2026, the company has applied the provisions of discontinued operations accounting guidance and has retrospect",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/06/01/stoneridge-sri-q1-2026-earnings-transcript/?.tsrc=rss",
+   "published_at": "2026-06-01T20:38:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:03Z",
+   "fingerprint": "08764a924ce145f0",
+   "primary_source": false,
+   "cluster_id": "363e78d2a4c441a4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

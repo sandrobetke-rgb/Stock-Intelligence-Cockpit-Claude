@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,96 @@
    "adr20": 10.489023994489909,
    "rvol": 0.423229244611538,
    "ema10": 27.796520071011265,
-   "ema21": 26.727154652441527,
+   "ema21": 26.727154652420754,
    "sma50": 24.3085001373291,
    "sma200": 25.09957501411438
   },
   "market_cap": 508059584.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 29.040000915527344,
+    "change_pct": -1.4256557433726447,
+    "ema20": 26.804113136291626,
+    "ema50": 25.287120232851372,
+    "ema200": 23.358501549624034,
+    "sma50": 24.3085001373291,
+    "rsi14": 58.03972813993516,
+    "rsi_min5": 55.775412458110424,
+    "atr14": 2.5246336798079243,
+    "atr_pct": 8.693641874019475,
+    "rvol": 0.423229244611538,
+    "vol30": 934773.3333333334,
+    "dist_ema200_pct": 24.32304723756886,
+    "dist_52w_high_pct": 23.235528654697614,
+    "high_52w": 37.83000183105469,
+    "macd_above_signal": true,
+    "obv_rising": false,
+    "xo_bull_approx": true,
+    "higher_high": false,
+    "higher_low": true,
+    "last_higher_high": 30.969999313354492,
+    "hammer": true,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 29.510000228881836,
+    "day_low": 27.719999313354492,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": true
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": false,
+     "RSI 45–62": true,
+     "RelVol > 0,8": false,
+     "EMA 20 > SMA 50": true,
+     "Marktkap. > 1 Mrd.": false,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": true,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": false
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": true,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": true,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.5,
+    "S03": 0.3333333333333333,
+    "S04": 0.6
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": false,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": true
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 29.510000228881836,
+    "entry_max": 30.100200233459475,
+    "stop": 25.72304970916995,
+    "risk_per_share": 3.786950519711887,
+    "target_1": 37.08390126830561,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 29.3,
    "coverage_pct": 84,
@@ -125,12 +208,96 @@
   "adr20": 10.489023994489909,
   "rvol": 0.423229244611538,
   "ema10": 27.796520071011265,
-  "ema21": 26.727154652441527,
+  "ema21": 26.727154652420754,
   "sma50": 24.3085001373291,
   "sma200": 25.09957501411438,
   "volatility_ann": 234.02837869637364,
   "avg_dollar_volume_20d": 13784966.581001282,
-  "move_zscore": -0.09670444002986342
+  "move_zscore": -0.09670444002986342,
+  "swing": {
+   "tech": {
+    "close": 29.040000915527344,
+    "change_pct": -1.4256557433726447,
+    "ema20": 26.804113136291626,
+    "ema50": 25.287120232851372,
+    "ema200": 23.358501549624034,
+    "sma50": 24.3085001373291,
+    "rsi14": 58.03972813993516,
+    "rsi_min5": 55.775412458110424,
+    "atr14": 2.5246336798079243,
+    "atr_pct": 8.693641874019475,
+    "rvol": 0.423229244611538,
+    "vol30": 934773.3333333334,
+    "dist_ema200_pct": 24.32304723756886,
+    "dist_52w_high_pct": 23.235528654697614,
+    "high_52w": 37.83000183105469,
+    "macd_above_signal": true,
+    "obv_rising": false,
+    "xo_bull_approx": true,
+    "higher_high": false,
+    "higher_low": true,
+    "last_higher_high": 30.969999313354492,
+    "hammer": true,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 29.510000228881836,
+    "day_low": 27.719999313354492,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": true
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": false,
+     "RSI 45–62": true,
+     "RelVol > 0,8": false,
+     "EMA 20 > SMA 50": true,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": true,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": false
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": true,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": true,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.5,
+    "S03": 0.3333333333333333,
+    "S04": 0.6
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": false,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": true
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 29.510000228881836,
+    "entry_max": 30.100200233459475,
+    "stop": 25.72304970916995,
+    "risk_per_share": 3.786950519711887,
+    "target_1": 37.08390126830561,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 29.3,
@@ -482,10 +649,10 @@
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -510,7 +677,338 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "764ac0c79eca4f52",
+   "symbols": [
+    "SRZN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Surrozen Announces Closing of Second Tranche of March 2025 Private Placement for $95.1 Million",
+   "summary": "Proceeds strengthen balance sheet and provide expected cash runway into 2029 to advance SZN-8141 and SZN-8143SOUTH SAN FRANCISCO, Calif., Oct. 20, 2026 (GLOBE NEWSWIRE) -- Surrozen, Inc. (Surrozen or the Company) (Nasdaq: SRZN), a biotechnology company pioneering targeted therape",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/surrozen-announces-closing-second-tranche-205900397.html?.tsrc=rss",
+   "published_at": "2026-10-20T20:59:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:05Z",
+   "fingerprint": "7843f3f4e48de43a",
+   "primary_source": false,
+   "cluster_id": "764ac0c79eca4f52",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f100787a7e930ef9",
+   "symbols": [
+    "SRZN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Top Biotech Stock: Guggenheim Names Surrozen as Best Pick",
+   "summary": "Investing.com -- Guggenheim Securities has identified Surrozen, Inc. as its top pick in the biotechnology sector, assigning a Buy rating with a price target of $42.00. The firm hosted management from Surrozen to discuss recent developments in retinal vascular disease treatments a",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/top-biotech-stock-guggenheim-names-182229538.html?.tsrc=rss",
+   "published_at": "2026-10-15T18:22:29Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:05Z",
+   "fingerprint": "4084471b0f750d85",
+   "primary_source": false,
+   "cluster_id": "f100787a7e930ef9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fcab1b3df561d7f5",
+   "symbols": [
+    "SRZN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Surrozen secures FDA clearance for SZN-8141 clinical trial",
+   "summary": "Surrozen intends to dose the first patient in its DUET clinical trial during the fourth quarter of 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "clinicaltrialsarena.com",
+   "url": "https://www.clinicaltrialsarena.com/news/surrozen-fda-clearance-szn-8141-trial/?.tsrc=rss",
+   "published_at": "2026-10-05T10:51:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:05Z",
+   "fingerprint": "7c01bf86b0137434",
+   "primary_source": false,
+   "cluster_id": "fcab1b3df561d7f5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "469463c16fe59157",
+   "symbols": [
+    "SRZN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Surrozen Announces FDA Clearance of IND Application for SZN-8141 for the Treatment of Diabetic Macular Edema",
+   "summary": "First patient expected to be dosed in the DUET study in the fourth quarter of 2026 Milestone triggers second closing of March 2025 private placement expected to provide approximately $95.1M in gross proceeds SOUTH SAN FRANCISCO, Calif., Oct. 02, 2026 (GLOBE NEWSWIRE) -- Surrozen,",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/surrozen-announces-fda-clearance-ind-120000115.html?.tsrc=rss",
+   "published_at": "2026-10-02T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:05Z",
+   "fingerprint": "a030924890414bb4",
+   "primary_source": false,
+   "cluster_id": "469463c16fe59157",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cbf952c38eeaaeae",
+   "symbols": [
+    "SRZN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Surrozen Announces Submission of IND Application for SZN-8141 for the Treatment of Diabetic Macular Edema",
+   "summary": "SOUTH SAN FRANCISCO, Calif., Sept. 08, 2026 (GLOBE NEWSWIRE) -- Surrozen, Inc. (Surrozen or the Company) (Nasdaq: SRZN), a biotechnology company pioneering targeted therapeutics to harness the power of Wnt signaling to address the underlying drivers of disease in sight-threatenin",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/surrozen-announces-submission-ind-application-123000308.html?.tsrc=rss",
+   "published_at": "2026-09-08T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:05Z",
+   "fingerprint": "036182eb9632e61a",
+   "primary_source": false,
+   "cluster_id": "cbf952c38eeaaeae",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b1f54425061956c4",
+   "symbols": [
+    "SRZN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Surrozen to Present at Upcoming Healthcare Investor Conferences",
+   "summary": "SOUTH SAN FRANCISCO, Calif., Sept. 02, 2026 (GLOBE NEWSWIRE) -- Surrozen, Inc. (“Surrozen” or the “Company”) (Nasdaq: SRZN), a biotechnology company pioneering targeted therapeutics to harness the power of Wnt signaling to address the underlying drivers of disease in sight-threat",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/surrozen-present-upcoming-healthcare-investor-200500824.html?.tsrc=rss",
+   "published_at": "2026-09-02T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:05Z",
+   "fingerprint": "723d6da2ab49b941",
+   "primary_source": false,
+   "cluster_id": "b1f54425061956c4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2782ca4d8bbd8992",
+   "symbols": [
+    "SRZN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Surrozen Reports Second Quarter 2026 Financial Results and Provides Business Update",
+   "summary": "Planned IND submission for SZN-8141 in diabetic macular edema by the end of the third quarter of 2026 Expect to initiate SZN-8141 Phase 1b/2a study, DUET, by year-end 2026 with initial data anticipated in the second half of 2027 U.S. Patent Trial and Appeal Board denies instituti",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/surrozen-reports-second-quarter-2026-200500071.html?.tsrc=rss",
+   "published_at": "2026-08-06T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:05Z",
+   "fingerprint": "8d8ac17f8a8499f5",
+   "primary_source": false,
+   "cluster_id": "911e6e14c7ba8e17",
+   "independence": "copy",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "993b9df278af42dd",
+   "symbols": [
+    "SRZN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Surrozen Highlights Wnt Retina Pipeline, SZN-8141 IND Timeline at H.C. Wainwright",
+   "summary": "Surrozen (NASDAQ:SRZN) Chief Executive Officer Craig Parker outlined the company’s rationale for developing Wnt-targeting retinal disease therapies during H.C. Wainwright’s 6th Annual Ophthalmology Investor Conference, emphasizing the company’s focus on Frizzled-4 signaling, anti",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/surrozen-highlights-wnt-retina-pipeline-szn-8141-ind-timeline-at-hc-wainwright-2026-07-22/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-07-22T20:02:13Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:05Z",
+   "fingerprint": "3c6615ebb4ac8e66",
+   "primary_source": false,
+   "cluster_id": "993b9df278af42dd",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "41f8631befba04e4",
+   "symbols": [
+    "SRZN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "We're Not Very Worried About Surrozen's (NASDAQ:SRZN) Cash Burn Rate",
+   "summary": "Just because a business does not make any money, does not mean that the stock will go down. By way of example, Surrozen...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/were-not-very-worried-surrozens-141757978.html?.tsrc=rss",
+   "published_at": "2026-05-17T14:17:57Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:05Z",
+   "fingerprint": "a8ff442e0691ed84",
+   "primary_source": false,
+   "cluster_id": "41f8631befba04e4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "985e6e5ea968c948",
+   "symbols": [
+    "SRZN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Surrozen to Present at Upcoming Healthcare Investor Conference",
+   "summary": "SOUTH SAN FRANCISCO, Calif., May 12, 2026 (GLOBE NEWSWIRE) -- Surrozen, Inc. (“Surrozen” or the “Company”) (Nasdaq: SRZN), a biotechnology company pioneering targeted therapeutics to harness the power of Wnt signaling to address the underlying drivers of disease in sight-threaten",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/surrozen-present-upcoming-healthcare-investor-200500897.html?.tsrc=rss",
+   "published_at": "2026-05-12T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:05Z",
+   "fingerprint": "f0a9f695f4932e02",
+   "primary_source": false,
+   "cluster_id": "985e6e5ea968c948",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "911e6e14c7ba8e17",
+   "symbols": [
+    "SRZN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Surrozen Reports First Quarter 2026 Financial Results and Provides Business Update",
+   "summary": "On track to submit an Investigational New Drug application for SZN-8141 to FDA in the second half of 2026 Well-capitalized with $106.9 million in cash and cash equivalents as of March 31, 2026 SOUTH SAN FRANCISCO, Calif., May 06, 2026 (GLOBE NEWSWIRE) -- Surrozen, Inc. (“Surrozen",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/surrozen-reports-first-quarter-2026-200500024.html?.tsrc=rss",
+   "published_at": "2026-05-06T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:05Z",
+   "fingerprint": "59f8dc77ace4855f",
+   "primary_source": false,
+   "cluster_id": "911e6e14c7ba8e17",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "18284bdaab92481a",
+   "symbols": [
+    "SRZN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Surrozen Reports Inducement Grant Under Nasdaq Listing Rule 5635(c)(4)",
+   "summary": "SOUTH SAN FRANCISCO, Calif., April 28, 2026 (GLOBE NEWSWIRE) -- Surrozen, Inc. (“Surrozen” or the “Company”) (Nasdaq: SRZN), a biotechnology company pioneering targeted therapeutics to harness the power of Wnt signaling to address the underlying drivers of disease in sight-threat",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/surrozen-reports-inducement-grant-under-200500628.html?.tsrc=rss",
+   "published_at": "2026-04-28T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:05Z",
+   "fingerprint": "5020d6fa4409e32a",
+   "primary_source": false,
+   "cluster_id": "18284bdaab92481a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "aff16adcfa9794a2",
+   "symbols": [
+    "SRZN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Avita Medical (RCEL) Soars 14.1%: Is Further Upside Left in the Stock?",
+   "summary": "Avita Medical (RCEL) was a big mover last session on higher-than-average trading volume. The latest trend in earnings estimate revisions might not help the stock continue moving higher in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/avita-medical-rcel-soars-14-110600137.html?.tsrc=rss",
+   "published_at": "2026-04-15T11:06:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:05Z",
+   "fingerprint": "c497539e634ae169",
+   "primary_source": false,
+   "cluster_id": "aff16adcfa9794a2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b2dafa59a5ff281d",
+   "symbols": [
+    "SRZN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Surrozen (SRZN) Surges 5.9%: Is This an Indication of Further Gains?",
+   "summary": "Surrozen (SRZN) saw its shares surge in the last session with trading volume being higher than average. The latest trend in earnings estimate revisions may not translate into further price increase in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/surrozen-srzn-surges-5-9-132800101.html?.tsrc=rss",
+   "published_at": "2026-04-14T13:28:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:05Z",
+   "fingerprint": "1ac678ce0bbfc4cd",
+   "primary_source": false,
+   "cluster_id": "b2dafa59a5ff281d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "23d0698a58b036d7",
+   "symbols": [
+    "SRZN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Surrozen Conference: CEO Details Wnt-Fzd4 Eye Disease Bet, 2026 IND Plans for SZN-8141",
+   "summary": "Surrozen (NASDAQ:SRZN) Chief Executive Officer Craig Parker used a discussion at a 2026 investor summit to outline the company’s focus on Wnt pathway biology and antibody engineering, with an emphasis on retinal vascular diseases. Parker said Surrozen has worked on Wnt signaling ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/surrozen-conference-ceo-details-wnt-fzd4-eye-disease-bet-2026-ind-plans-for-szn-8141-2026-02-15/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-02-15T14:10:20Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:05Z",
+   "fingerprint": "e221c52b571c235f",
+   "primary_source": false,
+   "cluster_id": "23d0698a58b036d7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "bdb431ecee45e089",

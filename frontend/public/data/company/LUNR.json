@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,96 @@
    "adr20": 6.909363062473969,
    "rvol": 0.7128143366219445,
    "ema10": 11.23947300327934,
-   "ema21": 11.945560980273436,
+   "ema21": 11.94556098027334,
    "sma50": 13.861399993896484,
    "sma200": 19.767450041770935
   },
   "market_cap": 1722276352.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 10.670000076293945,
+    "change_pct": -8.647262007641155,
+    "ema20": 11.879183753528508,
+    "ema50": 13.634514800707432,
+    "ema200": 17.011256630350104,
+    "sma50": 13.861399993896484,
+    "rsi14": 36.890264489211525,
+    "rsi_min5": 31.865393505457632,
+    "atr14": 0.907322348548537,
+    "atr_pct": 8.503489616315738,
+    "rvol": 0.7128143366219445,
+    "vol30": 7601293.333333333,
+    "dist_ema200_pct": -37.27682611490678,
+    "dist_52w_high_pct": 77.1764704250397,
+    "high_52w": 46.75,
+    "macd_above_signal": true,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": true,
+    "higher_low": false,
+    "last_higher_high": 16.260000228881836,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 11.300000190734863,
+    "day_low": 10.28499984741211,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": false,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": true,
+     "Kurs > 10": true,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": false
+    },
+    "S04": {
+     "Higher High": true,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.4,
+    "S03": 0.3333333333333333,
+    "S04": 0.4
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": false,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 11.300000190734863,
+    "entry_max": 11.52600019454956,
+    "stop": 9.939016667912057,
+    "risk_per_share": 1.3609835228228064,
+    "target_1": 14.021967236380476,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 40.4,
    "coverage_pct": 88,
@@ -127,12 +210,96 @@
   "adr20": 6.909363062473969,
   "rvol": 0.7128143366219445,
   "ema10": 11.23947300327934,
-  "ema21": 11.945560980273436,
+  "ema21": 11.94556098027334,
   "sma50": 13.861399993896484,
   "sma200": 19.767450041770935,
   "volatility_ann": 77.88885247975357,
   "avg_dollar_volume_20d": 88749976.55602455,
-  "move_zscore": -1.7623963429002358
+  "move_zscore": -1.7623963429002358,
+  "swing": {
+   "tech": {
+    "close": 10.670000076293945,
+    "change_pct": -8.647262007641155,
+    "ema20": 11.879183753528508,
+    "ema50": 13.634514800707432,
+    "ema200": 17.011256630350104,
+    "sma50": 13.861399993896484,
+    "rsi14": 36.890264489211525,
+    "rsi_min5": 31.865393505457632,
+    "atr14": 0.907322348548537,
+    "atr_pct": 8.503489616315738,
+    "rvol": 0.7128143366219445,
+    "vol30": 7601293.333333333,
+    "dist_ema200_pct": -37.27682611490678,
+    "dist_52w_high_pct": 77.1764704250397,
+    "high_52w": 46.75,
+    "macd_above_signal": true,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": true,
+    "higher_low": false,
+    "last_higher_high": 16.260000228881836,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 11.300000190734863,
+    "day_low": 10.28499984741211,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": false,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": true,
+     "Kurs > 10": true,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": false
+    },
+    "S04": {
+     "Higher High": true,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.4,
+    "S03": 0.3333333333333333,
+    "S04": 0.4
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": false,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 11.300000190734863,
+    "entry_max": 11.52600019454956,
+    "stop": 9.939016667912057,
+    "risk_per_share": 1.3609835228228064,
+    "target_1": 14.021967236380476,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 40.4,
@@ -518,7 +685,8 @@
   {
    "id": "518e6df775e071f5",
    "symbols": [
-    "LUNR"
+    "LUNR",
+    "RCAT"
    ],
    "category": "market",
    "signal_type": "news",
@@ -541,7 +709,8 @@
   {
    "id": "8eea546d8b653ad9",
    "symbols": [
-    "LUNR"
+    "LUNR",
+    "RKLB"
    ],
    "category": "market",
    "signal_type": "news",
@@ -581,8 +750,7 @@
    "cluster_id": "58ad3b6a9006e305",
    "independence": "original",
    "verification": "Unverified",
-   "feed": "yahoo_rss",
-   "title_de": "Intuitive Machines gibt Datum für das dritte Quartal 2026 Financial Results Conference Call bekannt"
+   "feed": "yahoo_rss"
   },
   {
    "id": "e4651dc78d9fd9a6",
@@ -653,7 +821,8 @@
   {
    "id": "e1593723e4572ac9",
    "symbols": [
-    "LUNR"
+    "LUNR",
+    "RCAT"
    ],
    "category": "market",
    "signal_type": "news",
@@ -698,7 +867,8 @@
    "id": "e41835177e9f2373",
    "symbols": [
     "BKSY",
-    "LUNR"
+    "LUNR",
+    "RDW"
    ],
    "category": "market",
    "signal_type": "news",
@@ -787,7 +957,8 @@
   {
    "id": "369f9dd357ec231c",
    "symbols": [
-    "LUNR"
+    "LUNR",
+    "RCAT"
    ],
    "category": "market",
    "signal_type": "news",

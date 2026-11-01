@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,96 @@
    "adr20": 5.828020630552017,
    "rvol": 1.065339859749541,
    "ema10": 5.732075362648252,
-   "ema21": 6.231204672631495,
+   "ema21": 6.231204672649381,
    "sma50": 7.589600019454956,
    "sma200": 6.723050005435944
   },
   "market_cap": 2128101504.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 5.320000171661377,
+    "change_pct": -4.999995316777827,
+    "ema20": 6.1896631270334215,
+    "ema50": 6.891706076199245,
+    "ema200": 7.044583360446922,
+    "sma50": 7.589600019454956,
+    "rsi14": 31.07645971860279,
+    "rsi_min5": 27.377628293093906,
+    "atr14": 0.4253777602509057,
+    "atr_pct": 7.995822303104644,
+    "rvol": 1.065339859749541,
+    "vol30": 3904113.3333333335,
+    "dist_ema200_pct": -24.480982061601075,
+    "dist_52w_high_pct": 49.78763532251158,
+    "high_52w": 10.595000267028809,
+    "macd_above_signal": false,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 5.889999866485596,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 5.440000057220459,
+    "day_low": 5.170000076293945,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": true,
+     "Kurs > 10": false,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": false,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.4,
+    "S03": 0.3333333333333333,
+    "S04": 0.2
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": false,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 5.440000057220459,
+    "entry_max": 5.5488000583648684,
+    "stop": 4.801933416844101,
+    "risk_per_share": 0.6380666403763584,
+    "target_1": 6.716133337973176,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 45.0,
    "coverage_pct": 96,
@@ -56,11 +139,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 4.8,
+   "score": 19.3,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -126,12 +211,96 @@
   "adr20": 5.828020630552017,
   "rvol": 1.065339859749541,
   "ema10": 5.732075362648252,
-  "ema21": 6.231204672631495,
+  "ema21": 6.231204672649381,
   "sma50": 7.589600019454956,
   "sma200": 6.723050005435944,
   "volatility_ann": 78.4219986350172,
   "avg_dollar_volume_20d": 22675674.483716488,
-  "move_zscore": -1.012119894540011
+  "move_zscore": -1.012119894540011,
+  "swing": {
+   "tech": {
+    "close": 5.320000171661377,
+    "change_pct": -4.999995316777827,
+    "ema20": 6.1896631270334215,
+    "ema50": 6.891706076199245,
+    "ema200": 7.044583360446922,
+    "sma50": 7.589600019454956,
+    "rsi14": 31.07645971860279,
+    "rsi_min5": 27.377628293093906,
+    "atr14": 0.4253777602509057,
+    "atr_pct": 7.995822303104644,
+    "rvol": 1.065339859749541,
+    "vol30": 3904113.3333333335,
+    "dist_ema200_pct": -24.480982061601075,
+    "dist_52w_high_pct": 49.78763532251158,
+    "high_52w": 10.595000267028809,
+    "macd_above_signal": false,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 5.889999866485596,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 5.440000057220459,
+    "day_low": 5.170000076293945,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": true,
+     "Kurs > 10": false,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": false,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.4,
+    "S03": 0.3333333333333333,
+    "S04": 0.2
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": false,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 5.440000057220459,
+    "entry_max": 5.5488000583648684,
+    "stop": 4.801933416844101,
+    "risk_per_share": 0.6380666403763584,
+    "target_1": 6.716133337973176,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 45.0,
@@ -452,11 +621,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 4.8,
+  "score": 19.3,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 30.4,
@@ -474,26 +643,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 15,
+    "independent": 15,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 5,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -511,7 +682,459 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "b1d4bed501e354cc",
+   "symbols": [
+    "DJT",
+    "RUM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Trump Media Falls 5% Toward $6 With Earnings Ahead; Rumble Ticks Up",
+   "summary": "Trump Media stock is sliding toward a record low just as a major quarterly report looms, and the results could either validate the bulls or confirm that this is a digital-asset fund wearing a media platform's clothing.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/28/trump-media-falls-5-toward-6-with-earnings-ahead-rumble-ticks-up/?.tsrc=rss",
+   "published_at": "2026-10-28T15:07:13Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:33:47Z",
+   "fingerprint": "e9c40acc785a6705",
+   "primary_source": false,
+   "cluster_id": "b1d4bed501e354cc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "197fa606e1953095",
+   "symbols": [
+    "RUM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What Would It Take For Rumble Stock To Reach Its High Again?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/619708/what-would-it-take-for-rumble-stock-to-reach-its-high-again/2026-10-21?.tsrc=rss",
+   "published_at": "2026-10-22T01:35:14Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:48Z",
+   "fingerprint": "6af946d70fbee04f",
+   "primary_source": false,
+   "cluster_id": "197fa606e1953095",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a9c81a633d24ba0c",
+   "symbols": [
+    "DJT",
+    "RUM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Trump Media Drops 7% While Rumble Climbs 3% Amid a Rising Market",
+   "summary": "Trump Media stock is sliding hard on a day when nearly everything else is climbing, and the reason has less to do with the broader market than with what sits inside the company's own balance sheet and merger pipeline.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/19/trump-media-drops-7-while-rumble-climbs-3-against-a-rising-market/?.tsrc=rss",
+   "published_at": "2026-10-19T17:56:51Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:33:47Z",
+   "fingerprint": "cc084a0839a6fee0",
+   "primary_source": false,
+   "cluster_id": "a9c81a633d24ba0c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "390007b1057b452a",
+   "symbols": [
+    "RUM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Rumble (RUM) Stock Sees Modest Fair Value Lift As Analysts Back AI Shift",
+   "summary": "Analysts have lifted their fair value estimate for RUM Group from US$22.00 to US$23.50, which they describe as a modest upward adjustment to what the shares could be worth over time. They link this change to RUM Group’s shift away from a pure video platform toward AI data center ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/rumble-rum-stock-sees-modest-161111581.html?.tsrc=rss",
+   "published_at": "2026-10-17T16:11:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:48Z",
+   "fingerprint": "a85fff048d3f75c0",
+   "primary_source": false,
+   "cluster_id": "390007b1057b452a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "02973a1c4a435d73",
+   "symbols": [
+    "DJT",
+    "RUM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Trump Media Declines 6% as Broad Selloff Weighs on High-Beta Stocks; Rumble Drops 8%",
+   "summary": "A broad selloff is hitting Trump Media and Rumble far harder than the rest of social media, and the reason comes down to what these stocks actually are beneath the surface.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/16/trump-media-declines-6-as-broad-selloff-weighs-on-high-beta-stocks-rumble-drops-8/?.tsrc=rss",
+   "published_at": "2026-10-16T19:10:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:33:47Z",
+   "fingerprint": "1a566f6c52ef2016",
+   "primary_source": false,
+   "cluster_id": "02973a1c4a435d73",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4b69e51635610f69",
+   "symbols": [
+    "MGNI",
+    "RUM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "RUM Group, Everpure, WEBTOON, Magnite, and Kyndryl Shares Are Falling, What You Need To Know",
+   "summary": "A number of stocks fell in the afternoon session after a broad pickup in energy expenses lifted September inflation to 3.7%, surpassing expectations and driving bond yields higher.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/rum-group-everpure-webtoon-magnite-195607907.html?.tsrc=rss",
+   "published_at": "2026-10-14T19:56:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:43Z",
+   "fingerprint": "c7ed0b213200247b",
+   "primary_source": false,
+   "cluster_id": "4b69e51635610f69",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "abf3c377589d7ace",
+   "symbols": [
+    "DJT",
+    "RUM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Trump Media and Rumble Decline 5% as September Inflation Runs Above Forecasts; Reddit Slides 2%",
+   "summary": "A hotter-than-expected inflation report is punishing speculative social-media stocks far harder than the broader market, and two politically charged platforms are taking the brunt of that selloff for reasons that go well beyond a single CPI number.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/14/trump-media-and-rumble-decline-5-as-september-inflation-runs-above-forecasts-reddit-slides-2/?.tsrc=rss",
+   "published_at": "2026-10-14T14:27:27Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:33:47Z",
+   "fingerprint": "be2d08720070f4c8",
+   "primary_source": false,
+   "cluster_id": "abf3c377589d7ace",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cb8baeea1b4c01e9",
+   "symbols": [
+    "RUM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Lake Street’s Focus on RUM (RUM) Anthropic Deal Reframing Its AI Infrastructure Narrative?",
+   "summary": "Earlier this week, Lake Street began covering RUM Group, highlighting its AI expansion, a 250 MW power agreement, and a US$13.70 billion Anthropic contract as key to its evolving business profile. This combination of large-scale power capacity and a multi-billion-dollar AI partne",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/lake-street-focus-rum-rum-171604863.html?.tsrc=rss",
+   "published_at": "2026-10-09T17:16:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:48Z",
+   "fingerprint": "3b9d6234c989a887",
+   "primary_source": false,
+   "cluster_id": "cb8baeea1b4c01e9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8ac700c26cc6532c",
+   "symbols": [
+    "RUM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Services Stock Worth Your Attention and 2 Facing Challenges",
+   "summary": "Business services providers use their specialized expertise to help enterprises streamline operations and cut costs. These firms have helped their customers unlock huge efficiencies, so it’s no surprise the industry has posted a 23.2% gain over the past six months, beating the S&",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-services-stock-worth-attention-090710232.html?.tsrc=rss",
+   "published_at": "2026-10-09T09:07:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:48Z",
+   "fingerprint": "4c6c2eaa109644a7",
+   "primary_source": false,
+   "cluster_id": "8ac700c26cc6532c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9b8d7669d5465dd6",
+   "symbols": [
+    "RUM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Small-Cap Stocks Walking a Fine Line",
+   "summary": "Small-cap stocks can be incredibly lucrative investments because their lack of analyst coverage leads to frequent mispricings. However, these businesses (and their stock prices) often stay small because their subscale operations make it harder to expand their competitive moats.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-small-cap-stocks-walking-111247872.html?.tsrc=rss",
+   "published_at": "2026-10-07T11:12:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:48Z",
+   "fingerprint": "6e1af995d873cdd2",
+   "primary_source": false,
+   "cluster_id": "9b8d7669d5465dd6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8af44aca9df0200a",
+   "symbols": [
+    "RUM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "RUM Stock Jumps Premarket: Analyst Sees Over 200% Upside, Says AI Shift Not Yet Priced In",
+   "summary": "Lake Street has started covering RUM with a $25 price target, citing the company’s AI infrastructure pivot.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/rum-stock-jumps-premarket-analyst-sees-over-200-upside-says-ai-shift-not-yet-priced-in/cZDv5LuRBm4?.tsrc=rss",
+   "published_at": "2026-10-07T08:27:23Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:48Z",
+   "fingerprint": "04f4107a07e685ec",
+   "primary_source": false,
+   "cluster_id": "8af44aca9df0200a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c15cee0e782da03f",
+   "symbols": [
+    "BZAI",
+    "GSHD",
+    "NTLA",
+    "RUM"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Nike downgraded, Home Depot initiated: Wall Street's top analyst calls",
+   "summary": "Nike downgraded, Home Depot initiated: Wall Street's top analyst calls",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nike-downgraded-home-depot-initiated-135003499.html?.tsrc=rss",
+   "published_at": "2026-10-06T13:50:03Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:47:48Z",
+   "fingerprint": "bf8a6701cd4efe2f",
+   "primary_source": false,
+   "cluster_id": "c15cee0e782da03f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "eda0a2d650e67acc",
+   "symbols": [
+    "RUM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Rumble Resources advances Western Queen toward mine decision as October study nears",
+   "summary": "Rumble Resources Ltd (ASX:RTR, OTC:RTRFF) is advancing its Western Queen Gold-Tungsten Project in Western Australia toward a potential development decision, with pit dewatering preparations underway, an updated Scoping Study nearing completion and financing discussions progressin",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "proactiveinvestors.com",
+   "url": "https://www.proactiveinvestors.com/companies/news/1099617/rumble-resources-advances-western-queen-toward-mine-decision-as-october-study-nears-1099617.html?.tsrc=rss",
+   "published_at": "2026-10-05T23:50:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:48Z",
+   "fingerprint": "6e0c9133da33a884",
+   "primary_source": false,
+   "cluster_id": "eda0a2d650e67acc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "31e8b0c5a49ba77b",
+   "symbols": [
+    "RUM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why RUM Group (RUM) Shares Are Trading Lower Today",
+   "summary": "Shares of video sharing platform RUM Group (NASDAQGM:RUM) fell 2.6% in the afternoon session after traders locked in profits following a month-long rally driven by its expansion into artificial intelligence infrastructure, alongside dilution concerns tied to a $13.7 billion Anthr",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-rum-group-rum-shares-230700224.html?.tsrc=rss",
+   "published_at": "2026-10-05T23:07:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:48Z",
+   "fingerprint": "890d08b69639efb9",
+   "primary_source": false,
+   "cluster_id": "31e8b0c5a49ba77b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f1d42493a3a3affa",
+   "symbols": [
+    "RUM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Small Cap watch: Small caps ease as Rumble advances Western Queen and battery recycling reforms begin",
+   "summary": "The S&amp;P/ASX Small Ordinaries (ASX: XSO) slipped 12.1 points, or 0.36%, to 3,314.30 on Monday, leaving the small-cap benchmark down 9.7 points, or 0.29%, over the past five trading sessions. Several small-cap companies continue to move ahead with project development, regulator",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "proactiveinvestors.com",
+   "url": "https://www.proactiveinvestors.com/companies/news/1099616/small-cap-watch-small-caps-ease-as-rumble-advances-western-queen-and-battery-recycling-reforms-begin-1099616.html?.tsrc=rss",
+   "published_at": "2026-10-05T22:48:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:48Z",
+   "fingerprint": "ec63f5e13812af5f",
+   "primary_source": false,
+   "cluster_id": "f1d42493a3a3affa",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ee80f923c169e8ca",
+   "symbols": [
+    "RUM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "RUM Stock Ticks Higher Overnight: Analyst Sees 94% Upside As $13B Anthropic Deal Sets Off AI Pivot",
+   "summary": "Texas Capital cited Quake AI’s expansion and Anthropic agreement as factors supporting stronger long-term revenue prospects.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/rum-stock-ticks-higher-overnight-analyst-sees-upside-as-13-billion-anthropic-deal-sets-off-ai-pivot/cZMnABwRBWV?.tsrc=rss",
+   "published_at": "2026-09-30T01:37:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:48Z",
+   "fingerprint": "2da93fbd6f8714b8",
+   "primary_source": false,
+   "cluster_id": "ee80f923c169e8ca",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "49934eb9bcef2907",
+   "symbols": [
+    "RUM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Reasons to Sell RUM and 1 Stock to Buy Instead",
+   "summary": "RUM Group has been on fire lately. In the past six months alone, the company’s stock price has rocketed 69.1%, reaching $8.93 per share. This performance may have investors wondering how to approach the situation.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-reasons-sell-rum-1-235622661.html?.tsrc=rss",
+   "published_at": "2026-09-23T23:56:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:48Z",
+   "fingerprint": "cbdf320a620d7fce",
+   "primary_source": false,
+   "cluster_id": "49934eb9bcef2907",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c033001192573834",
+   "symbols": [
+    "DJT",
+    "RUM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Rumble Sinks 5%, Trump Media Drops 3%: Is the Diesel Export Ban Really the Driver?",
+   "summary": "Rumble and Trump Media are both sliding on the same morning a major diesel export ban dominates political headlines, and the temptation to connect those two facts deserves a harder look than most investors will give it.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/09/23/rumble-sinks-5-trump-media-drops-3-is-the-diesel-export-ban-really-the-driver/?.tsrc=rss",
+   "published_at": "2026-09-23T15:49:40Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:33:47Z",
+   "fingerprint": "1407f0f43f682a54",
+   "primary_source": false,
+   "cluster_id": "c033001192573834",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e0fe3c45843fab29",
+   "symbols": [
+    "PLAY",
+    "RUM",
+    "SABR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Stocks making big moves this week: Sabre, DocuSign, Dave & Buster's, RUM Group, and Axon",
+   "summary": "Check out the companies making headlines this week:",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-making-big-moves-week-220840214.html?.tsrc=rss",
+   "published_at": "2026-09-18T22:08:40Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:32:14Z",
+   "fingerprint": "0a0018ae5082f635",
+   "primary_source": false,
+   "cluster_id": "e0fe3c45843fab29",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c0adf626cffd9eab",
+   "symbols": [
+    "RUM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Rum Roars on $13.7 Billion Compute Deal With Anthropic. How to Play RUM Stock Now.",
+   "summary": "Rum Group reportedly just landed a major deal with Anthropic.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "barchart.com",
+   "url": "https://www.barchart.com/story/news/4644998/rum-roars-on-13-7-billion-compute-deal-with-anthropic-how-to-play-rum-stock-now?.tsrc=rss",
+   "published_at": "2026-09-16T21:46:58Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:48Z",
+   "fingerprint": "f3baf085095629a7",
+   "primary_source": false,
+   "cluster_id": "c0adf626cffd9eab",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

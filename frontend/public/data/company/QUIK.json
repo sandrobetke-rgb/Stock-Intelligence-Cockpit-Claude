@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,96 @@
    "adr20": 4.56463726860653,
    "rvol": 1.4966980469298863,
    "ema10": 9.24284288648077,
-   "ema21": 9.682266469168503,
+   "ema21": 9.68226646911841,
    "sma50": 10.463999862670898,
    "sma200": 12.664449918270112
   },
   "market_cap": 160280224.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 8.75,
+    "change_pct": -5.3030279573142,
+    "ema20": 9.64509214280766,
+    "ema50": 10.706965807107412,
+    "ema200": 11.762372081515911,
+    "sma50": 10.463999862670898,
+    "rsi14": 34.8015990771769,
+    "rsi_min5": 29.920056178449883,
+    "atr14": 0.5392920216657378,
+    "atr_pct": 6.163337390465575,
+    "rvol": 1.4966980469298863,
+    "vol30": 192840.0,
+    "dist_ema200_pct": -25.610243075456964,
+    "dist_52w_high_pct": 64.03616922549024,
+    "high_52w": 24.329999923706055,
+    "macd_above_signal": false,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 9.5600004196167,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": true,
+    "day_high": 8.819999694824219,
+    "day_low": 8.369999885559082,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": false,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": false,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": false,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.3,
+    "S03": 0.3333333333333333,
+    "S04": 0.2
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 8.819999694824219,
+    "entry_max": 8.996399688720704,
+    "stop": 8.011061662325613,
+    "risk_per_share": 0.808938032498606,
+    "target_1": 10.43787575982143,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 29.9,
    "coverage_pct": 100,
@@ -56,11 +139,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 8.2,
+   "score": 41.0,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 4,
    "independent_24h": 0
   },
   "political": {
@@ -125,12 +210,96 @@
   "adr20": 4.56463726860653,
   "rvol": 1.4966980469298863,
   "ema10": 9.24284288648077,
-  "ema21": 9.682266469168503,
+  "ema21": 9.68226646911841,
   "sma50": 10.463999862670898,
   "sma200": 12.664449918270112,
   "volatility_ann": 54.670981600237255,
   "avg_dollar_volume_20d": 1764663.7166023254,
-  "move_zscore": -1.539810637380105
+  "move_zscore": -1.539810637380105,
+  "swing": {
+   "tech": {
+    "close": 8.75,
+    "change_pct": -5.3030279573142,
+    "ema20": 9.64509214280766,
+    "ema50": 10.706965807107412,
+    "ema200": 11.762372081515911,
+    "sma50": 10.463999862670898,
+    "rsi14": 34.8015990771769,
+    "rsi_min5": 29.920056178449883,
+    "atr14": 0.5392920216657378,
+    "atr_pct": 6.163337390465575,
+    "rvol": 1.4966980469298863,
+    "vol30": 192840.0,
+    "dist_ema200_pct": -25.610243075456964,
+    "dist_52w_high_pct": 64.03616922549024,
+    "high_52w": 24.329999923706055,
+    "macd_above_signal": false,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 9.5600004196167,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": true,
+    "day_high": 8.819999694824219,
+    "day_low": 8.369999885559082,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": false,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": false,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.3,
+    "S03": 0.3333333333333333,
+    "S04": 0.2
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 8.819999694824219,
+    "entry_max": 8.996399688720704,
+    "stop": 8.011061662325613,
+    "risk_per_share": 0.808938032498606,
+    "target_1": 10.43787575982143,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 29.9,
@@ -451,11 +620,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 8.2,
+  "score": 41.0,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 99.8,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 46.2,
@@ -473,26 +642,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 13,
+    "independent": 13,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -510,7 +681,407 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "7a15c7bb78ab3a89",
+   "symbols": [
+    "QUIK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "QuickLogic (QUIK) Declines More Than Market: Some Information for Investors",
+   "summary": "QuickLogic (QUIK) closed the most recent trading day at $9.24, moving 2.53% from the previous trading session.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/quicklogic-quik-declines-more-market-205003682.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:50:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:04Z",
+   "fingerprint": "c0e00177d8885178",
+   "primary_source": false,
+   "cluster_id": "7a15c7bb78ab3a89",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ec9a9861ae9db582",
+   "symbols": [
+    "QUIK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is It Worth Investing in QuickLogic (QUIK) Based on Wall Street's Bullish Views?",
+   "summary": "According to the average brokerage recommendation (ABR), one should invest in QuickLogic (QUIK). It is debatable whether this highly sought-after metric is effective because Wall Street analysts' recommendations tend to be overly optimistic. Would it be worth investing in the sto",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/worth-investing-quicklogic-quik-based-123002810.html?.tsrc=rss",
+   "published_at": "2026-10-29T12:30:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:04Z",
+   "fingerprint": "7fb8ade1bb966862",
+   "primary_source": false,
+   "cluster_id": "ec9a9861ae9db582",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "57eb43b35b9a77b6",
+   "symbols": [
+    "QUIK"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "QuickLogic to Report Third Quarter 2026 Financial Results on Tuesday, November 10 and Participate in Upcoming Investor Conferences",
+   "summary": "QuickLogic Corporation (NASDAQ: QUIK), a developer of embedded FPGA (eFPGA) Hard IP, Strategic Radiation Hardened and Antifuse FPGAs and ruggedized programmable logic solutions, today announced that it has scheduled a conference call to discuss its third quarter fiscal 2026 finan",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/quicklogic-report-third-quarter-2026-120100285.html?.tsrc=rss",
+   "published_at": "2026-10-27T12:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:04Z",
+   "fingerprint": "bd6ba7074abac6e0",
+   "primary_source": false,
+   "cluster_id": "57eb43b35b9a77b6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2aa8dcc501ae9c1d",
+   "symbols": [
+    "QUIK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Investors Heavily Search QuickLogic Corporation (QUIK): Here is What You Need to Know",
+   "summary": "QuickLogic (QUIK) has been one of the stocks most watched by Zacks.com users lately. So, it is worth exploring what lies ahead for the stock.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/investors-heavily-search-quicklogic-corporation-120002477.html?.tsrc=rss",
+   "published_at": "2026-10-26T12:00:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:04Z",
+   "fingerprint": "b6339cea09e5f829",
+   "primary_source": false,
+   "cluster_id": "2aa8dcc501ae9c1d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6c05fb73e408def9",
+   "symbols": [
+    "QUIK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "QuickLogic (QUIK) Dips More Than Broader Market: What You Should Know",
+   "summary": "In the latest trading session, QuickLogic (QUIK) closed at $8.82, marking a -7.79% move from the previous day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/quicklogic-quik-dips-more-broader-210004610.html?.tsrc=rss",
+   "published_at": "2026-10-22T21:00:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:04Z",
+   "fingerprint": "8050c2e89eb85270",
+   "primary_source": false,
+   "cluster_id": "6c05fb73e408def9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dcfacf8b15d4454e",
+   "symbols": [
+    "QUIK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What QuickLogic Bulls Got Right",
+   "summary": "If QuickLogic was on your watchlist instead of in your portfolio, the payoff may feel like it slipped past your fingertips. Investors who held QuickLogic over the past year are up 34.0%, including dividends. That result now sits alongside fresh headlines about a new eFPGA IP cont",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/quicklogic-bulls-got-110954901.html?.tsrc=rss",
+   "published_at": "2026-10-17T11:09:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:04Z",
+   "fingerprint": "17bc5b249801c46f",
+   "primary_source": false,
+   "cluster_id": "dcfacf8b15d4454e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cb92c7046c040d8a",
+   "symbols": [
+    "QUIK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "QuickLogic (QUIK) Stock Drops Despite Market Gains: Important Facts to Note",
+   "summary": "QuickLogic (QUIK) concluded the recent trading session at $9.34, signifying a -1.48% move from its prior day's close.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/quicklogic-quik-stock-drops-despite-205005571.html?.tsrc=rss",
+   "published_at": "2026-10-15T20:50:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:04Z",
+   "fingerprint": "a48029468634603e",
+   "primary_source": false,
+   "cluster_id": "cb92c7046c040d8a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2f96a9d68a564e90",
+   "symbols": [
+    "QUIK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is QuickLogic (QUIK) a Buy as Wall Street Analysts Look Optimistic?",
+   "summary": "According to the average brokerage recommendation (ABR), one should invest in QuickLogic (QUIK). It is debatable whether this highly sought-after metric is effective because Wall Street analysts' recommendations tend to be overly optimistic. Would it be worth investing in the sto",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/quicklogic-quik-buy-wall-street-123003448.html?.tsrc=rss",
+   "published_at": "2026-10-13T12:30:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:04Z",
+   "fingerprint": "6e70020598d6d7c4",
+   "primary_source": false,
+   "cluster_id": "2f96a9d68a564e90",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0c156f13c01194d2",
+   "symbols": [
+    "QUIK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "QuickLogic Corporation (QUIK) is Attracting Investor Attention: Here is What You Should Know",
+   "summary": "Zacks.com users have recently been watching QuickLogic (QUIK) quite a bit. Thus, it is worth knowing the facts that could determine the stock's prospects.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/quicklogic-corporation-quik-attracting-investor-120003658.html?.tsrc=rss",
+   "published_at": "2026-10-13T12:00:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:04Z",
+   "fingerprint": "969d526fda7f117f",
+   "primary_source": false,
+   "cluster_id": "0c156f13c01194d2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8be0ceda5e31a93c",
+   "symbols": [
+    "QUIK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "QuickLogic Secures Six-Figure eFPGA IP Contract for Automotive Industrial SoC",
+   "summary": "QuickLogic® Corporation (NASDAQ: QUIK), a developer of embedded FPGA (eFPGA) Hard IP, Strategic Radiation Hardened and Antifuse FPGAs, and ruggedized programmable logic solutions, today announced a new eFPGA Hard IP design win for a programmable system-on-chip (SoC) targeting bat",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/quicklogic-secures-six-figure-efpga-110300688.html?.tsrc=rss",
+   "published_at": "2026-10-13T11:03:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:04Z",
+   "fingerprint": "4cc4f3e125cc34ab",
+   "primary_source": false,
+   "cluster_id": "8be0ceda5e31a93c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "04238551f80e25fc",
+   "symbols": [
+    "QUIK"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "QuickLogic Announces Inducement Grant Under Nasdaq Listing Rule 5635(c)(4)",
+   "summary": "QuickLogic Corporation (NASDAQ: QUIK) (\"QuickLogic\" or the \"Company\"), a developer of embedded FPGA (eFPGA) Hard IP, Strategic Radiation Hardened and Antifuse FPGAs and ruggedized programmable logic solutions, today announced that the Compensation Committee of its Board of Direct",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/quicklogic-announces-inducement-grant-under-205700463.html?.tsrc=rss",
+   "published_at": "2026-10-06T20:57:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:04Z",
+   "fingerprint": "c45980e2d4130693",
+   "primary_source": false,
+   "cluster_id": "04238551f80e25fc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "15c2c381380d1c1a",
+   "symbols": [
+    "QUIK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "QuickLogic (QUIK) Stock Slides as Market Rises: Facts to Know Before You Trade",
+   "summary": "In the closing of the recent trading day, QuickLogic (QUIK) stood at $11.65, denoting a -1.85% move from the preceding trading day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/quicklogic-quik-stock-slides-market-205001487.html?.tsrc=rss",
+   "published_at": "2026-10-05T20:50:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:04Z",
+   "fingerprint": "33e37d12d2ccfc24",
+   "primary_source": false,
+   "cluster_id": "15c2c381380d1c1a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0dae5081e929ce90",
+   "symbols": [
+    "QUIK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "QuickLogic Corporation (QUIK) Is a Trending Stock: Facts to Know Before Betting on It",
+   "summary": "Zacks.com users have recently been watching QuickLogic (QUIK) quite a bit. Thus, it is worth knowing the facts that could determine the stock's prospects.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/quicklogic-corporation-quik-trending-stock-120003865.html?.tsrc=rss",
+   "published_at": "2026-10-02T12:00:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:04Z",
+   "fingerprint": "3262b2930c9f3e54",
+   "primary_source": false,
+   "cluster_id": "0dae5081e929ce90",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b94fdede229153b8",
+   "symbols": [
+    "QUIK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "QuickLogic (QUIK) Gains As Market Dips: What You Should Know",
+   "summary": "The latest trading day saw QuickLogic (QUIK) settling at $11.19, representing a +2.57% change from its previous close.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/quicklogic-quik-gains-market-dips-205005686.html?.tsrc=rss",
+   "published_at": "2026-09-29T20:50:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:04Z",
+   "fingerprint": "c24cca59c19e96ce",
+   "primary_source": false,
+   "cluster_id": "b94fdede229153b8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9403e82f1217f0ae",
+   "symbols": [
+    "AEHR",
+    "INTT",
+    "PLAB",
+    "QUIK"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "QuickLogic Announces Participation in 18th Annual CEO Investor Summit held October 13th During SEMICON West in San Francisco",
+   "summary": "QuickLogic Corporation (NASDAQ: QUIK), a developer of embedded FPGA (eFPGA) Hard IP, Strategic Radiation Hardened and Antifuse FPGAs and ruggedized programmable logic solutions, today announced management's participation in the 18th Annual CEO Investor Summit, being held Tuesday,",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/quicklogic-announces-participation-18th-annual-114600852.html?.tsrc=rss",
+   "published_at": "2026-09-29T11:46:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:26:22Z",
+   "fingerprint": "fbfd13a4432ad254",
+   "primary_source": false,
+   "cluster_id": "9403e82f1217f0ae",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "090812f2395751fc",
+   "symbols": [
+    "QUIK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "AutoZone Is Still a Buy, Analyst Says. Plus, Meta and 5 More Stocks.",
+   "summary": "RESEARCH REPORTS These reports, excerpted and edited by Barron’s, were issued recently by investment and research firms. The reports are a sampling of analysts’ thinking; they should not be considered the views or recommendations of Barron’s.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/78cb4aad-35e7-3af0-80f8-073db961590c/autozone-is-still-a-buy%2C.html?.tsrc=rss",
+   "published_at": "2026-09-25T22:35:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:04Z",
+   "fingerprint": "2b8342304d609b71",
+   "primary_source": false,
+   "cluster_id": "090812f2395751fc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9a43f2f8e18833b1",
+   "symbols": [
+    "QUIK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "QuickLogic (QUIK) Stock Moves 2.23%: What You Should Know",
+   "summary": "In the closing of the recent trading day, QuickLogic (QUIK) stood at $10.98, denoting a +2.23% move from the preceding trading day.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/quicklogic-quik-stock-moves-2-215004996.html?.tsrc=rss",
+   "published_at": "2026-09-22T21:50:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:04Z",
+   "fingerprint": "8b444bd99d7f048b",
+   "primary_source": false,
+   "cluster_id": "9a43f2f8e18833b1",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "40e62ba9e010967d",
+   "symbols": [
+    "QUIK"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "QuickLogic Announces Chief Financial Officer Transition",
+   "summary": "QuickLogic Corporation (NASDAQ: QUIK), a developer of embedded FPGA (eFPGA) Hard IP, Strategic Radiation Hardened and Antifuse FPGAs and ruggedized programmable logic solutions, today announced the appointment of James Sullivan as its new Senior Vice President of Finance and Chie",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/quicklogic-announces-chief-financial-officer-110100229.html?.tsrc=rss",
+   "published_at": "2026-09-21T11:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:04Z",
+   "fingerprint": "08e1cd0d80b4d820",
+   "primary_source": false,
+   "cluster_id": "40e62ba9e010967d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

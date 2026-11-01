@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,98 @@
    "adr20": 4.438342218014157,
    "rvol": 1.9629610416558594,
    "ema10": 9.040397938416186,
-   "ema21": 8.84608624143473,
+   "ema21": 8.846086241424363,
    "sma50": 9.016999950408936,
    "sma200": 7.978749978542328
   },
   "market_cap": 267710048.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 9.859999656677246,
+    "change_pct": 0.30518548529023803,
+    "ema20": 8.851365254840138,
+    "ema50": 8.825235058607374,
+    "ema200": 8.096388451132315,
+    "sma50": 9.016999950408936,
+    "rsi14": 68.61135926110947,
+    "rsi_min5": 50.258335790479805,
+    "atr14": 0.3868737985835867,
+    "atr_pct": 3.923669493452707,
+    "rvol": 1.9629610416558594,
+    "vol30": 100076.66666666667,
+    "dist_ema200_pct": 21.782690099290903,
+    "dist_52w_high_pct": 1.4000034332275368,
+    "high_52w": 10.0,
+    "macd_above_signal": true,
+    "obv_rising": true,
+    "xo_bull_approx": true,
+    "higher_high": false,
+    "higher_low": true,
+    "last_higher_high": 8.779999732971191,
+    "hammer": true,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 9.963000297546387,
+    "day_low": 9.670000076293945,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": true
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": false,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": false,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": false,
+     "Tag positiv": true
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": true,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": true,
+     "OBV steigend": true,
+     "Trend-Signal (EMA12>EMA25)": true,
+     "> 5 % unter 52W-Hoch": false
+    }
+   },
+   "hits": [
+    "S03"
+   ],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.4,
+    "S03": 1.0,
+    "S04": 0.6
+   },
+   "filter": {
+    "Tag grün": true,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": false,
+    "ATR% 1.5–5.0": true,
+    "über EMA 200": true
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 9.963000297546387,
+    "entry_max": 10.162260303497314,
+    "stop": 9.382689599671007,
+    "risk_per_share": 0.5803106978753796,
+    "target_1": 11.123621693297146,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 25.0,
    "coverage_pct": 100,
@@ -56,11 +141,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 8.5,
+   "score": 37.3,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 3,
    "independent_24h": 0
   },
   "political": {
@@ -111,12 +198,98 @@
   "adr20": 4.438342218014157,
   "rvol": 1.9629610416558594,
   "ema10": 9.040397938416186,
-  "ema21": 8.84608624143473,
+  "ema21": 8.846086241424363,
   "sma50": 9.016999950408936,
   "sma200": 7.978749978542328,
   "volatility_ann": 37.38724991256891,
   "avg_dollar_volume_20d": 894913.6953926086,
-  "move_zscore": 0.1295807901965663
+  "move_zscore": 0.1295807901965663,
+  "swing": {
+   "tech": {
+    "close": 9.859999656677246,
+    "change_pct": 0.30518548529023803,
+    "ema20": 8.851365254840138,
+    "ema50": 8.825235058607374,
+    "ema200": 8.096388451132315,
+    "sma50": 9.016999950408936,
+    "rsi14": 68.61135926110947,
+    "rsi_min5": 50.258335790479805,
+    "atr14": 0.3868737985835867,
+    "atr_pct": 3.923669493452707,
+    "rvol": 1.9629610416558594,
+    "vol30": 100076.66666666667,
+    "dist_ema200_pct": 21.782690099290903,
+    "dist_52w_high_pct": 1.4000034332275368,
+    "high_52w": 10.0,
+    "macd_above_signal": true,
+    "obv_rising": true,
+    "xo_bull_approx": true,
+    "higher_high": false,
+    "higher_low": true,
+    "last_higher_high": 8.779999732971191,
+    "hammer": true,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 9.963000297546387,
+    "day_low": 9.670000076293945,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": true
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": false,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": false,
+     "Tag positiv": true
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": true,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": true,
+     "OBV steigend": true,
+     "Trend-Signal (EMA12>EMA25)": true,
+     "> 5 % unter 52W-Hoch": false
+    }
+   },
+   "hits": [
+    "S03"
+   ],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.4,
+    "S03": 1.0,
+    "S04": 0.6
+   },
+   "filter": {
+    "Tag grün": true,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": false,
+    "ATR% 1.5–5.0": true,
+    "über EMA 200": true
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 9.963000297546387,
+    "entry_max": 10.162260303497314,
+    "stop": 9.382689599671007,
+    "risk_per_share": 0.5803106978753796,
+    "target_1": 11.123621693297146,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 25.0,
@@ -437,11 +610,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 8.5,
+  "score": 37.3,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 86.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 48.1,
@@ -459,26 +632,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -496,7 +671,273 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "168253a2987a2b8c",
+   "symbols": [
+    "PANL",
+    "SMHI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Seacor Marine (SMHI) Reports Q3 Loss, Beats Revenue Estimates",
+   "summary": "Seacor Marine (SMHI) delivered earnings and revenue surprises of +40.98% and +8.04%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/seacor-marine-smhi-reports-q3-204508074.html?.tsrc=rss",
+   "published_at": "2026-10-28T20:45:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:40Z",
+   "fingerprint": "256b2ecf8afa4698",
+   "primary_source": false,
+   "cluster_id": "168253a2987a2b8c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7f2686d72866e5ec",
+   "symbols": [
+    "SMHI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Seacor Marine: Q3 Earnings Snapshot",
+   "summary": "HOUSTON (AP) — HOUSTON (AP) — Seacor Marine Holdings Inc. (SMHI) on Wednesday reported a loss of $9.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/seacor-marine-q3-earnings-snapshot-203753650.html?.tsrc=rss",
+   "published_at": "2026-10-28T20:37:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:43Z",
+   "fingerprint": "4d473a3ed1959847",
+   "primary_source": false,
+   "cluster_id": "7f2686d72866e5ec",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f81cd6a134e39f7d",
+   "symbols": [
+    "SMHI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "SEACOR Marine Announces Third Quarter 2026 Results",
+   "summary": "HOUSTON, Oct. 28, 2026 (GLOBE NEWSWIRE) -- SEACOR Marine Holdings Inc. (NYSE: SMHI) (the “Company” or “SEACOR Marine”), a leading provider of marine and support transportation services to offshore energy facilities worldwide, today announced results for its third quarter ended Se",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/seacor-marine-announces-third-quarter-202200525.html?.tsrc=rss",
+   "published_at": "2026-10-28T20:22:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:43Z",
+   "fingerprint": "779ec7f0889a53da",
+   "primary_source": false,
+   "cluster_id": "f81cd6a134e39f7d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7dc7b8d5a35b41aa",
+   "symbols": [
+    "SMHI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Seacor Marine (SMHI) Tops Q2 Earnings and Revenue Estimates",
+   "summary": "Seacor Marine (SMHI) delivered earnings and revenue surprises of +109.68% and +19.80%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/seacor-marine-smhi-tops-q2-222516290.html?.tsrc=rss",
+   "published_at": "2026-07-29T22:25:16Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:43Z",
+   "fingerprint": "44475005fe581230",
+   "primary_source": false,
+   "cluster_id": "7dc7b8d5a35b41aa",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fbe6b2852038f4c3",
+   "symbols": [
+    "SMHI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "SEACOR Marine Announces Second Quarter 2026 Results And Strategic Alternatives Review",
+   "summary": "HOUSTON, July 29, 2026 (GLOBE NEWSWIRE) -- SEACOR Marine Holdings Inc. (NYSE: SMHI) (the “Company” or “SEACOR Marine”), a leading provider of marine and support transportation services to offshore energy facilities worldwide, today announced results for its second quarter ended J",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/seacor-marine-announces-second-quarter-202100825.html?.tsrc=rss",
+   "published_at": "2026-07-29T20:21:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:43Z",
+   "fingerprint": "b19dee14d07b71d2",
+   "primary_source": false,
+   "cluster_id": "fbe6b2852038f4c3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c2abf508850aca09",
+   "symbols": [
+    "SMHI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Major SEACOR Marine Shareholder Yoav Saffar Calls on Board to Initiate a Strategic Review to Unlock Shareholder Value",
+   "summary": "Yoav Saffar, a long-term shareholder who represents approximately 3.5% of the outstanding shares of SEACOR Marine Holdings Inc. (NYSE: SMHI)(SEACOR Marine or the \"Company\"), today announced that he has delivered a letter to the Company's Board of Directors urging it to immediatel",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/major-seacor-marine-shareholder-yoav-130000895.html?.tsrc=rss",
+   "published_at": "2026-06-29T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:43Z",
+   "fingerprint": "e48f51d92492dcd6",
+   "primary_source": false,
+   "cluster_id": "c2abf508850aca09",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "28ee6ec56503d018",
+   "symbols": [
+    "SMHI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Seacor Marine (SMHI) Surges 18.7%: Is This an Indication of Further Gains?",
+   "summary": "Seacor Marine (SMHI) was a big mover last session on higher-than-average trading volume. The latest trend in earnings estimate revisions might not help the stock continue moving higher in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/seacor-marine-smhi-surges-18-081000767.html?.tsrc=rss",
+   "published_at": "2026-06-23T08:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:43Z",
+   "fingerprint": "5bead18f82b6e4ed",
+   "primary_source": false,
+   "cluster_id": "28ee6ec56503d018",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "81563bafe51dcecb",
+   "symbols": [
+    "SMHI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "SEACOR Marine Acknowledges Receipt of Letter by Shareholder",
+   "summary": "HOUSTON, June 22, 2026 (GLOBE NEWSWIRE) -- SEACOR Marine Holdings Inc. (NYSE: SMHI) (the “Company” or “SEACOR Marine”), a leading provider of marine and support transportation services to offshore energy facilities worldwide, today acknowledges the recent shareholder letter issue",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/seacor-marine-acknowledges-receipt-letter-223200047.html?.tsrc=rss",
+   "published_at": "2026-06-22T22:32:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:43Z",
+   "fingerprint": "ba168946b1e54602",
+   "primary_source": false,
+   "cluster_id": "81563bafe51dcecb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "abda4c67a8c82d30",
+   "symbols": [
+    "SMHI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Largest Independent Shareholder of SEACOR Marine Holdings Inc., Jorey Chernett, Calls on Board to Initiate Comprehensive Evaluation of Strategic Alternatives, Including a Sale of the Company or Dual-Track Fleet Sale",
+   "summary": "Jorey Chernett, Founder of Pointilist Family Office and the largest shareholder of SEACOR Marine Holdings Inc. (NYSE: SMHI) (\"SEACOR Marine\" or the \"Company\") owning approximately 7.2% of outstanding shares, today delivered a letter to the SMHI Board of Directors (the \"Board\") ca",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/largest-independent-shareholder-seacor-marine-160000180.html?.tsrc=rss",
+   "published_at": "2026-06-22T16:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:43Z",
+   "fingerprint": "447ee072b6e2c8dc",
+   "primary_source": false,
+   "cluster_id": "abda4c67a8c82d30",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2e99684a3d8b762b",
+   "symbols": [
+    "SMHI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Seacor Marine (SMHI) Reports Q1 Loss, Lags Revenue Estimates",
+   "summary": "Seacor Marine (SMHI) delivered earnings and revenue surprises of +33.70% and -10.23%, respectively, for the quarter ended March 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/seacor-marine-smhi-reports-q1-224012736.html?.tsrc=rss",
+   "published_at": "2026-04-29T22:40:12Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:43Z",
+   "fingerprint": "fe0e6a9859a5b15f",
+   "primary_source": false,
+   "cluster_id": "2e99684a3d8b762b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9ab02cbf6e6382a9",
+   "symbols": [
+    "SMHI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "SEACOR Marine Holdings Inc. (NYSE:SMHI) is definitely on the radar of institutional investors who own 44% of the company",
+   "summary": "Key Insights Significantly high institutional ownership implies SEACOR Marine Holdings' stock price is sensitive to...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/seacor-marine-holdings-inc-nyse-100438489.html?.tsrc=rss",
+   "published_at": "2025-12-11T10:04:38Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:43Z",
+   "fingerprint": "569cc0d860face10",
+   "primary_source": false,
+   "cluster_id": "9ab02cbf6e6382a9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9a4e579360d3ee5b",
+   "symbols": [
+    "SMHI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Despite Fast-paced Momentum, Seacor Marine (SMHI) Is Still a Bargain Stock",
+   "summary": "Seacor Marine (SMHI) made it through our 'Fast-Paced Momentum at a Bargain' screen and could be a great choice for investors looking for stocks that have gained strong momentum recently but are still trading at reasonable prices.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/despite-fast-paced-momentum-seacor-135502751.html?.tsrc=rss",
+   "published_at": "2025-12-08T13:55:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:43Z",
+   "fingerprint": "f7199a3e545cfce3",
+   "primary_source": false,
+   "cluster_id": "9a4e579360d3ee5b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

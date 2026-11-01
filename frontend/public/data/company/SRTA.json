@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,96 @@
    "adr20": 3.6410433067909955,
    "rvol": 1.2698321848027656,
    "ema10": 4.649881179614389,
-   "ema21": 4.719442866722589,
+   "ema21": 4.719442866723029,
    "sma50": 5.104499988555908,
    "sma200": 5.098174996376038
   },
   "market_cap": 392792640.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 4.440000057220459,
+    "change_pct": -6.526314584832438,
+    "ema20": 4.710406739063899,
+    "ema50": 4.962854186128191,
+    "ema200": 5.060396127003124,
+    "sma50": 5.104499988555908,
+    "rsi14": 36.41416592629702,
+    "rsi_min5": 36.41416592629702,
+    "atr14": 0.19049093312743154,
+    "atr_pct": 4.290336276407239,
+    "rvol": 1.2698321848027656,
+    "vol30": 871210.0,
+    "dist_ema200_pct": -12.25983212010079,
+    "dist_52w_high_pct": 31.692306811992943,
+    "high_52w": 6.5,
+    "macd_above_signal": true,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": true,
+    "higher_low": true,
+    "last_higher_high": 5.519999980926514,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 4.724999904632568,
+    "day_low": 4.400000095367432,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": false,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": false,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": true,
+     "Higher Low": true,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.0,
+    "S02": 0.3,
+    "S03": 0.6666666666666666,
+    "S04": 0.6
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": true,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 4.724999904632568,
+    "entry_max": 4.819499902725219,
+    "stop": 4.439263504941421,
+    "risk_per_share": 0.2857363996911477,
+    "target_1": 5.296472704014864,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 48.7,
    "coverage_pct": 96,
@@ -56,11 +139,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 13.2,
+   "score": 36.7,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -125,12 +210,96 @@
   "adr20": 3.6410433067909955,
   "rvol": 1.2698321848027656,
   "ema10": 4.649881179614389,
-  "ema21": 4.719442866722589,
+  "ema21": 4.719442866723029,
   "sma50": 5.104499988555908,
   "sma200": 5.098174996376038,
   "volatility_ann": 41.67466488623669,
   "avg_dollar_volume_20d": 4044001.39857769,
-  "move_zscore": -2.4859715728549863
+  "move_zscore": -2.4859715728549863,
+  "swing": {
+   "tech": {
+    "close": 4.440000057220459,
+    "change_pct": -6.526314584832438,
+    "ema20": 4.710406739063899,
+    "ema50": 4.962854186128191,
+    "ema200": 5.060396127003124,
+    "sma50": 5.104499988555908,
+    "rsi14": 36.41416592629702,
+    "rsi_min5": 36.41416592629702,
+    "atr14": 0.19049093312743154,
+    "atr_pct": 4.290336276407239,
+    "rvol": 1.2698321848027656,
+    "vol30": 871210.0,
+    "dist_ema200_pct": -12.25983212010079,
+    "dist_52w_high_pct": 31.692306811992943,
+    "high_52w": 6.5,
+    "macd_above_signal": true,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": true,
+    "higher_low": true,
+    "last_higher_high": 5.519999980926514,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 4.724999904632568,
+    "day_low": 4.400000095367432,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": false,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": true,
+     "Higher Low": true,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.0,
+    "S02": 0.3,
+    "S03": 0.6666666666666666,
+    "S04": 0.6
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": true,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 4.724999904632568,
+    "entry_max": 4.819499902725219,
+    "stop": 4.439263504941421,
+    "risk_per_share": 0.2857363996911477,
+    "target_1": 5.296472704014864,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 48.7,
@@ -451,11 +620,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 13.2,
+  "score": 36.7,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 74.6,
@@ -473,26 +642,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 4,
+    "independent": 4,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -510,7 +681,409 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "dfb0caf9b66a6786",
+   "symbols": [
+    "BTSG",
+    "SRTA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "BrightSpring Health Services, Inc. (BTSG) Q3 Earnings and Revenues Surpass Estimates",
+   "summary": "BrightSpring Health Services, Inc. (BTSG) delivered earnings and revenue surprises of +10.20% and +9.17%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/brightspring-health-services-inc-btsg-102001912.html?.tsrc=rss",
+   "published_at": "2026-10-30T10:20:01Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:47:39Z",
+   "fingerprint": "d0b17851b7eebe86",
+   "primary_source": false,
+   "cluster_id": "dfb0caf9b66a6786",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "BrightSpring Health Services, Inc. (BTSG) Q3 Einnahmen und Einnahmen Surpass Schätzungen"
+  },
+  {
+   "id": "8702cff9370d05e6",
+   "symbols": [
+    "ALHC",
+    "SRTA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Alignment Healthcare (ALHC) Reports Q3 Loss, Beats Revenue Estimates",
+   "summary": "Alignment Healthcare (ALHC) delivered earnings and revenue surprises of 0.00% and +3.63%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/alignment-healthcare-alhc-reports-q3-220503008.html?.tsrc=rss",
+   "published_at": "2026-10-29T22:05:03Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:26:44Z",
+   "fingerprint": "a9caaf4ef011a662",
+   "primary_source": false,
+   "cluster_id": "8702cff9370d05e6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8effb542871c2d1b",
+   "symbols": [
+    "CRGY",
+    "NVGS",
+    "SRTA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Strata Critical Medical and 3 More Stocks See Action From Activist Investors",
+   "summary": "Activists also report to the SEC on Crescent Energy, Talos Energy, and Navigator Holdings.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/e11d9eea-0cc4-3d91-b73c-f3d4bc6cc899/strata-critical-medical-and-3.html?.tsrc=rss",
+   "published_at": "2026-10-23T22:47:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:17Z",
+   "fingerprint": "ad6a3ab7423e39a6",
+   "primary_source": false,
+   "cluster_id": "8effb542871c2d1b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fca591ed14f4a880",
+   "symbols": [
+    "SRTA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Strata Critical Medical Schedules Third Quarter 2026 Earnings Conference Call",
+   "summary": "NEW YORK, Oct. 23, 2026 (GLOBE NEWSWIRE) -- Strata Critical Medical. (Nasdaq: SRTA, “Strata” or the “Company”), will release financial results for the third quarter ended September 30, 2026 on Tuesday, November 3, 2026 before the market opens. The company will hold a conference c",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/strata-critical-medical-schedules-third-200500870.html?.tsrc=rss",
+   "published_at": "2026-10-23T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:04Z",
+   "fingerprint": "82df477ac612e6b5",
+   "primary_source": false,
+   "cluster_id": "3066187c9e5b65c0",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a995421fd822c00d",
+   "symbols": [
+    "SRTA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Prediction: The Next Big Aviation Revolution Could Start With Joby",
+   "summary": "Joby Aviation sits within striking distance of its 52-week low while commercial passenger flights loom on the horizon, and that contradiction raises a question worth examining before the next certification milestone lands.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/01/prediction-the-next-big-aviation-revolution-could-start-with-joby/?.tsrc=rss",
+   "published_at": "2026-10-01T12:00:35Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:04Z",
+   "fingerprint": "214d73d94ffb2b97",
+   "primary_source": false,
+   "cluster_id": "a995421fd822c00d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "33e65bab471800f5",
+   "symbols": [
+    "SRTA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Strata Critical to Present at the 2026 Jefferies Healthcare Services and Technology Conference",
+   "summary": "NEW YORK, Sept. 08, 2026 (GLOBE NEWSWIRE) -- Strata Critical Medical, Inc. (Nasdaq: SRTA, “Strata” or the “Company”), today announced that management will present at the 2026 Jefferies Healthcare Services and Technology Conference on Monday, September 14, 2026, at 2:15 pm ET. A w",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/strata-critical-present-2026-jefferies-210500078.html?.tsrc=rss",
+   "published_at": "2026-09-08T21:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:04Z",
+   "fingerprint": "5b96827ce4ca006e",
+   "primary_source": false,
+   "cluster_id": "33e65bab471800f5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6d58d826bf6a9af2",
+   "symbols": [
+    "SRTA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "NACD Announces Finalists for 2026 Directorship 100 B. Kenneth West Lifetime Achievement Award and Directors of the Year",
+   "summary": "The National Association of Corporate Directors® (NACD®), the authority on boardroom practices representing more than 24,000 board members, today announced the finalists for the 2026 NACD Directorship 100™ B. Kenneth West Lifetime Achievement Award and Directors of the Year Award",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/nacd-announces-finalists-2026-directorship-181500688.html?.tsrc=rss",
+   "published_at": "2026-08-24T18:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:04Z",
+   "fingerprint": "83e9806ac55f56e2",
+   "primary_source": false,
+   "cluster_id": "6d58d826bf6a9af2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c41ea06821847da4",
+   "symbols": [
+    "SRTA"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Strata Critical Medical, Inc. (SRTA) Upgraded to Buy: What Does It Mean for the Stock?",
+   "summary": "Strata Critical Medical, Inc. (SRTA) might move higher on growing optimism about its earnings prospects, which is reflected by its upgrade to a Zacks Rank #2 (Buy).",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/strata-critical-medical-inc-srta-160004502.html?.tsrc=rss",
+   "published_at": "2026-08-24T16:00:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:04Z",
+   "fingerprint": "8b3398437f5e46ec",
+   "primary_source": false,
+   "cluster_id": "c41ea06821847da4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2d142bae3fe81ddb",
+   "symbols": [
+    "SRTA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Does Strata Critical Medical, Inc. (SRTA) Have the Potential to Rally 47.28% as Wall Street Analysts Expect?",
+   "summary": "The mean of analysts' price targets for Strata Critical Medical, Inc. (SRTA) points to a 47.3% upside in the stock. While this highly sought-after metric has not proven reasonably effective, strong agreement among analysts in raising earnings estimates does indicate an upside in ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/does-strata-critical-medical-inc-135503597.html?.tsrc=rss",
+   "published_at": "2026-08-24T13:55:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:04Z",
+   "fingerprint": "805da5dca003043d",
+   "primary_source": false,
+   "cluster_id": "2d142bae3fe81ddb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9593eac2dd2283b2",
+   "symbols": [
+    "SRTA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Strata Critical Medical (SRTA) Q2 2026 Earnings Call Transcript",
+   "summary": "Clinical revenue surged 22.6% (including acquisitions) sequentially as acquisitions bolster transplant services.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/11/strata-critical-medical-srta-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-11T17:35:43Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:04Z",
+   "fingerprint": "68dc6a5ec87a71f2",
+   "primary_source": false,
+   "cluster_id": "9593eac2dd2283b2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c2ea5f4f127af5ce",
+   "symbols": [
+    "SRTA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Immersion Investment Views Strata Critical Medical (SRTA) as a “Babushka Doll”",
+   "summary": "Immersion Investment Partners, an investment management company, released its second-quarter 2025 investor letter. A copy of the letter can be downloaded here. Immersion Investment Partners returned 39.1% in the second quarter, surpassing the Russell 2000 Index’s 21.5% gain. The ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/immersion-investment-views-strata-critical-134404589.html?.tsrc=rss",
+   "published_at": "2026-08-11T13:44:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:04Z",
+   "fingerprint": "4534e6feca018208",
+   "primary_source": false,
+   "cluster_id": "c2ea5f4f127af5ce",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fca2855c94f7f4c0",
+   "symbols": [
+    "SRTA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Can Strata Critical Medical, Inc. (SRTA) Run Higher on Rising Earnings Estimates?",
+   "summary": "Strata Critical Medical, Inc. (SRTA) shares have started gaining and might continue moving higher in the near term, as indicated by solid earnings estimate revisions.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/strata-critical-medical-inc-srta-162002971.html?.tsrc=rss",
+   "published_at": "2026-08-06T16:20:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:04Z",
+   "fingerprint": "1648e0c0beb1f57f",
+   "primary_source": false,
+   "cluster_id": "fca2855c94f7f4c0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4f94be72ac3d8f3e",
+   "symbols": [
+    "SRTA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Strata Critical Medical, Inc. Q2 2026 Earnings Call Summary",
+   "summary": "Moby summary of Strata Critical Medical, Inc.'s Q2 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-strata-critical-medical-inc-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-08-04T22:29:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:04Z",
+   "fingerprint": "7b433768b0df3744",
+   "primary_source": false,
+   "cluster_id": "4f94be72ac3d8f3e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fef714bf865e0c67",
+   "symbols": [
+    "SRTA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Strata Critical Medical Inc (SRTA) (Q2 2026) Earnings Call Highlights: Revenue Surges 60. ...",
+   "summary": "Strata Critical Medical Inc (SRTA) boosts 2026 outlook after record Q2 performance driven by transplant services and strategic acquisitions.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/strata-critical-medical-inc-srta-190115051.html?.tsrc=rss",
+   "published_at": "2026-08-04T19:01:15Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:04Z",
+   "fingerprint": "59973716876f1573",
+   "primary_source": false,
+   "cluster_id": "fef714bf865e0c67",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "71c5a6cb94a457cf",
+   "symbols": [
+    "SRTA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wall Street Analysts Predict a 60% Upside in Strata Critical Medical, Inc. (SRTA): Here's  What You Should Know",
+   "summary": "The consensus price target hints at a 60% upside potential for Strata Critical Medical, Inc. (SRTA). While empirical research shows that this sought-after metric is hardly effective, an upward trend in earnings estimate revisions could mean that the stock will witness an upside i",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-predict-60-135501893.html?.tsrc=rss",
+   "published_at": "2026-08-04T13:55:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:04Z",
+   "fingerprint": "74e4abba08dd5d7b",
+   "primary_source": false,
+   "cluster_id": "71c5a6cb94a457cf",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "04d344da6b5ed40c",
+   "symbols": [
+    "SRTA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Strata Critical Medical Announces Second Quarter 2026 Results",
+   "summary": "Revenue increased 60.7% year-over-year to $72.5 million in Q2 2026Clinical revenue increased 22.6% sequentially in Q2 2026; Excluding Clinical acquisitions that closed in Q2 2026, Clinical revenue increased 15.1% sequentially driven by a 23.8% increase in Transplant Clinical reve",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/strata-critical-medical-announces-second-110000707.html?.tsrc=rss",
+   "published_at": "2026-08-04T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:04Z",
+   "fingerprint": "7548209518c562c2",
+   "primary_source": false,
+   "cluster_id": "04d344da6b5ed40c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3066187c9e5b65c0",
+   "symbols": [
+    "SRTA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Strata Critical Medical Schedules Second Quarter 2026 Earnings Conference Call",
+   "summary": "NEW YORK, July 21, 2026 (GLOBE NEWSWIRE) -- Strata Critical Medical. (Nasdaq: SRTA, “Strata” or the “Company”), will release financial results for the second quarter ended June 30, 2026 on Tuesday, August 4, 2026 before the market opens. The company will hold a conference call on",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/strata-critical-medical-schedules-second-205100376.html?.tsrc=rss",
+   "published_at": "2026-07-21T20:51:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:04Z",
+   "fingerprint": "dc95a8682e85f23a",
+   "primary_source": false,
+   "cluster_id": "3066187c9e5b65c0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2cbb0575e5bf7fdc",
+   "symbols": [
+    "SRTA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Strata Acquires Heart and Lung Transplant National Recovery Program, Expanding National Organ Recovery Platform",
+   "summary": "Network of experienced transplant surgeons in key markets will immediately become available to all Strata customersAdds significant scale to Transplant Clinical, Strata’s fastest growing business line, with a similar, rapid growth trajectory$21.5 million acquisition completed at ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/strata-acquires-heart-lung-transplant-130000571.html?.tsrc=rss",
+   "published_at": "2026-06-24T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:04Z",
+   "fingerprint": "5a68ce811f411939",
+   "primary_source": false,
+   "cluster_id": "2cbb0575e5bf7fdc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "6817aba5bbec4472",

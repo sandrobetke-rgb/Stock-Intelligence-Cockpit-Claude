@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,96 @@
    "adr20": 3.4177881862319643,
    "rvol": 1.013504806151345,
    "ema10": 17.311096045261166,
-   "ema21": 17.29025945322987,
+   "ema21": 17.290259453212037,
    "sma50": 16.626600074768067,
    "sma200": 15.264700007438659
   },
   "market_cap": 1912813568.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 16.170000076293945,
+    "change_pct": -7.388310858079706,
+    "ema20": 17.301874937239422,
+    "ema50": 16.803528939314965,
+    "ema200": 15.629960192086408,
+    "sma50": 16.626600074768067,
+    "rsi14": 37.99769641356692,
+    "rsi_min5": 37.99769641356692,
+    "atr14": 0.6116410688614,
+    "atr_pct": 3.7825668891498485,
+    "rvol": 1.013504806151345,
+    "vol30": 1680970.0,
+    "dist_ema200_pct": 3.455158410966175,
+    "dist_52w_high_pct": 18.415740033958894,
+    "high_52w": 19.81999969482422,
+    "macd_above_signal": false,
+    "obv_rising": false,
+    "xo_bull_approx": true,
+    "higher_high": false,
+    "higher_low": true,
+    "last_higher_high": 17.889999389648438,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 17.420000076293945,
+    "day_low": 15.979999542236328,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": true,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": true,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": true,
+     "Kurs > 10": true,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": false,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": true,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": true,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.0,
+    "S02": 0.8,
+    "S03": 0.3333333333333333,
+    "S04": 0.6
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": false,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": true,
+    "über EMA 200": true
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 17.420000076293945,
+    "entry_max": 17.768400077819823,
+    "stop": 16.502538473001845,
+    "risk_per_share": 0.9174616032921001,
+    "target_1": 19.254923282878146,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 42.1,
    "coverage_pct": 100,
@@ -54,11 +137,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 14.3,
+   "score": 30.5,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "news_flow",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -123,12 +208,96 @@
   "adr20": 3.4177881862319643,
   "rvol": 1.013504806151345,
   "ema10": 17.311096045261166,
-  "ema21": 17.29025945322987,
+  "ema21": 17.290259453212037,
   "sma50": 16.626600074768067,
   "sma200": 15.264700007438659,
   "volatility_ann": 43.51915883920319,
   "avg_dollar_volume_20d": 25488824.477443695,
-  "move_zscore": -2.69503827657277
+  "move_zscore": -2.69503827657277,
+  "swing": {
+   "tech": {
+    "close": 16.170000076293945,
+    "change_pct": -7.388310858079706,
+    "ema20": 17.301874937239422,
+    "ema50": 16.803528939314965,
+    "ema200": 15.629960192086408,
+    "sma50": 16.626600074768067,
+    "rsi14": 37.99769641356692,
+    "rsi_min5": 37.99769641356692,
+    "atr14": 0.6116410688614,
+    "atr_pct": 3.7825668891498485,
+    "rvol": 1.013504806151345,
+    "vol30": 1680970.0,
+    "dist_ema200_pct": 3.455158410966175,
+    "dist_52w_high_pct": 18.415740033958894,
+    "high_52w": 19.81999969482422,
+    "macd_above_signal": false,
+    "obv_rising": false,
+    "xo_bull_approx": true,
+    "higher_high": false,
+    "higher_low": true,
+    "last_higher_high": 17.889999389648438,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 17.420000076293945,
+    "day_low": 15.979999542236328,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": true,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": true,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": true,
+     "Kurs > 10": true,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": false,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": true,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": true,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.0,
+    "S02": 0.8,
+    "S03": 0.3333333333333333,
+    "S04": 0.6
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": false,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": true,
+    "über EMA 200": true
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 17.420000076293945,
+    "entry_max": 17.768400077819823,
+    "stop": 16.502538473001845,
+    "risk_per_share": 0.9174616032921001,
+    "target_1": 19.254923282878146,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 42.1,
@@ -447,11 +616,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 14.3,
+  "score": 30.5,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 80.9,
@@ -469,26 +638,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 9,
+    "independent": 9,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "news_flow",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -506,7 +677,455 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "a9e7cdaa41452518",
+   "symbols": [
+    "SONO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "LITSLINK Study: Software-Breaking Updates Cost Billions While Widely Cited Stats on UX-Related Losses Remain Unproven",
+   "summary": "Software development company LITSLINK reports that the largest risk for companies is an update that breaks functionality rather than one that prompts user complaints. Researchers examined 12 products: 10, including Microsoft Teams, Google Workspace, and Figma, were assessed via r",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/litslink-study-software-breaking-updates-144900028.html?.tsrc=rss",
+   "published_at": "2026-10-28T14:49:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:52Z",
+   "fingerprint": "3ea96360358a0ea2",
+   "primary_source": false,
+   "cluster_id": "a9e7cdaa41452518",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a6101258cf8f2e40",
+   "symbols": [
+    "RVLV",
+    "SONO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Russell 2000 stocks with questionable fundamentals",
+   "summary": "The Russell 2000 (^RUT) is packed with potential breakout stocks, thanks to its focus on smaller companies with high growth potential. However, smaller size also means these businesses often lack the resilience and financial flexibility of large-cap firms, making careful selectio",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-russell-2000-stocks-questionable-155753402.html?.tsrc=rss",
+   "published_at": "2026-10-22T15:57:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:50Z",
+   "fingerprint": "4f802785ad6cc8ea",
+   "primary_source": false,
+   "cluster_id": "a6101258cf8f2e40",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6d643df51a006e87",
+   "symbols": [
+    "SONO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Sonos Announces Date for Fourth Quarter and Fiscal 2026 Financial Results and Conference Call",
+   "summary": "SANTA BARBARA, Calif., October 20, 2026--Sonos, Inc. (Nasdaq: SONO) today announced that after market close on Tuesday, November 10, 2026 the company will report financial results for the fourth quarter and fiscal year ended October 3, 2026. The company will issue a press release",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/sonos-announces-date-fourth-quarter-200500188.html?.tsrc=rss",
+   "published_at": "2026-10-20T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:52Z",
+   "fingerprint": "d15d8668ecc362d4",
+   "primary_source": false,
+   "cluster_id": "6d643df51a006e87",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3d770ee0880bfdfc",
+   "symbols": [
+    "HELE",
+    "SONO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Consumer Electronics Stocks That Could Benefit From Lower US China Tariffs",
+   "summary": "Tariffs are no longer just background noise for consumer electronics investors. With the US China trade truce now extended to January 2027 and talk of reciprocal tariff cuts on billions of dollars of goods, the pricing power and profit potential of import heavy brands suddenly fe",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/consumer-electronics-stocks-could-benefit-201909346.html?.tsrc=rss",
+   "published_at": "2026-10-15T20:19:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:10:09Z",
+   "fingerprint": "359bad9eb1c37ac6",
+   "primary_source": false,
+   "cluster_id": "3d770ee0880bfdfc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "08f80a6b8841c8f8",
+   "symbols": [
+    "SONO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Fleet Launches AI Governance to Give IT, Security Teams Control of AI Tools on Every Device",
+   "summary": "Fleet Device Management, the AI device management platform for top IT and security teams, today announced new AI governance capabilities designed to give organizations visibility and control over the rapidly growing number of AI tools running across employee devices.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/fleet-launches-ai-governance-security-130000205.html?.tsrc=rss",
+   "published_at": "2026-10-15T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:52Z",
+   "fingerprint": "be106aece947bc06",
+   "primary_source": false,
+   "cluster_id": "08f80a6b8841c8f8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c91d47171ddd585c",
+   "symbols": [
+    "SONO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Did Sonos (SONO) Move Today?",
+   "summary": "Sonos (SONO) just rolled out the Beam Ultra soundbar, a compact home theater product with Dolby Atmos, USB-C line-in and Bluetooth support. Investors now have a fresh product launch to factor into expectations. Recent trading suggests buyers are leaning in. The 30 day share price",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-did-sonos-sono-move-081228215.html?.tsrc=rss",
+   "published_at": "2026-10-14T08:12:28Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:52Z",
+   "fingerprint": "1507c9fa9fe45b01",
+   "primary_source": false,
+   "cluster_id": "c91d47171ddd585c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "aece0963e04ece82",
+   "symbols": [
+    "HAE",
+    "SONO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Cash-Producing Stocks Walking a Fine Line",
+   "summary": "Generating cash is essential for any business, but not all cash-rich companies are great investments. Some produce plenty of cash but fail to allocate it effectively, leading to missed opportunities.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-cash-producing-stocks-walking-093110556.html?.tsrc=rss",
+   "published_at": "2026-10-09T09:31:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:58Z",
+   "fingerprint": "328e1b6183afb19d",
+   "primary_source": false,
+   "cluster_id": "aece0963e04ece82",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "09af1abe71b69428",
+   "symbols": [
+    "SONO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Reasons SONO is Risky and 1 Stock to Buy Instead",
+   "summary": "Sonos’s 33.4% return over the past six months has outpaced the S&amp;P 500 by 16.6%, and its stock price has climbed to $18.13 per share. This was partly thanks to its solid quarterly results, and the performance may have investors wondering how to approach the situation.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-reasons-sono-risky-1-164034974.html?.tsrc=rss",
+   "published_at": "2026-10-06T16:40:34Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:52Z",
+   "fingerprint": "5e2d450ffdf27fab",
+   "primary_source": false,
+   "cluster_id": "09af1abe71b69428",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3500e7abb84f31b8",
+   "symbols": [
+    "GPRE",
+    "LFST",
+    "SONO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Stocks Under $50 We Keep Off Our Radar",
+   "summary": "The $10-50 price range often includes mid-sized businesses with proven track records and plenty of growth runway ahead. They also usually carry less risk than penny stocks, though they’re not immune to volatility as many lack the scale advantages of their larger peers.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-stocks-under-50-keep-141900433.html?.tsrc=rss",
+   "published_at": "2026-10-05T14:19:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:09:46Z",
+   "fingerprint": "c08b4bfb65d5b5e8",
+   "primary_source": false,
+   "cluster_id": "3500e7abb84f31b8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2cc9e8de07de197f",
+   "symbols": [
+    "SONO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Q2 Earnings Roundup: Sonos (NASDAQ:SONO) And The Rest Of The Consumer Discretionary Segment",
+   "summary": "As the Q2 earnings season wraps, let’s dig into this quarter’s best and worst performers in the consumer discretionary industry, including Sonos (NASDAQ:SONO) and its peers.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/q2-earnings-roundup-sonos-nasdaq-220837798.html?.tsrc=rss",
+   "published_at": "2026-09-25T22:08:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:52Z",
+   "fingerprint": "fde1f72d9d66be58",
+   "primary_source": false,
+   "cluster_id": "2cc9e8de07de197f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "abc35d57b4a35125",
+   "symbols": [
+    "SONO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Dolby Expands Meta Partnership With Atmos and Vision Across Devices",
+   "summary": "DLB expands across Meta's ecosystem as Dolby Atmos and Vision reach AI glasses, Instagram and VR, broadening its digital content footprint.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/dolby-expands-meta-partnership-atmos-115900681.html?.tsrc=rss",
+   "published_at": "2026-09-24T11:59:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:52Z",
+   "fingerprint": "d7b96def36b771e6",
+   "primary_source": false,
+   "cluster_id": "abc35d57b4a35125",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "168416174b0f4fc8",
+   "symbols": [
+    "IHRT",
+    "REAX",
+    "SONO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "iHeartMedia, Charter, Sonos, Compass, and The Real Brokerage Stocks Trade Down, What You Need To Know",
+   "summary": "A number of stocks fell in the afternoon session after rising Treasury yields and higher interest rates intensified worries over household finances and discretionary consumption, creating headwind conditions for consumer-facing companies. According to Reuters, as borrowing costs ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/iheartmedia-charter-sonos-compass-real-000840400.html?.tsrc=rss",
+   "published_at": "2026-09-19T00:08:40Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:10:58Z",
+   "fingerprint": "85b005ad1dd8404e",
+   "primary_source": false,
+   "cluster_id": "168416174b0f4fc8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4e2156382a120307",
+   "symbols": [
+    "SONO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sonos Launches New Global Brand Campaign \"Love the Sound. Feel the System\"",
+   "summary": "SANTA BARBARA, Calif., September 14, 2026--Sonos today launched \"Love the Sound. Feel the System\", a new global brand campaign and creative direction for the company. The campaign begins rolling out across the United States and Mexico today, and is anchored by a major media prese",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/media-advertising/articles/sonos-launches-global-brand-campaign-153000604.html?.tsrc=rss",
+   "published_at": "2026-09-14T15:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:52Z",
+   "fingerprint": "1494e9745019c00b",
+   "primary_source": false,
+   "cluster_id": "4e2156382a120307",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fb8e6496a56ab32e",
+   "symbols": [
+    "SONO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sonos 27 Adds AI Control, New Ways to Move Sound, and an Easier App Experience to your Sonos System",
+   "summary": "SANTA BARBARA, Calif., September 08, 2026--Sonos 27 begins rolling out today, bringing AI control via 27mcp, portable surrounds, and a redesigned app, plus early access headphone linking",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/sonos-27-adds-ai-control-143000827.html?.tsrc=rss",
+   "published_at": "2026-09-08T14:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:52Z",
+   "fingerprint": "161bba7103755562",
+   "primary_source": false,
+   "cluster_id": "fb8e6496a56ab32e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3cbd57fdc962a6b9",
+   "symbols": [
+    "SONO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Cash-Heavy Stock to Own for Decades and 2 We Find Risky",
+   "summary": "A surplus of cash can mean financial stability, but it can also indicate a reluctance (or inability) to invest in growth. Some of these companies also face challenges like stagnating revenue, declining market share, or limited scalability.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-cash-heavy-stock-own-094318524.html?.tsrc=rss",
+   "published_at": "2026-09-03T09:43:18Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:52Z",
+   "fingerprint": "7bdd2b9c42dc5a28",
+   "primary_source": false,
+   "cluster_id": "3cbd57fdc962a6b9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fb9c809e63c1250a",
+   "symbols": [
+    "SONO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Sonos (SONO) Fairly Valued As Sonos 27 And New Product Launches Land?",
+   "summary": "Sonos (SONO) just announced Sonos 27, a new version of its audio operating system, alongside Beam Ultra and Sonos Ace Ultra. This product cycle refresh provides new context for thinking about the stock. Against the backdrop of Sonos 27 and the new Beam Ultra and Ace Ultra launche",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/sonos-sono-fairly-valued-sonos-150820164.html?.tsrc=rss",
+   "published_at": "2026-09-02T15:08:20Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:52Z",
+   "fingerprint": "0b0262349c705568",
+   "primary_source": false,
+   "cluster_id": "fb9c809e63c1250a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9d1e3ed2aa17b7c1",
+   "symbols": [
+    "SONO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sonos Welcomes Beam Ultra and Sonos Ace Ultra to its System",
+   "summary": "SANTA BARBARA, Calif., September 01, 2026--Sonos introduces Beam Ultra and Sonos Ace Ultra, new soundbar and headphone, alongside its Sonos 27 audio operating system update.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/sonos-welcomes-beam-ultra-sonos-150000499.html?.tsrc=rss",
+   "published_at": "2026-09-01T15:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:52Z",
+   "fingerprint": "d813639e45f886ab",
+   "primary_source": false,
+   "cluster_id": "9d1e3ed2aa17b7c1",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a981fd8b484db446",
+   "symbols": [
+    "SONO"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Sonos Introduces Sonos 27, the Next Generation of Its Audio Operating System",
+   "summary": "SANTA BARBARA, Calif., September 01, 2026--Sonos introduces Sonos 27, its next-gen audio operating system, plus new flagships Beam Ultra and Sonos Ace Ultra.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/sonos-introduces-sonos-27-next-144000218.html?.tsrc=rss",
+   "published_at": "2026-09-01T14:40:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:52Z",
+   "fingerprint": "787b2f97e5d4b690",
+   "primary_source": false,
+   "cluster_id": "a981fd8b484db446",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8a44e7edc69403a5",
+   "symbols": [
+    "SONO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "CFO Liquidates Nearly 25,000 Shares of Consumer Stock, Valued at More Than $400,000",
+   "summary": "Restricted stock unit vesting triggered the non-discretionary sale, which reduced direct holdings by 10%. Saori retains 220,790 shares worth $3.6 million.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/coverage/filings/2026/09/01/cfo-liquidates-nearly-25-000-shares-of-consumer-stock-valued-at-more-than-usd400-000/?.tsrc=rss",
+   "published_at": "2026-09-01T13:35:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:52Z",
+   "fingerprint": "6fe95a72b10bd4c2",
+   "primary_source": false,
+   "cluster_id": "8a44e7edc69403a5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9e3c9901cc0199bf",
+   "symbols": [
+    "SONO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zacks Industry Outlook Highlights Sony, Dolby Laboratories and Sonos",
+   "summary": "Sony, Dolby Laboratories and Sonos navigate audio-video headwinds with technology, gaming, immersive media and product innovation.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-industry-outlook-highlights-sony-131900517.html?.tsrc=rss",
+   "published_at": "2026-09-01T13:19:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:52Z",
+   "fingerprint": "2ef1bb66eb57f48d",
+   "primary_source": false,
+   "cluster_id": "9e3c9901cc0199bf",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

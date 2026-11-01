@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,98 @@
    "adr20": 5.250540478946209,
    "rvol": 1.2514459985277107,
    "ema10": 19.32890267846783,
-   "ema21": 19.05919289322634,
+   "ema21": 19.05919289325787,
    "sma50": 19.184399948120117,
    "sma200": 17.007199997901917
   },
   "market_cap": 398266624.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 19.1299991607666,
+    "change_pct": -6.40900850813707,
+    "ema20": 19.069711720538987,
+    "ema50": 19.138189561944174,
+    "ema200": 17.71828969799867,
+    "sma50": 19.184399948120117,
+    "rsi14": 50.82643126795047,
+    "rsi_min5": 50.82643126795047,
+    "atr14": 1.0614593660064164,
+    "atr_pct": 5.548663944446719,
+    "rvol": 1.2514459985277107,
+    "vol30": 105566.66666666667,
+    "dist_ema200_pct": 7.967526701673622,
+    "dist_52w_high_pct": 22.219964647937708,
+    "high_52w": 24.594999313354492,
+    "macd_above_signal": true,
+    "obv_rising": true,
+    "xo_bull_approx": true,
+    "higher_high": true,
+    "higher_low": true,
+    "last_higher_high": 20.450000762939453,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 20.739999771118164,
+    "day_low": 19.049999237060547,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": true,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": false,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": true,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": true,
+     "Higher Low": true,
+     "OBV steigend": true,
+     "Trend-Signal (EMA12>EMA25)": true,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [
+    "S04"
+   ],
+   "near": {
+    "S01": 0.0,
+    "S02": 0.6,
+    "S03": 0.6666666666666666,
+    "S04": 1.0
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": true
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 20.450000762939453,
+    "entry_max": 20.859000778198244,
+    "stop": 18.857811713929827,
+    "risk_per_share": 1.592189049009626,
+    "target_1": 23.634378860958705,
+    "trigger_basis": "letztes Higher High"
+   }
+  },
   "quality": {
    "score": 48.0,
    "coverage_pct": 73,
@@ -56,11 +141,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 10.7,
+   "score": 26.9,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -119,12 +206,98 @@
   "adr20": 5.250540478946209,
   "rvol": 1.2514459985277107,
   "ema10": 19.32890267846783,
-  "ema21": 19.05919289322634,
+  "ema21": 19.05919289325787,
   "sma50": 19.184399948120117,
   "sma200": 17.007199997901917,
   "volatility_ann": 50.46321042175912,
   "avg_dollar_volume_20d": 1779802.437877655,
-  "move_zscore": -2.0161193694941306
+  "move_zscore": -2.0161193694941306,
+  "swing": {
+   "tech": {
+    "close": 19.1299991607666,
+    "change_pct": -6.40900850813707,
+    "ema20": 19.069711720538987,
+    "ema50": 19.138189561944174,
+    "ema200": 17.71828969799867,
+    "sma50": 19.184399948120117,
+    "rsi14": 50.82643126795047,
+    "rsi_min5": 50.82643126795047,
+    "atr14": 1.0614593660064164,
+    "atr_pct": 5.548663944446719,
+    "rvol": 1.2514459985277107,
+    "vol30": 105566.66666666667,
+    "dist_ema200_pct": 7.967526701673622,
+    "dist_52w_high_pct": 22.219964647937708,
+    "high_52w": 24.594999313354492,
+    "macd_above_signal": true,
+    "obv_rising": true,
+    "xo_bull_approx": true,
+    "higher_high": true,
+    "higher_low": true,
+    "last_higher_high": 20.450000762939453,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 20.739999771118164,
+    "day_low": 19.049999237060547,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": true,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": true,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": true,
+     "Higher Low": true,
+     "OBV steigend": true,
+     "Trend-Signal (EMA12>EMA25)": true,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [
+    "S04"
+   ],
+   "near": {
+    "S01": 0.0,
+    "S02": 0.6,
+    "S03": 0.6666666666666666,
+    "S04": 1.0
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": true
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 20.450000762939453,
+    "entry_max": 20.859000778198244,
+    "stop": 18.857811713929827,
+    "risk_per_share": 1.592189049009626,
+    "target_1": 23.634378860958705,
+    "trigger_basis": "letztes Higher High"
+   }
+  }
  },
  "quality_detail": {
   "score": 48.0,
@@ -445,11 +618,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 10.7,
+  "score": 26.9,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 60.5,
@@ -467,26 +640,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -504,7 +679,405 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "2f6c9f6327386493",
+   "symbols": [
+    "SI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Shoulder Innovations to Participate in Upcoming Investor Conferences",
+   "summary": "Shoulder Innovations, Inc. (Shoulder Innovations, or the company) (NYSE: SI), a commercial-stage medical technology company exclusively focused on transforming the shoulder surgical care market, today announced that members of management will participate in the following upcoming",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/shoulder-innovations-participate-upcoming-investor-200500619.html?.tsrc=rss",
+   "published_at": "2026-10-27T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:28Z",
+   "fingerprint": "3bb6b18e8e161acb",
+   "primary_source": false,
+   "cluster_id": "2f6c9f6327386493",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9f5725cf5d088c85",
+   "symbols": [
+    "SI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can silver recover from its latest sell-off? UBS weighs in",
+   "summary": "Investing.com - Silver faces near-term turbulence as central banks maintain monetary policy pressure, but prices are poised to reach $80 an ounce by late 2027 amid expanding artificial intelligence infrastructure demand and persistent structural supply deficits, according to a re",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/silver-recover-latest-sell-off-210417888.html?.tsrc=rss",
+   "published_at": "2026-10-24T21:04:17Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:28Z",
+   "fingerprint": "99cd158e78e5c72b",
+   "primary_source": false,
+   "cluster_id": "9f5725cf5d088c85",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7858f62c2d7cd5b1",
+   "symbols": [
+    "SI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Shoulder Innovations to Report Third Quarter 2026 Financial Results on November 5, 2026",
+   "summary": "Shoulder Innovations, Inc. (\"Shoulder Innovations\", or \"the company\") (NYSE: SI), a commercial-stage medical technology company exclusively focused on transforming the shoulder surgical care market, today announced it will release financial results for the third quarter of 2026 a",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/shoulder-innovations-report-third-quarter-200500871.html?.tsrc=rss",
+   "published_at": "2026-10-15T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:28Z",
+   "fingerprint": "3ac7f911069db026",
+   "primary_source": false,
+   "cluster_id": "7858f62c2d7cd5b1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8d71d551e5cec83e",
+   "symbols": [
+    "SI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Shoulder Innovations Receives FDA 510(k) Clearance for N-22 Humeral Head and Initiates Full Commercial Launch",
+   "summary": "Shoulder Innovations, Inc. (\"Shoulder Innovations\", or \"the company\") (NYSE: SI), a commercial-stage medical technology company exclusively focused on transforming the shoulder surgical care market, today announced it has received U.S. Food and Drug Administration (FDA) 510(k) cl",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/shoulder-innovations-receives-fda-510-200500025.html?.tsrc=rss",
+   "published_at": "2026-09-10T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:28Z",
+   "fingerprint": "ac9b4058ddabae15",
+   "primary_source": false,
+   "cluster_id": "8d71d551e5cec83e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9296bbb2b07c52ac",
+   "symbols": [
+    "SI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Shoulder Innovations Announces Exclusive Partnership with ALM Ortho to Introduce Bespoke Solution for Complex Shoulder Reconstruction Procedures",
+   "summary": "Shoulder Innovations, Inc. (\"Shoulder Innovations\", or \"the company\") (NYSE: SI), a commercial-stage medical technology company exclusively focused on transforming the shoulder surgical care market, today announced it has entered into an exclusive collaboration with ALM Ortho, In",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/shoulder-innovations-announces-exclusive-partnership-200500741.html?.tsrc=rss",
+   "published_at": "2026-09-09T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:28Z",
+   "fingerprint": "221d07d5c5c19b3c",
+   "primary_source": false,
+   "cluster_id": "9296bbb2b07c52ac",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4b5447e46a1bd2bc",
+   "symbols": [
+    "SI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Shoulder Innovations Announces Settlement of Patent Litigation with Catalyst OrthoScience",
+   "summary": "Shoulder Innovations, Inc. (\"Shoulder Innovations\") (NYSE: SI), a commercial-stage medical technology company exclusively focused on transforming the shoulder surgical care market, today announced that it has entered into a settlement agreement with Catalyst OrthoScience Inc. (\"C",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/shoulder-innovations-announces-settlement-patent-200500941.html?.tsrc=rss",
+   "published_at": "2026-09-08T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:28Z",
+   "fingerprint": "4eaad4af8d77341a",
+   "primary_source": false,
+   "cluster_id": "4b5447e46a1bd2bc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b6d2ecdb217153e8",
+   "symbols": [
+    "SI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Shoulder Innovations to Participate in the Morgan Stanley 24th Annual Healthcare Conference",
+   "summary": "Shoulder Innovations, Inc. (Shoulder Innovations, or the company) (NYSE: SI), a commercial-stage medical technology company exclusively focused on transforming the shoulder surgical care market, today announced that members of management will participate in a fireside chat at the",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/shoulder-innovations-participate-morgan-stanley-200500944.html?.tsrc=rss",
+   "published_at": "2026-09-01T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:28Z",
+   "fingerprint": "0fb819228cedf700",
+   "primary_source": false,
+   "cluster_id": "b6d2ecdb217153e8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c073208379d636e8",
+   "symbols": [
+    "MBX",
+    "SI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "UMH Properties and 4 More Stocks See Action From Activist Investors",
+   "summary": "Activists also report to the SEC on MBX Biosciences, Core Scientific, Gran Tierra Energy, and Shoulder Innovations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/507d4cf3-9a5a-3155-b283-3b5ef14ca9bd/umh-properties-and-4-more.html?.tsrc=rss",
+   "published_at": "2026-08-14T23:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:08:28Z",
+   "fingerprint": "356f6c7ebf7f364f",
+   "primary_source": false,
+   "cluster_id": "c073208379d636e8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "48ba73577f2ac8c1",
+   "symbols": [
+    "SI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Silver could surge to $90 as investment demand takes over, Citi says",
+   "summary": "Investing.com -- In a note to clients on Wednesday, Citi analysts reiterated their bullish silver price targets, saying the metal could climb to $90 an ounce over the next six to 12 months as investment demand takes over from a softening industrial picture.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/silver-could-surge-90-investment-112942386.html?.tsrc=rss",
+   "published_at": "2026-08-12T11:29:42Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:28Z",
+   "fingerprint": "eae7a1016187fc7f",
+   "primary_source": false,
+   "cluster_id": "48ba73577f2ac8c1",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f1f52eeeaba08fac",
+   "symbols": [
+    "SI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Shoulder Innovations Promotes Jon Osborne to Chief Commercial Officer",
+   "summary": "Shoulder Innovations, Inc. (Shoulder Innovations, or the company) (NYSE: SI), a commercial-stage medical technology company exclusively focused on transforming the shoulder surgical care market, today announced the promotion of Jon Osborne to Chief Commercial Officer, effective A",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/shoulder-innovations-promotes-jon-osborne-110000048.html?.tsrc=rss",
+   "published_at": "2026-08-10T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:28Z",
+   "fingerprint": "be58c8b0f2161bfb",
+   "primary_source": false,
+   "cluster_id": "f1f52eeeaba08fac",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2826ebab6c7bf4df",
+   "symbols": [
+    "SI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Shoulder Innovations Q2 Earnings Call Highlights",
+   "summary": "Shoulder Innovations (NYSE:SI) reported second-quarter net revenue of $17.2 million, up 56% from $11 million a year earlier, as the company added surgeons, expanded use among existing customers and advanced several product launches. The company raised its full-year 2026 revenue o",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/shoulder-innovations-q2-earnings-call-highlights-2026-08-09/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-09T06:03:49Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:28Z",
+   "fingerprint": "6268fa7ac8a5132a",
+   "primary_source": false,
+   "cluster_id": "2826ebab6c7bf4df",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "62d8a732771cd9f8",
+   "symbols": [
+    "SI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Citadel Securities’ Rubner says it’s time to start buying gold again",
+   "summary": "Investing.com - Citadel Securities’ Scott Rubner has started advocating for adding structural exposure to gold for the first time in 2026, calling the current precious metals setup \"one of the more compelling upside setups we have seen in precious metals in months.\"",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/citadel-rubner-says-time-start-161835992.html?.tsrc=rss",
+   "published_at": "2026-08-07T16:18:35Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:28Z",
+   "fingerprint": "794d1edc96647f8c",
+   "primary_source": false,
+   "cluster_id": "62d8a732771cd9f8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8a59ce56750e5c47",
+   "symbols": [
+    "SI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Shoulder Innovations Inc (SI) (Q2 2026) Earnings Call Highlights: Revenue Surges 56% as ...",
+   "summary": "Company raises full-year guidance to $67-$69 million amid strong market share gains and strategic partnerships",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/shoulder-innovations-inc-si-q2-050642107.html?.tsrc=rss",
+   "published_at": "2026-08-07T05:06:42Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:28Z",
+   "fingerprint": "64e95cf99ee22bd3",
+   "primary_source": false,
+   "cluster_id": "8a59ce56750e5c47",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b0035a6523aaf34c",
+   "symbols": [
+    "SI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Shoulder Innovations, Inc. (SI) Reports Q2 Loss, Beats Revenue Estimates",
+   "summary": "Shoulder Innovations, Inc. (SI) delivered earnings and revenue surprises of 0.00% and +1.93%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/shoulder-innovations-inc-si-reports-231016658.html?.tsrc=rss",
+   "published_at": "2026-08-06T23:10:16Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:28Z",
+   "fingerprint": "232ef52d6fa460c3",
+   "primary_source": false,
+   "cluster_id": "b0035a6523aaf34c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dce409dd4160208a",
+   "symbols": [
+    "SI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Shoulder Innovations Reports Second Quarter 2026 Financial Results and Raises Full Year Outlook",
+   "summary": "Shoulder Innovations, Inc. (Shoulder Innovations, or the company) (NYSE: SI), a commercial-stage medical technology company exclusively focused on transforming the shoulder surgical care market, today reported financial results for the second quarter ended June 30, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/shoulder-innovations-reports-second-quarter-200500773.html?.tsrc=rss",
+   "published_at": "2026-08-06T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:28Z",
+   "fingerprint": "912ae13bc7b5bdcc",
+   "primary_source": false,
+   "cluster_id": "dce409dd4160208a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3ba8cedc2385749e",
+   "symbols": [
+    "SI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Texas Precious Metals says gold, silver pullback offers buying opportunity",
+   "summary": "Investing.com -- Texas Precious Metals remains bullish on gold and silver despite recent price weakness, viewing the current pullback as an opportunity for investors to accumulate positions as strong central bank buying and growing retail demand continue to underpin the market, a",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/texas-precious-metals-says-gold-190919706.html?.tsrc=rss",
+   "published_at": "2026-07-31T19:09:19Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:28Z",
+   "fingerprint": "0dad2e318f3adfd0",
+   "primary_source": false,
+   "cluster_id": "3ba8cedc2385749e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0b3c3da9d8c6a108",
+   "symbols": [
+    "SI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "BrightSpring Health Services, Inc. (BTSG) Tops Q2 Earnings and Revenue Estimates",
+   "summary": "BrightSpring Health Services, Inc. (BTSG) delivered earnings and revenue surprises of +21.62% and +6.11%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/brightspring-health-services-inc-btsg-112501744.html?.tsrc=rss",
+   "published_at": "2026-07-31T11:25:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:28Z",
+   "fingerprint": "053ba067f773c29f",
+   "primary_source": false,
+   "cluster_id": "0b3c3da9d8c6a108",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "de07aa8ede60ec78",
+   "symbols": [
+    "SI"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Shoulder Innovations to Participate in the Canaccord Genuity 46th Annual Growth Conference",
+   "summary": "Shoulder Innovations, Inc. (Shoulder Innovations, or the company) (NYSE: SI), a commercial-stage medical technology company exclusively focused on transforming the shoulder surgical care market, today announced that members of management will present at the Canaccord Genuity 46th",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/shoulder-innovations-participate-canaccord-genuity-200500818.html?.tsrc=rss",
+   "published_at": "2026-07-29T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:28Z",
+   "fingerprint": "9b5ed42ed9b5bb9a",
+   "primary_source": false,
+   "cluster_id": "de07aa8ede60ec78",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "c0c367acf63620bd",

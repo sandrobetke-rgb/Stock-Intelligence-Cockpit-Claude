@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,96 @@
    "adr20": 4.079155708582883,
    "rvol": 1.2839622250183207,
    "ema10": 29.265915218671587,
-   "ema21": 30.884494407990903,
+   "ema21": 30.884494408008482,
    "sma50": 34.384599952697755,
    "sma200": 30.31240908622742
   },
   "market_cap": 5399518720.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 26.479999542236328,
+    "change_pct": -6.33180363120851,
+    "ema20": 30.77070380953345,
+    "ema50": 32.270175757613494,
+    "ema200": 29.556146623467797,
+    "sma50": 34.384599952697755,
+    "rsi14": 29.53044524707761,
+    "rsi_min5": 29.53044524707761,
+    "atr14": 1.5013362407317103,
+    "atr_pct": 5.669698892316964,
+    "rvol": 1.2839622250183207,
+    "vol30": 2234126.6666666665,
+    "dist_ema200_pct": -10.407808299303078,
+    "dist_52w_high_pct": 32.86003939081294,
+    "high_52w": 39.439998626708984,
+    "macd_above_signal": false,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 35.75,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 27.040000915527344,
+    "day_low": 25.920000076293945,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": true,
+     "Kurs > 10": true,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": false,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.5,
+    "S03": 0.3333333333333333,
+    "S04": 0.2
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 27.040000915527344,
+    "entry_max": 27.580800933837892,
+    "stop": 24.78799655442978,
+    "risk_per_share": 2.2520043610975655,
+    "target_1": 31.544009637722475,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 78.4,
    "coverage_pct": 100,
@@ -55,11 +138,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 8.6,
+   "score": 24.8,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -124,12 +209,96 @@
   "adr20": 4.079155708582883,
   "rvol": 1.2839622250183207,
   "ema10": 29.265915218671587,
-  "ema21": 30.884494407990903,
+  "ema21": 30.884494408008482,
   "sma50": 34.384599952697755,
   "sma200": 30.31240908622742,
   "volatility_ann": 61.622877742367656,
   "avg_dollar_volume_20d": 68993745.1358223,
-  "move_zscore": -1.6311193218250828
+  "move_zscore": -1.6311193218250828,
+  "swing": {
+   "tech": {
+    "close": 26.479999542236328,
+    "change_pct": -6.33180363120851,
+    "ema20": 30.77070380953345,
+    "ema50": 32.270175757613494,
+    "ema200": 29.556146623467797,
+    "sma50": 34.384599952697755,
+    "rsi14": 29.53044524707761,
+    "rsi_min5": 29.53044524707761,
+    "atr14": 1.5013362407317103,
+    "atr_pct": 5.669698892316964,
+    "rvol": 1.2839622250183207,
+    "vol30": 2234126.6666666665,
+    "dist_ema200_pct": -10.407808299303078,
+    "dist_52w_high_pct": 32.86003939081294,
+    "high_52w": 39.439998626708984,
+    "macd_above_signal": false,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 35.75,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 27.040000915527344,
+    "day_low": 25.920000076293945,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": true,
+     "Kurs > 10": true,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": false,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.5,
+    "S03": 0.3333333333333333,
+    "S04": 0.2
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 27.040000915527344,
+    "entry_max": 27.580800933837892,
+    "stop": 24.78799655442978,
+    "risk_per_share": 2.2520043610975655,
+    "target_1": 31.544009637722475,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 78.4,
@@ -449,11 +618,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 8.6,
+  "score": 24.8,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 48.9,
@@ -471,26 +640,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 19,
+    "independent": 19,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 5,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -508,7 +679,427 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "4ca8e41f65028f67",
+   "symbols": [
+    "SSRM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "SVTNF: Initiating Coverage of Lodestar Metals Corp. - Modest Footprint, Big Neighbours: Gold Run Maiden Drilling Confirms Multi-Style Gold-Silver System in Nevada",
+   "summary": "By Ronald Wortel, MBA, P. Eng. TSXV: LSTR | OTCQB: SVTNF READ THE FULL SVTNF RESEARCH REPORT SPONSORED BY LODESTAR METALS CORP. Lodestar Metals Corp. (TSXV: LSTR; OTCQB: SVTNF) is a Nevada-focused junior explorer whose maiden drill program at the Gold Run Project has, in our view",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/svtnf-initiating-coverage-lodestar-metals-130200314.html?.tsrc=rss",
+   "published_at": "2026-10-27T13:02:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:06Z",
+   "fingerprint": "ad411adfc541ce16",
+   "primary_source": false,
+   "cluster_id": "4ca8e41f65028f67",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "67dc9e6c804e6d0d",
+   "symbols": [
+    "MUX",
+    "SSRM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "MUX to Generate Additional Capital From Non-Core Timmins Asset Sale",
+   "summary": "McEwen will sell its non-core Timmins assets for $55 million, unlocking capital to fund mine development and target 250,000-300,000 gold-equivalent ounces by 2030.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/mux-generate-additional-capital-non-152000552.html?.tsrc=rss",
+   "published_at": "2026-10-21T15:20:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:09:21Z",
+   "fingerprint": "742681a12a3b3d1d",
+   "primary_source": false,
+   "cluster_id": "67dc9e6c804e6d0d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cf81ba876f2cf5bd",
+   "symbols": [
+    "SSRM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How Big Could Coeur Mining Stock's Next Fall Be?",
+   "summary": "Coeur Mining (CDE) shares fell 22.4% in the month to October 19, 2026, while the S&amp;P 500 gained 0.6%. No company news explains the drop, and peers Hecla Mining and First Majestic Silver each lost about 20% over the same month. So if the whole market turns, how far has Coeur f",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/619341/how-big-could-coeur-mining-stocks-next-fall-be/2026-10-20?.tsrc=rss",
+   "published_at": "2026-10-20T17:48:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:06Z",
+   "fingerprint": "4a9d0b80b18e5802",
+   "primary_source": false,
+   "cluster_id": "cf81ba876f2cf5bd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d849636d17f9e3af",
+   "symbols": [
+    "SSRM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is SSR Mining (TSX:SSRM) Undervalued On Its New Marigold Mine Plan?",
+   "summary": "SSR Mining (TSX:SSRM) has put its Nevada plans in sharper focus after releasing a detailed Technical Report Summary for the Marigold Gold Complex, outlining a 20 year production blueprint and long term mining schedule. Recent moves around SSR Mining, including the planned acquisi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ssr-mining-tsx-ssrm-undervalued-061516223.html?.tsrc=rss",
+   "published_at": "2026-10-15T06:15:16Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:06Z",
+   "fingerprint": "bc89553c7ef2773e",
+   "primary_source": false,
+   "cluster_id": "d849636d17f9e3af",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "087003f9bd39b44c",
+   "symbols": [
+    "SSRM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "SSR Mining (TSX:SSRM) Stock Still Looks Undervalued After Expansion Deal",
+   "summary": "SSR Mining has delivered a powerful multi year run, yet recent share price swings and fresh expansion plans now put the spotlight squarely on whether its current earnings really back up today’s valuation. SSR Mining’s share price has risen 129.4% over the past 3 years, which puts",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ssr-mining-tsx-ssrm-stock-051158133.html?.tsrc=rss",
+   "published_at": "2026-10-15T05:11:58Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:06Z",
+   "fingerprint": "90b2c7f32e6a0ce4",
+   "primary_source": false,
+   "cluster_id": "087003f9bd39b44c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a2456f8ed64c9330",
+   "symbols": [
+    "SSRM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "SSR Mining (TSX:SSRM) Unveils 20 Year Marigold Plan And Roxmore Acquisition",
+   "summary": "SSR Mining (TSX:SSRM) outlined a new 20 year operating plan for its Marigold Gold Complex in Nevada. The plan incorporates the Buffalo Valley project into Marigold, extending the complex-level production schedule over multiple decades. Management also moved to acquire Roxmore Res",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ssr-mining-tsx-ssrm-unveils-042706675.html?.tsrc=rss",
+   "published_at": "2026-10-15T04:27:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:06Z",
+   "fingerprint": "70cde7b5d01f466b",
+   "primary_source": false,
+   "cluster_id": "a2456f8ed64c9330",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "07adf2431fcb0228",
+   "symbols": [
+    "SSRM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why SSR Mining Stock Is Falling Today",
+   "summary": "This precious metals stock isn't glittering as brightly as it once had, according to one firm.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/10/14/why-ssr-mining-stock-is-falling-today/?.tsrc=rss",
+   "published_at": "2026-10-14T18:19:14Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:06Z",
+   "fingerprint": "2c7c93b4ed8bfc5a",
+   "primary_source": false,
+   "cluster_id": "07adf2431fcb0228",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bd67f3a4db6f0f1b",
+   "symbols": [
+    "SSRM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is SSRM's US Platform Set to Gain From Roxmore Acquisition?",
+   "summary": "SSR Mining's Roxmore acquisition could add up to 170,000 ounces of annual gold production, strengthen its Nevada footprint and generate more than $200M in synergies.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ssrms-us-platform-set-gain-140200174.html?.tsrc=rss",
+   "published_at": "2026-10-14T14:02:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:06Z",
+   "fingerprint": "72ff8f94d8a2ec14",
+   "primary_source": false,
+   "cluster_id": "bd67f3a4db6f0f1b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "aece04fa46ff26ea",
+   "symbols": [
+    "SSRM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "SSR Mining to acquire Roxmore Resources in $464m all-cash deal",
+   "summary": "The transaction gives SSR Mining control of the Converse gold project near its existing Marigold operation in Nevada, US.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "mining-technology.com",
+   "url": "https://www.mining-technology.com/news/ssr-mining-to-acquire-roxmore-464m/?.tsrc=rss",
+   "published_at": "2026-10-14T08:43:38Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:06Z",
+   "fingerprint": "a4dbe68f934eb612",
+   "primary_source": false,
+   "cluster_id": "aece04fa46ff26ea",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4dd4715187593aaf",
+   "symbols": [
+    "SSRM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why SSR Mining Stock Dropped Today",
+   "summary": "SSR Mining just snapped up a cheap Canadian gold mine -- in America.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/10/13/why-ssr-mining-stock-dropped-today/?.tsrc=rss",
+   "published_at": "2026-10-13T17:34:35Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:06Z",
+   "fingerprint": "f1dfa195a51a0a5b",
+   "primary_source": false,
+   "cluster_id": "4dd4715187593aaf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e8057361cc88d7a8",
+   "symbols": [
+    "SSRM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Will Wheaton Precious Metals' Development Assets Drive Growth?",
+   "summary": "WPM targets 50% production growth by 2030, with six development projects advancing toward production to support its long-term goals.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/wheaton-precious-metals-development-assets-154200018.html?.tsrc=rss",
+   "published_at": "2026-10-13T15:42:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:06Z",
+   "fingerprint": "bfeebb055ecaaa11",
+   "primary_source": false,
+   "cluster_id": "e8057361cc88d7a8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "091c9b167021e4d1",
+   "symbols": [
+    "SSRM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "SSR Mining to Acquire Roxmore Resources; Releases Technical Report Summary for the Marigold Gold Complex",
+   "summary": "SSR Mining (SSRM.TO, SSRM) on Tuesday said it agreed to acquire Roxmore Resources (RM.TO) for $464 m",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ssr-mining-acquire-roxmore-resources-153229173.html?.tsrc=rss",
+   "published_at": "2026-10-13T15:32:29Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:06Z",
+   "fingerprint": "6c8150d5696991fc",
+   "primary_source": false,
+   "cluster_id": "091c9b167021e4d1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "899304d01ee14af1",
+   "symbols": [
+    "SSRM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "SSR Mining Outlines 20-Year Marigold Mine Plan with Gold Reserves Rising 43% to 4.6 Million Ounces",
+   "summary": "SSR Mining Inc. (NASDAQ:SSRM) has published a new Technical Report Summary for its Marigold Gold Complex in Nevada, outlining a 20-year operating plan supported by an expanded mineral reserve base and the planned development of the neighbouring Buffalo Valley project.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "investorshub.advfn.com",
+   "url": "https://investorshub.advfn.com/market-news/article/37960/ssr-mining-outlines-20-year-marigold-mine-plan-with-gold-reserves-rising-43-to-4-6-million-ounces?.tsrc=rss",
+   "published_at": "2026-10-13T10:58:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:06Z",
+   "fingerprint": "bf0726f5348f83c4",
+   "primary_source": false,
+   "cluster_id": "899304d01ee14af1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c88d5af4256d6acf",
+   "symbols": [
+    "SSRM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "SSR Mining Announces the Acquisition of Roxmore Resources",
+   "summary": "DENVER, October 13, 2026--SSR Mining Inc. (Nasdaq/TSX: SSRM) (\"SSR Mining\" or the \"Company\") is pleased to announce that it has entered into a definitive agreement (the \"Agreement\") whereby a wholly owned affiliate of SSR Mining will acquire all of the issued and outstanding shar",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/ssr-mining-announces-acquisition-roxmore-101300891.html?.tsrc=rss",
+   "published_at": "2026-10-13T10:13:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:06Z",
+   "fingerprint": "a146f63ce521ae62",
+   "primary_source": false,
+   "cluster_id": "c88d5af4256d6acf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f3139dd9130964f0",
+   "symbols": [
+    "SSRM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Roxmore Resources Announces Sale to SSR Mining and Spinout of Exploration Assets",
+   "summary": "Cash Consideration represents a 47% premium to the 20-day VWAPCash Consideration and Spinco Consideration represents a 58% premium to the 20-day VWAPVoting support agreements have been entered into with the Company's largest shareholder and all directors and officers, representin",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/roxmore-resources-announces-sale-ssr-100000579.html?.tsrc=rss",
+   "published_at": "2026-10-13T10:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:06Z",
+   "fingerprint": "b40132bf6745ed94",
+   "primary_source": false,
+   "cluster_id": "f3139dd9130964f0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6e8123a9d5b506de",
+   "symbols": [
+    "SSRM"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "SSR Mining Announces 20-Year Life of Mine Plan for Marigold Based on Expanded 4.6 Million Ounce Mineral Reserve",
+   "summary": "DENVER, October 13, 2026--SSR Mining Inc. (Nasdaq/TSX: SSRM) (\"SSR Mining\", the \"Company\", \"we\", \"us\", or \"our\") announces the results of a Technical Report Summary (\"TRS\") for the Marigold Gold Complex (\"Marigold\") in Nevada, USA (the \"2026 Marigold TRS\").",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/ssr-mining-announces-20-life-100000356.html?.tsrc=rss",
+   "published_at": "2026-10-13T10:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:06Z",
+   "fingerprint": "40cd58744e1fc767",
+   "primary_source": false,
+   "cluster_id": "6e8123a9d5b506de",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "38f4fe294b915121",
+   "symbols": [
+    "SSRM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Groupe Dynamite And 2 Canadian Undervalued Stocks To Own",
+   "summary": "Rising global borrowing costs are putting pressure on weaker balance sheets, and that is where high quality Canadian businesses with strong cash generation and modest debt profiles start to look interesting. If capital gets choosier, solid fundamentals and undemanding valuations ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/groupe-dynamite-2-canadian-undervalued-013009230.html?.tsrc=rss",
+   "published_at": "2026-10-13T01:30:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:06Z",
+   "fingerprint": "03f06111d28648ea",
+   "primary_source": false,
+   "cluster_id": "38f4fe294b915121",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ce2b9acf6e6fbd35",
+   "symbols": [
+    "SSRM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Top 3 Canadian Undervalued Stocks Trading Up To 49% Below Fair Value",
+   "summary": "Goldman Sachs recently turned more positive on global equities, arguing that strong earnings can support stocks even near record levels. For Canadian investors, that puts a spotlight on local businesses that quietly generate solid cash flows yet still trade at depressed prices. T",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/top-3-canadian-undervalued-stocks-121028365.html?.tsrc=rss",
+   "published_at": "2026-10-12T12:10:28Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:06Z",
+   "fingerprint": "951bb4a28b9fe46b",
+   "primary_source": false,
+   "cluster_id": "ce2b9acf6e6fbd35",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3b58c2448ff8c244",
+   "symbols": [
+    "SSRM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Should You Buy Coeur Mining Stock For Its Cash?",
+   "summary": "Coeur Mining (CDE) stock currently trades 37.9% below its high of the past two years, presenting a different equation for prospective buyers. The company has generated free cash flow over the last twelve months that now equals 6.8% of its market value, compared with 4.5% for the ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/618152/should-you-buy-coeur-mining-stock-for-its-cash/2026-10-09?.tsrc=rss",
+   "published_at": "2026-10-10T00:28:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:06Z",
+   "fingerprint": "76ff88fb48238240",
+   "primary_source": false,
+   "cluster_id": "3b58c2448ff8c244",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [
   {
    "id": "b5ddde6b3e71682d",

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -30,7 +30,90 @@
   },
   "market_cap": 141463680.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 8.270000457763672,
+    "change_pct": 0.12106814291443779,
+    "ema20": 8.2888780241951,
+    "ema50": 9.326861561837449,
+    "ema200": 11.856835790733866,
+    "sma50": 9.76720001220703,
+    "rsi14": 44.81564633512116,
+    "rsi_min5": 39.7202910324603,
+    "atr14": 0.4153581381962911,
+    "atr_pct": 5.0224681403295826,
+    "rvol": 2.2921639224887738,
+    "vol30": 283340.0,
+    "dist_ema200_pct": -30.251201891261005,
+    "dist_52w_high_pct": 50.68574697661934,
+    "high_52w": 16.770000457763672,
+    "macd_above_signal": true,
+    "obv_rising": true,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 8.319999694824219,
+    "hammer": true,
+    "bull_engulfing": false,
+    "green": true,
+    "day_high": 8.3100004196167,
+    "day_low": 7.880000114440918,
+    "history_ok": false
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": true
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": false,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": false,
+     "Tag positiv": true
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": true,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.4,
+    "S03": 0.6666666666666666,
+    "S04": 0.4
+   },
+   "filter": {
+    "Tag grün": true,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 8.3100004196167,
+    "entry_max": 8.476200428009033,
+    "stop": 7.686963212322262,
+    "risk_per_share": 0.6230372072944368,
+    "target_1": 9.556074834205573,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 37.7,
    "coverage_pct": 96,
@@ -56,11 +139,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 11.4,
+   "score": 27.6,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -130,7 +215,91 @@
   "sma200": null,
   "volatility_ann": 61.52807472661882,
   "avg_dollar_volume_20d": 2007837.6026058197,
-  "move_zscore": 0.031236101496813225
+  "move_zscore": 0.031236101496813225,
+  "swing": {
+   "tech": {
+    "close": 8.270000457763672,
+    "change_pct": 0.12106814291443779,
+    "ema20": 8.2888780241951,
+    "ema50": 9.326861561837449,
+    "ema200": 11.856835790733866,
+    "sma50": 9.76720001220703,
+    "rsi14": 44.81564633512116,
+    "rsi_min5": 39.7202910324603,
+    "atr14": 0.4153581381962911,
+    "atr_pct": 5.0224681403295826,
+    "rvol": 2.2921639224887738,
+    "vol30": 283340.0,
+    "dist_ema200_pct": -30.251201891261005,
+    "dist_52w_high_pct": 50.68574697661934,
+    "high_52w": 16.770000457763672,
+    "macd_above_signal": true,
+    "obv_rising": true,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 8.319999694824219,
+    "hammer": true,
+    "bull_engulfing": false,
+    "green": true,
+    "day_high": 8.3100004196167,
+    "day_low": 7.880000114440918,
+    "history_ok": false
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": true
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": false,
+     "Tag positiv": true
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": true,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.4,
+    "S03": 0.6666666666666666,
+    "S04": 0.4
+   },
+   "filter": {
+    "Tag grün": true,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 8.3100004196167,
+    "entry_max": 8.476200428009033,
+    "stop": 7.686963212322262,
+    "risk_per_share": 0.6230372072944368,
+    "target_1": 9.556074834205573,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 37.7,
@@ -451,11 +620,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 11.4,
+  "score": 27.6,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 64.6,
@@ -473,26 +642,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 4,
+    "independent": 4,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -510,7 +681,319 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "7b5475e9cc6c12a2",
+   "symbols": [
+    "RNA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Atrium Therapeutics Doses First Patient in Corventis™, the First Interventional Clinical Trial for People Living with PRKAG2 Syndrome",
+   "summary": "Atrium Therapeutics, Inc. (Nasdaq: RNA) (the \"Company\"), a biopharmaceutical company advancing precision cardiology by developing RNA therapeutics targeted to the heart, today announced that the first patient has been dosed in the Phase 1/2 Corventis clinical trial evaluating ATR",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/atrium-therapeutics-doses-first-patient-103000321.html?.tsrc=rss",
+   "published_at": "2026-10-27T10:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:37Z",
+   "fingerprint": "fa073205af9871b9",
+   "primary_source": false,
+   "cluster_id": "7b5475e9cc6c12a2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5bb113bb227b3660",
+   "symbols": [
+    "RNA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Atrium Therapeutics Announces Inducement Grants under Nasdaq Listing Rule 5635(c)(4)",
+   "summary": "Atrium Therapeutics, Inc. (Nasdaq: RNA) (the \"Company\") today announced it awarded inducement grants on October 20, 2026 under the Company's 2026 Employment Inducement Incentive Award Plan (the \"2026 Inducement Plan\") as a material inducement to the employment of one non-executiv",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/atrium-therapeutics-announces-inducement-grants-212300316.html?.tsrc=rss",
+   "published_at": "2026-10-20T21:23:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:37Z",
+   "fingerprint": "e39a67049a5483ae",
+   "primary_source": false,
+   "cluster_id": "0275d12ddedd31b2",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5c658eb7914f2a40",
+   "symbols": [
+    "RNA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Yakira Capital Management Calls on Atrium Therapeutics to Launch Strategic Review, Curb Cash Spending and Explain Dilutive Financing",
+   "summary": "Yakira Capital Management, Inc. (\"Yakira\") a shareholder of Atrium Therapeutics, Inc. (NASDAQ: RNA), today called on the Company's Board of Directors to immediately initiate a strategic review, curtail cash spending and explain its perplexing decision to issue substantial equity ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/yakira-capital-management-calls-atrium-120900568.html?.tsrc=rss",
+   "published_at": "2026-10-20T12:09:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:37Z",
+   "fingerprint": "b18cd707c7b87c2d",
+   "primary_source": false,
+   "cluster_id": "5c658eb7914f2a40",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c770ea51de412c41",
+   "symbols": [
+    "RNA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Atrium Therapeutics Announces $50 Million Private Placement",
+   "summary": "Atrium Therapeutics, Inc. (Nasdaq: RNA) (\"Atrium\" or the \"Company\"), a biopharmaceutical company advancing precision cardiology by developing RNA therapeutics targeted to the heart, today announced that it has entered into a securities purchase agreement (the \"purchase agreement\"",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/atrium-therapeutics-announces-50-million-103000097.html?.tsrc=rss",
+   "published_at": "2026-10-08T10:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:37Z",
+   "fingerprint": "c827fa440f40830d",
+   "primary_source": false,
+   "cluster_id": "c770ea51de412c41",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d42ce4faaa2d5ec5",
+   "symbols": [
+    "RNA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wall Street Money Is Leaving Just As Atrium’s (RNA) Pipeline Turns Real",
+   "summary": "On August 13, Atrium Therapeutics (NASDAQ:RNA) reported second-quarter 2026 results that mixed real clinical progress with a familiar biotech question: how long the cash lasts. The company disclosed FDA clearance of its IND application for ATR 1072 and the launch of Corventis, it",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/wall-street-money-leaving-just-104402645.html?.tsrc=rss",
+   "published_at": "2026-09-06T10:44:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:37Z",
+   "fingerprint": "b2515b7112d4accc",
+   "primary_source": false,
+   "cluster_id": "d42ce4faaa2d5ec5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4996e3017db71405",
+   "symbols": [
+    "RNA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Atrium Therapeutics to Participate in Upcoming Investor Conferences",
+   "summary": "Atrium Therapeutics, Inc. (Nasdaq: RNA), a biopharmaceutical company advancing precision cardiology by developing RNA therapeutics targeted to the heart, today announced that it will participate in upcoming investor conferences in September.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/atrium-therapeutics-participate-upcoming-investor-120000589.html?.tsrc=rss",
+   "published_at": "2026-09-02T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:37Z",
+   "fingerprint": "6d96acc0beac1f0e",
+   "primary_source": false,
+   "cluster_id": "4996e3017db71405",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2c1fe1490b7008d7",
+   "symbols": [
+    "RNA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can Atrium Therapeutics (RNA)’s $15 Million Milestone From Bristol-Myers Squibb (BMY) Validate its RNA Platform?",
+   "summary": "On August 13, two pharmaceutical companies tied to the same cardiovascular research deal delivered major updates. Atrium Therapeutics, Inc. (NASDAQ:RNA) earned a $15 million milestone payment from Bristol-Myers Squibb Company (NYSE:BMY) after delivering a lead RNA compound target",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/atrium-therapeutics-rna-15-million-194244176.html?.tsrc=rss",
+   "published_at": "2026-08-28T19:42:44Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:37Z",
+   "fingerprint": "3d00613ca399e6d2",
+   "primary_source": false,
+   "cluster_id": "2c1fe1490b7008d7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "347425a6e2472bd1",
+   "symbols": [
+    "RNA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Atrium Therapeutics Reports Second Quarter 2026 Financial Results",
+   "summary": "Atrium Therapeutics, Inc. (Nasdaq: RNA) (\"Atrium,\" \"Atrium Therapeutics,\" or the \"Company\"), a biopharmaceutical company advancing precision cardiology by developing RNA therapeutics targeted to the heart, today reported financial results for the second quarter ended June 30, 202",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/atrium-therapeutics-reports-second-quarter-204400492.html?.tsrc=rss",
+   "published_at": "2026-08-13T20:44:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:37Z",
+   "fingerprint": "212636944150353e",
+   "primary_source": false,
+   "cluster_id": "347425a6e2472bd1",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c1b1f6cc235c6890",
+   "symbols": [
+    "RNA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Atrium Therapeutics Earns $15 Million Milestone Payment from Bristol Myers Squibb Under Global Cardiovascular Collaboration",
+   "summary": "Atrium Therapeutics, Inc. (Nasdaq: RNA) (\"Atrium,\" \"Atrium Therapeutics\" or the \"Company\"), a biopharmaceutical company dedicated to delivering RNA therapeutics to the heart, today announced it has earned another $15 million milestone payment from Bristol Myers Squibb (NYSE: BMY)",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/atrium-therapeutics-earns-15-million-120000400.html?.tsrc=rss",
+   "published_at": "2026-08-13T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:37Z",
+   "fingerprint": "21ffaae0af86da5d",
+   "primary_source": false,
+   "cluster_id": "c1b1f6cc235c6890",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0b8e19f03a1b727f",
+   "symbols": [
+    "IMRX",
+    "JJSF",
+    "LYEL",
+    "RNA"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Zillow downgraded, Global Payments upgraded: Wall Street's top analyst calls",
+   "summary": "Zillow downgraded, Global Payments upgraded: Wall Street's top analyst calls",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zillow-downgraded-global-payments-upgraded-134836978.html?.tsrc=rss",
+   "published_at": "2026-08-06T13:48:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:04Z",
+   "fingerprint": "7f8a9bd4b9c19de1",
+   "primary_source": false,
+   "cluster_id": "0b8e19f03a1b727f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1d370cd514830f89",
+   "symbols": [
+    "RNA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Atrium Therapeutics Announces FDA Clearance of Investigational New Drug Application for ATR 1072 for Treatment of PRKAG2 Syndrome",
+   "summary": "Atrium Therapeutics, Inc. (Nasdaq: RNA) (the \"Company\"), a biopharmaceutical company dedicated to delivering RNA therapeutics to the heart, announced today that the U.S. Food and Drug Administration (FDA) has cleared its Investigational New Drug (IND) application allowing the Com",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/atrium-therapeutics-announces-fda-clearance-103000185.html?.tsrc=rss",
+   "published_at": "2026-07-14T10:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:37Z",
+   "fingerprint": "b1b11a51813ee51c",
+   "primary_source": false,
+   "cluster_id": "1d370cd514830f89",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3f6797dfcb03ad7d",
+   "symbols": [
+    "RNA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Here's Why We're Not Too Worried About Atrium Therapeutics' (NASDAQ:RNA) Cash Burn Situation",
+   "summary": "Even when a business is losing money, it's possible for shareholders to make money if they buy a good business at the...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/heres-why-were-not-too-102457780.html?.tsrc=rss",
+   "published_at": "2026-05-28T10:24:57Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:37Z",
+   "fingerprint": "b9e90dcfd05c7031",
+   "primary_source": false,
+   "cluster_id": "3f6797dfcb03ad7d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a1b5dbbeade789c3",
+   "symbols": [
+    "RNA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Atrium Therapeutics Reports First Quarter 2026 Financial Results",
+   "summary": "Atrium Therapeutics, Inc. (Nasdaq: RNA) (\"Atrium,\" \"Atrium Therapeutics\" or the \"Company\"), a biopharmaceutical company advancing precision cardiology by developing RNA therapeutics targeted to the heart, today reported financial results for the first quarter ended March 31, 2026",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/atrium-therapeutics-reports-first-quarter-204000839.html?.tsrc=rss",
+   "published_at": "2026-05-14T20:40:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:37Z",
+   "fingerprint": "5550d4a0cfea67bd",
+   "primary_source": false,
+   "cluster_id": "a1b5dbbeade789c3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0275d12ddedd31b2",
+   "symbols": [
+    "RNA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Atrium Therapeutics Announces Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+   "summary": "Atrium Therapeutics, Inc. (Nasdaq: RNA) (the \"Company\") today announced it awarded inducement grants on April 20, 2026 under the Company's 2026 Employment Inducement Incentive Award Plan (the \"2026 Inducement Plan\") as a material inducement to the employment of seven non-executiv",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/atrium-therapeutics-announces-inducement-grants-024600342.html?.tsrc=rss",
+   "published_at": "2026-04-21T02:46:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:37Z",
+   "fingerprint": "e39a67049a5483ae",
+   "primary_source": false,
+   "cluster_id": "0275d12ddedd31b2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

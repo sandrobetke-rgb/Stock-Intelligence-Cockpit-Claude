@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,96 @@
    "adr20": 2.624767100057528,
    "rvol": 1.3841393263775936,
    "ema10": 78.57885485344013,
-   "ema21": 79.54506620790076,
+   "ema21": 79.545066208161,
    "sma50": 80.66323852539062,
    "sma200": 79.57262527465821
   },
   "market_cap": 1620263552.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 72.95999908447266,
+    "change_pct": -6.233130222718319,
+    "ema20": 79.50025082568459,
+    "ema50": 80.0736077645849,
+    "ema200": 79.81273530547122,
+    "sma50": 80.66323852539062,
+    "rsi14": 29.071705058478315,
+    "rsi_min5": 29.071705058478315,
+    "atr14": 2.409733394059329,
+    "atr_pct": 3.3028144521621416,
+    "rvol": 1.3841393263775936,
+    "vol30": 267580.0,
+    "dist_ema200_pct": -8.586018502900261,
+    "dist_52w_high_pct": 18.08932554258168,
+    "high_52w": 89.07263866127886,
+    "macd_above_signal": false,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": true,
+    "higher_low": false,
+    "last_higher_high": 83.62999725341797,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 78.30999755859375,
+    "day_low": 72.61000061035156,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": true,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": false,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": true,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.4,
+    "S03": 0.3333333333333333,
+    "S04": 0.4
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": true,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 78.30999755859375,
+    "entry_max": 79.87619750976563,
+    "stop": 74.69539746750476,
+    "risk_per_share": 3.614600091088988,
+    "target_1": 85.53919774077173,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 53.9,
    "coverage_pct": 96,
@@ -56,11 +139,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 17.6,
+   "score": 33.8,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "news_flow",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -125,12 +210,96 @@
   "adr20": 2.624767100057528,
   "rvol": 1.3841393263775936,
   "ema10": 78.57885485344013,
-  "ema21": 79.54506620790076,
+  "ema21": 79.545066208161,
   "sma50": 80.66323852539062,
   "sma200": 79.57262527465821,
   "volatility_ann": 27.40907476372835,
   "avg_dollar_volume_20d": 20886107.003250122,
-  "move_zscore": -3.6100406746929683
+  "move_zscore": -3.6100406746929683,
+  "swing": {
+   "tech": {
+    "close": 72.95999908447266,
+    "change_pct": -6.233130222718319,
+    "ema20": 79.50025082568459,
+    "ema50": 80.0736077645849,
+    "ema200": 79.81273530547122,
+    "sma50": 80.66323852539062,
+    "rsi14": 29.071705058478315,
+    "rsi_min5": 29.071705058478315,
+    "atr14": 2.409733394059329,
+    "atr_pct": 3.3028144521621416,
+    "rvol": 1.3841393263775936,
+    "vol30": 267580.0,
+    "dist_ema200_pct": -8.586018502900261,
+    "dist_52w_high_pct": 18.08932554258168,
+    "high_52w": 89.07263866127886,
+    "macd_above_signal": false,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": true,
+    "higher_low": false,
+    "last_higher_high": 83.62999725341797,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 78.30999755859375,
+    "day_low": 72.61000061035156,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": true,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": false,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": true,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.4,
+    "S03": 0.3333333333333333,
+    "S04": 0.4
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": true,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 78.30999755859375,
+    "entry_max": 79.87619750976563,
+    "stop": 74.69539746750476,
+    "risk_per_share": 3.614600091088988,
+    "target_1": 85.53919774077173,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 53.9,
@@ -451,11 +620,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 17.6,
+  "score": 33.8,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 100.0,
@@ -473,26 +642,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 7,
+    "independent": 7,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "news_flow",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -510,7 +681,458 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "67386d70589bbec9",
+   "symbols": [
+    "STRA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Consumer discretionary - education services stocks Q2 in review: Strategic Education (NASDAQ:STRA) vs peers",
+   "summary": "The end of the earnings season is always a good time to take a step back and see who shined (and who didn’t). Let’s take a look at how consumer discretionary - education services stocks fared in Q2, starting with Strategic Education (NASDAQ:STRA).",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/consumer-discretionary-education-services-stocks-201447441.html?.tsrc=rss",
+   "published_at": "2026-10-27T20:14:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "f55c79eaa16e1d44",
+   "primary_source": false,
+   "cluster_id": "67386d70589bbec9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0ca8eee9f9724b65",
+   "symbols": [
+    "LMAT",
+    "STRA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 cash-heavy stocks walking a fine line",
+   "summary": "A cash-heavy balance sheet is often a sign of strength, but not always. Some companies avoid debt because they have weak business models, limited expansion opportunities, or inconsistent cash flow.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-cash-heavy-stocks-walking-191753485.html?.tsrc=rss",
+   "published_at": "2026-10-22T19:17:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:07:54Z",
+   "fingerprint": "de7783b649061a6b",
+   "primary_source": false,
+   "cluster_id": "0ca8eee9f9724b65",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "31fe75c1580fb454",
+   "symbols": [
+    "APEI",
+    "CVSA",
+    "LAUR",
+    "STRA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "The One Reason To Invest In Covista Stock",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/619939/the-one-reason-to-invest-in-covista-stock/2026-10-22?.tsrc=rss",
+   "published_at": "2026-10-22T15:33:57Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:18Z",
+   "fingerprint": "8ab159b2976cb17b",
+   "primary_source": false,
+   "cluster_id": "31fe75c1580fb454",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d3fc97b6fe798587",
+   "symbols": [
+    "STRA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sophia Learning and National University Announce Partnership to Expand Affordable Pathways to Degree Completion",
+   "summary": "HERNDON, Va., October 20, 2026--Partnership with National University will allow eligible NU undergraduates to transfer Sophia courses towards eligible NU programs.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/sophia-learning-national-university-announce-110200478.html?.tsrc=rss",
+   "published_at": "2026-10-20T11:02:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "766c43ef0ec243ce",
+   "primary_source": false,
+   "cluster_id": "d3fc97b6fe798587",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "72b367bc2cebcfdb",
+   "symbols": [
+    "EPC",
+    "STRA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Safe-and-Steady Stock on Our Buy List and 2 Facing Headwinds",
+   "summary": "Low-volatility stocks may offer stability, but that often comes at the cost of slower growth and the upside potential of more dynamic companies.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-safe-steady-stock-buy-095510110.html?.tsrc=rss",
+   "published_at": "2026-10-09T09:55:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:35Z",
+   "fingerprint": "806442318f91b2e8",
+   "primary_source": false,
+   "cluster_id": "72b367bc2cebcfdb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "842d59ffc5e74eb7",
+   "symbols": [
+    "APEI",
+    "LAUR",
+    "LINC",
+    "MH",
+    "STRA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "5 Schools Stocks Navigating Costs and Changing Education Demand",
+   "summary": "Although regulatory and cost pressures are hurting the Zacks Schools industry, rising demand for career-focused education, healthcare and digital learning supports stocks like LAUR, MH, STRA, APEI and LINC.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/5-schools-stocks-navigating-costs-162800533.html?.tsrc=rss",
+   "published_at": "2026-10-08T16:28:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:18Z",
+   "fingerprint": "02429a4ee5a90f84",
+   "primary_source": false,
+   "cluster_id": "842d59ffc5e74eb7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9d21ca176d51ea6d",
+   "symbols": [
+    "STRA"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Strategic Education (STRA) Upgraded to Buy: What Does It Mean for the Stock?",
+   "summary": "Strategic Education (STRA) might move higher on growing optimism about its earnings prospects, which is reflected by its upgrade to a Zacks Rank #2 (Buy).",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/strategic-education-stra-upgraded-buy-150007927.html?.tsrc=rss",
+   "published_at": "2026-10-06T15:00:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "3cb532ead64e66dd",
+   "primary_source": false,
+   "cluster_id": "9d21ca176d51ea6d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d3e1bdf47d828da9",
+   "symbols": [
+    "STRA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "CHH Strengthens RV Travel Reach With Harvest Hosts Acquisition",
+   "summary": "Choice Hotels is acquiring Harvest Hosts for about $130 million, expanding into RV travel and extending its asset-light strategy beyond traditional lodging.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/chh-strengthens-rv-travel-reach-134400102.html?.tsrc=rss",
+   "published_at": "2026-10-01T13:44:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "b7294a672cb3b9c3",
+   "primary_source": false,
+   "cluster_id": "d3e1bdf47d828da9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7e28bdabdca1c07e",
+   "symbols": [
+    "STRA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Strategic Education, Inc. Schedules Third Quarter 2026 Results Conference Call",
+   "summary": "HERNDON, Va., September 30, 2026--Strategic Education, Inc. (Strategic Education) (NASDAQ: STRA) today announced that it will host a conference call to discuss its third quarter results on Thursday, November 5, 2026 at 10:00 a.m. ET. A news release outlining the results will be i",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/strategic-education-inc-schedules-third-200500889.html?.tsrc=rss",
+   "published_at": "2026-09-30T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "753ab5024ecb5880",
+   "primary_source": false,
+   "cluster_id": "7e28bdabdca1c07e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9008237499fa5ce0",
+   "symbols": [
+    "STRA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "STRA or LAUR: Which Is the Better Value Stock Right Now?",
+   "summary": "STRA vs. LAUR: Which Stock Is the Better Value Option?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/stra-laur-better-value-stock-144004775.html?.tsrc=rss",
+   "published_at": "2026-09-29T14:40:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "3acd17afb944a651",
+   "primary_source": false,
+   "cluster_id": "9008237499fa5ce0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "674f41e7062f898a",
+   "symbols": [
+    "STRA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Should Value Investors Buy Strategic Education (STRA) Stock?",
+   "summary": "Here at Zacks, our focus is on the proven Zacks Rank system, which emphasizes earnings estimates and estimate revisions to find great stocks. Nevertheless, we are always paying attention to the latest value, growth, and momentum trends to underscore strong picks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/value-investors-buy-strategic-education-124005852.html?.tsrc=rss",
+   "published_at": "2026-09-29T12:40:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "e1eb13739e70e281",
+   "primary_source": false,
+   "cluster_id": "674f41e7062f898a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3be957d9cb9f5ffe",
+   "symbols": [
+    "STRA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Profitable Stocks Walking a Fine Line",
+   "summary": "Even if a company is profitable, it doesn’t always mean it’s a great investment. Some struggle to maintain growth, face looming threats, or fail to reinvest wisely, limiting their future potential.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-profitable-stocks-walking-fine-112802491.html?.tsrc=rss",
+   "published_at": "2026-09-29T11:28:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "eddfe28b38158fe6",
+   "primary_source": false,
+   "cluster_id": "3be957d9cb9f5ffe",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "901ad665df48ddf0",
+   "symbols": [
+    "STRA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Strategic Education (STRA) Is Getting Attention Now",
+   "summary": "With no single headline event driving attention, Strategic Education (STRA) has drawn investor interest after recent share moves and fresh perspective on its role in higher education and workforce upskilling. Recent trading has cooled slightly, with a 1-day share price return of ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-strategic-education-stra-getting-091148573.html?.tsrc=rss",
+   "published_at": "2026-09-21T09:11:48Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "33d5f32b379dfcb4",
+   "primary_source": false,
+   "cluster_id": "901ad665df48ddf0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "07a0db8338de59a9",
+   "symbols": [
+    "STRA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Strategic Education (STRA) Stock Looks Reasonable Based On Earnings",
+   "summary": "Strategic Education has delivered a 29.1% total return over the past 5 years. With the stock around US$79.84 and near flat over the last 12 months, the real question now is whether that price still lines up with what its earnings can support. A 29.1% gain over 5 years puts real w",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/strategic-education-stra-stock-looks-180859891.html?.tsrc=rss",
+   "published_at": "2026-09-20T18:08:59Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "984049126e0b13fe",
+   "primary_source": false,
+   "cluster_id": "07a0db8338de59a9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "19bc729f84930c13",
+   "symbols": [
+    "STRA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "2 of Wall Street’s Favorite Stocks with Competitive Advantages and 1 We Brush Off",
+   "summary": "Wall Street has set ambitious price targets for the stocks in this article. While this suggests attractive upside potential, it’s important to remain skeptical because analysts face institutional pressures that can sometimes lead to overly optimistic forecasts.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/2-wall-street-favorite-stocks-142440256.html?.tsrc=rss",
+   "published_at": "2026-09-18T14:24:40Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "cb268f365cfde722",
+   "primary_source": false,
+   "cluster_id": "19bc729f84930c13",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ecefab273d510092",
+   "symbols": [
+    "STRA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Harris Poll: 70% of Gen Z Healthcare Workers Look to Leave as U.S. Faces Critical Healthcare Workforce Shortage, Commissioned by Workforce Edge",
+   "summary": "HERNDON, Va., September 16, 2026--The 2026 Healthcare Workforce Barometer conducted by The Harris Poll finds that more than half of the healthcare workforce is still looking to leave.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/harris-poll-70-gen-z-110200675.html?.tsrc=rss",
+   "published_at": "2026-09-16T11:02:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "2007e6b1007bf47f",
+   "primary_source": false,
+   "cluster_id": "ecefab273d510092",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "753585a6bbe335e9",
+   "symbols": [
+    "STRA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Coursera Plunges 26% YTD: Should Investors Buy the Stock or Hold?",
+   "summary": "COUR's Udemy deal is driving major synergy gains and stronger profitability, but weak organic growth and integration costs remain key risks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/coursera-plunges-26-ytd-investors-153700852.html?.tsrc=rss",
+   "published_at": "2026-09-09T15:37:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "ffde852997c83f34",
+   "primary_source": false,
+   "cluster_id": "753585a6bbe335e9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f3fdfd59b7d12328",
+   "symbols": [
+    "APEI",
+    "STRA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "American Public Education (APEI) Down 0.8% Since Last Earnings Report: Can It Rebound?",
+   "summary": "American Public Education (APEI) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/american-public-education-apei-down-153003852.html?.tsrc=rss",
+   "published_at": "2026-09-09T15:30:03Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:18Z",
+   "fingerprint": "9f6dd019337f680f",
+   "primary_source": false,
+   "cluster_id": "f3fdfd59b7d12328",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "073b03dc1d2a65b1",
+   "symbols": [
+    "STRA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Why Is Strategic Education (STRA) Up 0.6% Since Last Earnings Report?",
+   "summary": "Strategic Education (STRA) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-strategic-education-stra-0-153031431.html?.tsrc=rss",
+   "published_at": "2026-08-28T15:30:31Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "3a9fe5e683e00f56",
+   "primary_source": false,
+   "cluster_id": "073b03dc1d2a65b1",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fe01f7750ea8ddf1",
+   "symbols": [
+    "STRA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Reasons to Sell STRA and 1 Stock to Buy Instead",
+   "summary": "Since February 2026, Strategic Education has been in a holding pattern, posting a small return of 3.6% while floating around $85.27. The stock also fell short of the S&amp;P 500’s 11.7% gain during that period.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-reasons-sell-stra-1-205707330.html?.tsrc=rss",
+   "published_at": "2026-08-27T20:57:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "849a3015d905ed8d",
+   "primary_source": false,
+   "cluster_id": "fe01f7750ea8ddf1",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

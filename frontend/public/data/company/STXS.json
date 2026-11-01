@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,96 @@
    "adr20": 5.963377990998611,
    "rvol": 2.480182467616302,
    "ema10": 0.9739234328791688,
-   "ema21": 1.0447461916774101,
+   "ema21": 1.0447461916824816,
    "sma50": 1.2189999973773957,
    "sma200": 1.7094999977946281
   },
   "market_cap": 86434400.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 0.8600000143051147,
+    "change_pct": -5.494506646146946,
+    "ema20": 1.03882199673036,
+    "ema50": 1.1851196129789696,
+    "ema200": 1.6349380578847343,
+    "sma50": 1.2189999973773957,
+    "rsi14": 21.8790917662824,
+    "rsi_min5": 21.8790917662824,
+    "atr14": 0.06355437637395725,
+    "atr_pct": 7.390043641488724,
+    "rvol": 2.480182467616302,
+    "vol30": 578203.3333333334,
+    "dist_ema200_pct": -47.39861793799248,
+    "dist_52w_high_pct": 71.14093930199041,
+    "high_52w": 2.9800000190734863,
+    "macd_above_signal": false,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 1.0399999618530273,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 0.9200000166893005,
+    "day_low": 0.8100000023841858,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": false,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": false,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": false,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.3,
+    "S03": 0.3333333333333333,
+    "S04": 0.2
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 0.9200000166893005,
+    "entry_max": 0.9384000170230866,
+    "stop": 0.8246684521283647,
+    "risk_per_share": 0.09533156456093583,
+    "target_1": 1.1106631458111722,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 38.5,
    "coverage_pct": 96,
@@ -56,11 +139,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 13.1,
+   "score": 29.2,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "news_flow",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -125,12 +210,96 @@
   "adr20": 5.963377990998611,
   "rvol": 2.480182467616302,
   "ema10": 0.9739234328791688,
-  "ema21": 1.0447461916774101,
+  "ema21": 1.0447461916824816,
   "sma50": 1.2189999973773957,
   "sma200": 1.7094999977946281,
   "volatility_ann": 45.12069793199731,
   "avg_dollar_volume_20d": 651343.9429202676,
-  "move_zscore": -1.9330948538879869
+  "move_zscore": -1.9330948538879869,
+  "swing": {
+   "tech": {
+    "close": 0.8600000143051147,
+    "change_pct": -5.494506646146946,
+    "ema20": 1.03882199673036,
+    "ema50": 1.1851196129789696,
+    "ema200": 1.6349380578847343,
+    "sma50": 1.2189999973773957,
+    "rsi14": 21.8790917662824,
+    "rsi_min5": 21.8790917662824,
+    "atr14": 0.06355437637395725,
+    "atr_pct": 7.390043641488724,
+    "rvol": 2.480182467616302,
+    "vol30": 578203.3333333334,
+    "dist_ema200_pct": -47.39861793799248,
+    "dist_52w_high_pct": 71.14093930199041,
+    "high_52w": 2.9800000190734863,
+    "macd_above_signal": false,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 1.0399999618530273,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": false,
+    "day_high": 0.9200000166893005,
+    "day_low": 0.8100000023841858,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": false,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": false,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.3,
+    "S03": 0.3333333333333333,
+    "S04": 0.2
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 0.9200000166893005,
+    "entry_max": 0.9384000170230866,
+    "stop": 0.8246684521283647,
+    "risk_per_share": 0.09533156456093583,
+    "target_1": 1.1106631458111722,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 38.5,
@@ -451,11 +620,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 13.1,
+  "score": 29.2,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 74.0,
@@ -473,26 +642,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 5,
+    "independent": 5,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "news_flow",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -510,7 +681,451 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "54b22843348708ee",
+   "symbols": [
+    "STXS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Canon Medical and Stereotaxis Collaborate to Advance Robotic Electrophysiology",
+   "summary": "Collaboration brings together Canon’s Alphenix interventional fluoroscopy system and Stereotaxis’ GenesisX robotic technologyTechnologies will be presented at TCT 2026 in the Canon booth TUSTIN, Calif. and ST. LOUIS, Oct. 30, 2026 (GLOBE NEWSWIRE) -- Canon Medical Systems USA, a ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/canon-medical-stereotaxis-collaborate-advance-120300612.html?.tsrc=rss",
+   "published_at": "2026-10-30T12:03:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:17Z",
+   "fingerprint": "8777fce048691bb5",
+   "primary_source": false,
+   "cluster_id": "54b22843348708ee",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Canon Medical und Stereotaxis arbeiten zusammen, um die Robotik-Elektrophysiologie voranzutreiben"
+  },
+  {
+   "id": "ab1c064d1b40f3f0",
+   "symbols": [
+    "STXS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Stereotaxis Announces First Robotic Magnetic Navigation System in Latvia",
+   "summary": "Pauls Stradiņš Clinical University Hospital installs Genesis Robotic Magnetic Navigation System, establishing the first robotic program for the treatment of cardiac arrhythmia in LatviaFirst procedures successfully treated patients with a broad range of arrhythmia ST. LOUIS, Oct.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/stereotaxis-announces-first-robotic-magnetic-120400716.html?.tsrc=rss",
+   "published_at": "2026-10-22T12:04:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:17Z",
+   "fingerprint": "3fd0de9d797f19e7",
+   "primary_source": false,
+   "cluster_id": "ab1c064d1b40f3f0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ea4d468a7c050ea3",
+   "symbols": [
+    "STXS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Stereotaxis to Report Third Quarter 2026 Financial Results on November 10, 2026",
+   "summary": "ST. LOUIS, Oct. 20, 2026 (GLOBE NEWSWIRE) -- Stereotaxis, Inc. (NYSE: STXS), a pioneer and global leader in surgical robotics for minimally invasive endovascular intervention, today announced that it will release financial results for its 2026 third quarter on Tuesday, November 1",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/stereotaxis-report-third-quarter-2026-114000119.html?.tsrc=rss",
+   "published_at": "2026-10-20T11:40:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:17Z",
+   "fingerprint": "ebca660d3ede15a8",
+   "primary_source": false,
+   "cluster_id": "ea4d468a7c050ea3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d52d43b4da35a17a",
+   "symbols": [
+    "STXS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Global Electrophysiology Devices Market Size, Share, Growth, and Forecast 2026-2035 | Pulsed Field Ablation and 3D Mapping Fuel 12.40% CAGR to USD 30.16 Billion by 2035",
+   "summary": "Pulsed field ablation, advanced 3D mapping and AI diagnostics drive adoption, while North America leads and catheter demand rises with minimally invasive procedures.Dublin, Oct. 15, 2026 (GLOBE NEWSWIRE) -- \"Electrophysiology Devices Market Size, Share and Outlook - Growth Analys",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/global-electrophysiology-devices-market-size-112200900.html?.tsrc=rss",
+   "published_at": "2026-10-15T11:22:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:17Z",
+   "fingerprint": "69c26e042f4b33bd",
+   "primary_source": false,
+   "cluster_id": "d52d43b4da35a17a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d2c9867dedf38624",
+   "symbols": [
+    "STXS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ISRG Is Expanding Beyond Surgery: Here's Why the GI Opportunity Matters",
+   "summary": "Intuitive Surgical is targeting GI care with a next-generation robotic endoscope submitted to the FDA, opening a potential growth avenue beyond surgery.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/isrg-expanding-beyond-surgery-heres-164000201.html?.tsrc=rss",
+   "published_at": "2026-10-13T16:40:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:17Z",
+   "fingerprint": "bbd8f1de39164737",
+   "primary_source": false,
+   "cluster_id": "d2c9867dedf38624",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "777513363cae523a",
+   "symbols": [
+    "STXS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Stereotaxis Emerging Digital, AI and Automation Capabilities to be Featured at Heart Rhythm Society’s HRX 2026",
+   "summary": "New digital technologies, including Synchrony and SynX, will be featured at HRXStereotaxis CEO to join main-stage panel on Autonomous EP Systems ST. LOUIS, Sept. 16, 2026 (GLOBE NEWSWIRE) -- Stereotaxis (NYSE: STXS), a pioneer and global leader in surgical robotics for minimally ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/stereotaxis-emerging-digital-ai-automation-115900911.html?.tsrc=rss",
+   "published_at": "2026-09-16T11:59:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:17Z",
+   "fingerprint": "bad83147a9883870",
+   "primary_source": false,
+   "cluster_id": "777513363cae523a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7373b8ff98c15c9b",
+   "symbols": [
+    "STXS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can AI Keep ISRG Ahead of Rising Robotic Surgery Competition?",
+   "summary": "ISRG is using AI, software, data and advanced instruments to strengthen da Vinci 5 and stay ahead as robotic surgery competition intensifies.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/ai-keep-isrg-ahead-rising-184500250.html?.tsrc=rss",
+   "published_at": "2026-09-14T18:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:17Z",
+   "fingerprint": "ef8060a644ef9c7e",
+   "primary_source": false,
+   "cluster_id": "7373b8ff98c15c9b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "990985317d1c0da3",
+   "symbols": [
+    "STXS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "University of Szeged Celebrates Strongest First Month of Robotic Cardiology Program",
+   "summary": "University of Szeged installed Hungary’s first Robotic Magnetic Navigation system in JulyOver 70 patients with all forms of arrhythmia treated robotically to date, a record pace of use globallyRobotics enabled successful treatment of patients with multiple previously failed ablat",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/university-szeged-celebrates-strongest-first-115600268.html?.tsrc=rss",
+   "published_at": "2026-09-03T11:56:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:17Z",
+   "fingerprint": "b44f3b721d26af76",
+   "primary_source": false,
+   "cluster_id": "990985317d1c0da3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0b569d3aab8cb1c8",
+   "symbols": [
+    "STXS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Stereotaxis (STXS) Q2 2026 Earnings Call Transcript",
+   "summary": "MAGiC catheter adoption accelerates with 12 U.S. sites now performing procedures.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/18/stereotaxis-stxs-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-18T22:44:14Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:17Z",
+   "fingerprint": "bbbc5d0936bfc563",
+   "primary_source": false,
+   "cluster_id": "0b569d3aab8cb1c8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "53b5460bf1b6fb33",
+   "symbols": [
+    "STXS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ISRG's US Procedure Growth Slows: Is ACA Headwind a Temporary Concern?",
+   "summary": "ISRG's US procedure growth slows in Q2, but ACA-related care deferrals may prove temporary as underlying demand and da Vinci 5 adoption remain strong.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/isrgs-us-procedure-growth-slows-183300794.html?.tsrc=rss",
+   "published_at": "2026-08-12T18:33:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:17Z",
+   "fingerprint": "e4bbc930c2f34820",
+   "primary_source": false,
+   "cluster_id": "53b5460bf1b6fb33",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "913a328999d6ca2e",
+   "symbols": [
+    "STXS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Stereotaxis, Inc. Q2 2026 Earnings Call Summary",
+   "summary": "Moby summary of Stereotaxis, Inc.'s Q2 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-stereotaxis-inc-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-08-12T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:17Z",
+   "fingerprint": "5510c9db29f3db04",
+   "primary_source": false,
+   "cluster_id": "913a328999d6ca2e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b4254c88e28d5c35",
+   "symbols": [
+    "STXS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Stereotaxis Q2 Earnings Call Highlights",
+   "summary": "Stereotaxis (NYSEAMERICAN:STXS) reported second-quarter 2026 revenue of $7.7 million, as growth in sales of its robotic catheter portfolio helped lift recurring revenue to a multiyear high despite lower system revenue and continued supply constraints. Revenue declined from the pr",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/stereotaxis-q2-earnings-call-highlights-2026-08-11/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-12T03:04:15Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:17Z",
+   "fingerprint": "551b371b21b7e963",
+   "primary_source": false,
+   "cluster_id": "b4254c88e28d5c35",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e71c441480a885b6",
+   "symbols": [
+    "STXS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Stereotaxis Inc. (STXS) Reports Q2 Loss, Lags Revenue Estimates",
+   "summary": "Stereotaxis (STXS) delivered earnings and revenue surprises of -66.67% and -19.26%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/stereotaxis-inc-stxs-reports-q2-214505804.html?.tsrc=rss",
+   "published_at": "2026-08-11T21:45:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:17Z",
+   "fingerprint": "fe759915dbc4143f",
+   "primary_source": false,
+   "cluster_id": "e71c441480a885b6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5ea68a35f9c96d2d",
+   "symbols": [
+    "STXS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Stereotaxis Reports 2026 Second Quarter Financial Results & Business Updates",
+   "summary": "Robotic catheter revenue surpasses $1M in the quarter, growing 270% sequentiallyFirst GenesisX robotic system purchase by US hospital to be installed this fallMultiple Synchrony digital operating room systems sold and installed following FDA clearance in AprilCompleted previously",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/stereotaxis-reports-2026-second-quarter-200100690.html?.tsrc=rss",
+   "published_at": "2026-08-11T20:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:17Z",
+   "fingerprint": "4b4d121a4e5055e9",
+   "primary_source": false,
+   "cluster_id": "5ea68a35f9c96d2d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c43354efa415fe5c",
+   "symbols": [
+    "STXS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Teleflex (TFX) Surpasses Q2 Earnings and Revenue Estimates",
+   "summary": "Teleflex (TFX) delivered earnings and revenue surprises of +37.50% and +1.89%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/teleflex-tfx-surpasses-q2-earnings-122011930.html?.tsrc=rss",
+   "published_at": "2026-08-06T12:20:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:17Z",
+   "fingerprint": "cf89c27d1aaa2858",
+   "primary_source": false,
+   "cluster_id": "c43354efa415fe5c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d71a3b76354b7b63",
+   "symbols": [
+    "SIBN",
+    "STXS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Si-Bone (SIBN) Reports Q2 Loss, Tops Revenue Estimates",
+   "summary": "Si-Bone (SIBN) delivered earnings and revenue surprises of +40.00% and +1.98%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/si-bone-sibn-reports-q2-224508501.html?.tsrc=rss",
+   "published_at": "2026-08-03T22:45:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:28Z",
+   "fingerprint": "7b21d1ea730486f0",
+   "primary_source": false,
+   "cluster_id": "d71a3b76354b7b63",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2fb553b57d52b9a7",
+   "symbols": [
+    "MOBI",
+    "STXS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Mobia Medical Appoints Myriam Curet, M.D., to its Board of Directors",
+   "summary": "AUSTIN, Texas, Aug. 03, 2026 (GLOBE NEWSWIRE) -- Mobia Medical, Inc. (Nasdaq: MOBI), a commercial-stage medical device company redefining stroke recovery for survivors living with life-altering motor impairments, today announced the appointment of Myriam Curet, M.D., to the Board",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/mobia-medical-appoints-myriam-curet-200500073.html?.tsrc=rss",
+   "published_at": "2026-08-03T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:09:00Z",
+   "fingerprint": "9f96dd0519b634c7",
+   "primary_source": false,
+   "cluster_id": "2fb553b57d52b9a7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8f4fa1b376a57eee",
+   "symbols": [
+    "STXS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Integer (ITGR) Surges 20.2%: Is This an Indication of Further Gains?",
+   "summary": "Integer (ITGR) saw its shares surge in the last session with trading volume being higher than average. The latest trend in earnings estimate revisions may not translate into further price increase in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/integer-itgr-surges-20-2-092000848.html?.tsrc=rss",
+   "published_at": "2026-08-03T09:20:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:17Z",
+   "fingerprint": "7ece2f335627023d",
+   "primary_source": false,
+   "cluster_id": "8f4fa1b376a57eee",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9dddd61a1bbbac32",
+   "symbols": [
+    "STXS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Veracyte (VCYT) Q2 Earnings and Revenues Surpass Estimates",
+   "summary": "Veracyte (VCYT) delivered earnings and revenue surprises of +25.58% and +4.13%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/veracyte-vcyt-q2-earnings-revenues-220016678.html?.tsrc=rss",
+   "published_at": "2026-07-30T22:00:16Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:17Z",
+   "fingerprint": "4ecc445c55e0e874",
+   "primary_source": false,
+   "cluster_id": "9dddd61a1bbbac32",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "667556c9ebdef1ba",
+   "symbols": [
+    "STXS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Stereotaxis to Report Second Quarter 2026 Financial Results on August 11, 2026",
+   "summary": "ST. LOUIS, July 21, 2026 (GLOBE NEWSWIRE) -- Stereotaxis, Inc. (NYSE: STXS), a pioneer and global leader in surgical robotics for minimally invasive endovascular intervention, today announced that it will release financial results for its 2026 second quarter on Tuesday, August 11",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/stereotaxis-report-second-quarter-2026-130000720.html?.tsrc=rss",
+   "published_at": "2026-07-21T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:17Z",
+   "fingerprint": "4c96ac384e121e25",
+   "primary_source": false,
+   "cluster_id": "667556c9ebdef1ba",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

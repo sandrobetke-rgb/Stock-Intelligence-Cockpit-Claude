@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,96 @@
    "adr20": 6.230593227266973,
    "rvol": 1.7371668927894244,
    "ema10": 248.01719656387496,
-   "ema21": 257.4503739824589,
+   "ema21": 257.45037398143927,
    "sma50": 256.61999969482423,
    "sma200": 188.7607498931885
   },
   "market_cap": 31487526912.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 205.02999877929688,
+    "change_pct": -15.241833835252262,
+    "ema20": 257.08258748552447,
+    "ema50": 253.40311647852073,
+    "ema200": 203.26915072577805,
+    "sma50": 256.61999969482423,
+    "rsi14": 30.22219314612485,
+    "rsi_min5": 30.22219314612485,
+    "atr14": 18.236760926113984,
+    "atr_pct": 8.894679332142424,
+    "rvol": 1.7371668927894244,
+    "vol30": 4102233.3333333335,
+    "dist_ema200_pct": 0.8662642841924972,
+    "dist_52w_high_pct": 33.51815731613925,
+    "high_52w": 308.3999938964844,
+    "macd_above_signal": false,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 293.656005859375,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": true,
+    "day_high": 206.90499877929688,
+    "day_low": 180.0,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": true,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": true,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": true,
+     "Kurs > 10": true,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": false,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.8,
+    "S03": 0.3333333333333333,
+    "S04": 0.2
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": true
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 206.90499877929688,
+    "entry_max": 211.0430987548828,
+    "stop": 179.5498573901259,
+    "risk_per_share": 27.355141389170967,
+    "target_1": 261.6152815576388,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 65.5,
    "coverage_pct": 96,
@@ -125,12 +208,96 @@
   "adr20": 6.230593227266973,
   "rvol": 1.7371668927894244,
   "ema10": 248.01719656387496,
-  "ema21": 257.4503739824589,
+  "ema21": 257.45037398143927,
   "sma50": 256.61999969482423,
   "sma200": 188.7607498931885,
   "volatility_ann": 82.18200125735949,
   "avg_dollar_volume_20d": 1206669368.3940125,
-  "move_zscore": -2.944155744737554
+  "move_zscore": -2.944155744737554,
+  "swing": {
+   "tech": {
+    "close": 205.02999877929688,
+    "change_pct": -15.241833835252262,
+    "ema20": 257.08258748552447,
+    "ema50": 253.40311647852073,
+    "ema200": 203.26915072577805,
+    "sma50": 256.61999969482423,
+    "rsi14": 30.22219314612485,
+    "rsi_min5": 30.22219314612485,
+    "atr14": 18.236760926113984,
+    "atr_pct": 8.894679332142424,
+    "rvol": 1.7371668927894244,
+    "vol30": 4102233.3333333335,
+    "dist_ema200_pct": 0.8662642841924972,
+    "dist_52w_high_pct": 33.51815731613925,
+    "high_52w": 308.3999938964844,
+    "macd_above_signal": false,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 293.656005859375,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": true,
+    "day_high": 206.90499877929688,
+    "day_low": 180.0,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": true,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": true,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": true,
+     "Kurs > 10": true,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": false,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.8,
+    "S03": 0.3333333333333333,
+    "S04": 0.2
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": true
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 206.90499877929688,
+    "entry_max": 211.0430987548828,
+    "stop": 179.5498573901259,
+    "risk_per_share": 27.355141389170967,
+    "target_1": 261.6152815576388,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 65.5,
@@ -835,8 +1002,7 @@
    "cluster_id": "d3cb46b2c38a99ab",
    "independence": "original",
    "verification": "Unverified",
-   "feed": "yahoo_rss",
-   "title_de": "Twilio (TWLO) Q3 Einnahmen und Einnahmen schlagen Schätzungen"
+   "feed": "yahoo_rss"
   },
   {
    "id": "2444776e01b5daf2",
@@ -858,8 +1024,7 @@
    "cluster_id": "2444776e01b5daf2",
    "independence": "original",
    "verification": "Unverified",
-   "feed": "yahoo_rss",
-   "title_de": "Twilio-Ergebnisse nach Schätzungen. Aktien fallen auf verlangsamtes organisches Wachstum."
+   "feed": "yahoo_rss"
   },
   {
    "id": "c5102ca121c5e3d3",
@@ -881,8 +1046,7 @@
    "cluster_id": "c5102ca121c5e3d3",
    "independence": "original",
    "verification": "Unverified",
-   "feed": "yahoo_rss",
-   "title_de": "Twilio (NYSE:TWLO) erzielt im dritten Quartal 2026 bessere Verkäufe als erwartet, aber die Aktie sinkt um 14,3%"
+   "feed": "yahoo_rss"
   },
   {
    "id": "98ce2a307340d138",

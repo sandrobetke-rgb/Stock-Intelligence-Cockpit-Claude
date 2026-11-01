@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,96 @@
    "adr20": 2.428322188532354,
    "rvol": 0.9370429105913871,
    "ema10": 80.56897606534955,
-   "ema21": 80.35525411727282,
+   "ema21": 80.35525411728305,
    "sma50": 82.98755218505859,
    "sma200": 79.93534187316895
   },
   "market_cap": 1918752640.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 83.44000244140625,
+    "change_pct": 2.3427004669530183,
+    "ema20": 80.31847356914345,
+    "ema50": 81.91443934221974,
+    "ema200": 78.86683183822184,
+    "sma50": 82.98755218505859,
+    "rsi14": 59.32520009984466,
+    "rsi_min5": 47.40747670966376,
+    "atr14": 2.1003904133680624,
+    "atr_pct": 2.5172463469701016,
+    "rvol": 0.9370429105913871,
+    "vol30": 321860.0,
+    "dist_ema200_pct": 5.798598088186524,
+    "dist_52w_high_pct": 15.317677545305408,
+    "high_52w": 98.53296416858078,
+    "macd_above_signal": true,
+    "obv_rising": true,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 80.69000244140625,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": true,
+    "day_high": 84.2300033569336,
+    "day_low": 81.63999938964844,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": false,
+     "RSI 45–62": true,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": true,
+     "Tag positiv": true
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": false
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": true,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.0,
+    "S02": 0.6,
+    "S03": 0.3333333333333333,
+    "S04": 0.4
+   },
+   "filter": {
+    "Tag grün": true,
+    "RelVol ≥ 1.2": false,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": true,
+    "über EMA 200": true
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 84.2300033569336,
+    "entry_max": 85.91460342407227,
+    "stop": 81.0794177368815,
+    "risk_per_share": 3.150585620052098,
+    "target_1": 90.53117459703779,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 39.6,
    "coverage_pct": 100,
@@ -55,11 +138,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 7.3,
+   "score": 23.5,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -124,12 +209,96 @@
   "adr20": 2.428322188532354,
   "rvol": 0.9370429105913871,
   "ema10": 80.56897606534955,
-  "ema21": 80.35525411727282,
+  "ema21": 80.35525411728305,
   "sma50": 82.98755218505859,
   "sma200": 79.93534187316895,
   "volatility_ann": 26.831019513848542,
   "avg_dollar_volume_20d": 25243656.177101135,
-  "move_zscore": 1.3860530708510963
+  "move_zscore": 1.3860530708510963,
+  "swing": {
+   "tech": {
+    "close": 83.44000244140625,
+    "change_pct": 2.3427004669530183,
+    "ema20": 80.31847356914345,
+    "ema50": 81.91443934221974,
+    "ema200": 78.86683183822184,
+    "sma50": 82.98755218505859,
+    "rsi14": 59.32520009984466,
+    "rsi_min5": 47.40747670966376,
+    "atr14": 2.1003904133680624,
+    "atr_pct": 2.5172463469701016,
+    "rvol": 0.9370429105913871,
+    "vol30": 321860.0,
+    "dist_ema200_pct": 5.798598088186524,
+    "dist_52w_high_pct": 15.317677545305408,
+    "high_52w": 98.53296416858078,
+    "macd_above_signal": true,
+    "obv_rising": true,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 80.69000244140625,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": true,
+    "day_high": 84.2300033569336,
+    "day_low": 81.63999938964844,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": false,
+     "RSI 45–62": true,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": true,
+     "Tag positiv": true
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": false
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": true,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.0,
+    "S02": 0.6,
+    "S03": 0.3333333333333333,
+    "S04": 0.4
+   },
+   "filter": {
+    "Tag grün": true,
+    "RelVol ≥ 1.2": false,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": true,
+    "über EMA 200": true
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 84.2300033569336,
+    "entry_max": 85.91460342407227,
+    "stop": 81.0794177368815,
+    "risk_per_share": 3.150585620052098,
+    "target_1": 90.53117459703779,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 39.6,
@@ -449,11 +618,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 7.3,
+  "score": 23.5,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 41.6,
@@ -471,26 +640,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 7,
+    "independent": 7,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -508,7 +679,390 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "08521d9791a8c224",
+   "symbols": [
+    "SPB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Spectrum Brands Holdings to Report Fiscal 2026 Fourth Quarter Financial Results and Hold Conference Call and Webcast on November 12, 2026",
+   "summary": "MIDDLETON, Wis., October 29, 2026--Spectrum Brands Holdings, Inc. (NYSE: SPB; \"Spectrum Brands\"), a leading global branded consumer products and home essentials company focused on driving innovation and providing exceptional customer service, announced today it will release its f",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/spectrum-brands-holdings-report-fiscal-103000516.html?.tsrc=rss",
+   "published_at": "2026-10-29T10:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:53Z",
+   "fingerprint": "a1400e6b8068f486",
+   "primary_source": false,
+   "cluster_id": "08521d9791a8c224",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "10267dfcbef7c4d3",
+   "symbols": [
+    "SPB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Spectrum Brands undervalued as Jefferies sees 26% upside",
+   "summary": "Jefferies has resumed coverage of Spectrum Brands Holdings, Inc. (NYSE:SPB), the US consumer products company, with a Buy rating and a $97 price target, implying 26% upside from current levels. The broker believes investors are focusing too heavily on near-term consumer weakness ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "proactiveinvestors.com",
+   "url": "https://www.proactiveinvestors.com/companies/news/1100194/spectrum-brands-undervalued-as-jefferies-sees-26-upside-1100194.html?.tsrc=rss",
+   "published_at": "2026-10-15T18:26:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:53Z",
+   "fingerprint": "6eb1260c327afccd",
+   "primary_source": false,
+   "cluster_id": "10267dfcbef7c4d3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "69aad42f63b85cd3",
+   "symbols": [
+    "SPB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Spectrum Brands' Earnings Outlook Seen Undervalued, UBS Says",
+   "summary": "Spectrum Brands Holdings' (SPB) improving earnings power is being overlooked, as better trends in gl",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/spectrum-brands-apos-earnings-outlook-165722913.html?.tsrc=rss",
+   "published_at": "2026-10-15T16:57:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:53Z",
+   "fingerprint": "2806607713d81073",
+   "primary_source": false,
+   "cluster_id": "69aad42f63b85cd3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d9ce47abb44c3181",
+   "symbols": [
+    "SPB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Spectrum Brands' Innovation and Operational Initiatives Aid Growth",
+   "summary": "SPB's Q3 sales growth reflects gains across all businesses, with innovation, digital commerce and efficiency efforts driving its strategy.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/spectrum-brands-innovation-operational-initiatives-175600626.html?.tsrc=rss",
+   "published_at": "2026-10-14T17:56:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:53Z",
+   "fingerprint": "b4f03ab9d2fb7c77",
+   "primary_source": false,
+   "cluster_id": "d9ce47abb44c3181",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b1a5b1a442ce6b27",
+   "symbols": [
+    "SPB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Western Union Yields Nearly 15%. These 6 Dividend Stocks Could Be Headed for a Painful Cut",
+   "summary": "A 14.9% yield sounds like a windfall until you see what is propping it up. Six dividend stocks are flashing the same warning signs, and the companies shedding their best businesses may be the most dangerous of all.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/09/western-union-yields-nearly-15-these-6-dividend-stocks-could-be-headed-for-a-painful-cut/?.tsrc=rss",
+   "published_at": "2026-10-09T15:45:48Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:53Z",
+   "fingerprint": "ba5577db9161deab",
+   "primary_source": false,
+   "cluster_id": "b1a5b1a442ce6b27",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a36b207a95eeb5b8",
+   "symbols": [
+    "CWST",
+    "CXW",
+    "SPB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "2 of Wall Street’s Favorite Stocks for Long-Term Investors and 1 We Question",
+   "summary": "Wall Street has set ambitious price targets for the stocks in this article. While this suggests attractive upside potential, it’s important to remain skeptical because analysts face institutional pressures that can sometimes lead to overly optimistic forecasts.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/2-wall-street-favorite-stocks-102710534.html?.tsrc=rss",
+   "published_at": "2026-10-09T10:27:10Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:48Z",
+   "fingerprint": "fa888f4d936fb64f",
+   "primary_source": false,
+   "cluster_id": "a36b207a95eeb5b8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "51d4dc8bb7d1a6ac",
+   "symbols": [
+    "BLMN",
+    "SPB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Small-Cap Stocks We Keep Off Our Radar",
+   "summary": "Small-cap stocks can be incredibly lucrative investments because their lack of analyst coverage leads to frequent mispricings. However, these businesses (and their stock prices) often stay small because their subscale operations make it harder to expand their competitive moats.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-small-cap-stocks-keep-130409008.html?.tsrc=rss",
+   "published_at": "2026-10-08T13:04:09Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:28:40Z",
+   "fingerprint": "40967d7a6def93e1",
+   "primary_source": false,
+   "cluster_id": "51d4dc8bb7d1a6ac",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e04547780084b72c",
+   "symbols": [
+    "SPB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Reasons SPB is Risky and 1 Stock to Buy Instead",
+   "summary": "Although Spectrum Brands (currently trading at $79.54 per share) has gained 7.1% over the last six months, it has trailed the S&amp;P 500’s 16.6% return during that period. This might have investors contemplating their next move.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-reasons-spb-risky-1-162907155.html?.tsrc=rss",
+   "published_at": "2026-10-01T16:29:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:53Z",
+   "fingerprint": "c6f84f309f71f275",
+   "primary_source": false,
+   "cluster_id": "e04547780084b72c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f4fc259a556e8a22",
+   "symbols": [
+    "SPB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Tariff Relief Could Lift Spectrum Brands Stock And Consumer Goods Importers",
+   "summary": "Tariffs are finally moving down instead of up, and that flips the script for a handful of China US consumer goods importers and retailers that live or die on cross border pricing. Cheaper duties can reshape what ends up on US shelves and in Chinese households, shifting costs, vol",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/economy/policy/articles/tariff-relief-could-lift-spectrum-120950042.html?.tsrc=rss",
+   "published_at": "2026-09-29T12:09:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:53Z",
+   "fingerprint": "02a2d23bb8158ef5",
+   "primary_source": false,
+   "cluster_id": "f4fc259a556e8a22",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "08b537e16e64dc96",
+   "symbols": [
+    "IPAR",
+    "SPB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "CTAS Q1 Earnings & Revenues Beat Estimates on Margin Gains",
+   "summary": "Cintas tops Q1 earnings and revenue estimates as record margins and strong organic growth drive results, while higher fiscal 2027 guidance signals continued momentum.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ctas-q1-earnings-revenues-beat-132300322.html?.tsrc=rss",
+   "published_at": "2026-09-24T13:23:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:20Z",
+   "fingerprint": "39f4fb1107d5a66e",
+   "primary_source": false,
+   "cluster_id": "08b537e16e64dc96",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "571e977600e84983",
+   "symbols": [
+    "IPAR",
+    "SPB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cintas Gears Up to Report Q1 Earnings: Here's What to Expect",
+   "summary": "CTAS heads into Q1 fiscal 2027 earnings with revenue and EPS growth expected as customer retention, safety demand and acquisitions drive key segments.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cintas-gears-report-q1-earnings-151800875.html?.tsrc=rss",
+   "published_at": "2026-09-21T15:18:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:20Z",
+   "fingerprint": "e95a3002f5279d5b",
+   "primary_source": false,
+   "cluster_id": "571e977600e84983",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0615be29246093fe",
+   "symbols": [
+    "SPB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Cash-Producing Stocks That Concern Us",
+   "summary": "Generating cash is essential for any business, but not all cash-rich companies are great investments. Some produce plenty of cash but fail to allocate it effectively, leading to missed opportunities.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-cash-producing-stocks-concern-110620807.html?.tsrc=rss",
+   "published_at": "2026-09-01T11:06:20Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:53Z",
+   "fingerprint": "454ee9fcadd9f1dc",
+   "primary_source": false,
+   "cluster_id": "0615be29246093fe",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b10b4d64183f957f",
+   "symbols": [
+    "HBB",
+    "SPB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Hamilton Beach Brand’s Core Recovery, Premiumization & Adjacent Growth – Initiation Report",
+   "summary": "Download the Complete Report Here Hamilton Beach Brands (HBB) Core Recovery, Premiumization and Adjacent Growth Strengthen HBB’s Growth Outlook and Re-Rating Potential Scaled asset-light appliance platform extending into commercial and health markets. HBB designs, markets and dis",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/hamilton-beach-brand-core-recovery-210954378.html?.tsrc=rss",
+   "published_at": "2026-08-27T21:09:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:10:02Z",
+   "fingerprint": "37626ea51b88d817",
+   "primary_source": false,
+   "cluster_id": "b90fd1811b0691b7",
+   "independence": "copy",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dad93020e95f4f78",
+   "symbols": [
+    "SPB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Q2 Household Products Earnings: Spectrum Brands (NYSE:SPB) Earns Top Marks",
+   "summary": "As the Q2 earnings season wraps, let’s dig into this quarter’s best and worst performers in the household products industry, including Spectrum Brands (NYSE:SPB) and its peers.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/q2-household-products-earnings-spectrum-010900308.html?.tsrc=rss",
+   "published_at": "2026-08-17T01:09:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:53Z",
+   "fingerprint": "fee60709ee49b566",
+   "primary_source": false,
+   "cluster_id": "dad93020e95f4f78",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "57108ba42e7c1f38",
+   "symbols": [
+    "SPB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Spectrum Brands (SPB) Q3 2026 Earnings Call Transcript",
+   "summary": "Home & Garden surged 19% while management raised full-year EBITDA guidance.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/14/spectrum-brands-spb-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-14T13:14:21Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:53Z",
+   "fingerprint": "ee1688e4f22c4353",
+   "primary_source": false,
+   "cluster_id": "57108ba42e7c1f38",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f38e4d196fa44c90",
+   "symbols": [
+    "SPB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Spectrum Brands Holdings (SPB) Overvalued After A 62% Year?",
+   "summary": "Spectrum Brands Holdings has delivered a strong 61.6% return over the past year, yet the stock currently screens as relatively expensive on broader valuation checks. That combination of solid recent gains and a low overall value score raises questions about how much upside is alr",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/spectrum-brands-holdings-spb-overvalued-081134384.html?.tsrc=rss",
+   "published_at": "2026-08-11T08:11:34Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:53Z",
+   "fingerprint": "404a6067a3c05a81",
+   "primary_source": false,
+   "cluster_id": "f38e4d196fa44c90",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "44a52b57e931fc15",
+   "symbols": [
+    "CSQR",
+    "KMTS",
+    "SPB"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Apple downgraded, HPE upgraded: Wall Street's top analyst calls",
+   "summary": "Apple downgraded, HPE upgraded: Wall Street's top analyst calls",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/apple-downgraded-hpe-upgraded-wall-133934661.html?.tsrc=rss",
+   "published_at": "2026-08-10T13:39:34Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:26Z",
+   "fingerprint": "15bc878ae1b173dd",
+   "primary_source": false,
+   "cluster_id": "44a52b57e931fc15",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

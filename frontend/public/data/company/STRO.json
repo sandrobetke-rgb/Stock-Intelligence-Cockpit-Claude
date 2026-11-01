@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,96 @@
    "adr20": 10.197649171612923,
    "rvol": 0.33946762150609266,
    "ema10": 9.886082405386796,
-   "ema21": 11.447110222539761,
+   "ema21": 11.447110222496288,
    "sma50": 15.386800079345702,
    "sma200": 23.026900033950806
   },
   "market_cap": 150888656.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 9.100000381469727,
+    "change_pct": -0.4376363276862416,
+    "ema20": 11.309121389537403,
+    "ema50": 14.955480294335622,
+    "ema200": 19.820841060766014,
+    "sma50": 15.386800079345702,
+    "rsi14": 25.170319915350007,
+    "rsi_min5": 21.580414024242984,
+    "atr14": 1.0481719553228548,
+    "atr_pct": 11.518372652568683,
+    "rvol": 0.33946762150609266,
+    "vol30": 314406.6666666667,
+    "dist_ema200_pct": -54.08872734728423,
+    "dist_52w_high_pct": 79.24743284349198,
+    "high_52w": 43.849998474121094,
+    "macd_above_signal": false,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 11.800000190734863,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": true,
+    "day_high": 9.399999618530273,
+    "day_low": 8.800000190734863,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": false,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": false,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": false,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": false,
+     "Volumen über Schnitt": false
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.2,
+    "S03": 0.0,
+    "S04": 0.2
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": false,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 9.399999618530273,
+    "entry_max": 9.587999610900878,
+    "stop": 7.827741685545991,
+    "risk_per_share": 1.5722579329842823,
+    "target_1": 12.544515484498838,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 29.3,
    "coverage_pct": 88,
@@ -125,12 +208,96 @@
   "adr20": 10.197649171612923,
   "rvol": 0.33946762150609266,
   "ema10": 9.886082405386796,
-  "ema21": 11.447110222539761,
+  "ema21": 11.447110222496288,
   "sma50": 15.386800079345702,
   "sma200": 23.026900033950806,
   "volatility_ann": 71.46264895616426,
   "avg_dollar_volume_20d": 3883553.566713333,
-  "move_zscore": -0.09721527858187433
+  "move_zscore": -0.09721527858187433,
+  "swing": {
+   "tech": {
+    "close": 9.100000381469727,
+    "change_pct": -0.4376363276862416,
+    "ema20": 11.309121389537403,
+    "ema50": 14.955480294335622,
+    "ema200": 19.820841060766014,
+    "sma50": 15.386800079345702,
+    "rsi14": 25.170319915350007,
+    "rsi_min5": 21.580414024242984,
+    "atr14": 1.0481719553228548,
+    "atr_pct": 11.518372652568683,
+    "rvol": 0.33946762150609266,
+    "vol30": 314406.6666666667,
+    "dist_ema200_pct": -54.08872734728423,
+    "dist_52w_high_pct": 79.24743284349198,
+    "high_52w": 43.849998474121094,
+    "macd_above_signal": false,
+    "obv_rising": false,
+    "xo_bull_approx": false,
+    "higher_high": false,
+    "higher_low": false,
+    "last_higher_high": 11.800000190734863,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": true,
+    "day_high": 9.399999618530273,
+    "day_low": 8.800000190734863,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": true,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": false,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": true,
+     "RSI 45–62": false,
+     "RelVol > 0,8": false,
+     "EMA 20 > SMA 50": false,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": false,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": false,
+     "MACD > Signal": false,
+     "Volumen über Schnitt": false
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": false,
+     "OBV steigend": false,
+     "Trend-Signal (EMA12>EMA25)": false,
+     "> 5 % unter 52W-Hoch": true
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.5,
+    "S02": 0.2,
+    "S03": 0.0,
+    "S04": 0.2
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": false,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": false
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 9.399999618530273,
+    "entry_max": 9.587999610900878,
+    "stop": 7.827741685545991,
+    "risk_per_share": 1.5722579329842823,
+    "target_1": 12.544515484498838,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 29.3,
@@ -482,10 +649,10 @@
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -510,7 +677,448 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "eb2d0d552b1a69ae",
+   "symbols": [
+    "STRO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Sutro Biopharma Announces First Patient Dosed in Phase 1 Trial of STRO-006, a Next-Generation ITGB6-Targeting ADC, in Advanced Solid Tumors",
+   "summary": "— STRO-006 is Sutro’s second wholly-owned ADC to enter the clinic in less than one year — — Initial clinical data expected in the second half of 2027 — SOUTH SAN FRANCISCO, Calif., Oct. 21, 2026 (GLOBE NEWSWIRE) -- Sutro Biopharma, Inc. (Sutro or the Company) (NASDAQ: STRO), a cl",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/sutro-biopharma-announces-first-patient-120000393.html?.tsrc=rss",
+   "published_at": "2026-10-21T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "1918df564615ee05",
+   "primary_source": false,
+   "cluster_id": "eb2d0d552b1a69ae",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3b3aac750462ab46",
+   "symbols": [
+    "STRO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Sutro Biopharma Announces Participation at the 17th Annual World ADC Conference",
+   "summary": "SOUTH SAN FRANCISCO, Calif., Oct. 12, 2026 (GLOBE NEWSWIRE) -- Sutro Biopharma, Inc. (Sutro or the Company) (NASDAQ: STRO), a clinical-stage oncology company pioneering site-specific and novel-format antibody drug conjugates (ADCs), today announced its participation at the 17th A",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/sutro-biopharma-announces-participation-17th-120000194.html?.tsrc=rss",
+   "published_at": "2026-10-12T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "2dfc358e65b2172c",
+   "primary_source": false,
+   "cluster_id": "3b3aac750462ab46",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cc5c2bd1ab8eb119",
+   "symbols": [
+    "STRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sutro Biopharma Appoints Lucas Donigian as Senior Vice President, Business Development",
+   "summary": "SOUTH SAN FRANCISCO, Calif., Sept. 29, 2026 (GLOBE NEWSWIRE) -- Sutro Biopharma, Inc. (Sutro or the Company) (NASDAQ: STRO), a clinical-stage oncology company pioneering site-specific and novel-format antibody drug conjugates (ADCs), today announced the appointment of Lucas Donig",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/sutro-biopharma-appoints-lucas-donigian-120000472.html?.tsrc=rss",
+   "published_at": "2026-09-29T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "edd4a62b62c200a0",
+   "primary_source": false,
+   "cluster_id": "cc5c2bd1ab8eb119",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "574df1e3fea03046",
+   "symbols": [
+    "STRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "STRO Stock Plummets 15% —  What Drove The Selloff?",
+   "summary": "H.C. Wainwright believes the selloff largely reflects an overreaction to the limited efficacy details disclosed for STRO-004 by the company.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/stro-stock-plummets-15-what-drove-the-selloff/cZo8hqaRJWA?.tsrc=rss",
+   "published_at": "2026-08-12T20:07:56Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "8fd597e7051eb5e6",
+   "primary_source": false,
+   "cluster_id": "574df1e3fea03046",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e96f24f5714ae043",
+   "symbols": [
+    "STRO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Sutro Biopharma Reports Second Quarter 2026 Financial Results and Provides Early Update on STRO-004 Phase 1 Study",
+   "summary": "– Encouraging early clinical activity including confirmed and ongoing unconfirmed partial responses with favorable tolerability, and pharmacokinetics (PK) observed in ongoing STRO-004 Phase 1 study – – Strong execution of STRO-004 STRIVE-01 study with rapid enrollment of initial ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/sutro-biopharma-reports-second-quarter-110000778.html?.tsrc=rss",
+   "published_at": "2026-08-12T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "1c5fc01dd23e5634",
+   "primary_source": false,
+   "cluster_id": "e96f24f5714ae043",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3a36256244118fdd",
+   "symbols": [
+    "STRO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Upstream Bio, Inc. (UPB) Reports Q2 Loss, Tops Revenue Estimates",
+   "summary": "Upstream Bio, Inc. (UPB) delivered earnings and revenue surprises of +6.41% and +15.37%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/upstream-bio-inc-upb-reports-123502583.html?.tsrc=rss",
+   "published_at": "2026-08-11T12:35:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "15c2cf9544901d4d",
+   "primary_source": false,
+   "cluster_id": "3a36256244118fdd",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ffea6afdc229ea3c",
+   "symbols": [
+    "STRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Here Are Friday’s Top Wall Street Analyst Research Calls: Baker Hughes, Etsy, HubSpot, Instacart, JetBlue, Roku, SpaceX, Tower Semiconductor, Trade Desk, and More",
+   "summary": "Wall Street analysts reshuffled their ratings on Friday with some bold calls that could move money fast, including a dramatic target cut on Trade Desk and a fresh Buy on SpaceX as markets brace for next week's inflation data.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/08/07/here-are-fridays-top-wall-street-analyst-research-calls-baker-hughes-etsy-hubspot-instacart-jetblue-roku-spacex-tower-semiconductor-trade-desk-and-more/?.tsrc=rss",
+   "published_at": "2026-08-07T11:51:24Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "7b25e6d1f64ecb47",
+   "primary_source": false,
+   "cluster_id": "ffea6afdc229ea3c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5815d11924de9cb3",
+   "symbols": [
+    "STRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Velan Capital Drops 140,000 Mineralys Therapeutics (MLYS) Shares Worth $4.1 Million",
+   "summary": "Mineralys Therapeutics develops novel therapies for resistant hypertension, with its lead candidate advancing through clinical trials.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/coverage/filings/2026/05/31/velan-capital-drops-140-000-mineralys-therapeutics-mlys-shares-worth-usd4-1-million/?.tsrc=rss",
+   "published_at": "2026-05-31T14:39:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "e3f26b895f564b0d",
+   "primary_source": false,
+   "cluster_id": "5815d11924de9cb3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7eb78b801f8d94d6",
+   "symbols": [
+    "STRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Barclays initiates oncology-focused biotechs with positive outlook",
+   "summary": "Investing.com -- Barclays initiated coverage of four small- and mid-cap biotechnology companies in a note to clients on Thursday, calling the stocks differentiated platform plays with the potential to deliver meaningful advances across tumor types and treatment modalities.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/barclays-initiates-oncology-focused-biotechs-152611919.html?.tsrc=rss",
+   "published_at": "2026-05-28T15:26:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "056a5062b86593d4",
+   "primary_source": false,
+   "cluster_id": "7eb78b801f8d94d6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c6c4d311804c2959",
+   "symbols": [
+    "STRO"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "News Flash: Analysts Just Made A Massive Upgrade To Their Sutro Biopharma, Inc. (NASDAQ:STRO) Forecasts",
+   "summary": "Celebrations may be in order for Sutro Biopharma, Inc. ( NASDAQ:STRO ) shareholders, with the analysts delivering a...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/news-flash-analysts-just-made-111915265.html?.tsrc=rss",
+   "published_at": "2026-05-28T11:19:15Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "000ffe3e4e3b1444",
+   "primary_source": false,
+   "cluster_id": "c6c4d311804c2959",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8008c8e935a619ec",
+   "symbols": [
+    "STRO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "US$47.10 - That's What Analysts Think Sutro Biopharma, Inc. (NASDAQ:STRO) Is Worth After These Results",
+   "summary": "Sutro Biopharma, Inc. ( NASDAQ:STRO ) just released its latest first-quarter results and things are looking bullish...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/us-47-10-thats-analysts-130232396.html?.tsrc=rss",
+   "published_at": "2026-05-17T13:02:32Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "617c1f806001878d",
+   "primary_source": false,
+   "cluster_id": "8008c8e935a619ec",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f28bafe758defaf9",
+   "symbols": [
+    "STRO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Sutro Biopharma Reports First Quarter 2026 Financial Results and Business Highlights",
+   "summary": "– On track to report initial safety, PK and early activity from Phase 1 dose-escalation trial of STRO-004, potential best-in-class Tissue Factor ADC, in mid-2026 – – Continued advancement of wholly-owned pipeline, including ITGB6 ADC STRO-006 and dual-payload PTK7 program STRO-22",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/sutro-biopharma-reports-first-quarter-200500306.html?.tsrc=rss",
+   "published_at": "2026-05-14T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "3d7bd3fa95655677",
+   "primary_source": false,
+   "cluster_id": "f28bafe758defaf9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e6b20ec0ce259059",
+   "symbols": [
+    "STRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Citizens Lifts PT on Sutro Biopharma (STRO) on Its Pipeline and Lead Program",
+   "summary": "Sutro Biopharma, Inc. (NASDAQ:STRO) is one of the best performing small cap stocks so far in 2026. Citizens lifted the price target on Sutro Biopharma, Inc. (NASDAQ:STRO) to $41 from $35 on April 23, reaffirming an Outperform rating on the shares. The firm told investors in a res",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/citizens-lifts-pt-sutro-biopharma-081732526.html?.tsrc=rss",
+   "published_at": "2026-05-01T08:17:32Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "5078accac8e5a90f",
+   "primary_source": false,
+   "cluster_id": "e6b20ec0ce259059",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2374591093b9195e",
+   "symbols": [
+    "STRO"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Meta downgraded, Qualcomm upgraded: Wall Street's top analyst calls",
+   "summary": "Meta downgraded, Qualcomm upgraded: Wall Street's top analyst calls",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/meta-downgraded-qualcomm-upgraded-wall-133640358.html?.tsrc=rss",
+   "published_at": "2026-04-30T13:36:40Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "d60fc9a95f9da675",
+   "primary_source": false,
+   "cluster_id": "2374591093b9195e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a7d4001be3dbbc89",
+   "symbols": [
+    "STRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Here is Why Sutro Biopharma (STRO) is One of the Tiny Stocks That Are On Fire Right Now",
+   "summary": "Sutro Biopharma Inc. (NASDAQ:STRO) is one of the tiny stocks that are on fire right now. On March 23, Sutro Biopharma reported its full-year 2025 financial results, highlighting a strengthened balance sheet and significant clinical milestones for its antibody-drug conjugate/ADC p",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/why-sutro-biopharma-stro-one-170028017.html?.tsrc=rss",
+   "published_at": "2026-04-29T17:00:28Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "f4975ec17d8a4140",
+   "primary_source": false,
+   "cluster_id": "a7d4001be3dbbc89",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "59799a1e619b9884",
+   "symbols": [
+    "STRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sutro Biopharma Presents Promising Preclinical Data Across its Pipeline of Next-Generation Single and Dual-Payload ADC Programs at AACR 2026",
+   "summary": "STRO-004 demonstrates robust and consistent antitumor activity across multiple TF-expressing solid tumor PDX models, with improved efficacy versus benchmark ADCs STRO-006 and STRO-227 show meaningful, dose-dependent antitumor activity across solid tumor models Presentation of TRO",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/sutro-biopharma-presents-promising-preclinical-234500726.html?.tsrc=rss",
+   "published_at": "2026-04-19T23:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "127c4bfec51a90f1",
+   "primary_source": false,
+   "cluster_id": "59799a1e619b9884",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0f80c9e3b6416c2b",
+   "symbols": [
+    "STRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sutro Biopharma (STRO) Moves 7.4% Higher: Will This Strength Last?",
+   "summary": "Sutro Biopharma (STRO) witnessed a jump in share price last session on above-average trading volume. The latest trend in earnings estimate revisions for the stock suggests that there could be more strength down the road.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/sutro-biopharma-stro-moves-7-123100785.html?.tsrc=rss",
+   "published_at": "2026-04-08T12:31:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "5a530f94786475c5",
+   "primary_source": false,
+   "cluster_id": "0f80c9e3b6416c2b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9dac68d5644a4f26",
+   "symbols": [
+    "STRO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Sutro Biopharma Reports Full Year 2025 Financial Results and Business Highlights",
+   "summary": "– Dosed three cohorts in Phase 1 trial of STRO-004, potential best-in-class Tissue Factor (TF) ADC; on track to report initial clinical data in mid-2026 – – Company announced first wholly owned dual-payload program targeting PTK7, STRO-227, accelerating IND submission to 2026 – –",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/sutro-biopharma-reports-full-2025-200500165.html?.tsrc=rss",
+   "published_at": "2026-03-23T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "10ea25b9d50f382b",
+   "primary_source": false,
+   "cluster_id": "9dac68d5644a4f26",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8d497e95c9d35c74",
+   "symbols": [
+    "STRO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Arcturus Therapeutics (ARCT) Reports Q4 Loss, Misses Revenue Estimates",
+   "summary": "Arcturus Therapeutics (ARCT) delivered earnings and revenue surprises of -11.71% and -49.91%, respectively, for the quarter ended December 2025. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/arcturus-therapeutics-arct-reports-q4-221002611.html?.tsrc=rss",
+   "published_at": "2026-03-03T22:10:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "3cd4f126b8e49c66",
+   "primary_source": false,
+   "cluster_id": "8d497e95c9d35c74",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c05e27e46a1d663b",
+   "symbols": [
+    "STRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sutro Biopharma to Participate in Upcoming Investor Conferences",
+   "summary": "SOUTH SAN FRANCISCO, Calif., Feb. 25, 2026 (GLOBE NEWSWIRE) -- Sutro Biopharma, Inc. (Sutro or the Company) (NASDAQ: STRO), a clinical-stage oncology company pioneering site-specific and novel-format antibody drug conjugates (ADCs), today announced that management will participat",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/sutro-biopharma-participate-upcoming-investor-133000064.html?.tsrc=rss",
+   "published_at": "2026-02-25T13:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:09:13Z",
+   "fingerprint": "aab21c9c4c6bb46e",
+   "primary_source": false,
+   "cluster_id": "c05e27e46a1d663b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

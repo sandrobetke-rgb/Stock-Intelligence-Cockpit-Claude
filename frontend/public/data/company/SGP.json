@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -30,7 +30,92 @@
   },
   "market_cap": 1078362880.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 32.2400016784668,
+    "change_pct": -0.8305034051249827,
+    "ema20": 28.33897215832881,
+    "ema50": 26.856069655223216,
+    "ema200": 25.09258630740655,
+    "sma50": 27.227400016784667,
+    "rsi14": 71.38635141505269,
+    "rsi_min5": 67.81374397997743,
+    "atr14": 1.712177201266309,
+    "atr_pct": 5.310723052504919,
+    "rvol": 1.0681044267877413,
+    "vol30": 96593.33333333333,
+    "dist_ema200_pct": 28.48417171310298,
+    "dist_52w_high_pct": 4.728127857288844,
+    "high_52w": 33.84000015258789,
+    "macd_above_signal": true,
+    "obv_rising": true,
+    "xo_bull_approx": true,
+    "higher_high": false,
+    "higher_low": true,
+    "last_higher_high": 27.110000610351562,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": true,
+    "day_high": 32.93000030517578,
+    "day_low": 31.75,
+    "history_ok": false
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": false,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": true,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": true,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": true,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": true,
+     "OBV steigend": true,
+     "Trend-Signal (EMA12>EMA25)": true,
+     "> 5 % unter 52W-Hoch": false
+    }
+   },
+   "hits": [
+    "S03"
+   ],
+   "near": {
+    "S01": 0.0,
+    "S02": 0.5,
+    "S03": 1.0,
+    "S04": 0.6
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": false,
+    "RSI ≤ 65": false,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": true
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 32.93000030517578,
+    "entry_max": 33.5886003112793,
+    "stop": 30.361734503276317,
+    "risk_per_share": 2.5682658018994644,
+    "target_1": 38.06653190897471,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": null,
    "coverage_pct": 28,
@@ -54,12 +139,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 1.5,
+   "score": 23.5,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "freshness",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 1,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -122,7 +209,93 @@
   "sma200": null,
   "volatility_ann": 47.77675311429136,
   "avg_dollar_volume_20d": 2378698.25091362,
-  "move_zscore": -0.2759466053747911
+  "move_zscore": -0.2759466053747911,
+  "swing": {
+   "tech": {
+    "close": 32.2400016784668,
+    "change_pct": -0.8305034051249827,
+    "ema20": 28.33897215832881,
+    "ema50": 26.856069655223216,
+    "ema200": 25.09258630740655,
+    "sma50": 27.227400016784667,
+    "rsi14": 71.38635141505269,
+    "rsi_min5": 67.81374397997743,
+    "atr14": 1.712177201266309,
+    "atr_pct": 5.310723052504919,
+    "rvol": 1.0681044267877413,
+    "vol30": 96593.33333333333,
+    "dist_ema200_pct": 28.48417171310298,
+    "dist_52w_high_pct": 4.728127857288844,
+    "high_52w": 33.84000015258789,
+    "macd_above_signal": true,
+    "obv_rising": true,
+    "xo_bull_approx": true,
+    "higher_high": false,
+    "higher_low": true,
+    "last_higher_high": 27.110000610351562,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": true,
+    "day_high": 32.93000030517578,
+    "day_low": 31.75,
+    "history_ok": false
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": false,
+     "RSI 45–62": false,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": true,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": true,
+     "Tag positiv": false
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": true,
+     "MACD > Signal": true,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": false,
+     "Higher Low": true,
+     "OBV steigend": true,
+     "Trend-Signal (EMA12>EMA25)": true,
+     "> 5 % unter 52W-Hoch": false
+    }
+   },
+   "hits": [
+    "S03"
+   ],
+   "near": {
+    "S01": 0.0,
+    "S02": 0.5,
+    "S03": 1.0,
+    "S04": 0.6
+   },
+   "filter": {
+    "Tag grün": false,
+    "RelVol ≥ 1.2": false,
+    "RSI ≤ 65": false,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": true
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 32.93000030517578,
+    "entry_max": 33.5886003112793,
+    "stop": 30.361734503276317,
+    "risk_per_share": 2.5682658018994644,
+    "target_1": 38.06653190897471,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": null,
@@ -441,11 +614,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 1.5,
+  "score": 23.5,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 43.0,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 8.3,
@@ -454,35 +627,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "freshness",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -500,7 +675,360 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "a93e3b6d25b45288",
+   "symbols": [
+    "SGP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "SpyGlass Pharma (SGP) Reports Positive 4 Year Glaucoma Trial Results",
+   "summary": "SpyGlass Pharma (NasdaqGS:SGP) reported positive 4-year first in human trial data for its Bimatoprost Drug Pad IOL System in open angle glaucoma and ocular hypertension. The lead product showed sustained efficacy over four years in treated patients according to the newly released",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/spyglass-pharma-sgp-reports-positive-141337996.html?.tsrc=rss",
+   "published_at": "2026-10-31T14:13:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:21Z",
+   "fingerprint": "eec7a294b8041ec1",
+   "primary_source": false,
+   "cluster_id": "a93e3b6d25b45288",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "23f0d0ae90eccd86",
+   "symbols": [
+    "SGP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "SpyGlass Pharma Announces Positive 4-Year Data From First-in-Human Trial of Its Innovative BIM-IOL System",
+   "summary": "Groundbreaking 4-year safety and efficacy results: 37% reduction in mean intraocular pressure (IOP) across all dose groups86% of patients remained off all topical IOP-lowering drops90% of patients maintained ≥20/25 best corrected distance visual acuity (BCDVA)No product-related a",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/spyglass-pharma-announces-positive-4-120000975.html?.tsrc=rss",
+   "published_at": "2026-10-19T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:21Z",
+   "fingerprint": "bf220d2e8c58613f",
+   "primary_source": false,
+   "cluster_id": "23f0d0ae90eccd86",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "008e145ab6a7c104",
+   "symbols": [
+    "SGP"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "SpyGlass Pharma Acquires Advanced Vision Science, Inc. (AVS), Securing Scalable Commercial IOL Supply and Accelerating Lens Portfolio Expansion Capability",
+   "summary": "SpyGlass Pharma acquires 100% of the outstanding shares of AVS, a subsidiary of Santen Pharmaceutical Co., Ltd. (Santen), the existing manufacturer of SpyGlass Pharma’s intraocular lens (IOL)Secures scalable commercial IOL manufacturing capacity for its Phase 3 lead product candi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/spyglass-pharma-acquires-advanced-vision-120000675.html?.tsrc=rss",
+   "published_at": "2026-10-01T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:21Z",
+   "fingerprint": "3edaedf187e6308b",
+   "primary_source": false,
+   "cluster_id": "008e145ab6a7c104",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b49741452fcde326",
+   "symbols": [
+    "SGP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "SpyGlass Pharma to Participate in Upcoming Investor Conferences",
+   "summary": "IRVINE, Calif., Sept. 02, 2026 (GLOBE NEWSWIRE) -- SpyGlass Pharma, Inc. (Nasdaq: SGP) (“SpyGlass Pharma” or “Company”), a late-stage biopharmaceutical company, today announced that members of the executive management team will participate in the following upcoming conferences: W",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/spyglass-pharma-participate-upcoming-investor-120000083.html?.tsrc=rss",
+   "published_at": "2026-09-02T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:21Z",
+   "fingerprint": "cd2834d2fd008de3",
+   "primary_source": false,
+   "cluster_id": "b49741452fcde326",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d75ba5732774e750",
+   "symbols": [
+    "SGP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "SpyGlass Pharma Celebrates Grand Opening of New Irvine Headquarters, Positioning Itself for First Product Launch and Custom R&D Space",
+   "summary": "SpyGlass Pharma, a biopharmaceutical clinical-stage company dedicated to transforming treatment for patients living with chronic eye conditions, today celebrated the grand opening of its new Irvine headquarters, marking a pivotal point in the company's growth.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/spyglass-pharma-celebrates-grand-opening-204000766.html?.tsrc=rss",
+   "published_at": "2026-08-27T20:40:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:21Z",
+   "fingerprint": "cf93eadebd0efd3b",
+   "primary_source": false,
+   "cluster_id": "d75ba5732774e750",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "990e42060089c0fb",
+   "symbols": [
+    "SGP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "SpyGlass Pharma Reports Second Quarter 2026 Financial Results and Provides Corporate Updates",
+   "summary": "Enrollment remains on track in the registrational Phase 3 trials of the Bimatoprost Drug Pad-IOL System (BIM-IOL System), with completion of enrollment expected in 2027.Bimatoprost-Drug Ring System (BIM-DRS) first-in-human trial is on track to start in the second half of 2026.Cas",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/spyglass-pharma-reports-second-quarter-200500276.html?.tsrc=rss",
+   "published_at": "2026-08-06T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:21Z",
+   "fingerprint": "c004b1ec04f385f7",
+   "primary_source": false,
+   "cluster_id": "db53386b3dcb3a4f",
+   "independence": "copy",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "79ba5c53686bdb4f",
+   "symbols": [
+    "SGP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "SpyGlass Pharma Appoints Shannon Treviño as General Counsel",
+   "summary": "ALISO VIEJO, Calif., June 15, 2026 (GLOBE NEWSWIRE) -- SpyGlass Pharma, Inc. (Nasdaq: SGP) (SpyGlass Pharma or Company), a late-stage biopharmaceutical company, today announced the appointment of Shannon Treviño as general counsel. Ms. Treviño brings significant business-oriented",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/spyglass-pharma-appoints-shannon-trevi-120000483.html?.tsrc=rss",
+   "published_at": "2026-06-15T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:21Z",
+   "fingerprint": "f7dcf2f6541a520c",
+   "primary_source": false,
+   "cluster_id": "79ba5c53686bdb4f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d333b2326b0dbdbe",
+   "symbols": [
+    "SGP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "SpyGlass Pharma Appoints Mike Pinder as Vice President, Marketing",
+   "summary": "ALISO VIEJO, Calif., June 02, 2026 (GLOBE NEWSWIRE) -- SpyGlass Pharma, Inc. (Nasdaq: SGP) (SpyGlass Pharma), a late-stage biopharmaceutical company, today announced the appointment of Mike Pinder as vice president, marketing. Mr. Pinder brings over 20 years of commercial launch ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/spyglass-pharma-appoints-mike-pinder-120000994.html?.tsrc=rss",
+   "published_at": "2026-06-02T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:21Z",
+   "fingerprint": "f4cf68e794a7795f",
+   "primary_source": false,
+   "cluster_id": "d333b2326b0dbdbe",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3458d2a2bb50288f",
+   "symbols": [
+    "SGP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "SpyGlass Pharma Announces New Add-on Category III CPT Code for Its Innovative BIM-IOL System",
+   "summary": "Additional supportive reimbursement pathway for surgeons may enhance patient access to the BIM-IOL System upon potential commercializationALISO VIEJO, Calif., May 18, 2026 (GLOBE NEWSWIRE) -- SpyGlass Pharma, Inc. (Nasdaq: SGP) (SpyGlass Pharma), a late-stage biopharmaceutical co",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/spyglass-pharma-announces-add-category-120000782.html?.tsrc=rss",
+   "published_at": "2026-05-18T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:21Z",
+   "fingerprint": "39ed4bf3efc688e6",
+   "primary_source": false,
+   "cluster_id": "3458d2a2bb50288f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "db53386b3dcb3a4f",
+   "symbols": [
+    "SGP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "SpyGlass Pharma Reports First Quarter 2026 Financial Results and Provides Corporate Updates",
+   "summary": "Enrollment remains on track in the registrational Phase 3 trials of the Bimatoprost Drug Pad-IOL System (BIM-IOL System), with completion of enrollment expected in 2027.Topline 12-month data from the BIM-IOL System Phase 1/2 trial demonstrated elimination of IOP-lowering topical ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/spyglass-pharma-reports-first-quarter-200500962.html?.tsrc=rss",
+   "published_at": "2026-05-14T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:21Z",
+   "fingerprint": "e0011808c8eee54b",
+   "primary_source": false,
+   "cluster_id": "db53386b3dcb3a4f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1237ba5c37c49599",
+   "symbols": [
+    "SGP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "SpyGlass Pharma Reports Fourth Quarter and Full Year 2025 Earnings and Provides a Corporate Update",
+   "summary": "Successfully completed Initial Public Offering (IPO) in February 2026, raising $172.5 million and listing on Nasdaq.Reported positive topline 12-month data from Phase 1/2 trial of the Bimatoprost Drug Pad-IOL System (BIM-IOL System) that demonstrated sustained intraocular pressur",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/spyglass-pharma-reports-fourth-quarter-200500020.html?.tsrc=rss",
+   "published_at": "2026-03-26T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:21Z",
+   "fingerprint": "0230950d7b341421",
+   "primary_source": false,
+   "cluster_id": "1237ba5c37c49599",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "deda0f287dec229b",
+   "symbols": [
+    "SGP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "SpyGlass Pharma Announces Positive Topline 12-Month Phase 1/2 Trial Results for Its Innovative BIM-IOL System",
+   "summary": "97% of patients who received the BIM-IOL System off all topical IOP-lowering therapy at 12-months100% of BIM-IOL System patients achieved 20/32 or better BCDVA and a mean BCDVA equivalent to 20/20 vision, demonstrating high quality of vision, performance in line with the state-of",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/spyglass-pharma-announces-positive-topline-120000633.html?.tsrc=rss",
+   "published_at": "2026-03-09T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:21Z",
+   "fingerprint": "f12eb7fc318cbac4",
+   "primary_source": false,
+   "cluster_id": "deda0f287dec229b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "77dcaaf0f63b3f19",
+   "symbols": [
+    "SGP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "SpyGlass Pharma to Participate in the Jefferies Biotech on the Beach Summit",
+   "summary": "ALISO VIEJO, Calif., March 04, 2026 (GLOBE NEWSWIRE) -- SpyGlass Pharma, Inc. (Nasdaq: SGP) (“SpyGlass Pharma”), a late-stage biopharmaceutical company, today announced that members of the executive management team will host 1x1 meetings at the Jefferies Biotech on the Bay Summit",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/spyglass-pharma-participate-jefferies-biotech-130000302.html?.tsrc=rss",
+   "published_at": "2026-03-04T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:21Z",
+   "fingerprint": "82e15deb76937bae",
+   "primary_source": false,
+   "cluster_id": "77dcaaf0f63b3f19",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e773e434cf99a510",
+   "symbols": [
+    "SGP"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "MongoDB downgraded, Block upgraded: Wall Street's top analyst calls",
+   "summary": "MongoDB downgraded, Block upgraded: Wall Street's top analyst calls",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/mongodb-downgraded-block-upgraded-wall-143311526.html?.tsrc=rss",
+   "published_at": "2026-03-03T14:33:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:21Z",
+   "fingerprint": "24020a26029b1469",
+   "primary_source": false,
+   "cluster_id": "e773e434cf99a510",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "54d0ec229ad95299",
+   "symbols": [
+    "SGP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "SpyGlass Pharma Announces Closing of Initial Public Offering and Exercise in Full of the Underwriters’ Option to Purchase Additional Shares",
+   "summary": "ALISO VIEJO, Calif., Feb. 09, 2026 (GLOBE NEWSWIRE) -- SpyGlass Pharma, Inc. (Nasdaq: SGP) (“SpyGlass Pharma”), a late-stage biopharmaceutical company, today announced the closing of its initial public offering of 10,781,250 shares of its common stock, which includes the exercise",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/spyglass-pharma-announces-closing-initial-210500838.html?.tsrc=rss",
+   "published_at": "2026-02-09T21:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:21Z",
+   "fingerprint": "d19100499ae03d85",
+   "primary_source": false,
+   "cluster_id": "54d0ec229ad95299",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "da80ef267657b57a",
+   "symbols": [
+    "SGP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sector Update: Health Care Stocks Rise Late Afternoon",
+   "summary": "Health care stocks rose late Friday afternoon, with the NYSE Health Care Index and the State Street",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/sector-health-care-stocks-rise-205005173.html?.tsrc=rss",
+   "published_at": "2026-02-06T20:50:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:08:21Z",
+   "fingerprint": "5fad785a46ac39da",
+   "primary_source": false,
+   "cluster_id": "da80ef267657b57a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

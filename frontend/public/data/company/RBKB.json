@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T06:55:41Z",
+ "generated_at": "2026-11-01T07:04:15Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,13 +24,96 @@
    "adr20": 1.32889906047173,
    "rvol": 2.615109868778632,
    "ema10": 12.868243159257933,
-   "ema21": 12.868945295270475,
+   "ema21": 12.868945295290487,
    "sma50": 12.85399995803833,
    "sma200": 11.69902340888977
   },
   "market_cap": 202173040.0,
   "market_cap_currency": "USD",
-  "swing": null,
+  "swing": {
+   "tech": {
+    "close": 12.930000305175781,
+    "change_pct": 0.6225674811762616,
+    "ema20": 12.869373929228486,
+    "ema50": 12.786334079123352,
+    "ema200": 11.659970966210192,
+    "sma50": 12.85399995803833,
+    "rsi14": 53.723010460817406,
+    "rsi_min5": 48.52356009925472,
+    "atr14": 0.18151021454249694,
+    "atr_pct": 1.4037912626331477,
+    "rvol": 2.615109868778632,
+    "vol30": 82220.0,
+    "dist_ema200_pct": 10.89221699304439,
+    "dist_52w_high_pct": 2.6721832616767527,
+    "high_52w": 13.28499984741211,
+    "macd_above_signal": false,
+    "obv_rising": true,
+    "xo_bull_approx": true,
+    "higher_high": true,
+    "higher_low": false,
+    "last_higher_high": 13.050000190734863,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": true,
+    "day_high": 13.100000381469727,
+    "day_low": 12.850000381469727,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": false,
+     "RSI 45–62": true,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": true,
+     "Marktkap. > 1 Mrd.": false,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": true,
+     "Tag positiv": true
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": true,
+     "MACD > Signal": false,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": true,
+     "Higher Low": false,
+     "OBV steigend": true,
+     "Trend-Signal (EMA12>EMA25)": true,
+     "> 5 % unter 52W-Hoch": false
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.0,
+    "S02": 0.7,
+    "S03": 0.6666666666666666,
+    "S04": 0.6
+   },
+   "filter": {
+    "Tag grün": true,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": true
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 13.100000381469727,
+    "entry_max": 13.362000389099121,
+    "stop": 12.827735059655982,
+    "risk_per_share": 0.2722653218137445,
+    "target_1": 13.644531025097216,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  },
   "quality": {
    "score": 46.7,
    "coverage_pct": 100,
@@ -55,11 +138,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 14.3,
+   "score": 30.4,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "news_flow",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -124,12 +209,96 @@
   "adr20": 1.32889906047173,
   "rvol": 2.615109868778632,
   "ema10": 12.868243159257933,
-  "ema21": 12.868945295270475,
+  "ema21": 12.868945295290487,
   "sma50": 12.85399995803833,
   "sma200": 11.69902340888977,
   "volatility_ann": 16.280177604937297,
   "avg_dollar_volume_20d": 872702.7770662308,
-  "move_zscore": 0.6070543342409507
+  "move_zscore": 0.6070543342409507,
+  "swing": {
+   "tech": {
+    "close": 12.930000305175781,
+    "change_pct": 0.6225674811762616,
+    "ema20": 12.869373929228486,
+    "ema50": 12.786334079123352,
+    "ema200": 11.659970966210192,
+    "sma50": 12.85399995803833,
+    "rsi14": 53.723010460817406,
+    "rsi_min5": 48.52356009925472,
+    "atr14": 0.18151021454249694,
+    "atr_pct": 1.4037912626331477,
+    "rvol": 2.615109868778632,
+    "vol30": 82220.0,
+    "dist_ema200_pct": 10.89221699304439,
+    "dist_52w_high_pct": 2.6721832616767527,
+    "high_52w": 13.28499984741211,
+    "macd_above_signal": false,
+    "obv_rising": true,
+    "xo_bull_approx": true,
+    "higher_high": true,
+    "higher_low": false,
+    "last_higher_high": 13.050000190734863,
+    "hammer": false,
+    "bull_engulfing": false,
+    "green": true,
+    "day_high": 13.100000381469727,
+    "day_low": 12.850000381469727,
+    "history_ok": true
+   },
+   "criteria": {
+    "S01": {
+     "RSI zuletzt < 35": false,
+     "Umkehrkerze (Hammer/Engulfing)": false
+    },
+    "S02": {
+     "Kurs > EMA 200": true,
+     "max. 5 % über EMA 200": false,
+     "Kurs < EMA 50": false,
+     "RSI 45–62": true,
+     "RelVol > 0,8": true,
+     "EMA 20 > SMA 50": true,
+     "Marktkap. > 1 Mrd.": true,
+     "Volumen 30T > 1 Mio.": false,
+     "Kurs > 10": true,
+     "Tag positiv": true
+    },
+    "S03": {
+     "0–5 % unter 52W-Hoch": true,
+     "MACD > Signal": false,
+     "Volumen über Schnitt": true
+    },
+    "S04": {
+     "Higher High": true,
+     "Higher Low": false,
+     "OBV steigend": true,
+     "Trend-Signal (EMA12>EMA25)": true,
+     "> 5 % unter 52W-Hoch": false
+    }
+   },
+   "hits": [],
+   "near": {
+    "S01": 0.0,
+    "S02": 0.7,
+    "S03": 0.6666666666666666,
+    "S04": 0.6
+   },
+   "filter": {
+    "Tag grün": true,
+    "RelVol ≥ 1.2": true,
+    "RSI ≤ 65": true,
+    "ATR% 1.5–5.0": false,
+    "über EMA 200": true
+   },
+   "filter_pass": false,
+   "plan": {
+    "trigger": 13.100000381469727,
+    "entry_max": 13.362000389099121,
+    "stop": 12.827735059655982,
+    "risk_per_share": 0.2722653218137445,
+    "target_1": 13.644531025097216,
+    "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
+   }
+  }
  },
  "quality_detail": {
   "score": 46.7,
@@ -363,11 +532,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 14.3,
+  "score": 30.4,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 80.8,
@@ -385,26 +554,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "news_flow",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -422,7 +593,339 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "3e539c55aa54dc5f",
+   "symbols": [
+    "RBKB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Rhinebeck Bancorp, Inc. Reports Results for the Quarter Ended September 30, 2026",
+   "summary": "POUGHKEEPSIE, NY / ACCESS Newswire / October 29, 2026 / , Inc. (the \"Company\") (NASDAQ:RBKB), the holding company of Rhinebeck Bank (the \"Bank\"), reported net income for the three months ended September 30, 2026 of $3.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/rhinebeck-bancorp-inc-reports-results-202500245.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:25:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:08Z",
+   "fingerprint": "f421dee4119a60e9",
+   "primary_source": false,
+   "cluster_id": "3e539c55aa54dc5f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6e9be8008a33134f",
+   "symbols": [
+    "RBKB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Rhinebeck Bank Opens Rye Brook Branch to Advance Westchester Expansion",
+   "summary": "RYE BROOK, NY / ACCESS Newswire / October 5, 2026 / Rhinebeck Bank, the wholly owned subsidiary of , Inc. (NASDAQ:RBKB), today announced the opening of its new branch at 800 Westchester Avenue in Rye Brook, New York.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/rhinebeck-bank-opens-rye-brook-202500928.html?.tsrc=rss",
+   "published_at": "2026-10-05T20:25:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:08Z",
+   "fingerprint": "c0511c1a498f5114",
+   "primary_source": false,
+   "cluster_id": "6e9be8008a33134f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0c85b7cdf74e3c14",
+   "symbols": [
+    "RBKB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Rhinebeck Bank Expands Capital Region Commercial Banking Team with Appointment of Timothy Kensky",
+   "summary": "ALBANY, NY / ACCESS Newswire / September 24, 2026 / Rhinebeck Bank, the wholly owned subsidiary of , Inc. (NASDAQ:RBKB), today announced the appointment of Timothy Kensky as Senior Vice President, Commercial Lender.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/rhinebeck-bank-expands-capital-region-202500873.html?.tsrc=rss",
+   "published_at": "2026-09-24T20:25:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:08Z",
+   "fingerprint": "9372c25f7bb4f113",
+   "primary_source": false,
+   "cluster_id": "0c85b7cdf74e3c14",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e96e4c9f3f626864",
+   "symbols": [
+    "OBT",
+    "RBKB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "RBKB vs. OBT: Which Hudson Valley Bank Stock Is the Better Buy Now?",
+   "summary": "Rhinebeck Bancorp and Orange County Bancorp differ in valuation, growth drivers and financial profile, but which bank stock looks more compelling now? Let's dive in.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/rbkb-vs-obt-hudson-valley-151900779.html?.tsrc=rss",
+   "published_at": "2026-09-24T15:19:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T06:31:00Z",
+   "fingerprint": "6176e12717f1235c",
+   "primary_source": false,
+   "cluster_id": "e96e4c9f3f626864",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9c3bf5cfc369c767",
+   "symbols": [
+    "RBKB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Rhinebeck Bank Appoints Travis Podolec as New Senior Vice President, Commercial Lender in Orange County",
+   "summary": "NEWBURGH, NY / ACCESS Newswire / July 28, 2026 / Rhinebeck Bank, the wholly owned subsidiary of Rhinebeck Bancorp, Inc. (NASDAQ:RBKB), today announced the addition of Travis Podolec as Senior Vice President, Commercial Lender to its Orange County ...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/rhinebeck-bank-appoints-travis-podolec-202500942.html?.tsrc=rss",
+   "published_at": "2026-07-28T20:25:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:08Z",
+   "fingerprint": "94b85150dddad776",
+   "primary_source": false,
+   "cluster_id": "9c3bf5cfc369c767",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "eecd513af029afc5",
+   "symbols": [
+    "RBKB"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Zacks Initiates Coverage of Rhinebeck Bancorp With Neutral Recommendation",
+   "summary": "Discover why Zacks rates Rhinebeck Bancorp as \"Neutral\", being the first on Wall Street to initiate coverage on the stock. Explore RBKB's improving credit quality and expanding commercial banking footprint amid a competitive lending environment and margin pressures.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-initiates-coverage-rhinebeck-bancorp-145600338.html?.tsrc=rss",
+   "published_at": "2026-07-28T14:56:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:08Z",
+   "fingerprint": "dd526a3c55c3cf51",
+   "primary_source": false,
+   "cluster_id": "eecd513af029afc5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "074eb6ed428f405f",
+   "symbols": [
+    "RBKB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Rhinebeck Bancorp, Inc. Reports Results for the Quarter Ended June 30, 2026 and Completes Second-Step Conversion",
+   "summary": "POUGHKEEPSIE, NY / ACCESS Newswire / July 23, 2026 / Rhinebeck Bancorp, Inc. (the \"Company\") (NASDAQ:RBKB), the holding company of Rhinebeck Bank (the \"Bank\"), reported net income for the three months ended June 30, 2026 of $2.6 million ($0.24 per ...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/rhinebeck-bancorp-inc-reports-results-202500964.html?.tsrc=rss",
+   "published_at": "2026-07-23T20:25:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:08Z",
+   "fingerprint": "7cabf30d48ce3223",
+   "primary_source": false,
+   "cluster_id": "074eb6ed428f405f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "60457ac96daa9ce5",
+   "symbols": [
+    "RBKB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Rhinebeck Bancorp, Inc. Announces Completion of Conversion and Offering",
+   "summary": "POUGHKEEPSIE, NY / ACCESS Newswire / July 21, 2026 / Rhinebeck Bancorp, Inc. (NASDAQ Capital Market:RBKB) (the \"Company\"), the holding company for Rhinebeck Bank, announced that Rhinebeck Bancorp, MHC (the \"MHC\") has completed its \"second-step\" conversion ...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/rhinebeck-bancorp-inc-announces-completion-211000690.html?.tsrc=rss",
+   "published_at": "2026-07-21T21:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:08Z",
+   "fingerprint": "05b2e08d919f2071",
+   "primary_source": false,
+   "cluster_id": "60457ac96daa9ce5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1813834b498fe0e8",
+   "symbols": [
+    "RBKB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Rhinebeck Bancorp, Inc. Announces Subscription Offering Results and Expected Closing Date",
+   "summary": "POUGHKEEPSIE, NY / ACCESS Newswire / July 17, 2026 / Rhinebeck Bancorp, Inc. (Nasdaq Capital Market:RBKB) (the \"Company\"), the holding company for Rhinebeck Bank (the \"Bank\"), announced the results of the subscription offering conducted in connection ...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/rhinebeck-bancorp-inc-announces-subscription-132000303.html?.tsrc=rss",
+   "published_at": "2026-07-17T13:20:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:08Z",
+   "fingerprint": "186b038380ad1e19",
+   "primary_source": false,
+   "cluster_id": "1813834b498fe0e8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5acc4a073f524705",
+   "symbols": [
+    "RBKB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Rhinebeck Bank Expands Commercial Banking Presence With New Westchester County Office",
+   "summary": "RYE BROOK, NY / ACCESS Newswire / July 15, 2026 / Rhinebeck Bank, the wholly owned subsidiary of Rhinebeck Bancorp, Inc. (NASDAQ:RBKB), today announced the opening of a Commercial Lending Representative Office in Rye Brook, New York, expanding the ...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/rhinebeck-bank-expands-commercial-banking-202500882.html?.tsrc=rss",
+   "published_at": "2026-07-15T20:25:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:08Z",
+   "fingerprint": "6ef262cc252d3535",
+   "primary_source": false,
+   "cluster_id": "5acc4a073f524705",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7182d6f4452b34f4",
+   "symbols": [
+    "RBKB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Rhinebeck Bancorp, Inc. Announces Commencement of Stock Offering",
+   "summary": "POUGHKEEPSIE, NY / ACCESS Newswire / May 26, 2026 / Rhinebeck Bancorp, Inc. (\"Rhinebeck Bancorp\") (NASDAQ:RBKB), the holding company for Rhinebeck Bank (the \"Bank\"), announced that Rhinebeck Bancorp has commenced its stock offering in connection with ...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/rhinebeck-bancorp-inc-announces-commencement-132500196.html?.tsrc=rss",
+   "published_at": "2026-05-26T13:25:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:08Z",
+   "fingerprint": "f3e89ec35b55a991",
+   "primary_source": false,
+   "cluster_id": "7182d6f4452b34f4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6ea9d8f7f3d7f58c",
+   "symbols": [
+    "RBKB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Rhinebeck Bancorp, Inc. Reports Results for the Quarter Ended March 31, 2026",
+   "summary": "POUGHKEEPSIE, NY / ACCESS Newswire / April 23, 2026 / Rhinebeck Bancorp, Inc. (the \"Company\") (NASDAQ:RBKB), the holding company of Rhinebeck Bank (the \"Bank\"), reported net income for the three months ended March 31, 2026 of $2.2 million ($0.20 per ...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/rhinebeck-bancorp-inc-reports-results-202500283.html?.tsrc=rss",
+   "published_at": "2026-04-23T20:25:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:08Z",
+   "fingerprint": "f1c051e6abeb77ab",
+   "primary_source": false,
+   "cluster_id": "6ea9d8f7f3d7f58c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1fde7b0068464e4c",
+   "symbols": [
+    "RBKB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Rhinebeck Bank Appoints Michael Vitale as Executive Vice President, Head of Commercial Banking",
+   "summary": "POUGHKEEPSIE, NY / ACCESS Newswire / April 13, 2026 / Rhinebeck Bank (NASDAQ:RBKB) today announced the appointment of Michael Vitale as Executive Vice President, Head of Commercial Banking, a key leadership role that will support the Bank's continued ...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/rhinebeck-bank-appoints-michael-vitale-202500640.html?.tsrc=rss",
+   "published_at": "2026-04-13T20:25:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:08Z",
+   "fingerprint": "72084374a9610496",
+   "primary_source": false,
+   "cluster_id": "1fde7b0068464e4c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6469f73d5d6cfb5e",
+   "symbols": [
+    "RBKB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Rhinebeck Bank Partners with MANTL to Accelerate Digital Account Opening",
+   "summary": "MANTL, an Alkami solution team and leading provider of loan and deposit account opening technology, today announced a partnership with Rhinebeck Bank to modernize and transform business and retail account opening across physical and digital banking channels. With MANTL, Rhinebeck",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/economy/policy/articles/rhinebeck-bank-partners-mantl-accelerate-140000832.html?.tsrc=rss",
+   "published_at": "2026-03-26T14:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:08Z",
+   "fingerprint": "3a60e7a366c621fa",
+   "primary_source": false,
+   "cluster_id": "6469f73d5d6cfb5e",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "959e1b1e7391f4bf",
+   "symbols": [
+    "RBKB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Rhinebeck Bancorp, Inc.'s (NASDAQ:RBKB) top owners are private companies with 58% stake, while 18% is held by individual investors",
+   "summary": "Key Insights Significant control over Rhinebeck Bancorp by private companies implies that the general public has more...",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/rhinebeck-bancorp-inc-nasdaq-rbkb-123458274.html?.tsrc=rss",
+   "published_at": "2026-01-23T12:34:58Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:07:08Z",
+   "fingerprint": "34a02bd3c0376da6",
+   "primary_source": false,
+   "cluster_id": "959e1b1e7391f4bf",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],
