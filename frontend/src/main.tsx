@@ -14,14 +14,18 @@ import { Superinvestors } from "./pages/Superinvestors";
 import { Politicians } from "./pages/Politicians";
 import { SwingPage } from "./pages/Swing";
 import { WatchlistPage } from "./pages/Watchlist";
+import { Confluence } from "./pages/Confluence";
+import { ReportPage } from "./pages/Report";
 import { SocialPage } from "./pages/Social";
 import { FactCheck } from "./pages/FactCheck";
 import { RiskOverview } from "./pages/Risk";
 
 const NAV = [
+  ["report", "Tagesbericht"],
   ["dashboard", "Dashboard"],
   ["watchlist", "Watchlist & Alarme"],
   ["swing", "Swing-Setups"],
+  ["confluence", "Signal-Zusammenfluss"],
   ["radar", "Opportunity Radar"],
   ["trump", "Trump Mention Radar"],
   ["ticker", "Markt- & Wirtschaftsticker"],
@@ -82,6 +86,8 @@ function App() {
     case "politicians": page = <Politicians />; break;
     case "swing": page = <SwingPage />; break;
     case "watchlist": page = <WatchlistPage />; break;
+    case "confluence": page = <Confluence />; break;
+    case "report": page = <ReportPage />; break;
     case "superinvestors": page = <Superinvestors manager={rest.length ? decodeURIComponent(rest.join("/")) : undefined} />; break;
     case "social": page = <SocialPage />; break;
     case "factcheck": page = <FactCheck />; break;

@@ -256,6 +256,13 @@ def build_demo(out_dir: Path | None = None, n: int = 40, seed: int = 7) -> dict:
                                "history": [{"key": "demo", "kind": "cluster", "kind_label": "Cluster-Kauf", "symbol": "DM03",
                                             "title": "DM03: Cluster-Kauf", "text": "2 Insider kaufen (DEMO)", "url": None,
                                             "priority": 1, "created_at": iso(now)}]}
+    from .report import build_report, confluence
+    conf = confluence(payloads["stocks.json"]["stocks"])
+    payloads["confluence.json"] = {**meta, "rows": conf}
+    payloads["report.json"] = {**meta, **build_report(stocks=payloads["stocks.json"]["stocks"],
+                               candidates=candidates(payloads["stocks.json"]["stocks"]), alerts_history=payloads["alerts.json"]["history"],
+                               market_events=mev, insiders_clusters=[], superinv=superinv, pol_trades=pol_trades, trump=trump,
+                               social_stats=social_stats, watchlist=["DM03", "DM07"], conf=conf, now=now)}
     out_dir = out_dir or (Path(__file__).resolve().parents[2] / "frontend" / "public" / "demo-data")
     return publish(payloads, details, out_dir)
 

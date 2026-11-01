@@ -636,3 +636,35 @@ def test_watchlist_newest_file_and_alert_dedup(monkeypatch):
     r1 = alerts.process(gen, wl, f, now=NOW)
     r2 = alerts.process(gen, wl, f, now=NOW)
     assert r1["new_count"] == 2 and r2["new_count"] == 0 and len(r2["history"]) == 2
+
+
+# ------------------------------------------------- Zusammenfluss/Bericht ----
+def _stock(sym, **kw):
+    base = {"symbol": sym, "name": sym, "status": "active", "sector": None, "indexes": [], "market": {"last_close": 10, "perf_20d": 1},
+            "insider": {"open_market_buys": 0, "distinct_buyers": 0}, "superinvestors": None, "politicians": None,
+            "quality": {"score": 50}, "swing": None, "social": None, "political": {"direction": "keine"},
+            "risk": {"level": "moderat"}, "events": [], "market_cap": 1e10}
+    base.update(kw)
+    return base
+
+
+def test_confluence_counts_independent_signals():
+    from sic.report import confluence
+    a = _stock("AAA", insider={"open_market_buys": 3, "distinct_buyers": 2}, quality={"score": 80},
+               superinvestors={"buyers": 2, "new_buyers": 1, "sellers": 0, "holders": 3, "sold_out": 0})
+    b = _stock("BBB", quality={"score": 90})                          # nur ein Signal -> nicht gelistet
+    c = _stock("CCC", insider={"open_market_buys": 1, "distinct_buyers": 1}, politicians={"buys": 1, "sells": 0},
+               risk={"level": "hoch"}, events=[{"type": "earnings", "days_until": 2, "date": "2026-11-02"}])
+    rows = confluence([a, b, c])
+    assert [r["symbol"] for r in rows] == ["AAA", "CCC"] and rows[0]["count"] == 3
+    assert "Risiko hoch" in rows[1]["warnings"] and any("Zahlen" in w for w in rows[1]["warnings"])
+
+
+def test_report_day_and_earnings():
+    from sic.report import build_report
+    s = _stock("AAPL", events=[{"type": "earnings", "date": "2026-11-02", "days_until": 1, "time": "nach Börsenschluss"}])
+    evening = datetime(2026, 10, 30, 21, 45, tzinfo=timezone.utc)     # Freitagabend -> Bericht für Montag
+    r = build_report(stocks=[s], candidates=[], alerts_history=[], market_events={"upcoming": []}, insiders_clusters=[],
+                     superinv={"managers": []}, pol_trades=[], trump=[], social_stats={}, watchlist=["AAPL"], conf=[], now=evening)
+    assert r["report_date"] == "2026-11-02" and r["weekday"] == "Montag"
+    assert r["earnings"][0]["symbol"] == "AAPL" and r["earnings"][0]["watchlist"]

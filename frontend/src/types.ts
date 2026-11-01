@@ -172,3 +172,19 @@ export interface AlertsData extends Meta {
   watchlist: string[]; watchlist_file: string | null; new_count: number; history: Alert[];
   channels: { push?: boolean; email?: boolean }; sent?: { ntfy: boolean; email: boolean };
 }
+
+export interface ConfluenceRow {
+  symbol: string; name: string; sector: string | null; indexes: string[]; count: number; kinds: string[];
+  positives: string[]; warnings: string[]; quality: number | null; risk_level: string; events: CorpEvent[];
+  close: number | null; perf_20d: number | null;
+}
+export interface Report extends Meta {
+  report_date: string; weekday: string; created_at: string; rule_note: string | null; sent?: boolean;
+  macro: MarketEvent[]; earnings: { symbol: string; name: string; time?: string; watchlist: boolean; eps_forecast?: number | null }[];
+  candidates: { symbol: string; name: string; hits: string[]; trigger: number; entry_max: number; stop: number; target_1: number; rvol: number | null; quality: number | null; watchlist: boolean }[];
+  watchlist_alerts: Alert[]; clusters: ClusterBuy[];
+  superinvestor_filings: { manager: string; report_date: string; filed_at: string; new: number; sold_out: number; top_new: string[] }[];
+  politician_trades: PoliticalTrade[]; trump: TrumpMention[];
+  social_movers: { symbol: string; mentions_24h: number; change: number | null; sentiment: number | null }[];
+  confluence_top: ConfluenceRow[];
+}

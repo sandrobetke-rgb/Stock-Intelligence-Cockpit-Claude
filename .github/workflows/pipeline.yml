@@ -5,6 +5,8 @@ on:
     # Boersentage nach US-Boersenschluss: 16:00 ET = 20:00 UTC (Sommerzeit) bzw. 21:00 UTC (Winterzeit).
     # 21:40 UTC liegt in beiden Faellen nach Handelsschluss.
     - cron: "40 21 * * 1-5"
+    # Morgenlauf mit Tagesbericht: 05:15 UTC = 06:15 MEZ / 07:15 MESZ (ohne Kurse/Fundamentaldaten)
+    - cron: "15 5 * * 1-5"
   workflow_dispatch:
     inputs:
       mode:
@@ -65,6 +67,7 @@ jobs:
           ARGS=""
           # Push/CSV-Aenderung: nur neu auswerten. Ohne vorhandenes Universum (erster Lauf) immer voll abrufen.
           if [ -f data/state/universe.json ] && { [ "${{ github.event_name }}" = "push" ] || [ "${{ github.event.inputs.mode }}" = "no-fetch" ]; }; then ARGS="--no-fetch"; fi
+          if [ "${{ github.event.schedule }}" = "15 5 * * 1-5" ]; then ARGS="--morning"; fi
           python -m sic.run $ARGS
       - name: Zustand und Daten committen
         run: |

@@ -10,13 +10,14 @@ ohne die uebrigen Daten zu verwerfen. Veröffentlicht wird nur nach Validierung.
 from __future__ import annotations
 
 import argparse
+import os
 import logging
 import time
 import traceback
 from collections import Counter
 from datetime import datetime
 
-from . import alerts, config, congress, corporate_events, events, insider, news, politics, social, superinvestors, translate, universe
+from . import alerts, config, report, congress, corporate_events, events, insider, news, politics, social, superinvestors, translate, universe
 from .export import publish
 from .intelligence import market_intelligence
 from .market import fetch_prices, load_fundamentals, refresh_fundamentals
@@ -124,7 +125,9 @@ def assemble(*, state: dict, prices: dict, fundamentals: dict[str, dict], signal
                                     "independent_24h": mi["windows"]["24h"]["independent"]},
             "political": {k: pol[k] for k in ("relevance", "trump_bonus", "trump_bonus_active", "direction",
                                               "negative_signals_30d", "positive_signals_30d")},
-            "social": {"mentions_7d": soc["mentions_7d"], "manipulation_risk": soc["manipulation_risk"]} if soc else None,
+            "social": {"mentions_7d": soc["mentions_7d"], "manipulation_risk": soc["manipulation_risk"],
+                       "mentions_24h": soc["mentions_24h"], "sentiment_7d": soc.get("sentiment_7d"),
+                       "bullish_7d": soc.get("bullish_7d"), "bearish_7d": soc.get("bearish_7d")} if soc else None,
             "insider": ins,
             "superinvestors": {k: si_by[sym][k] for k in ("holders", "buyers", "new_buyers", "sellers", "sold_out")} if sym in si_by else None,
             "events": corp_events.get(sym, []),
@@ -263,7 +266,8 @@ SOURCES = [
 ]
 
 
-def run(fetch: bool = True, skip_fundamentals: bool = False, skip_insider: bool = False, skip_news: bool = False) -> dict:
+def run(fetch: bool = True, skip_fundamentals: bool = False, skip_insider: bool = False, skip_news: bool = False,
+        skip_prices: bool = False, morning: bool = False) -> dict:
     rl = RunLog()
     now = utcnow()
     state = rl.step("universe", universe.build_universe, fetch=fetch) or universe.load_state()
@@ -274,7 +278,7 @@ def run(fetch: bool = True, skip_fundamentals: bool = False, skip_insider: bool 
     uni = set(state["securities"])
 
     prices = read_json(PRICES_CACHE, {})
-    if fetch:
+    if fetch and not skip_prices:
         res = rl.step("prices", fetch_prices, syms)
         if res:
             fresh, _errs = res
@@ -352,6 +356,8 @@ def run(fetch: bool = True, skip_fundamentals: bool = False, skip_insider: bool 
         gen = alerts.generate(stocks=payloads["stocks.json"]["stocks"], insiders=insiders,
                               clusters=insider.cluster_buys(insiders, now=now), superinv=si, stakes=stakes,
                               pol_trades=pol_trades, trump=trump, social_stats=social_stats, watchlist=wl, now=now)
+        if morning:   # Kandidatenliste kommt morgens im Tagesbericht, nicht doppelt
+            gen = [a for a in gen if a["kind"] != "digest"]
         return alerts.process(gen, wl, wl_file, notify=True, now=now)
     al = rl.step("alerts", _alerts) or {"watchlist": [], "history": [], "channels": {}, "new_count": 0}
     from .setups import ENTRY, FILTER, SETUP_INFO
@@ -359,6 +365,17 @@ def run(fetch: bool = True, skip_fundamentals: bool = False, skip_insider: bool 
     payloads["swing.json"] = {"generated_at": iso(now), "schema_version": SCHEMA_VERSION, "mode": "live",
                               "setups": SETUP_INFO, "filter": FILTER, "entry": ENTRY,
                               "candidates": [s["symbol"] for s in alerts.candidates(payloads["stocks.json"]["stocks"])]}
+    # Signal-Zusammenfluss und Tagesbericht
+    stocks_out = payloads["stocks.json"]["stocks"]
+    conf = report.confluence(stocks_out)
+    payloads["confluence.json"] = {"generated_at": iso(now), "schema_version": SCHEMA_VERSION, "mode": "live", "rows": conf}
+    rep = rl.step("report", report.build_report, stocks=stocks_out, candidates=alerts.candidates(stocks_out),
+                  alerts_history=al.get("history", []), market_events=mev, insiders_clusters=insider.cluster_buys(insiders, now=now),
+                  superinv=si, pol_trades=pol_trades, trump=trump, social_stats=social_stats,
+                  watchlist=al.get("watchlist", []), conf=conf, now=now)
+    if rep:
+        rep["sent"] = report.send_report(rep, os.environ.get("COCKPIT_URL")) if morning else False
+        payloads["report.json"] = {"generated_at": iso(now), "schema_version": SCHEMA_VERSION, "mode": "live", **rep}
     payloads["summary.json"]["steps"] = rl.steps
     result = publish(payloads, details)
     log.info("Veröffentlicht: %s | Fehler: %s", result["published"], [s for s in rl.steps if s["status"] == "error"])
@@ -371,10 +388,11 @@ def main() -> None:
     ap.add_argument("--skip-fundamentals", action="store_true")
     ap.add_argument("--skip-insider", action="store_true")
     ap.add_argument("--skip-news", action="store_true")
+    ap.add_argument("--morning", action="store_true", help="Morgenlauf: ohne Kurse/Fundamentaldaten, Tagesbericht verschicken")
     a = ap.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
-    res = run(fetch=not a.no_fetch, skip_fundamentals=a.skip_fundamentals, skip_insider=a.skip_insider,
-              skip_news=a.skip_news)
+    res = run(fetch=not a.no_fetch, skip_fundamentals=a.skip_fundamentals or a.morning, skip_insider=a.skip_insider,
+              skip_news=a.skip_news, skip_prices=a.morning, morning=a.morning)
     raise SystemExit(0 if res.get("published") else 1)
 
 
