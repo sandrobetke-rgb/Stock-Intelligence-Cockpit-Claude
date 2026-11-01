@@ -49,9 +49,12 @@ def load_managers() -> list[dict]:
 
 # ---------------------------------------------------------------- Parsing --
 def _strip_ns(xml: str) -> ET.Element:
-    xml = re.sub(r'\sxmlns(:\w+)?="[^"]+"', "", xml, count=0)
-    xml = re.sub(r"<(/?)\w+:", r"<\1", xml)
-    return ET.fromstring(xml)
+    """Namensräume entfernen (Filer nutzen Präfixe wie ns1:, n1: oder Standard-Namensraum)."""
+    root = ET.fromstring(xml.encode() if isinstance(xml, str) else xml)
+    for el in root.iter():
+        if isinstance(el.tag, str) and "}" in el.tag:
+            el.tag = el.tag.split("}", 1)[1]
+    return root
 
 
 def parse_info_table(xml: str) -> list[dict]:
@@ -74,8 +77,11 @@ def parse_info_table(xml: str) -> list[dict]:
 
 
 def _value_in_dollars(rows: list[dict], report_date: str) -> None:
-    """Bis Ende 2022 meldeten Filer Werte in Tausend USD, seit 2023 in USD."""
-    if report_date < "2022-12-31":
+    """Bis Ende 2022 meldeten Filer Werte in Tausend USD, seit 2023 in USD. Manche Filer melden
+    weiterhin in Tausend: erkennbar an einem unplausibel niedrigen Wert je Aktie (Median < 0,50 USD)."""
+    per_share = sorted(r["value"] / r["shares"] for r in rows if r["shares"] > 0 and not r["put_call"])
+    median = per_share[len(per_share) // 2] if per_share else None
+    if report_date < "2022-12-31" or (median is not None and median < 0.5):
         for r in rows:
             r["value"] *= 1000
 
@@ -96,7 +102,7 @@ def _latest_13f(cik: int) -> tuple[str, list[dict]]:
 
 
 def _load_filing(cik: int, f: dict) -> list[dict]:
-    cache = _filing_cache() / f"{cik}-{f['accession']}.json"
+    cache = _filing_cache() / f"{cik}-{f['accession']}-v2.json"
     hit = read_json(cache)
     if hit is not None:
         return hit
@@ -201,10 +207,10 @@ def build(universe: dict[str, dict], fetch: bool = True) -> dict:
             if not entry or not entry["filings"]:
                 continue
             fl = entry["filings"]
-            cur = _load_filing(m["cik"], fl[0]) if fetch else read_json(_filing_cache() / f"{m['cik']}-{fl[0]['accession']}.json", [])
+            cur = _load_filing(m["cik"], fl[0]) if fetch else read_json(_filing_cache() / f"{m['cik']}-{fl[0]['accession']}-v2.json", [])
             prev = None
             if len(fl) > 1:
-                prev = _load_filing(m["cik"], fl[1]) if fetch else read_json(_filing_cache() / f"{m['cik']}-{fl[1]['accession']}.json")
+                prev = _load_filing(m["cik"], fl[1]) if fetch else read_json(_filing_cache() / f"{m['cik']}-{fl[1]['accession']}-v2.json")
             raw.append((m, {**fl[0], "sec_name": entry["name"]}, cur, prev))
         except Exception as exc:  # noqa: BLE001
             errors.append({"manager": m["manager"], "cik": m["cik"], "error": str(exc)[:200]})

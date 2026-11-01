@@ -462,3 +462,16 @@ def test_cluster_buys():
     items = [mk("A"), mk("B"), mk("C", "option_exercise", False), {**mk("X"), "symbol": "SOLO"}]
     c = cluster_buys(items, now=NOW)
     assert [x["symbol"] for x in c] == ["ACME"] and c[0]["insiders"] == 2
+
+
+def test_13f_prefixed_namespaces_and_thousands():
+    from sic.superinvestors import _value_in_dollars, parse_info_table
+    xml = ('<?xml version="1.0"?><ns1:informationTable xmlns:ns1="http://www.sec.gov/edgar/document/thirteenf/informationtable" '
+           'xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="x y"><ns1:infoTable>'
+           '<ns1:nameOfIssuer>APPLE</ns1:nameOfIssuer><ns1:cusip>037833100</ns1:cusip><ns1:value>2000</ns1:value>'
+           '<ns1:shrsOrPrnAmt><ns1:sshPrnamt>10000</ns1:sshPrnamt><ns1:sshPrnamtType>SH</ns1:sshPrnamtType></ns1:shrsOrPrnAmt>'
+           '</ns1:infoTable></ns1:informationTable>')
+    rows = parse_info_table(xml)
+    assert rows[0]["shares"] == 10000
+    _value_in_dollars(rows, "2026-06-30")       # 0,20 USD je Aktie -> Meldung in Tausend
+    assert rows[0]["value"] == 2_000_000

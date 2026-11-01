@@ -58,11 +58,19 @@ jobs:
         run: |
           git config user.name "sic-bot"
           git config user.email "sic-bot@users.noreply.github.com"
-          git add backend/data/state frontend/public/data
+          # Erzeugte Daten sichern, auf den neuesten Stand von main wechseln und die Daten dieses
+          # Laufs vollstaendig uebernehmen (kein zeilenweises Mischen von JSON-Dateien).
+          TMP=$(mktemp -d)
+          cp -a backend/data/state "$TMP/state"
+          cp -a frontend/public/data "$TMP/pubdata"
+          git fetch origin main
+          git checkout -f -B main origin/main
+          rm -rf backend/data/state frontend/public/data
+          cp -a "$TMP/state" backend/data/state
+          cp -a "$TMP/pubdata" frontend/public/data
+          git add -A backend/data/state frontend/public/data
           git diff --cached --quiet || git commit -m "Daten-Update $(date -u +%Y-%m-%dT%H:%MZ)"
-          # Falls waehrend des Laufs Code-Aenderungen gepusht wurden: Daten-Commit darauf setzen
-          git pull --rebase -X theirs origin main || { git rebase --abort; git pull --no-rebase -X ours origin main; }
-          git push
+          git push origin main
       - name: Logs bei Fehler sichern
         if: failure()
         uses: actions/upload-artifact@v4
