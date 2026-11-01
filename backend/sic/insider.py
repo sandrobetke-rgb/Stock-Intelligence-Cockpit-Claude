@@ -211,7 +211,7 @@ def _collect_stakes(rows: list[dict], cik2sym: dict[int, str], watch: dict[int, 
     store = {x["id"]: x for x in read_json(STAKES, [])}
     for f, ciks in by_file.items():
         mgr = [c for c in ciks if c in watch]
-        iss = [c for c in ciks if c in cik2sym]
+        iss = [c for c in ciks if c in cik2sym and c not in mgr]
         if not mgr or not iss:
             continue
         acc = f.rsplit("/", 1)[-1].replace(".txt", "")

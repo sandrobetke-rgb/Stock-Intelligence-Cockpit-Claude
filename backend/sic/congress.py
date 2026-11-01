@@ -15,6 +15,7 @@ import io
 import logging
 import re
 import zipfile
+from collections import Counter
 from datetime import datetime, timedelta
 from xml.etree import ElementTree as ET
 
@@ -29,8 +30,9 @@ HOUSE_PTR = "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/{y}/{doc}.
 SENATE = "https://efdsearch.senate.gov"
 LOOKBACK_DAYS = 90
 MAX_NEW_DOCS = 150
-BROWSER = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36 "
-                         "StockIntelligenceCockpit/1.1 (private, nicht-kommerziell)"}
+BROWSER = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+           "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+           "Accept-Language": "en-US,en;q=0.9"}
 _rl = RateLimiter(2.0)
 TX = {"P": "purchase", "S": "sale", "S (partial)": "sale_partial", "E": "exchange",
       "Purchase": "purchase", "Sale (Full)": "sale", "Sale (Partial)": "sale_partial", "Exchange": "exchange"}
@@ -256,11 +258,13 @@ def build(universe: set[str], fetch: bool = True, now: datetime | None = None) -
         st["status"] = status
         st["fetched_at"] = iso(now)
         write_json_atomic(_state(), st)
-    trades = []
+    trades, seen = [], Counter()
     for t in st["trades"]:
         tx, disc = t.get("transaction_date"), t.get("disclosure_date")
         delay = (datetime.fromisoformat(disc) - datetime.fromisoformat(tx)).days if tx and disc else None
-        trades.append({"id": stable_id(t["doc"], t["ticker"], tx, t["tx"], t.get("amount_min")),
+        base = stable_id(t["doc"], t["ticker"], tx, t["tx"], t.get("amount_min"), t.get("owner"))
+        seen[base] += 1
+        trades.append({"id": f"{base}-{seen[base]}",
                        "politician": t["politician"], "chamber": t["chamber"], "party": None, "state": t.get("state"),
                        "symbol": t["ticker"], "in_universe": t["ticker"] in universe, "asset": t["asset"],
                        "asset_type": t["asset_type"], "owner": t["owner"], "transaction_type": t["tx"],

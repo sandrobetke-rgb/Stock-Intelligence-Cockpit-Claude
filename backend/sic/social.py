@@ -37,7 +37,8 @@ IMO IPO IT ITM IV LOL LOVE LOW MAN MAIN NEW NOW OK ON ONE OP OPEN OR OTM OUT PE 
 UK US USA WSB YOLO FYI ATH ATM CPI IRA HSA LLC INC TLDR RIP EDIT POST BEST KEY PEAK WELL JOB EAT WISH BEAT SAVE
 FUN PLAY HOME CASH NICE TRUE FAST AI DM CC EU AG SE TO UP WAY TOP HOLD GAIN LOSS RISK BULL BEAR PUMP DUMP MOON APE
 APES CALL CALLS PUT PUTS LONG SHORT FREE NEXT LAST HUGE GAME CARE LIFE""".split())
-_rl_reddit = RateLimiter(1.0)
+_rl_reddit = RateLimiter(1.0)          # API mit Zugang: 100 Anfragen/Minute erlaubt
+_rl_reddit_rss = RateLimiter(1 / 7)    # ohne Zugang: Reddit drosselt stark
 _rl_st = RateLimiter(0.8)
 
 
@@ -119,9 +120,9 @@ def fetch_reddit(resolve) -> tuple[list[dict], dict]:
         mode = "api"
         sess.headers["Authorization"] = f"bearer {token}"
     for sub in SUBREDDITS:
-        for listing in ("new", "hot"):
+        for listing in (("new", "hot") if token else ("new",)):
             try:
-                _rl_reddit.wait()
+                (_rl_reddit if token else _rl_reddit_rss).wait()
                 if token:
                     r = sess.get(f"https://oauth.reddit.com/r/{sub}/{listing}", params={"limit": 100}, timeout=20)
                     r.raise_for_status()
