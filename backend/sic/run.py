@@ -213,7 +213,7 @@ def assemble(*, state: dict, prices: dict, fundamentals: dict[str, dict], signal
                                                          "Unternehmensnennungen, deren Originalzeitpunkt höchstens "
                                                          f"{config.TRUMP_MAX_AGE_DAYS} Kalendertage zurückliegt. "
                                                          "Erhöht nie den Company Quality Score."},
-                                "mentions": trump},
+                                "mentions": trump, "source_status": dict(politics.TRUMP_STATUS)},
         "market-events.json": {**meta, **{k: v for k, v in market_events.items() if k != "generated_at"}},
         "social.json": {**meta, "stocks": social_stats, "sources": extras.get("social_sources", []),
                         "stocktwits_trending": extras.get("stocktwits_trending", []),
@@ -247,8 +247,8 @@ SOURCES = [
      "limitation": "Kein offizielles Wirksamkeitsdatum; angekündigte Änderungen per index_changes.csv"},
     {"area": "Nachrichten", "source": "Yahoo-Finance-RSS je Ticker, CSV-Import", "status": "connected",
      "limitation": "Nur Schlagzeilen; rotierende Abfrage wegen Rate-Limits"},
-    {"area": "Trump-Aussagen", "source": "whitehouse.gov RSS, CSV-Import (z. B. Truth Social)", "status": "limited",
-     "limitation": "Truth Social ohne kostenlose API -> CSV mit Original-URL"},
+    {"area": "Trump-Aussagen", "source": "Truth Social (öffentliche Schnittstelle), whitehouse.gov RSS, CSV-Import", "status": "connected",
+     "limitation": "Truth Social kann Server-Abrufe blockieren; Status im Trump-Radar"},
     {"area": "Wirtschaftsticker", "source": "Fed, EZB, BLS (RSS); market_calendar.csv", "status": "connected",
      "limitation": "Termine aus offiziellen Kalendern per CSV gepflegt"},
     {"area": "Insider USA", "source": "SEC EDGAR Form 4 (Tagesindex, gesamter Markt)", "status": "connected",
@@ -302,7 +302,8 @@ def run(fetch: bool = True, skip_fundamentals: bool = False, skip_insider: bool 
     signals.sort(key=lambda s: s.get("published_at") or "", reverse=True)
 
     alias_idx = politics.build_alias_index(state["securities"])
-    rows = politics.load_trump_csv() + ((rl.step("trump_feeds", politics.fetch_trump_feeds) or []) if fetch else [])
+    fetched = (rl.step("trump_feeds", politics.fetch_trump_feeds) or []) if fetch else []
+    rows = politics.load_trump_csv() + politics.trump_store(fetched, now)
     trump = rl.step("trump", politics.process_trump, rows, alias_idx, uni, now) or []
     pol_events = rl.step("political_events", politics.load_political_events) or []
     pol_trades = rl.step("political_trades", politics.load_political_trades) or []
@@ -372,7 +373,8 @@ def run(fetch: bool = True, skip_fundamentals: bool = False, skip_insider: bool 
     rep = rl.step("report", report.build_report, stocks=stocks_out, candidates=alerts.candidates(stocks_out),
                   alerts_history=al.get("history", []), market_events=mev, insiders_clusters=insider.cluster_buys(insiders, now=now),
                   superinv=si, pol_trades=pol_trades, trump=trump, social_stats=social_stats,
-                  watchlist=al.get("watchlist", []), conf=conf, now=now)
+                  watchlist=al.get("watchlist", []), conf=conf, now=now, insiders=insiders,
+                  trending=sinfo.get("stocktwits_trending", []))
     if rep:
         rep["sent"] = report.send_report(rep, os.environ.get("COCKPIT_URL")) if morning else False
         payloads["report.json"] = {"generated_at": iso(now), "schema_version": SCHEMA_VERSION, "mode": "live", **rep}

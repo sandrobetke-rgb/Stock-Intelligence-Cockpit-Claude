@@ -74,7 +74,8 @@ def confluence(stocks: list[dict]) -> list[dict]:
 
 def build_report(*, stocks: list[dict], candidates: list[dict], alerts_history: list[dict], market_events: dict,
                  insiders_clusters: list[dict], superinv: dict, pol_trades: list[dict], trump: list[dict],
-                 social_stats: dict, watchlist: list[str], conf: list[dict], now=None) -> dict:
+                 social_stats: dict, watchlist: list[str], conf: list[dict], now=None,
+                 insiders: list[dict] | None = None, trending: list[dict] | None = None) -> dict:
     now = now or utcnow()
     today = now.date()
     # Berichtstag = nächster Handelstag aus Sicht des Abends, bzw. heute am Morgen
@@ -106,6 +107,29 @@ def build_report(*, stocks: list[dict], candidates: list[dict], alerts_history: 
     movers = sorted(((k, v) for k, v in social_stats.items() if v["mentions_24h"] >= 5),
                     key=lambda kv: -(kv[1].get("change_vs_baseline_pct") or 0))[:8]
     note = ("Heute ist Freitag: laut deinen Regeln keine neuen Trades." if day.weekday() == 4 else None)
+    d3 = (today - timedelta(days=3)).isoformat()
+    ins_top = sorted([x for x in (insiders or []) if x.get("open_market") and x.get("transaction_kind") == "buy"
+                      and (x.get("filed_at") or "") >= d3], key=lambda x: -(x.get("value") or 0))[:12]
+    ins_top = [{k: x.get(k) for k in ("id", "symbol", "insider", "role", "value", "currency", "transaction_date", "filed_at",
+                                       "source_url", "superinvestor")} for x in ins_top]
+    d30 = (today - timedelta(days=30)).isoformat()
+    pol_rank: dict[str, dict] = {}
+    for t in pol_trades:
+        if (t.get("disclosure_date") or "") < d30:
+            continue
+        r = pol_rank.setdefault(t["symbol"], {"symbol": t["symbol"], "buyers": set(), "sellers": set(), "in_universe": t.get("in_universe", True)})
+        (r["buyers"] if t["transaction_type"] == "purchase" else r["sellers"]).add(t["politician"])
+    pol_top = sorted(({"symbol": r["symbol"], "buyers": sorted(r["buyers"]), "sellers": len(r["sellers"]), "in_universe": r["in_universe"]}
+                      for r in pol_rank.values() if r["buyers"]), key=lambda r: -len(r["buyers"]))[:8]
+    seen, trump_recent = set(), []
+    for t in sorted(trump, key=lambda t: t.get("statement_at") or "", reverse=True):
+        age = t["bonus"].get("age_days")
+        if age is None or age > 5 or t["statement_id"] in seen and not t.get("symbol"):
+            continue
+        seen.add(t["statement_id"])
+        trump_recent.append({k: t.get(k) for k in ("id", "statement_at", "quote", "quote_de", "symbol", "mention_type", "sectors",
+                                                    "direction", "verification", "source_name", "source_url")} | {"bonus": t["bonus"]["active"]})
+    top_social = sorted(((k, v) for k, v in social_stats.items() if v["mentions_24h"] >= 3), key=lambda kv: -kv[1]["mentions_24h"])[:10]
     return {
         "report_date": dstr, "weekday": WEEKDAY[day.weekday()], "created_at": iso(now), "rule_note": note,
         "macro": macro, "earnings": sorted(earnings, key=lambda e: (not e["watchlist"], e["symbol"])),
@@ -114,6 +138,11 @@ def build_report(*, stocks: list[dict], candidates: list[dict], alerts_history: 
         "trump": trump_new, "social_movers": [{"symbol": k, "mentions_24h": v["mentions_24h"], "change": v.get("change_vs_baseline_pct"),
                                                "sentiment": v.get("sentiment_7d")} for k, v in movers],
         "confluence_top": conf[:10],
+        "insider_buys": ins_top, "politician_most_bought": pol_top, "trump_recent": trump_recent[:12],
+        "social_top": [{"symbol": k, "mentions_24h": v["mentions_24h"], "mentions_7d": v["mentions_7d"],
+                        "bullish": v.get("bullish_7d"), "bearish": v.get("bearish_7d"), "sentiment": v.get("sentiment_7d"),
+                        "manipulation_risk": v.get("manipulation_risk")} for k, v in top_social],
+        "stocktwits_trending": (trending or [])[:12],
     }
 
 
@@ -122,6 +151,22 @@ def send_report(rep: dict, cockpit_url: str | None) -> bool:
     lines = []
     if rep.get("rule_note"):
         lines.append(rep["rule_note"])
+    if rep.get("insider_buys") or rep.get("clusters"):
+        parts = [f"{c['symbol']} (Cluster {c['insiders']})" for c in rep.get("clusters", [])[:4]]
+        parts += [f"{x['symbol']} {round((x.get('value') or 0) / 1e6, 1)} Mio." for x in rep.get("insider_buys", [])[:5]]
+        lines.append("Insider: " + ", ".join(parts))
+    if rep.get("politician_trades") or rep.get("politician_most_bought"):
+        parts = [f"{t['politician'].split()[-1]} {'kauft' if t['transaction_type'] == 'purchase' else 'verkauft'} {t['symbol']}"
+                 for t in rep.get("politician_trades", [])[:4]]
+        if rep.get("politician_most_bought"):
+            parts.append("meistgekauft 30 T.: " + ", ".join(f"{r['symbol']} ({len(r['buyers'])})" for r in rep["politician_most_bought"][:4]))
+        lines.append("Politiker: " + "; ".join(parts))
+    if rep.get("trump_recent"):
+        t = rep["trump_recent"][0]
+        lines.append(f"Trump ({len(rep['trump_recent'])} Aussagen, 5 T.): " + ((t.get("quote_de") or t["quote"])[:110]))
+    if rep.get("social_top") or rep.get("stocktwits_trending"):
+        lines.append("Social: " + ", ".join(f"{s['symbol']} {s['mentions_24h']}" for s in rep.get("social_top", [])[:5])
+                     + (" | Trend: " + ", ".join(t["symbol"] for t in rep.get("stocktwits_trending", [])[:5]) if rep.get("stocktwits_trending") else ""))
     if rep["macro"]:
         lines.append("Termine: " + "; ".join(e["title"] for e in rep["macro"][:4]))
     if rep["earnings"]:

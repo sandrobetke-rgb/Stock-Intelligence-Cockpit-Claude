@@ -176,11 +176,75 @@ def load_trump_csv() -> list[dict]:
         return [r for r in csv.DictReader(fh) if r.get("quote") and not (r.get("statement_at") or "").startswith("#")]
 
 
-def fetch_trump_feeds() -> list[dict]:
+TRUTH_ACCOUNT = "107780257626128497"   # @realDonaldTrump
+TRUTH_API = "https://truthsocial.com/api/v1/accounts/{acc}/statuses?exclude_replies=true&limit=40"
+TRUTH_RSS = "https://truthsocial.com/@realDonaldTrump.rss"
+BROWSER_UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+              "Accept": "application/json, text/html;q=0.9, */*;q=0.8"}
+TRUMP_STORE_DAYS = 90
+TRUMP_STATUS: dict = {}
+
+
+def _html_text(s: str) -> str:
+    import html
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", s or ""))).strip()
+
+
+def fetch_truth_social() -> list[dict]:
+    """Originalbeiträge von Truth Social (öffentliche Mastodon-Schnittstelle, sonst RSS)."""
     import feedparser
     from .util import http_get
 
     rows = []
+    try:
+        data = http_get(TRUTH_API.format(acc=TRUTH_ACCOUNT), headers=BROWSER_UA).json()
+        for st in data:
+            if st.get("reblog"):
+                continue
+            text = _html_text(st.get("content", ""))
+            if len(text) < 5:
+                continue
+            rows.append({"statement_at": st.get("created_at"), "quote": text[:800], "source_name": "Truth Social",
+                         "source_url": st.get("url") or st.get("uri"), "original_url": st.get("url") or st.get("uri"),
+                         "verification": "Verified", "direction_override": "", "symbols_override": "", "context": "truthsocial-api"})
+        TRUMP_STATUS["truthsocial"] = f"ok (API, {len(rows)} Beiträge)"
+        return rows
+    except Exception as exc:  # noqa: BLE001
+        TRUMP_STATUS["truthsocial"] = f"API: {exc}"[:150]
+    try:
+        feed = feedparser.parse(http_get(TRUTH_RSS, headers=BROWSER_UA).content)
+        for e in feed.entries:
+            text = _html_text(e.get("summary") or e.get("title", ""))
+            if len(text) >= 5:
+                rows.append({"statement_at": e.get("published"), "quote": text[:800], "source_name": "Truth Social",
+                             "source_url": e.get("link", ""), "original_url": e.get("link", ""), "verification": "Verified",
+                             "direction_override": "", "symbols_override": "", "context": "truthsocial-rss"})
+        TRUMP_STATUS["truthsocial"] = f"ok (RSS, {len(rows)} Beiträge)" if rows else TRUMP_STATUS["truthsocial"] + " | RSS leer"
+    except Exception as exc:  # noqa: BLE001
+        TRUMP_STATUS["truthsocial"] += f" | RSS: {exc}"[:150]
+    return rows
+
+
+def trump_store(new_rows: list[dict], now: datetime | None = None) -> list[dict]:
+    """Aussagen 90 Tage speichern, damit Historie und Fünf-Tage-Regel auch in Läufen ohne Abruf greifen."""
+    from .util import read_json, write_json_atomic
+    now = now or utcnow()
+    path = config.STATE_DIR / "trump_statements.json"
+    store = {(r.get("original_url") or r.get("source_url") or "") + "|" + r["quote"][:80]: r for r in read_json(path, [])}
+    for r in new_rows:
+        store[(r.get("original_url") or r.get("source_url") or "") + "|" + r["quote"][:80]] = r
+    cutoff = now - timedelta(days=TRUMP_STORE_DAYS)
+    rows = [r for r in store.values() if (parse_dt(r.get("statement_at"))[0] or now) >= cutoff]
+    if new_rows:
+        write_json_atomic(path, rows)
+    return rows
+
+
+def fetch_trump_feeds() -> list[dict]:
+    import feedparser
+    from .util import http_get
+
+    rows = fetch_truth_social()
     for src in config.TRUMP_SOURCES:
         try:
             feed = feedparser.parse(http_get(src["url"]).content)
@@ -191,7 +255,7 @@ def fetch_trump_feeds() -> list[dict]:
             text = f"{e.get('title', '')}. {re.sub('<[^>]+>', ' ', e.get('summary', ''))}"
             if "trump" not in text.lower() and "president" not in text.lower():
                 continue
-            rows.append({"statement_at": e.get("published"), "quote": text[:600], "source_name": "The White House",
+            rows.append({"statement_at": e.get("published"), "quote": _html_text(text)[:600], "source_name": "The White House",
                          "source_url": e.get("link", ""), "original_url": e.get("link", ""),
                          "verification": "", "direction_override": "", "symbols_override": "",
                          "context": src["id"]})

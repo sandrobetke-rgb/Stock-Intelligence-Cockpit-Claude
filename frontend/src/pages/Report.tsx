@@ -1,6 +1,6 @@
 import { STATUS_LABEL, fmt, useData } from "../data";
 import type { Report } from "../types";
-import { CompanyLink, Empty, Gate, Page, Panel, Tag } from "../ui";
+import { CompanyLink, Direction, Empty, Gate, Page, Panel, Tag } from "../ui";
 
 export function ReportPage() {
   const s = useData<Report>("report.json");
@@ -10,6 +10,43 @@ export function ReportPage() {
         <Page title={`Tagesbericht ${r.weekday}, ${fmt.date(r.report_date)}`}
           intro={<>Erstellt {fmt.dt(r.created_at)}. Alles Wichtige für den Handelstag auf einen Blick. Hinweise, keine Anlageberatung.</>}>
           {r.rule_note ? <p className="state state-warn">{r.rule_note}</p> : null}
+          <div className="grid-2">
+            <Panel title="Insiderkäufe (letzte 3 Tage)" note="Käufe am offenen Markt laut SEC Form 4, größte zuerst. Cluster = mehrere Insider derselben Firma.">
+              <ul className="plain small">
+                {r.clusters.map((c) => <li key={"c" + c.symbol}><Tag tone="ok">Cluster</Tag> <CompanyLink symbol={c.symbol} />: {c.insiders} Insider, {fmt.big(c.value, "USD")}</li>)}
+                {(r.insider_buys ?? []).map((x) => <li key={x.id}><CompanyLink symbol={x.symbol} />: {x.insider} <span className="muted">({x.role})</span> kauft für <strong>{fmt.big(x.value, x.currency)}</strong>{x.superinvestor ? <Tag tone="hi">{x.superinvestor}</Tag> : null} <a href={x.source_url} target="_blank" rel="noopener noreferrer">SEC</a></li>)}
+                {!r.clusters.length && !(r.insider_buys ?? []).length ? <li className="muted">Keine neuen Insiderkäufe.</li> : null}
+              </ul>
+            </Panel>
+            <Panel title="Politiker-Trades" note="Neu gemeldet (2 Tage) und meistgekauft der letzten 30 Tage.">
+              <ul className="plain small">
+                {r.politician_trades.slice(0, 10).map((t) => <li key={t.id}><Tag tone={t.transaction_type === "purchase" ? "ok" : "err"}>{t.transaction_type === "purchase" ? "Kauf" : "Verkauf"}</Tag> {t.politician}: {t.in_universe ? <CompanyLink symbol={t.symbol} /> : <strong>{t.symbol}</strong>} <span className="muted">({fmt.date(t.transaction_date)})</span></li>)}
+                {!r.politician_trades.length ? <li className="muted">Keine neuen Meldungen in den letzten 2 Tagen.</li> : null}
+              </ul>
+              {(r.politician_most_bought ?? []).length ? <>
+                <h3>Meistgekauft (30 Tage)</h3>
+                <ul className="plain small">{r.politician_most_bought!.map((p) => <li key={p.symbol}>{p.in_universe ? <CompanyLink symbol={p.symbol} /> : <strong>{p.symbol}</strong>}: {p.buyers.length} Käufer <span className="muted">({p.buyers.slice(0, 3).join(", ")})</span></li>)}</ul>
+              </> : null}
+            </Panel>
+          </div>
+          <div className="grid-2">
+            <Panel title="Trump-Aussagen (5 Tage)" note="Aus Truth Social und vom Weißen Haus. Sonderbonus nur bei verifizierter, direkter Unternehmensnennung.">
+              <ul className="plain small">
+                {(r.trump_recent ?? []).map((t) => <li key={t.id}>
+                  <span className="muted">{fmt.dt(t.statement_at)}</span> {t.symbol ? <CompanyLink symbol={t.symbol} /> : t.sectors.length ? <Tag>{t.sectors.join(", ")}</Tag> : null} <Direction d={t.direction} />{t.bonus ? <Tag tone="hi">Bonus</Tag> : null}
+                  <div>„{(t.quote_de || t.quote).slice(0, 220)}“ <a href={t.source_url} target="_blank" rel="noopener noreferrer">{t.source_name}</a></div>
+                </li>)}
+                {!(r.trump_recent ?? []).length ? <li className="muted">Keine Aussagen in den letzten 5 Tagen erfasst.</li> : null}
+              </ul>
+            </Panel>
+            <Panel title="Social Media" note="Meistdiskutiert in 24 Std. (Reddit, StockTwits) und StockTwits-Trends.">
+              <ul className="plain small">
+                {(r.social_top ?? []).map((m) => <li key={m.symbol}><CompanyLink symbol={m.symbol} />: {m.mentions_24h} Beiträge{m.bullish || m.bearish ? <> (<span className="pos">{m.bullish} bullish</span> / <span className="neg">{m.bearish} bearish</span>, 7 T.)</> : null}{m.manipulation_risk === "hoch" ? <Tag tone="err">Hype-Verdacht</Tag> : null}</li>)}
+              </ul>
+              {r.social_movers.length ? <><h3>Stärkste Anstiege</h3><ul className="plain small">{r.social_movers.map((m) => <li key={m.symbol}><CompanyLink symbol={m.symbol} />: {m.mentions_24h}{m.change != null ? ` (${m.change > 0 ? "+" : ""}${m.change} %)` : ""}</li>)}</ul></> : null}
+              {(r.stocktwits_trending ?? []).length ? <p className="small"><strong>Trend auf StockTwits:</strong> {r.stocktwits_trending!.map((t) => t.symbol).join(", ")}</p> : null}
+            </Panel>
+          </div>
           <div className="grid-2">
             <Panel title="Termine">
               {r.macro.length || r.earnings.length ? (
@@ -27,6 +64,13 @@ export function ReportPage() {
               ) : <Empty>Nichts Neues zu deinen Aktien.</Empty>}
             </Panel>
           </div>
+          <Panel title="Signal-Zusammenfluss (Top 10)">
+            {r.confluence_top.length ? (
+              <ul className="plain">{r.confluence_top.map((c) => (
+                <li key={c.symbol}><CompanyLink symbol={c.symbol} name={c.name} /> <span className="conf-n">{c.count}</span> {c.positives.map((x) => <Tag key={x} tone="ok">{x}</Tag>)}{c.warnings.map((x) => <Tag key={x} tone="warn">{x}</Tag>)}</li>
+              ))}</ul>
+            ) : <Empty>Keine Aktie mit mehreren gleichzeitigen Signalen.</Empty>}
+          </Panel>
           <Panel title={`Swing-Kandidaten (${r.candidates.length})`} note="Setup + Abendfilter erfüllt, keine Zahlen in den nächsten 5 Tagen. Einstieg nur nach deiner 1H-Regel ab 16:00 MEZ.">
             {r.candidates.length ? (
               <div className="table-wrap"><table className="data compact">
@@ -39,29 +83,11 @@ export function ReportPage() {
               </table></div>
             ) : <Empty>Heute kein Kandidat. Das ist ein gültiges Ergebnis.</Empty>}
           </Panel>
-          <Panel title="Signal-Zusammenfluss (Top 10)">
-            {r.confluence_top.length ? (
-              <ul className="plain">{r.confluence_top.map((c) => (
-                <li key={c.symbol}><CompanyLink symbol={c.symbol} name={c.name} /> <span className="conf-n">{c.count}</span> {c.positives.map((x) => <Tag key={x} tone="ok">{x}</Tag>)}{c.warnings.map((x) => <Tag key={x} tone="warn">{x}</Tag>)}</li>
-              ))}</ul>
-            ) : <Empty>Keine Aktie mit mehreren gleichzeitigen Signalen.</Empty>}
+          <Panel title="Superinvestoren: neue Quartalsmeldungen">
+            {r.superinvestor_filings.length ? (
+              <ul className="plain small">{r.superinvestor_filings.map((m) => <li key={m.manager}><Tag tone="hi">13F</Tag> {m.manager} (Stichtag {fmt.date(m.report_date)}): {m.new} neu{m.top_new.length ? ` (${m.top_new.join(", ")})` : ""}, {m.sold_out} komplett verkauft</li>)}</ul>
+            ) : <Empty>Keine neuen 13F-Meldungen seit gestern.</Empty>}
           </Panel>
-          <div className="grid-2">
-            <Panel title="Neu seit gestern">
-              <ul className="plain small">
-                {r.clusters.map((c) => <li key={c.symbol}><Tag tone="ok">Cluster-Kauf</Tag> <CompanyLink symbol={c.symbol} />: {c.insiders} Insider, {fmt.big(c.value, "USD")}</li>)}
-                {r.superinvestor_filings.map((m) => <li key={m.manager}><Tag tone="hi">13F</Tag> {m.manager} (Stichtag {fmt.date(m.report_date)}): {m.new} neu{m.top_new.length ? ` (${m.top_new.join(", ")})` : ""}, {m.sold_out} komplett verkauft</li>)}
-                {r.politician_trades.slice(0, 12).map((t) => <li key={t.id}><Tag tone={t.transaction_type === "purchase" ? "ok" : "err"}>Politiker</Tag> {t.politician}: {t.transaction_type === "purchase" ? "Kauf" : "Verkauf"} {t.symbol}</li>)}
-                {r.trump.map((t) => <li key={t.id}><Tag tone="hi">Trump</Tag> {t.symbol}: „{(t.quote_de || t.quote).slice(0, 120)}“</li>)}
-                {!r.clusters.length && !r.superinvestor_filings.length && !r.politician_trades.length && !r.trump.length ? <li className="muted">Keine neuen Meldungen.</li> : null}
-              </ul>
-            </Panel>
-            <Panel title="Social Media: stärkste Anstiege (24 Std.)">
-              {r.social_movers.length ? (
-                <ul className="plain small">{r.social_movers.map((m) => <li key={m.symbol}><CompanyLink symbol={m.symbol} />: {m.mentions_24h} Beiträge{m.change != null ? ` (${m.change > 0 ? "+" : ""}${m.change} %)` : ""}, Stimmung {fmt.num(m.sentiment, 2)}</li>)}</ul>
-              ) : <Empty>Keine auffälligen Bewegungen.</Empty>}
-            </Panel>
-          </div>
         </Page>
       )}
     </Gate>
