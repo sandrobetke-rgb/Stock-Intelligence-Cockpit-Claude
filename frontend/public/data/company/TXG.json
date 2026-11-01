@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T07:30:04Z",
+ "generated_at": "2026-11-01T07:41:52Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -138,11 +138,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 13.7,
+   "score": 50.7,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 10,
    "independent_24h": 0
   },
   "political": {
@@ -153,7 +155,14 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 1,
+   "manipulation_risk": "unauffällig",
+   "mentions_24h": 1,
+   "sentiment_7d": 0.0,
+   "bullish_7d": 0,
+   "bearish_7d": 0
+  },
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
@@ -616,15 +625,15 @@
   ]
  },
  "intelligence_detail": {
-  "score": 13.7,
+  "score": 50.7,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 60,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 77.6,
-   "social_attention": null,
+   "social_attention": 25.0,
    "insider_activity": null
   },
   "windows": {
@@ -638,26 +647,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 10,
+    "independent": 10,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 20,
+    "independent": 20,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -675,7 +686,460 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "232bb94e4ce7b192",
+   "symbols": [
+    "BEAM",
+    "CRSP",
+    "ILMN",
+    "TXG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Promising Genomics Stocks to Add to Your Portfolio Now",
+   "summary": "Genomics and synthetic biology are transforming healthcare through precision medicine and gene editing, putting ILMN, QURE and TXG in focus as the markets expand.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/3-promising-genomics-stocks-add-130900369.html?.tsrc=rss",
+   "published_at": "2026-10-30T13:09:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:02:04Z",
+   "fingerprint": "20182e828e73c0bf",
+   "primary_source": false,
+   "cluster_id": "232bb94e4ce7b192",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "3 vielversprechende Genomik-Aktien, die Sie jetzt zu Ihrem Portfolio hinzufügen können"
+  },
+  {
+   "id": "7cbf063f7d6fe218",
+   "symbols": [
+    "BDX",
+    "PACB",
+    "TXG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Will TXG Stock Ever Get Back To Its Old High?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/txg/articles/621558/will-txg-stock-ever-get-back-to-its-old-high/2026-10-30?.tsrc=rss",
+   "published_at": "2026-10-30T10:49:49Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:20Z",
+   "fingerprint": "078d44d49ee7e129",
+   "primary_source": false,
+   "cluster_id": "7cbf063f7d6fe218",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Wird die TXG-Aktie jemals wieder auf ihr altes Hoch zurückkehren?"
+  },
+  {
+   "id": "9bd57c5402d96830",
+   "symbols": [
+    "QIA.DE",
+    "TXG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Single-Cell eQTL Clinical Workflows Market Forecast to Reach $4.51 Billion by 2030 | Capitalize on 19.9% CAGR with Illumina, QIAGEN, 10x Genomics, Singleron and More",
+   "summary": "Dublin, Oct. 29, 2026 (GLOBE NEWSWIRE) -- \"Single-Cell Expression Quantitative Trait Locus (EQTL) Clinical Workflows Global Market Report 2026\" has been added to ResearchAndMarkets.com's offering. The global single-cell expression quantitative trait locus (eQTL) clinical workflow",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/single-cell-eqtl-clinical-workflows-152700378.html?.tsrc=rss",
+   "published_at": "2026-10-29T15:27:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:40Z",
+   "fingerprint": "6728a1e246b3e4e8",
+   "primary_source": false,
+   "cluster_id": "9bd57c5402d96830",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f5c80dcfd8ebd656",
+   "symbols": [
+    "TXG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Slide-DNA-Sequencing for Copy Number Mapping Global Market Report 2026 | Capitalize on AI and Spatial Genomics with Illumina, 10x Genomics and BGI Genomics",
+   "summary": "Dublin, Oct. 29, 2026 (GLOBE NEWSWIRE) -- \"Slide-Deoxyribonucleic Acid (DNA)-Sequencing for Copy Number Mapping Global Market Report 2026\" has been added to ResearchAndMarkets.com's offering. The global slide-deoxyribonucleic acid (DNA) sequencing for copy number mapping market i",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/slide-dna-sequencing-copy-number-152600109.html?.tsrc=rss",
+   "published_at": "2026-10-29T15:26:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:45:28Z",
+   "fingerprint": "79a792aa2e0b4b41",
+   "primary_source": false,
+   "cluster_id": "f5c80dcfd8ebd656",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c0f876d9991f69b6",
+   "symbols": [
+    "QIA.DE",
+    "TXG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Long-Read Full-Length cDNA Sequencing Global Market Report 2026 | Capitalize on 18.9% CAGR and Single-Cell Demand With PacBio, Oxford Nanopore, 10x Genomics and QIAGEN",
+   "summary": "Players: Eurofins, Bio-Rad, QIAGEN, 10x Genomics, PacBio. Profile: cDNA sequencing technologies, products, applications, trends and competition.Dublin, Oct. 29, 2026 (GLOBE NEWSWIRE) -- \"Long-Read Full-Length Complementary Deoxyribonucleic Acid (CDNA) Sequencing Global Market Rep",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/long-read-full-length-cdna-143600566.html?.tsrc=rss",
+   "published_at": "2026-10-29T14:36:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:40Z",
+   "fingerprint": "65ebc8de1c447b65",
+   "primary_source": false,
+   "cluster_id": "c0f876d9991f69b6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "46fd792324bd3b53",
+   "symbols": [
+    "BFLY",
+    "TXG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Butterfly Network, Inc. (BFLY) Reports Q3 Loss, Beats Revenue Estimates",
+   "summary": "Butterfly Network (BFLY) delivered earnings and revenue surprises of +66.67% and +16.05%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/butterfly-network-inc-bfly-reports-104503025.html?.tsrc=rss",
+   "published_at": "2026-10-29T10:45:03Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:28:25Z",
+   "fingerprint": "15ed3fc3598034c9",
+   "primary_source": false,
+   "cluster_id": "46fd792324bd3b53",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3438d186e1b80709",
+   "symbols": [
+    "TWST",
+    "TXG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Twist Bioscience Soars 12%, 10x Genomics Up 12% as Genomics Stocks Rebound",
+   "summary": "Key TakeawaysTwist Bioscience and 10x Genomics both rose 12% today, and neither company had news of its own. ICON rose 13% after its third-quarter gross bookings jumped 26.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/twist-bioscience-soars-12-10x-genomics-up-12-as-genomics-stocks-rebound?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-28T18:34:51Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:45:27Z",
+   "fingerprint": "6b74e7a7943a1ecd",
+   "primary_source": false,
+   "cluster_id": "3438d186e1b80709",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "809c3d923e735488",
+   "symbols": [
+    "TWST",
+    "TXG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Absci Soars 12%, Schrödinger Up 11%, Recursion Up 9% as AI Drug Discovery Stocks Rally",
+   "summary": "Key TakeawaysAbsci rose 12% today, Schrödinger 11% and Recursion 9%, and no company news explains any of the three moves. Schrödinger’s rally has the most business behind it, and Absci’s rally is mostly about investors’ appetite for risk.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/absci-soars-12-schrodinger-up-11-recursion-up-9-as-ai-drug-discovery-stocks-rally?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-28T16:11:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:45:27Z",
+   "fingerprint": "3544f1749d5f6da3",
+   "primary_source": false,
+   "cluster_id": "809c3d923e735488",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "739db1980d1ed715",
+   "symbols": [
+    "TXG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "10x Genomics (TXG) Stock Looks Expensive On Its 485% One Year Run",
+   "summary": "10x Genomics has delivered a very strong share price run, and the question now is whether the current valuation can be supported by its sales. With that kind of move already in the rear-view mirror, you need to know if the revenue base is enough to justify where the stock trades ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/10x-genomics-txg-stock-looks-061726352.html?.tsrc=rss",
+   "published_at": "2026-10-28T06:17:26Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:45:28Z",
+   "fingerprint": "69a97896363e5580",
+   "primary_source": false,
+   "cluster_id": "739db1980d1ed715",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "489ce88819595c49",
+   "symbols": [
+    "TXG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "10x Genomics to Participate in the 2026 Jefferies Global Healthcare Conference",
+   "summary": "10x Genomics, Inc. (Nasdaq: TXG), the life science technology leader focused on accelerating science and advancing human health, announced today that members of its management team will participate in a fireside chat at the 2026 Jefferies Global Healthcare Conference in London on",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/10x-genomics-participate-2026-jefferies-200500715.html?.tsrc=rss",
+   "published_at": "2026-10-27T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:45:28Z",
+   "fingerprint": "32896c5715d4a78b",
+   "primary_source": false,
+   "cluster_id": "489ce88819595c49",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4c268b685a12e0f9",
+   "symbols": [
+    "TXG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 unprofitable stock with exciting potential and 2 that underwhelm",
+   "summary": "Unprofitable companies can burn through cash quickly, leaving investors exposed if they fail to turn things around. Without a clear path to profitability, these businesses risk running out of capital or relying on dilutive fundraising.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-unprofitable-stock-exciting-potential-184039154.html?.tsrc=rss",
+   "published_at": "2026-10-23T18:40:39Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:45:28Z",
+   "fingerprint": "29fe0acb3b20a227",
+   "primary_source": false,
+   "cluster_id": "4c268b685a12e0f9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "63e8e1e74d222bab",
+   "symbols": [
+    "TXG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Healthcare Stocks That Concern Us",
+   "summary": "From novel pharmaceuticals to telemedicine, most healthcare companies are on a mission to drive better patient outcomes. Players catalyzing medical advancements have benefited from elevated demand, and their momentum is only rising as the industry has posted a 25.2% gain over the",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/3-healthcare-stocks-concern-us-132855491.html?.tsrc=rss",
+   "published_at": "2026-10-19T13:28:55Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:45:28Z",
+   "fingerprint": "dd73da0d79c339b1",
+   "primary_source": false,
+   "cluster_id": "63e8e1e74d222bab",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "605278fea3b1b0c8",
+   "symbols": [
+    "TXG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Cathie Wood-Led Ark Invest's Biggest Q3 Winners And Losers — PLTR, NVDA, TXG Led While TSLA, RKLB Dragged",
+   "summary": "Ark's latest quarterly report shows that several stocks made meaningful contributions across multiple ETFs.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "stocktwits.com",
+   "url": "https://stocktwits.com/news-articles/markets/equity/cathie-wood-ark-invest-biggest-q3-winners-losers-pltr-nvda-txg-tsla-rklb/cZxkcykRBtO?.tsrc=rss",
+   "published_at": "2026-10-17T08:29:33Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:45:28Z",
+   "fingerprint": "bf9247e39311623b",
+   "primary_source": false,
+   "cluster_id": "605278fea3b1b0c8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "66116f4c4e4587ae",
+   "symbols": [
+    "TXG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "10x Genomics (TXG) Stock Fair Value Rises After Analysts Back AI And Atera Demand",
+   "summary": "Analysts have lifted their Fair Value estimate for 10x Genomics from about US$62.13 to about US$75.67, a change of roughly 22% in the latest round of models. Much of this reset in price targets ties back to Street commentary around AI driven demand, interest in the Atera spatial ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/10x-genomics-txg-stock-fair-112019243.html?.tsrc=rss",
+   "published_at": "2026-10-16T11:20:19Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:45:28Z",
+   "fingerprint": "ad644c493739bed7",
+   "primary_source": false,
+   "cluster_id": "66116f4c4e4587ae",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d089e2dccd0a7012",
+   "symbols": [
+    "TXG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Reasons to Sell TXG and 1 Stock to Buy Instead",
+   "summary": "What a fantastic six months it’s been for 10x Genomics. Shares of the company have skyrocketed 187%, hitting $72.70. This was partly thanks to its solid quarterly results, and the performance may have investors wondering how to approach the situation.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-reasons-sell-txg-1-135227081.html?.tsrc=rss",
+   "published_at": "2026-10-15T13:52:27Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:45:28Z",
+   "fingerprint": "e039c76711dc7052",
+   "primary_source": false,
+   "cluster_id": "d089e2dccd0a7012",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9590864fb98238e3",
+   "symbols": [
+    "TXG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "10x Genomics to Report Third Quarter 2026 Financial Results on November 5, 2026",
+   "summary": "10x Genomics, Inc. (Nasdaq: TXG), the life science technology leader focused on accelerating science and advancing human health, announced it will report financial results for the third quarter ended September 30, 2026 after market close on Thursday, November 5, 2026. The company",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/10x-genomics-report-third-quarter-200500526.html?.tsrc=rss",
+   "published_at": "2026-10-13T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:45:28Z",
+   "fingerprint": "2af487348ed02612",
+   "primary_source": false,
+   "cluster_id": "9590864fb98238e3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e12513f3b3e77f74",
+   "symbols": [
+    "TXG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Are 10x Genomics (TXG) Shares Soaring Today",
+   "summary": "Shares of biotech company 10x Genomics (NASDAQ:TXG) jumped 6.1% in the morning session after Bank of America raised its price target on the stock to $80 from $50 while keeping a Neutral rating.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-10x-genomics-txg-shares-002710214.html?.tsrc=rss",
+   "published_at": "2026-10-10T00:27:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:45:28Z",
+   "fingerprint": "f03e27566004eb56",
+   "primary_source": false,
+   "cluster_id": "e12513f3b3e77f74",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2d6571c8647982d9",
+   "symbols": [
+    "TXG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is 10x Genomics (TXG) Using Its Fred Hutch Oncology Alliance To Redefine Its Clinical Moat?",
+   "summary": "In early October 2026, 10x Genomics announced a multi-project research collaboration with Fred Hutchinson Cancer Center to apply its Flex Apex, Xenium and, later, Atera platforms to biomarker discovery in advanced bladder cancer and residual disease detection in acute myeloid leu",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/10x-genomics-txg-using-fred-091722393.html?.tsrc=rss",
+   "published_at": "2026-10-09T09:17:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:45:28Z",
+   "fingerprint": "5b892cc0a9c10bdc",
+   "primary_source": false,
+   "cluster_id": "2d6571c8647982d9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5c49076bc972d8ef",
+   "symbols": [
+    "TXG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "10x Genomics & Fred Hutch Join Forces on Cancer Biomarker Research",
+   "summary": "TXG teams up with Fred Hutchinson Cancer Center to advance precision oncology through single-cell and spatial technologies targeting two cancer types.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/10x-genomics-fred-hutch-join-132100363.html?.tsrc=rss",
+   "published_at": "2026-10-08T13:21:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:45:28Z",
+   "fingerprint": "56f050ddc299fe80",
+   "primary_source": false,
+   "cluster_id": "5c49076bc972d8ef",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ca0581084ed22f75",
+   "symbols": [
+    "TXG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "10x Genomics Announces New Collaboration to Advance Single Cell and Spatial Applications Across Solid Tumors and Blood Cancers",
+   "summary": "10x Genomics, Inc. (Nasdaq: TXG), the life science technology leader focused on accelerating science and advancing human health, today announced a multi-project research collaboration with Fred Hutchinson Cancer Center (Fred Hutch), one of the nation's leading cancer research ins",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/10x-genomics-announces-collaboration-advance-130000951.html?.tsrc=rss",
+   "published_at": "2026-10-07T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:45:28Z",
+   "fingerprint": "1cd2c9358f559766",
+   "primary_source": false,
+   "cluster_id": "ca0581084ed22f75",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],
@@ -718,6 +1182,39 @@
    "report_date": "2026-06-30"
   }
  ],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 1,
+  "mentions_7d": 1,
+  "mentions_30d": 1,
+  "change_vs_baseline_pct": null,
+  "engagement_7d": 0.0,
+  "sentiment_7d": 0.0,
+  "sentiment_basis": "algorithmisch (Lexikon)",
+  "bullish_7d": 0,
+  "bearish_7d": 0,
+  "by_platform_7d": {
+   "reddit": 1
+  },
+  "communities_7d": {
+   "r/ValueInvesting": 1
+  },
+  "platforms": [
+   "reddit"
+  ],
+  "manipulation_flags": [],
+  "manipulation_risk": "unauffällig",
+  "top_posts": [
+   {
+    "platform": "reddit",
+    "community": "r/ValueInvesting",
+    "author": "doctorsauceboi",
+    "posted_at": "2026-11-01T05:21:35Z",
+    "url": "https://www.reddit.com/r/ValueInvesting/comments/1xkuxi0/thank_you_mohnish_pabrai/",
+    "text": "Thank You Mohnish Pabrai    90% of the time a stranger on the internet tells you something is is 50% accurate. That’s what I always tell people… and sadly it is becoming more and more true.   Now with AI, it is becoming so easy to just BS and lie and sound smart without having any idea what you are talking about.    Since everyone seems to be in this race to be the fake most impressive or importan",
+    "engagement": 0.0,
+    "sentiment_label": null
+   }
+  ]
+ },
  "history": []
 }

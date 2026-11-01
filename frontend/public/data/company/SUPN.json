@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T07:30:04Z",
+ "generated_at": "2026-11-01T07:41:52Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -137,12 +137,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 14.9,
+   "score": 64.3,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 15,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -614,11 +616,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 14.9,
+  "score": 64.3,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 80,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 84.3,
@@ -627,35 +629,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 15,
+    "independent": 15,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 19,
+    "independent": 19,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -673,7 +677,438 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "ef0d1ff4706f5e9b",
+   "symbols": [
+    "SUPN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "SUPN Q3 deep dive: robust portfolio growth and integration priorities amid Indivior merger",
+   "summary": "Specialty pharmaceutical company Supernus Pharmaceuticals (NASDAQ:SUPN) announced better-than-expected revenue in Q3 2026, with sales up 18.1% year on year to $226.8 million. The company’s full-year revenue guidance of $887.5 million at the midpoint came in 1.5% above analysts’ e",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/supn-q3-deep-dive-robust-015500720.html?.tsrc=rss",
+   "published_at": "2026-11-01T01:55:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:44:22Z",
+   "fingerprint": "68768490c2117734",
+   "primary_source": false,
+   "cluster_id": "ef0d1ff4706f5e9b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "SUPN Q3 Deep Dive: Robustes Portfoliowachstum und Integrationsprioritäten inmitten der Indivior-Fusion"
+  },
+  {
+   "id": "da4643f1a5b4cc9a",
+   "symbols": [
+    "INDV",
+    "SUPN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Indivior Pharmaceuticals (INDV) Could Be 30% Undervalued On Its Turnaround Narrative",
+   "summary": "Indivior Pharmaceuticals (INDV) moved back into focus after reporting record third quarter earnings and reaffirming its 2026 revenue outlook. This gave investors fresh numbers to weigh alongside an approved merger with Supernus Pharmaceuticals. Over the past year Indivior Pharmac",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/indivior-pharmaceuticals-indv-could-30-222027063.html?.tsrc=rss",
+   "published_at": "2026-10-30T22:20:27Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:08Z",
+   "fingerprint": "f3c1acc859c5613c",
+   "primary_source": false,
+   "cluster_id": "da4643f1a5b4cc9a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Indivior Pharmaceuticals (INDV) könnte bei seiner Turnaround-Erzählung um 30% unterschätzt werden"
+  },
+  {
+   "id": "bb363e040a644427",
+   "symbols": [
+    "SUPN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Supernus (SUPN) Q3 2026 Earnings Call Transcript",
+   "summary": "Qelbree prescriptions surged 18% as revenue hit $226.8 million ahead of Indivior merger.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/30/supernus-supn-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-30T15:44:18Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:44:22Z",
+   "fingerprint": "ebcce12ab8d3275a",
+   "primary_source": false,
+   "cluster_id": "bb363e040a644427",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8c715fe6e6fb8e41",
+   "symbols": [
+    "SUPN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Supernus Pharmaceuticals, Inc. Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Supernus Pharmaceuticals, Inc.'s Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-supernus-pharmaceuticals-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-30T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:44:22Z",
+   "fingerprint": "9e441c5b25ae01ae",
+   "primary_source": false,
+   "cluster_id": "8c715fe6e6fb8e41",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e48ae8d81f88d1b1",
+   "symbols": [
+    "INDV",
+    "SUPN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Indivior Pharmaceuticals (INDV) Shareholders Back Merger After Record Third Quarter",
+   "summary": "Indivior Pharmaceuticals (NasdaqGS: INDV) reported record third quarter results, highlighting its strongest Q3 performance to date. Shareholders approved a merger with Supernus Pharmaceuticals that will see the combined business operate under the Supernus brand. The transaction i",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/indivior-pharmaceuticals-indv-shareholders-back-051526361.html?.tsrc=rss",
+   "published_at": "2026-10-30T05:15:26Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:11:08Z",
+   "fingerprint": "19cd1b07f1bbb22a",
+   "primary_source": false,
+   "cluster_id": "e48ae8d81f88d1b1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Indivior Pharmaceuticals (INDV) Aktionäre kehren nach Rekordquartal zurück"
+  },
+  {
+   "id": "7796b3e70928fad9",
+   "symbols": [
+    "SUPN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Supernus Pharmaceuticals Q3 Earnings Call Highlights",
+   "summary": "Supernus Pharmaceuticals (NASDAQ:SUPN) reported record third-quarter revenue and higher sales across its growth portfolio, while management said its planned merger with Indivior Pharmaceuticals is expected to close Nov. 2 following shareholder approvals. Total revenue rose 18% ye",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-supernus-pharmaceuticals-q3-earnings-call-highlights-2026-10-29/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-29T22:15:14Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:44:22Z",
+   "fingerprint": "934d83fcae4038c4",
+   "primary_source": false,
+   "cluster_id": "7796b3e70928fad9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cc9e0873cd986345",
+   "symbols": [
+    "SUPN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Supernus Pharmaceuticals (SUPN) Beats Q3 Earnings and Revenue Estimates",
+   "summary": "Supernus (SUPN) delivered earnings and revenue surprises of +89.80% and +1.39%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/supernus-pharmaceuticals-supn-beats-q3-220512623.html?.tsrc=rss",
+   "published_at": "2026-10-29T22:05:12Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:44:22Z",
+   "fingerprint": "2666c8b9e8d3f59c",
+   "primary_source": false,
+   "cluster_id": "cc9e0873cd986345",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "492cff58bde43cb3",
+   "symbols": [
+    "SUPN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Supernus: Q3 Earnings Snapshot",
+   "summary": "(AP) — Supernus Pharmaceuticals Inc. (SUPN) on Thursday reported profit of $20.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/supernus-q3-earnings-snapshot-204234921.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:42:34Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:44:22Z",
+   "fingerprint": "9cc851c3cd213e05",
+   "primary_source": false,
+   "cluster_id": "492cff58bde43cb3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e9afa60265bd54cd",
+   "symbols": [
+    "SUPN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Supernus Pharmaceuticals (NASDAQ:SUPN) delivers impressive Q3 2026, full-year sales guidance is optimistic",
+   "summary": "Specialty pharmaceutical company Supernus Pharmaceuticals (NASDAQ:SUPN) beat Wall Street’s revenue expectations in Q3 2026, with revenue rising 18.1% year on year to $226.8 million. The company’s full-year revenue guidance of $887.5 million at the midpoint came in 1.5% above anal",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/supernus-pharmaceuticals-nasdaq-supn-delivers-202031969.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:20:31Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:44:22Z",
+   "fingerprint": "db0a6812f835f364",
+   "primary_source": false,
+   "cluster_id": "e9afa60265bd54cd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3bc6b6d0718f8d68",
+   "symbols": [
+    "SUPN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Supernus Announces Third Quarter 2026 Financial Results",
+   "summary": "Record total revenues of $226.8 million in the third quarter 2026, an 18% increase compared to same period last year.Combined revenues of the Company's four growth products increased to $192.2 million in the third quarter 2026, representing an increase of 29% compared to the same",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/supernus-announces-third-quarter-2026-200500829.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:44:22Z",
+   "fingerprint": "baf67e165894c250",
+   "primary_source": false,
+   "cluster_id": "3bc6b6d0718f8d68",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6721f52b8f6e2ad7",
+   "symbols": [
+    "HURN",
+    "INDV",
+    "SUPN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Updated Effective Date: Huron Consulting Group Set to Join S&P SmallCap 600",
+   "summary": "Huron Consulting Group Inc. (NASD: HURN) will replace Supernus Pharmaceuticals Inc. (NASD: SUPN) in the S&amp;P SmallCap 600 before the opening of trading on Tuesday, November 3, instead of Monday, November 2. S&amp;P SmallCap 600 constituent Indivior Pharmaceuticals Inc. (NASD: ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/updated-effective-date-huron-consulting-214300127.html?.tsrc=rss",
+   "published_at": "2026-10-28T21:43:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:10:40Z",
+   "fingerprint": "ebd5d19b9591a7d3",
+   "primary_source": false,
+   "cluster_id": "6721f52b8f6e2ad7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cc2c6361d4f6c9fd",
+   "symbols": [
+    "SUPN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Supernus Pharmaceuticals earnings: what to look for from SUPN",
+   "summary": "Specialty pharmaceutical company Supernus Pharmaceuticals (NASDAQ:SUPN) will be announcing earnings results this Thursday after market hours. Here’s what to expect.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/supernus-pharmaceuticals-earnings-look-supn-191034797.html?.tsrc=rss",
+   "published_at": "2026-10-28T19:10:34Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:44:22Z",
+   "fingerprint": "e3eaa5a89e531ad3",
+   "primary_source": false,
+   "cluster_id": "cc2c6361d4f6c9fd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "87a5544a957da5ab",
+   "symbols": [
+    "BIIB",
+    "SUPN",
+    "TGTX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "BIIB's Q3 Earnings Beat, New Drugs Aid Sales, '26 EPS View Tightened",
+   "summary": "Biogen's Q3 earnings and revenues beat estimates as growth drugs drive sales, while the company tightens its 2026 adjusted EPS outlook amid rising costs.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/biibs-q3-earnings-beat-drugs-161100029.html?.tsrc=rss",
+   "published_at": "2026-10-28T16:11:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:23Z",
+   "fingerprint": "97b064225c82a219",
+   "primary_source": false,
+   "cluster_id": "87a5544a957da5ab",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9d34d91c6214ec23",
+   "symbols": [
+    "SUPN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Chloe Kim Is Changing the Conversation Around ADHD in Women with Qelbree® for ‘Ms. Represented’ Campaign",
+   "summary": "The ‘Ms. Represented’ campaign expands its reach with professional snowboarder Chloe Kim, who shares her ADHD experience to help connect with a younger generation of women.More than 60% of U.S. women who reported ever receiving an ADHD diagnosis were first diagnosed in adulthood,",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/chloe-kim-changing-conversation-around-123000775.html?.tsrc=rss",
+   "published_at": "2026-10-28T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:44:22Z",
+   "fingerprint": "1ec087fb63c9e463",
+   "primary_source": false,
+   "cluster_id": "9d34d91c6214ec23",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5d24618e43100621",
+   "symbols": [
+    "SUPN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Biogen Q3 Preview: Will Growth Products Drive an Earnings Beat?",
+   "summary": "Biogen heads into Q3 earnings with growth from new drugs and acquisitions potentially offsetting declining multiple sclerosis sales.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/biogen-q3-preview-growth-products-123800609.html?.tsrc=rss",
+   "published_at": "2026-10-26T12:38:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:44:22Z",
+   "fingerprint": "810d4f254fd745f8",
+   "primary_source": false,
+   "cluster_id": "5d24618e43100621",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "64bfd368e551f5cb",
+   "symbols": [
+    "SUPN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Arrowhead Pharmaceuticals And 2 Biotech Stocks To Own",
+   "summary": "Biotech stocks live and die on access to capital, so the Federal Reserve’s signal that interest rates may pause for now gives this high risk corner of the market some breathing room. Cheaper money can make it easier to fund drug pipelines and clinical trials, which matters if you",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/arrowhead-pharmaceuticals-2-biotech-stocks-020934277.html?.tsrc=rss",
+   "published_at": "2026-10-24T02:09:34Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:44:22Z",
+   "fingerprint": "c0f3f6b7ce0ac927",
+   "primary_source": false,
+   "cluster_id": "64bfd368e551f5cb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "16656ced3950bca1",
+   "symbols": [
+    "HURN",
+    "SUPN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Huron Consulting stock rises on S&P SmallCap 600 addition",
+   "summary": "Investing.com -- Huron Consulting Group Inc (NASDAQ:HURN) shares rose 2.9% in after-hours trading Thursday following S&amp;P Dow Jones Indices' announcement that the company will join the S&amp;P SmallCap 600 index.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/huron-consulting-stock-rises-p-222724970.html?.tsrc=rss",
+   "published_at": "2026-10-22T22:27:24Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:10:40Z",
+   "fingerprint": "56070a1f2ea041da",
+   "primary_source": false,
+   "cluster_id": "16656ced3950bca1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "175e3c496cc0dc85",
+   "symbols": [
+    "HURN",
+    "INDV",
+    "SUPN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "MSG Rangers and Huron Consulting Group Set to Join S&P SmallCap 600",
+   "summary": "S&amp;P Dow Jones Indices will make the following changes to the S&amp;P SmallCap 600:",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/msg-rangers-huron-consulting-group-220800065.html?.tsrc=rss",
+   "published_at": "2026-10-22T22:08:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T03:10:40Z",
+   "fingerprint": "07101d2d23ca9609",
+   "primary_source": false,
+   "cluster_id": "175e3c496cc0dc85",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2010db50957548c0",
+   "symbols": [
+    "SUPN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Earnings Preview: Supernus Pharmaceuticals (SUPN) Q3 Earnings Expected to Decline",
+   "summary": "Supernus (SUPN) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/earnings-preview-supernus-pharmaceuticals-supn-130016340.html?.tsrc=rss",
+   "published_at": "2026-10-22T13:00:16Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T07:44:22Z",
+   "fingerprint": "310a13da6e55ad4b",
+   "primary_source": false,
+   "cluster_id": "2010db50957548c0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],
