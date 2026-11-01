@@ -108,8 +108,8 @@ def build_report(*, stocks: list[dict], candidates: list[dict], alerts_history: 
                     key=lambda kv: -(kv[1].get("change_vs_baseline_pct") or 0))[:8]
     note = ("Heute ist Freitag: laut deinen Regeln keine neuen Trades." if day.weekday() == 4 else None)
     d3 = (today - timedelta(days=3)).isoformat()
-    ins_top = sorted([x for x in (insiders or []) if x.get("open_market") and x.get("transaction_kind") == "buy"
-                      and (x.get("filed_at") or "") >= d3], key=lambda x: -(x.get("value") or 0))[:12]
+    ins_top = sorted({x["id"]: x for x in (insiders or []) if x.get("open_market") and x.get("transaction_kind") == "buy"
+                      and (x.get("filed_at") or "") >= d3}.values(), key=lambda x: -(x.get("value") or 0))[:12]
     ins_top = [{k: x.get(k) for k in ("id", "symbol", "insider", "role", "value", "currency", "transaction_date", "filed_at",
                                        "source_url", "superinvestor")} for x in ins_top]
     d30 = (today - timedelta(days=30)).isoformat()
@@ -127,8 +127,11 @@ def build_report(*, stocks: list[dict], candidates: list[dict], alerts_history: 
         if age is None or age > 5 or t["statement_id"] in seen and not t.get("symbol"):
             continue
         seen.add(t["statement_id"])
-        trump_recent.append({k: t.get(k) for k in ("id", "statement_at", "quote", "quote_de", "symbol", "mention_type", "sectors",
-                                                    "direction", "verification", "source_name", "source_url")} | {"bonus": t["bonus"]["active"]})
+        row = {k: t.get(k) for k in ("id", "statement_at", "quote", "quote_de", "symbol", "mention_type", "sectors",
+                                     "direction", "verification", "source_name", "source_url")} | {"bonus": t["bonus"]["active"]}
+        if t.get("symbol") and not t.get("mapping_verified"):
+            row["symbol"] = None          # ungeprüfte Namenszuordnung nicht als Unternehmensbezug zeigen
+        trump_recent.append(row)
     top_social = sorted(((k, v) for k, v in social_stats.items() if v["mentions_24h"] >= 3), key=lambda kv: -kv[1]["mentions_24h"])[:10]
     return {
         "report_date": dstr, "weekday": WEEKDAY[day.weekday()], "created_at": iso(now), "rule_note": note,

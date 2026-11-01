@@ -668,3 +668,11 @@ def test_report_day_and_earnings():
                      superinv={"managers": []}, pol_trades=[], trump=[], social_stats={}, watchlist=["AAPL"], conf=[], now=evening)
     assert r["report_date"] == "2026-11-02" and r["weekday"] == "Montag"
     assert r["earnings"][0]["symbol"] == "AAPL" and r["earnings"][0]["watchlist"]
+
+
+def test_single_word_or_generic_names_are_not_verified():
+    from sic.politics import build_alias_index, link_entities
+    secs = {"AIG": {"name": "American International Group, Inc."}, "REF": {"name": "Reformation"}}
+    idx = build_alias_index(secs)
+    hits = link_entities("Presidential Message on Reformation Day. American fishermen first.", idx, set(secs))
+    assert all(not h["mapping_verified"] for h in hits) and "AIG" not in {h["symbol"] for h in hits}

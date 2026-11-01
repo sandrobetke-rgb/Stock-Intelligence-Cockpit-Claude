@@ -23,9 +23,10 @@ log = logging.getLogger("sic.politics")
 
 TRUMP_OFFICIAL_DOMAINS = {"whitehouse.gov", "truthsocial.com", "govinfo.gov", "federalregister.gov"}
 
+# Nur reine Rechtsform-Zusätze entfernen; beschreibende Wörter (International, Group …) bleiben,
+# sonst wird z. B. "American International Group" zu "american" und trifft jedes "American".
 NAME_SUFFIXES = {"inc", "incorporated", "corp", "corporation", "company", "co", "plc", "ag", "se", "sa", "nv",
-                 "holdings", "holding", "group", "ltd", "limited", "the", "class", "a", "b", "c", "lp", "llc",
-                 "kgaa", "co kgaa", "international", "technologies", "com"}
+                 "ltd", "limited", "the", "class", "a", "b", "c", "lp", "llc", "kgaa", "com", "de", "n", "v"}
 # Firmennamen, die zugleich gaengige Woerter sind -> Zuordnung nur nach Prüfung
 AMBIGUOUS = {"target", "apple", "visa", "gap", "ball", "match", "block", "meta", "best", "general", "united",
              "first", "american", "national", "public", "global", "southern", "progressive", "boston",
@@ -83,7 +84,9 @@ def build_alias_index(securities: dict[str, dict]) -> list[dict]:
         cn = core_name(sec.get("name") or "")
         if len(cn) < 3 or (sym, cn) in manual:
             continue
-        ambiguous = cn in AMBIGUOUS or (len(cn.split()) == 1 and len(cn) <= 4)
+        # Ein-Wort-Namen (z. B. "Reformation", "Target") sind oft normale Wörter: nur über geprüfte
+        # Einträge in aliases.csv als gesichert werten
+        ambiguous = cn in AMBIGUOUS or len(cn.split()) == 1
         idx.append({"symbol": sym, "alias": cn, "kind": "direct", "rationale": "Firmenname",
                     "source": "Universum", "reviewed": not ambiguous, "ambiguous": ambiguous})
     return idx
@@ -101,7 +104,7 @@ def link_entities(text: str, alias_index: list[dict], universe: set[str]) -> lis
                          "rationale": "Ticker eindeutig genannt"}
     norm = f" {normalize_text(raw)} "
     for a in alias_index:
-        if a["symbol"] in hits or not a["alias"]:
+        if a["symbol"] in hits or not a["alias"] or a["symbol"] not in universe:
             continue
         if f" {a['alias']} " in norm:
             hits[a["symbol"]] = {"symbol": a["symbol"], "mention_type": a["kind"], "matched": a["alias"],
