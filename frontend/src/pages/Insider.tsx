@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { fmt, useData } from "../data";
-import type { Insider, Institution, Meta, PoliticalTrade } from "../types";
+import type { ClusterBuy, Insider, Institution, Meta, PoliticalTrade } from "../types";
 import { CompanyLink, DataTable, Gate, Page, Panel, Src, Tag } from "../ui";
 
-type Ins = Meta & { insiders: Insider[]; institutions: Institution[]; political_trades: PoliticalTrade[]; notes: string[] };
+type Ins = Meta & { cluster_buys: ClusterBuy[]; insiders: Insider[]; institutions: Institution[]; political_trades: PoliticalTrade[]; notes: string[] };
 
 export function InsiderPage() {
   const s = useData<Ins>("insider.json");
@@ -12,6 +12,17 @@ export function InsiderPage() {
     <Gate s={s}>
       {(d) => (
         <Page title="Insider & Institutionen" intro="Drei getrennte Datenarten mit unterschiedlicher Aussagekraft und Meldeverzug: Unternehmensinsider, institutionelle Quartalsmeldungen und Aktiengeschäfte von Politikern.">
+          <Panel title="Cluster-Käufe (14 Tage)" note="Mindestens zwei verschiedene Insider derselben Firma haben am offenen Markt gekauft. Gilt als aussagekräftiger als Einzelkäufe, ist aber keine Kaufempfehlung.">
+            <DataTable rows={d.cluster_buys ?? []} rowKey={(r) => r.symbol} initialSort={{ key: "n", dir: -1 }} limit={30} empty="Derzeit keine Cluster-Käufe."
+              cols={[
+                { key: "s", label: "Aktie", render: (r) => <CompanyLink symbol={r.symbol} />, sort: (r) => r.symbol },
+                { key: "n", label: "Insider", num: true, render: (r) => r.insiders, sort: (r) => r.insiders },
+                { key: "t", label: "Käufe", num: true, render: (r) => r.transactions, sort: (r) => r.transactions },
+                { key: "v", label: "Volumen", num: true, render: (r) => fmt.big(r.value, "USD"), sort: (r) => r.value },
+                { key: "r", label: "Funktionen", render: (r) => r.roles.map((x) => <Tag key={x}>{x}</Tag>) },
+                { key: "z", label: "Zeitraum", render: (r) => `${fmt.date(r.first)} bis ${fmt.date(r.last)}`, sort: (r) => r.last },
+              ]} />
+          </Panel>
           <Panel title="Unternehmensinsider" note="Käufe und Verkäufe am offenen Markt sind von Optionsausübungen, Vergütung und Steuereinbehalt getrennt.">
             <label className="check filters inline"><input type="checkbox" checked={onlyOpen} onChange={(e) => setOnlyOpen(e.target.checked)} /> Nur Käufe/Verkäufe am offenen Markt</label>
             <DataTable rows={d.insiders.filter((x) => !onlyOpen || x.open_market)} rowKey={(r) => r.id} initialSort={{ key: "filed", dir: -1 }} limit={50}
@@ -27,7 +38,7 @@ export function InsiderPage() {
                 { key: "src", label: "Offenlegung", render: (r) => <Src url={r.source_url} /> },
               ]} />
           </Panel>
-          <Panel title="Institutionelle Beteiligungen" note="Quartalsmeldungen (z. B. 13F) zum Stichtag, mit bis zu 45 Tagen Veröffentlichungsverzug. Keine Echtzeitkäufe oder -verkäufe.">
+          <Panel title="Institutionelle Beteiligungen" note="Manuell importierte Quartalsmeldungen. Die automatisch geladenen Depots großer Investoren stehen unter Superinvestoren.">
             <DataTable rows={d.institutions} rowKey={(r) => r.id} initialSort={{ key: "val", dir: -1 }} limit={50} empty="Keine institutionellen Meldungen importiert."
               cols={[
                 { key: "sym", label: "Aktie", render: (r) => <CompanyLink symbol={r.symbol} />, sort: (r) => r.symbol },

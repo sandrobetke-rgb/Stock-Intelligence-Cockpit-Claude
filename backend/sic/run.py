@@ -16,7 +16,7 @@ import traceback
 from collections import Counter
 from datetime import datetime
 
-from . import config, events, insider, news, politics, social, translate, universe
+from . import config, events, insider, news, politics, social, superinvestors, translate, universe
 from .export import publish
 from .intelligence import market_intelligence
 from .market import fetch_prices, load_fundamentals, refresh_fundamentals
@@ -55,7 +55,8 @@ def _memberships(sec: dict) -> list[str]:
 def assemble(*, state: dict, prices: dict, fundamentals: dict[str, dict], signals: list[dict],
              trump: list[dict], pol_events: list[dict], pol_trades: list[dict], social_stats: dict,
              insiders: list[dict], institutions: list[dict], market_events: dict, runlog: list[dict],
-             sources: list[dict], mode: str = "live", now: datetime | None = None) -> tuple[dict, dict]:
+             sources: list[dict], mode: str = "live", now: datetime | None = None,
+             superinv: dict | None = None) -> tuple[dict, dict]:
     now = now or utcnow()
     meta = {"generated_at": iso(now), "schema_version": SCHEMA_VERSION, "mode": mode}
     manual_q, manual_r = load_manual_assessments(), load_manual_risks()
@@ -68,6 +69,8 @@ def assemble(*, state: dict, prices: dict, fundamentals: dict[str, dict], signal
     ins_by: dict[str, list[dict]] = {}
     for x in insiders:
         ins_by.setdefault(x["symbol"], []).append(x)
+    superinv = superinv or {"managers": [], "stocks": [], "errors": []}
+    si_by = {a["symbol"]: a for a in superinv["stocks"] if a.get("symbol")}
     for sym, sec in sorted(state["securities"].items()):
         fc = fundamentals.get(sym)
         fund = (fc or {}).get("data")
@@ -102,6 +105,7 @@ def assemble(*, state: dict, prices: dict, fundamentals: dict[str, dict], signal
                                               "negative_signals_30d", "positive_signals_30d")},
             "social": {"mentions_7d": soc["mentions_7d"], "manipulation_risk": soc["manipulation_risk"]} if soc else None,
             "insider": ins,
+            "superinvestors": {k: si_by[sym][k] for k in ("holders", "buyers", "new_buyers", "sellers", "sold_out")} if sym in si_by else None,
         }
         stocks.append(row)
         sym_signals = by_sym.get(sym, [])[:60]
@@ -117,6 +121,7 @@ def assemble(*, state: dict, prices: dict, fundamentals: dict[str, dict], signal
             "insiders": ins_by.get(sym, [])[:50],
             "institutions": [x for x in institutions if x["symbol"] == sym][:50],
             "political_trades": [x for x in pol_trades if x["symbol"] == sym][:50],
+            "superinvestors": si_by[sym]["managers"] if sym in si_by else [],
             "social_detail": soc,
             "history": [h for h in state.get("history", []) if h["symbol"] == sym][-20:],
         }
@@ -186,10 +191,12 @@ def assemble(*, state: dict, prices: dict, fundamentals: dict[str, dict], signal
                                          "verification": s["verification"], "independence": s["independence"],
                                          "primary_source": s["primary_source"], "cluster_id": s["cluster_id"],
                                          "fact_check": s.get("fact_check")} for s in recent[:2000]],
-                             "rules": ["Primärqülle -> Verified", "mind. 2 unabhängige Portale -> Partially Verified",
-                                       "Einzelquelle -> Unverified", "> 30 Tage ohne Primärqülle -> Outdated",
+                             "rules": ["Primärquelle -> Verified", "mind. 2 unabhängige Portale -> Partially Verified",
+                                       "Einzelquelle -> Unverified", "> 30 Tage ohne Primärquelle -> Outdated",
                                        "Disputed/False nur per dokumentiertem Fact-Check (fact_checks.csv)"]},
+        "superinvestors.json": {**meta, **{k: v for k, v in superinv.items() if k != "generated_at"}},
         "insider.json": {**meta, "insiders": insiders[:3000], "institutions": institutions[:3000],
+                         "cluster_buys": insider.cluster_buys(insiders, now=now)[:100],
                          "political_trades": pol_trades,
                          "notes": ["Open-Market-Käufe/-Verkäufe getrennt von Optionsausübung und Vergütung",
                                    "13F-Daten sind Quartalsstichtage mit bis zu 45 Tagen Veröffentlichungsverzug",
@@ -209,8 +216,10 @@ SOURCES = [
      "limitation": "Truth Social ohne kostenlose API -> CSV mit Original-URL"},
     {"area": "Wirtschaftsticker", "source": "Fed, EZB, BLS (RSS); market_calendar.csv", "status": "connected",
      "limitation": "Termine aus offiziellen Kalendern per CSV gepflegt"},
-    {"area": "Insider USA", "source": "SEC EDGAR Form 4", "status": "connected",
-     "limitation": "Rotierende Abfrage; User-Agent mit Kontakt (SIC_USER_AGENT) nötig"},
+    {"area": "Insider USA", "source": "SEC EDGAR Form 4 (Tagesindex, gesamter Markt)", "status": "connected",
+     "limitation": "Alle Meldungen der letzten 30 Tage; User-Agent mit Kontakt (SIC_USER_AGENT) nötig"},
+    {"area": "Superinvestoren (13F)", "source": "SEC EDGAR 13F-HR, CUSIP-Zuordnung über OpenFIGI", "status": "connected",
+     "limitation": "Quartalsstichtag, bis 45 Tage Verzug; nur US-Long-Positionen; Managerliste in superinvestors.csv"},
     {"area": "Insider DE / Institutionen / Politiker", "source": "CSV-Import (BaFin, 13F, Offenlegungsstellen)", "status": "limited",
      "limitation": "Keine kostenlose strukturierte API eingebunden"},
     {"area": "Social Media", "source": "CSV-Import; Reddit-RSS optional (standardmäßig aus)", "status": "limited",
@@ -263,11 +272,14 @@ def run(fetch: bool = True, skip_fundamentals: bool = False, skip_insider: bool 
 
     ins_new = rl.step("insider_csv", insider.import_csv_insiders) or []
     if fetch and not skip_insider:
-        res = rl.step("insider_sec", insider.fetch_form4, [s for s in syms if state["securities"][s]["region"] == "US"])
+        res = rl.step("insider_sec", insider.fetch_form4_daily, [s for s in syms if state["securities"][s]["region"] == "US"])
         if res:
             ins_new += res[0]
     insiders = insider.merge_store(ins_new)
     institutions = rl.step("institutions", insider.import_institutional) or []
+
+    si = rl.step("superinvestors", superinvestors.build, state["securities"], fetch=fetch and not skip_insider) \
+        or {"managers": [], "stocks": [], "errors": []}
 
     mev = rl.step("market_events", events.build_market_events, fetch=fetch, now=now) or {"current": [], "upcoming": [], "feeds": []}
 
@@ -279,7 +291,7 @@ def run(fetch: bool = True, skip_fundamentals: bool = False, skip_insider: bool 
     payloads, details = assemble(state=state, prices=prices, fundamentals=fundamentals, signals=signals, trump=trump,
                                  pol_events=pol_events, pol_trades=pol_trades, social_stats=social_stats,
                                  insiders=insiders, institutions=institutions, market_events=mev,
-                                 runlog=rl.steps, sources=SOURCES, mode="live", now=now)
+                                 runlog=rl.steps, sources=SOURCES, mode="live", now=now, superinv=si)
     result = publish(payloads, details)
     log.info("Veröffentlicht: %s | Fehler: %s", result["published"], [s for s in rl.steps if s["status"] == "error"])
     return result

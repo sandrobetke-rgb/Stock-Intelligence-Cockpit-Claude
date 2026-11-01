@@ -93,7 +93,8 @@ werden rotierend abgefragt (300 bzw. 150 Ticker je Lauf). Über Umgebungsvariabl
 | Nachrichten | Yahoo-Finance-RSS | nur Schlagzeile, Link, Datum |
 | Trump | whitehouse.gov-RSS, `trump_statements.csv` | Truth Social hat keine kostenlose API → CSV mit Original-URL |
 | Wirtschaftsticker | Fed, EZB, BLS (RSS), `market_calendar.csv` (Destatis-Feed derzeit ohne gültige Adresse) | Termine Stand 31.10.2026, vor Nutzung prüfen |
-| Insider USA | SEC EDGAR Form 4 | max. 10 Anfragen/s |
+| Insider USA | SEC EDGAR Form 4 (Tagesindex, gesamter Markt) | max. 10 Anfragen/s |
+| Superinvestoren | SEC EDGAR 13F-HR, CUSIP-Zuordnung über OpenFIGI | Quartalsstichtag, bis 45 Tage Verzug; Liste in `superinvestors.csv` |
 | Insider DE, 13F, Politiker | CSV-Importe | keine kostenlose strukturierte API eingebunden |
 | Social Media | `social_mentions.csv`, Reddit-RSS optional (`SIC_ENABLE_REDDIT_RSS=1`) | X-API kostenpflichtig; Reddit-Bedingungen prüfen |
 

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T13:11:09Z",
+ "generated_at": "2026-11-01T02:21:37Z",
  "schema_version": "1.1.0",
  "mode": "demo",
  "universe": {
@@ -11,7 +11,7 @@
     "code": "NDX",
     "name": "Nasdaq 100",
     "source": "DEMO",
-    "checked_at": "2026-10-31T13:11:09Z",
+    "checked_at": "2026-11-01T02:21:37Z",
     "members": 11,
     "status": "ok",
     "message": null,
@@ -21,7 +21,7 @@
     "code": "SPX",
     "name": "S&P 500",
     "source": "DEMO",
-    "checked_at": "2026-10-31T13:11:09Z",
+    "checked_at": "2026-11-01T02:21:37Z",
     "members": 14,
     "status": "ok",
     "message": null,
@@ -31,7 +31,7 @@
     "code": "RUT",
     "name": "Russell 2000",
     "source": "DEMO",
-    "checked_at": "2026-10-31T13:11:09Z",
+    "checked_at": "2026-11-01T02:21:37Z",
     "members": 16,
     "status": "error",
     "message": "DEMO: Plausibilitätsprüfung fehlgeschlagen – letzter gültiger Stand bleibt",
@@ -41,7 +41,7 @@
     "code": "DAX",
     "name": "DAX 40",
     "source": "DEMO",
-    "checked_at": "2026-10-31T13:11:09Z",
+    "checked_at": "2026-11-01T02:21:37Z",
     "members": 8,
     "status": "ok",
     "message": null,
@@ -53,12 +53,12 @@
     "index": "SPX",
     "symbol": "DM05",
     "action": "add",
-    "effective_date": "2026-11-12",
+    "effective_date": "2026-11-13",
     "source": "DEMO",
     "name": "Sundial AG (DEMO)"
    }
   ],
-  "built_at": "2026-10-31T13:11:09Z"
+  "built_at": "2026-11-01T02:21:37Z"
  },
  "coverage": {
   "prices_pct": 100,
@@ -114,15 +114,21 @@
   },
   {
    "area": "Wirtschaftsticker",
-   "source": "Fed, EZB, BLS, Destatis RSS; market_calendar.csv",
+   "source": "Fed, EZB, BLS (RSS); market_calendar.csv",
    "status": "connected",
    "limitation": "Termine aus offiziellen Kalendern per CSV gepflegt"
   },
   {
    "area": "Insider USA",
-   "source": "SEC EDGAR Form 4",
+   "source": "SEC EDGAR Form 4 (Tagesindex, gesamter Markt)",
    "status": "connected",
-   "limitation": "Rotierende Abfrage; User-Agent mit Kontakt (SIC_USER_AGENT) nötig"
+   "limitation": "Alle Meldungen der letzten 30 Tage; User-Agent mit Kontakt (SIC_USER_AGENT) nötig"
+  },
+  {
+   "area": "Superinvestoren (13F)",
+   "source": "SEC EDGAR 13F-HR, CUSIP-Zuordnung über OpenFIGI",
+   "status": "connected",
+   "limitation": "Quartalsstichtag, bis 45 Tage Verzug; nur US-Long-Positionen; Managerliste in superinvestors.csv"
   },
   {
    "area": "Insider DE / Institutionen / Politiker",

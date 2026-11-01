@@ -117,6 +117,101 @@ def fetch_form4(symbols: list[str]) -> tuple[list[dict], dict]:
     return out, {"queried": len(batch), "errors": errors, "rotation": f"{take}/{len(us)} US-Ticker je Lauf"}
 
 
+DAILY_INDEX = "https://www.sec.gov/Archives/edgar/daily-index/{y}/QTR{q}/form.{d}.idx"
+DAYS_STATE = config.STATE_DIR / "insider_days.json"
+MAX_DAYS_PER_RUN = int(__import__("os").environ.get("SIC_INSIDER_MAX_DAYS", "8"))
+
+
+def parse_daily_index(text: str) -> list[dict]:
+    """form.YYYYMMDD.idx: feste Spalten Form Type | Company Name | CIK | Date Filed | File Name.
+    Eine Meldung erscheint je beteiligtem Filer (Emittent und meldende Person) -> nach Datei deduplizieren."""
+    out, seen = [], set()
+    for ln in text.splitlines():
+        parts = re.split(r"\s{2,}", ln.strip())
+        if len(parts) < 5 or parts[0] != "4" or not parts[-1].startswith("edgar/"):
+            continue
+        out.append({"form": parts[0], "company": parts[1], "cik": int(parts[-3]), "date": parts[-2], "file": parts[-1]})
+    return out
+
+
+def _extract_xml(txt: str) -> str | None:
+    m = re.search(r"<XML>\s*(.*?)\s*</XML>", txt, flags=re.S | re.I)
+    return m.group(1) if m else (txt if txt.lstrip().startswith("<?xml") or "<ownershipDocument" in txt else None)
+
+
+def fetch_form4_daily(symbols: list[str], now=None) -> tuple[list[dict], dict]:
+    """Marktweite Insider-Erfassung wie OpenInsider: alle Form-4-Meldungen eines Tages aus dem
+    EDGAR-Tagesindex, gefiltert auf Emittenten im Universum. Bereits verarbeitete Tage werden gemerkt."""
+    now = now or utcnow()
+    cmap = cik_map()
+    uni = set(symbols)
+    cik2sym: dict[int, str] = {}
+    for t, c in sorted(cmap.items()):
+        if t in uni and c not in cik2sym:
+            cik2sym[c] = t
+    done = set(read_json(DAYS_STATE, []))
+    days = []
+    for back in range(1, config.INSIDER_LOOKBACK_DAYS + 1):
+        d = (now - timedelta(days=back)).date()
+        if d.weekday() < 5 and d.isoformat() not in done:
+            days.append(d)
+    days = days[:MAX_DAYS_PER_RUN]          # neueste zuerst; aeltere folgen in spaeteren Laeufen
+    out, errors, filings = [], 0, 0
+    for d in days:
+        url = DAILY_INDEX.format(y=d.year, q=(d.month - 1) // 3 + 1, d=d.strftime("%Y%m%d"))
+        try:
+            rows = parse_daily_index(http_get(url, limiter=_rl).text)
+        except Exception as exc:  # noqa: BLE001
+            if "404" in str(exc):          # Feiertag/kein Index
+                done.add(d.isoformat())
+            else:
+                errors += 1
+                log.warning("Tagesindex %s: %s", d, exc)
+            continue
+        files: dict[str, int] = {}
+        for r in rows:
+            if r["cik"] in cik2sym:
+                files.setdefault(r["file"], r["cik"])
+        for f, cik in files.items():
+            try:
+                xml = _extract_xml(http_get("https://www.sec.gov/Archives/" + f, limiter=_rl).text)
+                if not xml:
+                    continue
+                acc = f.rsplit("/", 1)[-1].replace(".txt", "")
+                link = f"https://www.sec.gov/Archives/edgar/data/{cik}/{acc.replace('-', '')}/{acc}-index.htm"
+                out.extend(parse_form4(xml, cik2sym[cik], link, d.isoformat()))
+                filings += 1
+            except Exception as exc:  # noqa: BLE001
+                errors += 1
+                log.debug("Form 4 %s: %s", f, exc)
+        done.add(d.isoformat())
+    cutoff = (now - timedelta(days=config.INSIDER_LOOKBACK_DAYS + 5)).date().isoformat()
+    write_json_atomic(DAYS_STATE, sorted(x for x in done if x >= cutoff))
+    pending = sum(1 for back in range(1, config.INSIDER_LOOKBACK_DAYS + 1)
+                  if (now - timedelta(days=back)).date().weekday() < 5
+                  and (now - timedelta(days=back)).date().isoformat() not in done)
+    return out, {"days": [x.isoformat() for x in days], "filings": filings, "errors": errors, "days_pending": pending}
+
+
+def cluster_buys(items: list[dict], days: int = 14, now=None) -> list[dict]:
+    """Cluster-Kauf: mind. zwei verschiedene Insider kaufen am offenen Markt innerhalb von `days` Tagen."""
+    now = now or utcnow()
+    cutoff = (now - timedelta(days=days)).date().isoformat()
+    by: dict[str, list[dict]] = {}
+    for x in items:
+        if x.get("transaction_kind") == "buy" and x.get("open_market") and (x.get("transaction_date") or "") >= cutoff:
+            by.setdefault(x["symbol"], []).append(x)
+    out = []
+    for sym, xs in by.items():
+        people = {x["insider"] for x in xs}
+        if len(people) >= 2:
+            out.append({"symbol": sym, "insiders": len(people), "transactions": len(xs),
+                        "value": round(sum(x.get("value") or 0 for x in xs), 2),
+                        "roles": sorted({x.get("role") or "" for x in xs} - {""})[:6],
+                        "first": min(x["transaction_date"] for x in xs), "last": max(x["transaction_date"] for x in xs)})
+    return sorted(out, key=lambda c: (-c["insiders"], -c["value"]))
+
+
 def import_csv_insiders() -> list[dict]:
     """insider_manual.csv (z. B. BaFin Directors' Dealings): symbol,insider,role,transaction_kind,
     transaction_date,filed_at,shares,price,currency,source_url"""

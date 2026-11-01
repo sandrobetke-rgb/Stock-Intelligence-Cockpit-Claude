@@ -211,9 +211,41 @@ def build_demo(out_dir: Path | None = None, n: int = 40, seed: int = 7) -> dict:
     runlog = [{"step": s, "status": "ok", "seconds": round(rng.uniform(0.5, 40), 1)} for s in
               ["universe", "prices", "fundamentals", "news_rss", "trump", "insider_sec", "market_events"]]
     runlog.append({"step": "social", "status": "error", "seconds": 0.2, "message": "DEMO: Beispiel für protokollierten Fehler"})
+    # DEMO-Superinvestoren: fiktive Depots, über dieselbe Vergleichslogik wie die echten 13F-Daten
+    from .superinvestors import compare
+    si_managers, si_agg = [], {}
+    for k, (mgr, fund) in enumerate([("Demo-Investor A", "Alpha Capital (DEMO)"), ("Demo-Investor B", "Beta Partners (DEMO)"),
+                                     ("Demo-Investor C", "Gamma Fund (DEMO)")]):
+        picks = rng.sample([f"DM{i:02d}" for i in range(1, 20)], 8)
+        cur = [{"cusip": f"DEMO{p}", "issuer": secs[p]["name"], "title": "COM", "put_call": None,
+                "shares": float(rng.randint(1_000, 90_000)), "value": float(rng.randint(1, 40)) * 1e7} for p in picks[:6]]
+        prev = [{**c, "shares": c["shares"] * rng.choice([0.5, 1.0, 1.4])} for c in cur[1:]] + \
+               [{"cusip": f"DEMO{p}", "issuer": secs[p]["name"], "title": "COM", "put_call": None, "shares": 5000.0, "value": 2e7} for p in picks[6:]]
+        pos = compare(cur, prev)
+        for p_ in pos:
+            p_["symbol"], p_["in_universe"] = p_["cusip"][4:], True
+            a_ = si_agg.setdefault(p_["symbol"], {"symbol": p_["symbol"], "cusip": p_["cusip"], "issuer": p_["issuer"], "in_universe": True,
+                                                  "holders": 0, "buyers": 0, "new_buyers": 0, "sellers": 0, "sold_out": 0, "value": 0.0, "managers": []})
+            a_["holders"] += p_["action"] != "sold_out"; a_["buyers"] += p_["action"] in ("new", "increased")
+            a_["new_buyers"] += p_["action"] == "new"; a_["sellers"] += p_["action"] in ("reduced", "sold_out")
+            a_["sold_out"] += p_["action"] == "sold_out"; a_["value"] += p_["value"]
+            a_["managers"].append({"manager": mgr, "fund": fund, "action": p_["action"], "weight_pct": p_["weight_pct"],
+                                   "shares_change_pct": p_["shares_change_pct"], "value": p_["value"], "report_date": "2026-09-30"})
+        si_managers.append({"cik": 9000 + k, "manager": mgr, "fund": fund, "sec_name": fund, "report_date": "2026-09-30",
+                            "filed_at": "2026-10-28", "filing_url": "https://www.sec.gov/demo",
+                            "portfolio_value": sum(p_["value"] for p_ in pos), "holdings": sum(p_["action"] != "sold_out" for p_ in pos),
+                            "new": sum(p_["action"] == "new" for p_ in pos), "sold_out": sum(p_["action"] == "sold_out" for p_ in pos), "positions": pos})
+    superinv = {"managers": si_managers, "stocks": sorted(si_agg.values(), key=lambda a_: -a_["holders"]), "errors": [],
+                "note": "DEMO: fiktive Investoren und Depots."}
+    insiders += [{**insiders[0], "id": "cb1", "symbol": "DM03", "insider": "Demo Cluster 1", "transaction_kind": "buy", "open_market": True,
+                  "transaction_label": "Kauf am offenen Markt", "transaction_date": (now - timedelta(days=3)).date().isoformat()},
+                 {**insiders[0], "id": "cb2", "symbol": "DM03", "insider": "Demo Cluster 2", "transaction_kind": "buy", "open_market": True,
+                  "transaction_label": "Kauf am offenen Markt", "transaction_date": (now - timedelta(days=5)).date().isoformat()}]
+
     payloads, details = assemble(state=state, prices=prices, fundamentals=funds, signals=sigs, trump=trump,
                                  pol_events=pol_events, pol_trades=pol_trades, social_stats=social_stats, insiders=insiders,
-                                 institutions=institutions, market_events=mev, runlog=runlog, sources=SOURCES, mode="demo", now=now)
+                                 institutions=institutions, market_events=mev, runlog=runlog, sources=SOURCES, mode="demo", now=now,
+                                 superinv=superinv)
     out_dir = out_dir or (Path(__file__).resolve().parents[2] / "frontend" / "public" / "demo-data")
     return publish(payloads, details, out_dir)
 

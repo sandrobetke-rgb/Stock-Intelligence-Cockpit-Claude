@@ -46,7 +46,10 @@ SCHEMAS: dict[str, dict] = {
                                                                 "status", "verification"])}},
     "social.json": {**_meta, "required": [*_meta["required"], "stocks"]},
     "fact-checks.json": {**_meta, "required": [*_meta["required"], "status_counts", "checks"]},
-    "insider.json": {**_meta, "required": [*_meta["required"], "insiders", "institutions", "political_trades"]},
+    "insider.json": {**_meta, "required": [*_meta["required"], "insiders", "institutions", "political_trades", "cluster_buys"]},
+    "superinvestors.json": {**_meta, "required": [*_meta["required"], "managers", "stocks"],
+                            "properties": {"managers": _list_of(["cik", "manager", "fund", "report_date", "filing_url", "positions"]),
+                                           "stocks": _list_of(["cusip", "issuer", "holders", "buyers", "sellers", "managers"])}},
 }
 
 

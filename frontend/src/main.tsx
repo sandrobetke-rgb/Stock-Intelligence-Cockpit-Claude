@@ -10,6 +10,7 @@ import { MarketTicker } from "./pages/MarketTicker";
 import { QualityStocks } from "./pages/QualityStocks";
 import { Company } from "./pages/Company";
 import { InsiderPage } from "./pages/Insider";
+import { Superinvestors } from "./pages/Superinvestors";
 import { SocialPage } from "./pages/Social";
 import { FactCheck } from "./pages/FactCheck";
 import { RiskOverview } from "./pages/Risk";
@@ -20,6 +21,7 @@ const NAV = [
   ["trump", "Trump Mention Radar"],
   ["ticker", "Markt- & Wirtschaftsticker"],
   ["quality", "Quality Stocks"],
+  ["superinvestors", "Superinvestoren"],
   ["insider", "Insider & Institutionen"],
   ["social", "Social Media"],
   ["factcheck", "Fact-Checking"],
@@ -71,6 +73,7 @@ function App() {
     case "quality": page = <QualityStocks />; break;
     case "company": page = <Company symbol={decodeURIComponent(rest.join("/"))} />; break;
     case "insider": page = <InsiderPage />; break;
+    case "superinvestors": page = <Superinvestors manager={rest.length ? decodeURIComponent(rest.join("/")) : undefined} />; break;
     case "social": page = <SocialPage />; break;
     case "factcheck": page = <FactCheck />; break;
     case "risk": page = <RiskOverview />; break;

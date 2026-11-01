@@ -361,3 +361,104 @@ def test_translation_adds_german_fields_and_keeps_original():
     assert r["new"] == 2
     translate.translate_items([(sigs, ["title"])], translator=fake)   # zweiter Lauf: aus dem Cache
     assert len(calls) == 1
+
+
+# ------------------------------------------------- Superinvestoren (13F) ----
+INFO_XML = """<?xml version="1.0" encoding="UTF-8"?>
+<informationTable xmlns="http://www.sec.gov/edgar/document/thirteenf/informationtable">
+<infoTable><nameOfIssuer>APPLE INC</nameOfIssuer><titleOfClass>COM</titleOfClass><cusip>037833100</cusip>
+<value>1000000</value><shrsOrPrnAmt><sshPrnamt>5000</sshPrnamt><sshPrnamtType>SH</sshPrnamtType></shrsOrPrnAmt></infoTable>
+<infoTable><nameOfIssuer>APPLE INC</nameOfIssuer><titleOfClass>COM</titleOfClass><cusip>037833100</cusip>
+<value>200000</value><shrsOrPrnAmt><sshPrnamt>1000</sshPrnamt><sshPrnamtType>SH</sshPrnamtType></shrsOrPrnAmt></infoTable>
+<infoTable><nameOfIssuer>APPLE INC</nameOfIssuer><titleOfClass>PUT</titleOfClass><cusip>037833100</cusip>
+<value>50000</value><shrsOrPrnAmt><sshPrnamt>300</sshPrnamt><sshPrnamtType>SH</sshPrnamtType></shrsOrPrnAmt><putCall>Put</putCall></infoTable>
+<infoTable><nameOfIssuer>OCCIDENTAL</nameOfIssuer><titleOfClass>COM</titleOfClass><cusip>674599105</cusip>
+<value>800000</value><shrsOrPrnAmt><sshPrnamt>9000</sshPrnamt><sshPrnamtType>SH</sshPrnamtType></shrsOrPrnAmt></infoTable>
+</informationTable>"""
+
+
+def test_13f_parse_aggregates_and_separates_options():
+    from sic.superinvestors import parse_info_table
+    rows = {(r["cusip"], r["put_call"]): r for r in parse_info_table(INFO_XML)}
+    assert rows[("037833100", None)]["shares"] == 6000 and rows[("037833100", None)]["value"] == 1_200_000
+    assert rows[("037833100", "put")]["shares"] == 300
+
+
+def test_13f_compare_quarters():
+    from sic.superinvestors import compare
+    cur = [{"cusip": "A", "issuer": "A", "title": "COM", "put_call": None, "shares": 150, "value": 600},
+           {"cusip": "N", "issuer": "N", "title": "COM", "put_call": None, "shares": 10, "value": 400},
+           {"cusip": "P", "issuer": "P", "title": "PUT", "put_call": "put", "shares": 5, "value": 99}]
+    prev = [{"cusip": "A", "issuer": "A", "title": "COM", "put_call": None, "shares": 100, "value": 400},
+            {"cusip": "S", "issuer": "S", "title": "COM", "put_call": None, "shares": 50, "value": 300}]
+    pos = {p["cusip"]: p for p in compare(cur, prev)}
+    assert pos["A"]["action"] == "increased" and pos["A"]["shares_change_pct"] == 50.0
+    assert pos["N"]["action"] == "new" and pos["N"]["weight_pct"] == 40.0     # Optionen nicht im Depotwert
+    assert pos["S"]["action"] == "sold_out" and "P" not in pos
+
+
+def test_13f_wrong_cik_is_skipped(monkeypatch):
+    from unittest import mock
+    from sic import superinvestors
+    (config.IMPORT_DIR / "superinvestors.csv").write_text(
+        "cik,manager,fund,expected_name\n1067983,Warren Buffett,Berkshire Hathaway,BERKSHIRE HATHAWAY\n")
+    with mock.patch.object(superinvestors, "http_get") as g:
+        g.return_value.json.return_value = {"name": "SOME OTHER FUND LLC", "filings": {"recent": {}}}
+        r = superinvestors.build({}, fetch=True)
+    assert r["managers"] == [] and "übersprungen" in r["errors"][0]["error"]
+
+
+def test_13f_build_end_to_end(monkeypatch):
+    from unittest import mock
+    from sic import superinvestors
+    (config.IMPORT_DIR / "superinvestors.csv").write_text(
+        "cik,manager,fund,expected_name\n1067983,Warren Buffett,Berkshire Hathaway,BERKSHIRE\n")
+    sub = {"name": "BERKSHIRE HATHAWAY INC", "filings": {"recent": {
+        "form": ["13F-HR", "4", "13F-HR"], "accessionNumber": ["0001-26-000002", "x", "0001-26-000001"],
+        "reportDate": ["2026-09-30", "", "2026-06-30"], "filingDate": ["2026-11-14", "", "2026-08-14"]}}}
+    prev_xml = INFO_XML.replace("<sshPrnamt>9000</sshPrnamt>", "<sshPrnamt>3000</sshPrnamt>")
+
+    def fake(url, **kw):
+        m = mock.Mock()
+        if "submissions" in url:
+            m.json.return_value = sub
+        elif url.endswith("index.json"):
+            m.json.return_value = {"directory": {"item": [{"name": "primary_doc.xml"}, {"name": "info.xml"}]}}
+        else:
+            m.text = INFO_XML if "000126000002" in url else prev_xml
+        return m
+    monkeypatch.setattr(superinvestors, "map_cusips", lambda c, n, u: {"037833100": "AAPL", "674599105": "OXY"})
+    with mock.patch.object(superinvestors, "http_get", side_effect=fake):
+        r = superinvestors.build({"AAPL": {"name": "Apple Inc."}, "OXY": {"name": "Occidental"}}, fetch=True)
+    m = r["managers"][0]
+    assert m["report_date"] == "2026-09-30" and m["holdings"] == 2
+    oxy = next(s for s in r["stocks"] if s["symbol"] == "OXY")
+    assert oxy["buyers"] == 1 and oxy["managers"][0]["action"] == "increased"
+
+
+# ---------------------------------------------------- Insider-Tagesindex ----
+DAILY_IDX = """Description:           Daily Index of EDGAR Dissemination Feed by Form Type
+Form Type   Company Name                                                  CIK         Date Filed  File Name
+---------------------------------------------------------------------------------------------------------------------------------------------
+3           SMITH JOHN                                                    1900001     20261030    edgar/data/1900001/0001-26-000001.txt
+4           APPLE INC                                                     320193      20261030    edgar/data/320193/0001-26-000002.txt
+4           COOK TIMOTHY D                                                1214156     20261030    edgar/data/320193/0001-26-000002.txt
+4/A         APPLE INC                                                     320193      20261030    edgar/data/320193/0001-26-000003.txt
+"""
+
+
+def test_daily_index_parsing_and_xml_extraction():
+    from sic.insider import _extract_xml, parse_daily_index
+    rows = parse_daily_index(DAILY_IDX)
+    assert [r["cik"] for r in rows] == [320193, 1214156] and all(r["form"] == "4" for r in rows)
+    txt = f"<SEC-DOCUMENT>\n<DOCUMENT>\n<TYPE>4\n<TEXT>\n<XML>\n{FORM4}\n</XML>\n</TEXT>"
+    assert "<ownershipDocument>" in _extract_xml(txt)
+
+
+def test_cluster_buys():
+    from sic.insider import cluster_buys
+    mk = lambda who, kind="buy", om=True: {"symbol": "ACME", "insider": who, "transaction_kind": kind, "open_market": om,  # noqa: E731
+                                           "transaction_date": "2026-10-28", "value": 1000.0, "role": "Director"}
+    items = [mk("A"), mk("B"), mk("C", "option_exercise", False), {**mk("X"), "symbol": "SOLO"}]
+    c = cluster_buys(items, now=NOW)
+    assert [x["symbol"] for x in c] == ["ACME"] and c[0]["insiders"] == 2

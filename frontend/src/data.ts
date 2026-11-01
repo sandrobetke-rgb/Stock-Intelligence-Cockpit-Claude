@@ -98,3 +98,23 @@ export const DRIVER_LABEL: Record<string, string> = {
 export const MENTION_LABEL: Record<string, string> = {
   direct: "Direkte Nennung", indirect: "Eindeutig indirekt", sector: "Branchenbezogen", general: "Allgemein",
 };
+
+export const SI_ACTION: Record<string, string> = {
+  new: "Neukauf", increased: "Aufgestockt", reduced: "Reduziert", unchanged: "Unverändert", sold_out: "Komplett verkauft", unknown: "Gehalten",
+};
+export const SI_TONE: Record<string, string | undefined> = { new: "ok", increased: "ok", reduced: "warn", sold_out: "err" };
+
+/** Externe Recherche-Links (nur Verlinkung, keine automatische Datenübernahme). */
+export function researchLinks(symbol: string, region: string) {
+  const s = symbol.replace(/\.DE$/, "");
+  const us = region === "US";
+  return [
+    us && { label: "Dataroma", url: `https://www.dataroma.com/m/stock.php?sym=${encodeURIComponent(s.replace("-", "."))}` },
+    us && { label: "WhaleWisdom", url: `https://whalewisdom.com/stock/${encodeURIComponent(s.toLowerCase())}` },
+    us && { label: "OpenInsider", url: `http://openinsider.com/screener?s=${encodeURIComponent(s)}` },
+    us && { label: "Finviz", url: `https://finviz.com/quote.ashx?t=${encodeURIComponent(s)}` },
+    us && { label: "SEC EDGAR", url: `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${encodeURIComponent(s)}&type=&dateb=&owner=include&count=40` },
+    { label: "Yahoo Finance", url: `https://finance.yahoo.com/quote/${encodeURIComponent(symbol)}` },
+    { label: "Macrotrends", url: `https://www.macrotrends.net/stocks/charts/${encodeURIComponent(s)}/` },
+  ].filter(Boolean) as { label: string; url: string }[];
+}

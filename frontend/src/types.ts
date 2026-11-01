@@ -39,6 +39,7 @@ export interface StockRow {
   political: { relevance: number; trump_bonus: number; trump_bonus_active: boolean; direction: Direction;
     negative_signals_30d: number; positive_signals_30d: number };
   social: { mentions_7d: number; manipulation_risk: string } | null;
+  superinvestors: { holders: number; buyers: number; new_buyers: number; sellers: number; sold_out: number } | null;
   insider: { open_market_buys: number; open_market_sells: number; buy_value: number; sell_value: number; distinct_buyers: number; other_transactions: number };
 }
 
@@ -121,7 +122,23 @@ export interface CompanyDetail extends Meta {
     drivers: string[]; note: string };
   political_detail: StockRow["political"] & { mentions_total: number; events_30d: number; next_expiry: string | null };
   trump_mentions: TrumpMention[]; political_events: PoliticalEvent[]; signals: Signal[];
-  insiders: Insider[]; institutions: Institution[]; political_trades: PoliticalTrade[];
+  insiders: Insider[]; institutions: Institution[]; political_trades: PoliticalTrade[]; superinvestors: SiHolder[];
   social_detail: SocialStat | null;
   history: { date: string; symbol: string; from: string; to: string; reason: string | null }[];
 }
+
+export interface SiPosition {
+  cusip: string; issuer: string; title: string; put_call: string | null; shares: number; value: number;
+  weight_pct: number; action: "new" | "increased" | "reduced" | "unchanged" | "sold_out" | "unknown";
+  shares_change_pct: number | null; prev_shares: number; symbol: string | null; in_universe: boolean;
+}
+export interface SiManager {
+  cik: number; manager: string; fund: string; sec_name: string; report_date: string; filed_at: string; filing_url: string;
+  portfolio_value: number; holdings: number; new: number; sold_out: number; positions: SiPosition[];
+}
+export interface SiHolder { manager: string; fund: string; action: SiPosition["action"]; weight_pct: number; shares_change_pct: number | null; value: number; report_date: string }
+export interface SiStock {
+  symbol: string | null; cusip: string; issuer: string; in_universe: boolean; holders: number; buyers: number;
+  new_buyers: number; sellers: number; sold_out: number; value: number; managers: SiHolder[];
+}
+export interface ClusterBuy { symbol: string; insiders: number; transactions: number; value: number; roles: string[]; first: string; last: string }

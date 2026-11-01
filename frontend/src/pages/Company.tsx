@@ -1,4 +1,4 @@
-import { DRIVER_LABEL, INDEX_NAMES, MENTION_LABEL, fmt, useData } from "../data";
+import { DRIVER_LABEL, INDEX_NAMES, MENTION_LABEL, SI_ACTION, SI_TONE, fmt, researchLinks, useData } from "../data";
 import type { CompanyDetail } from "../types";
 import { Axes, DataTable, Translated, Direction, Empty, Gate, IndexTags, Page, Panel, Src, Tag, Verif, riskLabel, stockAxes } from "../ui";
 
@@ -18,6 +18,10 @@ function CompanyView({ d }: { d: CompanyDetail }) {
         {p.status === "archived" ? <> <Tag tone="warn">archiviert seit {fmt.date(p.archived_at)} ({p.status_reason})</Tag></> : null}</>}
       actions={<a className="back" href="#/quality">Zur Übersicht</a>}>
       {p.data_flags.length ? <p className="state state-warn">Datenhinweise: {p.data_flags.join(", ")}</p> : null}
+      <nav className="ext-links" aria-label="Weitere Recherche">
+        <span className="muted small">Weiter recherchieren:</span>
+        {researchLinks(p.symbol, p.region).map((l) => <a key={l.label} href={l.url} target="_blank" rel="noopener noreferrer">{l.label}</a>)}
+      </nav>
       <Panel className="axes-panel">
         <Axes {...stockAxes(p)} />
         <p className="note">Vier getrennte Dimensionen. Sie werden bewusst nicht zu einem Gesamtwert verrechnet; ein hoher Market- oder Political-Wert ist keine Kaufempfehlung.</p>
@@ -125,6 +129,20 @@ function CompanyView({ d }: { d: CompanyDetail }) {
             </li>
           ))}</ul>
         ) : <Empty>Keine Signale erfasst.</Empty>}
+      </Panel>
+
+      <Panel title="Superinvestoren (13F)" note="Bestände laut SEC-Pflichtmeldung zum Quartalsende, bis zu 45 Tage verzögert. Veränderung gegenüber dem Vorquartal.">
+        {d.superinvestors?.length ? (
+          <DataTable rows={d.superinvestors} rowKey={(r) => r.manager} initialSort={{ key: "w", dir: -1 }} limit={30}
+            cols={[
+              { key: "m", label: "Investor", render: (r) => <><strong>{r.manager}</strong><div className="small muted">{r.fund}</div></>, sort: (r) => r.manager },
+              { key: "a", label: "Aktion", render: (r) => <Tag tone={SI_TONE[r.action]}>{SI_ACTION[r.action]}</Tag>, sort: (r) => r.action },
+              { key: "c", label: "Stückzahl Δ", num: true, render: (r) => r.action === "new" ? "neu" : fmt.pct(r.shares_change_pct, 0), sort: (r) => r.shares_change_pct },
+              { key: "w", label: "Depotanteil", num: true, render: (r) => `${fmt.num(r.weight_pct, 2)} %`, sort: (r) => r.weight_pct },
+              { key: "v", label: "Wert", num: true, render: (r) => fmt.big(r.value, "USD"), sort: (r) => r.value },
+              { key: "q", label: "Stichtag", render: (r) => fmt.date(r.report_date) },
+            ]} />
+        ) : <Empty>Kein beobachteter Superinvestor meldet diese Aktie.</Empty>}
       </Panel>
 
       <div className="grid-2">
