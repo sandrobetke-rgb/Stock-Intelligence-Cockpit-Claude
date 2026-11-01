@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T14:37:04Z",
+ "generated_at": "2026-11-01T02:22:47Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "universe": {
@@ -49,7 +49,7 @@
    }
   ],
   "upcoming_changes": [],
-  "built_at": "2026-10-31T14:37:05Z"
+  "built_at": "2026-11-01T02:22:47Z"
  },
  "coverage": {
   "prices_pct": 100,
@@ -66,17 +66,17 @@
  },
  "freshness": {
   "latest_price_date": "2026-10-30",
-  "signals_24h": 1063,
-  "trump_bonus_active": 1,
+  "signals_24h": 312,
+  "trump_bonus_active": 0,
   "upcoming_events": 10
  },
  "verification_counts": {
   "Verified": 0,
   "Partially Verified": 2,
-  "Unverified": 11310,
+  "Unverified": 11249,
   "Disputed": 0,
   "False": 0,
-  "Outdated": 4395
+  "Outdated": 4456
  },
  "sources": [
   {
@@ -111,9 +111,15 @@
   },
   {
    "area": "Insider USA",
-   "source": "SEC EDGAR Form 4",
+   "source": "SEC EDGAR Form 4 (Tagesindex, gesamter Markt)",
    "status": "connected",
-   "limitation": "Rotierende Abfrage; User-Agent mit Kontakt (SIC_USER_AGENT) nötig"
+   "limitation": "Alle Meldungen der letzten 30 Tage; User-Agent mit Kontakt (SIC_USER_AGENT) nötig"
+  },
+  {
+   "area": "Superinvestoren (13F)",
+   "source": "SEC EDGAR 13F-HR, CUSIP-Zuordnung über OpenFIGI",
+   "status": "connected",
+   "limitation": "Quartalsstichtag, bis 45 Tage Verzug; nur US-Long-Positionen; Managerliste in superinvestors.csv"
   },
   {
    "area": "Insider DE / Institutionen / Politiker",
@@ -132,32 +138,12 @@
   {
    "step": "universe",
    "status": "ok",
-   "seconds": 1.8
-  },
-  {
-   "step": "prices",
-   "status": "ok",
-   "seconds": 226.2
-  },
-  {
-   "step": "fundamentals",
-   "status": "ok",
-   "seconds": 397.5
+   "seconds": 0.0
   },
   {
    "step": "news_csv",
    "status": "ok",
    "seconds": 0.0
-  },
-  {
-   "step": "news_rss",
-   "status": "ok",
-   "seconds": 149.7
-  },
-  {
-   "step": "trump_feeds",
-   "status": "ok",
-   "seconds": 0.7
   },
   {
    "step": "trump",
@@ -185,24 +171,24 @@
    "seconds": 0.0
   },
   {
-   "step": "insider_sec",
+   "step": "institutions",
    "status": "ok",
-   "seconds": 65.5
+   "seconds": 0.0
   },
   {
-   "step": "institutions",
+   "step": "superinvestors",
    "status": "ok",
    "seconds": 0.0
   },
   {
    "step": "market_events",
    "status": "ok",
-   "seconds": 1.1
+   "seconds": 0.0
   },
   {
    "step": "translate",
    "status": "ok",
-   "seconds": 148.7
+   "seconds": 0.0
   }
  ],
  "errors": [],
