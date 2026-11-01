@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -55,8 +55,9 @@
    ]
   },
   "market_intelligence": {
-   "score": 0.7,
+   "score": 2.9,
    "drivers": [
+    "insider_activity",
     "price_volume_anomaly"
    ],
    "independent_7d": 0,
@@ -73,14 +74,20 @@
   "social": null,
   "insider": {
    "window_days": 90,
-   "open_market_buys": 0,
-   "open_market_sells": 0,
-   "buy_value": 0,
-   "sell_value": 0,
-   "distinct_buyers": 0,
+   "open_market_buys": 1,
+   "open_market_sells": 1,
+   "buy_value": 4296.25,
+   "sell_value": 12750.0,
+   "distinct_buyers": 1,
    "other_transactions": 0
   },
-  "superinvestors": null,
+  "superinvestors": {
+   "holders": 1,
+   "buyers": 1,
+   "new_buyers": 0,
+   "sellers": 0,
+   "sold_out": 0
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
   "country": null
@@ -340,7 +347,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 0.7,
+  "score": 2.9,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -349,7 +356,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 4.1,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 40
   },
   "windows": {
    "24h": {
@@ -381,6 +388,7 @@
    }
   },
   "drivers": [
+   "insider_activity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -400,10 +408,61 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "d55253aebada544a",
+   "symbol": "OVLY",
+   "insider": "Leonard Daniel J",
+   "role": "Director",
+   "transaction_code": "P",
+   "transaction_kind": "buy",
+   "transaction_label": "Kauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-28",
+   "filed_at": "2026-10-29",
+   "reporting_delay_days": 1,
+   "shares": 125.0,
+   "price": 34.37,
+   "value": 4296.25,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1431567/000143774926033873/0001437749-26-033873-index.htm"
+  },
+  {
+   "id": "744c9ed3b32cebec",
+   "symbol": "OVLY",
+   "insider": "Barton Don",
+   "role": "Director",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-26",
+   "filed_at": "2026-10-26",
+   "reporting_delay_days": 0,
+   "shares": 375.0,
+   "price": 34.0,
+   "value": 12750.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1431567/000143774926033533/0001437749-26-033533-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "increased",
+   "weight_pct": 0.0,
+   "shares_change_pct": 109.1,
+   "value": 2496219.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

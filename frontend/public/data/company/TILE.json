@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -26,7 +26,7 @@
    "adr20": 2.5681779254972623,
    "rvol": 0.8019022630370614,
    "ema10": 36.259915043484355,
-   "ema21": 35.8963131539092,
+   "ema21": 35.89631315390932,
    "sma50": 35.78494285583496,
    "sma200": 32.06181265830994
   },
@@ -55,8 +55,9 @@
    ]
   },
   "market_intelligence": {
-   "score": 0.4,
+   "score": 1.5,
    "drivers": [
+    "insider_activity",
     "price_volume_anomaly"
    ],
    "independent_7d": 0,
@@ -74,13 +75,19 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 2,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 396500.0,
    "distinct_buyers": 0,
    "other_transactions": 0
   },
-  "superinvestors": null,
+  "superinvestors": {
+   "holders": 1,
+   "buyers": 0,
+   "new_buyers": 0,
+   "sellers": 1,
+   "sold_out": 0
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
   "country": null
@@ -102,7 +109,7 @@
   "adr20": 2.5681779254972623,
   "rvol": 0.8019022630370614,
   "ema10": 36.259915043484355,
-  "ema21": 35.8963131539092,
+  "ema21": 35.89631315390932,
   "sma50": 35.78494285583496,
   "sma200": 32.06181265830994,
   "volatility_ann": 30.988253418385103,
@@ -426,7 +433,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 0.4,
+  "score": 1.5,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -435,7 +442,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 2.5,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 20
   },
   "windows": {
    "24h": {
@@ -467,6 +474,7 @@
    }
   },
   "drivers": [
+   "insider_activity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -486,10 +494,61 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "e7828d92c902f83b",
+   "symbol": "TILE",
+   "insider": "Hurd Laurel",
+   "role": "Director, President & CEO",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-26",
+   "filed_at": "2026-10-27",
+   "reporting_delay_days": 1,
+   "shares": 7000.0,
+   "price": 36.42,
+   "value": 254940.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/715787/000176869526000009/0001768695-26-000009-index.htm"
+  },
+  {
+   "id": "0646e34ed49ff3eb",
+   "symbol": "TILE",
+   "insider": "Hendrix Daniel T",
+   "role": "Director",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-20",
+   "filed_at": "2026-10-21",
+   "reporting_delay_days": 1,
+   "shares": 4000.0,
+   "price": 35.39,
+   "value": 141560.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/715787/000109462926000004/0001094629-26-000004-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "reduced",
+   "weight_pct": 0.01,
+   "shares_change_pct": -47.2,
+   "value": 8699837.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

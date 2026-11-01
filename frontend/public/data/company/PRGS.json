@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -55,9 +55,10 @@
    ]
   },
   "market_intelligence": {
-   "score": 0.9,
+   "score": 1.4,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -74,9 +75,9 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 1,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 90678.42,
    "distinct_buyers": 0,
    "other_transactions": 0
   },
@@ -426,7 +427,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 0.9,
+  "score": 1.4,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -435,7 +436,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 5.1,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 10
   },
   "windows": {
    "24h": {
@@ -467,7 +468,8 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -486,7 +488,28 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "291ce5742327f1a5",
+   "symbol": "PRGS",
+   "insider": "Jarrett Loren",
+   "role": "EVP/GM Digital Experience",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-21",
+   "filed_at": "2026-10-22",
+   "reporting_delay_days": 1,
+   "shares": 2086.0,
+   "price": 43.47,
+   "value": 90678.42,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/876167/000087616726000131/0000876167-26-000131-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "superinvestors": [],

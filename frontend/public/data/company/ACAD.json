@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -53,9 +53,10 @@
    ]
   },
   "market_intelligence": {
-   "score": 1.5,
+   "score": 2.0,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -72,11 +73,18 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 1,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 69342.48,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 1
+  },
+  "superinvestors": {
+   "holders": 2,
+   "buyers": 0,
+   "new_buyers": 0,
+   "sellers": 2,
+   "sold_out": 0
   },
   "superinvestors": null,
   "first_seen": "2026-10-31",
@@ -424,7 +432,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 1.5,
+  "score": 2.0,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -433,7 +441,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 8.4,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 10
   },
   "windows": {
    "24h": {
@@ -465,7 +473,8 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -484,10 +493,70 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "31267afa3b4ed4bd",
+   "symbol": "ACAD",
+   "insider": "Schneyer Mark C.",
+   "role": "EVP, CHIEF FINANCIAL OFFICER",
+   "transaction_code": "A",
+   "transaction_kind": "award",
+   "transaction_label": "Zuteilung (Vergütung)",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-15",
+   "filed_at": "2026-10-30",
+   "reporting_delay_days": 15,
+   "shares": 6815.0,
+   "price": 0.0,
+   "value": null,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1070494/000189997726000010/0001899977-26-000010-index.htm"
+  },
+  {
+   "id": "6f636038ba3146ac",
+   "symbol": "ACAD",
+   "insider": "Schneyer Mark C.",
+   "role": "EVP, CHIEF FINANCIAL OFFICER",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-30",
+   "filed_at": "2026-10-30",
+   "reporting_delay_days": 0,
+   "shares": 3321.0,
+   "price": 20.88,
+   "value": 69342.48,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1070494/000189997726000010/0001899977-26-000010-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Ray Dalio",
+   "fund": "Bridgewater Associates",
+   "action": "reduced",
+   "weight_pct": 0.01,
+   "shares_change_pct": -64.6,
+   "value": 1271705.0,
+   "report_date": "2026-06-30"
+  },
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "reduced",
+   "weight_pct": 0.04,
+   "shares_change_pct": -25.6,
+   "value": 32449679.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

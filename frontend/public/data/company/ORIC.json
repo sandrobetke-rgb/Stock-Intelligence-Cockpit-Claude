@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -56,9 +56,10 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.7,
+   "score": 3.1,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -75,11 +76,11 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 1,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 189390.6,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 1
   },
   "superinvestors": null,
   "first_seen": "2026-10-31",
@@ -428,7 +429,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.7,
+  "score": 3.1,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -437,7 +438,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 15.5,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 10
   },
   "windows": {
    "24h": {
@@ -469,7 +470,8 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -488,7 +490,48 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "4d10398201c8f65a",
+   "symbol": "ORIC",
+   "insider": "Piscitelli Dominic",
+   "role": "Chief Financial Officer",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-20",
+   "filed_at": "2026-10-21",
+   "reporting_delay_days": 1,
+   "shares": 14000.0,
+   "price": 4.36,
+   "value": 61040.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1796280/000169502826000012/0001695028-26-000012-index.htm"
+  },
+  {
+   "id": "7253df17d6590e4b",
+   "symbol": "ORIC",
+   "insider": "Piscitelli Dominic",
+   "role": "Chief Financial Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-20",
+   "filed_at": "2026-10-21",
+   "reporting_delay_days": 1,
+   "shares": 14000.0,
+   "price": 13.5279,
+   "value": 189390.6,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1796280/000169502826000012/0001695028-26-000012-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "superinvestors": [],

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -55,8 +55,9 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.7,
+   "score": 5.3,
    "drivers": [
+    "insider_activity",
     "price_volume_anomaly"
    ],
    "independent_7d": 0,
@@ -73,14 +74,20 @@
   "social": null,
   "insider": {
    "window_days": 90,
-   "open_market_buys": 0,
-   "open_market_sells": 0,
-   "buy_value": 0,
-   "sell_value": 0,
-   "distinct_buyers": 0,
+   "open_market_buys": 1,
+   "open_market_sells": 2,
+   "buy_value": 11596.5,
+   "sell_value": 176772.7,
+   "distinct_buyers": 1,
    "other_transactions": 0
   },
-  "superinvestors": null,
+  "superinvestors": {
+   "holders": 0,
+   "buyers": 0,
+   "new_buyers": 0,
+   "sellers": 1,
+   "sold_out": 1
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
   "country": null
@@ -340,7 +347,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.7,
+  "score": 5.3,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -349,7 +356,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 15.1,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 50
   },
   "windows": {
    "24h": {
@@ -381,6 +388,7 @@
    }
   },
   "drivers": [
+   "insider_activity",
    "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -400,10 +408,81 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "43dc9c13b66e57fb",
+   "symbol": "PEBO",
+   "insider": "Augenstein Mark",
+   "role": "EVP, Operations",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-23",
+   "filed_at": "2026-10-27",
+   "reporting_delay_days": 4,
+   "shares": 2000.0,
+   "price": 37.88,
+   "value": 75760.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000237/0000318300-26-000237-index.htm"
+  },
+  {
+   "id": "d0e49d712717f414",
+   "symbol": "PEBO",
+   "insider": "Smith Dwight Eric",
+   "role": "Director",
+   "transaction_code": "P",
+   "transaction_kind": "buy",
+   "transaction_label": "Kauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-26",
+   "filed_at": "2026-10-27",
+   "reporting_delay_days": 1,
+   "shares": 300.0,
+   "price": 38.655,
+   "value": 11596.5,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000238/0000318300-26-000238-index.htm"
+  },
+  {
+   "id": "97d1689c9ce8c9e7",
+   "symbol": "PEBO",
+   "insider": "Donlon Hugh J",
+   "role": "EVP,  Community Banking",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-22",
+   "filed_at": "2026-10-23",
+   "reporting_delay_days": 1,
+   "shares": 2650.0,
+   "price": 38.118,
+   "value": 101012.7,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000233/0000318300-26-000233-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "sold_out",
+   "weight_pct": 0,
+   "shares_change_pct": -100.0,
+   "value": 0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -55,12 +55,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 5.8,
+   "score": 49.3,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 6,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -74,13 +76,19 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 1,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 112625.0,
    "distinct_buyers": 0,
    "other_transactions": 0
   },
-  "superinvestors": null,
+  "superinvestors": {
+   "holders": 1,
+   "buyers": 0,
+   "new_buyers": 0,
+   "sellers": 1,
+   "sold_out": 0
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
   "country": "United States"
@@ -428,48 +436,50 @@
   ]
  },
  "intelligence_detail": {
-  "score": 5.8,
+  "score": 49.3,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 60,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 32.6,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 10
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 6,
+    "independent": 6,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 12,
+    "independent": 12,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -487,11 +497,319 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
- "insiders": [],
+ "signals": [
+  {
+   "id": "dbc03d4913e54b4d",
+   "symbols": [
+    "AMZN",
+    "FROG",
+    "FSLY",
+    "GOOG",
+    "GOOGL",
+    "INTC",
+    "NOW",
+    "ORCL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Cloudflare, Fastly, Oracle, JFrog, and Okta shares plummet, what you need to know",
+   "summary": "A number of stocks fell in the afternoon session after underwhelming earnings reports from tech giants Amazon and Intel (after mediocre earnings reports from Alphabet and ServiceNow the previous day) sparked widespread investor anxiety regarding aggressive artificial intelligence",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cloudflare-fastly-oracle-jfrog-okta-092329601.html?.tsrc=rss",
+   "published_at": "2026-10-31T09:23:29Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:07Z",
+   "fingerprint": "3b8a43e2060fe458",
+   "primary_source": false,
+   "cluster_id": "dbc03d4913e54b4d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Cloudflare, Fastly, Oracle, JFrog und Okta teilen absinken, was Sie wissen müssen"
+  },
+  {
+   "id": "09ac33dbffa1946e",
+   "symbols": [
+    "FROG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "They Called This Stock a Winner in the AI Coding Boom. A Year Later, It’s Up 94%.",
+   "summary": "Three major firms loaded up on JFrog the same morning after its blowout quarter, and the AI coding thesis looked airtight until the stock cratered below their buy price and stayed there for months.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/30/they-called-this-stock-a-winner-in-the-ai-coding-boom-a-year-later-its-up-94/?.tsrc=rss",
+   "published_at": "2026-10-30T16:49:21Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:42Z",
+   "fingerprint": "5c2c79524377986a",
+   "primary_source": false,
+   "cluster_id": "09ac33dbffa1946e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Sie nannten diese Aktie einen Gewinner im AI Coding Boom. Ein Jahr später ist es um 94% gestiegen."
+  },
+  {
+   "id": "7196e661019e1964",
+   "symbols": [
+    "DDOG",
+    "FROG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can GitLab Stock Get Back To Where It Was?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/gtlb/articles/621336/can-gitlab-stock-get-back-to-where-it-was/2026-10-29?.tsrc=rss",
+   "published_at": "2026-10-29T20:10:28Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:00Z",
+   "fingerprint": "4d5b0e6d6290f4ac",
+   "primary_source": false,
+   "cluster_id": "7196e661019e1964",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Können GitLab-Aktien dorthin zurückkehren, wo sie waren?"
+  },
+  {
+   "id": "08d658acc6f98b1a",
+   "symbols": [
+    "FROG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is JFrog (FROG) Pricey After Its DevGovOps Compliance Launch?",
+   "summary": "JFrog (FROG) has rolled out new DevGovOps features tied to EU Digital Operational Resilience Act compliance, repository-level governance, and AI-driven verification, giving regulators and development leaders shared, auditable views across software releases. The new DevGovOps roll",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/jfrog-frog-pricey-devgovops-compliance-020756033.html?.tsrc=rss",
+   "published_at": "2026-10-28T02:07:56Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:42Z",
+   "fingerprint": "eb76d2e317c97dde",
+   "primary_source": false,
+   "cluster_id": "08d658acc6f98b1a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "931d2f5abb9c61e0",
+   "symbols": [
+    "FROG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can JFrog Stock Keep Its Lead Over Its Industry?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/frog/articles/620808/can-jfrog-stock-keep-its-lead-over-its-industry/2026-10-27?.tsrc=rss",
+   "published_at": "2026-10-27T14:47:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:42Z",
+   "fingerprint": "74164a57d489c2ab",
+   "primary_source": false,
+   "cluster_id": "931d2f5abb9c61e0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4f0bfa47ef4969c9",
+   "symbols": [
+    "FROG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "JFrog and Industry Judges Recognize Global Brands Bringing Trust to the Software Supply Chain in the AI Era",
+   "summary": "SUNNYVALE, Calif., October 27, 2026--JFrog recognizes 9 companies in its inaugural Software Supply Chain Excellence Awards",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/jfrog-industry-judges-recognize-global-131500204.html?.tsrc=rss",
+   "published_at": "2026-10-27T13:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:42Z",
+   "fingerprint": "844b0537c0b93adc",
+   "primary_source": false,
+   "cluster_id": "4f0bfa47ef4969c9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9e72da591113648f",
+   "symbols": [
+    "FROG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 software stocks with competitive advantages",
+   "summary": "Software is rapidly reducing operating expenses for businesses. This secular theme has materialized in superior earnings growth and stock price performance for most SaaS companies, and over the last six months, the industry’s 54.6% return has topped the S&amp;P 500 by 45.5 percen",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-software-stocks-competitive-advantages-190439047.html?.tsrc=rss",
+   "published_at": "2026-10-23T19:04:39Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:42Z",
+   "fingerprint": "2ec290ca1bbbe294",
+   "primary_source": false,
+   "cluster_id": "9e72da591113648f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3c954582517c1ec2",
+   "symbols": [
+    "FROG"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "JFrog Jumped 6% on BofA Price Target Hike as Software Stocks Extend Their Rally",
+   "summary": "Key TakeawaysJFrog shares rose 6% today after BofA raised its price target to $115 from $105 and kept its Buy rating. This is the second Buy-rated target raise to $115 in three days, and JFrog’s recent results suggest the optimism is earned.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/jfrog-jumped-6-on-bofa-price-target-hike-as-software-stocks-extend-their-rally?ref=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-23T18:31:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:42Z",
+   "fingerprint": "0fdf3e66903de439",
+   "primary_source": false,
+   "cluster_id": "3c954582517c1ec2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1b95713bbb062f9e",
+   "symbols": [
+    "ECPG",
+    "FROG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 cash-producing stock with impressive fundamentals and 2 facing headwinds",
+   "summary": "While strong cash flow is a key indicator of stability, it doesn’t always translate to superior returns. Some cash-heavy businesses struggle with inefficient spending, slowing demand, or weak competitive positioning.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/1-cash-producing-stock-impressive-190953637.html?.tsrc=rss",
+   "published_at": "2026-10-22T19:09:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:14Z",
+   "fingerprint": "86e05f9deb0c2a8a",
+   "primary_source": false,
+   "cluster_id": "1b95713bbb062f9e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "180069e3743aaa42",
+   "symbols": [
+    "FROG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Rapid7, CrowdStrike, Cloudflare, Okta, and JFrog shares skyrocket, what you need to know",
+   "summary": "A number of stocks jumped in the afternoon session after sentiment across the broader software and cybersecurity space continued to improve amid receding fears of artificial intelligence disruption.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/rapid7-crowdstrike-cloudflare-okta-jfrog-203839922.html?.tsrc=rss",
+   "published_at": "2026-10-21T20:38:39Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:42Z",
+   "fingerprint": "c3b148a5a7cd2ef7",
+   "primary_source": false,
+   "cluster_id": "180069e3743aaa42",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7f32aa61578d40b7",
+   "symbols": [
+    "FROG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "JFrog Closes the Shadow AI Blind Spot: Unveils AI-SEC to Control Every AI Agent, Skill, and Model, from Developer to Production",
+   "summary": "SUNNYVALE, Calif. & BARCELONA, Spain, October 21, 2026--JFrog introduces Local Shadow AI Detection and Bring Your Own LLM Key scanning capabilities at swampUP Europe 2026",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/jfrog-closes-shadow-ai-blind-070000132.html?.tsrc=rss",
+   "published_at": "2026-10-21T07:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:42Z",
+   "fingerprint": "44ef3ad425c787c5",
+   "primary_source": false,
+   "cluster_id": "7f32aa61578d40b7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "30b4a3c5d5ce8efe",
+   "symbols": [
+    "FROG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "JFrog Ends the Audit Scramble: Delivers New DevGovOps Capabilities with Signed Compliance Evidence for Every Release, Without Slowing Development",
+   "summary": "SUNNYVALE, Calif. & BARCELONA, Spain, October 21, 2026--JFrog Delivers New DevGovOps Capabilities with Signed Compliance Evidence for Every Release",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/jfrog-ends-audit-scramble-delivers-070000830.html?.tsrc=rss",
+   "published_at": "2026-10-21T07:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:42Z",
+   "fingerprint": "df9ee095a44ae834",
+   "primary_source": false,
+   "cluster_id": "30b4a3c5d5ce8efe",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
+ "insiders": [
+  {
+   "id": "48f909d644e20b7e",
+   "symbol": "FROG",
+   "insider": "Zwarenstein Barry",
+   "role": "Director",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-20",
+   "filed_at": "2026-10-22",
+   "reporting_delay_days": 2,
+   "shares": 1250.0,
+   "price": 90.1,
+   "value": 112625.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1800667/000122734826000010/0001227348-26-000010-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "reduced",
+   "weight_pct": 0.18,
+   "shares_change_pct": -8.3,
+   "value": 131344138.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

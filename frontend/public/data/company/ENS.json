@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 3.3510982134171323,
    "rvol": 1.2815188963644712,
    "ema10": 169.844197948755,
-   "ema21": 173.30889842032076,
+   "ema21": 173.30889842039798,
    "sma50": 178.8939694213867,
-   "sma200": 191.42997291564942
+   "sma200": 191.42997360229492
   },
   "market_cap": 5768632320.0,
   "market_cap_currency": "USD",
@@ -53,12 +53,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 15.4,
+   "score": 58.3,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 8,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -78,7 +80,13 @@
    "distinct_buyers": 0,
    "other_transactions": 0
   },
-  "superinvestors": null,
+  "superinvestors": {
+   "holders": 2,
+   "buyers": 2,
+   "new_buyers": 0,
+   "sellers": 0,
+   "sold_out": 0
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
   "country": "United States"
@@ -100,9 +108,9 @@
   "adr20": 3.3510982134171323,
   "rvol": 1.2815188963644712,
   "ema10": 169.844197948755,
-  "ema21": 173.30889842032076,
+  "ema21": 173.30889842039798,
   "sma50": 178.8939694213867,
-  "sma200": 191.42997291564942,
+  "sma200": 191.42997360229492,
   "volatility_ann": 36.34800828612909,
   "avg_dollar_volume_20d": 88206912.92984009,
   "move_zscore": -2.908010570138842
@@ -424,48 +432,50 @@
   ]
  },
  "intelligence_detail": {
-  "score": 15.4,
+  "score": 58.3,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
-   "analyst_activity": 0,
+   "analyst_activity": 35,
    "price_volume_anomaly": 87.2,
    "social_attention": null,
    "insider_activity": null
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 8,
+    "independent": 8,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 16,
+    "independent": 14,
+    "duplicates": 2,
+    "sources": 1,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -483,11 +493,386 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "8a3beffda618b728",
+   "symbols": [
+    "ENS",
+    "F"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 EV Stocks With Price To Sales Under 4x",
+   "summary": "China’s factory activity has now slipped again, with new export orders weakening, which keeps the spotlight on sectors tied to global trade and energy use. Electric vehicles and battery suppliers sit right on that fault line, where any shift in manufacturing or trade policy can r",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-ev-stocks-price-sales-100925263.html?.tsrc=rss",
+   "published_at": "2026-10-31T10:09:25Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:26Z",
+   "fingerprint": "389131c9b44946ef",
+   "primary_source": false,
+   "cluster_id": "8a3beffda618b728",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "3 EV-Aktien mit Preis zu Verkäufen unter 4x"
+  },
+  {
+   "id": "3fa54cf466b41ffc",
+   "symbols": [
+    "ENS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Autonomous Vehicle Stocks To Own In October 2026",
+   "summary": "Oil above US$100 keeps petrol and diesel expensive, and that keeps pressure on drivers and logistics operators to cut fuel risk. Electric and self-driving vehicle stocks plug straight into that problem by offering ways to use less fuel or rethink how transport works altogether. T",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-autonomous-vehicle-stocks-own-141328634.html?.tsrc=rss",
+   "published_at": "2026-10-29T14:13:28Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:30Z",
+   "fingerprint": "9f37c1c309299aef",
+   "primary_source": false,
+   "cluster_id": "3fa54cf466b41ffc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c87dc84c405f171a",
+   "symbols": [
+    "ENS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 EV Stocks To Watch In October 2026",
+   "summary": "AI related investment has become a key pillar of US economic growth, and that same demand for computing power depends heavily on how people and cargo move. Electric and self driving vehicle companies sit right in that crossroads of chips, software and real world transport. Ignore",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-ev-stocks-watch-october-101554064.html?.tsrc=rss",
+   "published_at": "2026-10-29T10:15:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:30Z",
+   "fingerprint": "03ad12a0de9c7a2e",
+   "primary_source": false,
+   "cluster_id": "f36475f374e75674",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "335b80ffba826bc7",
+   "symbols": [
+    "ENS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Top Midday Gainers",
+   "summary": "Ultralife (ULBI) shares soared 145% after EnerSys (ENS) said late Tuesday it has agreed to acquire t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/top-midday-gainers-173653155.html?.tsrc=rss",
+   "published_at": "2026-10-28T17:36:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:30Z",
+   "fingerprint": "90aa4f5ef40b8027",
+   "primary_source": false,
+   "cluster_id": "335b80ffba826bc7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8fc7cfb6c2193823",
+   "symbols": [
+    "ENS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Ultralife Stock Soars 145%. EnerSys to Buy It for the ‘Battlefield of the Future.’",
+   "summary": "Ultralife stock soars as EnerSys prices in massive premium for a key cog in the ‘battlefield of the future.’",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/9d632cb8-296f-395e-8bfa-2d1e0fa9427d/ultralife-stock-soars-145%25..html?.tsrc=rss",
+   "published_at": "2026-10-28T13:56:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:30Z",
+   "fingerprint": "704084758115c97d",
+   "primary_source": false,
+   "cluster_id": "8fc7cfb6c2193823",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1c557f98afe04e07",
+   "symbols": [
+    "ENS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Ultralife and EnerSys climb after announcing $320 million defense power tie-up",
+   "summary": "Investing.com -- Shares of Ultralife Corporation (NASDAQ:ULBI) surged 145% in premarket trading Wednesday following an agreement to be acquired by industrial battery maker Enersys (NYSE:ENS) in an all-cash deal valued at approximately $320 million, including net debt. EnerSys sha",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ultralife-enersys-climb-announcing-320-135220886.html?.tsrc=rss",
+   "published_at": "2026-10-28T13:52:20Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:30Z",
+   "fingerprint": "4f75cbd806975b59",
+   "primary_source": false,
+   "cluster_id": "1c557f98afe04e07",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a34046cb7807d310",
+   "symbols": [
+    "ENS"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "EnerSys To Acquire Ultralife, Expanding Differentiated Battery Technologies and Accelerating Growth in Defense Market",
+   "summary": "READING, Pa., October 27, 2026--EnerSys (NYSE: ENS), a global leader in stored energy solutions for industrial, infrastructure, and defense applications, today announced that it has entered into a definitive agreement to acquire Ultralife (NASDAQ:ULBI) for $16.00 per share in cas",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/enersys-acquire-ultralife-expanding-differentiated-203100007.html?.tsrc=rss",
+   "published_at": "2026-10-27T20:31:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:30Z",
+   "fingerprint": "5f1a9aa1904ac5e3",
+   "primary_source": false,
+   "cluster_id": "a34046cb7807d310",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "429fbbb5f3aa7bf0",
+   "symbols": [
+    "ENS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "EnerSys to Acquire Ultralife Corporation in a $320 Million All-Cash Transaction",
+   "summary": "NEWARK, N.Y., Oct. 27, 2026 (GLOBE NEWSWIRE) -- Ultralife Corporation (NASDAQ: ULBI) today announced that it has entered into an Agreement and Plan of Merger (“merger agreement”) with EnerSys (NYSE: ENS) under which upon closing EnerSys will acquire Ultralife Corporation in an al",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/enersys-acquire-ultralife-corporation-320-201500253.html?.tsrc=rss",
+   "published_at": "2026-10-27T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:30Z",
+   "fingerprint": "e958838e1279fdf4",
+   "primary_source": false,
+   "cluster_id": "429fbbb5f3aa7bf0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f36475f374e75674",
+   "symbols": [
+    "ENS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Top 3 EV Stocks To Watch In October 2026",
+   "summary": "Oil prices recently topped $110 a barrel as conflict risks around Iran and Saudi energy facilities resurfaced, reminding markets how exposed transport and logistics remain to fuel costs. Electric and self-driving vehicle stocks sit right in that crossfire, as businesses and gover",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/top-3-ev-stocks-watch-131427016.html?.tsrc=rss",
+   "published_at": "2026-10-22T13:14:27Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:30Z",
+   "fingerprint": "016b5418f90172bc",
+   "primary_source": false,
+   "cluster_id": "f36475f374e75674",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c8be8862f1649e35",
+   "symbols": [
+    "ENS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Applied Aerospace Defense And 2 Other Top EV Stocks To Watch",
+   "summary": "Oil prices have surged above $111 a barrel after attacks on Saudi energy infrastructure, putting clean transport back in the spotlight as fuel costs bite and energy security feels fragile. Electric and self-driving vehicle stocks sit right at that crossroads of efficiency and res",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/applied-aerospace-defense-2-other-081254106.html?.tsrc=rss",
+   "published_at": "2026-10-22T08:12:54Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:30Z",
+   "fingerprint": "1ccb5432bcb523ef",
+   "primary_source": false,
+   "cluster_id": "067de58d1e4e0901",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "09cf1e4efae618c1",
+   "symbols": [
+    "ENS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "EnerSys Announces Date of Second Quarter Fiscal 2027 Financial Results Release and Conference Call",
+   "summary": "READING, Pa., October 21, 2026--EnerSys (NYSE: ENS), a global leader in stored energy solutions for industrial, infrastructure, and defense applications, announced today that the Company will release its second quarter fiscal 2027 financial results for the period ended October 4,",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/enersys-announces-date-second-quarter-201500306.html?.tsrc=rss",
+   "published_at": "2026-10-21T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:30Z",
+   "fingerprint": "c3be478d52486d51",
+   "primary_source": false,
+   "cluster_id": "09cf1e4efae618c1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ae7dfecf9c8d7439",
+   "symbols": [
+    "ENS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Hitachi Construction Machinery And 2 Best Autonomous Vehicle Stocks",
+   "summary": "Oil threatens to stay expensive as the IEA warns diesel markets could remain tight well into 2027, which keeps pressure on transport, logistics, and freight. That keeps attention on cleaner drivetrains and self driving technology as one way to cut fuel risk over time. This articl",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/hitachi-construction-machinery-2-best-021215929.html?.tsrc=rss",
+   "published_at": "2026-10-15T02:12:15Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:30Z",
+   "fingerprint": "60cfba02b967e1d7",
+   "primary_source": false,
+   "cluster_id": "ae7dfecf9c8d7439",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "067de58d1e4e0901",
+   "symbols": [
+    "ENS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Applied Aerospace Defense And 2 Other EV Stocks To Watch",
+   "summary": "Gas prices have stayed above $4 a gallon for a record stretch in 2026 as conflict in the Middle East disrupts oil flows and squeezes drivers. That kind of pain at the pump keeps attention on electric and self driving transport companies that do not rely on crude in the same way. ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/applied-aerospace-defense-2-other-001242172.html?.tsrc=rss",
+   "published_at": "2026-10-15T00:12:42Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:30Z",
+   "fingerprint": "68d9e6cafc2b3da8",
+   "primary_source": false,
+   "cluster_id": "067de58d1e4e0901",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e7118de889801395",
+   "symbols": [
+    "ENS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "EnerSys Appoints Navi Grewal as Chief Digital, AI and Information Officer",
+   "summary": "READING, Pa., October 14, 2026--EnerSys (NYSE: ENS), a global leader in stored energy solutions for industrial, infrastructure, and defense applications, today announced the appointment of Navi Grewal as Chief Digital, AI and Information Officer, effective October 16, 2026. Ms. G",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/enersys-appoints-navi-grewal-chief-201500764.html?.tsrc=rss",
+   "published_at": "2026-10-14T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:30Z",
+   "fingerprint": "8222c9dc1f37e9e1",
+   "primary_source": false,
+   "cluster_id": "e7118de889801395",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "26cd1033da8edb61",
+   "symbols": [
+    "AZZ",
+    "ENS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "AZZ (AZZ) Tops Q2 Earnings and Revenue Estimates",
+   "summary": "AZZ (AZZ) delivered earnings and revenue surprises of +9.89% and +5.44%, respectively, for the quarter ended August 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/azz-azz-tops-q2-earnings-202502296.html?.tsrc=rss",
+   "published_at": "2026-10-13T20:25:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:28:03Z",
+   "fingerprint": "af54c6a5b38e39e6",
+   "primary_source": false,
+   "cluster_id": "26cd1033da8edb61",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fda25e27ef624edc",
+   "symbols": [
+    "ENS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zacks.com featured highlights include Enersys, Micron Technology, Cheesecake Factory, Suncor Energy and Taiwan Semiconductor",
+   "summary": "EnerSys, Micron Technology and three other dividend growth stocks offer income potential and long-term growth as investors await key U.S. inflation data.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-com-featured-highlights-enersys-095500117.html?.tsrc=rss",
+   "published_at": "2026-10-13T09:55:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:30Z",
+   "fingerprint": "8c3426b7ac124c97",
+   "primary_source": false,
+   "cluster_id": "fda25e27ef624edc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Ray Dalio",
+   "fund": "Bridgewater Associates",
+   "action": "increased",
+   "weight_pct": 0.05,
+   "shares_change_pct": 188.2,
+   "value": 12999691.0,
+   "report_date": "2026-06-30"
+  },
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "increased",
+   "weight_pct": 0.03,
+   "shares_change_pct": 74.7,
+   "value": 24270516.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

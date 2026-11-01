@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 2.435457738769907,
    "rvol": 1.1817372472012981,
    "ema10": 65.97436243009994,
-   "ema21": 65.17881369788377,
+   "ema21": 65.17881369788937,
    "sma50": 65.67260971069337,
-   "sma200": 62.43935707092285
+   "sma200": 62.43935699462891
   },
   "market_cap": 6023522304.0,
   "market_cap_currency": "USD",
@@ -53,11 +53,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.6,
+   "score": 35.6,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "analyst_activity",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 3,
    "independent_24h": 0
   },
   "political": {
@@ -100,9 +102,9 @@
   "adr20": 2.435457738769907,
   "rvol": 1.1817372472012981,
   "ema10": 65.97436243009994,
-  "ema21": 65.17881369788377,
+  "ema21": 65.17881369788937,
   "sma50": 65.67260971069337,
-  "sma200": 62.43935707092285,
+  "sma200": 62.43935699462891,
   "volatility_ann": 27.337708674046585,
   "avg_dollar_volume_20d": 51272345.68525314,
   "move_zscore": -0.4982196333223266
@@ -338,13 +340,13 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.6,
+  "score": 35.6,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 86.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
-   "analyst_activity": 0,
+   "analyst_activity": 35,
    "price_volume_anomaly": 14.9,
    "social_attention": null,
    "insider_activity": null
@@ -360,26 +362,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 12,
+    "independent": 12,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 2,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "analyst_activity",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -397,7 +401,455 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "83e1b963b5767aa2",
+   "symbols": [
+    "ESNT"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "BofA cuts mortgage insurer ratings, citing regulatory overhang; stocks drop",
+   "summary": "Investing.com -- Shares of private mortgage insurers retreated in Friday trading after BofA Securities downgraded several prominent lenders in the space, citing emerging regulatory headwinds that threaten to cap equity multiples. Enact Holdings Inc (NASDAQ:ACT) fell 1.8%, NMI Hol",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/bofa-cuts-mortgage-insurer-ratings-151411172.html?.tsrc=rss",
+   "published_at": "2026-10-30T15:14:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:42Z",
+   "fingerprint": "ecb79fdbee53ecd4",
+   "primary_source": false,
+   "cluster_id": "83e1b963b5767aa2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "BofA kürzt Ratings von Hypothekenversicherern unter Berufung auf regulatorische Überhänge; Aktienrückgang"
+  },
+  {
+   "id": "cb3c3d40a1692ecf",
+   "symbols": [
+    "ESNT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Essent Group (ESNT) Earnings Expected to Grow: What to Know Ahead of Next Week's Release",
+   "summary": "Essent Group (ESNT) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/essent-group-esnt-earnings-expected-130006704.html?.tsrc=rss",
+   "published_at": "2026-10-30T13:00:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:42Z",
+   "fingerprint": "c832ca0a9bdfa710",
+   "primary_source": false,
+   "cluster_id": "cb3c3d40a1692ecf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Essent Group (ESNT) Gewinne erwartet zu wachsen: Was Sie vor der Veröffentlichung der nächsten Woche wissen sollten"
+  },
+  {
+   "id": "bd5af83b5a0090a1",
+   "symbols": [
+    "DGICA",
+    "ESNT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Donegal Group (DGICA) Q3 Earnings and Revenues Top Estimates",
+   "summary": "Donegal (DGICA) delivered earnings and revenue surprises of +51.52% and +0.83%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/donegal-group-dgica-q3-earnings-104504923.html?.tsrc=rss",
+   "published_at": "2026-10-29T10:45:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:33:41Z",
+   "fingerprint": "a95d972faa4e0b43",
+   "primary_source": false,
+   "cluster_id": "bd5af83b5a0090a1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b4ba76e8185d4e14",
+   "symbols": [
+    "ESNT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why a Trump Executive Order Is Sending Some Housing Stocks Higher",
+   "summary": "The order, however, won’t have a dramatic impact on home affordability.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/bd505a7c-ab4f-39ca-9c9b-78a3f0ef9edc/why-a-trump-executive-order.html?.tsrc=rss",
+   "published_at": "2026-10-23T17:19:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:42Z",
+   "fingerprint": "7ba825a7a1c7f6e2",
+   "primary_source": false,
+   "cluster_id": "b4ba76e8185d4e14",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7314ec0c5e1955c1",
+   "symbols": [
+    "ESNT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Essent Group Ltd. Schedules Third Quarter Earnings Conference Call for November 6, 2026",
+   "summary": "HAMILTON, Bermuda, Oct. 16, 2026 (GLOBE NEWSWIRE) -- Essent Group Ltd. (NYSE: ESNT) today announced that it will hold a conference call on Friday, November 6, 2026, at 10:00 a.m. Eastern Time to discuss the Company’s third quarter 2026 results, which will be announced prior to th",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/essent-group-ltd-schedules-third-103000768.html?.tsrc=rss",
+   "published_at": "2026-10-16T10:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:42Z",
+   "fingerprint": "bade154cbdb41bc1",
+   "primary_source": false,
+   "cluster_id": "7314ec0c5e1955c1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "41f4f1c22b271774",
+   "symbols": [
+    "ESNT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Essent Group (ESNT): Good Investment or Just a Cheap One?",
+   "summary": "Essent Group Ltd. (NYSE:ESNT) closed at $62.04 on October 13. The stock has returned 6.80% during the last six months, compared to a 21.5% return for the Insider Monkey Billionaire Index and 14.0% for the State Street SPDR S&amp;P 500 ETF Trust. Essent began as a mortgage insurer",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/essent-group-esnt-good-investment-181555122.html?.tsrc=rss",
+   "published_at": "2026-10-15T18:15:55Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:42Z",
+   "fingerprint": "12441fc0a4728959",
+   "primary_source": false,
+   "cluster_id": "41f4f1c22b271774",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d0a4f006981f94b8",
+   "symbols": [
+    "ESNT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "2 Reasons to Sell ESNT and 1 Stock to Buy Instead",
+   "summary": "Since April 2026, Essent Group has been in a holding pattern, posting a small return of 1.8% while floating around $62.01. The stock also fell short of the S&amp;P 500’s 12% gain during that period.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/2-reasons-sell-esnt-1-150007652.html?.tsrc=rss",
+   "published_at": "2026-10-14T15:00:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:42Z",
+   "fingerprint": "c0e8bf98e40e9796",
+   "primary_source": false,
+   "cluster_id": "d0a4f006981f94b8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "aa8c40a6792ce567",
+   "symbols": [
+    "ESNT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ESNT vs. BRK.B: Which Stock Is the Better Value Option?",
+   "summary": "ESNT vs. BRK.B: Which Stock Is the Better Value Option?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/esnt-vs-brk-b-stock-144003994.html?.tsrc=rss",
+   "published_at": "2026-10-13T14:40:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:42Z",
+   "fingerprint": "82fa73754d7a0ae8",
+   "primary_source": false,
+   "cluster_id": "aa8c40a6792ce567",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1d9ec0f5153f77c3",
+   "symbols": [
+    "ESNT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "The Next Mortgage Shock Has Been Scheduled — Homeowners Could See Their Monthly Payments Jump $1,066 in 2027",
+   "summary": "Tens of thousands of homeowners who locked in pandemic-era rates are now running out of time, and the math on their exit options has turned ugly in ways most of them have not yet calculated.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/10/the-next-mortgage-shock-has-been-scheduled-homeowners-could-see-their-monthly-payments-jump-1066-in-2027/?.tsrc=rss",
+   "published_at": "2026-10-10T14:41:19Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:42Z",
+   "fingerprint": "f1f4fc6befccab2e",
+   "primary_source": false,
+   "cluster_id": "1d9ec0f5153f77c3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9cb8a19e29ee17ab",
+   "symbols": [
+    "ESNT"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "AM Best Affirms Credit Ratings of Operating Subsidiaries of Essent Group Ltd.",
+   "summary": "OLDWICK, N.J., October 09, 2026--AM Best has affirmed the Financial Strength Rating of A (Excellent) and the Long-Term Issuer Credit Ratings of \"a\" (Excellent) of the operating subsidiaries of Essent Group Ltd., which are Essent Guaranty, Inc. (domiciled in Radnor, PA) and Essent",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/am-best-affirms-credit-ratings-153000955.html?.tsrc=rss",
+   "published_at": "2026-10-09T15:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:42Z",
+   "fingerprint": "fe70b57ae35c892a",
+   "primary_source": false,
+   "cluster_id": "9cb8a19e29ee17ab",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1e4dd2036c403b67",
+   "symbols": [
+    "ESNT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Why Essent Group (ESNT) is a Top Dividend Stock for Your Portfolio",
+   "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does Essent Group (ESNT) have what it takes? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-essent-group-esnt-top-144504257.html?.tsrc=rss",
+   "published_at": "2026-10-07T14:45:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:42Z",
+   "fingerprint": "ec82483450f19c40",
+   "primary_source": false,
+   "cluster_id": "1e4dd2036c403b67",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8ccf81f48fd0168b",
+   "symbols": [
+    "CECO",
+    "ESNT",
+    "FWRG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 of Wall Street’s Favorite Stocks We Approach with Caution",
+   "summary": "Wall Street is overwhelmingly bullish on the stocks in this article, with price targets suggesting significant upside potential. However, it’s worth remembering that analysts rarely issue sell ratings, partly because their firms often seek other business from the same companies t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-wall-street-favorite-stocks-100603537.html?.tsrc=rss",
+   "published_at": "2026-10-02T10:06:03Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:19Z",
+   "fingerprint": "e965ff4b7622c3ee",
+   "primary_source": false,
+   "cluster_id": "8ccf81f48fd0168b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ce9f817ade94d795",
+   "symbols": [
+    "ESNT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "NMI Holdings, MGIC Investment, Essent Group, Enact Holdings, and Stewart Information Services Stocks Trade Down, What You Need To Know",
+   "summary": "A number of stocks fell in the afternoon session after investors weighed higher mortgage rates, softer housing demand, and lingering policy risk around private mortgage insurance. The slide looked sector-wide rather than name-specific: mortgage insurers (NMIH, MTG, ESNT, RDN, ACT",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/nmi-holdings-mgic-investment-essent-002113447.html?.tsrc=rss",
+   "published_at": "2026-10-01T00:21:13Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:42Z",
+   "fingerprint": "a4b695efcd60e74e",
+   "primary_source": false,
+   "cluster_id": "ce9f817ade94d795",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "21679302f08ea7cd",
+   "symbols": [
+    "ATMU",
+    "COLL",
+    "ESNT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Value Stocks That Fall Short",
+   "summary": "Value stocks typically trade at discounts to the broader market, offering patient investors the opportunity to buy businesses when they’re out of favor. The key risk, however, is that these stocks are usually cheap for a reason, and a low valuation can reflect underlying business",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-value-stocks-fall-short-095836787.html?.tsrc=rss",
+   "published_at": "2026-09-28T09:58:36Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:27:45Z",
+   "fingerprint": "9f1ff296a75db880",
+   "primary_source": false,
+   "cluster_id": "21679302f08ea7cd",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3a087661c711ed0b",
+   "symbols": [
+    "ESNT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zacks Industry Outlook Highlights Berkshire Hathaway, Travelers Companies, Hanover Insurance, First American Financial and Essent",
+   "summary": "Berkshire Hathaway, Travelers and three other P&amp;C insurers are supported by disciplined underwriting, investment income and technology adoption.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-industry-outlook-highlights-berkshire-131700844.html?.tsrc=rss",
+   "published_at": "2026-09-22T13:17:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:42Z",
+   "fingerprint": "fe255194af1bbff4",
+   "primary_source": false,
+   "cluster_id": "3a087661c711ed0b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c12f1917211bfd08",
+   "symbols": [
+    "ESNT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "5 Stocks to Buy From the Prosperous P&C Insurance Industry",
+   "summary": "Zacks Property and Casualty Insurance players like BRK.B, TRV, THG, FAF and ESNT are likely to benefit from digitalization, interest rate rise and higher policy renewal rate.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/5-stocks-buy-prosperous-p-181500561.html?.tsrc=rss",
+   "published_at": "2026-09-21T18:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:42Z",
+   "fingerprint": "d592d16aa78dc12e",
+   "primary_source": false,
+   "cluster_id": "c12f1917211bfd08",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a5cce63cbc06c6f5",
+   "symbols": [
+    "ESNT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Essent Group (ESNT) is a Top Dividend Stock Right Now: Should You Buy?",
+   "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does Essent Group (ESNT) have what it takes? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/essent-group-esnt-top-dividend-154503342.html?.tsrc=rss",
+   "published_at": "2026-09-21T15:45:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:42Z",
+   "fingerprint": "a5893979c702cf35",
+   "primary_source": false,
+   "cluster_id": "a5cce63cbc06c6f5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2d26a2264e5ee516",
+   "symbols": [
+    "ESNT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Essent Group (ESNT) Stock May Trade At A Discount To Earnings",
+   "summary": "Essent Group has delivered strong long term share price gains, and that naturally raises a question for anyone looking at the stock today. Is the current market value properly aligned with what the business is earning per share, or have expectations moved ahead of the underlying ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/essent-group-esnt-stock-may-231255358.html?.tsrc=rss",
+   "published_at": "2026-09-18T23:12:55Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:42Z",
+   "fingerprint": "bd5280b0763dcfe8",
+   "primary_source": false,
+   "cluster_id": "2d26a2264e5ee516",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ca72073bb0385129",
+   "symbols": [
+    "ESNT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Insurance Stocks We Think Twice About",
+   "summary": "Insurance companies serve as the backbone of risk management, providing essential protection and financial security for individuals and businesses. These institutions have benefited from improved pricing power and robust premium growth, so it’s no surprise the industry has posted",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-insurance-stocks-think-twice-080217713.html?.tsrc=rss",
+   "published_at": "2026-09-17T08:02:17Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:42Z",
+   "fingerprint": "2564b95eb6e56a8e",
+   "primary_source": false,
+   "cluster_id": "ca72073bb0385129",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "217c57b03e69d901",
+   "symbols": [
+    "ESNT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ESNT or CINF: Which Is the Better Value Stock Right Now?",
+   "summary": "ESNT vs. CINF: Which Stock Is the Better Value Option?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/esnt-cinf-better-value-stock-154002003.html?.tsrc=rss",
+   "published_at": "2026-09-10T15:40:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:42Z",
+   "fingerprint": "74f972b43ea44923",
+   "primary_source": false,
+   "cluster_id": "217c57b03e69d901",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

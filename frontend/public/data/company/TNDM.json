@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -55,9 +55,10 @@
    ]
   },
   "market_intelligence": {
-   "score": 4.6,
+   "score": 4.9,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -74,11 +75,18 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 1,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 32555.0,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 1
+  },
+  "superinvestors": {
+   "holders": 0,
+   "buyers": 0,
+   "new_buyers": 0,
+   "sellers": 1,
+   "sold_out": 1
   },
   "superinvestors": null,
   "first_seen": "2026-10-31",
@@ -426,7 +434,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 4.6,
+  "score": 4.9,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -435,7 +443,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 25.8,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 10
   },
   "windows": {
    "24h": {
@@ -467,7 +475,8 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -486,10 +495,61 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "9fe3d1a3dd13b8cb",
+   "symbol": "TNDM",
+   "insider": "Twomey Christopher J",
+   "role": "Director",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-27",
+   "filed_at": "2026-10-29",
+   "reporting_delay_days": 2,
+   "shares": 1700.0,
+   "price": 19.0,
+   "value": 32300.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1438133/000143813326000136/0001438133-26-000136-index.htm"
+  },
+  {
+   "id": "3f79e9c2ae577fc6",
+   "symbol": "TNDM",
+   "insider": "Twomey Christopher J",
+   "role": "Director",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-27",
+   "filed_at": "2026-10-29",
+   "reporting_delay_days": 2,
+   "shares": 1700.0,
+   "price": 19.15,
+   "value": 32555.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1438133/000143813326000136/0001438133-26-000136-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "sold_out",
+   "weight_pct": 0,
+   "shares_change_pct": -100.0,
+   "value": 0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

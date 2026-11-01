@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -55,9 +55,10 @@
    ]
   },
   "market_intelligence": {
-   "score": 6.5,
+   "score": 7.8,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -74,11 +75,18 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 3,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 1470072.77,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 4
+  },
+  "superinvestors": {
+   "holders": 1,
+   "buyers": 0,
+   "new_buyers": 0,
+   "sellers": 2,
+   "sold_out": 1
   },
   "superinvestors": null,
   "first_seen": "2026-10-31",
@@ -426,7 +434,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.5,
+  "score": 7.8,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -435,7 +443,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 36.7,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 30
   },
   "windows": {
    "24h": {
@@ -467,7 +475,8 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -486,10 +495,170 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "f51d0a6eea743ec8",
+   "symbol": "VCYT",
+   "insider": "Wygant Jonathan",
+   "role": "VP, Chief Accounting Officer",
+   "transaction_code": "F",
+   "transaction_kind": "tax_withholding",
+   "transaction_label": "Steuereinbehalt bei Vergütung",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-28",
+   "filed_at": "2026-10-29",
+   "reporting_delay_days": 1,
+   "shares": 1306.0,
+   "price": 50.31,
+   "value": 65704.86,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1384101/000158414526000011/0001584145-26-000011-index.htm"
+  },
+  {
+   "id": "33d0639971d448d9",
+   "symbol": "VCYT",
+   "insider": "Eastham Karin",
+   "role": "Director",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-27",
+   "filed_at": "2026-10-28",
+   "reporting_delay_days": 1,
+   "shares": 10000.0,
+   "price": 27.01,
+   "value": 270100.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1384101/000123184526000008/0001231845-26-000008-index.htm"
+  },
+  {
+   "id": "317f210120e33234",
+   "symbol": "VCYT",
+   "insider": "Eastham Karin",
+   "role": "Director",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-27",
+   "filed_at": "2026-10-28",
+   "reporting_delay_days": 1,
+   "shares": 14850.0,
+   "price": 50.0049,
+   "value": 742572.77,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1384101/000123184526000008/0001231845-26-000008-index.htm"
+  },
+  {
+   "id": "8e15950cd7aa8c3a",
+   "symbol": "VCYT",
+   "insider": "Holstein Jens",
+   "role": "Director",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-09-24",
+   "filed_at": "2026-10-28",
+   "reporting_delay_days": 34,
+   "shares": 7500.0,
+   "price": 35.3,
+   "value": 264750.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1384101/000181988026000006/0001819880-26-000006-index.htm"
+  },
+  {
+   "id": "1ac3738bdf8ff369",
+   "symbol": "VCYT",
+   "insider": "Holstein Jens",
+   "role": "Director",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-09-24",
+   "filed_at": "2026-10-28",
+   "reporting_delay_days": 34,
+   "shares": 7500.0,
+   "price": 47.0,
+   "value": 352500.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1384101/000181988026000006/0001819880-26-000006-index.htm"
+  },
+  {
+   "id": "161ebf1824f6413c",
+   "symbol": "VCYT",
+   "insider": "Holstein Jens",
+   "role": "Director",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-27",
+   "filed_at": "2026-10-28",
+   "reporting_delay_days": 1,
+   "shares": 7500.0,
+   "price": 35.3,
+   "value": 264750.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1384101/000181988026000006/0001819880-26-000006-index.htm"
+  },
+  {
+   "id": "47d55f4748626ce7",
+   "symbol": "VCYT",
+   "insider": "Holstein Jens",
+   "role": "Director",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-27",
+   "filed_at": "2026-10-28",
+   "reporting_delay_days": 1,
+   "shares": 7500.0,
+   "price": 50.0,
+   "value": 375000.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1384101/000181988026000006/0001819880-26-000006-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Ray Dalio",
+   "fund": "Bridgewater Associates",
+   "action": "reduced",
+   "weight_pct": 0.01,
+   "shares_change_pct": -36.4,
+   "value": 3423313.0,
+   "report_date": "2026-06-30"
+  },
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "sold_out",
+   "weight_pct": 0,
+   "shares_change_pct": -100.0,
+   "value": 0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

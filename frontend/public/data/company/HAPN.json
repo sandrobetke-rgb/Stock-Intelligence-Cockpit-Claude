@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -51,9 +51,10 @@
    "top_factors": []
   },
   "market_intelligence": {
-   "score": 6.6,
+   "score": 6.8,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -70,13 +71,19 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 1,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 44800.0,
    "distinct_buyers": 0,
    "other_transactions": 0
   },
-  "superinvestors": null,
+  "superinvestors": {
+   "holders": 1,
+   "buyers": 1,
+   "new_buyers": 1,
+   "sellers": 0,
+   "sold_out": 0
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
   "country": "United States"
@@ -334,7 +341,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.6,
+  "score": 6.8,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -343,7 +350,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 37.3,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 10
   },
   "windows": {
    "24h": {
@@ -375,7 +382,8 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -394,10 +402,41 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "e19c93245f847d84",
+   "symbol": "HAPN",
+   "insider": "Cheng Jordan",
+   "role": "General Counsel & Secretary",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-29",
+   "filed_at": "2026-10-30",
+   "reporting_delay_days": 1,
+   "shares": 2800.0,
+   "price": 16.0,
+   "value": 44800.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1409970/000140997026000204/0001409970-26-000204-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Ray Dalio",
+   "fund": "Bridgewater Associates",
+   "action": "new",
+   "weight_pct": 0.0,
+   "shares_change_pct": null,
+   "value": 540775.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

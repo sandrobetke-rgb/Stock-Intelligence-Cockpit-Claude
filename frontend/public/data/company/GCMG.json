@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 2.6716914063014627,
    "rvol": 1.0814279353605196,
    "ema10": 12.486688028026883,
-   "ema21": 12.619123539858418,
+   "ema21": 12.619123539858434,
    "sma50": 12.941353206634522,
-   "sma200": 11.711955313682557
+   "sma200": 11.71195532798767
   },
   "market_cap": 772636032.0,
   "market_cap_currency": "USD",
@@ -55,12 +55,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 0.8,
+   "score": 39.6,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "freshness",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 4,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -80,7 +82,13 @@
    "distinct_buyers": 0,
    "other_transactions": 0
   },
-  "superinvestors": null,
+  "superinvestors": {
+   "holders": 1,
+   "buyers": 0,
+   "new_buyers": 0,
+   "sellers": 1,
+   "sold_out": 0
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
   "country": "United States"
@@ -102,9 +110,9 @@
   "adr20": 2.6716914063014627,
   "rvol": 1.0814279353605196,
   "ema10": 12.486688028026883,
-  "ema21": 12.619123539858418,
+  "ema21": 12.619123539858434,
   "sma50": 12.941353206634522,
-  "sma200": 11.711955313682557,
+  "sma200": 11.71195532798767,
   "volatility_ann": 23.769439679756577,
   "avg_dollar_volume_20d": 4830542.322392464,
   "move_zscore": 0.15889032241406426
@@ -342,11 +350,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 0.8,
+  "score": 39.6,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 99.8,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 4.8,
@@ -355,35 +363,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 7,
+    "independent": 7,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "freshness",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -401,11 +411,442 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "beaaeb0e698ee05f",
+   "symbols": [
+    "GCMG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Where Chicago real estate money is going in Tuesday’s election",
+   "summary": "GCM Grosvenor's Michael Sacks, GEM Realty Capital's Barry Malkin, Sterling Bay's Keating Crown (GCM Grosvenor, GEM Realty Capital, Sterling Bay)Chicago’s real estate industry won its biggest fight back in March, when Patrick Hynes bested incumbent Cook County Assessor Fritz Kaegi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/where-chicago-real-estate-money-123000798.html?.tsrc=rss",
+   "published_at": "2026-10-31T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:36:01Z",
+   "fingerprint": "539dc055bf63f29a",
+   "primary_source": false,
+   "cluster_id": "beaaeb0e698ee05f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Wo Chicago Immobiliengeld in der Wahl am Dienstag geht"
+  },
+  {
+   "id": "7f246de58aa26e9c",
+   "symbols": [
+    "GCMG",
+    "TROW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "T. Rowe Price (TROW) Q3 Earnings and Revenues Surpass Estimates",
+   "summary": "T. Rowe (TROW) delivered earnings and revenue surprises of +10.85% and +2.57%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/t-rowe-price-trow-q3-113510900.html?.tsrc=rss",
+   "published_at": "2026-10-29T11:35:10Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:13Z",
+   "fingerprint": "f42705b69b57b590",
+   "primary_source": false,
+   "cluster_id": "7f246de58aa26e9c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0fe0373779b0dac9",
+   "symbols": [
+    "GCMG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Proteus MHP Announces Expanded Partnership with GCM Grosvenor, Targeting ~$400 million Manufactured Housing Portfolio",
+   "summary": "GCM Grosvenor’s investment supports the continued growth of the Proteus MHP platform, which currently owns and operates roughly 3,300 sites nationwideCHICAGO and LOS ANGELES, Oct. 28, 2026 (GLOBE NEWSWIRE) -- Proteus MHP, a private real estate investment and operating firm focuse",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/proteus-mhp-announces-expanded-partnership-130000976.html?.tsrc=rss",
+   "published_at": "2026-10-28T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:36:01Z",
+   "fingerprint": "49c38608d3162e75",
+   "primary_source": false,
+   "cluster_id": "0fe0373779b0dac9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "aa14cab3712839f3",
+   "symbols": [
+    "GCMG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "GCM Grosvenor to Announce Third Quarter 2026 Financial Results and Host Investor Conference Call on November 9, 2026",
+   "summary": "CHICAGO, Oct. 26, 2026 (GLOBE NEWSWIRE) -- GCM Grosvenor (Nasdaq: GCMG), a global alternative asset management solutions provider, announced today that it will release its results for the third quarter 2026 on Monday, November 9, 2026. Management will host a webcast and conferenc",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gcm-grosvenor-announce-third-quarter-123000012.html?.tsrc=rss",
+   "published_at": "2026-10-26T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:36:01Z",
+   "fingerprint": "e7b1c912acb4c0dc",
+   "primary_source": false,
+   "cluster_id": "aa14cab3712839f3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8088315215b2373c",
+   "symbols": [
+    "GCMG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "AIMCo joins Equitix-led investment in UK energy-from-waste leader Viridor",
+   "summary": "AIMCo has joined the Equitix-led transaction alongside GCM Grosvenor to acquire a 50% interest in Viridor Group (\"Viridor\"), the UK's largest energy-from-waste platform. The interests were acquired from KKR, which retains a 50% interest in Viridor.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/aimco-joins-equitix-led-investment-181000851.html?.tsrc=rss",
+   "published_at": "2026-10-14T18:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:36:01Z",
+   "fingerprint": "f392c0cf04e5bf07",
+   "primary_source": false,
+   "cluster_id": "8088315215b2373c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "860c63b340060b51",
+   "symbols": [
+    "GCMG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Stocks For Inflation Protection Including MSCI Stock",
+   "summary": "Inflation worries, heavy government borrowing and higher real interest rates are reshaping how money managers think about protecting purchasing power. That mix can punish borrowers yet create openings for investors who pay attention to firms that focus on real returns and inflati",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-stocks-inflation-protection-including-043052066.html?.tsrc=rss",
+   "published_at": "2026-10-13T04:30:52Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:36:01Z",
+   "fingerprint": "38c37fca2235151d",
+   "primary_source": false,
+   "cluster_id": "860c63b340060b51",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4ebf323bd6529018",
+   "symbols": [
+    "GCMG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Energy Capital Partners (ECP) Closes $834 Million Continuation Vehicle for Next Wave Energy Partners",
+   "summary": "SUMMIT, N.J. & HOUSTON, October 05, 2026--Energy Capital Partners (\"ECP\"), a leading investment firm across energy transition infrastructure and part of Bridgepoint Group (LSE: BPT), today announced the successful closing of a single-asset continuation vehicle with $834 million i",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/energy-capital-partners-ecp-closes-120000034.html?.tsrc=rss",
+   "published_at": "2026-10-05T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:36:01Z",
+   "fingerprint": "9719615990cdfcb5",
+   "primary_source": false,
+   "cluster_id": "4ebf323bd6529018",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "78cdbccd6f48d1c5",
+   "symbols": [
+    "GCMG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Real Estate Secondaries Become a $20B Liquidity Market",
+   "summary": "Real estate secondaries are moving into the mainstream as sponsors seek liquidity without giving up assets they still want to own.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "credaily.com",
+   "url": "https://www.credaily.com/briefs/real-estate-secondaries-become-a-20b-liquidity-market/?.tsrc=rss",
+   "published_at": "2026-09-28T19:51:59Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:36:01Z",
+   "fingerprint": "d7c957615a02a852",
+   "primary_source": false,
+   "cluster_id": "78cdbccd6f48d1c5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "23de15ec93dcf086",
+   "symbols": [
+    "GCMG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Hyperion Realty Capital and GCM Grosvenor Form Partnership to Scale Grocery-Anchored Retail Platform",
+   "summary": "CHICAGO & LOS ANGELES, September 25, 2026--Hyperion Realty Capital (\"Hyperion\"), a vertically integrated real estate investment manager focused primarily on U.S. grocery-anchored retail, today announced a strategic partnership with GCM Grosvenor (Nasdaq: GCMG), a leading middle m",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/hyperion-realty-capital-gcm-grosvenor-120000885.html?.tsrc=rss",
+   "published_at": "2026-09-25T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:36:01Z",
+   "fingerprint": "16c77bbb5c025dea",
+   "primary_source": false,
+   "cluster_id": "23de15ec93dcf086",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "849f615c16f32e0a",
+   "symbols": [
+    "GCMG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 US Loan Manager Stocks Built For Higher Rates",
+   "summary": "Rate hikes, sticky inflation and an Iran war driven oil shock have pushed floating-rate and leveraged loans back into the spotlight, as funding costs reset higher and borrowers feel the squeeze. That mix can reshape fee pools for US loan-focused asset managers, creating both fres",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-us-loan-manager-stocks-043403236.html?.tsrc=rss",
+   "published_at": "2026-09-23T04:34:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:36:01Z",
+   "fingerprint": "645fc9afbf7ea8a9",
+   "primary_source": false,
+   "cluster_id": "849f615c16f32e0a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "46e68452e583a3b1",
+   "symbols": [
+    "GCMG"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "All You Need to Know About GCM Grosvenor (GCMG) Rating Upgrade to Buy",
+   "summary": "GCM Grosvenor (GCMG) has been upgraded to a Zacks Rank #2 (Buy), reflecting growing optimism about the company's earnings prospects. This might drive the stock higher in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/know-gcm-grosvenor-gcmg-rating-160003805.html?.tsrc=rss",
+   "published_at": "2026-09-08T16:00:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:36:01Z",
+   "fingerprint": "a47679aef07be164",
+   "primary_source": false,
+   "cluster_id": "46e68452e583a3b1",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "88cc2f3a52606133",
+   "symbols": [
+    "GCMG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "GCM Grosvenor (GCMG) Q2 2026 Earnings Call Transcript",
+   "summary": "Fee-paying AUM surged 13% as SpaceX stake soared to $3.5 billion.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/17/gcm-grosvenor-gcmg-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-17T13:58:42Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:36:01Z",
+   "fingerprint": "2400ea6e774ab9bc",
+   "primary_source": false,
+   "cluster_id": "88cc2f3a52606133",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fd1e4467a4f58bfb",
+   "symbols": [
+    "GCMG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Is GCM Grosvenor (GCMG) A Bargain Following Its Q2 2026 Results And Dividend Confirmation?",
+   "summary": "GCM Grosvenor (GCMG) shares are in focus after the company reported second quarter 2026 results on 10 August, combining higher revenue with lower net income and confirming its regular cash dividend. See our latest analysis for GCM Grosvenor. The recent earnings and dividend affir",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gcm-grosvenor-gcmg-bargain-following-231824883.html?.tsrc=rss",
+   "published_at": "2026-08-11T23:18:24Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:36:01Z",
+   "fingerprint": "cdcf75a1f11ae2d1",
+   "primary_source": false,
+   "cluster_id": "fd1e4467a4f58bfb",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "afbfe2fff6b8df90",
+   "symbols": [
+    "GCMG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "GCM Grosvenor Inc (GCMG) (Q2 2026) Earnings Call Highlights: AUM Hits $97 Billion, SpaceX ...",
+   "summary": "Fee-related earnings surge 21% year-over-year as the firm navigates SpaceX-driven volatility and broad-based fundraising momentum.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gcm-grosvenor-inc-gcmg-q2-210205491.html?.tsrc=rss",
+   "published_at": "2026-08-10T21:02:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:36:01Z",
+   "fingerprint": "b350ae448d5a0365",
+   "primary_source": false,
+   "cluster_id": "afbfe2fff6b8df90",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1b711b54ab9f45a3",
+   "symbols": [
+    "GCMG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "GCM Grosvenor Q2 Earnings Call Highlights",
+   "summary": "GCM Grosvenor (NASDAQ:GCMG) reported higher assets, fundraising, revenue and fee-related earnings for the second quarter of 2026, with executives pointing to broad-based demand across its investment strategies and client channels. Chairman and CEO Michael Sacks said the firm ende",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/gcm-grosvenor-q2-earnings-call-highlights-2026-08-10/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-08-10T15:04:26Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:36:01Z",
+   "fingerprint": "c27798b5f69b39f6",
+   "primary_source": false,
+   "cluster_id": "1b711b54ab9f45a3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f491f96ef30132bc",
+   "symbols": [
+    "GCMG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "GCM Grosvenor (GCMG) Reports Q2 Earnings: What Key Metrics Have to Say",
+   "summary": "Although the revenue and EPS for GCM Grosvenor (GCMG) give a sense of how its business performed in the quarter ended June 2026, it might be worth considering how some key metrics compare with Wall Street estimates and the year-ago numbers.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gcm-grosvenor-gcmg-reports-q2-133003714.html?.tsrc=rss",
+   "published_at": "2026-08-10T13:30:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:36:01Z",
+   "fingerprint": "3b18b2411be720c0",
+   "primary_source": false,
+   "cluster_id": "f491f96ef30132bc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d02ee7f468f7e4f2",
+   "symbols": [
+    "GCMG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "GCM Grosvenor Inc. (GCMG) Q2 Earnings Meet Estimates",
+   "summary": "GCM Grosvenor (GCMG) delivered earnings and revenue surprises of 0.00% and +0.37%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gcm-grosvenor-inc-gcmg-q2-125001927.html?.tsrc=rss",
+   "published_at": "2026-08-10T12:50:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:36:01Z",
+   "fingerprint": "524085b4e28ae13d",
+   "primary_source": false,
+   "cluster_id": "d02ee7f468f7e4f2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "506748f3e1e9b92d",
+   "symbols": [
+    "GCMG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "GCM Grosvenor (GCMG) Q2 Earnings Preview: What You Should Know Beyond the Headline Estimates",
+   "summary": "Looking beyond Wall Street's top-and-bottom-line estimate forecasts for GCM Grosvenor (GCMG), delve into some of its key metrics to gain a deeper insight into the company's potential performance for the quarter ended June 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gcm-grosvenor-gcmg-q2-earnings-131502633.html?.tsrc=rss",
+   "published_at": "2026-08-06T13:15:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:36:01Z",
+   "fingerprint": "41672cd7b5addd49",
+   "primary_source": false,
+   "cluster_id": "506748f3e1e9b92d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "570edd6069c91a30",
+   "symbols": [
+    "GCMG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Apollo Global Management Inc. (APO) Lags Q2 Earnings Estimates",
+   "summary": "Apollo Global Management (APO) delivered earnings and revenue surprises of -3.21% and +2.31%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/apollo-global-management-inc-apo-115002444.html?.tsrc=rss",
+   "published_at": "2026-08-04T11:50:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:36:01Z",
+   "fingerprint": "901864585b940c7b",
+   "primary_source": false,
+   "cluster_id": "570edd6069c91a30",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "reduced",
+   "weight_pct": 0.0,
+   "shares_change_pct": -12.2,
+   "value": 2630970.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

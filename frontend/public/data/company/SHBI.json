@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -26,9 +26,9 @@
    "adr20": 2.3796945308361117,
    "rvol": 0.6762205101592751,
    "ema10": 22.663357304073934,
-   "ema21": 22.71017401687825,
+   "ema21": 22.710174016868585,
    "sma50": 22.88866886138916,
-   "sma200": 20.957513370513915
+   "sma200": 20.957513341903688
   },
   "market_cap": null,
   "market_cap_currency": null,
@@ -55,9 +55,10 @@
    ]
   },
   "market_intelligence": {
-   "score": 7.1,
+   "score": 8.3,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -73,14 +74,20 @@
   "social": null,
   "insider": {
    "window_days": 90,
-   "open_market_buys": 0,
+   "open_market_buys": 1,
    "open_market_sells": 0,
-   "buy_value": 0,
+   "buy_value": 7753.72,
    "sell_value": 0,
-   "distinct_buyers": 0,
+   "distinct_buyers": 1,
    "other_transactions": 0
   },
-  "superinvestors": null,
+  "superinvestors": {
+   "holders": 1,
+   "buyers": 0,
+   "new_buyers": 0,
+   "sellers": 1,
+   "sold_out": 0
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
   "country": null
@@ -102,9 +109,9 @@
   "adr20": 2.3796945308361117,
   "rvol": 0.6762205101592751,
   "ema10": 22.663357304073934,
-  "ema21": 22.71017401687825,
+  "ema21": 22.710174016868585,
   "sma50": 22.88866886138916,
-  "sma200": 20.957513370513915,
+  "sma200": 20.957513341903688,
   "volatility_ann": 16.271355398287557,
   "avg_dollar_volume_20d": 5636743.079662323,
   "move_zscore": -1.3329248080190437
@@ -340,7 +347,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 7.1,
+  "score": 8.3,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -349,7 +356,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 40.0,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 30
   },
   "windows": {
    "24h": {
@@ -381,7 +388,8 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -400,10 +408,41 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "702d17395ec092e8",
+   "symbol": "SHBI",
+   "insider": "Lamon John",
+   "role": "Director",
+   "transaction_code": "P",
+   "transaction_kind": "buy",
+   "transaction_label": "Kauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-27",
+   "filed_at": "2026-10-29",
+   "reporting_delay_days": 2,
+   "shares": 338.0,
+   "price": 22.94,
+   "value": 7753.72,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1035092/000146325426000008/0001463254-26-000008-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "reduced",
+   "weight_pct": 0.01,
+   "shares_change_pct": -19.6,
+   "value": 6414869.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

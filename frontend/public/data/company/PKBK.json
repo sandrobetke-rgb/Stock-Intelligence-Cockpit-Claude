@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -55,9 +55,10 @@
    ]
   },
   "market_intelligence": {
-   "score": 6.0,
+   "score": 7.3,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -73,12 +74,19 @@
   "social": null,
   "insider": {
    "window_days": 90,
-   "open_market_buys": 0,
+   "open_market_buys": 1,
    "open_market_sells": 0,
-   "buy_value": 0,
+   "buy_value": 42718.0,
    "sell_value": 0,
-   "distinct_buyers": 0,
-   "other_transactions": 0
+   "distinct_buyers": 1,
+   "other_transactions": 2
+  },
+  "superinvestors": {
+   "holders": 1,
+   "buyers": 1,
+   "new_buyers": 0,
+   "sellers": 0,
+   "sold_out": 0
   },
   "superinvestors": null,
   "first_seen": "2026-10-31",
@@ -340,7 +348,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.0,
+  "score": 7.3,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -349,7 +357,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 33.9,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 30
   },
   "windows": {
    "24h": {
@@ -381,7 +389,8 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -400,10 +409,81 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "bedb51ae0313111e",
+   "symbol": "PKBK",
+   "insider": "Pantilione Vito S",
+   "role": "Director, President & CEO",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-21",
+   "filed_at": "2026-10-30",
+   "reporting_delay_days": 9,
+   "shares": 500.0,
+   "price": 0.0,
+   "value": null,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1315399/000143774926034164/0001437749-26-034164-index.htm"
+  },
+  {
+   "id": "c8cc115f99e4b955",
+   "symbol": "PKBK",
+   "insider": "Pantilione Vito S",
+   "role": "Director, President & CEO",
+   "transaction_code": "P",
+   "transaction_kind": "buy",
+   "transaction_label": "Kauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-29",
+   "filed_at": "2026-10-30",
+   "reporting_delay_days": 1,
+   "shares": 1300.0,
+   "price": 32.86,
+   "value": 42718.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1315399/000143774926034164/0001437749-26-034164-index.htm"
+  },
+  {
+   "id": "b22b126fc1d47538",
+   "symbol": "PKBK",
+   "insider": "Pantilione Vito S",
+   "role": "Director, President & CEO",
+   "transaction_code": "G",
+   "transaction_kind": "gift",
+   "transaction_label": "Schenkung",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-30",
+   "filed_at": "2026-10-30",
+   "reporting_delay_days": 0,
+   "shares": 800.0,
+   "price": 0.0,
+   "value": null,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1315399/000143774926034164/0001437749-26-034164-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "increased",
+   "weight_pct": 0.01,
+   "shares_change_pct": 13.8,
+   "value": 7505667.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

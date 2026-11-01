@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,7 +24,7 @@
    "adr20": 2.5003989245916367,
    "rvol": 2.3897172236503854,
    "ema10": 66.71508911524901,
-   "ema21": 65.05808256142392,
+   "ema21": 65.05808256142731,
    "sma50": 63.36039993286133,
    "sma200": 57.79279184341431
   },
@@ -53,11 +53,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 12.3,
+   "score": 28.4,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -78,7 +80,13 @@
    "distinct_buyers": 0,
    "other_transactions": 0
   },
-  "superinvestors": null,
+  "superinvestors": {
+   "holders": 1,
+   "buyers": 0,
+   "new_buyers": 0,
+   "sellers": 1,
+   "sold_out": 0
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
   "country": "United States"
@@ -100,7 +108,7 @@
   "adr20": 2.5003989245916367,
   "rvol": 2.3897172236503854,
   "ema10": 66.71508911524901,
-  "ema21": 65.05808256142392,
+  "ema21": 65.05808256142731,
   "sma50": 63.36039993286133,
   "sma200": 57.79279184341431,
   "volatility_ann": 22.162098166318252,
@@ -338,11 +346,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 12.3,
+  "score": 28.4,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 69.5,
@@ -360,26 +368,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -397,11 +407,367 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "b2c81f0927b94aa7",
+   "symbols": [
+    "FRAF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "FRAF Q3 Earnings Rise Y/Y as Margin & Deposit Growth Improve",
+   "summary": "Franklin Financial's Q3 earnings rally 59% y/y on higher net interest income and lower expenses, while rising non-performing loans pose credit risks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/fraf-q3-earnings-rise-y-143200725.html?.tsrc=rss",
+   "published_at": "2026-10-29T14:32:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:39Z",
+   "fingerprint": "d4326f3321f4ddd5",
+   "primary_source": false,
+   "cluster_id": "b2c81f0927b94aa7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "FRAF Q3-Ergebnisse steigen Y / Y als Margin & Einlagen Wachstum verbessern"
+  },
+  {
+   "id": "9747ab9b81048074",
+   "symbols": [
+    "BRBS",
+    "FRAF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "The Zacks Analyst Blog Highlights Toyota, CrowdStrike, Welltower, Blue Ridge Bankshares and Franklin Financial Services",
+   "summary": "Toyota, CrowdStrike and Welltower show strong gains, while five featured stocks highlight growth opportunities and risks across key sectors.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-toyota-123700328.html?.tsrc=rss",
+   "published_at": "2026-09-02T12:37:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:47:31Z",
+   "fingerprint": "7d162d644808700b",
+   "primary_source": false,
+   "cluster_id": "9747ab9b81048074",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7523937d590b6cd2",
+   "symbols": [
+    "BRBS",
+    "FRAF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Top Research Reports for Toyota Motor, CrowdStrike & Welltower",
+   "summary": "Toyota Motor's hybrid growth and expanded value-chain businesses support demand, but higher costs, China weakness and leverage temper prospects.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/top-research-reports-toyota-motor-203900129.html?.tsrc=rss",
+   "published_at": "2026-09-01T20:39:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:47:31Z",
+   "fingerprint": "e67c5b10c8cc7ddd",
+   "primary_source": false,
+   "cluster_id": "7523937d590b6cd2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8251f72382c724e7",
+   "symbols": [
+    "CWBC",
+    "FCBC",
+    "FRAF",
+    "FRBA",
+    "FRST",
+    "FSBW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "7 Dividend Stocks You Must Buy Immediately to Get Paid in August",
+   "summary": "Seven small-bank stocks share the same ex-dividend date this Friday, and missing it by a single day means the August payment goes to whoever sold you the shares. The window is closing fast, but not every name on the list deserves equal urgency.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/08/05/7-dividend-stocks-you-must-buy-immediately-to-get-paid-in-august/?.tsrc=rss",
+   "published_at": "2026-08-05T16:13:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:45Z",
+   "fingerprint": "ca224ea7cfc386fa",
+   "primary_source": false,
+   "cluster_id": "8251f72382c724e7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "679566763f5b4390",
+   "symbols": [
+    "FRAF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Franklin Financial Q2 Earnings Rise Y/Y on Higher Net Interest Income",
+   "summary": "FRAF posts y/y earnings growth in Q2 as net interest income improves despite increased credit loss provisions and rising non-performing loans.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/franklin-financial-q2-earnings-rise-145900279.html?.tsrc=rss",
+   "published_at": "2026-07-27T14:59:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:39Z",
+   "fingerprint": "025d037354d027f8",
+   "primary_source": false,
+   "cluster_id": "679566763f5b4390",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "145a49ec77eb3bfc",
+   "symbols": [
+    "FRAF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Franklin Financial Reports Second Quarter and Year-to-Date 2026 Results; Declares Dividend",
+   "summary": "Franklin Financial Services Corporation (the Corporation) (NASDAQ: FRAF), the bank holding company of F&amp;M Trust (the Bank) headquartered in Chambersburg, PA, reported its second quarter and year-to-date 2026 financial results.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/franklin-financial-reports-second-quarter-130000555.html?.tsrc=rss",
+   "published_at": "2026-07-24T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:39Z",
+   "fingerprint": "1730582822ec24d3",
+   "primary_source": false,
+   "cluster_id": "145a49ec77eb3bfc",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e743c6366b5ab81f",
+   "symbols": [
+    "CMTV",
+    "FRAF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "CMTV vs. FRAF: Which Community Bank Stock Is the Better Buy?",
+   "summary": "Community Bancorp and Franklin Financial offer attractive banking fundamentals, but differences in growth and valuation create a clear winner.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cmtv-vs-fraf-community-bank-141200989.html?.tsrc=rss",
+   "published_at": "2026-07-23T14:12:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:48:52Z",
+   "fingerprint": "237ec8be56016bb0",
+   "primary_source": false,
+   "cluster_id": "e743c6366b5ab81f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "84ac9c2411856e56",
+   "symbols": [
+    "BOBS",
+    "FRAF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Undervalued Small Caps With Insider Activity To Consider In May 2026",
+   "summary": "The United States market has shown robust performance, rising 2.5% over the last week and 26% over the past year, with earnings projected to grow by 17% annually. In such a dynamic environment, identifying stocks that are undervalued and exhibit insider activity can be an intrigu",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/undervalued-small-caps-insider-activity-113953657.html?.tsrc=rss",
+   "published_at": "2026-05-27T11:39:53Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:28:48Z",
+   "fingerprint": "9f56be71c38d7b70",
+   "primary_source": false,
+   "cluster_id": "84ac9c2411856e56",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "084cbb06838a38d3",
+   "symbols": [
+    "FNLC",
+    "FRAF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Undervalued Small Caps With Insider Buying To Enhance Your Portfolio",
+   "summary": "The United States market has experienced a slight dip of 1.0% over the past week, yet it remains robust with a 23% increase over the past year and earnings projected to grow by 17% annually. In this context, identifying small-cap stocks that are perceived as undervalued and have ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/undervalued-small-caps-insider-buying-113953505.html?.tsrc=rss",
+   "published_at": "2026-05-20T11:39:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:35Z",
+   "fingerprint": "128ebfba75c565a0",
+   "primary_source": false,
+   "cluster_id": "084cbb06838a38d3",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f47d0ea542029c94",
+   "symbols": [
+    "FRAF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Exploring 3 Undervalued Small Caps With Insider Action To Enhance Your Portfolio",
+   "summary": "The United States market remained flat over the last week but has experienced a 24% rise over the past 12 months, with earnings projected to grow by 17% annually. In this context, identifying stocks that are potentially undervalued and exhibit insider activity can offer opportuni",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/exploring-3-undervalued-small-caps-113940428.html?.tsrc=rss",
+   "published_at": "2026-05-19T11:39:40Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:39Z",
+   "fingerprint": "1a8fab256cf86e17",
+   "primary_source": false,
+   "cluster_id": "f47d0ea542029c94",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "975e7cdc3e2319d7",
+   "symbols": [
+    "FRAF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "The Zacks Analyst Blog Highlights Costco, Coca-Cola, AstraZeneca and Franklin Financial Services",
+   "summary": "Costco, Coca-Cola, AstraZeneca and Franklin Financial Services are highlighted for resilient growth and strong execution.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-costco-131000710.html?.tsrc=rss",
+   "published_at": "2026-05-18T13:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:39Z",
+   "fingerprint": "f57392d7b0aaf71e",
+   "primary_source": false,
+   "cluster_id": "975e7cdc3e2319d7",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1692d22c524d33a5",
+   "symbols": [
+    "CZNC",
+    "FRAF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Undervalued Small Caps With Insider Buying For May 2026",
+   "summary": "Over the last 7 days, the United States market has remained flat, yet it has experienced a notable 24% rise over the past year with earnings expected to grow by 17% annually in the coming years. In this context, identifying small-cap stocks that are undervalued and show signs of ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/undervalued-small-caps-insider-buying-113946744.html?.tsrc=rss",
+   "published_at": "2026-05-18T11:39:46Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:52Z",
+   "fingerprint": "ef57b1c6a88cd3ae",
+   "primary_source": false,
+   "cluster_id": "168cefe1eba6ddc4",
+   "independence": "copy",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "503e03441bf3a968",
+   "symbols": [
+    "FRAF",
+    "GCBC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Undervalued Small Caps With Insider Activity To Watch In May 2026",
+   "summary": "The United States market has shown robust performance with a 1.1% increase over the last week and a remarkable 27% rise over the past year, alongside an optimistic forecast of 17% annual earnings growth. In this thriving environment, identifying small-cap stocks that exhibit stro",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/undervalued-small-caps-insider-activity-113936860.html?.tsrc=rss",
+   "published_at": "2026-05-15T11:39:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:39Z",
+   "fingerprint": "affdd274e08fa181",
+   "primary_source": false,
+   "cluster_id": "503e03441bf3a968",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "168cefe1eba6ddc4",
+   "symbols": [
+    "AHRT",
+    "FNRN",
+    "FRAF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Undervalued Small Caps With Insider Buying To Consider In May 2026",
+   "summary": "The United States market has seen a robust performance recently, climbing 1.8% in the last week and 30% over the past year, with earnings projected to grow by 16% annually. In this dynamic environment, identifying small-cap stocks that are perceived as undervalued and have inside",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/undervalued-small-caps-insider-buying-113959524.html?.tsrc=rss",
+   "published_at": "2026-05-06T11:39:59Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:26:30Z",
+   "fingerprint": "fdd2b95ab7e703af",
+   "primary_source": false,
+   "cluster_id": "168cefe1eba6ddc4",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "315f9dd5c0f0d40a",
+   "symbols": [
+    "FRAF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Franklin Financial Services Marks 120 Years as Shareholders Approve Directors, Pay, Auditor",
+   "summary": "Franklin Financial Services (NASDAQ:FRAF) held its annual meeting of shareholders on April 28, 2026, with Chairman of the Board G. Warren Elliott presiding. Elliott said proper notice had been given and that a quorum was present, allowing the meeting to proceed with the election ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/franklin-financial-services-marks-120-years-as-shareholders-approve-directors-pay-auditor-2026-04-28/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-04-29T02:36:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:39Z",
+   "fingerprint": "fc9e346b8330c8de",
+   "primary_source": false,
+   "cluster_id": "315f9dd5c0f0d40a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "reduced",
+   "weight_pct": 0.0,
+   "shares_change_pct": -65.1,
+   "value": 525840.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

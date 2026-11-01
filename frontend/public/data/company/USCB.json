@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -26,9 +26,9 @@
    "adr20": 2.728743908439534,
    "rvol": 1.5429256292184446,
    "ema10": 20.639552408051962,
-   "ema21": 21.300860374790314,
+   "ema21": 21.300860374784175,
    "sma50": 22.24180004119873,
-   "sma200": 20.12818922996521
+   "sma200": 20.12818913459778
   },
   "market_cap": null,
   "market_cap_currency": null,
@@ -55,9 +55,10 @@
    ]
   },
   "market_intelligence": {
-   "score": 4.8,
+   "score": 6.2,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -73,12 +74,12 @@
   "social": null,
   "insider": {
    "window_days": 90,
-   "open_market_buys": 0,
+   "open_market_buys": 1,
    "open_market_sells": 0,
-   "buy_value": 0,
+   "buy_value": 20000.0,
    "sell_value": 0,
-   "distinct_buyers": 0,
-   "other_transactions": 0
+   "distinct_buyers": 1,
+   "other_transactions": 4
   },
   "superinvestors": null,
   "first_seen": "2026-10-31",
@@ -102,9 +103,9 @@
   "adr20": 2.728743908439534,
   "rvol": 1.5429256292184446,
   "ema10": 20.639552408051962,
-  "ema21": 21.300860374790314,
+  "ema21": 21.300860374784175,
   "sma50": 22.24180004119873,
-  "sma200": 20.12818922996521,
+  "sma200": 20.12818913459778,
   "volatility_ann": 29.35963165194957,
   "avg_dollar_volume_20d": 1714928.899011612,
   "move_zscore": 0.08171329649085114
@@ -340,7 +341,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 4.8,
+  "score": 6.2,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -349,7 +350,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 27.1,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 30
   },
   "windows": {
    "24h": {
@@ -381,7 +382,8 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -400,7 +402,108 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "75bb233aca84009b",
+   "symbol": "USCB",
+   "insider": "Rodriguez Ramon M.",
+   "role": "Director",
+   "transaction_code": "P",
+   "transaction_kind": "buy",
+   "transaction_label": "Kauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-30",
+   "filed_at": "2026-10-30",
+   "reporting_delay_days": 0,
+   "shares": 1000.0,
+   "price": 20.0,
+   "value": 20000.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1901637/000143774926034087/0001437749-26-034087-index.htm"
+  },
+  {
+   "id": "f25893d6fbf0c113",
+   "symbol": "USCB",
+   "insider": "Collazo Andres",
+   "role": "EVP, Operations & IT",
+   "transaction_code": "F",
+   "transaction_kind": "tax_withholding",
+   "transaction_label": "Steuereinbehalt bei Vergütung",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-28",
+   "filed_at": "2026-10-30",
+   "reporting_delay_days": 2,
+   "shares": 1218.0,
+   "price": 19.92,
+   "value": 24262.56,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1901637/000143774926034091/0001437749-26-034091-index.htm"
+  },
+  {
+   "id": "60e9a508912513a7",
+   "symbol": "USCB",
+   "insider": "Bustle Nicholas",
+   "role": "EVP and Chief Lending Officer",
+   "transaction_code": "F",
+   "transaction_kind": "tax_withholding",
+   "transaction_label": "Steuereinbehalt bei Vergütung",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-28",
+   "filed_at": "2026-10-30",
+   "reporting_delay_days": 2,
+   "shares": 1623.0,
+   "price": 19.92,
+   "value": 32330.16,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1901637/000143774926034093/0001437749-26-034093-index.htm"
+  },
+  {
+   "id": "ce0157163d69c085",
+   "symbol": "USCB",
+   "insider": "Guerra-Kattou Martha",
+   "role": "EVP, Sales and Marketing",
+   "transaction_code": "F",
+   "transaction_kind": "tax_withholding",
+   "transaction_label": "Steuereinbehalt bei Vergütung",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-28",
+   "filed_at": "2026-10-30",
+   "reporting_delay_days": 2,
+   "shares": 1623.0,
+   "price": 19.92,
+   "value": 32330.16,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1901637/000143774926034095/0001437749-26-034095-index.htm"
+  },
+  {
+   "id": "9de6e75a267c664e",
+   "symbol": "USCB",
+   "insider": "Gomez Oscar",
+   "role": "EVP, Global Banking",
+   "transaction_code": "F",
+   "transaction_kind": "tax_withholding",
+   "transaction_label": "Steuereinbehalt bei Vergütung",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-28",
+   "filed_at": "2026-10-30",
+   "reporting_delay_days": 2,
+   "shares": 1218.0,
+   "price": 19.92,
+   "value": 24262.56,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1901637/000143774926034097/0001437749-26-034097-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "superinvestors": [],

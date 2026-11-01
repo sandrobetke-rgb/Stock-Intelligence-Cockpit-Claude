@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -55,9 +55,10 @@
    ]
   },
   "market_intelligence": {
-   "score": 5.7,
+   "score": 6.5,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -74,13 +75,19 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 2,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 183210.0,
    "distinct_buyers": 0,
    "other_transactions": 0
   },
-  "superinvestors": null,
+  "superinvestors": {
+   "holders": 1,
+   "buyers": 0,
+   "new_buyers": 0,
+   "sellers": 1,
+   "sold_out": 0
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
   "country": null
@@ -340,7 +347,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 5.7,
+  "score": 6.5,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -349,7 +356,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 32.1,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 20
   },
   "windows": {
    "24h": {
@@ -381,7 +388,8 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -400,10 +408,61 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "d4bd923629ce5ffc",
+   "symbol": "SMBK",
+   "insider": "Jordan Rhett D.",
+   "role": "EVP & CHIEF CREDIT OFFICER",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-26",
+   "filed_at": "2026-10-26",
+   "reporting_delay_days": 0,
+   "shares": 200.0,
+   "price": 49.8,
+   "value": 9960.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1038773/000165273926000014/0001652739-26-000014-index.htm"
+  },
+  {
+   "id": "69487e32658734cd",
+   "symbol": "SMBK",
+   "insider": "Tucker Steven B.",
+   "role": "Director",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-23",
+   "filed_at": "2026-10-26",
+   "reporting_delay_days": 3,
+   "shares": 3500.0,
+   "price": 49.5,
+   "value": 173250.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1038773/000172161426000004/0001721614-26-000004-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "reduced",
+   "weight_pct": 0.01,
+   "shares_change_pct": -3.3,
+   "value": 6905733.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

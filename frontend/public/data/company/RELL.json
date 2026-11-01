@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -26,9 +26,9 @@
    "adr20": 6.343695779155989,
    "rvol": 0.5019295406448401,
    "ema10": 19.665410087646162,
-   "ema21": 19.280496008600537,
+   "ema21": 19.280496008601645,
    "sma50": 18.160400009155275,
-   "sma200": 15.739609112739563
+   "sma200": 15.739609136581421
   },
   "market_cap": null,
   "market_cap_currency": null,
@@ -56,9 +56,10 @@
    ]
   },
   "market_intelligence": {
-   "score": 8.3,
+   "score": 8.4,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -75,11 +76,18 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 1,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 105050.0,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 1
+  },
+  "superinvestors": {
+   "holders": 1,
+   "buyers": 0,
+   "new_buyers": 0,
+   "sellers": 1,
+   "sold_out": 0
   },
   "superinvestors": null,
   "first_seen": "2026-10-31",
@@ -103,9 +111,9 @@
   "adr20": 6.343695779155989,
   "rvol": 0.5019295406448401,
   "ema10": 19.665410087646162,
-  "ema21": 19.280496008600537,
+  "ema21": 19.280496008601645,
   "sma50": 18.160400009155275,
-  "sma200": 15.739609112739563,
+  "sma200": 15.739609136581421,
   "volatility_ann": 57.253234538319596,
   "avg_dollar_volume_20d": 8036262.635526657,
   "move_zscore": -1.576442609017896
@@ -428,7 +436,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 8.3,
+  "score": 8.4,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -437,7 +445,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 47.3,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 10
   },
   "windows": {
    "24h": {
@@ -469,7 +477,8 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -488,10 +497,61 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "aed681102237d602",
+   "symbol": "RELL",
+   "insider": "Ben Robert J",
+   "role": "CFO, CAO, Corporate Secretary",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-28",
+   "filed_at": "2026-10-30",
+   "reporting_delay_days": 2,
+   "shares": 5000.0,
+   "price": 15.51,
+   "value": 77550.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/355948/000119312526440960/0001193125-26-440960-index.htm"
+  },
+  {
+   "id": "06fcbb7a855a6489",
+   "symbol": "RELL",
+   "insider": "Ben Robert J",
+   "role": "CFO, CAO, Corporate Secretary",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-28",
+   "filed_at": "2026-10-30",
+   "reporting_delay_days": 2,
+   "shares": 5000.0,
+   "price": 21.01,
+   "value": 105050.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/355948/000119312526440960/0001193125-26-440960-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "reduced",
+   "weight_pct": 0.01,
+   "shares_change_pct": -8.8,
+   "value": 5953495.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

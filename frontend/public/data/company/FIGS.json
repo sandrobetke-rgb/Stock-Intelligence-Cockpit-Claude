@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -54,11 +54,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 1.3,
+   "score": 38.4,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "analyst_activity",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 12,
    "independent_24h": 0
   },
   "political": {
@@ -79,7 +81,13 @@
    "distinct_buyers": 0,
    "other_transactions": 0
   },
-  "superinvestors": null,
+  "superinvestors": {
+   "holders": 2,
+   "buyers": 1,
+   "new_buyers": 0,
+   "sellers": 1,
+   "sold_out": 0
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
   "country": "United States"
@@ -426,13 +434,13 @@
   ]
  },
  "intelligence_detail": {
-  "score": 1.3,
+  "score": 38.4,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
-   "analyst_activity": 0,
+   "analyst_activity": 35,
    "price_volume_anomaly": 7.4,
    "social_attention": null,
    "insider_activity": null
@@ -448,26 +456,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 12,
+    "independent": 12,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 20,
+    "independent": 20,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "analyst_activity",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -485,11 +495,491 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "fa82114bb6992005",
+   "symbols": [
+    "FIGS"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Analyst Upgrade Could Be A Game Changer For FIGS Stock (FIGS)",
+   "summary": "FIGS is preparing to report third quarter 2026 results, with Wall Street expecting higher earnings supported by stronger revenue from its healthcare apparel and lifestyle offering. Analysts are watching how FIGS converts healthcare professionals' recurring uniform budgets into di",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/analyst-upgrade-could-game-changer-151001902.html?.tsrc=rss",
+   "published_at": "2026-10-30T15:10:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:20Z",
+   "fingerprint": "daeb0003b75aaf73",
+   "primary_source": false,
+   "cluster_id": "fa82114bb6992005",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Analysten-Upgrade könnte ein Game Changer für FIGS Stock sein (FIGS)"
+  },
+  {
+   "id": "5e750418c4e4358b",
+   "symbols": [
+    "FIGS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Amazon Q3 Revenues Miss Estimates, AWS Growth Hits Near 5-Year High",
+   "summary": "AMZN's Q3 revenues miss estimates, but AWS posts its fastest growth in nearly five years as AI demand accelerates and operating margins hit a record.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/amazon-q3-revenues-miss-estimates-142700629.html?.tsrc=rss",
+   "published_at": "2026-10-30T14:27:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:20Z",
+   "fingerprint": "2e31a040d3193992",
+   "primary_source": false,
+   "cluster_id": "5e750418c4e4358b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0dfc6f7c3bf29891",
+   "symbols": [
+    "CBRL",
+    "FIGS",
+    "SBUX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Starbucks Q4 Earnings Beat Estimates on Sales Leverage, Revenues Miss",
+   "summary": "SBUX beats Q4 earnings estimates as sales leverage and lower costs lift margins, but China's licensing shift hurts revenues despite 7.2% global comps.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/starbucks-q4-earnings-beat-estimates-141300035.html?.tsrc=rss",
+   "published_at": "2026-10-30T14:13:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:50Z",
+   "fingerprint": "e016c30572b3a4e5",
+   "primary_source": false,
+   "cluster_id": "0dfc6f7c3bf29891",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Starbucks Q4-Ergebnisse schlagen Schätzungen auf Umsatz Leverage, Einnahmen Miss"
+  },
+  {
+   "id": "ecfa93a6a732fbc2",
+   "symbols": [
+    "BKNG",
+    "FIGS",
+    "MAR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Booking Holdings' Q3 Earnings Ahead: What's in Store for the Stock?",
+   "summary": "BKNG's Q3 earnings are likely to face currency headwinds, travel disruptions and marketing costs, even as loyalty gains and Connected Trip growth offer support.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/booking-holdings-q3-earnings-ahead-133500743.html?.tsrc=rss",
+   "published_at": "2026-10-30T13:35:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:24Z",
+   "fingerprint": "2c5369ea4f5a39fd",
+   "primary_source": false,
+   "cluster_id": "ecfa93a6a732fbc2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Booking Holdings Q3 Ergebnis voraus: Was ist im Speicher für die Aktie?"
+  },
+  {
+   "id": "003e4ee7355f729b",
+   "symbols": [
+    "CBRL",
+    "CMG",
+    "FIGS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Chipotle Q3 Earnings Miss Estimates, Revenues Top, Stock Up",
+   "summary": "CMG's third-quarter results reflect benefits from restaurant expansion, positive comparable sales and digital engagement, offset by higher operating costs.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/chipotle-q3-earnings-miss-estimates-152400638.html?.tsrc=rss",
+   "published_at": "2026-10-29T15:24:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:43Z",
+   "fingerprint": "182679ab32d23a23",
+   "primary_source": false,
+   "cluster_id": "003e4ee7355f729b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Chipotle Q3 Einnahmen Miss Schätzungen, Einnahmen Top, Lager Up"
+  },
+  {
+   "id": "07e08e5bc52a60dd",
+   "symbols": [
+    "BBY",
+    "FIGS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ETSY Q3 Earnings Beat Estimates on GMS & Ads Growth, Revenues Rise Y/Y",
+   "summary": "Etsy beats Q3 earnings and revenue estimates as GMS and advertising strengthen, active buyers return to growth and management forecasts 5%-7% Q4 GMS gains.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/etsy-q3-earnings-beat-estimates-144900274.html?.tsrc=rss",
+   "published_at": "2026-10-29T14:49:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:20Z",
+   "fingerprint": "fce55848f0f0eb68",
+   "primary_source": false,
+   "cluster_id": "07e08e5bc52a60dd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "ETSY Q3-Ergebnisse schlagen Schätzungen für GMS & Ads Wachstum, Umsatz steigen Y / Y"
+  },
+  {
+   "id": "baa93de44feca0d8",
+   "symbols": [
+    "BBY",
+    "EBAY",
+    "FIGS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "EBAY Q3 Earnings & Revenues Beat Estimates, Both Increase Y/Y",
+   "summary": "eBay beats Q3 2026 earnings and revenue estimates as GMV and ad sales rise. Yet higher spending narrows margins. See how its Q4 and full-year outlooks stack up.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ebay-q3-earnings-revenues-beat-144600413.html?.tsrc=rss",
+   "published_at": "2026-10-29T14:46:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:00:20Z",
+   "fingerprint": "36f41a20a7c96ea6",
+   "primary_source": false,
+   "cluster_id": "baa93de44feca0d8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e4072b5e757bf7d0",
+   "symbols": [
+    "FIGS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Figs (FIGS) Earnings Expected to Grow: Should You Buy?",
+   "summary": "Figs (FIGS) possesses the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/figs-figs-earnings-expected-grow-130025346.html?.tsrc=rss",
+   "published_at": "2026-10-29T13:00:25Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:20Z",
+   "fingerprint": "09d5db6a3d70c446",
+   "primary_source": false,
+   "cluster_id": "e4072b5e757bf7d0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "474bc9105e9d36ea",
+   "symbols": [
+    "FIGS",
+    "RL",
+    "TPR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "REAL Gears Up to Report Q3 Earnings: What Should Investors Expect?",
+   "summary": "RealReal is poised for Q3 growth, supported by luxury resale demand, stronger sourcing, AI-driven efficiencies and improved customer engagement.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/real-gears-report-q3-earnings-144800060.html?.tsrc=rss",
+   "published_at": "2026-10-28T14:48:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:09:44Z",
+   "fingerprint": "8849aca0103ec0eb",
+   "primary_source": false,
+   "cluster_id": "474bc9105e9d36ea",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e5093e033ed732a7",
+   "symbols": [
+    "FIGS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "EBAY Gears Up to Report Q3 Earnings: What's in Store for the Stock?",
+   "summary": "eBay heads into Q3 earnings with strength in focused categories, Depop & advertising, but slowing organic GMV growth and acquisition costs may weigh on margins.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ebay-gears-report-q3-earnings-144400490.html?.tsrc=rss",
+   "published_at": "2026-10-26T14:44:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:20Z",
+   "fingerprint": "0bc71eb485eb094b",
+   "primary_source": false,
+   "cluster_id": "e5093e033ed732a7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "842dffb08cea9310",
+   "symbols": [
+    "FIGS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Etsy's Q3 Earnings Ahead: What's in Store for the Stock?",
+   "summary": "ETSY approaches Q3 earnings with expected GMS growth of 4-6%, improving ad monetization and AI-driven engagement, but restructuring charges loom over profits.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/etsys-q3-earnings-ahead-whats-143700110.html?.tsrc=rss",
+   "published_at": "2026-10-26T14:37:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:20Z",
+   "fingerprint": "96c2683f4908b5f6",
+   "primary_source": false,
+   "cluster_id": "842dffb08cea9310",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fb8116aff6ba72cb",
+   "symbols": [
+    "FIGS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Has Aramark (ARMK) Outpaced Other Retail-Wholesale Stocks This Year?",
+   "summary": "Here is how Aramark (ARMK) and Figs (FIGS) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/aramark-armk-outpaced-other-retail-125002154.html?.tsrc=rss",
+   "published_at": "2026-10-26T12:50:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:20Z",
+   "fingerprint": "a066e1fff78b4777",
+   "primary_source": false,
+   "cluster_id": "fb8116aff6ba72cb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "06d79b03c316b7e5",
+   "symbols": [
+    "FIGS",
+    "FOSL",
+    "TSCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Tractor Supply Q3 Earnings Beat on Sales Growth, Margins Fall",
+   "summary": "TSCO's Q3 2026 sales rose 5.1%, but earnings fell 11.6% amid margin pressure. Comps increased 0.4% year over year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/tractor-supply-q3-earnings-beat-164000009.html?.tsrc=rss",
+   "published_at": "2026-10-22T16:40:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:14Z",
+   "fingerprint": "69796253ad2c0937",
+   "primary_source": false,
+   "cluster_id": "06d79b03c316b7e5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "455652c72ccfe12d",
+   "symbols": [
+    "FIGS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Will Figs (FIGS) Beat Estimates Again in Its Next Earnings Report?",
+   "summary": "Figs (FIGS) has an impressive earnings surprise history and currently possesses the right combination of the two key ingredients for a likely beat in its next quarterly report.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/figs-figs-beat-estimates-again-151004905.html?.tsrc=rss",
+   "published_at": "2026-10-19T15:10:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:20Z",
+   "fingerprint": "d3032ecd75ede8b3",
+   "primary_source": false,
+   "cluster_id": "455652c72ccfe12d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ad9810f76a0c10d7",
+   "symbols": [
+    "FIGS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "FIGS (FIGS) Stock Looks Priced For Perfection After A 204% Run",
+   "summary": "FIGS has had a powerful share price run in recent years, and that leaves investors asking whether the current US$19.12 level is supported by the company’s earnings. With the stock now far above where it traded a few years ago, the key issue is how much of its profit story is alre",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/figs-figs-stock-looks-priced-041901015.html?.tsrc=rss",
+   "published_at": "2026-10-18T04:19:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:20Z",
+   "fingerprint": "8012c99bf56f9e3e",
+   "primary_source": false,
+   "cluster_id": "ad9810f76a0c10d7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "060b99a3ef21bfce",
+   "symbols": [
+    "FIGS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "FIGS Announces Date of Third Quarter 2026 Earnings Release, Conference Call and Webcast",
+   "summary": "SANTA MONICA, Calif., October 15, 2026--FIGS, Inc. (NYSE: FIGS), the global leading healthcare apparel brand dedicated to improving the lives of healthcare professionals, today announced it will release its third quarter 2026 financial results on Thursday, November 5, 2026, after",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/figs-announces-date-third-quarter-200500614.html?.tsrc=rss",
+   "published_at": "2026-10-15T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:20Z",
+   "fingerprint": "ef6417a0e0960ced",
+   "primary_source": false,
+   "cluster_id": "060b99a3ef21bfce",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b0f2112b655df793",
+   "symbols": [
+    "FIGS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Domino's Q3 Earnings & Revenues Top Estimates on Supply Chain Strength",
+   "summary": "DPZ's Q3 earnings and revenues beat estimates as supply chain sales and franchise royalties grow, even as same-store sales slow and store margins narrow.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dominos-q3-earnings-revenues-top-151800455.html?.tsrc=rss",
+   "published_at": "2026-10-13T15:18:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:20Z",
+   "fingerprint": "0c967903a786a746",
+   "primary_source": false,
+   "cluster_id": "b0f2112b655df793",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8f18186db481c749",
+   "symbols": [
+    "FIGS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Figs (FIGS) Is Up 16.72% in One Week: What You Should Know",
+   "summary": "Does Figs (FIGS) have what it takes to be a top stock pick for momentum investors? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/figs-figs-16-72-one-150003251.html?.tsrc=rss",
+   "published_at": "2026-10-13T15:00:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:20Z",
+   "fingerprint": "d703803c06c62965",
+   "primary_source": false,
+   "cluster_id": "8f18186db481c749",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c1cc0db714d66661",
+   "symbols": [
+    "DBI",
+    "FIGS",
+    "GCO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "FIGS' Product Innovation Strengthens Customer Loyalty & Engagement",
+   "summary": "FIGS is driving customer loyalty through innovative scrubs, improved fits and expanded apparel offerings, fueling stronger engagement and revenue growth.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/figs-product-innovation-strengthens-customer-143800448.html?.tsrc=rss",
+   "published_at": "2026-10-13T14:38:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:49:57Z",
+   "fingerprint": "f90e2308cb6f6445",
+   "primary_source": false,
+   "cluster_id": "c1cc0db714d66661",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "49fe42bca5f2008b",
+   "symbols": [
+    "FIGS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "FIGS, Inc. (FIGS) Hit a 52 Week High, Can the Run Continue?",
+   "summary": "Figs (FIGS) is at a 52-week high, but can investors hope for more gains in the future? We take a look at the company's fundamentals for clues.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/figs-inc-figs-hit-52-121516740.html?.tsrc=rss",
+   "published_at": "2026-10-13T12:15:16Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:20Z",
+   "fingerprint": "b7c229ef2d2d742b",
+   "primary_source": false,
+   "cluster_id": "49fe42bca5f2008b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Ray Dalio",
+   "fund": "Bridgewater Associates",
+   "action": "reduced",
+   "weight_pct": 0.0,
+   "shares_change_pct": -91.4,
+   "value": 459174.0,
+   "report_date": "2026-06-30"
+  },
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "increased",
+   "weight_pct": 0.02,
+   "shares_change_pct": 4.8,
+   "value": 17166963.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

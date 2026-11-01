@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -28,7 +28,7 @@
    "ema10": 24.392689210112326,
    "ema21": 24.705828772041894,
    "sma50": 26.19380001068115,
-   "sma200": 28.68681604385376
+   "sma200": 28.686816024780274
   },
   "market_cap": null,
   "market_cap_currency": null,
@@ -57,7 +57,8 @@
   "market_intelligence": {
    "score": 10.0,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -74,11 +75,18 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 1,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 10016.0,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 1
+  },
+  "superinvestors": {
+   "holders": 1,
+   "buyers": 1,
+   "new_buyers": 1,
+   "sellers": 0,
+   "sold_out": 0
   },
   "superinvestors": null,
   "first_seen": "2026-10-31",
@@ -104,7 +112,7 @@
   "ema10": 24.392689210112326,
   "ema21": 24.705828772041894,
   "sma50": 26.19380001068115,
-  "sma200": 28.68681604385376,
+  "sma200": 28.686816024780274,
   "volatility_ann": 31.898269543635642,
   "avg_dollar_volume_20d": 2410786.5457820892,
   "move_zscore": -1.8809854980246918
@@ -435,7 +443,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 56.4,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 10
   },
   "windows": {
    "24h": {
@@ -467,7 +475,8 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -486,10 +495,61 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "72041d7e85350fe2",
+   "symbol": "PXED",
+   "insider": "Woods John Terrence",
+   "role": "Chief Academic Off. & Provost",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-23",
+   "filed_at": "2026-10-27",
+   "reporting_delay_days": 4,
+   "shares": 200.0,
+   "price": 5.23,
+   "value": 1046.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1600222/000095014226002867/0000950142-26-002867-index.htm"
+  },
+  {
+   "id": "70844cb638ec7ce6",
+   "symbol": "PXED",
+   "insider": "Woods John Terrence",
+   "role": "Chief Academic Off. & Provost",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-23",
+   "filed_at": "2026-10-27",
+   "reporting_delay_days": 4,
+   "shares": 400.0,
+   "price": 25.04,
+   "value": 10016.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1600222/000095014226002867/0000950142-26-002867-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "new",
+   "weight_pct": 0.0,
+   "shares_change_pct": null,
+   "value": 216810.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,7 +24,7 @@
    "adr20": 1.820159606562839,
    "rvol": 1.156270160289812,
    "ema10": 15.533445897246146,
-   "ema21": 15.437120503913029,
+   "ema21": 15.437120503917262,
    "sma50": 15.42628963470459,
    "sma200": 14.166285305023193
   },
@@ -54,11 +54,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 4.1,
+   "score": 37.0,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 4,
    "independent_24h": 0
   },
   "political": {
@@ -79,7 +81,13 @@
    "distinct_buyers": 0,
    "other_transactions": 0
   },
-  "superinvestors": null,
+  "superinvestors": {
+   "holders": 1,
+   "buyers": 0,
+   "new_buyers": 0,
+   "sellers": 1,
+   "sold_out": 0
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
   "country": "United States"
@@ -101,7 +109,7 @@
   "adr20": 1.820159606562839,
   "rvol": 1.156270160289812,
   "ema10": 15.533445897246146,
-  "ema21": 15.437120503913029,
+  "ema21": 15.437120503917262,
   "sma50": 15.42628963470459,
   "sma200": 14.166285305023193,
   "volatility_ann": 16.879521085965134,
@@ -340,11 +348,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 4.1,
+  "score": 37.0,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 99.8,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 23.3,
@@ -362,26 +370,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 8,
+    "independent": 8,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -399,11 +409,442 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "e2ca63d9dda696e1",
+   "symbols": [
+    "FMNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Farmers National: Q3 Earnings Snapshot",
+   "summary": "CANFIELD, Ohio (AP) — CANFIELD, Ohio (AP) — Farmers National Banc Corp. (FMNB) on Wednesday reported third-quarter profit of $14.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/farmers-national-q3-earnings-snapshot-183633546.html?.tsrc=rss",
+   "published_at": "2026-10-28T18:36:33Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:34Z",
+   "fingerprint": "7ba6d3ccf40e25f6",
+   "primary_source": false,
+   "cluster_id": "e2ca63d9dda696e1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1cbca293206d0feb",
+   "symbols": [
+    "FBIZ",
+    "FMNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Farmers National Banc (FMNB) Q3 Earnings Surpass Estimates",
+   "summary": "Farmers National (FMNB) delivered earnings and revenue surprises of +14.63% and -6.75%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/farmers-national-banc-fmnb-q3-123003868.html?.tsrc=rss",
+   "published_at": "2026-10-28T12:30:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:01Z",
+   "fingerprint": "773784518f55f6b1",
+   "primary_source": false,
+   "cluster_id": "1cbca293206d0feb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7317d8bd097b15a6",
+   "symbols": [
+    "FMNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Farmers National Banc Corp. Reports Results for Third Quarter of 2026",
+   "summary": "CANFIELD, Ohio, October 28, 2026--Farmers National Banc Corp. (\"Farmers\" or the \"Company\") (NASDAQ: FMNB) today announced net income of $14.5 million, or $0.25 per diluted share, for the third quarter of 2026 compared to $12.5 million, or $0.33 per diluted share, for the third qu",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/farmers-national-banc-corp-reports-120000241.html?.tsrc=rss",
+   "published_at": "2026-10-28T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:34Z",
+   "fingerprint": "f4b301386b33b5ea",
+   "primary_source": false,
+   "cluster_id": "7317d8bd097b15a6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "58d3f584bba985d8",
+   "symbols": [
+    "FMNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "First Financial Corp. (THFF) Q3 Earnings and Revenues Beat Estimates",
+   "summary": "First Financial Corp. (THFF) delivered earnings and revenue surprises of +15.50% and +2.69%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/first-financial-corp-thff-q3-131001688.html?.tsrc=rss",
+   "published_at": "2026-10-27T13:10:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:34Z",
+   "fingerprint": "de814092be3022e0",
+   "primary_source": false,
+   "cluster_id": "58d3f584bba985d8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9832d2a64ddcef4e",
+   "symbols": [
+    "FMNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Old National Bancorp (ONB) Q3 Earnings Match Estimates",
+   "summary": "Old National Bancorp (ONB) delivered earnings and revenue surprises of 0.00% and -2.11%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/old-national-bancorp-onb-q3-111504407.html?.tsrc=rss",
+   "published_at": "2026-10-21T11:15:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:34Z",
+   "fingerprint": "ae78a8e1d92b6b29",
+   "primary_source": false,
+   "cluster_id": "9832d2a64ddcef4e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "265c45641b78e8da",
+   "symbols": [
+    "FMNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Commerce Bancshares (CBSH) Q3 Earnings and Revenues Beat Estimates",
+   "summary": "Commerce (CBSH) delivered earnings and revenue surprises of +0.94% and +0.30%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/commerce-bancshares-cbsh-q3-earnings-101501862.html?.tsrc=rss",
+   "published_at": "2026-10-20T10:15:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:34Z",
+   "fingerprint": "68775e38e4b900a7",
+   "primary_source": false,
+   "cluster_id": "265c45641b78e8da",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a891d0d6e0ee4f66",
+   "symbols": [
+    "FMNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Why Farmers National Banc (FMNB) is a Top Dividend Stock for Your Portfolio",
+   "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does Farmers National (FMNB) have what it takes? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-farmers-national-banc-fmnb-144504295.html?.tsrc=rss",
+   "published_at": "2026-10-16T14:45:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:34Z",
+   "fingerprint": "9ac9ae660914f805",
+   "primary_source": false,
+   "cluster_id": "a891d0d6e0ee4f66",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a0c020e84a3820b0",
+   "symbols": [
+    "BSVN",
+    "FMNB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Bank Stocks Worth Watching If The Fed Keeps Rates Higher",
+   "summary": "The Federal Reserve’s next move on interest rates has become the market’s cliffhanger, with every CPI and PPI print feeding speculation about how much tighter money conditions might get. That uncertainty can punish some areas of the market, yet it can also create room for select ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-bank-stocks-worth-watching-211217033.html?.tsrc=rss",
+   "published_at": "2026-10-14T21:12:17Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:47:37Z",
+   "fingerprint": "a7ded1509e6db06b",
+   "primary_source": false,
+   "cluster_id": "a0c020e84a3820b0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e46614ba268c49b6",
+   "symbols": [
+    "FMNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Farmers National Banc (FMNB) is a Top Dividend Stock Right Now: Should You Buy?",
+   "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does Farmers National (FMNB) have what it takes? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/farmers-national-banc-fmnb-top-144504126.html?.tsrc=rss",
+   "published_at": "2026-09-30T14:45:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:34Z",
+   "fingerprint": "6adac4e9a05a468a",
+   "primary_source": false,
+   "cluster_id": "e46614ba268c49b6",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b0c1c29b7828b015",
+   "symbols": [
+    "FMNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "This is Why  Farmers National Banc (FMNB) is a Great Dividend Stock",
+   "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does Farmers National (FMNB) have what it takes? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-farmers-national-banc-fmnb-154504557.html?.tsrc=rss",
+   "published_at": "2026-09-14T15:45:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:34Z",
+   "fingerprint": "022a5198afb24bf5",
+   "primary_source": false,
+   "cluster_id": "b0c1c29b7828b015",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "644404b1e14fcf0a",
+   "symbols": [
+    "FMNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Farmers National Banc Corp's Dividend Analysis",
+   "summary": "This article first appeared on GuruFocus.  Farmers National Banc Corp (NASDAQ:FMNB) recently announced a total dividend of $0.18 per share, with the ex-dividend date set for 2026-09-11.  This amount consists of $0.18 per share in cash dividend payable on 2026-09-30.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/farmers-national-banc-corps-dividend-111829112.html?.tsrc=rss",
+   "published_at": "2026-09-11T11:18:29Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:34Z",
+   "fingerprint": "b7b833c96a2e5958",
+   "primary_source": false,
+   "cluster_id": "644404b1e14fcf0a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "189352a85ed39c3b",
+   "symbols": [
+    "FMNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "3 Stocks to Grab that Declared Dividend Hikes Amid Market Volatility",
+   "summary": "FMNB, MGEE and NSSC are highlighted as dividend stocks amid market volatility, inflation and rate-hike fears.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-stocks-grab-declared-dividend-133200988.html?.tsrc=rss",
+   "published_at": "2026-09-08T13:32:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:34Z",
+   "fingerprint": "c91391a14c5d2a6e",
+   "primary_source": false,
+   "cluster_id": "189352a85ed39c3b",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "69d0c6a8b4b0aae8",
+   "symbols": [
+    "FMNB"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "All You Need to Know About Farmers National (FMNB) Rating Upgrade to Buy",
+   "summary": "Farmers National (FMNB) has been upgraded to a Zacks Rank #2 (Buy), reflecting growing optimism about the company's earnings prospects. This might drive the stock higher in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/know-farmers-national-fmnb-rating-160003680.html?.tsrc=rss",
+   "published_at": "2026-08-31T16:00:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:34Z",
+   "fingerprint": "032d5f4ec9ae7875",
+   "primary_source": false,
+   "cluster_id": "69d0c6a8b4b0aae8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5da28bbe89ba75c9",
+   "symbols": [
+    "FMNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Farmers National Banc Corp. Announces 5.6% Increase in Quarterly Cash Dividend",
+   "summary": "CANFIELD, Ohio, August 25, 2026--On August 25, 2026, the Board of Directors of the Farmers National Banc Corp. (NASDAQ: FMNB) declared a quarterly cash dividend of $0.18 per share. The common stock cash dividend will have a record date of September 11, 2026 and is payable to shar",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/farmers-national-banc-corp-announces-201500280.html?.tsrc=rss",
+   "published_at": "2026-08-25T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:34Z",
+   "fingerprint": "49c9021a62dacda0",
+   "primary_source": false,
+   "cluster_id": "5da28bbe89ba75c9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f0493ef8ac67b2f9",
+   "symbols": [
+    "FMNB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Farmers National Banc (FMNB) is a Great Momentum Stock: Should You Buy?",
+   "summary": "Does Farmers National Banc (FMNB) have what it takes to be a top stock pick for momentum investors? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/farmers-national-banc-fmnb-great-160003279.html?.tsrc=rss",
+   "published_at": "2026-07-30T16:00:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:34Z",
+   "fingerprint": "58a72c399b4b18fd",
+   "primary_source": false,
+   "cluster_id": "f0493ef8ac67b2f9",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7083cfe53e8fef25",
+   "symbols": [
+    "FMNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Farmers National Banc (FMNB) Q2 Earnings and Revenues Surpass Estimates",
+   "summary": "Farmers National (FMNB) delivered earnings and revenue surprises of +10.81% and +1.29%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/farmers-national-banc-fmnb-q2-131002696.html?.tsrc=rss",
+   "published_at": "2026-07-22T13:10:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:34Z",
+   "fingerprint": "acc4006553c1bb2c",
+   "primary_source": false,
+   "cluster_id": "7083cfe53e8fef25",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "536b1ef7626ee1c0",
+   "symbols": [
+    "FMNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Farmers National Banc Corp. Reports Solid Results for Second Quarter of 2026",
+   "summary": "CANFIELD, Ohio, July 22, 2026--Farmers National Banc Corp. (\"Farmers\" or the \"Company\") (NASDAQ: FMNB) today reported net income of $23.0 million, or $0.39 per diluted share, for the second quarter of 2026 compared to $13.9 million, or $0.37 per diluted share, for the second quar",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/farmers-national-banc-corp-reports-120000033.html?.tsrc=rss",
+   "published_at": "2026-07-22T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:34Z",
+   "fingerprint": "2e0d20b1cf64a274",
+   "primary_source": false,
+   "cluster_id": "536b1ef7626ee1c0",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "845ac3fecf4862a2",
+   "symbols": [
+    "FMNB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are Options Traders Betting on a Big Move in Farmers National Stock?",
+   "summary": "Investors need to pay close attention to FMNB stock based on the movements in the options market lately.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/options/articles/options-traders-betting-big-move-121500844.html?.tsrc=rss",
+   "published_at": "2026-05-15T12:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:34Z",
+   "fingerprint": "04d5b4f145f305e9",
+   "primary_source": false,
+   "cluster_id": "845ac3fecf4862a2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2ca4b5b94a1df76f",
+   "symbols": [
+    "FMNB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Discovering Undiscovered Gems in the US Market April 2026",
+   "summary": "The United States market has experienced a flat performance over the past week, yet it has shown robust growth of 29% over the last year with projected earnings expected to increase by 16% annually in the coming years. In this dynamic environment, identifying stocks that are pois",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/discovering-undiscovered-gems-us-market-113347922.html?.tsrc=rss",
+   "published_at": "2026-04-29T11:33:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:34Z",
+   "fingerprint": "4f2070b8edc2532d",
+   "primary_source": false,
+   "cluster_id": "2ca4b5b94a1df76f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "reduced",
+   "weight_pct": 0.0,
+   "shares_change_pct": -28.7,
+   "value": 574291.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

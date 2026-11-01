@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -26,9 +26,9 @@
    "adr20": 2.2875307986491435,
    "rvol": 0.701863741195537,
    "ema10": 95.52585167957574,
-   "ema21": 92.38069253162456,
+   "ema21": 92.3806925316335,
    "sma50": 89.61420013427734,
-   "sma200": 87.07409164428711
+   "sma200": 87.074091796875
   },
   "market_cap": null,
   "market_cap_currency": null,
@@ -53,9 +53,10 @@
    "top_factors": []
   },
   "market_intelligence": {
-   "score": 2.1,
+   "score": 2.6,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -72,13 +73,19 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 1,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 364342.3,
    "distinct_buyers": 0,
    "other_transactions": 0
   },
-  "superinvestors": null,
+  "superinvestors": {
+   "holders": 2,
+   "buyers": 1,
+   "new_buyers": 0,
+   "sellers": 1,
+   "sold_out": 0
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
   "country": null
@@ -100,9 +107,9 @@
   "adr20": 2.2875307986491435,
   "rvol": 0.701863741195537,
   "ema10": 95.52585167957574,
-  "ema21": 92.38069253162456,
+  "ema21": 92.3806925316335,
   "sma50": 89.61420013427734,
-  "sma200": 87.07409164428711,
+  "sma200": 87.074091796875,
   "volatility_ann": 19.647661356148237,
   "avg_dollar_volume_20d": 51550932.722473145,
   "move_zscore": -0.3986088010100967
@@ -336,7 +343,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.1,
+  "score": 2.6,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -345,7 +352,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 12.0,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 10
   },
   "windows": {
    "24h": {
@@ -377,7 +384,8 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -396,10 +404,50 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "c5849dc0f79e945d",
+   "symbol": "SIGI",
+   "insider": "Nicholson Cynthia S",
+   "role": "Director",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-26",
+   "filed_at": "2026-10-26",
+   "reporting_delay_days": 0,
+   "shares": 3691.0,
+   "price": 98.711,
+   "value": 364342.3,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/230557/000122520826008499/0001225208-26-008499-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Ray Dalio",
+   "fund": "Bridgewater Associates",
+   "action": "reduced",
+   "weight_pct": 0.01,
+   "shares_change_pct": -3.8,
+   "value": 2805141.0,
+   "report_date": "2026-06-30"
+  },
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "increased",
+   "weight_pct": 0.04,
+   "shares_change_pct": 154.8,
+   "value": 27802484.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

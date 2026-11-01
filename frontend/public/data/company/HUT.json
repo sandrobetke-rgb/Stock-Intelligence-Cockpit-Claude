@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
   "symbol": "HUT",
-  "name": "Hut Corp",
+  "name": "Hut 8 Corp.",
   "region": "US",
   "currency": "USD",
-  "sector": "Information Technology",
-  "industry": null,
+  "sector": "Financial Services",
+  "industry": "Capital Markets",
   "indexes": [
    "RUT"
   ],
   "status": "active",
   "status_reason": null,
-  "data_status": "warning",
-  "data_flags": [
-   "no_fundamentals"
-  ],
+  "data_status": "ok",
+  "data_flags": [],
   "market": {
    "last_close": 59.400001525878906,
    "price_date": "2026-10-30",
@@ -30,28 +28,30 @@
    "sma50": 83.97389915466309,
    "sma200": 82.50692478179931
   },
-  "market_cap": null,
-  "market_cap_currency": null,
+  "market_cap": 7321612800.0,
+  "market_cap_currency": "USD",
   "quality": {
-   "score": null,
-   "coverage_pct": 0,
-   "model": "standard",
+   "score": 46.7,
+   "coverage_pct": 100,
+   "model": "financial",
    "dimensions": {
-    "revenue_growth": null,
-    "profitability": null,
-    "financial_stability": null,
+    "revenue_growth": 100.0,
+    "profitability": 0.0,
+    "financial_stability": 0.0,
     "cashflow": null,
     "market_position": null,
-    "growth_potential": null,
-    "management": null
+    "growth_potential": 100.0,
+    "management": 0.0
    }
   },
   "risk": {
-   "score": null,
-   "level": "unbekannt",
-   "coverage_pct": 25,
+   "score": 75.6,
+   "level": "hoch",
+   "coverage_pct": 100,
    "top_factors": [
-    "Volatilität (63T, annualisiert)"
+    "Volatilität (63T, annualisiert)",
+    "Verwässerung (Aktienanzahl yoy)",
+    "Margenentwicklung (Vorjahr, Pp.)"
    ]
   },
   "market_intelligence": {
@@ -80,10 +80,16 @@
    "distinct_buyers": 0,
    "other_transactions": 0
   },
-  "superinvestors": null,
+  "superinvestors": {
+   "holders": 2,
+   "buyers": 1,
+   "new_buyers": 0,
+   "sellers": 2,
+   "sold_out": 1
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
-  "country": null
+  "country": "United States"
  },
  "memberships": [
   {
@@ -110,34 +116,34 @@
   "move_zscore": -1.8745278617194412
  },
  "quality_detail": {
-  "score": null,
-  "status": "insufficient_data",
-  "coverage_pct": 0,
-  "model": "standard",
+  "score": 46.7,
+  "status": "ok",
+  "coverage_pct": 100,
+  "model": "financial",
   "dimensions": [
    {
     "key": "revenue_growth",
     "label": "Umsatzwachstum",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 100.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_cagr",
       "label": "Umsatz-CAGR (mehrjährig)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 43.73,
+      "points": 100.0,
+      "status": "ok"
      },
      {
       "key": "revenue_growth_yoy",
       "label": "Umsatzwachstum Vorjahr",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 44.79,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -146,25 +152,25 @@
     "key": "profitability",
     "label": "Profitabilität/Margen",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
-     {
-      "key": "operating_margin",
-      "label": "Operative Marge",
-      "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     },
      {
       "key": "net_margin",
       "label": "Nettomarge",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -96.185,
+      "points": 0.0,
+      "status": "ok"
+     },
+     {
+      "key": "roe",
+      "label": "Eigenkapitalrendite",
+      "unit": "%",
+      "value": -15.904,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -173,33 +179,17 @@
     "key": "financial_stability",
     "label": "Finanzielle Stabilität",
     "weight": 0.15,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "data",
+    "coverage": 100,
     "metrics": [
      {
-      "key": "debt_to_equity",
-      "label": "Verschuldung (Debt/Equity)",
-      "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     },
-     {
-      "key": "current_ratio",
-      "label": "Liquidität (Current Ratio)",
-      "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     },
-     {
-      "key": "interest_coverage",
-      "label": "Zinsdeckung (EBIT/Zinsen)",
-      "unit": "x",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "key": "share_change_yoy",
+      "label": "Aktienanzahl Veränderung",
+      "unit": "%",
+      "value": 10.669,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -209,26 +199,9 @@
     "label": "Cashflow",
     "weight": 0.1,
     "score": null,
-    "basis": "unknown",
-    "coverage": 0,
-    "metrics": [
-     {
-      "key": "fcf_margin",
-      "label": "Free-Cashflow-Marge",
-      "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     },
-     {
-      "key": "ocf_positive",
-      "label": "Operativer Cashflow positiv",
-      "unit": "bool",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     }
-    ],
+    "basis": "not_applicable",
+    "coverage": null,
+    "metrics": [],
     "manual": null
    },
    {
@@ -236,43 +209,26 @@
     "label": "Marktposition/Wettbewerb",
     "weight": 0.15,
     "score": null,
-    "basis": "unknown",
-    "coverage": 0,
-    "metrics": [
-     {
-      "key": "gross_margin",
-      "label": "Bruttomarge (Proxy Preissetzungsmacht)",
-      "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     }
-    ],
+    "basis": "not_applicable",
+    "coverage": null,
+    "metrics": [],
     "manual": null
    },
    {
     "key": "growth_potential",
     "label": "Wachstumspotenzial",
     "weight": 0.2,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 100.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "revenue_growth_forward",
       "label": "Erwartetes Umsatzwachstum (Yahoo)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
-     },
-     {
-      "key": "reinvestment",
-      "label": "Reinvestition (F&E + Capex in % Umsatz)",
-      "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 81.4,
+      "points": 100.0,
+      "status": "ok"
      }
     ],
     "manual": null
@@ -281,95 +237,59 @@
     "key": "management",
     "label": "Management/Kapitalallokation",
     "weight": 0.1,
-    "score": null,
-    "basis": "unknown",
-    "coverage": 0,
+    "score": 0.0,
+    "basis": "proxy",
+    "coverage": 100,
     "metrics": [
      {
       "key": "roe",
       "label": "Eigenkapitalrendite",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": -15.904,
+      "points": 0.0,
+      "status": "ok"
      },
      {
       "key": "share_change_yoy",
       "label": "Aktienanzahl Veränderung (Verwässerung)",
       "unit": "%",
-      "value": null,
-      "points": null,
-      "status": "unknown"
+      "value": 10.669,
+      "points": 0.0,
+      "status": "ok"
      }
     ],
     "manual": null
    }
   ],
   "source": "Yahoo Finance (yfinance)",
-  "source_url": null,
-  "as_of": null,
-  "fiscal_year_end": null,
-  "currency": null,
+  "source_url": "https://finance.yahoo.com/quote/HUT/financials",
+  "as_of": "2026-11-01T02:28:31Z",
+  "fiscal_year_end": "2025-12-31",
+  "currency": "USD",
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": null,
-  "level": "unbekannt",
-  "coverage_pct": 25,
+  "score": 75.6,
+  "level": "hoch",
+  "coverage_pct": 100,
   "factors": [
-   {
-    "key": "leverage",
-    "label": "Verschuldung (Debt/Equity)",
-    "value": null,
-    "unit": "x",
-    "severity": null,
-    "weight": 0.15,
-    "status": "unknown"
-   },
-   {
-    "key": "liquidity",
-    "label": "Liquidität (Current Ratio)",
-    "value": null,
-    "unit": "x",
-    "severity": null,
-    "weight": 0.1,
-    "status": "unknown"
-   },
-   {
-    "key": "interest",
-    "label": "Zinsdeckung",
-    "value": null,
-    "unit": "x",
-    "severity": null,
-    "weight": 0.08,
-    "status": "unknown"
-   },
-   {
-    "key": "cashflow",
-    "label": "Free-Cashflow-Marge",
-    "value": null,
-    "unit": "%",
-    "severity": null,
-    "weight": 0.12,
-    "status": "unknown"
-   },
    {
     "key": "margin_trend",
     "label": "Margenentwicklung (Vorjahr, Pp.)",
-    "value": null,
+    "value": -13.72,
     "unit": "Pp",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "dilution",
     "label": "Verwässerung (Aktienanzahl yoy)",
-    "value": null,
+    "value": 10.67,
     "unit": "%",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.1,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "volatility",
@@ -392,20 +312,20 @@
    {
     "key": "valuation",
     "label": "Bewertung (KGV bzw. KUV)",
-    "value": null,
+    "value": 23.03,
     "unit": "x",
-    "severity": null,
+    "severity": 100.0,
     "weight": 0.08,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "governance",
     "label": "Governance-/Prüfungsrisiko (ISS via Yahoo, 1-10)",
-    "value": null,
+    "value": 9.0,
     "unit": "1-10",
-    "severity": null,
+    "severity": 88.9,
     "weight": 0.04,
-    "status": "unknown"
+    "status": "ok"
    },
    {
     "key": "political",
@@ -418,7 +338,9 @@
    }
   ],
   "top_factors": [
-   "Volatilität (63T, annualisiert)"
+   "Volatilität (63T, annualisiert)",
+   "Verwässerung (Aktienanzahl yoy)",
+   "Margenentwicklung (Vorjahr, Pp.)"
   ],
   "unknown_factors": [
    "Kunden- und Branchenabhängigkeit",
@@ -489,7 +411,35 @@
  "insiders": [],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Dan Loeb",
+   "fund": "Third Point",
+   "action": "increased",
+   "weight_pct": 3.27,
+   "shares_change_pct": 51.2,
+   "value": 151810175.0,
+   "report_date": "2026-06-30"
+  },
+  {
+   "manager": "Ray Dalio",
+   "fund": "Bridgewater Associates",
+   "action": "sold_out",
+   "weight_pct": 0,
+   "shares_change_pct": -100.0,
+   "value": 0,
+   "report_date": "2026-06-30"
+  },
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "reduced",
+   "weight_pct": 0.05,
+   "shares_change_pct": -38.2,
+   "value": 34358164.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

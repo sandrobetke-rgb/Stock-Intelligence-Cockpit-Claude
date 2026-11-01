@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 2.67679660560884,
    "rvol": 1.101544694859458,
    "ema10": 148.15333847867998,
-   "ema21": 148.22885597385365,
+   "ema21": 148.22885597389075,
    "sma50": 150.12777740478515,
-   "sma200": 144.2188215637207
+   "sma200": 144.2188218307495
   },
   "market_cap": 1651718016.0,
   "market_cap_currency": "USD",
@@ -54,9 +54,10 @@
    ]
   },
   "market_intelligence": {
-   "score": 4.4,
+   "score": 5.9,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -72,14 +73,20 @@
   "social": null,
   "insider": {
    "window_days": 90,
-   "open_market_buys": 0,
+   "open_market_buys": 1,
    "open_market_sells": 0,
-   "buy_value": 0,
+   "buy_value": 59348.0,
    "sell_value": 0,
-   "distinct_buyers": 0,
+   "distinct_buyers": 1,
    "other_transactions": 0
   },
-  "superinvestors": null,
+  "superinvestors": {
+   "holders": 1,
+   "buyers": 0,
+   "new_buyers": 0,
+   "sellers": 1,
+   "sold_out": 0
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
   "country": "United States"
@@ -101,9 +108,9 @@
   "adr20": 2.67679660560884,
   "rvol": 1.101544694859458,
   "ema10": 148.15333847867998,
-  "ema21": 148.22885597385365,
+  "ema21": 148.22885597389075,
   "sma50": 150.12777740478515,
-  "sma200": 144.2188215637207,
+  "sma200": 144.2188218307495,
   "volatility_ann": 20.0257361012153,
   "avg_dollar_volume_20d": 11920091.785125732,
   "move_zscore": -0.8368069461261455
@@ -340,7 +347,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 4.4,
+  "score": 5.9,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -349,7 +356,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 25.1,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 30
   },
   "windows": {
    "24h": {
@@ -381,7 +388,8 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -425,7 +433,8 @@
   {
    "id": "c0d934b2d91d6dfd",
    "symbols": [
-    "BFC"
+    "BFC",
+    "ESQ"
    ],
    "category": "market",
    "signal_type": "company_news",
@@ -539,7 +548,8 @@
    "id": "af09396ace5e28e9",
    "symbols": [
     "BFC",
-    "CLBK"
+    "CLBK",
+    "FBNC"
    ],
    "category": "market",
    "signal_type": "news",
@@ -801,10 +811,41 @@
    "feed": "yahoo_rss"
   }
  ],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "70b8880771b64fe8",
+   "symbol": "BFC",
+   "insider": "Sprang Todd A.",
+   "role": "Director",
+   "transaction_code": "P",
+   "transaction_kind": "buy",
+   "transaction_label": "Kauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-28",
+   "filed_at": "2026-10-29",
+   "reporting_delay_days": 1,
+   "shares": 400.0,
+   "price": 148.37,
+   "value": 59348.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1746109/000110465926120006/0001104659-26-120006-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "reduced",
+   "weight_pct": 0.0,
+   "shares_change_pct": -40.5,
+   "value": 2981835.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

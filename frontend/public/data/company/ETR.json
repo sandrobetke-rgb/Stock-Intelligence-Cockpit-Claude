@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -24,9 +24,9 @@
    "adr20": 1.5380581893411849,
    "rvol": 1.3784439404397988,
    "ema10": 107.71464935152417,
-   "ema21": 106.03397228924896,
+   "ema21": 106.03397228924739,
    "sma50": 104.3702003479004,
-   "sma200": 106.7937329864502
+   "sma200": 106.79373332977295
   },
   "market_cap": 52608077824.0,
   "market_cap_currency": "USD",
@@ -55,14 +55,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 39.8,
+   "score": 49.2,
    "drivers": [
     "news_flow",
     "source_diversity",
-    "price_volume_anomaly"
+    "freshness"
    ],
-   "independent_7d": 18,
-   "independent_24h": 0
+   "independent_7d": 19,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -82,7 +82,13 @@
    "distinct_buyers": 0,
    "other_transactions": 0
   },
-  "superinvestors": null,
+  "superinvestors": {
+   "holders": 1,
+   "buyers": 0,
+   "new_buyers": 0,
+   "sellers": 1,
+   "sold_out": 0
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
   "country": "United States"
@@ -104,9 +110,9 @@
   "adr20": 1.5380581893411849,
   "rvol": 1.3784439404397988,
   "ema10": 107.71464935152417,
-  "ema21": 106.03397228924896,
+  "ema21": 106.03397228924739,
   "sma50": 104.3702003479004,
-  "sma200": 106.7937329864502,
+  "sma200": 106.79373332977295,
   "volatility_ann": 16.44917198956656,
   "avg_dollar_volume_20d": 271985889.34986115,
   "move_zscore": 0.12285932962445949
@@ -430,11 +436,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 39.8,
+  "score": 49.2,
   "components": {
    "news_flow": 100.0,
-   "freshness": 0,
-   "source_diversity": 40,
+   "freshness": 50,
+   "source_diversity": 60,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 18.9,
@@ -443,28 +449,28 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 18,
-    "independent": 18,
+    "signals": 19,
+    "independent": 19,
     "duplicates": 0,
-    "sources": 2,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 19,
-    "independent": 19,
+    "signals": 20,
+    "independent": 20,
     "duplicates": 0,
-    "sources": 3,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -473,7 +479,7 @@
   "drivers": [
    "news_flow",
    "source_diversity",
-   "price_volume_anomaly"
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -492,6 +498,32 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "fcc2d53590bf1c72",
+   "symbols": [
+    "ETR",
+    "META",
+    "NEE",
+    "SO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Entergy Just Raised Its Dividend 6.3%. Can Cash Flow Support the Increase?",
+   "summary": "Entergy just bumped its dividend again, but the company spends billions more on infrastructure each year than its operations generate in cash. Whether that gap eventually threatens the payout depends on a pipeline of hyperscale data center deals that have not fully arrived yet.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/10/31/entergy-just-raised-its-dividend-6-3-can-cash-flow-support-the-increase/?.tsrc=rss",
+   "published_at": "2026-10-31T14:02:26Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:08:58Z",
+   "fingerprint": "4e63e75aa87da0f4",
+   "primary_source": false,
+   "cluster_id": "fcc2d53590bf1c72",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Entergy hat gerade seine Dividende um 6,3% erhöht. Kann der Cashflow den Anstieg unterstützen?"
+  },
   {
    "id": "8f6526d071a47054",
    "symbols": [
@@ -945,7 +977,17 @@
  "insiders": [],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "reduced",
+   "weight_pct": 0.08,
+   "shares_change_pct": -13.8,
+   "value": 55603726.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -26,7 +26,7 @@
    "ema10": 72.75987084378752,
    "ema21": 71.79489610687746,
    "sma50": 70.98780014038086,
-   "sma200": 61.989094791412356
+   "sma200": 61.98909482955933
   },
   "market_cap": 627985728.0,
   "market_cap_currency": "USD",
@@ -53,12 +53,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 17.6,
+   "score": 67.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 10,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -78,7 +80,13 @@
    "distinct_buyers": 0,
    "other_transactions": 0
   },
-  "superinvestors": null,
+  "superinvestors": {
+   "holders": 1,
+   "buyers": 0,
+   "new_buyers": 0,
+   "sellers": 1,
+   "sold_out": 0
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
   "country": "United States"
@@ -102,7 +110,7 @@
   "ema10": 72.75987084378752,
   "ema21": 71.79489610687746,
   "sma50": 70.98780014038086,
-  "sma200": 61.989094791412356,
+  "sma200": 61.98909482955933,
   "volatility_ann": 17.63851608253962,
   "avg_dollar_volume_20d": 5711599.353637695,
   "move_zscore": 2.0010640547705973
@@ -338,11 +346,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 17.6,
+  "score": 67.1,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 80,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 100.0,
@@ -351,35 +359,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 10,
+    "independent": 10,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 14,
+    "independent": 14,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -397,11 +407,425 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "77a3b1a0d09d7b8b",
+   "symbols": [
+    "FBIZ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "First Business Financial: 3 Key Takeaways for Long-Term Investors",
+   "summary": "The company's net interest margin widened to 3.8% as loan pricing and deposit funding improved, fueling 12% year-over-year growth in core lending profit.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/takeaways/2026/10/31/first-business-financial-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+   "published_at": "2026-10-31T15:08:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:01Z",
+   "fingerprint": "430edde9af84ff94",
+   "primary_source": false,
+   "cluster_id": "77a3b1a0d09d7b8b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "First Business Financial: 3 wichtige Takeaways für langfristige Investoren"
+  },
+  {
+   "id": "4c16e7f204da07e5",
+   "symbols": [
+    "FBIZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "First Business (FBIZ) Q3 2026 Earnings Call Transcript",
+   "summary": "Record net income and 14.7% EPS growth drive strong balance sheet expansion.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/30/first-business-fbiz-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-30T17:44:39Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:01Z",
+   "fingerprint": "dfc3e5bdabcb57f5",
+   "primary_source": false,
+   "cluster_id": "4c16e7f204da07e5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9b8ad3cd8bdf7d75",
+   "symbols": [
+    "FBIZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What First Business Financial Services (FBIZ) Said on Its Q3 Earnings Call",
+   "summary": "First Business Financial Services (NASDAQ:FBIZ) reported record third-quarter 2026 pre-tax, pre-provision and bottom-line earnings, supported by loan and deposit growth, an expanded net interest margin and lower expenses. President and CEO Dave Seiler said earnings per share incr",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-first-business-financial-services-fbiz-said-on-its-q3-earnings-call-2026-10-30/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-30T15:14:48Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:01Z",
+   "fingerprint": "fbf817f32e37b76e",
+   "primary_source": false,
+   "cluster_id": "9b8ad3cd8bdf7d75",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Was First Business Financial Services (FBIZ) über seinen Q3-Gewinnaufruf sagte"
+  },
+  {
+   "id": "a45050b17a445aae",
+   "symbols": [
+    "FBIZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "First Business Financial Services, Inc. Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of First Business Financial Services, Inc.'s Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-first-business-financial-services-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-30T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:01Z",
+   "fingerprint": "3e6bd8f7815ec8fe",
+   "primary_source": false,
+   "cluster_id": "a45050b17a445aae",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a9c106d27317569a",
+   "symbols": [
+    "FBIZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "First Business Financial Services (FBIZ) Q3 Earnings and Revenues Top Estimates",
+   "summary": "First Business Financial Services (FBIZ) delivered earnings and revenue surprises of +15.39% and +1.52%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/first-business-financial-services-fbiz-220505686.html?.tsrc=rss",
+   "published_at": "2026-10-29T22:05:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:01Z",
+   "fingerprint": "b8a98b39ac3352e0",
+   "primary_source": false,
+   "cluster_id": "a9c106d27317569a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Erste Business Financial Services (FBIZ) Q3 Einnahmen und Einnahmen Top Schätzungen"
+  },
+  {
+   "id": "829662cd3601d17e",
+   "symbols": [
+    "FBIZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "First Business Financial Services (FBIZ) Q3 Earnings: Taking a Look at Key Metrics Versus Estimates",
+   "summary": "Although the revenue and EPS for First Business Financial Services (FBIZ) give a sense of how its business performed in the quarter ended September 2026, it might be worth considering how some key metrics compare with Wall Street estimates and the year-ago numbers.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/first-business-financial-services-fbiz-213003671.html?.tsrc=rss",
+   "published_at": "2026-10-29T21:30:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:01Z",
+   "fingerprint": "960419adea75bfc6",
+   "primary_source": false,
+   "cluster_id": "829662cd3601d17e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Erste Business Financial Services (FBIZ) Q3 Ergebnisse: Ein Blick auf wichtige Metriken versus Schätzungen"
+  },
+  {
+   "id": "f7966b067546ffb4",
+   "symbols": [
+    "FBIZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "First Business Financial Services: Q3 Earnings Snapshot",
+   "summary": "(AP) — First Business Financial Services Inc. (FBIZ) on Thursday reported third-quarter net income of $16.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/first-business-financial-services-q3-204845069.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:48:45Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:01Z",
+   "fingerprint": "e0b78526258892c7",
+   "primary_source": false,
+   "cluster_id": "f7966b067546ffb4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "45435f14b9f38c6f",
+   "symbols": [
+    "FBIZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "First Business Bank Reports Record Third Quarter Earnings",
+   "summary": "MADISON, Wis., October 29, 2026--First Business Financial Services, Inc. (the \"Company\", the \"Bank\", or \"First Business Bank\") (Nasdaq: FBIZ) reported quarterly net income available to common shareholders of $16.4 million, or earnings per share (\"EPS\") of $1.95. This compares to ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/first-business-bank-reports-record-200500529.html?.tsrc=rss",
+   "published_at": "2026-10-29T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:01Z",
+   "fingerprint": "a2f8fd2c96a285ea",
+   "primary_source": false,
+   "cluster_id": "45435f14b9f38c6f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1cbca293206d0feb",
+   "symbols": [
+    "FBIZ",
+    "FMNB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Farmers National Banc (FMNB) Q3 Earnings Surpass Estimates",
+   "summary": "Farmers National (FMNB) delivered earnings and revenue surprises of +14.63% and -6.75%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/farmers-national-banc-fmnb-q3-123003868.html?.tsrc=rss",
+   "published_at": "2026-10-28T12:30:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:01Z",
+   "fingerprint": "773784518f55f6b1",
+   "primary_source": false,
+   "cluster_id": "1cbca293206d0feb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c7bbebee79e0cf77",
+   "symbols": [
+    "EBMT",
+    "FBIZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Eagle Bancorp Montana, Inc. (EBMT) Lags Q3 Earnings Estimates",
+   "summary": "Eagle Bancorp Montana (EBMT) delivered earnings and revenue surprises of -30.91% and +1.95%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/eagle-bancorp-montana-inc-ebmt-201002796.html?.tsrc=rss",
+   "published_at": "2026-10-27T20:10:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:11Z",
+   "fingerprint": "426c30cb5ce44385",
+   "primary_source": false,
+   "cluster_id": "c7bbebee79e0cf77",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4cd28e1bb02f341c",
+   "symbols": [
+    "FBIZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "First Business Financial Services (FBIZ) Expected to Beat Earnings Estimates: Can the Stock Move Higher?",
+   "summary": "First Business Financial Services (FBIZ) possesses the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/first-business-financial-services-fbiz-130009257.html?.tsrc=rss",
+   "published_at": "2026-10-22T13:00:09Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:01Z",
+   "fingerprint": "a7599c3ebca2f1e0",
+   "primary_source": false,
+   "cluster_id": "4cd28e1bb02f341c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "3b351a6dc71bfbde",
+   "symbols": [
+    "FBIZ",
+    "HBAN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Huntington Bancshares (HBAN) Meets Q3 Earnings Estimates",
+   "summary": "Huntington Bancshares (HBAN) delivered earnings and revenue surprises of 0.00% and -0.38%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/huntington-bancshares-hban-meets-q3-103502790.html?.tsrc=rss",
+   "published_at": "2026-10-22T10:35:02Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:01:50Z",
+   "fingerprint": "413fe3ba37eff5e3",
+   "primary_source": false,
+   "cluster_id": "3b351a6dc71bfbde",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1cfd8989ba38ca15",
+   "symbols": [
+    "FBIZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Why First Business Financial Services (FBIZ) is Poised to Beat Earnings Estimates Again",
+   "summary": "First Business Financial Services (FBIZ) has an impressive earnings surprise history and currently possesses the right combination of the two key ingredients for a likely beat in its next quarterly report.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-first-business-financial-services-151006387.html?.tsrc=rss",
+   "published_at": "2026-10-15T15:10:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:01Z",
+   "fingerprint": "cb2f4087b1e88b6e",
+   "primary_source": false,
+   "cluster_id": "1cfd8989ba38ca15",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b6a60b591d08c747",
+   "symbols": [
+    "FBIZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "First Business Bank Announces Third Quarter 2026 Earnings Conference Call",
+   "summary": "MADISON, Wis., October 05, 2026--First Business Financial Services, Inc. (the \"Company\" or \"First Business Bank\") (Nasdaq:FBIZ) invites participation in a conference call to discuss the Company’s financial and operating performance during its third quarter ended September 30, 202",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/first-business-bank-announces-third-203000608.html?.tsrc=rss",
+   "published_at": "2026-10-05T20:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:01Z",
+   "fingerprint": "d08bf18ee18c0bc3",
+   "primary_source": false,
+   "cluster_id": "b6a60b591d08c747",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "37edec80452bf0ac",
+   "symbols": [
+    "FBIZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "FBIZ Q2 2026 Earnings Call Transcript",
+   "summary": "Record pretax earnings and margin expansion offset SBA exit headwinds.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/07/fbiz-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-08T02:30:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:01Z",
+   "fingerprint": "ac6679448400512d",
+   "primary_source": false,
+   "cluster_id": "37edec80452bf0ac",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "77126a2ba85f4844",
+   "symbols": [
+    "FBIZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Get Paid by September 1st with These 4 Dividend Stocks. But There’s a Catch.",
+   "summary": "Four dividend stocks share the same August 12 record date, which means buyers have until August 11 to qualify, but each name comes with a hidden risk that the upcoming payout will not cancel out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/08/06/get-paid-by-september-1st-with-these-4-dividend-stocks-but-theres-a-catch/?.tsrc=rss",
+   "published_at": "2026-08-07T00:02:49Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:01Z",
+   "fingerprint": "0793f7c542ce3548",
+   "primary_source": false,
+   "cluster_id": "77126a2ba85f4844",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fdee9f017c07eb4f",
+   "symbols": [
+    "FBIZ"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "All You Need to Know About First Business Financial Services (FBIZ) Rating Upgrade to Buy",
+   "summary": "First Business Financial Services (FBIZ) has been upgraded to a Zacks Rank #2 (Buy), reflecting growing optimism about the company's earnings prospects. This might drive the stock higher in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/know-first-business-financial-services-160002227.html?.tsrc=rss",
+   "published_at": "2026-08-04T16:00:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:01Z",
+   "fingerprint": "da73105235d88e68",
+   "primary_source": false,
+   "cluster_id": "fdee9f017c07eb4f",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "01f4f03876a2353d",
+   "symbols": [
+    "FBIZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "First Business Financial Services Inc (FBIZ) (Q2 2026) Earnings Call Highlights: Record EPS and ...",
+   "summary": "FBIZ delivers exceptional Q2 results with EPS of $1.84, record pre-tax pre-provision earnings, and a strategic exit from national SBA lending that is immediately accretive to 2027 earnings.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/first-business-financial-services-inc-010518116.html?.tsrc=rss",
+   "published_at": "2026-08-04T01:05:18Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:01Z",
+   "fingerprint": "11cd6cdb1412e849",
+   "primary_source": false,
+   "cluster_id": "01f4f03876a2353d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "reduced",
+   "weight_pct": 0.01,
+   "shares_change_pct": -1.3,
+   "value": 7635042.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

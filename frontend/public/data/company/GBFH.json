@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -54,12 +54,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 5.5,
+   "score": 59.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 7,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -340,48 +342,50 @@
   ]
  },
  "intelligence_detail": {
-  "score": 5.5,
+  "score": 59.1,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 80,
    "primary_sources": 0,
-   "analyst_activity": 0,
+   "analyst_activity": 35,
    "price_volume_anomaly": 31.3,
    "social_attention": null,
    "insider_activity": null
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 7,
+    "independent": 7,
+    "duplicates": 2,
+    "sources": 4,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 10,
+    "independent": 10,
+    "duplicates": 2,
+    "sources": 4,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -399,7 +403,406 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "81a9b45d59067b20",
+   "symbols": [
+    "GBFH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "GBank Financial Holdings (GBFH) Stock Fair Value Moves Lower After Split Analyst Revisions",
+   "summary": "The implied fair value for GBank Financial Holdings has been cut from US$32 to US$25, a reduction of roughly 22% that aligns with the lower consensus price target now in place. This reset reflects the split analyst narrative, with some focusing on the potential of the gaming pipe",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gbank-financial-holdings-gbfh-stock-020747637.html?.tsrc=rss",
+   "published_at": "2026-11-01T02:07:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:59Z",
+   "fingerprint": "8d22ec3437192c5c",
+   "primary_source": false,
+   "cluster_id": "81a9b45d59067b20",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "GBank Financial Holdings (GBFH) Stock Fair Value sinkt nach Revisionen von Split Analysten"
+  },
+  {
+   "id": "0ac3120f255cd08e",
+   "symbols": [
+    "GBFH"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Analysts slash GBank Financial price targets following third-quarter miss",
+   "summary": "Investing.com -- Shares of GBank Financial Holdings Inc (NASDAQ:GBFH) plunged 22% on Thursday after the Las Vegas-based lender posted a third-quarter earnings miss driven by a sharp drop in gaming card transaction volume and elevated credit costs. The sell-off prompted a wave of ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/analysts-slash-gbank-financial-price-145537412.html?.tsrc=rss",
+   "published_at": "2026-10-29T14:55:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:59Z",
+   "fingerprint": "dba808a1c72e7a6c",
+   "primary_source": false,
+   "cluster_id": "0ac3120f255cd08e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "13b2b63d049eab50",
+   "symbols": [
+    "GBFH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "GBank Financial Holdings Inc. Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of GBank Financial Holdings Inc.'s Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-gbank-financial-holdings-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-10-29T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:59Z",
+   "fingerprint": "a18a51f4094793f4",
+   "primary_source": false,
+   "cluster_id": "c7ea276af1c264a3",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5d589b7eae741eff",
+   "symbols": [
+    "GBFH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What GBank Financial (GBFH) Said on Its Q3 Earnings Call",
+   "summary": "GBank Financial (NASDAQ:GBFH) used its third-quarter 2026 earnings call to outline a leadership transition, discuss pressure on recent earnings and credit costs, and detail its strategy for expanding commercial banking, SBA lending and gaming-focused payments services. Ed Nigro, ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-gbank-financial-gbfh-said-on-its-q3-earnings-call-2026-10-29/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-10-29T05:04:16Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:59Z",
+   "fingerprint": "16c5efc2863b59d8",
+   "primary_source": false,
+   "cluster_id": "5d589b7eae741eff",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c6e81ff600186acd",
+   "symbols": [
+    "GBFH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "GBank Financial Holdings (GBFH) Q3 2026 Earnings Call Transcript",
+   "summary": "Newgard takes helm as gaming FinTech initiatives shift toward launch phase.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/10/28/gbank-financial-holdings-gbfh-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-10-29T04:13:51Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:59Z",
+   "fingerprint": "f91aa51a87acca11",
+   "primary_source": false,
+   "cluster_id": "f4f19055a27f2b73",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "75471c957b1c047e",
+   "symbols": [
+    "GBFH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "GBank Financial Holdings Inc. (GBFH) Q3 Earnings and Revenues Miss Estimates",
+   "summary": "GBank Financial Holdings Inc. (GBFH) delivered earnings and revenue surprises of -31.82% and -7.55%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gbank-financial-holdings-inc-gbfh-223007143.html?.tsrc=rss",
+   "published_at": "2026-10-28T22:30:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:59Z",
+   "fingerprint": "84952df5bbff18cf",
+   "primary_source": false,
+   "cluster_id": "75471c957b1c047e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f849b5de46958e8c",
+   "symbols": [
+    "GBFH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "GBank Financial Holdings Inc. (GBFH) Q3 Earnings: How Key Metrics Compare to Wall Street Estimates",
+   "summary": "Although the revenue and EPS for GBank Financial Holdings Inc. (GBFH) give a sense of how its business performed in the quarter ended September 2026, it might be worth considering how some key metrics compare with Wall Street estimates and the year-ago numbers.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gbank-financial-holdings-inc-gbfh-220003529.html?.tsrc=rss",
+   "published_at": "2026-10-28T22:00:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:59Z",
+   "fingerprint": "cd3044d6a4742cda",
+   "primary_source": false,
+   "cluster_id": "f849b5de46958e8c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "02af46a1a71b4696",
+   "symbols": [
+    "FRBA",
+    "GBFH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "First Bank (FRBA) Surpasses Q3 Earnings and Revenue Estimates",
+   "summary": "FIRST BANK (FRBA) delivered earnings and revenue surprises of +11.36% and +2.82%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/first-bank-frba-surpasses-q3-210005154.html?.tsrc=rss",
+   "published_at": "2026-10-22T21:00:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:40Z",
+   "fingerprint": "2506d35427cdb523",
+   "primary_source": false,
+   "cluster_id": "02af46a1a71b4696",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c463f60035cf1be9",
+   "symbols": [
+    "GBFH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "GBank Financial Holdings Names Jeff Newgard President and Chief Executive Officer",
+   "summary": "Jeff Newgard Appointed President, Chief Executive Officer and Director. James K. Sims Appointed Independent Chairman; Edward Nigro stepping down as Chief Executive Officer and Executive ChairmanLAS VEGAS, Oct. 22, 2026 (GLOBE NEWSWIRE) -- GBank Financial Holdings Inc. (Nasdaq: GB",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gbank-financial-holdings-names-jeff-202300605.html?.tsrc=rss",
+   "published_at": "2026-10-22T20:23:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:59Z",
+   "fingerprint": "3905f74db7aa747f",
+   "primary_source": false,
+   "cluster_id": "c463f60035cf1be9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5f260b99f3dc1e7d",
+   "symbols": [
+    "GBFH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "GBank Financial Holdings Inc. Announces Third Quarter 2026 Quarterly Earnings Call Scheduled for Wednesday, October 28th, at 2:00 P.M., Pacific Time",
+   "summary": "LAS VEGAS, Oct. 19, 2026 (GLOBE NEWSWIRE) -- GBank Financial Holdings Inc. (the \"Company\") (Nasdaq: GBFH), the parent company for GBank (the \"Bank\"), today announced it plans to release its third quarter 2026 financial results on Wednesday, October 28, 2026 at approximately 1:05 ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gbank-financial-holdings-inc-announces-223000435.html?.tsrc=rss",
+   "published_at": "2026-10-19T22:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:59Z",
+   "fingerprint": "967d9cbd08e900d7",
+   "primary_source": false,
+   "cluster_id": "5f260b99f3dc1e7d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7516dc951e5814d5",
+   "symbols": [
+    "GBFH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "GBank Financial Holdings Inc. Highlights Strategic Updates Included in Investor Presentation",
+   "summary": "LAS VEGAS, NV, Sept. 22, 2026 (GLOBE NEWSWIRE) -- GBank Financial Holdings Inc. (the \"Company\") (Nasdaq: GBFH), the parent company for GBank (the \"Bank\"), today announced the availability of its investor presentation, which was used in connection with the Raymond James 2026 U.S. ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gbank-financial-holdings-inc-highlights-204700551.html?.tsrc=rss",
+   "published_at": "2026-09-22T20:47:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:59Z",
+   "fingerprint": "c5fc4ff41b0034db",
+   "primary_source": false,
+   "cluster_id": "7516dc951e5814d5",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f4f19055a27f2b73",
+   "symbols": [
+    "GBFH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "GBank Financial Holdings (GBFH) Q2 2026 Earnings Call Transcript",
+   "summary": "Record revenue masks gaming credit card headwinds and rising loan problem assets.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/07/gbank-financial-holdings-gbfh-q2-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-08-08T01:14:28Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:59Z",
+   "fingerprint": "58224cff69aebba0",
+   "primary_source": false,
+   "cluster_id": "f4f19055a27f2b73",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c7ea276af1c264a3",
+   "symbols": [
+    "GBFH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "GBank Financial Holdings Inc. Q2 2026 Earnings Call Summary",
+   "summary": "Moby summary of GBank Financial Holdings Inc.'s Q2 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-gbank-financial-holdings-inc-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-07-30T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:59Z",
+   "fingerprint": "d9ca6f1d9f7a57b8",
+   "primary_source": false,
+   "cluster_id": "c7ea276af1c264a3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5020ddfc9154d223",
+   "symbols": [
+    "GBFH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "GBank Financial Q2 Earnings Call Highlights",
+   "summary": "GBank Financial (NASDAQ:GBFH) outlined leadership changes, continued SBA lending growth, pressure on credit quality and gaming-card revenue, and progress in its gaming fintech strategy during its second-quarter 2026 earnings call. Jeff Newgard, the company’s new President and CEO",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/gbank-financial-q2-earnings-call-highlights-2026-07-29/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-07-29T23:04:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:59Z",
+   "fingerprint": "e8ae52fa2ede71ba",
+   "primary_source": false,
+   "cluster_id": "5020ddfc9154d223",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1d9be8013fbc2329",
+   "symbols": [
+    "GBFH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "GBank Financial Holdings Inc. (GBFH) Q2 Earnings: Taking a Look at Key Metrics Versus Estimates",
+   "summary": "While the top- and bottom-line numbers for GBank Financial Holdings Inc. (GBFH) give a sense of how the business performed in the quarter ended June 2026, it could be worth looking at how some of its key metrics compare to Wall Street estimates and year-ago values.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gbank-financial-holdings-inc-gbfh-230003812.html?.tsrc=rss",
+   "published_at": "2026-07-29T23:00:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:59Z",
+   "fingerprint": "6aaee54272a593eb",
+   "primary_source": false,
+   "cluster_id": "1d9be8013fbc2329",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "863cb3bb20befe4d",
+   "symbols": [
+    "GBFH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "GBank Financial Holdings Inc. (GBFH) Q2 Earnings and Revenues Lag Estimates",
+   "summary": "GBank Financial Holdings Inc. (GBFH) delivered earnings and revenue surprises of -24.00% and -1.13%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gbank-financial-holdings-inc-gbfh-222510993.html?.tsrc=rss",
+   "published_at": "2026-07-29T22:25:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:59Z",
+   "fingerprint": "b4ec85dc88bab3ea",
+   "primary_source": false,
+   "cluster_id": "863cb3bb20befe4d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6f6e3fdedcb2a646",
+   "symbols": [
+    "GBFH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "GBank Financial Holdings Inc. Announces Second Quarter 2026 Financial Results",
+   "summary": "LAS VEGAS, July 29, 2026 (GLOBE NEWSWIRE) -- GBank Financial Holdings Inc. (the “Company”) (NASDAQ: GBFH), the parent company of GBank (the “Bank”), today reported net income of $5.5 million, or $0.38 per diluted share, for the quarter ended June 30, 2026, compared to $1.3 millio",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gbank-financial-holdings-inc-announces-201800545.html?.tsrc=rss",
+   "published_at": "2026-07-29T20:18:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:59Z",
+   "fingerprint": "b34d66f7b37eddd3",
+   "primary_source": false,
+   "cluster_id": "6f6e3fdedcb2a646",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "eeb9bcee12318652",
+   "symbols": [
+    "GBFH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "GBank Financial Holdings Inc. is Pleased To Share the Press Release of Bankroll LLC [BVNKROLL]",
+   "summary": "LAS VEGAS, July 23, 2026 (GLOBE NEWSWIRE) -- GBank Financial Holdings Inc. (the \"Company\") (Nasdaq: GBFH), the parent company for GBank (the \"Bank\"), is pleased to share the press release of its strategic partner, Bankroll LLC (“BVNKROLL”). On July 22, 2026, BVNKROLL announced a ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gbank-financial-holdings-inc-pleased-143800618.html?.tsrc=rss",
+   "published_at": "2026-07-23T14:38:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:59Z",
+   "fingerprint": "51d318a566777357",
+   "primary_source": false,
+   "cluster_id": "eeb9bcee12318652",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],

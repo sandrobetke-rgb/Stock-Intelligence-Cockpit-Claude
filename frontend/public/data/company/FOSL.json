@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -55,11 +55,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 4.4,
+   "score": 20.6,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -80,7 +82,13 @@
    "distinct_buyers": 0,
    "other_transactions": 0
   },
-  "superinvestors": null,
+  "superinvestors": {
+   "holders": 1,
+   "buyers": 1,
+   "new_buyers": 0,
+   "sellers": 0,
+   "sold_out": 0
+  },
   "first_seen": "2026-10-31",
   "archived_at": null,
   "country": "United States"
@@ -428,11 +436,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 4.4,
+  "score": 20.6,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 24.8,
@@ -450,26 +458,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 10,
+    "independent": 10,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -487,11 +497,466 @@
  },
  "trump_mentions": [],
  "political_events": [],
- "signals": [],
+ "signals": [
+  {
+   "id": "f178d13594d0bddf",
+   "symbols": [
+    "BOOT",
+    "FOSL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Boot Barn (BOOT) Beats Q2 Earnings and Revenue Estimates",
+   "summary": "Boot Barn (BOOT) delivered earnings and revenue surprises of +3.07% and +0.12%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/boot-barn-boot-beats-q2-223004555.html?.tsrc=rss",
+   "published_at": "2026-10-28T22:30:04Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:28:49Z",
+   "fingerprint": "dd8ea3a622e86b07",
+   "primary_source": false,
+   "cluster_id": "f178d13594d0bddf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dcbee61f219fae51",
+   "symbols": [
+    "FOSL",
+    "TPR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Does Beating The Market Prove Ralph Lauren Is A Great Company?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/articles/620196/does-beating-the-market-prove-ralph-lauren-is-a-great-company/2026-10-23?.tsrc=rss",
+   "published_at": "2026-10-23T14:54:47Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:11Z",
+   "fingerprint": "ebfb49854eb1ee35",
+   "primary_source": false,
+   "cluster_id": "dcbee61f219fae51",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "06d79b03c316b7e5",
+   "symbols": [
+    "FIGS",
+    "FOSL",
+    "TSCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Tractor Supply Q3 Earnings Beat on Sales Growth, Margins Fall",
+   "summary": "TSCO's Q3 2026 sales rose 5.1%, but earnings fell 11.6% amid margin pressure. Comps increased 0.4% year over year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/tractor-supply-q3-earnings-beat-164000009.html?.tsrc=rss",
+   "published_at": "2026-10-22T16:40:00Z",
+   "date_only": false,
+   "captured_at": "2026-10-31T14:10:14Z",
+   "fingerprint": "69796253ad2c0937",
+   "primary_source": false,
+   "cluster_id": "06d79b03c316b7e5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fea472cdc5ec2adf",
+   "symbols": [
+    "FOSL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Fossil Group, Inc. Announces Date for Third Quarter 2026 Earnings Release and Conference Call",
+   "summary": "Announces Participation in Upcoming ConferencesRICHARDSON, Texas, Oct. 20, 2026 (GLOBE NEWSWIRE) -- Fossil Group, Inc. (NASDAQ: FOSL) announced today that it will report third quarter 2026 financial results after market close on Tuesday, November 10, 2026, followed by a conferenc",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/fossil-group-inc-announces-date-200500448.html?.tsrc=rss",
+   "published_at": "2026-10-20T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:37Z",
+   "fingerprint": "4f28ecac1304f2e8",
+   "primary_source": false,
+   "cluster_id": "fea472cdc5ec2adf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "6ee8b918c459c7a9",
+   "symbols": [
+    "FOSL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zumiez's Private Label and Product Newness Help Sustain Global Gains",
+   "summary": "ZUMZ is expanding private-label offerings and refreshing merchandise to support international growth, improve margins and address shifting apparel trends.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zumiezs-private-label-product-newness-151700374.html?.tsrc=rss",
+   "published_at": "2026-10-12T15:17:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:37Z",
+   "fingerprint": "ad6ef05588f088d0",
+   "primary_source": false,
+   "cluster_id": "6ee8b918c459c7a9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "591524d8ad2a81a4",
+   "symbols": [
+    "FOSL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Sebastian Digrande and Chandhu Nair Elected to Fossil Group Board of Directors; Wendy Schoppert Elected Chair of the Board",
+   "summary": "New Directors Bring Deep Expertise Across Global Retail, Enterprise Technology, Digital & Omnichannel CommerceRICHARDSON, Texas, Oct. 08, 2026 (GLOBE NEWSWIRE) -- Fossil Group, Inc. (NASDAQ: FOSL) today announced that Sebastian DiGrande and Chandhu Nair were elected to the Board ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/sebastian-digrande-chandhu-nair-elected-200500918.html?.tsrc=rss",
+   "published_at": "2026-10-08T20:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:37Z",
+   "fingerprint": "389212e96239cc7b",
+   "primary_source": false,
+   "cluster_id": "591524d8ad2a81a4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9667dac50ffe1826",
+   "symbols": [
+    "FOSL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "GAP Stock Climbs 25% in 3 Months: Can Growth Momentum Last?",
+   "summary": "Gap stock rises as brand strength, margin gains and an improved earnings outlook fuel optimism. Can growth initiatives sustain momentum despite challenges?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gap-stock-climbs-25-3-133600655.html?.tsrc=rss",
+   "published_at": "2026-10-08T13:36:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:37Z",
+   "fingerprint": "793ea15ad7e5ba97",
+   "primary_source": false,
+   "cluster_id": "9667dac50ffe1826",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b418d7dbc8915601",
+   "symbols": [
+    "FOSL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can Zumiez's Data-Driven Marketing Improve Customer Engagement?",
+   "summary": "ZUMZ is using customer data to sharpen marketing and improve the shopping experience as U.S. footwear softness weighs on sales.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zumiezs-data-driven-marketing-improve-145600192.html?.tsrc=rss",
+   "published_at": "2026-10-06T14:56:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:37Z",
+   "fingerprint": "b9b581504fa17eac",
+   "primary_source": false,
+   "cluster_id": "b418d7dbc8915601",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2d9132e92cceb4b6",
+   "symbols": [
+    "FOSL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Will China Remain Victoria's Secret's Top International Growth Engine?",
+   "summary": "VSXY's China business remains its top international growth area, fueled by digital, social selling and accelerating retail comparable sales.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/china-remain-victorias-secrets-top-145100912.html?.tsrc=rss",
+   "published_at": "2026-10-05T14:51:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:37Z",
+   "fingerprint": "94919321c3a9b9a8",
+   "primary_source": false,
+   "cluster_id": "2d9132e92cceb4b6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e82c0ac93cef6fd6",
+   "symbols": [
+    "FOSL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Fossil Group (FOSL) Stock Gets Fair Value Boost As Turnaround Progress Lifts Analyst Views",
+   "summary": "Fossil Group’s analyst fair value estimate has shifted from US$7 to US$9, which sets a new reference point for how some research now frames the stock. Bullish analysts link this higher fair value to early progress under the turnaround plan, including work on stabilizing sales tre",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/fossil-group-fosl-stock-gets-230530834.html?.tsrc=rss",
+   "published_at": "2026-10-02T23:05:30Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:37Z",
+   "fingerprint": "086abe4212b159d9",
+   "primary_source": false,
+   "cluster_id": "e82c0ac93cef6fd6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "abdc8e5678c73925",
+   "symbols": [
+    "FOSL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can Better Store Traffic Support American Eagle's Sales Recovery?",
+   "summary": "AEO's Q2 improvement reflects stronger men's sales and denim demand, while traffic, conversion and inventory remain key focuses.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/better-store-traffic-support-american-153000892.html?.tsrc=rss",
+   "published_at": "2026-10-01T15:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:37Z",
+   "fingerprint": "69b1e8a4f11a2beb",
+   "primary_source": false,
+   "cluster_id": "abdc8e5678c73925",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8e5827211adeac36",
+   "symbols": [
+    "FOSL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can Victoria's Secret's Fashion Show Drive Customer and Demand Growth?",
+   "summary": "VSXY is expanding its fashion show into an ongoing franchise, using new content and fan engagement to drive customer acquisition.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/victorias-secrets-fashion-show-drive-151000325.html?.tsrc=rss",
+   "published_at": "2026-09-28T15:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:37Z",
+   "fingerprint": "aa321ac9f2d63bdd",
+   "primary_source": false,
+   "cluster_id": "8e5827211adeac36",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "053629cf916fba0c",
+   "symbols": [
+    "FOSL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Somnigroup Advances Growth With Innovation and Retail Synergies",
+   "summary": "SGI's innovation, Mattress Firm synergies and vertical integration are strengthening its bedding platform while supporting growth and efficiency.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/somnigroup-advances-growth-innovation-retail-162700076.html?.tsrc=rss",
+   "published_at": "2026-09-25T16:27:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:37Z",
+   "fingerprint": "581b1c0608d093aa",
+   "primary_source": false,
+   "cluster_id": "053629cf916fba0c",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "46a0c9ea6e20636d",
+   "symbols": [
+    "FOSL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Why Is Urban Outfitters (URBN) Down 5.1% Since Last Earnings Report?",
+   "summary": "Urban Outfitters (URBN) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-urban-outfitters-urbn-down-143008248.html?.tsrc=rss",
+   "published_at": "2026-09-25T14:30:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:37Z",
+   "fingerprint": "e656dbdc76c1a6e3",
+   "primary_source": false,
+   "cluster_id": "46a0c9ea6e20636d",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b8411cf1fa3277ce",
+   "symbols": [
+    "FOSL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are Retail-Wholesale Stocks Lagging  Fossil Group (FOSL) This Year?",
+   "summary": "Here is how Fossil Group (FOSL) and Genesco (GCO) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/retail-wholesale-stocks-lagging-fossil-124002892.html?.tsrc=rss",
+   "published_at": "2026-09-24T12:40:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:37Z",
+   "fingerprint": "fa1c1cedb25ac9ab",
+   "primary_source": false,
+   "cluster_id": "b8411cf1fa3277ce",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "daee72dd661e8bb8",
+   "symbols": [
+    "FOSL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can American Eagle's New Denim Fits Help Revive Women's Sales?",
+   "summary": "AEO's denim momentum is improving as new fits gain customer acceptance, while product and inventory strategies target broader category growth.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/american-eagles-denim-fits-help-171100513.html?.tsrc=rss",
+   "published_at": "2026-09-23T17:11:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:37Z",
+   "fingerprint": "49bdd29d3bc33ce0",
+   "primary_source": false,
+   "cluster_id": "daee72dd661e8bb8",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9e58c482fdb5ab38",
+   "symbols": [
+    "FOSL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Will Dollar Tree's Strategic Initiatives and Store Expansions Aid?",
+   "summary": "DLTR's assortment expansion, store improvements and multi-price strategy are strengthening customer appeal and supporting its fiscal 2026 growth outlook.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dollar-trees-strategic-initiatives-store-154900089.html?.tsrc=rss",
+   "published_at": "2026-09-23T15:49:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:37Z",
+   "fingerprint": "a11f626b5251be51",
+   "primary_source": false,
+   "cluster_id": "9e58c482fdb5ab38",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1e1dbd63208b2d75",
+   "symbols": [
+    "FOSL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Signet's Comps Growth Gains Support From Core Brands & Premium Jewelry",
+   "summary": "SIG's comparable sales rise for a fifth quarter in the past six as premium jewelry, bridal and timepieces offset softer, lower-priced fashion demand.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/signets-comps-growth-gains-support-144300001.html?.tsrc=rss",
+   "published_at": "2026-09-23T14:43:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:37Z",
+   "fingerprint": "2daae9c006c7bd81",
+   "primary_source": false,
+   "cluster_id": "1e1dbd63208b2d75",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b504139e8819fd97",
+   "symbols": [
+    "FOSL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can Sally Beauty's Product Innovation Sustain Brand Momentum?",
+   "summary": "SBH is using product innovation, brand refreshes and category expansion to strengthen its brands and broaden customer engagement.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/sally-beautys-product-innovation-sustain-171400366.html?.tsrc=rss",
+   "published_at": "2026-09-22T17:14:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:37Z",
+   "fingerprint": "86fcd41f7afaaeba",
+   "primary_source": false,
+   "cluster_id": "b504139e8819fd97",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "41135425864133c2",
+   "symbols": [
+    "FOSL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can Victoria's Secret's Path to Potential Sustain Broad-Based Growth?",
+   "summary": "VSXY's Path to Potential gains traction as sales, margins, customer growth and multiple brands advance across key categories.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/victorias-secrets-path-potential-sustain-171000754.html?.tsrc=rss",
+   "published_at": "2026-09-22T17:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:35:37Z",
+   "fingerprint": "6726563ba3895c52",
+   "primary_source": false,
+   "cluster_id": "41135425864133c2",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  }
+ ],
  "insiders": [],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "increased",
+   "weight_pct": 0.0,
+   "shares_change_pct": 85.4,
+   "value": 736390.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }

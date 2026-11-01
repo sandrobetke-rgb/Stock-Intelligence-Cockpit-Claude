@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T02:22:47Z",
+ "generated_at": "2026-11-01T02:25:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -54,9 +54,10 @@
    ]
   },
   "market_intelligence": {
-   "score": 17.6,
+   "score": 18.9,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -73,11 +74,18 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 4,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 530881.12,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 1
+  },
+  "superinvestors": {
+   "holders": 1,
+   "buyers": 1,
+   "new_buyers": 0,
+   "sellers": 0,
+   "sold_out": 0
   },
   "superinvestors": null,
   "first_seen": "2026-10-31",
@@ -426,7 +434,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 17.6,
+  "score": 18.9,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -435,7 +443,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 100.0,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 40
   },
   "windows": {
    "24h": {
@@ -467,7 +475,8 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -486,10 +495,121 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "82f7d3ae4c245153",
+   "symbol": "GDYN",
+   "insider": "Livschitz Leonard",
+   "role": "Director, CHIEF EXECUTIVE OFFICER",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-29",
+   "filed_at": "2026-10-30",
+   "reporting_delay_days": 1,
+   "shares": 10000.0,
+   "price": 9.0,
+   "value": 90000.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1743725/000162828026068598/0001628280-26-068598-index.htm"
+  },
+  {
+   "id": "9de8260184fd5caf",
+   "symbol": "GDYN",
+   "insider": "Gryzlov Yury",
+   "role": "CHIEF OPERATING OFFICER",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-30",
+   "filed_at": "2026-10-30",
+   "reporting_delay_days": 0,
+   "shares": 10512.0,
+   "price": 10.51,
+   "value": 110481.12,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1743725/000162828026068637/0001628280-26-068637-index.htm"
+  },
+  {
+   "id": "50f73f0c26b7c7b5",
+   "symbol": "GDYN",
+   "insider": "Doradla Anil",
+   "role": "CHIEF FINANCIAL OFFICER",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-30",
+   "filed_at": "2026-10-30",
+   "reporting_delay_days": 0,
+   "shares": 20000.0,
+   "price": 10.51,
+   "value": 210200.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1743725/000162828026068639/0001628280-26-068639-index.htm"
+  },
+  {
+   "id": "018a1f8f3797ea5b",
+   "symbol": "GDYN",
+   "insider": "Livschitz Leonard",
+   "role": "Director, CHIEF EXECUTIVE OFFICER",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-10-30",
+   "filed_at": "2026-10-30",
+   "reporting_delay_days": 0,
+   "shares": 10000.0,
+   "price": 12.02,
+   "value": 120200.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1743725/000162828026068641/0001628280-26-068641-index.htm"
+  },
+  {
+   "id": "6867d618c29912d2",
+   "symbol": "GDYN",
+   "insider": "Doradla Anil",
+   "role": "CHIEF FINANCIAL OFFICER",
+   "transaction_code": "F",
+   "transaction_kind": "tax_withholding",
+   "transaction_label": "Steuereinbehalt bei Vergütung",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-10-28",
+   "filed_at": "2026-10-29",
+   "reporting_delay_days": 1,
+   "shares": 738.0,
+   "price": 8.75,
+   "value": 6457.5,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1743725/000162828026068337/0001628280-26-068337-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
- "superinvestors": [],
+ "superinvestors": [
+  {
+   "manager": "Jim Simons (Nachlass)",
+   "fund": "Renaissance Technologies",
+   "action": "increased",
+   "weight_pct": 0.0,
+   "shares_change_pct": 78.8,
+   "value": 335120.0,
+   "report_date": "2026-06-30"
+  }
+ ],
  "social_detail": null,
  "history": []
 }
