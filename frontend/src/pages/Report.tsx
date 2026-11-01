@@ -39,11 +39,12 @@ export function ReportPage() {
                 {!(r.trump_recent ?? []).length ? <li className="muted">Keine Aussagen in den letzten 5 Tagen erfasst.</li> : null}
               </ul>
             </Panel>
-            <Panel title="Social Media" note="Meistdiskutiert in 24 Std. (Reddit, StockTwits) und StockTwits-Trends.">
+            <Panel title="Social Media" note="Meistdiskutiert in 24 Std. (StockTwits, Mastodon, Reddit bis 13.11.), Wikipedia-Aufrufspitzen und StockTwits-Trends.">
               <ul className="plain small">
                 {(r.social_top ?? []).map((m) => <li key={m.symbol}><CompanyLink symbol={m.symbol} />: {m.mentions_24h} Beiträge{m.bullish || m.bearish ? <> (<span className="pos">{m.bullish} bullish</span> / <span className="neg">{m.bearish} bearish</span>, 7 T.)</> : null}{m.manipulation_risk === "hoch" ? <Tag tone="err">Hype-Verdacht</Tag> : null}</li>)}
               </ul>
               {r.social_movers.length ? <><h3>Stärkste Anstiege</h3><ul className="plain small">{r.social_movers.map((m) => <li key={m.symbol}><CompanyLink symbol={m.symbol} />: {m.mentions_24h}{m.change != null ? ` (${m.change > 0 ? "+" : ""}${m.change} %)` : ""}</li>)}</ul></> : null}
+              {(r.attention_spikes ?? []).length ? <><h3>Wikipedia-Spitzen</h3><ul className="plain small">{r.attention_spikes!.map((a) => <li key={a.symbol}><CompanyLink symbol={a.symbol} />: {fmt.num(a.views_1d, 0)} Aufrufe, {fmt.num(a.ratio, 1)}× Schnitt <a href={a.url} target="_blank" rel="noopener noreferrer">Artikel</a></li>)}</ul></> : null}
               {(r.stocktwits_trending ?? []).length ? <p className="small"><strong>Trend auf StockTwits:</strong> {r.stocktwits_trending!.map((t) => t.symbol).join(", ")}</p> : null}
             </Panel>
           </div>

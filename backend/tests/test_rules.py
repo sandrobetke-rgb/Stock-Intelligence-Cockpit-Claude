@@ -687,3 +687,25 @@ def test_strategies_and_trend():
     r2 = evaluate(_ohlc(up + [97, 93, 90]))
     assert r2["criteria"]["RSI2"]["RSI(2) < 10"] and r2["criteria"]["RSI2"]["über SMA 200"]
     assert "RSI2" in r2["hits"]
+
+
+# ---------------------------------------------------------------- Aufmerksamkeit (Wikipedia) / Mastodon --
+def test_wikipedia_spike_and_company_filter():
+    from sic import attention
+    daily = {f"202610{d:02d}": 1000 for d in range(1, 31)} | {"20261031": 5000}
+    m = attention.metrics({"NVDA": {"title": "Nvidia", "daily": daily}})["NVDA"]
+    assert m["spike"] and m["ratio_1d"] == 5.0 and m["avg_30d"] == 1000 and m["date"] == "2026-10-31"
+    small = attention.metrics({"X": {"title": "X", "daily": {k: 100 for k in daily} | {"20261031": 900}}})["X"]
+    assert not small["spike"]            # unter Mindestaufrufen
+    assert attention._company_like("American multinational technology company")
+    assert not attention._company_like("Village in Bavaria, Germany")
+    assert "Alphabet Inc." in attention._variants("Alphabet Inc. (Class A)")
+
+
+def test_mastodon_text_and_reddit_shutdown(monkeypatch):
+    from datetime import datetime, timezone
+    from sic import social
+    assert social._masto_text('<p>Buying <a href="#">#<span>NVDA</span></a> &amp; $AMD</p>') .startswith("Buying")
+    monkeypatch.delenv("REDDIT_CLIENT_ID", raising=False)
+    posts, stat = social.fetch_reddit(lambda t: [], datetime(2026, 11, 14, tzinfo=timezone.utc))
+    assert posts == [] and stat["status"] == "off"

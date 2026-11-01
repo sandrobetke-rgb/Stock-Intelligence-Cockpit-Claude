@@ -5,6 +5,9 @@ Quellen (alle kostenlos):
   sonst öffentliche RSS-Feeds. Nicht-kommerzielle Nutzung gemäß Reddit-Bedingungen.
 - StockTwits (börsenspezifische Alternative zu X): öffentliche API, Trending-Liste und Beiträge je
   Aktie; Bullish/Bearish wird vom Verfasser selbst gesetzt.
+- Mastodon (offen, ohne Konto): Hashtag-Zeitleisten (#stocks, #aktien …) und Ticker-Hashtags der Fokus-Aktien.
+- Hinweis: Reddit stellt RSS am 13.11.2026 ein und vergibt keine neuen API-Zugänge mehr; ohne Zugang
+  wird Reddit ab dann übersprungen.
 - CSV-Import (social_mentions.csv), z. B. für X-Beiträge (X-API ist nicht kostenlos).
 Beiträge werden 30 Tage gespeichert, damit 24-Std./7-Tage/30-Tage-Vergleiche möglich sind.
 Sentiment ist eine Einschätzung (Nutzerkennzeichnung oder Lexikon). Social Media erhöht nie Company Quality.
@@ -40,6 +43,11 @@ APES CALL CALLS PUT PUTS LONG SHORT FREE NEXT LAST HUGE GAME CARE LIFE""".split(
 _rl_reddit = RateLimiter(1.0)          # API mit Zugang: 100 Anfragen/Minute erlaubt
 _rl_reddit_rss = RateLimiter(1 / 7)    # ohne Zugang: Reddit drosselt stark
 _rl_st = RateLimiter(0.8)
+_rl_masto = RateLimiter(1.0)
+MASTODON = "https://mastodon.social"
+MASTO_TAGS = ["stocks", "stockmarket", "investing", "investment", "trading", "wallstreet", "finance", "dividends",
+              "earnings", "nasdaq", "sp500", "aktien", "börse", "boerse", "dax", "geldanlage", "finanzen"]
+REDDIT_RSS_END = "2026-11-13"
 
 
 def _store():
@@ -105,8 +113,13 @@ def _reddit_token(sess: requests.Session) -> str | None:
     return r.json().get("access_token")
 
 
-def fetch_reddit(resolve) -> tuple[list[dict], dict]:
+def fetch_reddit(resolve, now=None) -> tuple[list[dict], dict]:
     import feedparser
+
+    if not (os.environ.get("REDDIT_CLIENT_ID") and os.environ.get("REDDIT_CLIENT_SECRET")) \
+            and (now or utcnow()).date().isoformat() >= REDDIT_RSS_END:
+        return [], {"source": "Reddit", "mode": "abgeschaltet", "posts": 0, "status": "off",
+                    "errors": ["Reddit hat RSS am 13.11.2026 eingestellt; neue API-Zugänge werden nicht mehr vergeben."]}
 
     sess = requests.Session()
     sess.headers["User-Agent"] = UA
@@ -198,6 +211,48 @@ def fetch_stocktwits(focus: list[str], universe: set[str], max_symbols: int = 12
                  "errors": errors[:8], "status": "ok" if out or trending else "error"}, trending
 
 
+# --------------------------------------------------------------- Mastodon --
+def _masto_text(html: str) -> str:
+    import html as h
+    return h.unescape(re.sub(r"<[^>]+>", " ", re.sub(r"<br\s*/?>|</p>", "\n", html or ""))).strip()
+
+
+def fetch_mastodon(resolve, focus: list[str], universe: set[str], max_symbols: int = 40) -> tuple[list[dict], dict]:
+    """Öffentliche Hashtag-Zeitleisten von mastodon.social (föderiert, ohne Anmeldung)."""
+    sess = requests.Session()
+    sess.headers["User-Agent"] = UA
+    out, errors, asked = [], [], 0
+    sym_tags = [s for s in dict.fromkeys(focus) if s in universe and "." not in s and len(s) >= 3 and s not in COMMON][:max_symbols]
+    for tag, sym in [(t, None) for t in MASTO_TAGS] + [(s.lower(), s) for s in sym_tags]:
+        try:
+            _rl_masto.wait()
+            asked += 1
+            r = sess.get(f"{MASTODON}/api/v1/timelines/tag/{requests.utils.quote(tag)}", params={"limit": 40}, timeout=20)
+            if r.status_code == 429:
+                errors.append("Rate-Limit erreicht")
+                break
+            r.raise_for_status()
+            for st in r.json():
+                st = st.get("reblog") or st
+                text = _masto_text(st.get("content", ""))
+                syms = set(resolve(text))
+                if sym and re.search(rf"(?<![\w$#])[#$]{re.escape(sym)}\b", text, flags=re.I):
+                    syms.add(sym)
+                if not syms:
+                    continue
+                acc = (st.get("account") or {}).get("acct", "")
+                out.append({"id": "ma" + str(st.get("uri") or st.get("id")), "platform": "mastodon", "community": "Mastodon",
+                            "author": acc, "posted_at": iso(parse_dt(st.get("created_at"))[0]),
+                            "url": st.get("url") or st.get("uri", ""), "text": text[:400],
+                            "engagement": float((st.get("favourites_count") or 0) + (st.get("reblogs_count") or 0) + (st.get("replies_count") or 0)),
+                            "symbols": sorted(syms), "origin": "mastodon"})
+        except Exception as exc:  # noqa: BLE001
+            errors.append(f"#{tag}: {exc}"[:120])
+    uniq = {p["id"]: p for p in out}
+    return list(uniq.values()), {"source": "Mastodon", "mode": "öffentliche Hashtags (ohne Konto)", "posts": len(uniq),
+                                 "errors": errors[:8], "status": "ok" if len(errors) < asked else "error"}
+
+
 # ------------------------------------------------------------------ Laden --
 def load_csv(resolve) -> list[dict]:
     """social_mentions.csv: platform,post_id,author,posted_at,url,text,engagement,symbols(optional ;-getrennt)"""
@@ -225,10 +280,12 @@ def collect(universe: set[str], securities: dict | None = None, focus: list[str]
     new = load_csv(resolve)
     sources, trending = [], []
     if fetch:
-        r_posts, r_stat = fetch_reddit(resolve)
+        r_posts, r_stat = fetch_reddit(resolve, now)
         s_posts, s_stat, trending = fetch_stocktwits(focus or [], universe)
-        new += r_posts + s_posts
-        sources = [r_stat, s_stat]
+        st_focus = [t["symbol"] for t in trending if t.get("in_universe")]
+        m_posts, m_stat = fetch_mastodon(resolve, st_focus + (focus or []), universe)
+        new += r_posts + s_posts + m_posts
+        sources = [s_stat, m_stat, r_stat]
     store = {p["id"]: p for p in read_json(_store(), [])}
     for p in new:
         p["symbols"] = [s for s in p["symbols"] if s in universe]

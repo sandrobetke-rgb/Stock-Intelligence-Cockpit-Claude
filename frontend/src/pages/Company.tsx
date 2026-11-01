@@ -99,6 +99,25 @@ function CompanyView({ d }: { d: CompanyDetail }) {
             </dl>
           ) : <Empty>Keine Kursdaten verfügbar.</Empty>}
         </Panel>
+        <Panel title="Aufmerksamkeit & Social Media" note="Öffentliches Interesse und Erwähnungen. Fließt nicht in Company Quality ein.">
+          {d.attention ? (
+            <>
+              <dl className="facts cols">
+                <div><dt>Wikipedia-Aufrufe {fmt.date(d.attention.date)}</dt><dd>{fmt.num(d.attention.views_1d, 0)} {d.attention.spike ? <Tag tone="hi">Spitze</Tag> : null}</dd></div>
+                <div><dt>Schnitt 7 / 30 Tage</dt><dd>{fmt.num(d.attention.avg_7d, 0)} / {fmt.num(d.attention.avg_30d, 0)}</dd></div>
+                <div><dt>Faktor Tag / 7 T.</dt><dd>{fmt.num(d.attention.ratio_1d, 1)}× / {fmt.num(d.attention.ratio_7d, 1)}×</dd></div>
+                <div><dt>Artikel</dt><dd><a href={d.attention.url} target="_blank" rel="noopener noreferrer">{d.attention.title}</a></dd></div>
+              </dl>
+              {d.attention.series?.length ? <Spark values={d.attention.series} /> : null}
+            </>
+          ) : <p className="muted small">Keine Wikipedia-Daten (kein eindeutiger Unternehmensartikel gefunden).</p>}
+          {d.social_detail ? (
+            <p className="small">Social Media: {d.social_detail.mentions_24h} Beiträge in 24 Std., {d.social_detail.mentions_7d} in 7 Tagen
+              {d.social_detail.bullish_7d || d.social_detail.bearish_7d ? <> (<span className="pos">{d.social_detail.bullish_7d} bullish</span> / <span className="neg">{d.social_detail.bearish_7d} bearish</span>)</> : null}
+              {Object.keys(d.social_detail.by_platform_7d ?? {}).length ? <> – {Object.entries(d.social_detail.by_platform_7d!).map(([k, v]) => `${k} ${v}`).join(", ")}</> : null}
+              {d.social_detail.manipulation_risk !== "unauffällig" ? <> <Tag tone="warn">Manipulation {d.social_detail.manipulation_risk === "auffaellig" ? "auffällig" : d.social_detail.manipulation_risk}</Tag></> : null}</p>
+          ) : <p className="muted small">Keine Social-Media-Erwähnungen in den letzten 30 Tagen.</p>}
+        </Panel>
         <Panel title={`Market Intelligence ${fmt.num(d.intelligence_detail.score, 0)}`} note={d.intelligence_detail.note}>
           <table className="data compact">
             <thead><tr><th>Zeitraum</th><th className="num">Unabhängig</th><th className="num">Duplikate</th><th className="num">Quellen</th><th className="num">Primär</th></tr></thead>
@@ -207,5 +226,17 @@ function CompanyView({ d }: { d: CompanyDetail }) {
         </Panel>
       </div>
     </Page>
+  );
+}
+
+
+/** Kleine Verlaufsgrafik (Wikipedia-Aufrufe, 30 Tage). */
+function Spark({ values }: { values: number[] }) {
+  const w = 300, h = 40, max = Math.max(...values, 1);
+  const pts = values.map((v, i) => `${(i / Math.max(values.length - 1, 1)) * w},${h - (v / max) * (h - 4) - 2}`).join(" ");
+  return (
+    <svg viewBox={`0 0 ${w} ${h}`} width="100%" height={h} role="img" aria-label="Wikipedia-Aufrufe der letzten 30 Tage" style={{ maxWidth: 420 }}>
+      <polyline points={pts} fill="none" stroke="currentColor" strokeWidth="1.5" opacity="0.8" />
+    </svg>
   );
 }

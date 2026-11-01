@@ -81,7 +81,8 @@ def confluence(stocks: list[dict]) -> list[dict]:
 def build_report(*, stocks: list[dict], candidates: list[dict], alerts_history: list[dict], market_events: dict,
                  insiders_clusters: list[dict], superinv: dict, pol_trades: list[dict], trump: list[dict],
                  social_stats: dict, watchlist: list[str], conf: list[dict], now=None,
-                 insiders: list[dict] | None = None, trending: list[dict] | None = None) -> dict:
+                 insiders: list[dict] | None = None, trending: list[dict] | None = None,
+                 attention: dict | None = None) -> dict:
     now = now or utcnow()
     today = now.date()
     # Berichtstag = nächster Handelstag aus Sicht des Abends, bzw. heute am Morgen
@@ -152,6 +153,9 @@ def build_report(*, stocks: list[dict], candidates: list[dict], alerts_history: 
                         "bullish": v.get("bullish_7d"), "bearish": v.get("bearish_7d"), "sentiment": v.get("sentiment_7d"),
                         "manipulation_risk": v.get("manipulation_risk")} for k, v in top_social],
         "stocktwits_trending": (trending or [])[:12],
+        "attention_spikes": sorted(({"symbol": k, "views_1d": v["views_1d"], "avg_30d": v["avg_30d"], "ratio": v["ratio_1d"],
+                                     "date": v["date"], "url": v["url"], "watchlist": k in watchlist}
+                                    for k, v in (attention or {}).items() if v.get("spike")), key=lambda x: -(x["ratio"] or 0))[:12],
         "q": {s["symbol"]: (s.get("quality") or {}).get("score") for s in stocks if s["status"] == "active"},
     }
 
@@ -176,6 +180,8 @@ def send_report(rep: dict, cockpit_url: str | None) -> bool:
     if rep.get("trump_recent"):
         t = rep["trump_recent"][0]
         lines.append(f"Trump ({len(rep['trump_recent'])} Aussagen, 5 T.): " + ((t.get("quote_de") or t["quote"])[:110]))
+    if rep.get("attention_spikes"):
+        lines.append("Wikipedia-Spitzen: " + ", ".join(f"{g(a['symbol'])} {a['ratio']:.0f}x" for a in rep["attention_spikes"][:6]))
     if rep.get("social_top") or rep.get("stocktwits_trending"):
         lines.append("Social: " + ", ".join(f"{g(s['symbol'])} {s['mentions_24h']}" for s in rep.get("social_top", [])[:5])
                      + (" | Trend: " + ", ".join(t["symbol"] for t in rep.get("stocktwits_trending", [])[:5]) if rep.get("stocktwits_trending") else ""))

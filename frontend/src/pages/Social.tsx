@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { fmt, useData } from "../data";
-import type { Meta, SocialStat } from "../types";
+import type { Attention, Meta, SocialStat } from "../types";
 import { CompanyLink, DataTable, Empty, Gate, Page, Panel, QualitySelect, Src, Tag, useQualityFilter } from "../ui";
 
 type So = Meta & { stocks: Record<string, SocialStat>; note: string;
   sources?: { source: string; mode: string; posts: number; status: string; errors?: string[] }[];
-  stocktwits_trending?: { rank: number; symbol: string; title?: string; in_universe: boolean }[] };
+  stocktwits_trending?: { rank: number; symbol: string; title?: string; in_universe: boolean }[];
+  attention?: Record<string, Attention> };
 
 export function SocialPage() {
   const s = useData<So>("social.json");
@@ -16,6 +17,8 @@ export function SocialPage() {
       {(d) => {
         const rows = Object.entries(d.stocks).map(([symbol, v]) => ({ symbol, ...v })).filter((r) => passQ(r.symbol));
         const flagged = rows.filter((r) => r.manipulation_flags.length);
+        const att = Object.entries(d.attention ?? {}).map(([symbol, v]) => ({ symbol, ...v }))
+          .filter((r) => passQ(r.symbol) && (r.ratio_1d ?? 0) >= 1.5 && r.views_1d >= 1000);
         return (
           <Page title="Social Media" intro={<>Erwähnungen auf rechtlich zugänglichen Plattformen. {d.note} Social Media erhöht nie den Quality Score.</>}>
             {d.stocktwits_trending?.length ? (
@@ -41,9 +44,22 @@ export function SocialPage() {
                   { key: "man", label: "Manipulation", render: (r) => <Tag tone={r.manipulation_risk === "hoch" ? "err" : r.manipulation_risk === "auffaellig" ? "warn" : "ok"}>{r.manipulation_risk === "auffaellig" ? "auffällig" : r.manipulation_risk}</Tag>, sort: (r) => r.manipulation_flags.length },
                 ]} />
             </Panel>
+            <Panel title="Wikipedia-Aufmerksamkeit" note="Tägliche Aufrufe des Unternehmensartikels (englische Wikipedia) gegenüber dem 30-Tage-Schnitt. Zeigt breites öffentliches Interesse – die Ursache kann positiv oder negativ sein. Gezeigt: mindestens 1,5-fach und 1.000 Aufrufe.">
+              <DataTable rows={att} rowKey={(r) => r.symbol} initialSort={{ key: "r1", dir: -1 }}
+                empty="Keine auffälligen Anstiege (oder noch keine Daten – werden beim nächsten vollständigen Lauf geladen)."
+                cols={[
+                  { key: "sym", label: "Aktie", render: (r) => <CompanyLink symbol={r.symbol} />, sort: (r) => r.symbol },
+                  { key: "v1", label: "Aufrufe", num: true, render: (r) => fmt.num(r.views_1d, 0), sort: (r) => r.views_1d },
+                  { key: "b", label: "Schnitt 30 T.", num: true, render: (r) => fmt.num(r.avg_30d, 0), sort: (r) => r.avg_30d },
+                  { key: "r1", label: "Faktor Tag", num: true, render: (r) => <span className={r.spike ? "pos" : ""}>{fmt.num(r.ratio_1d, 1)}×</span>, sort: (r) => r.ratio_1d },
+                  { key: "r7", label: "Faktor 7 T.", num: true, render: (r) => `${fmt.num(r.ratio_7d, 1)}×`, sort: (r) => r.ratio_7d },
+                  { key: "d", label: "Tag", render: (r) => r.date, sort: (r) => r.date },
+                  { key: "a", label: "Artikel", render: (r) => <Src url={r.url} label={r.title} /> },
+                ]} />
+            </Panel>
             <Panel title="Quellen">
-              <ul className="plain small">{(d.sources ?? []).map((x) => <li key={x.source}>{x.source} ({x.mode}): {x.status === "ok" ? <Tag tone="ok">ok</Tag> : <Tag tone="err">Fehler</Tag>} {x.posts} neue Beiträge mit Aktienbezug{x.errors?.length ? <span className="muted"> – {x.errors.slice(0, 2).join("; ")}</span> : null}</li>)}</ul>
-              <p className="note">Stimmung: −1 = durchweg negativ, +1 = durchweg positiv. Bei StockTwits zählt die Bullish/Bearish-Angabe der Verfasser, sonst eine Wortliste. X (Twitter) ist nicht angebunden, weil die Schnittstelle kostenpflichtig ist.</p>
+              <ul className="plain small">{(d.sources ?? []).map((x) => <li key={x.source}>{x.source} ({x.mode}): {x.status === "ok" ? <Tag tone="ok">ok</Tag> : x.status === "off" ? <Tag tone="warn">abgeschaltet</Tag> : <Tag tone="err">Fehler</Tag>} {x.posts} {x.source.startsWith("Wikipedia") ? "Unternehmensartikel" : "neue Beiträge mit Aktienbezug"}{x.errors?.length ? <span className="muted"> – {x.errors.slice(0, 2).join("; ")}</span> : null}</li>)}</ul>
+              <p className="note">Stimmung: −1 = durchweg negativ, +1 = durchweg positiv. Bei StockTwits zählt die Bullish/Bearish-Angabe der Verfasser, sonst eine Wortliste. X (Twitter) ist nicht angebunden, weil die Schnittstelle kostenpflichtig ist. Reddit stellt seine freien Zugänge im November 2026 ein.</p>
             </Panel>
             <Panel title="Manipulationshinweise" note="Verdachtsmuster, keine Feststellung. Koordinierte Wiederholungen, Konzentration auf wenige Accounts, Pump-Sprache und plötzliche Spitzen.">
               {flagged.length ? (

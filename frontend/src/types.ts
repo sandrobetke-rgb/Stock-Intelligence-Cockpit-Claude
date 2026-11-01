@@ -106,6 +106,11 @@ export interface SocialStat {
   top_posts: { platform: string; community?: string; author: string; posted_at: string; url: string; text: string; engagement: number; sentiment_label?: string | null }[];
 }
 
+export interface Attention {
+  title: string; url: string; date: string; views_1d: number; avg_7d: number; avg_30d: number | null;
+  ratio_1d: number | null; ratio_7d: number | null; spike: boolean; series?: number[];
+}
+
 export interface QualityDim {
   key: string; label: string; weight: number; score: number | null; basis: string; coverage: number | null;
   metrics: { key: string; label: string; unit: string; value: number | null; points: number | null; status: string }[];
@@ -130,6 +135,7 @@ export interface CompanyDetail extends Meta {
   insiders: Insider[]; institutions: Institution[]; political_trades: PoliticalTrade[]; superinvestors: SiHolder[];
   big_stakes?: BigStake[];
   social_detail: SocialStat | null;
+  attention?: Attention | null;
   history: { date: string; symbol: string; from: string; to: string; reason: string | null }[];
 }
 
@@ -190,6 +196,7 @@ export interface Report extends Meta {
   insider_buys?: { id: string; symbol: string; insider: string; role: string; value: number | null; currency: string; transaction_date: string; filed_at: string; source_url: string; superinvestor?: string }[];
   politician_most_bought?: { symbol: string; buyers: string[]; sellers: number; in_universe: boolean }[];
   trump_recent?: { id: string; statement_at: string; quote: string; quote_de?: string; symbol: string | null; mention_type: string; sectors: string[]; direction: string; verification: string; source_name: string; source_url: string; bonus: boolean }[];
+  attention_spikes?: { symbol: string; views_1d: number; avg_30d: number | null; ratio: number | null; date: string; url: string; watchlist: boolean }[];
   social_top?: { symbol: string; mentions_24h: number; mentions_7d: number; bullish?: number; bearish?: number; sentiment: number | null; manipulation_risk: string }[];
   stocktwits_trending?: { rank: number; symbol: string; title?: string; in_universe: boolean }[];
 }

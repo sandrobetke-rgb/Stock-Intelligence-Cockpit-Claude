@@ -17,7 +17,7 @@ import traceback
 from collections import Counter
 from datetime import datetime
 
-from . import alerts, config, report, congress, corporate_events, events, insider, news, politics, social, superinvestors, translate, universe
+from . import alerts, attention, config, report, congress, corporate_events, events, insider, news, politics, social, superinvestors, translate, universe
 from .export import publish
 from .intelligence import market_intelligence
 from .market import fetch_prices, load_fundamentals, refresh_fundamentals
@@ -152,6 +152,7 @@ def assemble(*, state: dict, prices: dict, fundamentals: dict[str, dict], signal
             "big_stakes": [x for x in extras.get("stakes", []) if x["symbol"] == sym][:20],
             "superinvestors": si_by[sym]["managers"] if sym in si_by else [],
             "social_detail": soc,
+            "attention": extras.get("attention", {}).get(sym),
             "history": [h for h in state.get("history", []) if h["symbol"] == sym][-20:],
         }
 
@@ -217,6 +218,7 @@ def assemble(*, state: dict, prices: dict, fundamentals: dict[str, dict], signal
         "market-events.json": {**meta, **{k: v for k, v in market_events.items() if k != "generated_at"}},
         "social.json": {**meta, "stocks": social_stats, "sources": extras.get("social_sources", []),
                         "stocktwits_trending": extras.get("stocktwits_trending", []),
+                        "attention": {k: {x: y for x, y in v.items() if x != "series"} for k, v in extras.get("attention", {}).items()},
                         "note": "Sentiment = Einschätzung: Bullish/Bearish-Kennzeichnung der StockTwits-Nutzer, sonst Lexikon."},
         "fact-checks.json": {**meta, "status_counts": {k: vstat.get(k, 0) for k in VERIFICATION},
                              "checks": [{"id": s["id"], "symbols": s["symbols"], "title": s["title"], "title_de": s.get("title_de"), "url": s["url"],
@@ -335,6 +337,9 @@ def run(fetch: bool = True, skip_fundamentals: bool = False, skip_insider: bool 
     sres = rl.step("social", social.collect, uni, state["securities"], focus, fetch=fetch, now=now) or ([], {})
     posts, sinfo = sres
     social_stats = social.analyze(posts, now)
+    att_stats, att_src = rl.step("attention", attention.build, state["securities"], fetch=fetch, now=now) or ({}, None)
+    if att_src:
+        sinfo.setdefault("sources", []).append(att_src)
 
     mev = rl.step("market_events", events.build_market_events, fetch=fetch, now=now) or {"current": [], "upcoming": [], "feeds": []}
 
@@ -350,13 +355,15 @@ def run(fetch: bool = True, skip_fundamentals: bool = False, skip_insider: bool 
                                  extras={"stakes": stakes, "congress_status": cg["status"],
                                          "unparsed_reports": cg["unparsed_reports"],
                                          "social_sources": sinfo.get("sources", []),
-                                         "stocktwits_trending": sinfo.get("stocktwits_trending", [])})
+                                         "stocktwits_trending": sinfo.get("stocktwits_trending", []),
+                                         "attention": att_stats})
     # Watchlist-Alarme und tägliche Swing-Kandidaten
     def _alerts():
         wl, wl_file = alerts.load_watchlist()
         gen = alerts.generate(stocks=payloads["stocks.json"]["stocks"], insiders=insiders,
                               clusters=insider.cluster_buys(insiders, now=now), superinv=si, stakes=stakes,
-                              pol_trades=pol_trades, trump=trump, social_stats=social_stats, watchlist=wl, now=now)
+                              pol_trades=pol_trades, trump=trump, social_stats=social_stats, watchlist=wl, now=now,
+                              attention=att_stats)
         if morning:   # Kandidatenliste kommt morgens im Tagesbericht, nicht doppelt
             gen = [a for a in gen if a["kind"] != "digest"]
         return alerts.process(gen, wl, wl_file, notify=True, now=now)
@@ -374,7 +381,7 @@ def run(fetch: bool = True, skip_fundamentals: bool = False, skip_insider: bool 
                   alerts_history=al.get("history", []), market_events=mev, insiders_clusters=insider.cluster_buys(insiders, now=now),
                   superinv=si, pol_trades=pol_trades, trump=trump, social_stats=social_stats,
                   watchlist=al.get("watchlist", []), conf=conf, now=now, insiders=insiders,
-                  trending=sinfo.get("stocktwits_trending", []))
+                  trending=sinfo.get("stocktwits_trending", []), attention=att_stats)
     if rep:
         rep["sent"] = report.send_report(rep, os.environ.get("COCKPIT_URL")) if morning else False
         payloads["report.json"] = {"generated_at": iso(now), "schema_version": SCHEMA_VERSION, "mode": "live", **rep}

@@ -27,7 +27,7 @@ log = logging.getLogger("sic.alerts")
 KIND = {
     "insider_buy": "Insiderkauf", "cluster": "Cluster-Kauf", "si_13f": "Superinvestor (13F)", "si_form4": "Superinvestor (Form 4)",
     "stake": "Großbeteiligung", "politician": "Politiker-Trade", "earnings": "Quartalszahlen", "ex_div": "Ex-Dividende",
-    "trump": "Trump-Erwähnung", "setup": "Swing-Setup", "social_spike": "Social-Media-Anstieg", "digest": "Swing-Kandidaten",
+    "trump": "Trump-Erwähnung", "setup": "Swing-Setup", "social_spike": "Social-Media-Anstieg", "attention": "Wikipedia-Aufmerksamkeit", "digest": "Swing-Kandidaten",
 }
 
 
@@ -68,7 +68,8 @@ def candidates(stocks: list[dict]) -> list[dict]:
 
 
 def generate(*, stocks: list[dict], insiders: list[dict], clusters: list[dict], superinv: dict, stakes: list[dict],
-             pol_trades: list[dict], trump: list[dict], social_stats: dict, watchlist: list[str], now=None) -> list[dict]:
+             pol_trades: list[dict], trump: list[dict], social_stats: dict, watchlist: list[str], now=None,
+             attention: dict | None = None) -> list[dict]:
     now = now or utcnow()
     today = now.date()
     d3, d7 = (today - timedelta(days=3)).isoformat(), (today - timedelta(days=7)).isoformat()
@@ -122,6 +123,11 @@ def generate(*, stocks: list[dict], insiders: list[dict], clusters: list[dict], 
         if soc and soc["mentions_24h"] >= 10 and (soc.get("change_vs_baseline_pct") or 0) >= 200:
             out.append(_a("social_spike", f"{sym}:{today}", sym, f"{sym}: Social-Media-Anstieg",
                           f"{soc['mentions_24h']} Erwähnungen in 24 Std. (+{soc['change_vs_baseline_pct']} %)", None, 3))
+    for sym in wl:
+        a = (attention or {}).get(sym)
+        if a and a.get("spike"):
+            out.append(_a("attention", f"{sym}:{a['date']}", sym, f"{sym}: Wikipedia-Aufrufe {a['ratio_1d']:.1f}-fach",
+                          f"{a['views_1d']:,} Aufrufe am {a['date']} (Basis {a['avg_30d']:,}/Tag) – Ursache prüfen".replace(",", "."), a["url"], 2))
     for t in trump:
         if t.get("symbol") in wl and t["bonus"]["active"]:
             out.append(_a("trump", t["id"], t["symbol"], f"{t['symbol']}: Trump-Erwähnung ({t['direction']})", t["quote"][:140], t.get("source_url"), 1))
