@@ -1,0 +1,18 @@
+name: Push-Test (ntfy)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testnachricht senden
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          URL: ${{ vars.COCKPIT_URL || format('https://{0}.github.io/{1}/', github.repository_owner, github.event.repository.name) }}
+        run: |
+          if [ -z "$NTFY_TOPIC" ]; then echo "::error::Secret NTFY_TOPIC fehlt"; exit 1; fi
+          curl -fsS -H "Title: Stock Intelligence Cockpit - Test" -H "Tags: chart_with_upwards_trend" -H "Click: ${URL}#/watchlist" \
+            -d "Testnachricht: Push funktioniert. Hier kommen ab jetzt Watchlist-Alarme und morgens 06:15 der Tagesbericht." \
+            "https://ntfy.sh/${NTFY_TOPIC}"
