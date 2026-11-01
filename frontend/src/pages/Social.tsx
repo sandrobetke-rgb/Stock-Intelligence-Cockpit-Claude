@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { fmt, useData } from "../data";
 import type { Meta, SocialStat } from "../types";
-import { CompanyLink, DataTable, Empty, Gate, Page, Panel, Src, Tag } from "../ui";
+import { CompanyLink, DataTable, Empty, Gate, Page, Panel, QualitySelect, Src, Tag, useQualityFilter } from "../ui";
 
 type So = Meta & { stocks: Record<string, SocialStat>; note: string;
   sources?: { source: string; mode: string; posts: number; status: string; errors?: string[] }[];
@@ -8,10 +9,12 @@ type So = Meta & { stocks: Record<string, SocialStat>; note: string;
 
 export function SocialPage() {
   const s = useData<So>("social.json");
+  const [minQ, setMinQ] = useState(0);
+  const passQ = useQualityFilter(minQ);
   return (
     <Gate s={s}>
       {(d) => {
-        const rows = Object.entries(d.stocks).map(([symbol, v]) => ({ symbol, ...v }));
+        const rows = Object.entries(d.stocks).map(([symbol, v]) => ({ symbol, ...v })).filter((r) => passQ(r.symbol));
         const flagged = rows.filter((r) => r.manipulation_flags.length);
         return (
           <Page title="Social Media" intro={<>Erwähnungen auf rechtlich zugänglichen Plattformen. {d.note} Social Media erhöht nie den Quality Score.</>}>
@@ -23,6 +26,7 @@ export function SocialPage() {
               </Panel>
             ) : null}
             <Panel>
+              <div className="filters inline"><QualitySelect value={minQ} onChange={setMinQ} /></div>
               <DataTable rows={rows} rowKey={(r) => r.symbol} initialSort={{ key: "m7", dir: -1 }}
                 empty="Keine Social-Media-Daten. Erwähnungen werden über social_mentions.csv importiert."
                 cols={[

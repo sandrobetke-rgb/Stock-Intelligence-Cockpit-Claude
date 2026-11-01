@@ -259,6 +259,8 @@ def build_demo(out_dir: Path | None = None, n: int = 40, seed: int = 7) -> dict:
     from .report import build_report, confluence
     conf = confluence(payloads["stocks.json"]["stocks"])
     payloads["confluence.json"] = {**meta, "rows": conf}
+    payloads["quality-map.json"] = {**meta, "q": {x["symbol"]: [x["quality"]["score"], x["quality"]["coverage_pct"]]
+                                                   for x in payloads["stocks.json"]["stocks"]}}
     payloads["report.json"] = {**meta, **build_report(stocks=payloads["stocks.json"]["stocks"],
                                candidates=candidates(payloads["stocks.json"]["stocks"]), alerts_history=payloads["alerts.json"]["history"],
                                market_events=mev, insiders_clusters=[], superinv=superinv, pol_trades=pol_trades, trump=trump,

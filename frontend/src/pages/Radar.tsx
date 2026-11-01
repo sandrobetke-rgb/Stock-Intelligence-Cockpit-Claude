@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { DRIVER_LABEL, fmt, useData } from "../data";
 import type { Meta, RadarRow, Signal } from "../types";
-import { Axes, CompanyLink, Translated, DataTable, Gate, IndexTags, Page, Panel, Src, Tag, Verif, riskLabel } from "../ui";
+import { QualitySelect, Axes, CompanyLink, Translated, DataTable, Gate, IndexTags, Page, Panel, Src, Tag, Verif, riskLabel } from "../ui";
 
 type Intel = Meta & { signals: Signal[]; radar: RadarRow[] };
 
@@ -13,14 +13,16 @@ export function Radar() {
   const [win, setWin] = useState("7 Tage");
   const [type, setType] = useState("");
   const [onlyOriginal, setOnlyOriginal] = useState(true);
+  const [minQ, setMinQ] = useState(0);
   return (
     <Gate s={s}>
-      {(d) => <RadarView d={d} win={win} setWin={setWin} type={type} setType={setType} onlyOriginal={onlyOriginal} setOnlyOriginal={setOnlyOriginal} />}
+      {(d) => <RadarView d={{ ...d, radar: d.radar.filter((r) => !minQ || (r.quality ?? -1) >= minQ) }} minQ={minQ} setMinQ={setMinQ} win={win} setWin={setWin} type={type} setType={setType} onlyOriginal={onlyOriginal} setOnlyOriginal={setOnlyOriginal} />}
     </Gate>
   );
 }
 
-function RadarView({ d, win, setWin, type, setType, onlyOriginal, setOnlyOriginal }: {
+function RadarView({ d, minQ, setMinQ, win, setWin, type, setType, onlyOriginal, setOnlyOriginal }: {
+  minQ: number; setMinQ: (v: number) => void;
   d: Intel; win: string; setWin: (w: string) => void; type: string; setType: (t: string) => void; onlyOriginal: boolean; setOnlyOriginal: (b: boolean) => void;
 }) {
   const sigs = useMemo(() => {
@@ -32,6 +34,7 @@ function RadarView({ d, win, setWin, type, setType, onlyOriginal, setOnlyOrigina
     <Page title="Opportunity Radar"
       intro="Aktien mit auffälliger, quellenübergreifender Informationsaktivität. Gezählt werden unabhängige Meldungen; Kopien und Agentursyndizierungen zählen nicht doppelt. Aufmerksamkeit ist kein Qualitäts- oder Kurssignal.">
       <Panel>
+        <div className="filters inline"><QualitySelect value={minQ} onChange={setMinQ} /></div>
         <DataTable rows={d.radar} rowKey={(r) => r.symbol} initialSort={{ key: "mi", dir: -1 }} limit={50}
           empty="Aktuell zeigt keine Aktie auffällige Aktivität aus unabhängigen Quellen."
           cols={[

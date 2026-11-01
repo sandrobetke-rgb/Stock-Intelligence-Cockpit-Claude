@@ -1,5 +1,5 @@
 import { ReactNode, useMemo, useState } from "react";
-import { DIRECTION_LABEL, Loaded, VERIFICATION_LABEL, fmt, useWatchlist } from "./data";
+import { DIRECTION_LABEL, Loaded, VERIFICATION_LABEL, fmt, qualityGrade, useQuality, useWatchlist } from "./data";
 import type { CorpEvent, StockRow } from "./types";
 
 // ---------------------------------------------------------------- Achsen --
@@ -101,10 +101,34 @@ export function WatchStar({ symbol }: { symbol: string }) {
   );
 }
 
+export function QBadge({ symbol }: { symbol: string }) {
+  const q = useQuality();
+  if (!q || !(symbol in q)) return null;
+  const [score, cov] = q[symbol];
+  const g = qualityGrade(score);
+  return <span className={`qbadge ${g.tone}`} title={score == null ? "Company Quality: zu wenige Daten" : `Company Quality ${Math.round(score)} von 100 (Datenabdeckung ${cov} %)`}>{g.label}</span>;
+}
+
+/** Filter "Qualität ab" für Listen mit Aktienbezug. */
+export function QualitySelect({ value, onChange }: { value: number; onChange: (v: number) => void }) {
+  return (
+    <label>Qualität ab<select value={value} onChange={(e) => onChange(Number(e.target.value))}>
+      <option value={0}>alle</option><option value={35}>D (35)</option><option value={50}>C (50)</option>
+      <option value={65}>B (65)</option><option value={80}>A (80)</option>
+    </select></label>
+  );
+}
+
+export function useQualityFilter(min: number) {
+  const q = useQuality();
+  return (symbol: string | null | undefined) => !min || (!!symbol && !!q && (q[symbol]?.[0] ?? -1) >= min);
+}
+
 export function CompanyLink({ symbol, name, star = true }: { symbol: string; name?: string; star?: boolean }) {
   return (
     <span className="co-wrap">
       {star ? <WatchStar symbol={symbol} /> : null}
+      <QBadge symbol={symbol} />
       <a className="co-link" href={`#/company/${encodeURIComponent(symbol)}`}>
         <strong>{symbol}</strong>{name ? <span className="co-name"> {name}</span> : null}
       </a>

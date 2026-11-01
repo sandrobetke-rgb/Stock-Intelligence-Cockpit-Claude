@@ -1,19 +1,22 @@
 import { useState } from "react";
 import { fmt, useData } from "../data";
 import type { ClusterBuy, Insider, Institution, Meta, PoliticalTrade } from "../types";
-import { CompanyLink, DataTable, Gate, Page, Panel, Src, Tag } from "../ui";
+import { CompanyLink, DataTable, Gate, Page, Panel, QualitySelect, Src, Tag, useQualityFilter } from "../ui";
 
 type Ins = Meta & { cluster_buys: ClusterBuy[]; insiders: Insider[]; institutions: Institution[]; political_trades: PoliticalTrade[]; notes: string[] };
 
 export function InsiderPage() {
   const s = useData<Ins>("insider.json");
   const [onlyOpen, setOnlyOpen] = useState(true);
+  const [minQ, setMinQ] = useState(0);
+  const passQ = useQualityFilter(minQ);
   return (
     <Gate s={s}>
       {(d) => (
         <Page title="Insider & Institutionen" intro="Drei getrennte Datenarten mit unterschiedlicher Aussagekraft und Meldeverzug: Unternehmensinsider, institutionelle Quartalsmeldungen und Aktiengeschäfte von Politikern.">
           <Panel title="Cluster-Käufe (14 Tage)" note="Mindestens zwei verschiedene Insider derselben Firma haben am offenen Markt gekauft. Gilt als aussagekräftiger als Einzelkäufe, ist aber keine Kaufempfehlung.">
-            <DataTable rows={d.cluster_buys ?? []} rowKey={(r) => r.symbol} initialSort={{ key: "n", dir: -1 }} limit={30} empty="Derzeit keine Cluster-Käufe."
+            <div className="filters inline"><QualitySelect value={minQ} onChange={setMinQ} /></div>
+            <DataTable rows={(d.cluster_buys ?? []).filter((r) => passQ(r.symbol))} rowKey={(r) => r.symbol} initialSort={{ key: "n", dir: -1 }} limit={30} empty="Derzeit keine Cluster-Käufe."
               cols={[
                 { key: "s", label: "Aktie", render: (r) => <CompanyLink symbol={r.symbol} />, sort: (r) => r.symbol },
                 { key: "n", label: "Insider", num: true, render: (r) => r.insiders, sort: (r) => r.insiders },
@@ -24,8 +27,8 @@ export function InsiderPage() {
               ]} />
           </Panel>
           <Panel title="Unternehmensinsider" note="Käufe und Verkäufe am offenen Markt sind von Optionsausübungen, Vergütung und Steuereinbehalt getrennt.">
-            <label className="check filters inline"><input type="checkbox" checked={onlyOpen} onChange={(e) => setOnlyOpen(e.target.checked)} /> Nur Käufe/Verkäufe am offenen Markt</label>
-            <DataTable rows={d.insiders.filter((x) => !onlyOpen || x.open_market)} rowKey={(r) => r.id} initialSort={{ key: "filed", dir: -1 }} limit={50}
+            <div className="filters inline"><label className="check"><input type="checkbox" checked={onlyOpen} onChange={(e) => setOnlyOpen(e.target.checked)} /> Nur Käufe/Verkäufe am offenen Markt</label><QualitySelect value={minQ} onChange={setMinQ} /></div>
+            <DataTable rows={d.insiders.filter((x) => (!onlyOpen || x.open_market) && passQ(x.symbol))} rowKey={(r) => r.id} initialSort={{ key: "filed", dir: -1 }} limit={50}
               empty="Keine Insidermeldungen im Zeitraum."
               cols={[
                 { key: "sym", label: "Aktie", render: (r) => <CompanyLink symbol={r.symbol} />, sort: (r) => r.symbol },

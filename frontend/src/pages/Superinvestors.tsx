@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { SI_ACTION, SI_TONE, fmt, useData } from "../data";
 import type { BigStake, CorpEvent, Insider, Meta, SiManager, SiStock } from "../types";
-import { CompanyLink, DataTable, Empty, EventBadges, Gate, Page, Panel, Src, Tag } from "../ui";
+import { CompanyLink, DataTable, Empty, EventBadges, Gate, Page, Panel, QualitySelect, Src, Tag, useQualityFilter } from "../ui";
 
 type SI = Meta & {
   managers: SiManager[]; stocks: SiStock[]; errors: { manager: string; error: string }[]; note: string;
@@ -51,6 +51,8 @@ function aggregate(managers: SiManager[], events: Map<string, CorpEvent[] | unde
 function Overview({ d }: { d: SI }) {
   const [view, setView] = useState<"buys" | "sells" | "held">("buys");
   const [fresh, setFresh] = useState(false);
+  const [minQ, setMinQ] = useState(0);
+  const passQ = useQualityFilter(minQ);
   const cutoff = new Date(Date.now() - FRESH_DAYS * 864e5).toISOString().slice(0, 10);
   const freshManagers = d.managers.filter((m) => !m.stale && m.filed_at >= cutoff);
   const stocks = useMemo(() => {
@@ -59,11 +61,11 @@ function Overview({ d }: { d: SI }) {
     return aggregate(freshManagers, ev);
   }, [d, fresh, freshManagers.length]);
   const rows = useMemo(() => {
-    const st = stocks.filter((x) => x.symbol || x.issuer);
+    const st = stocks.filter((x) => (x.symbol || x.issuer) && passQ(x.symbol));
     if (view === "buys") return st.filter((x) => x.buyers > 0).sort((a, b) => b.buyers - a.buyers || b.new_buyers - a.new_buyers || b.value - a.value);
     if (view === "sells") return st.filter((x) => x.sellers > 0).sort((a, b) => b.sellers - a.sellers || b.sold_out - a.sold_out);
     return [...st].sort((a, b) => b.holders - a.holders || b.value - a.value);
-  }, [stocks, view]);
+  }, [stocks, view, passQ]);
   const quarter = d.managers.filter((m) => !m.stale).map((m) => m.report_date).sort().pop();
   const stakes = (d.stakes ?? []).filter((s) => s.filed_at >= cutoff || !fresh);
   const trades = (d.insider_trades ?? []).filter((t) => (t.filed_at ?? "") >= cutoff || !fresh);
@@ -79,6 +81,7 @@ function Overview({ d }: { d: SI }) {
           ))}
           <label className="check"><input type="checkbox" checked={fresh} onChange={(e) => setFresh(e.target.checked)} />
             Nur Meldungen der letzten 4 Wochen ({freshManagers.length} von {d.managers.length} Investoren)</label>
+          <QualitySelect value={minQ} onChange={setMinQ} />
         </div>
         <DataTable rows={rows} rowKey={(r) => r.cusip} limit={50}
           empty={fresh ? "Keine 13F-Meldung in den letzten 4 Wochen. Die nächsten Quartalsdepots sind bis 14. Februar, 15. Mai, 14. August und 14. November fällig." : "Noch keine 13F-Daten."}

@@ -21,6 +21,12 @@ log = logging.getLogger("sic.report")
 WEEKDAY = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"]
 
 
+def grade(score) -> str:
+    if score is None:
+        return "?"
+    return "A" if score >= 80 else "B" if score >= 65 else "C" if score >= 50 else "D" if score >= 35 else "E"
+
+
 def confluence_row(s: dict) -> dict | None:
     if s["status"] != "active":
         return None
@@ -146,29 +152,32 @@ def build_report(*, stocks: list[dict], candidates: list[dict], alerts_history: 
                         "bullish": v.get("bullish_7d"), "bearish": v.get("bearish_7d"), "sentiment": v.get("sentiment_7d"),
                         "manipulation_risk": v.get("manipulation_risk")} for k, v in top_social],
         "stocktwits_trending": (trending or [])[:12],
+        "q": {s["symbol"]: (s.get("quality") or {}).get("score") for s in stocks if s["status"] == "active"},
     }
 
 
 def send_report(rep: dict, cockpit_url: str | None) -> bool:
     topic = os.environ.get("NTFY_TOPIC")
+    qmap = rep.get("q") or {}
+    g = lambda sym: f"{sym}[{grade(qmap.get(sym))}]"  # noqa: E731  Qualitätsnote A–E hinter dem Kürzel
     lines = []
     if rep.get("rule_note"):
         lines.append(rep["rule_note"])
     if rep.get("insider_buys") or rep.get("clusters"):
-        parts = [f"{c['symbol']} (Cluster {c['insiders']})" for c in rep.get("clusters", [])[:4]]
-        parts += [f"{x['symbol']} {round((x.get('value') or 0) / 1e6, 1)} Mio." for x in rep.get("insider_buys", [])[:5]]
+        parts = [f"{g(c['symbol'])} (Cluster {c['insiders']})" for c in rep.get("clusters", [])[:4]]
+        parts += [f"{g(x['symbol'])} {round((x.get('value') or 0) / 1e6, 1)} Mio." for x in rep.get("insider_buys", [])[:5]]
         lines.append("Insider: " + ", ".join(parts))
     if rep.get("politician_trades") or rep.get("politician_most_bought"):
-        parts = [f"{t['politician'].split()[-1]} {'kauft' if t['transaction_type'] == 'purchase' else 'verkauft'} {t['symbol']}"
+        parts = [f"{t['politician'].split()[-1]} {'kauft' if t['transaction_type'] == 'purchase' else 'verkauft'} {g(t['symbol'])}"
                  for t in rep.get("politician_trades", [])[:4]]
         if rep.get("politician_most_bought"):
-            parts.append("meistgekauft 30 T.: " + ", ".join(f"{r['symbol']} ({len(r['buyers'])})" for r in rep["politician_most_bought"][:4]))
+            parts.append("meistgekauft 30 T.: " + ", ".join(f"{g(r['symbol'])} ({len(r['buyers'])})" for r in rep["politician_most_bought"][:4]))
         lines.append("Politiker: " + "; ".join(parts))
     if rep.get("trump_recent"):
         t = rep["trump_recent"][0]
         lines.append(f"Trump ({len(rep['trump_recent'])} Aussagen, 5 T.): " + ((t.get("quote_de") or t["quote"])[:110]))
     if rep.get("social_top") or rep.get("stocktwits_trending"):
-        lines.append("Social: " + ", ".join(f"{s['symbol']} {s['mentions_24h']}" for s in rep.get("social_top", [])[:5])
+        lines.append("Social: " + ", ".join(f"{g(s['symbol'])} {s['mentions_24h']}" for s in rep.get("social_top", [])[:5])
                      + (" | Trend: " + ", ".join(t["symbol"] for t in rep.get("stocktwits_trending", [])[:5]) if rep.get("stocktwits_trending") else ""))
     if rep["macro"]:
         lines.append("Termine: " + "; ".join(e["title"] for e in rep["macro"][:4]))
@@ -180,6 +189,8 @@ def send_report(rep: dict, cockpit_url: str | None) -> bool:
         lines.append(f"Watchlist: {len(rep['watchlist_alerts'])} neue Ereignisse")
     if rep["confluence_top"]:
         lines.append("Zusammenfluss: " + ", ".join(f"{c['symbol']} ({c['count']})" for c in rep["confluence_top"][:6]))
+    if lines:
+        lines.append("[A–E] = Qualitätsnote (Company Quality)")
     text = "\n".join(lines) or "Keine besonderen Ereignisse."
     ok = False
     if topic:

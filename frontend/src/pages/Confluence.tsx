@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { fmt, useData } from "../data";
 import type { ConfluenceRow, Meta } from "../types";
-import { CompanyLink, DataTable, EventBadges, Gate, IndexTags, Page, Panel, Tag, riskLabel } from "../ui";
+import { CompanyLink, DataTable, EventBadges, Gate, IndexTags, Page, Panel, QualitySelect, Tag, riskLabel } from "../ui";
 
 const KIND: Record<string, string> = {
   insider: "Insider", superinvestors: "Superinvestoren", politicians: "Politiker", quality: "Quality", setup: "Swing-Setup",
@@ -13,10 +13,11 @@ export function Confluence() {
   const [min, setMin] = useState(2);
   const [need, setNeed] = useState<string[]>([]);
   const [noWarn, setNoWarn] = useState(false);
+  const [minQ, setMinQ] = useState(0);
   return (
     <Gate s={s}>
       {(d) => {
-        const rows = d.rows.filter((r) => r.count >= min && need.every((k) => r.kinds.includes(k)) && (!noWarn || !r.warnings.length));
+        const rows = d.rows.filter((r) => r.count >= min && need.every((k) => r.kinds.includes(k)) && (!noWarn || !r.warnings.length) && (!minQ || (r.quality ?? -1) >= minQ));
         return (
           <Page title="Signal-Zusammenfluss"
             intro="Aktien, bei denen mehrere voneinander unabhängige Signale gleichzeitig positiv sind. Die Signale werden nicht zu einem Score verrechnet, gezählt wird nur, wie viele Arten zusammenkommen. Warnsignale stehen getrennt daneben.">
@@ -29,6 +30,7 @@ export function Confluence() {
                 ))}
               </div>
               <label className="check"><input type="checkbox" checked={noWarn} onChange={(e) => setNoWarn(e.target.checked)} /> Ohne Warnsignale</label>
+              <QualitySelect value={minQ} onChange={setMinQ} />
             </div>
             <Panel title={`${rows.length} Aktien`} note="Signalarten: Insiderkäufe (90 T.), Superinvestoren kaufen (letztes Quartal), Politiker kaufen (90 T.), Quality ≥ 70, Swing-Setup heute, Social-Media positiv ohne Hype, politisch positiv. Keine Kaufempfehlung.">
               <DataTable rows={rows} rowKey={(r) => r.symbol} initialSort={{ key: "n", dir: -1 }} limit={60} empty="Keine Aktie erfüllt die gewählten Bedingungen."

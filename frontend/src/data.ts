@@ -161,3 +161,28 @@ export function githubWatchlistUrl(symbols: string[]) {
   const content = ["symbol", ...symbols].join("\n") + "\n";
   return `https://github.com/${owner}/${repo}/new/main?filename=${encodeURIComponent(`backend/data/imports/watchlist/${stamp}.csv`)}&value=${encodeURIComponent(content)}&message=${encodeURIComponent("Watchlist aktualisiert")}`;
 }
+
+// ------------------------------------------------------------ Qualität --
+type QMap = Record<string, [number | null, number]>;
+let qPromise: Promise<QMap> | null = null;
+
+/** Company-Quality-Score je Aktie (für Kennzeichnung und Filter auf allen Seiten). */
+export function useQuality(): QMap | null {
+  const [q, setQ] = useState<QMap | null>(null);
+  useEffect(() => {
+    if (!qPromise) qPromise = load<{ q: QMap }>("quality-map.json").then((d) => d.q).catch(() => ({}));
+    let alive = true;
+    qPromise.then((m) => alive && setQ(m));
+    return () => { alive = false; };
+  }, []);
+  return q;
+}
+
+export function qualityGrade(score: number | null | undefined): { label: string; tone: string } {
+  if (score == null) return { label: "?", tone: "qn" };
+  if (score >= 80) return { label: "A", tone: "qa" };
+  if (score >= 65) return { label: "B", tone: "qb" };
+  if (score >= 50) return { label: "C", tone: "qc" };
+  if (score >= 35) return { label: "D", tone: "qd" };
+  return { label: "E", tone: "qe" };
+}

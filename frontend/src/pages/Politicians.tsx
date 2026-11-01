@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { fmt, useData } from "../data";
 import type { Meta, PoliticalTrade } from "../types";
-import { CompanyLink, DataTable, Gate, Page, Panel, Src, Tag } from "../ui";
+import { CompanyLink, DataTable, Gate, Page, Panel, QualitySelect, Src, Tag, useQualityFilter } from "../ui";
 
 type Pol = Meta & {
   trades: PoliticalTrade[];
@@ -22,12 +22,14 @@ export function Politicians() {
   const [chamber, setChamber] = useState("");
   const [tx, setTx] = useState("");
   const [onlyUni, setOnlyUni] = useState(false);
+  const [minQ, setMinQ] = useState(0);
+  const passQ = useQualityFilter(minQ);
   return (
     <Gate s={s}>
       {(d) => {
         const cutoff = new Date(Date.now() - days * 864e5).toISOString().slice(0, 10);
         const rows = d.trades.filter((t) => (t.disclosure_date ?? "") >= cutoff && (!chamber || t.chamber === chamber)
-          && (!tx || (tx === "buy" ? t.transaction_type === "purchase" : t.transaction_type.startsWith("sale"))) && (!onlyUni || t.in_universe));
+          && (!tx || (tx === "buy" ? t.transaction_type === "purchase" : t.transaction_type.startsWith("sale"))) && (!onlyUni || t.in_universe) && passQ(t.symbol));
         return (
           <Page title="Politiker-Trades"
             intro="Aktiengeschäfte von Mitgliedern des US-Kongresses laut ihren Pflichtmeldungen (STOCK Act). Gemeldet wird bis zu 45 Tage nach dem Geschäft, Beträge nur als Bandbreite. Die Daten dürfen nur privat und nicht kommerziell genutzt werden.">
@@ -37,6 +39,7 @@ export function Politicians() {
               <label>Kammer<select value={chamber} onChange={(e) => setChamber(e.target.value)}><option value="">Beide</option><option>Repräsentantenhaus</option><option>Senat</option></select></label>
               <label>Art<select value={tx} onChange={(e) => setTx(e.target.value)}><option value="">Käufe und Verkäufe</option><option value="buy">Nur Käufe</option><option value="sell">Nur Verkäufe</option></select></label>
               <label className="check"><input type="checkbox" checked={onlyUni} onChange={(e) => setOnlyUni(e.target.checked)} /> Nur Aktien im Universum</label>
+              <QualitySelect value={minQ} onChange={setMinQ} />
             </div>
             <Ranking rows={rows} />
             <Panel title={`Alle Geschäfte (${rows.length})`}>
