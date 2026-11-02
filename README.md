@@ -8,7 +8,7 @@ Informations- und Analyseplattform. Keine Anlageberatung, keine Kauf-/Verkaufsem
 
 ## Bedienung im Alltag
 
-**Adresse:** https://sandrobetke-rgb.github.io/Stock-Intelligence-Cockpit-Claude/
+**Adresse:** https://sic-cockpit.pages.dev (geschützt über Cloudflare Access)
 
 | Wann | Was passiert automatisch |
 |---|---|

@@ -63,7 +63,7 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           ALERT_EMAIL_TO: ${{ secrets.ALERT_EMAIL_TO }}
           # Adresse für Links in Push/E-Mail: Variable COCKPIT_URL (z. B. Cloudflare), sonst GitHub Pages
-          COCKPIT_URL: ${{ vars.COCKPIT_URL || format('https://{0}.github.io/{1}/', github.repository_owner, github.event.repository.name) }}
+          COCKPIT_URL: ${{ vars.COCKPIT_URL || 'https://sic-cockpit.pages.dev/' }}
         run: |
           ARGS=""
           # Push/CSV-Aenderung: nur neu auswerten. Ohne vorhandenes Universum (erster Lauf) immer voll abrufen.
@@ -167,3 +167,22 @@ jobs:
           path: frontend/dist
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # Solange GitHub Pages noch aktiv ist: alte öffentliche Seite durch einen leeren Hinweis ersetzen,
+  # damit dort keine Daten mehr liegen (Cockpit läuft geschützt auf Cloudflare).
+  retire-github-pages:
+    needs: target
+    if: always() && needs.target.outputs.cloudflare == 'true'
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    environment:
+      name: github-pages
+    steps:
+      - run: |
+          mkdir -p stub
+          printf '%s' '<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Umgezogen</title><p style="font-family:sans-serif;margin:3rem">Diese Seite ist nicht mehr aktiv.</p>' > stub/index.html
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: stub
+      - uses: actions/deploy-pages@v4
