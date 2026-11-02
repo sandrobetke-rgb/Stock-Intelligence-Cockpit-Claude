@@ -12,14 +12,13 @@ from __future__ import annotations
 import logging
 import os
 import re
-from concurrent.futures import ThreadPoolExecutor
 from datetime import timedelta
 from urllib.parse import quote
 
 import requests
 
 from . import config
-from .util import iso, read_json, utcnow, write_json_atomic
+from .util import RateLimiter, iso, parse_dt, read_json, utcnow, write_json_atomic
 
 log = logging.getLogger("sic.attention")
 API = "https://en.wikipedia.org/w/api.php"
@@ -32,6 +31,7 @@ COMPANY_STEMS = ("compan", "corporat", "manufactur", "bank", "retail", "conglome
                  "miner", "mining", "energy", "hotel", "studio", "multinational", "subsidiar", "partnership",
                  "aktiengesellschaft", "plc", "inc", "conglomerate", "biopharm", "therapeutics", "bancorp", "group",
                  "chemical", "automaker", "telecom", "e-commerce", "logistics", "homebuilder", "shipping", "fintech")
+_rl_api = RateLimiter(2.0)
 SPIKE_RATIO, SPIKE_MIN = 3.0, 2000
 
 
@@ -68,9 +68,9 @@ def resolve_titles(securities: dict[str, dict], now=None) -> dict[str, str | Non
     """Symbol -> Wikipedia-Artikel (oder None). Ungeprüfte/abgelaufene Einträge werden neu ermittelt."""
     now = now or utcnow()
     cache = read_json(_titles_path(), {})
-    cutoff = iso(now - timedelta(days=30))
+    cutoff, cutoff_none = iso(now - timedelta(days=30)), iso(now - timedelta(days=7))
     todo = {s: v for s, v in securities.items() if v.get("status") == "active"
-            and (s not in cache or (cache[s].get("checked") or "") < cutoff)}
+            and (s not in cache or (cache[s].get("checked") or "") < (cutoff if cache[s].get("title") else cutoff_none))}
     if todo:
         sess = requests.Session()
         sess.headers["User-Agent"] = _ua()
@@ -82,6 +82,7 @@ def resolve_titles(securities: dict[str, dict], now=None) -> dict[str, str | Non
             res: dict[str, str | None] = {}
             for i in range(0, len(names), 50):
                 try:
+                    _rl_api.wait()
                     r = sess.get(API, params={"action": "query", "format": "json", "redirects": 1, "prop": "pageprops",
                                               "ppprop": "disambiguation|wikibase-shortdesc", "titles": "|".join(names[i:i + 50])},
                                  timeout=30)
@@ -107,7 +108,11 @@ def resolve_titles(securities: dict[str, dict], now=None) -> dict[str, str | Non
     return {s: (cache.get(s) or {}).get("title") for s in securities}
 
 
-def fetch_views(titles: dict[str, str | None], now=None) -> dict:
+def fetch_views(titles: dict[str, str | None], now=None, budget: int = 650) -> dict:
+    """Lädt je Lauf höchstens `budget` Artikel (Wikimedia drosselt Bots), zuerst nie geladene, dann die ältesten.
+    Damit ist das ganze Universum nach wenigen Läufen abgedeckt und danach ca. alle 2 Tage aktuell."""
+    import time
+
     now = now or utcnow()
     end = (now - timedelta(days=1)).date()
     start = end - timedelta(days=60)
@@ -115,35 +120,55 @@ def fetch_views(titles: dict[str, str | None], now=None) -> dict:
     sess = requests.Session()
     sess.headers["User-Agent"] = _ua()
     errors: list[str] = []
-
-    def one(item):
-        sym, t = item
-        try:
-            r = sess.get(PV.format(t=quote(t.replace(" ", "_"), safe=""), a=a, b=b), timeout=20)
-            if r.status_code == 404:
-                return sym, {}
-            r.raise_for_status()
-            return sym, {x["timestamp"][:8]: x["views"] for x in r.json().get("items", [])}
-        except Exception as exc:  # noqa: BLE001
-            errors.append(f"{sym}: {exc}"[:100])
-            return sym, None
-
+    rl = RateLimiter(3.0)
     store = read_json(_views_path(), {})
-    with ThreadPoolExecutor(max_workers=8) as ex:
-        for sym, daily in ex.map(one, [(s, t) for s, t in titles.items() if t]):
-            if daily is not None:
-                store[sym] = {"title": titles[sym], "daily": daily, "fetched_at": iso(now)}
     for s in list(store):
         if not titles.get(s):
             store.pop(s)
+    todo = sorted((s for s, t in titles.items() if t), key=lambda s: (store.get(s) or {}).get("fetched_at") or "")[:budget]
+    done, throttled = 0, 0
+    for sym in todo:
+        url = PV.format(t=quote(titles[sym].replace(" ", "_"), safe=""), a=a, b=b)
+        for attempt in range(3):
+            rl.wait()
+            try:
+                r = sess.get(url, timeout=20)
+                if r.status_code == 429:
+                    throttled += 1
+                    time.sleep(min(float(r.headers.get("Retry-After") or 0) or 10 * (attempt + 1), 60))
+                    continue
+                if r.status_code == 404:
+                    store[sym] = {"title": titles[sym], "daily": {}, "fetched_at": iso(now)}
+                else:
+                    r.raise_for_status()
+                    store[sym] = {"title": titles[sym], "fetched_at": iso(now),
+                                  "daily": {x["timestamp"][:8]: x["views"] for x in r.json().get("items", [])}}
+                    done += 1
+                break
+            except Exception as exc:  # noqa: BLE001
+                errors.append(f"{sym}: {exc}"[:100])
+                break
+        if throttled >= 25:
+            errors.append("Wikimedia drosselt – Rest im nächsten Lauf")
+            break
     write_json_atomic(_views_path(), store)
-    return {"source": "Wikipedia-Seitenaufrufe", "mode": "Wikimedia-API (ohne Konto)", "posts": len(store),
-            "errors": errors[:8], "status": "ok" if store and len(errors) < max(10, len(titles) // 10) else "error"}
+    have = sum(1 for v in store.values() if v.get("daily"))
+    return {"source": "Wikipedia-Seitenaufrufe", "mode": f"Wikimedia-API (ohne Konto), {done} aktualisiert",
+            "posts": have, "errors": errors[:8], "status": "ok" if done else "error"}
 
 
 def metrics(store: dict | None = None) -> dict[str, dict]:
     store = store if store is not None else read_json(_views_path(), {})
     out = {}
+    newest = max((max(v["daily"]) for v in store.values() if v.get("daily")), default="")
+
+    def fresh(d: str) -> bool:          # Spitze nur, wenn der Wert zu den aktuellsten gehört (max. 2 Tage zurück)
+        from datetime import date
+        try:
+            return (date(int(newest[:4]), int(newest[4:6]), int(newest[6:])) - date(int(d[:4]), int(d[4:6]), int(d[6:]))).days <= 2
+        except ValueError:
+            return False
+
     for sym, v in store.items():
         days = sorted(v.get("daily", {}).items())
         if len(days) < 20:
@@ -158,7 +183,7 @@ def metrics(store: dict | None = None) -> dict[str, dict]:
             "date": f"{days[-1][0][:4]}-{days[-1][0][4:6]}-{days[-1][0][6:]}", "views_1d": last,
             "avg_7d": round(avg7), "avg_30d": round(avg30) if avg30 else None, "ratio_1d": r1,
             "ratio_7d": round(avg7 / avg30, 2) if avg30 else None,
-            "spike": bool(r1 and r1 >= SPIKE_RATIO and last >= SPIKE_MIN),
+            "spike": bool(r1 and r1 >= SPIKE_RATIO and last >= SPIKE_MIN and fresh(days[-1][0])),
             "series": vals[-30:],
         }
     return out
