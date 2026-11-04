@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T22:20:39Z",
+ "generated_at": "2026-11-04T06:02:26Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -172,12 +172,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 13.5,
+   "score": 61.7,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 6,
+   "independent_24h": 5
   },
   "political": {
    "relevance": 0,
@@ -210,7 +212,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/pax/earnings",
-    "days_until": 0
+    "days_until": -1
    }
   ],
   "politicians": null,
@@ -592,11 +594,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 13.5,
+  "score": 61.7,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 76.4,
@@ -605,35 +607,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 5,
+    "independent": 5,
+    "duplicates": 1,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 6,
+    "independent": 6,
+    "duplicates": 1,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 4,
-    "independent": 4,
-    "duplicates": 0,
-    "sources": 2,
+    "signals": 10,
+    "independent": 10,
+    "duplicates": 1,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -652,6 +656,140 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "2d01e9888d1435a3",
+   "symbols": [
+    "PAX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Patria Investments Ltd (PAX) (Q3 2026) Earnings Call Highlights: Record Fundraising and ...",
+   "summary": "Patria Investments Ltd (PAX) hits its $7 billion fundraising target a quarter early, narrows FRE guidance on Brazilian market volatility, and reaffirms its 2027 targets.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/patria-investments-ltd-pax-q3-230525674.html?.tsrc=rss",
+   "published_at": "2026-11-03T23:05:25Z",
+   "date_only": false,
+   "captured_at": "2026-11-04T06:02:33Z",
+   "fingerprint": "8253411e0913b3f1",
+   "primary_source": false,
+   "cluster_id": "fe1038e15a02584e",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Patria Investments Ltd (PAX) (Q3 2026) Ergebnisaufruf Highlights: Rekord Fundraising und ..."
+  },
+  {
+   "id": "1ef4df7ad965e05c",
+   "symbols": [
+    "PAX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Patria Investments Limited Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Patria Investments Limited's Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-patria-investments-limited-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-11-03T18:14:57Z",
+   "date_only": false,
+   "captured_at": "2026-11-04T06:02:33Z",
+   "fingerprint": "f83c6658d09f62c8",
+   "primary_source": false,
+   "cluster_id": "1ef4df7ad965e05c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "87091fd8b1a0889e",
+   "symbols": [
+    "PAX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Patria Investments (PAX) Q3 Earnings Surpass Estimates",
+   "summary": "Patria Investments (PAX) delivered earnings and revenue surprises of +7.14% and -3.36%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/patria-investments-pax-q3-earnings-112503279.html?.tsrc=rss",
+   "published_at": "2026-11-03T11:25:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-04T06:02:33Z",
+   "fingerprint": "2cac578a99beb2ee",
+   "primary_source": false,
+   "cluster_id": "87091fd8b1a0889e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "14dac1f02012b4b5",
+   "symbols": [
+    "PAX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Patria Investments: Q3 Earnings Snapshot",
+   "summary": "CAMANA BAY, Cayman Islands (AP) — CAMANA BAY, Cayman Islands (AP) — Patria Investments Ltd. (PAX) on Tuesday reported third-quarter profit of $7.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/patria-investments-q3-earnings-snapshot-111445413.html?.tsrc=rss",
+   "published_at": "2026-11-03T11:14:45Z",
+   "date_only": false,
+   "captured_at": "2026-11-04T06:02:33Z",
+   "fingerprint": "d6f65f17b9e26229",
+   "primary_source": false,
+   "cluster_id": "14dac1f02012b4b5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b5db7b865ddcd2db",
+   "symbols": [
+    "PAX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Patria Reports Third Quarter 2026 Earnings Results",
+   "summary": "GRAND CAYMAN, Cayman Islands, Nov. 03, 2026 (GLOBE NEWSWIRE) -- Patria Investments Limited (Nasdaq:PAX) reported today its unaudited results for the third quarter ended September 30, 2026. The full detailed presentation of Patria's third quarter 2026 results can be accessed on th",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/patria-reports-third-quarter-2026-110000143.html?.tsrc=rss",
+   "published_at": "2026-11-03T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-04T06:02:33Z",
+   "fingerprint": "0ff850275dccd177",
+   "primary_source": false,
+   "cluster_id": "b5db7b865ddcd2db",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "721f6d2ea82ef3a5",
+   "symbols": [
+    "PAX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Alternative Asset Manager Stocks With Fee Based Growth Exposure",
+   "summary": "A quiet corner of the market is moving. Mitsubishi Corporation’s decision to monetize a 49.9% stake in LNG Canada for about US$1.6b, and the US$3.1b Blackstone-led investment alongside a planned Phase 2 expansion, has pulled global attention toward listed alternative asset manage",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-alternative-asset-manager-stocks-191004415.html?.tsrc=rss",
+   "published_at": "2026-11-02T19:10:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-04T06:02:33Z",
+   "fingerprint": "6576427c05592a0f",
+   "primary_source": false,
+   "cluster_id": "721f6d2ea82ef3a5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "3 Alternative Asset Manager-Aktien mit kostenpflichtigem Wachstumsrisiko"
+  },
   {
    "id": "69bc892a06b4a693",
    "symbols": [
@@ -1003,7 +1141,7 @@
    "primary_source": false,
    "cluster_id": "fe1038e15a02584e",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   },
   {

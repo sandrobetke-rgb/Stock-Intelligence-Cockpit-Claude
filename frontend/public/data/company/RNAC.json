@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T22:20:39Z",
+ "generated_at": "2026-11-04T06:02:26Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -173,12 +173,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 1.8,
+   "score": 37.2,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "freshness",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 2,
+   "independent_24h": 2
   },
   "political": {
    "relevance": 0,
@@ -217,7 +219,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/rnac/earnings",
-    "days_until": 2
+    "days_until": 1
    }
   ],
   "politicians": null,
@@ -686,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 1.8,
+  "score": 37.2,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 68.2,
+   "freshness": 100.0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 10.4,
@@ -699,35 +701,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 2,
+    "independent": 2,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 2,
+    "independent": 2,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 2,
+    "independent": 2,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "freshness",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -746,6 +750,52 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "5b25a464005e6619",
+   "symbols": [
+    "RNAC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Amgen (AMGN) Tops Q3 Earnings and Revenue Estimates",
+   "summary": "Amgen (AMGN) delivered earnings and revenue surprises of +12.37% and +4.14%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/amgen-amgn-tops-q3-earnings-211501963.html?.tsrc=rss",
+   "published_at": "2026-11-03T21:15:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-04T06:04:21Z",
+   "fingerprint": "2255db79cf86c6a1",
+   "primary_source": false,
+   "cluster_id": "5b25a464005e6619",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Amgen (AMGN) Tops Q3 Ergebnisse und Einnahmenschätzungen"
+  },
+  {
+   "id": "636580ed5ab15e2a",
+   "symbols": [
+    "RNAC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cartesian Therapeutics Announces New Employment Inducement Grant",
+   "summary": "FREDERICK, Md., Nov. 03, 2026 (GLOBE NEWSWIRE) -- Cartesian Therapeutics, Inc. (NASDAQ: RNAC) (the “Company”), a late clinical-stage biotechnology company pioneering cell therapy for autoimmune diseases, today announced the granting of an inducement award to one new employee. On ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/cartesian-therapeutics-announces-employment-inducement-120000175.html?.tsrc=rss",
+   "published_at": "2026-11-03T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-04T06:04:21Z",
+   "fingerprint": "51a4ced4d80422b7",
+   "primary_source": false,
+   "cluster_id": "170bdbd157fd36df",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Cartesian Therapeutics kündigt neuen Employment Inducement Grant"
+  },
   {
    "id": "07eeeee116aad374",
    "symbols": [
@@ -878,7 +928,7 @@
    "primary_source": false,
    "cluster_id": "170bdbd157fd36df",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   },
   {

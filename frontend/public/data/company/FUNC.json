@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T22:20:39Z",
+ "generated_at": "2026-11-04T06:02:26Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -171,9 +171,11 @@
    ]
   },
   "market_intelligence": {
-   "score": 5.1,
+   "score": 11.8,
    "drivers": [
-    "price_volume_anomaly"
+    "insider_activity",
+    "price_volume_anomaly",
+    "social_attention"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -186,14 +188,21 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 1,
+   "manipulation_risk": "unauffällig",
+   "mentions_24h": 1,
+   "sentiment_7d": 1.0,
+   "bullish_7d": 1,
+   "bearish_7d": 0
+  },
   "insider": {
    "window_days": 90,
-   "open_market_buys": 0,
-   "open_market_sells": 0,
-   "buy_value": 0,
-   "sell_value": 0,
-   "distinct_buyers": 0,
+   "open_market_buys": 3,
+   "open_market_sells": 1,
+   "buy_value": 6937.5,
+   "sell_value": 46255.0,
+   "distinct_buyers": 3,
    "other_transactions": 3
   },
   "superinvestors": {
@@ -582,7 +591,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 5.1,
+  "score": 11.8,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -590,8 +599,8 @@
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 28.8,
-   "social_attention": null,
-   "insider_activity": null
+   "social_attention": 25.0,
+   "insider_activity": 100.0
   },
   "windows": {
    "24h": {
@@ -623,7 +632,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "insider_activity",
+   "price_volume_anomaly",
+   "social_attention"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -1048,6 +1059,90 @@
  ],
  "insiders": [
   {
+   "id": "8b168abfd73fa68c",
+   "symbol": "FUNC",
+   "insider": "Boal Brian R.",
+   "owner_cik": 1609298,
+   "role": "Director",
+   "transaction_code": "P",
+   "transaction_kind": "buy",
+   "transaction_label": "Kauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-11-02",
+   "filed_at": "2026-11-03",
+   "reporting_delay_days": 1,
+   "shares": 78.9,
+   "price": 46.308,
+   "value": 3653.7,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/763907/000101410026000029/0001014100-26-000029-index.htm"
+  },
+  {
+   "id": "43f9967cdb868030",
+   "symbol": "FUNC",
+   "insider": "Rudy Irvin Robert",
+   "owner_cik": 1208044,
+   "role": "Director",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-11-03",
+   "filed_at": "2026-11-03",
+   "reporting_delay_days": 0,
+   "shares": 1000.0,
+   "price": 46.255,
+   "value": 46255.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/763907/000101410026000030/0001014100-26-000030-index.htm"
+  },
+  {
+   "id": "bf7cbb3a74104a1b",
+   "symbol": "FUNC",
+   "insider": "Sturm Tonya K.",
+   "owner_cik": 1644053,
+   "role": "EVP & CFO",
+   "transaction_code": "P",
+   "transaction_kind": "buy",
+   "transaction_label": "Kauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-11-02",
+   "filed_at": "2026-11-03",
+   "reporting_delay_days": 1,
+   "shares": 2.647,
+   "price": 46.308,
+   "value": 122.58,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/763907/000101410026000031/0001014100-26-000031-index.htm"
+  },
+  {
+   "id": "47399df0b45cf35d",
+   "symbol": "FUNC",
+   "insider": "Rush Jason Barry",
+   "owner_cik": 1354841,
+   "role": "Director, Chairman, President & CEO",
+   "transaction_code": "P",
+   "transaction_kind": "buy",
+   "transaction_label": "Kauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-11-02",
+   "filed_at": "2026-11-03",
+   "reporting_delay_days": 1,
+   "shares": 68.265,
+   "price": 46.308,
+   "value": 3161.22,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/763907/000101410026000032/0001014100-26-000032-index.htm"
+  },
+  {
    "id": "b55e473d9e523b3d",
    "symbol": "FUNC",
    "insider": "Bender Shawn Robert",
@@ -1125,7 +1220,40 @@
    "report_date": "2026-06-30"
   }
  ],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 1,
+  "mentions_7d": 1,
+  "mentions_30d": 3,
+  "change_vs_baseline_pct": null,
+  "engagement_7d": 0.0,
+  "sentiment_7d": 1.0,
+  "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
+  "bullish_7d": 1,
+  "bearish_7d": 0,
+  "by_platform_7d": {
+   "stocktwits": 1
+  },
+  "communities_7d": {
+   "StockTwits": 1
+  },
+  "platforms": [
+   "stocktwits"
+  ],
+  "manipulation_flags": [],
+  "manipulation_risk": "unauffällig",
+  "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "CEOBuysDisclosures",
+    "posted_at": "2026-11-04T01:55:00Z",
+    "url": "https://stocktwits.com/CEOBuysDisclosures/message/668082610",
+    "text": "$FUNC CEO purchased 68 shares at $46.31 for a total of $3,149. Rush Jason Barry now owns 27,469 shares. https://ceo-buys.com",
+    "engagement": 0.0,
+    "sentiment_label": "Bullish"
+   }
+  ]
+ },
  "attention": null,
  "history": []
 }

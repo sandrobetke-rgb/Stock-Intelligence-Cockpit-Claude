@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T22:20:39Z",
+ "generated_at": "2026-11-04T06:02:26Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -172,14 +172,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 50.2,
+   "score": 49.0,
    "drivers": [
     "news_flow",
     "source_diversity",
-    "price_volume_anomaly"
+    "freshness"
    ],
-   "independent_7d": 11,
-   "independent_24h": 0
+   "independent_7d": 9,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -217,7 +217,7 @@
     "confirmed": true,
     "source": "Nasdaq-Dividendenkalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/pcar/dividend-history",
-    "days_until": 7
+    "days_until": 6
    }
   ],
   "politicians": null,
@@ -690,11 +690,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 50.2,
+  "score": 49.0,
   "components": {
    "news_flow": 100.0,
-   "freshness": 0,
-   "source_diversity": 100.0,
+   "freshness": 50,
+   "source_diversity": 60,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 17.8,
@@ -703,26 +703,26 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 11,
-    "independent": 11,
+    "signals": 9,
+    "independent": 9,
     "duplicates": 0,
-    "sources": 5,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 19,
-    "independent": 19,
+    "signals": 20,
+    "independent": 20,
     "duplicates": 0,
     "sources": 6,
     "primary": 0,
@@ -733,7 +733,7 @@
   "drivers": [
    "news_flow",
    "source_diversity",
-   "price_volume_anomaly"
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -752,6 +752,29 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "396959555fa9445b",
+   "symbols": [
+    "PCAR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 of Wall Street’s favorite stocks that concern us",
+   "summary": "Wall Street has set ambitious price targets for the stocks in this article. While this suggests attractive upside potential, it’s important to remain skeptical because analysts face institutional pressures that can sometimes lead to overly optimistic forecasts.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-wall-street-favorite-stocks-110136631.html?.tsrc=rss",
+   "published_at": "2026-11-03T11:01:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-04T06:02:38Z",
+   "fingerprint": "1b27a41a05d60eef",
+   "primary_source": false,
+   "cluster_id": "396959555fa9445b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "3 der Lieblingsaktien der Wall Street, die uns betreffen"
+  },
   {
    "id": "96281557bde5ec0e",
    "symbols": [
@@ -795,8 +818,7 @@
    "cluster_id": "782bcef9693a41c9",
    "independence": "original",
    "verification": "Unverified",
-   "feed": "yahoo_rss",
-   "title_de": "5 Must-Read-Analystenfragen aus dem Q3-Ergebnisaufruf von PACCAR"
+   "feed": "yahoo_rss"
   },
   {
    "id": "31c3458bd64c402b",
@@ -1224,16 +1246,14 @@
  "attention": {
   "title": "Paccar",
   "url": "https://en.wikipedia.org/wiki/Paccar",
-  "date": "2026-11-01",
-  "views_1d": 308,
-  "avg_7d": 339,
-  "avg_30d": 373,
-  "ratio_1d": 0.83,
-  "ratio_7d": 0.91,
+  "date": "2026-11-03",
+  "views_1d": 297,
+  "avg_7d": 336,
+  "avg_30d": 375,
+  "ratio_1d": 0.79,
+  "ratio_7d": 0.9,
   "spike": false,
   "series": [
-   490,
-   307,
    439,
    328,
    387,
@@ -1261,7 +1281,9 @@
    351,
    345,
    332,
-   308
+   308,
+   351,
+   297
   ]
  },
  "history": []

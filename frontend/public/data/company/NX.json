@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T22:20:39Z",
+ "generated_at": "2026-11-04T06:02:26Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -173,9 +173,10 @@
    ]
   },
   "market_intelligence": {
-   "score": 4.5,
+   "score": 4.8,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -192,11 +193,11 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 1,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 117285.85,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 1
   },
   "superinvestors": {
    "holders": 1,
@@ -672,7 +673,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 4.5,
+  "score": 4.8,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -681,7 +682,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 25.3,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 10
   },
   "windows": {
    "24h": {
@@ -713,7 +714,8 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -1176,7 +1178,50 @@
    "feed": "yahoo_rss"
   }
  ],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "89361c7c3dda87d3",
+   "symbol": "NX",
+   "insider": "Cornett Paul",
+   "owner_cik": 1793319,
+   "role": "SVP General Counsel, Secretary",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-11-02",
+   "filed_at": "2026-11-03",
+   "reporting_delay_days": 1,
+   "shares": 5500.0,
+   "price": 19.45,
+   "value": 106975.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1423221/000142322126000061/0001423221-26-000061-index.htm"
+  },
+  {
+   "id": "d38b524ffaf662af",
+   "symbol": "NX",
+   "insider": "Cornett Paul",
+   "owner_cik": 1793319,
+   "role": "SVP General Counsel, Secretary",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-11-02",
+   "filed_at": "2026-11-03",
+   "reporting_delay_days": 1,
+   "shares": 5500.0,
+   "price": 21.3247,
+   "value": 117285.85,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1423221/000142322126000061/0001423221-26-000061-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "big_stakes": [],
