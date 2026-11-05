@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T22:24:51Z",
+ "generated_at": "2026-11-05T06:04:43Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -55,11 +55,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 7.5,
+   "score": 23.7,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -90,7 +92,7 @@
     "confirmed": false,
     "source": "Yahoo Finance",
     "source_url": "https://finance.yahoo.com/quote/VUECF",
-    "days_until": 23
+    "days_until": 22
    }
   ],
   "politicians": null,
@@ -441,11 +443,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 7.5,
+  "score": 23.7,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 42.4,
@@ -463,17 +465,17 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 1,
-    "independent": 1,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
@@ -482,7 +484,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -501,6 +505,28 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "040266983af28254",
+   "symbols": [
+    "VUECF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Verdera Energy Corp. Receives TSX Venture Exchange Approval for New Normal Course Issuer Bid",
+   "summary": "Verdera Energy Corp. (TSXV: V) (OTCQB: VUECF) (the \"Company\" or \"Verdera\") announced today that it will establish a new normal course issuer bid (the \"New NCIB\"), reflecting the Company's expanded capitalization following the distribution of Verdera common shares to shareholders ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/verdera-energy-corp-receives-tsx-120000986.html?.tsrc=rss",
+   "published_at": "2026-11-02T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:05:26Z",
+   "fingerprint": "0648ad73bd822463",
+   "primary_source": false,
+   "cluster_id": "040266983af28254",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "388e1ab0e9ec0801",
    "symbols": [
@@ -571,6 +597,51 @@
    "feed": "yahoo_rss"
   },
   {
+   "id": "673720c38b7e89e6",
+   "symbols": [
+    "EU",
+    "VUECF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Verdera Energy Announces Completion of Share Distribution to enCore Energy Shareholders",
+   "summary": "Verdera Energy Corp. (TSXV: V) (OTCQB: VUECF) (\"Verdera\" or the \"Company\") announces that enCore Energy Corp. (NASDAQ: EU) (TSXV: EU) (\"enCore\") has completed the previously announced distribution of Verdera shares to enCore shareholders of record as of September 25, 2026. The di",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/verdera-energy-announces-completion-share-201500109.html?.tsrc=rss",
+   "published_at": "2026-10-01T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-02T06:07:51Z",
+   "fingerprint": "55b0b8f1baf09491",
+   "primary_source": false,
+   "cluster_id": "bf0da1fb00841597",
+   "independence": "copy",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "17c23f96ef4eca7d",
+   "symbols": [
+    "VUECF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "enCore Energy Completes Distribution of Verdera Common Shares to its Shareholders",
+   "summary": "enCore Energy Corp.(NASDAQ, TSXV: EU) (the \"Company\" or \"enCore\"), America's Clean Energy Company™, announces that it has completed the previously announced distribution of 35,000,000 common shares (the \"Distribution Shares\") of Verdera Energy Corp. (TSXV: V) (OTCQB: VUECF) (\"Ver",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/encore-energy-completes-distribution-verdera-201500290.html?.tsrc=rss",
+   "published_at": "2026-10-01T20:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:05:26Z",
+   "fingerprint": "55b1477a48d36d40",
+   "primary_source": false,
+   "cluster_id": "35ec2bb086b20b89",
+   "independence": "copy",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
    "id": "2cac5c31d2e51370",
    "symbols": [
     "VUECF"
@@ -615,6 +686,29 @@
    "feed": "yahoo_rss"
   },
   {
+   "id": "41f4d8eb0178ad1a",
+   "symbols": [
+    "EU",
+    "VUECF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Verdera Announces Intention to Commence Normal Course Issuer Bid; Company to Host Conference Call and Webcast",
+   "summary": "Verdera Energy Corp. (TSXV: V) (OTCQB: VUECF) (\"Verdera\" or the \"Company\") announces today its intention to effect a normal course issuer bid (the \"NCIB\") through the facilities of the TSX Venture Exchange (the \"TSXV\"). The Company also announces it will host a conference call an",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/verdera-announces-intention-commence-normal-110000099.html?.tsrc=rss",
+   "published_at": "2026-09-24T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-01T02:34:47Z",
+   "fingerprint": "acf7b6260ecf319c",
+   "primary_source": false,
+   "cluster_id": "41f4d8eb0178ad1a",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
    "id": "6bf1076eac8cf1e8",
    "symbols": [
     "VUECF"
@@ -631,8 +725,8 @@
    "captured_at": "2026-11-01T07:46:29Z",
    "fingerprint": "acf7b6260ecf319c",
    "primary_source": false,
-   "cluster_id": "6bf1076eac8cf1e8",
-   "independence": "original",
+   "cluster_id": "41f4d8eb0178ad1a",
+   "independence": "copy",
    "verification": "Outdated",
    "feed": "yahoo_rss"
   },
@@ -766,6 +860,28 @@
    "primary_source": false,
    "cluster_id": "d1c9088f9102bf22",
    "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "365158066d129679",
+   "symbols": [
+    "VUECF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Verdera Energy Announces Sale of Treeline Project, New Mexico",
+   "summary": "Verdera Energy Corp. (TSXV: V) (OTCQB: VUECF) (\"Verdera\" or the \"Company\") announced today that the Company has entered into a Mineral Property Purchase and Sale Agreement pursuant to which Americas Uranium Corp. has agreed to acquire a 100% interest, subject to royalties, in the",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/verdera-energy-announces-sale-treeline-110000772.html?.tsrc=rss",
+   "published_at": "2026-09-02T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:05:26Z",
+   "fingerprint": "91bcb1519a28f174",
+   "primary_source": false,
+   "cluster_id": "2313bcd72d267d78",
+   "independence": "copy",
    "verification": "Outdated",
    "feed": "yahoo_rss"
   }

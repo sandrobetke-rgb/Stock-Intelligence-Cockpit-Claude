@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T22:24:51Z",
+ "generated_at": "2026-11-05T06:04:43Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -173,12 +173,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.7,
+   "score": 45.0,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 4,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -217,7 +219,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/usgo/earnings",
-    "days_until": 8
+    "days_until": 7
    }
   ],
   "politicians": null,
@@ -686,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.7,
+  "score": 45.0,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 99.8,
+   "freshness": 50,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 15.5,
@@ -699,35 +701,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -746,6 +750,97 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "2f10e1bfe656a7b7",
+   "symbols": [
+    "SSRM",
+    "USGO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Permits, Project Financing and Quarterly Results Put U.S. Mining Supply Chains in Focus",
+   "summary": "US Metal News News Commentary - Gold futures pushed back above $4,000 an ounce in overnight trading on Wednesday, with December gold at $4,033.50, up $93.10 or 2.36%, as of approximately 2:39 a.m. ET, according to CME Group delayed quotes. December silver gained more, rising 4.10",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/permits-project-financing-quarterly-results-133000666.html?.tsrc=rss",
+   "published_at": "2026-11-04T13:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-04T22:28:52Z",
+   "fingerprint": "e1dea961cc2f8a67",
+   "primary_source": false,
+   "cluster_id": "2f10e1bfe656a7b7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Genehmigungen, Projektfinanzierung und Quartalsergebnisse rücken US-Mining-Lieferketten in den Fokus"
+  },
+  {
+   "id": "224fde0347a6e960",
+   "symbols": [
+    "USGO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "U.S. GoldMining Appoints John DeLucchi to Its Board of Directors to Support Strategic Growth and Advancement of the Whistler Gold-Copper Project, Alaska",
+   "summary": "U.S. GoldMining Inc. (NASDAQ: USGO) (\"U.S. GoldMining\" or the \"Company\") is pleased to announce that its Board of Directors (the \"Board\") has appointed John DeLucchi as a director of the Company effective as of November 2, 2026. Mr. DeLucchi has also been appointed Chair of the A",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/u-goldmining-appoints-john-delucchi-113000616.html?.tsrc=rss",
+   "published_at": "2026-11-03T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:04:50Z",
+   "fingerprint": "be2b84f258c5e486",
+   "primary_source": false,
+   "cluster_id": "224fde0347a6e960",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "U.S. GoldMining ernennt John DeLucchi in seinen Verwaltungsrat, um das strategische Wachstum und die Weiterentwicklung des Gold-Kupfer-Projekts Whistler, Alaska, zu unterstützen"
+  },
+  {
+   "id": "63212ee6d0ba7ca5",
+   "symbols": [
+    "USGO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "U.S. GoldMining Advances Alaska Access Road Permitting as Whistler Exploration Continues",
+   "summary": "U. S. GoldMining Inc. (NASDAQ:USGO) has reported progress on the permitting process for the West Susitna Access Project (WSAP), a proposed road development in Alaska that could improve access to the company’s Whistler Gold-Copper Project and connect the mineral resource area with",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "investorshub.advfn.com",
+   "url": "https://investorshub.advfn.com/market-news/article/39033/u-s-goldmining-advances-alaska-access-road-permitting-as-whistler-exploration-continues?.tsrc=rss",
+   "published_at": "2026-11-02T13:15:46Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:04:50Z",
+   "fingerprint": "8892eb3f289459f9",
+   "primary_source": false,
+   "cluster_id": "63212ee6d0ba7ca5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c4c5354b6bf9b08d",
+   "symbols": [
+    "USGO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "U.S. GoldMining Provides Update on Susitna Mineral District Developments",
+   "summary": "U.S. GoldMining Inc. (NASDAQ: USGO) (\"U.S. GoldMining\" or the \"Company\") provides an update on recent developments in the West Susitna Mineral District, including key developments which further support the business case and ongoing design and permitting of the West Susitna Access",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/u-goldmining-provides-susitna-mineral-113000945.html?.tsrc=rss",
+   "published_at": "2026-11-02T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:04:50Z",
+   "fingerprint": "5fe9d53761309634",
+   "primary_source": false,
+   "cluster_id": "c4c5354b6bf9b08d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "6cddb31a5131637c",
    "symbols": [
@@ -769,6 +864,28 @@
    "feed": "yahoo_rss"
   },
   {
+   "id": "2cfa41a2a100a7cc",
+   "symbols": [
+    "USGO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "U.S. GoldMining Expands Pipeline of High-Priority Targets With 2026 Surface Exploration Program at its Whistler Gold-Copper Project, Alaska",
+   "summary": "U.S. GoldMining Inc. (NASDAQ: USGO) (\"U.S. GoldMining\" or the \"Company\") announces the completion of a surface exploration program (the \"Program\") at its 100% owned Whistler Gold-Copper Project in Alaska (\"Whistler\" or the \"Project\"). Alongside the recently completed 7,493 meters",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/u-goldmining-expands-pipeline-high-103000550.html?.tsrc=rss",
+   "published_at": "2026-09-28T10:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:04:50Z",
+   "fingerprint": "d93868ce80d0f9e1",
+   "primary_source": false,
+   "cluster_id": "6cddb31a5131637c",
+   "independence": "copy",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
    "id": "2508dba6bc0ae613",
    "symbols": [
     "USGO"
@@ -787,6 +904,28 @@
    "primary_source": false,
    "cluster_id": "2508dba6bc0ae613",
    "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "273bdccebca60fe9",
+   "symbols": [
+    "USGO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "U.S. GoldMining Completes 2026 Drill Program Targeting High-Priority Porphyry Centers at its 100% Owned Whistler Gold-Copper Project, Alaska",
+   "summary": "U.S. GoldMining Inc. (NASDAQ: USGO) (\"U.S. GoldMining\" or the \"Company\") is pleased to announce that it has completed its 2026 exploration program (the \"Program\") at its 100% owned Whistler Gold-Copper Project in Alaska (\"Whistler\" or the \"Project\").",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/u-goldmining-completes-2026-drill-103000555.html?.tsrc=rss",
+   "published_at": "2026-09-22T10:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:04:50Z",
+   "fingerprint": "9467f60f01578e98",
+   "primary_source": false,
+   "cluster_id": "2508dba6bc0ae613",
+   "independence": "copy",
    "verification": "Outdated",
    "feed": "yahoo_rss"
   },
@@ -853,6 +992,28 @@
    "primary_source": false,
    "cluster_id": "dc1051b29fb7b74c",
    "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e8d3505e6dc12353",
+   "symbols": [
+    "USGO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "U.S. GoldMining Commences 2026 Drilling Program to Test High-Priority Exploration Targets at its 100% Owned Whistler Gold-Copper Project, Alaska",
+   "summary": "U.S. GoldMining Inc. (NASDAQ: USGO) (\"U.S. GoldMining\" or the \"Company\") is pleased to announce that it has commenced drilling as part of the previously announced 2026 exploration program (the \"Program\") at its 100% owned Whistler Gold-Copper Project in Alaska (\"Whistler\" or the ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/u-goldmining-commences-2026-drilling-103000027.html?.tsrc=rss",
+   "published_at": "2026-07-06T10:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:04:50Z",
+   "fingerprint": "b73f599e805a68bb",
+   "primary_source": false,
+   "cluster_id": "dc1051b29fb7b74c",
+   "independence": "copy",
    "verification": "Outdated",
    "feed": "yahoo_rss"
   },

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T22:24:51Z",
+ "generated_at": "2026-11-05T06:04:43Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -172,12 +172,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 1.7,
+   "score": 31.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "freshness",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 2,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -216,7 +218,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/utz/earnings",
-    "days_until": 2
+    "days_until": 1
    }
   ],
   "politicians": null,
@@ -684,11 +686,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 1.7,
+  "score": 31.1,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 68.2,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 9.5,
@@ -697,26 +699,26 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 16,
-    "independent": 16,
+    "signals": 18,
+    "independent": 18,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
@@ -725,7 +727,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "freshness",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -744,6 +748,52 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "cd0f3c993af5372e",
+   "symbols": [
+    "UTZ"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "New York Times Co. (NYT) Q3 Earnings and Revenues Surpass Estimates",
+   "summary": "New York Times (NYT) delivered earnings and revenue surprises of +4.62% and +0.66%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/york-times-co-nyt-q3-125505022.html?.tsrc=rss",
+   "published_at": "2026-11-04T12:55:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:04:54Z",
+   "fingerprint": "f711b2480c5123bd",
+   "primary_source": false,
+   "cluster_id": "cd0f3c993af5372e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "New York Times Co. (NYT) Q3 Einnahmen und Einnahmen Surpass Schätzungen"
+  },
+  {
+   "id": "e1f916da14ce46ee",
+   "symbols": [
+    "UTZ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Defensive Consumer Stocks To Watch If Rates Stay Higher For Longer",
+   "summary": "Rates staying higher for longer, inflation that refuses to fully cool, and war risk pressuring costs together are pushing investors back toward reliability. Defensive stocks suddenly look less boring and more like potential shock absorbers for portfolios that have leaned heavily ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-defensive-consumer-stocks-watch-141133427.html?.tsrc=rss",
+   "published_at": "2026-11-03T14:11:33Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:04:54Z",
+   "fingerprint": "f45e71c08607173b",
+   "primary_source": false,
+   "cluster_id": "e1f916da14ce46ee",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "3 Defensive Verbraucheraktien zu beobachten, wenn die Preise länger höher bleiben"
+  },
   {
    "id": "7aceb7f7ddad122f",
    "symbols": [
@@ -1227,15 +1277,14 @@
  "attention": {
   "title": "Utz Brands",
   "url": "https://en.wikipedia.org/wiki/Utz_Brands",
-  "date": "2026-11-03",
-  "views_1d": 211,
-  "avg_7d": 262,
-  "avg_30d": 233,
-  "ratio_1d": 0.91,
-  "ratio_7d": 1.13,
+  "date": "2026-11-04",
+  "views_1d": 177,
+  "avg_7d": 254,
+  "avg_30d": 232,
+  "ratio_1d": 0.76,
+  "ratio_7d": 1.09,
   "spike": false,
   "series": [
-   233,
    203,
    227,
    211,
@@ -1264,7 +1313,8 @@
    294,
    360,
    278,
-   211
+   211,
+   177
   ]
  },
  "history": []

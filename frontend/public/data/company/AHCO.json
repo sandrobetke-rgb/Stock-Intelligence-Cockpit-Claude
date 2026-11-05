@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T22:24:51Z",
+ "generated_at": "2026-11-05T06:04:43Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -173,12 +173,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 17.6,
+   "score": 69.4,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 8,
+   "independent_24h": 2
   },
   "political": {
    "relevance": 0,
@@ -672,11 +674,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 17.6,
+  "score": 69.4,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 60,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 100.0,
@@ -685,35 +687,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 8,
+    "independent": 8,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 4,
-    "independent": 4,
+    "signals": 12,
+    "independent": 12,
     "duplicates": 0,
-    "sources": 1,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -732,6 +736,187 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "80bca19f5dc91870",
+   "symbols": [
+    "AHCO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "AdaptHealth Corp. to Participate in Upcoming Investor Conference",
+   "summary": "CONSHOHOCKEN, Pa., November 04, 2026--AdaptHealth Corp. (NASDAQ: AHCO) (\"AdaptHealth\" or the \"Company\"), a national leader in providing patient-centered, healthcare-at-home solutions including home medical equipment, medical supplies, and related services, announced today that it",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adapthealth-corp-participate-upcoming-investor-210500220.html?.tsrc=rss",
+   "published_at": "2026-11-04T21:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:59Z",
+   "fingerprint": "87c7da6630856040",
+   "primary_source": false,
+   "cluster_id": "80bca19f5dc91870",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "AdaptHealth Corp. nimmt an der bevorstehenden Investorenkonferenz teil"
+  },
+  {
+   "id": "dd9e17192dc7212f",
+   "symbols": [
+    "AHCO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "AdaptHealth's Capitated Contract Margins Improve, RBC Says",
+   "summary": "AdaptHealth (AHCO) delivered a solid Q3 beat-and-raise, supported by improving margins under its Wes",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adapthealth-apos-capitated-contract-margins-164231838.html?.tsrc=rss",
+   "published_at": "2026-11-04T16:42:31Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:59Z",
+   "fingerprint": "d1d324005a85bc4e",
+   "primary_source": false,
+   "cluster_id": "dd9e17192dc7212f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "AdaptHealth Capitated Contract Margins verbessern, sagt RBC"
+  },
+  {
+   "id": "3e98e61cf04fcbe6",
+   "symbols": [
+    "AHCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "AdaptHealth Corp (AHCO) (Q3 2026) Earnings Call Highlights: Revenue Beat and Capitated Contract ...",
+   "summary": "AdaptHealth Corp (AHCO) posted 10.9% revenue growth and raised full-year guidance, but a $184.8 million non-cash goodwill impairment drove a GAAP net loss and free cash flow guidance was lowered.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adapthealth-corp-ahco-q3-2026-230628681.html?.tsrc=rss",
+   "published_at": "2026-11-03T23:06:28Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:59Z",
+   "fingerprint": "b6a8b225ab485043",
+   "primary_source": false,
+   "cluster_id": "3e98e61cf04fcbe6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "AdaptHealth Corp (AHCO) (Q3 2026) Ergebnisaufruf Highlights: Umsatz Beat und Capitated ..."
+  },
+  {
+   "id": "adbbdca26d46d34f",
+   "symbols": [
+    "AHCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "AdaptHealth (AHCO) Q3 2026 Earnings Call Transcript",
+   "summary": "Sleep and respiratory revenue surged as capitated contract margins improved sharply.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/11/03/adapthealth-ahco-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-11-03T20:38:52Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:59Z",
+   "fingerprint": "a4514d956937d873",
+   "primary_source": false,
+   "cluster_id": "adbbdca26d46d34f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b8d52b381c957e21",
+   "symbols": [
+    "AHCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What AdaptHealth (AHCO) Said on Its Q3 Earnings Call",
+   "summary": "AdaptHealth (NASDAQ:AHCO) reported third-quarter results that exceeded its revenue and adjusted EBITDA guidance, citing improving performance in its largest capitated contract, continued organic growth in its base business and tighter cost controls. Chief Executive Officer Suzann",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-adapthealth-ahco-said-on-its-q3-earnings-call-2026-11-03/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-11-03T16:14:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:59Z",
+   "fingerprint": "3a07f04cdc531141",
+   "primary_source": false,
+   "cluster_id": "b8d52b381c957e21",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Was AdaptHealth (AHCO) auf seinem Q3-Gewinnaufruf sagte"
+  },
+  {
+   "id": "53dc702a8e65995c",
+   "symbols": [
+    "AHCO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "AdaptHealth (NASDAQ:AHCO) surprises with Q3 2026 sales, stock soars",
+   "summary": "Healthcare services provider AdaptHealth Corp. (NASDAQ:AHCO) reported Q3 2026 results exceeding the market’s revenue expectations, but revenue fell by 9.1% year on year to $745.6 million. The company expects the full year’s revenue to be around $2.89 billion, close to analysts’ c",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adapthealth-nasdaq-ahco-surprises-q3-125213805.html?.tsrc=rss",
+   "published_at": "2026-11-03T12:52:13Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:59Z",
+   "fingerprint": "a883d5dfe6c3f3ca",
+   "primary_source": false,
+   "cluster_id": "53dc702a8e65995c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "AdaptHealth (NASDAQ:AHCO) überrascht mit Q3 2026 Verkäufe, Lager steigt"
+  },
+  {
+   "id": "d38a5364b99f45f4",
+   "symbols": [
+    "AHCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "AdaptHealth Corp. Announces Third Quarter 2026 Results",
+   "summary": "CONSHOHOCKEN, Pa., November 03, 2026--AdaptHealth Corp. (NASDAQ: AHCO) (\"AdaptHealth\" or the \"Company\"), a national leader in providing patient-centered, healthcare-at-home solutions including home medical equipment, medical supplies, and related services, announced today financi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adapthealth-corp-announces-third-quarter-120000857.html?.tsrc=rss",
+   "published_at": "2026-11-03T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:59Z",
+   "fingerprint": "7815145d3d335e67",
+   "primary_source": false,
+   "cluster_id": "d38a5364b99f45f4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2e58f34dd67b2920",
+   "symbols": [
+    "AHCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "AdaptHealth (AHCO) reports earnings tomorrow: what to expect",
+   "summary": "Healthcare services provider AdaptHealth Corp. (NASDAQ:AHCO) will be reporting results this Tuesday before market hours. Here’s what to look for.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/adapthealth-ahco-reports-earnings-tomorrow-062936001.html?.tsrc=rss",
+   "published_at": "2026-11-02T06:29:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:59Z",
+   "fingerprint": "55dd3cc0c19ba163",
+   "primary_source": false,
+   "cluster_id": "2e58f34dd67b2920",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "b56eb898d9217aee",
    "symbols": [

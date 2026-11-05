@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T22:24:51Z",
+ "generated_at": "2026-11-05T06:04:43Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -172,11 +172,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 15.3,
+   "score": 31.4,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "news_flow",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -210,7 +212,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/zumz/earnings",
-    "days_until": 29
+    "days_until": 28
    }
   ],
   "politicians": null,
@@ -678,11 +680,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 15.3,
+  "score": 31.4,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 86.5,
@@ -700,17 +702,17 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 5,
-    "independent": 5,
+    "signals": 6,
+    "independent": 6,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
@@ -719,7 +721,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "news_flow",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -738,6 +742,30 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "4e8daa9897188b7f",
+   "symbols": [
+    "TJX",
+    "ZUMZ"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Consumer Discretionary Stocks To Watch As Higher Rates Reshape Spending",
+   "summary": "Consumers are still spending, inflation is still sticky and the Fed is hinting at higher rates for longer, which makes stock picking feel a lot more high stakes. When wealth effects and tight policy pull in opposite directions, some companies tied to discretionary spending can be",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-consumer-discretionary-stocks-watch-171058044.html?.tsrc=rss",
+   "published_at": "2026-11-03T17:10:58Z",
+   "date_only": false,
+   "captured_at": "2026-11-04T22:29:39Z",
+   "fingerprint": "9e34da10f4e0017c",
+   "primary_source": false,
+   "cluster_id": "4e8daa9897188b7f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "3 Verbraucher diskretionäre Aktien zu sehen, wie höhere Raten Ausgaben umgestalten"
+  },
   {
    "id": "973e9b203da0b0bb",
    "symbols": [
@@ -1194,15 +1222,14 @@
  "attention": {
   "title": "Zumiez",
   "url": "https://en.wikipedia.org/wiki/Zumiez",
-  "date": "2026-11-03",
-  "views_1d": 43,
+  "date": "2026-11-04",
+  "views_1d": 60,
   "avg_7d": 46,
   "avg_30d": 55,
-  "ratio_1d": 0.78,
+  "ratio_1d": 1.09,
   "ratio_7d": 0.83,
   "spike": false,
   "series": [
-   54,
    46,
    76,
    66,
@@ -1231,7 +1258,8 @@
    42,
    41,
    49,
-   43
+   43,
+   60
   ]
  },
  "history": []

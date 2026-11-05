@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T22:24:51Z",
+ "generated_at": "2026-11-05T06:04:43Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -175,12 +175,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 17.6,
+   "score": 66.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 9,
+   "independent_24h": 2
   },
   "political": {
    "relevance": 0,
@@ -194,9 +196,9 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 1,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 300000.0,
    "distinct_buyers": 0,
    "other_transactions": 0
   },
@@ -219,7 +221,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/acel/earnings",
-    "days_until": -1
+    "days_until": -2
    }
   ],
   "politicians": null,
@@ -690,48 +692,50 @@
   ]
  },
  "intelligence_detail": {
-  "score": 17.6,
+  "score": 66.1,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 60,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 100.0,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 10
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 9,
+    "independent": 9,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 8,
-    "independent": 8,
+    "signals": 17,
+    "independent": 17,
     "duplicates": 0,
-    "sources": 1,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -750,6 +754,209 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "2a97a4c14ea01431",
+   "symbols": [
+    "ACEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Accel Entertainment Was a Huge Winner on Wednesday",
+   "summary": "Investors were clearly impressed by the gaming company's third-quarter performance.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/11/04/why-accel-entertainment-was-a-huge-winner-on-wednesday/?.tsrc=rss",
+   "published_at": "2026-11-05T01:32:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:33Z",
+   "fingerprint": "c86e341a24b6abf1",
+   "primary_source": false,
+   "cluster_id": "2a97a4c14ea01431",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Warum Accel Entertainment am Mittwoch ein großer Gewinner war"
+  },
+  {
+   "id": "0c959b8048556658",
+   "symbols": [
+    "ACEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Accel Entertainment (ACEL) Q3 2026 Earnings Call Transcript",
+   "summary": "Chicago licenses are in hand as Illinois results improved on a sharper location mix.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/11/04/accel-entertainment-acel-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-11-04T16:47:21Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:33Z",
+   "fingerprint": "287bc8fcaa314c9a",
+   "primary_source": false,
+   "cluster_id": "0c959b8048556658",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ef14ef7fdadc59bc",
+   "symbols": [
+    "ACEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Accel Entertainment Inc (ACEL) (Q3 2026) Earnings Call Highlights: Double-Digit Revenue Growth, ...",
+   "summary": "Accel Entertainment Inc (ACEL) beat Q3 2026 consensus with 10% revenue growth and 12% adjusted EBITDA growth, while flagging higher Fairmount construction costs and a multi-year Chicago rollout.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/accel-entertainment-inc-acel-q3-051105896.html?.tsrc=rss",
+   "published_at": "2026-11-04T05:11:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:33Z",
+   "fingerprint": "87e178caa8e7e5a5",
+   "primary_source": false,
+   "cluster_id": "ef14ef7fdadc59bc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "62d16bfea756c668",
+   "symbols": [
+    "ACEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What Accel Entertainment (ACEL) Said on Its Q3 Earnings Call",
+   "summary": "Accel Entertainment (NYSE:ACEL) reported third-quarter revenue of $364 million, up 10% from a year earlier, while adjusted EBITDA rose 12% to $57 million, as the company cited improving productivity in its core Illinois operations and growth across newer markets. Net income incre",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-accel-entertainment-acel-said-on-its-q3-earnings-call-2026-11-03/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-11-04T04:14:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:33Z",
+   "fingerprint": "8df2e454c2d00173",
+   "primary_source": false,
+   "cluster_id": "62d16bfea756c668",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Was Accel Entertainment (ACEL) auf seinem Q3-Gewinnaufruf sagte"
+  },
+  {
+   "id": "429573a564f77f16",
+   "symbols": [
+    "ACEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Accel Entertainment (ACEL) Beats Q3 Earnings and Revenue Estimates",
+   "summary": "Accel Entertainment (ACEL) delivered earnings and revenue surprises of +47.06% and +2.25%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/accel-entertainment-acel-beats-q3-235502950.html?.tsrc=rss",
+   "published_at": "2026-11-03T23:55:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:33Z",
+   "fingerprint": "918f3c3a93e280d9",
+   "primary_source": false,
+   "cluster_id": "429573a564f77f16",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Accel Entertainment (ACEL) schlägt Q3-Ergebnisse und Einnahmenschätzungen"
+  },
+  {
+   "id": "3aa3141e01b3bfcf",
+   "symbols": [
+    "ACEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Accel Entertainment: Q3 Earnings Snapshot",
+   "summary": "(AP) — Accel Entertainment, Inc. (ACEL) on Tuesday reported third-quarter earnings of $20.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/accel-entertainment-q3-earnings-snapshot-215957632.html?.tsrc=rss",
+   "published_at": "2026-11-03T21:59:57Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:33Z",
+   "fingerprint": "458be89e331e42b8",
+   "primary_source": false,
+   "cluster_id": "3aa3141e01b3bfcf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f32138cb2cd5ded8",
+   "symbols": [
+    "ACEL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Accel Entertainment (NYSE:ACEL) posts better-than-expected sales in Q3 2026",
+   "summary": "Slot machine and terminal operator Accel Entertainment (NYSE:ACEL) reported revenue ahead of Wall Street’s expectations in Q3 2026, with revenue up 10.3% year on year to $363.6 million. Its GAAP profit of $0.25 per share was 39.4% above analysts’ consensus estimates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/accel-entertainment-nyse-acel-posts-213708016.html?.tsrc=rss",
+   "published_at": "2026-11-03T21:37:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:33Z",
+   "fingerprint": "8889759c6e59e251",
+   "primary_source": false,
+   "cluster_id": "f32138cb2cd5ded8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Accel Entertainment (NYSE:ACEL) erzielt im dritten Quartal 2026 bessere Verkäufe als erwartet"
+  },
+  {
+   "id": "32ae9664a6f4d7f4",
+   "symbols": [
+    "ACEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Accel Entertainment Reports Record Third Quarter Revenue of $364 Million",
+   "summary": "Net Income increases 55% and Adjusted EBITDA increases 12% year-over-yearCHICAGO, Nov. 03, 2026 (GLOBE NEWSWIRE) -- Accel Entertainment, Inc. (NYSE: ACEL), a leading locals-focused gaming operator partnering with small businesses, local communities, and state governments to provi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/accel-entertainment-reports-record-third-211500151.html?.tsrc=rss",
+   "published_at": "2026-11-03T21:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:33Z",
+   "fingerprint": "dbfa31c4e7febbdb",
+   "primary_source": false,
+   "cluster_id": "32ae9664a6f4d7f4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Accel Entertainment meldet Rekordumsatz im dritten Quartal von 364 Millionen US-Dollar"
+  },
+  {
+   "id": "5791c913c376ec2e",
+   "symbols": [
+    "ACEL"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Accel Entertainment (ACEL) Q3 earnings report preview: what to look for",
+   "summary": "Slot machine and terminal operator Accel Entertainment (NYSE:ACEL) will be announcing earnings results this Tuesday after market close. Here’s what to look for.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/accel-entertainment-acel-q3-earnings-092536112.html?.tsrc=rss",
+   "published_at": "2026-11-02T09:25:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:33Z",
+   "fingerprint": "fea3c24384917ee2",
+   "primary_source": false,
+   "cluster_id": "5791c913c376ec2e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "50672357726bf36f",
    "symbols": [
@@ -1176,7 +1383,29 @@
    "feed": "yahoo_rss"
   }
  ],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "a4b4625bffcd7e02",
+   "symbol": "ACEL",
+   "insider": "Phelan Mark T.",
+   "owner_cik": 1794567,
+   "role": "President and CEO",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-11-02",
+   "filed_at": "2026-11-04",
+   "reporting_delay_days": 2,
+   "shares": 25000.0,
+   "price": 12.0,
+   "value": 300000.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1698991/000179456726000015/0001794567-26-000015-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "big_stakes": [],

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T22:24:51Z",
+ "generated_at": "2026-11-05T06:04:43Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -172,14 +172,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 24.9,
+   "score": 53.4,
    "drivers": [
     "news_flow",
-    "price_volume_anomaly",
-    "analyst_activity"
+    "freshness",
+    "price_volume_anomaly"
    ],
-   "independent_7d": 1,
-   "independent_24h": 0
+   "independent_7d": 5,
+   "independent_24h": 3
   },
   "political": {
    "relevance": 0,
@@ -212,7 +212,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/acr/earnings",
-    "days_until": 0
+    "days_until": -1
    }
   ],
   "politicians": null,
@@ -680,10 +680,10 @@
   ]
  },
  "intelligence_detail": {
-  "score": 24.9,
+  "score": 53.4,
   "components": {
-   "news_flow": 43.0,
-   "freshness": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
    "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 35,
@@ -693,27 +693,27 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 3,
+    "independent": 3,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 1,
-    "independent": 1,
-    "duplicates": 0,
+    "signals": 5,
+    "independent": 5,
+    "duplicates": 1,
     "sources": 1,
     "primary": 0,
     "analyst_changes": 1,
     "verified": 0
    },
    "30d": {
-    "signals": 2,
-    "independent": 2,
-    "duplicates": 0,
+    "signals": 6,
+    "independent": 5,
+    "duplicates": 1,
     "sources": 1,
     "primary": 0,
     "analyst_changes": 1,
@@ -722,8 +722,8 @@
   },
   "drivers": [
    "news_flow",
-   "price_volume_anomaly",
-   "analyst_activity"
+   "freshness",
+   "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -742,6 +742,96 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "f8391172d282e6d7",
+   "symbols": [
+    "ACR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACRES Commercial (ACR) Reports Q3 Loss, Tops Revenue Estimates",
+   "summary": "ACRES Commercial (ACR) delivered earnings and revenue surprises of -1,860.00% and +1.48%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/acres-commercial-acr-reports-q3-215002499.html?.tsrc=rss",
+   "published_at": "2026-11-04T21:50:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:39Z",
+   "fingerprint": "2df26bb172e19ae3",
+   "primary_source": false,
+   "cluster_id": "f8391172d282e6d7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "604a53004003451f",
+   "symbols": [
+    "ACR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACRES Commercial: Q3 Earnings Snapshot",
+   "summary": "(AP) — ACRES Commercial Realty Corp. (ACR) on Wednesday reported a third-quarter loss of $50.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/acres-commercial-q3-earnings-snapshot-214557254.html?.tsrc=rss",
+   "published_at": "2026-11-04T21:45:57Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:39Z",
+   "fingerprint": "e7b5bacb50eaf855",
+   "primary_source": false,
+   "cluster_id": "604a53004003451f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d59875a20d5bc0ae",
+   "symbols": [
+    "ACR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "ACRES COMMERCIAL REALTY CORP. REPORTS RESULTS FOR THIRD QUARTER 2026",
+   "summary": "ACRES Commercial Realty Corp. (NYSE: ACR) (\"ACR\" or the \"Company\"), a real estate investment trust that is primarily focused on originating, underwriting and managing commercial real estate mortgage loans and that manages third-party capital and provides insurance solutions, toda",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/acres-commercial-realty-corp-reports-211500317.html?.tsrc=rss",
+   "published_at": "2026-11-04T21:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:39Z",
+   "fingerprint": "d3fa7ac6a8be1ac9",
+   "primary_source": false,
+   "cluster_id": "30cd4a41711537f4",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "ACRES COMMERCIAL REALTY CORP. ERGEBNISSE FÜR DRITTSQUARTER 2026"
+  },
+  {
+   "id": "493f1b37ea5aac33",
+   "symbols": [
+    "ACR",
+    "RWT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Redwood Trust (RWT) Lags Q3 Earnings Estimates",
+   "summary": "Redwood Trust (RWT) delivered earnings and revenue surprises of -18.18% and +8.95%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/redwood-trust-rwt-lags-q3-235508769.html?.tsrc=rss",
+   "published_at": "2026-11-03T23:55:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-04T06:04:35Z",
+   "fingerprint": "327cbae211efa41e",
+   "primary_source": false,
+   "cluster_id": "493f1b37ea5aac33",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "85c8c50e1fd48d14",
    "symbols": [

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T22:24:51Z",
+ "generated_at": "2026-11-05T06:04:43Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -174,12 +174,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 16.9,
+   "score": 51.6,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 3,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -218,7 +220,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/xray/earnings",
-    "days_until": 1
+    "days_until": 0
    }
   ],
   "politicians": null,
@@ -688,11 +690,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 16.9,
+  "score": 51.6,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 86.0,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 95.6,
@@ -701,26 +703,26 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 12,
-    "independent": 12,
+    "signals": 15,
+    "independent": 15,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
@@ -729,7 +731,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -748,6 +752,76 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "161614f1cc05b741",
+   "symbols": [
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "DENTSPLY SIRONA to Post Q3 Earnings: What's in Store for the Stock?",
+   "summary": "DENTSPLY SIRONA faces Q3 earnings pressure from weak dental demand, tariff costs and segment challenges, while Wellspect's growth may offer some relief.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dentsply-sirona-post-q3-earnings-134200795.html?.tsrc=rss",
+   "published_at": "2026-11-04T13:42:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:06Z",
+   "fingerprint": "b1d9d3c1508f4392",
+   "primary_source": false,
+   "cluster_id": "161614f1cc05b741",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "DENTSPLY SIRONA zu Post Q3 Einnahmen: Was ist im Speicher für die Aktie?"
+  },
+  {
+   "id": "aace69652b6ab032",
+   "symbols": [
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "DENTSPLY SIRONA (XRAY) Stock May Be Undervalued Following Fiduciary Duty Investigation",
+   "summary": "DENTSPLY SIRONA has seen its share price swing sharply in recent years, and that kind of volatility naturally pushes investors to ask whether today's valuation is supported by the dental group's sales base. With sentiment pulled between a long slide in the stock and fresh scrutin",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dentsply-sirona-xray-stock-may-042723974.html?.tsrc=rss",
+   "published_at": "2026-11-03T04:27:23Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:06:06Z",
+   "fingerprint": "26576e500101b418",
+   "primary_source": false,
+   "cluster_id": "aace69652b6ab032",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "DENTSPLY SIRONA (XRAY) Aktie kann nach Treuhandzolluntersuchung unterbewertet werden"
+  },
+  {
+   "id": "19e631c51c4eb9df",
+   "symbols": [
+    "ALGN",
+    "HSIC",
+    "XRAY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Global Orthodontic Braces Market Size, Share, and Forecast Report 2026-2031 Featuring Profiles of Dentsply Sirona, Align Technology, Straumann, Envista, 3M, Henry Schein, and American Orthodontics",
+   "summary": "Capitalize on clear aligners, adult orthodontics, AI-driven personalization and direct-to-consumer care through targeted innovation and digital accessDublin, Nov. 02, 2026 (GLOBE NEWSWIRE) -- \"Orthodontic Braces Market (2026 Edition)\" has been added to ResearchAndMarkets.com's of",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/global-orthodontic-braces-market-size-144300936.html?.tsrc=rss",
+   "published_at": "2026-11-02T14:43:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-02T22:25:47Z",
+   "fingerprint": "91854d8d0fc6e51e",
+   "primary_source": false,
+   "cluster_id": "19e631c51c4eb9df",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "026f184306f53cdb",
    "symbols": [
