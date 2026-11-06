@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T22:24:38Z",
+ "generated_at": "2026-11-06T06:01:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -173,13 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 32.8,
+   "score": 25.7,
    "drivers": [
     "news_flow",
-    "source_diversity",
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "social_attention"
    ],
-   "independent_7d": 2,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -190,14 +190,21 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 2,
+   "manipulation_risk": "unauffällig",
+   "mentions_24h": 2,
+   "sentiment_7d": 0.5,
+   "bullish_7d": 1,
+   "bearish_7d": 0
+  },
   "insider": {
    "window_days": 90,
-   "open_market_buys": 3,
+   "open_market_buys": 4,
    "open_market_sells": 0,
-   "buy_value": 25743.95,
+   "buy_value": 1024107.95,
    "sell_value": 0,
-   "distinct_buyers": 1,
+   "distinct_buyers": 2,
    "other_transactions": 0
   },
   "superinvestors": null,
@@ -668,16 +675,16 @@
   ]
  },
  "intelligence_detail": {
-  "score": 32.8,
+  "score": 25.7,
   "components": {
-   "news_flow": 68.2,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 40,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 33.3,
-   "social_attention": null,
-   "insider_activity": 30
+   "social_attention": 39.6,
+   "insider_activity": 60
   },
   "windows": {
    "24h": {
@@ -690,10 +697,10 @@
     "verified": 0
    },
    "7d": {
-    "signals": 2,
-    "independent": 2,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 2,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -710,8 +717,8 @@
   },
   "drivers": [
    "news_flow",
-   "source_diversity",
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "social_attention"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -1160,6 +1167,27 @@
  ],
  "insiders": [
   {
+   "id": "5690524103b75aed",
+   "symbol": "FBRT",
+   "insider": "Byrne Richard J",
+   "owner_cik": 1602121,
+   "role": "Director, Chairman and CEO",
+   "transaction_code": "P",
+   "transaction_kind": "buy",
+   "transaction_label": "Kauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-11-03",
+   "filed_at": "2026-11-05",
+   "reporting_delay_days": 2,
+   "shares": 162600.0,
+   "price": 6.14,
+   "value": 998364.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1562528/000110465926123375/0001104659-26-123375-index.htm"
+  },
+  {
    "id": "e5468e9625e56a78",
    "symbol": "FBRT",
    "insider": "Ortale Buford H",
@@ -1227,7 +1255,50 @@
  "political_trades": [],
  "big_stakes": [],
  "superinvestors": [],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 2,
+  "mentions_7d": 2,
+  "mentions_30d": 6,
+  "change_vs_baseline_pct": null,
+  "engagement_7d": 0.0,
+  "sentiment_7d": 0.5,
+  "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
+  "bullish_7d": 1,
+  "bearish_7d": 0,
+  "by_platform_7d": {
+   "stocktwits": 2
+  },
+  "communities_7d": {
+   "StockTwits": 2
+  },
+  "platforms": [
+   "stocktwits"
+  ],
+  "manipulation_flags": [],
+  "manipulation_risk": "unauffällig",
+  "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "CEOBuysDisclosures",
+    "posted_at": "2026-11-05T23:35:00Z",
+    "url": "https://stocktwits.com/CEOBuysDisclosures/message/668364910",
+    "text": "$FBRT CEO purchased 162,600 shares at $6.14 for a total of $998,364. Byrne Richard J now owns 639,325 shares. https://ceo-buys.com",
+    "engagement": 0.0,
+    "sentiment_label": "Bullish"
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "openmarketalerts",
+    "posted_at": "2026-11-05T21:42:23Z",
+    "url": "https://stocktwits.com/openmarketalerts/message/668351760",
+    "text": "Chairman &amp; CEO Byrne Richard J bought $998K of $FBRT stock on Nov 3. \n \n• 162,600 shares at $6.14. \n• Bought 4.1% above the 52-week low. \n• Stake up 34%.",
+    "engagement": 0.0,
+    "sentiment_label": null
+   }
+  ]
+ },
  "attention": null,
  "history": []
 }

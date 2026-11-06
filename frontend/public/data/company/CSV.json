@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T22:24:38Z",
+ "generated_at": "2026-11-06T06:01:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -173,12 +173,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 17.6,
+   "score": 65.9,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 7,
+   "independent_24h": 2
   },
   "political": {
    "relevance": 0,
@@ -217,7 +219,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/csv/earnings",
-    "days_until": -1
+    "days_until": -2
    }
   ],
   "politicians": null,
@@ -686,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 17.6,
+  "score": 65.9,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 100.0,
@@ -699,35 +701,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 7,
+    "independent": 7,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 5,
-    "independent": 5,
+    "signals": 12,
+    "independent": 12,
     "duplicates": 0,
-    "sources": 2,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -746,6 +750,164 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "9151b61eb6e34234",
+   "symbols": [
+    "CSV"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Carriage Services Inc (CSV) (Q3 2026) Earnings Call Highlights: Funeral Contract Growth Offset ...",
+   "summary": "Carriage Services Inc (CSV) posted 2.3% same-store funeral contract growth but cut full-year 2026 guidance as California cemetery pre-need sales slumped and adjusted EBITDA fell 16%.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/carriage-services-inc-csv-q3-011215181.html?.tsrc=rss",
+   "published_at": "2026-11-06T01:12:15Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:02:39Z",
+   "fingerprint": "a8f24ed9b28e9b83",
+   "primary_source": false,
+   "cluster_id": "9151b61eb6e34234",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a2f7e662881fc712",
+   "symbols": [
+    "CSV"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Carriage Services (CSV) Q3 2026 Earnings Call Transcript",
+   "summary": "Cemetery sales slipped while funeral volumes grew and acquisitions advanced.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/11/05/carriage-services-csv-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-11-05T22:14:52Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:02:39Z",
+   "fingerprint": "a025ce352f862909",
+   "primary_source": false,
+   "cluster_id": "a2f7e662881fc712",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1f70df997cbc0e87",
+   "symbols": [
+    "CSV"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Carriage Services (CSV) Lags Q3 Earnings and Revenue Estimates",
+   "summary": "Carriage Services (CSV) delivered earnings and revenue surprises of -25.32% and -8.30%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/carriage-services-csv-lags-q3-234504585.html?.tsrc=rss",
+   "published_at": "2026-11-04T23:45:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:02:39Z",
+   "fingerprint": "c7cea39e81d49215",
+   "primary_source": false,
+   "cluster_id": "1f70df997cbc0e87",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Carriage Services (CSV) Lags Q3 Einnahmen und Einnahmenschätzungen"
+  },
+  {
+   "id": "58b6ce7818c7c622",
+   "symbols": [
+    "CSV"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compared to Estimates, Carriage Services (CSV) Q3 Earnings: A Look at Key Metrics",
+   "summary": "The headline numbers for Carriage Services (CSV) give insight into how the company performed in the quarter ended September 2026, but it may be worthwhile to compare some of its key metrics to Wall Street estimates and the year-ago actuals.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/compared-estimates-carriage-services-csv-230001602.html?.tsrc=rss",
+   "published_at": "2026-11-04T23:00:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:02:39Z",
+   "fingerprint": "6e150eb46cc25329",
+   "primary_source": false,
+   "cluster_id": "58b6ce7818c7c622",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Im Vergleich zu Schätzungen, Carriage Services (CSV) Q3 Einnahmen: Ein Blick auf wichtige Metriken"
+  },
+  {
+   "id": "21d9794aa165b0db",
+   "symbols": [
+    "CSV"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Carriage Services (NYSE:CSV) misses Q3 2026 revenue estimates, stock drops 12.1%",
+   "summary": "Funeral services company Carriage Services (NYSE:CSV) missed Wall Street’s revenue expectations in Q3 2026, with revenue falling 2.4% year on year to $100.3 million. The company’s full-year revenue guidance of $417.5 million at the midpoint came in 3.6% below analysts’ consensus ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/carriage-services-nyse-csv-misses-224023453.html?.tsrc=rss",
+   "published_at": "2026-11-04T22:40:23Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:02:39Z",
+   "fingerprint": "ab6645165e671d05",
+   "primary_source": false,
+   "cluster_id": "21d9794aa165b0db",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Carriage Services (NYSE: CSV) verpasst Q3 2026 Umsatzschätzungen, Aktienrückgang 12,1%"
+  },
+  {
+   "id": "276ffeb2e4dd77c6",
+   "symbols": [
+    "CSV"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Carriage Services: Q3 Earnings Snapshot",
+   "summary": "HOUSTON (AP) — HOUSTON (AP) — Carriage Services Inc. (CSV) on Wednesday reported third-quarter profit of $8.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/carriage-services-q3-earnings-snapshot-221438406.html?.tsrc=rss",
+   "published_at": "2026-11-04T22:14:38Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:02:39Z",
+   "fingerprint": "efc36bf7bf3955e5",
+   "primary_source": false,
+   "cluster_id": "276ffeb2e4dd77c6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4fe4718daac6215c",
+   "symbols": [
+    "CSV"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Carriage Services Announces Third Quarter 2026 Results, Updates 2026 Guidance and Strategic Acquisitions Timeline",
+   "summary": "Conference call on Thursday, November 5, 2026 at 8:00 a.m. Central TimeHOUSTON, Nov. 04, 2026 (GLOBE NEWSWIRE) -- Carriage Services, Inc. (NYSE: CSV) today announced its financial results for the third quarter ended September 30, 2026. Company Highlights: GAAP Net Income grew 35.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/carriage-services-announces-third-quarter-213100831.html?.tsrc=rss",
+   "published_at": "2026-11-04T21:31:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:02:39Z",
+   "fingerprint": "72302330d4c5d6da",
+   "primary_source": false,
+   "cluster_id": "4fe4718daac6215c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Carriage Services gibt Ergebnisse des dritten Quartals 2026, Aktualisierungen der Guidance für 2026 und strategischen Akquisitions-Timeline bekannt"
+  },
   {
    "id": "86f9584d315ecb81",
    "symbols": [

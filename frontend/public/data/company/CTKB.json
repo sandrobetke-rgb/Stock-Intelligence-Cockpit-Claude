@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T22:24:38Z",
+ "generated_at": "2026-11-06T06:01:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -176,12 +176,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 12.2,
+   "score": 64.0,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 6,
+   "independent_24h": 2
   },
   "political": {
    "relevance": 0,
@@ -220,7 +222,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/ctkb/earnings",
-    "days_until": -1
+    "days_until": -2
    }
   ],
   "politicians": null,
@@ -692,11 +694,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 12.2,
+  "score": 64.0,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 60,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 69.3,
@@ -705,35 +707,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 6,
+    "independent": 6,
+    "duplicates": 1,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 5,
-    "independent": 5,
-    "duplicates": 0,
-    "sources": 1,
+    "signals": 11,
+    "independent": 11,
+    "duplicates": 1,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -752,6 +756,139 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "a548f52d96abcff5",
+   "symbols": [
+    "CTKB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Cytek Aurora® Evo System Wins BioTech Breakthrough Award for Drug Discovery Innovation of the Year",
+   "summary": "2026 BioTech Breakthrough Awards The Cytek Aurora® Evo system has been named Drug Discovery Innovation of the Year in the 2026 BioTech Breakthrough Awards. FREMONT, Calif., Nov. 05, 2026 (GLOBE NEWSWIRE) -- Spectral flow cytometry leader Cytek Biosciences, Inc. (Nasdaq: CTKB) tod",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/cytek-aurora-evo-system-wins-220000108.html?.tsrc=rss",
+   "published_at": "2026-11-05T22:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:02:43Z",
+   "fingerprint": "e49ee0268016a76c",
+   "primary_source": false,
+   "cluster_id": "a548f52d96abcff5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Cytek Aurora® Evo System gewinnt BioTech Breakthrough Award für Innovation des Jahres in der Wirkstoffforschung"
+  },
+  {
+   "id": "18213f27fafcd25f",
+   "symbols": [
+    "CTKB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cytek Biosciences (CTKB) Q3 2026 Earnings Call Transcript",
+   "summary": "China weakness and litigation costs weighed on the quarter's results.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/11/05/cytek-biosciences-ctkb-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-11-05T18:29:30Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:02:43Z",
+   "fingerprint": "5db96eb224597768",
+   "primary_source": false,
+   "cluster_id": "18213f27fafcd25f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2066a5bc51d50088",
+   "symbols": [
+    "CTKB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cytek Biosciences Inc (CTKB) Q3 2026 Earnings Call Highlights: U.S. ...",
+   "summary": "Cytek Biosciences Inc (CTKB) posted 2% revenue growth to $53.2 million as strong U.S. demand and a 600-basis-point gross margin jump were tempered by a 25% APAC decline and a wider net loss.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/cytek-biosciences-inc-ctkb-q3-051635664.html?.tsrc=rss",
+   "published_at": "2026-11-05T05:16:35Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:02:43Z",
+   "fingerprint": "2dc93b718093e109",
+   "primary_source": false,
+   "cluster_id": "2066a5bc51d50088",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d75c760219ac35ca",
+   "symbols": [
+    "CTKB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cytek Biosciences, Inc. (CTKB) Reports Q3 Loss, Tops Revenue Estimates",
+   "summary": "Cytek Biosciences (CTKB) delivered earnings and revenue surprises of +37.50% and +0.62%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/cytek-biosciences-inc-ctkb-reports-234505660.html?.tsrc=rss",
+   "published_at": "2026-11-04T23:45:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:02:43Z",
+   "fingerprint": "a11b39f180c9c361",
+   "primary_source": false,
+   "cluster_id": "f02bc2d7665199fe",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "af0f191b5f19b58a",
+   "symbols": [
+    "CTKB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cytek Biosciences Q3 Earnings Call Highlights",
+   "summary": "Cytek Biosciences (NASDAQ:CTKB) reported third-quarter 2026 revenue of $53.2 million, up 2% from a year earlier, as growth in the U.S. and demand for its high-end instruments helped offset weakness in Asia-Pacific. The flow cytometry company narrowed its full-year revenue guidanc",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-cytek-biosciences-q3-earnings-call-highlights-2026-11-04/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-11-04T23:14:29Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:02:43Z",
+   "fingerprint": "6dfa36fd4c9233d8",
+   "primary_source": false,
+   "cluster_id": "af0f191b5f19b58a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "ec8b0be1380b3839",
+   "symbols": [
+    "CTKB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cytek Biosciences Reports Third Quarter 2026 Financial Results",
+   "summary": "FREMONT, Calif., Nov. 04, 2026 (GLOBE NEWSWIRE) -- Cytek Biosciences, Inc. (“Cytek Biosciences” or “Cytek”) (Nasdaq: CTKB), a leading cell analysis solutions company, today reported financial results for the third quarter ended September 30, 2026. Recent Highlights Total revenue ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/cytek-biosciences-reports-third-quarter-210500463.html?.tsrc=rss",
+   "published_at": "2026-11-04T21:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:02:43Z",
+   "fingerprint": "674007c98fc25f23",
+   "primary_source": false,
+   "cluster_id": "ec8b0be1380b3839",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "c8407154c98bc8e5",
    "symbols": [
@@ -1125,7 +1262,7 @@
    "primary_source": false,
    "cluster_id": "f02bc2d7665199fe",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   },
   {

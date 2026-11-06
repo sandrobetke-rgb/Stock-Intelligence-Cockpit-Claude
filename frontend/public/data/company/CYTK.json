@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T22:24:38Z",
+ "generated_at": "2026-11-06T06:01:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -173,13 +173,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 19.4,
+   "score": 64.0,
    "drivers": [
+    "news_flow",
     "price_volume_anomaly",
-    "insider_activity"
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 11,
+   "independent_24h": 3
   },
   "political": {
    "relevance": 0,
@@ -189,7 +190,14 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 1,
+   "manipulation_risk": "unauffällig",
+   "mentions_24h": 1,
+   "sentiment_7d": 1.0,
+   "bullish_7d": 0,
+   "bearish_7d": 0
+  },
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
@@ -212,7 +220,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/cytk/earnings",
-    "days_until": -1
+    "days_until": -2
    }
   ],
   "politicians": {
@@ -684,49 +692,50 @@
   ]
  },
  "intelligence_detail": {
-  "score": 19.4,
+  "score": 64.0,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 60,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 100.0,
-   "social_attention": null,
+   "social_attention": 25.0,
    "insider_activity": 50
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 11,
+    "independent": 11,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 14,
-    "independent": 14,
+    "signals": 25,
+    "independent": 25,
     "duplicates": 0,
-    "sources": 2,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
+   "news_flow",
    "price_volume_anomaly",
-   "insider_activity"
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -745,6 +754,253 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "2f79cf4637751f3c",
+   "symbols": [
+    "CYTK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Cytokinetics' Myqorzo Could Inflect Revenue Starting 2027, RBC Capital Markets Says",
+   "summary": "Cytokinetics' (CYTK) Myqorzo could inflect revenue in 2027 and beyond given its positive launch tra",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/cytokinetics-apos-myqorzo-could-inflect-171828299.html?.tsrc=rss",
+   "published_at": "2026-11-05T17:18:28Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:03:02Z",
+   "fingerprint": "e92eee0435d2649e",
+   "primary_source": false,
+   "cluster_id": "2f79cf4637751f3c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Cytokinetics 'Myqorzo könnte Umsatz ab 2027 inflect, sagt RBC Capital Markets"
+  },
+  {
+   "id": "2e74d3efa10405b2",
+   "symbols": [
+    "CYTK"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cytokinetics (CYTK) Q3 2026 Earnings Call Transcript",
+   "summary": "MYQORZO sales climbed sharply as prescriber adoption broadened beyond specialists.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/11/05/cytokinetics-cytk-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-11-05T17:02:41Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:03:02Z",
+   "fingerprint": "fe71037bd9257429",
+   "primary_source": false,
+   "cluster_id": "2e74d3efa10405b2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "23cd6e74d4362c6a",
+   "symbols": [
+    "CYTK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Cytokinetics (CYTK) Could Be 41% Undervalued Following Strong Q3 And Aficamten Data",
+   "summary": "Cytokinetics (CYTK) is back in focus after its third quarter update, with revenue of US$47.56 million, a narrower loss, and fresh late stage data for heart drug aficamten adding to the MYQORZO story. The third quarter update has arrived after a choppy stretch for Cytokinetics, wi",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/cytokinetics-cytk-could-41-undervalued-101142772.html?.tsrc=rss",
+   "published_at": "2026-11-05T10:11:42Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:03:02Z",
+   "fingerprint": "29cc0c8efc7fb997",
+   "primary_source": false,
+   "cluster_id": "23cd6e74d4362c6a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Zytokinetik (CYTK) könnte nach starken Q3 und aficamten Daten 41% unterbewertet werden"
+  },
+  {
+   "id": "b9ec6f586b27a4da",
+   "symbols": [
+    "CYTK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How MYQORZO Adoption Will Impact Cytokinetics (CYTK) Stock",
+   "summary": "Cytokinetics reported third quarter 2026 revenue of US$47.56 million versus US$1.94 million a year earlier, with the quarterly net loss narrowing to US$190.07 million and loss per share from continuing operations at US$1.37. Commercial uptake of heart drug MYQORZO and progress to",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/myqorzo-adoption-impact-cytokinetics-cytk-061408112.html?.tsrc=rss",
+   "published_at": "2026-11-05T06:14:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:03:02Z",
+   "fingerprint": "886f3c37a087bfb1",
+   "primary_source": false,
+   "cluster_id": "b9ec6f586b27a4da",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Wie sich die Einführung von MYQORZO auf die Zytokinetik (CYTK) auswirkt"
+  },
+  {
+   "id": "174d1ef0a1462940",
+   "symbols": [
+    "CYTK"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cytokinetics Inc (CYTK) (Q3 2026) Earnings Call Highlights: Micorzo Launch Surges with 76% ...",
+   "summary": "Cytokinetics Inc (CYTK) posts $47.6 million in Q3 2026 revenue as Micorzo demand accelerates, prescriber base nears 1,100, and Acacia HCM data bolster the pipeline.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/cytokinetics-inc-cytk-q3-2026-051946996.html?.tsrc=rss",
+   "published_at": "2026-11-05T05:19:46Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:03:02Z",
+   "fingerprint": "c28e5372f0b74a47",
+   "primary_source": false,
+   "cluster_id": "174d1ef0a1462940",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Cytokinetics Inc (CYTK) (Q3 2026) Ergebnisaufruf Highlights: Micorzo Launch Surges mit 76% ..."
+  },
+  {
+   "id": "fb6f91b3471c9279",
+   "symbols": [
+    "CYTK"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cytokinetics Q3 Earnings Call Highlights",
+   "summary": "Cytokinetics (NASDAQ:CYTK) reported $44.5 million in third-quarter net revenue from heart drug MYQORZO, up 76% from the prior quarter, as the company prepares regulatory submissions that could expand the treatment’s use. President and CEO Robert Blum said the launch, nearly nine ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-cytokinetics-q3-earnings-call-highlights-2026-11-04/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-11-05T02:14:17Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:03:02Z",
+   "fingerprint": "7a6457406c04b502",
+   "primary_source": false,
+   "cluster_id": "fb6f91b3471c9279",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "bfcc99e1225570dd",
+   "symbols": [
+    "CYTK"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cytokinetics (CYTK) Reports Q3 Loss, Beats Revenue Estimates",
+   "summary": "Cytokinetics (CYTK) delivered earnings and revenue surprises of +8.67% and +10.57%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/cytokinetics-cytk-reports-q3-loss-211002227.html?.tsrc=rss",
+   "published_at": "2026-11-04T21:10:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:03:02Z",
+   "fingerprint": "62c3ca56fc36b9de",
+   "primary_source": false,
+   "cluster_id": "bfcc99e1225570dd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5d09737d7eb5b2a8",
+   "symbols": [
+    "CYTK"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cytokinetics: Q3 Earnings Snapshot",
+   "summary": "(AP) — SOUTH SAN FRANCISCO, Calif. (CYTK) on Wednesday reported a loss of $190.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/cytokinetics-q3-earnings-snapshot-210634384.html?.tsrc=rss",
+   "published_at": "2026-11-04T21:06:34Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:03:02Z",
+   "fingerprint": "fa21c4637cb42258",
+   "primary_source": false,
+   "cluster_id": "5d09737d7eb5b2a8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "7c5b72b700234000",
+   "symbols": [
+    "CYTK"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cytokinetics Reports Third Quarter 2026 Financial Results and Provides Business Update",
+   "summary": "MYQORZO® (aficamten) Net Product Revenue of $44.5 Million Expect to Submit Supplemental NDA for Aficamten in Non-Obstructive HCM in Q4 2026 and Type II Variation in the European Union in Early 2027 ~$1.6 Billion in Cash, Cash Equivalents and Investments as of September 30, 2026 S",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/cytokinetics-reports-third-quarter-2026-210000116.html?.tsrc=rss",
+   "published_at": "2026-11-04T21:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:03:02Z",
+   "fingerprint": "b3f6300ac0910def",
+   "primary_source": false,
+   "cluster_id": "7c5b72b700234000",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Cytokinetics meldet Finanzergebnisse des dritten Quartals 2026 und gibt Geschäftsupdate"
+  },
+  {
+   "id": "c81b16157a7241a6",
+   "symbols": [
+    "CYTK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Cytokinetics to Participate in November Investor Conferences",
+   "summary": "SOUTH SAN FRANCISCO, Calif., Nov. 03, 2026 (GLOBE NEWSWIRE) -- Cytokinetics, Incorporated (Nasdaq: CYTK) today announced that members of the Company management team will participate in the following investor conferences in November: Stifel 2026 Healthcare Conference: Fireside cha",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/cytokinetics-participate-november-investor-conferences-210000493.html?.tsrc=rss",
+   "published_at": "2026-11-03T21:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:03:02Z",
+   "fingerprint": "3f02f9094875e8cb",
+   "primary_source": false,
+   "cluster_id": "c81b16157a7241a6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e66c1f784ce5b41e",
+   "symbols": [
+    "CYTK"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cytokinetics Announces Three Upcoming Presentations at the Hypertrophic Cardiomyopathy Medical Society (HCMS) Scientific Sessions Held in Collaboration with the American Heart Association Scientific Sessions 2026",
+   "summary": "SOUTH SAN FRANCISCO, Calif., Nov. 02, 2026 (GLOBE NEWSWIRE) -- Cytokinetics, Incorporated (Nasdaq: CYTK) today announced three upcoming presentations, including two Late Breaking Oral Abstract presentations and one poster presentation, at the Hypertrophic Cardiomyopathy Medical S",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/cytokinetics-announces-three-upcoming-presentations-123000623.html?.tsrc=rss",
+   "published_at": "2026-11-02T12:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:03:02Z",
+   "fingerprint": "5d1f4969ed352d35",
+   "primary_source": false,
+   "cluster_id": "e66c1f784ce5b41e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "9cd83c17db23553b",
    "symbols": [
@@ -1533,7 +1789,40 @@
  ],
  "big_stakes": [],
  "superinvestors": [],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 1,
+  "mentions_7d": 1,
+  "mentions_30d": 1,
+  "change_vs_baseline_pct": null,
+  "engagement_7d": 4.0,
+  "sentiment_7d": 1.0,
+  "sentiment_basis": "algorithmisch (Lexikon)",
+  "bullish_7d": 0,
+  "bearish_7d": 0,
+  "by_platform_7d": {
+   "stocktwits": 1
+  },
+  "communities_7d": {
+   "StockTwits": 1
+  },
+  "platforms": [
+   "stocktwits"
+  ],
+  "manipulation_flags": [],
+  "manipulation_risk": "unauffällig",
+  "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "BiotechSwings",
+    "posted_at": "2026-11-05T22:27:41Z",
+    "url": "https://stocktwits.com/BiotechSwings/message/668357584",
+    "text": "Thursday close and biotech just gave back the whole Wednesday rip imo\n$XBI closed 148.40, down 6.7% off 159.10\n$IBB closed 209.99, down 5.0% off 221.13\nbroad risk off day, chips led the slide and biotech got swept along\n$XERS up 25.0% to 13.08, Q3 revenue up 44% to 107.2 million and the 2030 target raised past 1 billion\n$VCEL up 13.9% to 51.78, Q3 revenue up 26% and guidance lifted\n$CYTK down 12.7",
+    "engagement": 4.0,
+    "sentiment_label": null
+   }
+  ]
+ },
  "attention": {
   "title": "Cytokinetics",
   "url": "https://en.wikipedia.org/wiki/Cytokinetics",

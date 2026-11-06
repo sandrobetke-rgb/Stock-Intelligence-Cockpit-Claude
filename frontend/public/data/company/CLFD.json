@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T22:24:38Z",
+ "generated_at": "2026-11-06T06:01:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -173,12 +173,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 17.6,
+   "score": 58.2,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 3,
+   "independent_24h": 2
   },
   "political": {
    "relevance": 0,
@@ -217,7 +219,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/clfd/earnings",
-    "days_until": 5
+    "days_until": 4
    }
   ],
   "politicians": null,
@@ -686,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 17.6,
+  "score": 58.2,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 86.0,
+   "freshness": 100.0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 100.0,
@@ -699,26 +701,26 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 3,
-    "independent": 3,
+    "signals": 6,
+    "independent": 6,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
@@ -727,7 +729,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -746,6 +750,74 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "fce335e556d67a2b",
+   "symbols": [
+    "CLFD"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Unusual Machines, Inc. (UMAC) Reports Q3 Loss, Beats Revenue Estimates",
+   "summary": "Unusual Machines, Inc. (UMAC) delivered earnings and revenue surprises of +81.82% and +10.27%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/unusual-machines-inc-umac-reports-214504295.html?.tsrc=rss",
+   "published_at": "2026-11-05T21:45:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:01:49Z",
+   "fingerprint": "7f38a85dd9f99c1f",
+   "primary_source": false,
+   "cluster_id": "fce335e556d67a2b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b588fc6f91c07230",
+   "symbols": [
+    "CLFD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Clearfield Supports East Central Energy’s Historic BEAD Milestone and Fiber Broadband Expansion Across Minnesota and Wisconsin",
+   "summary": "MINNEAPOLIS, November 05, 2026--Clearfield, Inc. (NASDAQ: CLFD), a leader in fiber connectivity solutions for telecom, data center, and network infrastructure environments, today announces its continued collaboration with East Central Energy (ECE), a Minnesota-based electric coop",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/clearfield-supports-east-central-energy-110000788.html?.tsrc=rss",
+   "published_at": "2026-11-05T11:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:01:49Z",
+   "fingerprint": "302a27711bb1f6d8",
+   "primary_source": false,
+   "cluster_id": "b588fc6f91c07230",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Clearfield unterstützt die historische BEAD-Meilenstein- und Glasfasererweiterung von East Central Energy in Minnesota und Wisconsin"
+  },
+  {
+   "id": "0ff2ae4dfd1416f8",
+   "symbols": [
+    "CLFD"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Motorola (MSI) Q3 Earnings and Revenues Top Estimates",
+   "summary": "Motorola (MSI) delivered earnings and revenue surprises of +6.35% and +3.39%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/motorola-msi-q3-earnings-revenues-215007594.html?.tsrc=rss",
+   "published_at": "2026-11-04T21:50:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:01:49Z",
+   "fingerprint": "628e09a701fb9852",
+   "primary_source": false,
+   "cluster_id": "0ff2ae4dfd1416f8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Motorola (MSI) Q3 Einnahmen und Einnahmen Top-Schätzungen"
+  },
   {
    "id": "d233abeb3e6cf7a7",
    "symbols": [

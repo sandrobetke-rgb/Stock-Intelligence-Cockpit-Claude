@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T22:24:38Z",
+ "generated_at": "2026-11-06T06:01:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -171,12 +171,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 17.6,
+   "score": 68.4,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 7,
+   "independent_24h": 2
   },
   "political": {
    "relevance": 0,
@@ -186,7 +188,14 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 1,
+   "manipulation_risk": "unauffällig",
+   "mentions_24h": 0,
+   "sentiment_7d": 1.0,
+   "bullish_7d": 1,
+   "bearish_7d": 0
+  },
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
@@ -215,7 +224,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/dave/earnings",
-    "days_until": -1
+    "days_until": -2
    }
   ],
   "politicians": null,
@@ -682,48 +691,50 @@
   ]
  },
  "intelligence_detail": {
-  "score": 17.6,
+  "score": 68.4,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 60,
    "primary_sources": 0,
-   "analyst_activity": 0,
+   "analyst_activity": 35,
    "price_volume_anomaly": 100.0,
-   "social_attention": null,
+   "social_attention": 25.0,
    "insider_activity": null
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 7,
+    "independent": 7,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    },
    "30d": {
-    "signals": 11,
-    "independent": 11,
+    "signals": 18,
+    "independent": 18,
     "duplicates": 0,
-    "sources": 1,
+    "sources": 3,
     "primary": 0,
-    "analyst_changes": 1,
+    "analyst_changes": 2,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -742,6 +753,163 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "99b61b46da287794",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Dave Inc. (DAVE) Q3 2026 Earnings Call Transcript",
+   "summary": "Guidance rose, but credit losses came in above forecast.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/11/05/dave-inc-dave-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-11-05T19:46:52Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:03:07Z",
+   "fingerprint": "ca4e8c318bbf8a59",
+   "primary_source": false,
+   "cluster_id": "99b61b46da287794",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c9ef9d3429832e61",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "DAVE Q3 Earnings Call Highlights Higher Outlook and Credit Gains",
+   "summary": "Dave raises 2026 revenue and profit outlook as strong member growth, improving credit performance and ExtraCash expansion drive Q3 momentum despite an EPS miss.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dave-q3-earnings-call-highlights-140000394.html?.tsrc=rss",
+   "published_at": "2026-11-05T14:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:03:07Z",
+   "fingerprint": "f9718ef6609633db",
+   "primary_source": false,
+   "cluster_id": "c9ef9d3429832e61",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "DAVE Q3 Earnings Call unterstreicht höhere Aussichten und Kreditgewinne"
+  },
+  {
+   "id": "d941e2a9dd4a481b",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Dave Inc (DAVE) (Q3 2026) Earnings Call Highlights: Record Member Growth and Accelerating ...",
+   "summary": "Dave Inc (DAVE) posted 31% revenue growth to $198 million and record member additions, but higher credit provisions and a sequential gross margin dip tempered an otherwise strong quarter.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dave-inc-dave-q3-2026-051703725.html?.tsrc=rss",
+   "published_at": "2026-11-05T05:17:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:03:07Z",
+   "fingerprint": "5cfc84bd2e672fee",
+   "primary_source": false,
+   "cluster_id": "d941e2a9dd4a481b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Dave Inc (DAVE) (Q3 2026) Ergebnisaufruf Highlights: Rekord-Mitgliederwachstum und Beschleunigung ..."
+  },
+  {
+   "id": "4692a1dc27deb1a5",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Dave Q3 Earnings Call Highlights",
+   "summary": "Dave (NASDAQ:DAVE) raised its full-year revenue and profit outlook after third-quarter revenue rose 31% from a year earlier, supported by record member additions, higher revenue per user and increased ExtraCash originations. The financial technology company reported revenue of $1",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-dave-q3-earnings-call-highlights-2026-11-04/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-11-05T02:14:18Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:03:07Z",
+   "fingerprint": "eb17d0c93ff2e18a",
+   "primary_source": false,
+   "cluster_id": "4692a1dc27deb1a5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "500726082c7d546a",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Dave Inc. (DAVE) Q3 Earnings Miss Estimates",
+   "summary": "DAVE INC (DAVE) delivered earnings and revenue surprises of -1.35% and +3.43%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dave-inc-dave-q3-earnings-215004667.html?.tsrc=rss",
+   "published_at": "2026-11-04T21:50:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:03:07Z",
+   "fingerprint": "90c2751143a21c72",
+   "primary_source": false,
+   "cluster_id": "500726082c7d546a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e1c03c4591be3027",
+   "symbols": [
+    "DAVE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Dave Reports Third Quarter 2026 Financial Results",
+   "summary": "Dave Inc. (\"Dave\" or the \"Company\") (Nasdaq: DAVE), one of the nation's leading neobanks, today reported its financial results for the third quarter ended September 30, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dave-reports-third-quarter-2026-211500430.html?.tsrc=rss",
+   "published_at": "2026-11-04T21:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:03:07Z",
+   "fingerprint": "680c9d411c4cc340",
+   "primary_source": false,
+   "cluster_id": "e1c03c4591be3027",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9f8a581496b482ab",
+   "symbols": [
+    "DAVE",
+    "STNE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Dave Q3 Earnings Coming Up: What to Expect From the Stock?",
+   "summary": "Dave's Q3 2026 earnings are expected to have risen on stronger member activity and ExtraCash growth, but higher spending and credit trends could have influenced margins.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dave-q3-earnings-coming-expect-152400043.html?.tsrc=rss",
+   "published_at": "2026-11-03T15:24:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-04T22:28:57Z",
+   "fingerprint": "bfae5daf93b2d08a",
+   "primary_source": false,
+   "cluster_id": "9f8a581496b482ab",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "3e63b15f3cceda0e",
    "symbols": [
@@ -1183,7 +1351,40 @@
    "report_date": "2026-06-30"
   }
  ],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 0,
+  "mentions_7d": 1,
+  "mentions_30d": 1,
+  "change_vs_baseline_pct": -100,
+  "engagement_7d": 1.0,
+  "sentiment_7d": 1.0,
+  "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
+  "bullish_7d": 1,
+  "bearish_7d": 0,
+  "by_platform_7d": {
+   "stocktwits": 1
+  },
+  "communities_7d": {
+   "StockTwits": 1
+  },
+  "platforms": [
+   "stocktwits"
+  ],
+  "manipulation_flags": [],
+  "manipulation_risk": "unauffällig",
+  "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "Jason_Vollmer",
+    "posted_at": "2026-11-05T00:03:03Z",
+    "url": "https://stocktwits.com/Jason_Vollmer/message/668213396",
+    "text": "Ticker SCAG news today: \n \nScage Future Enters into Strategic Cooperation Agreement with China Huaye Group \n \nSCAG only 1.3 million shares float - Chinese - On watch. \n \n$SERV $LVS $DAVE $WFC $RCL oo",
+    "engagement": 1.0,
+    "sentiment_label": "Bullish"
+   }
+  ]
+ },
  "attention": null,
  "history": []
 }

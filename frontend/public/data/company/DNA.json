@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T22:24:38Z",
+ "generated_at": "2026-11-06T06:01:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -173,14 +173,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 15.2,
+   "score": 35.0,
    "drivers": [
+    "news_flow",
     "price_volume_anomaly",
-    "social_attention",
-    "insider_activity"
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 1,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -191,10 +191,10 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 2,
+   "mentions_7d": 3,
    "manipulation_risk": "unauffällig",
-   "mentions_24h": 0,
-   "sentiment_7d": 0.5,
+   "mentions_24h": 1,
+   "sentiment_7d": 0.33,
    "bullish_7d": 0,
    "bearish_7d": 0
   },
@@ -226,7 +226,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/dna/earnings",
-    "days_until": 0
+    "days_until": -1
    }
   ],
   "politicians": null,
@@ -695,39 +695,39 @@
   ]
  },
  "intelligence_detail": {
-  "score": 15.2,
+  "score": 35.0,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 43.0,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 51.5,
-   "social_attention": 39.6,
+   "social_attention": 50.0,
    "insider_activity": 70
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 7,
-    "independent": 7,
+    "signals": 8,
+    "independent": 8,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
@@ -736,9 +736,9 @@
    }
   },
   "drivers": [
+   "news_flow",
    "price_volume_anomaly",
-   "social_attention",
-   "insider_activity"
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -757,6 +757,29 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "9fc61b28fca5c562",
+   "symbols": [
+    "DNA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Ginkgo Bioworks Reports Third Quarter 2026 Results; Signs First Autonomous Lab Sale to a Top-Tier Pharma Company Novo",
+   "summary": "BOSTON, November 05, 2026--Ginkgo Bioworks Holdings, Inc. (NYSE: DNA, \"Ginkgo\") today announced its results for the third quarter of 2026 that ended September 30, 2026. The update, including a webcast slide presentation with additional details on the third quarter, as well as sup",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/ginkgo-bioworks-reports-third-quarter-210500915.html?.tsrc=rss",
+   "published_at": "2026-11-05T21:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:03:30Z",
+   "fingerprint": "94a6fad19ad53ff7",
+   "primary_source": false,
+   "cluster_id": "9fc61b28fca5c562",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Ginkgo Bioworks meldet Ergebnisse des dritten Quartals 2026; unterzeichnet ersten autonomen Laborverkauf an ein erstklassiges Pharmaunternehmen Novo"
+  },
   {
    "id": "7adf852fde40765e",
    "symbols": [
@@ -1541,27 +1564,40 @@
   }
  ],
  "social_detail": {
-  "mentions_24h": 0,
-  "mentions_7d": 2,
-  "mentions_30d": 2,
-  "change_vs_baseline_pct": -100,
+  "mentions_24h": 1,
+  "mentions_7d": 3,
+  "mentions_30d": 3,
+  "change_vs_baseline_pct": 250,
   "engagement_7d": 0.0,
-  "sentiment_7d": 0.5,
+  "sentiment_7d": 0.33,
   "sentiment_basis": "algorithmisch (Lexikon)",
   "bullish_7d": 0,
   "bearish_7d": 0,
   "by_platform_7d": {
+   "reddit": 1,
    "mastodon": 2
   },
   "communities_7d": {
-   "Mastodon": 2
+   "Mastodon": 2,
+   "r/stocks": 1
   },
   "platforms": [
-   "mastodon"
+   "mastodon",
+   "reddit"
   ],
   "manipulation_flags": [],
   "manipulation_risk": "unauffällig",
   "top_posts": [
+   {
+    "platform": "reddit",
+    "community": "r/stocks",
+    "author": "ohdonpier",
+    "posted_at": "2026-11-05T22:31:31Z",
+    "url": "https://www.reddit.com/r/stocks/comments/1xowdvp/novartis_confirms_nine_zolgensma_tumour_reports/",
+    "text": "Novartis confirms nine Zolgensma tumour reports, two with vector DNA integration: which micro and small-cap AAV9 developers have exposure    Novartis has confirmed that since Zolgensma's 2019 approval it has received nine reports of tumours in children previously treated with the AAV9 gene therapy, seven of them not previously disclosed. Families and patient groups made the information public on 4",
+    "engagement": 0.0,
+    "sentiment_label": null
+   },
    {
     "platform": "mastodon",
     "community": "Mastodon",
@@ -1587,15 +1623,14 @@
  "attention": {
   "title": "Ginkgo Bioworks",
   "url": "https://en.wikipedia.org/wiki/Ginkgo_Bioworks",
-  "date": "2026-11-04",
-  "views_1d": 41,
-  "avg_7d": 40,
-  "avg_30d": 57,
-  "ratio_1d": 0.72,
-  "ratio_7d": 0.7,
+  "date": "2026-11-05",
+  "views_1d": 48,
+  "avg_7d": 39,
+  "avg_30d": 56,
+  "ratio_1d": 0.85,
+  "ratio_7d": 0.69,
   "spike": false,
   "series": [
-   74,
    72,
    72,
    56,
@@ -1624,7 +1659,8 @@
    25,
    44,
    51,
-   41
+   41,
+   48
   ]
  },
  "history": []

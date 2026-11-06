@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T22:24:38Z",
+ "generated_at": "2026-11-06T06:01:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -173,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.7,
+   "score": 35.7,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "analyst_activity",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 3,
    "independent_24h": 0
   },
   "political": {
@@ -217,7 +219,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/drvn/earnings",
-    "days_until": -2
+    "days_until": -3
    }
   ],
   "politicians": null,
@@ -686,13 +688,13 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.7,
+  "score": 35.7,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 86.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
-   "analyst_activity": 0,
+   "analyst_activity": 35,
    "price_volume_anomaly": 15.5,
    "social_attention": null,
    "insider_activity": null
@@ -708,26 +710,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
-    "primary": 0,
-    "analyst_changes": 0,
-    "verified": 0
-   },
-   "30d": {
     "signals": 3,
     "independent": 3,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
+    "verified": 0
+   },
+   "30d": {
+    "signals": 6,
+    "independent": 6,
+    "duplicates": 0,
+    "sources": 1,
+    "primary": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "analyst_activity",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -746,6 +750,77 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "0264698299cb7b16",
+   "symbols": [
+    "ADBE",
+    "AKR",
+    "ALAB",
+    "DRVN",
+    "STZ",
+    "SWKS"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Adobe downgraded, Constellation upgraded: Wall Street's top analyst calls",
+   "summary": "Adobe downgraded, Constellation upgraded: Wall Street's top analyst calls",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/norwegian-cruise-downgrade-duolingo-upgraded-133748798.html?.tsrc=rss",
+   "published_at": "2026-11-04T14:43:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-04T22:29:03Z",
+   "fingerprint": "395bcfdf5785e344",
+   "primary_source": false,
+   "cluster_id": "0264698299cb7b16",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "fa2d133fc04b0627",
+   "symbols": [
+    "DRVN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Driven Brands Announces Financial Restatement; Provides Update on Third Quarter 2026 Performance and Revises Fiscal Year 2026 Outlook",
+   "summary": "CHARLOTTE, N.C., November 03, 2026--Driven Brands Holdings Inc. (NASDAQ: DRVN) (\"Driven Brands\" or the \"Company\") today announced the Audit Committee of the Company’s Board of Directors, after consultation with the Company’s management, concluded there were material errors in the",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/driven-brands-announces-financial-restatement-120000812.html?.tsrc=rss",
+   "published_at": "2026-11-03T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:03:37Z",
+   "fingerprint": "cef4fd4aaa440161",
+   "primary_source": false,
+   "cluster_id": "fa2d133fc04b0627",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "255710fb9b7769ab",
+   "symbols": [
+    "DRVN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Herbalife Ltd (HLF) Misses Q3 Earnings Estimates",
+   "summary": "Herbalife Ltd (HLF) delivered earnings and revenue surprises of -12.33% and +3.86%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/herbalife-ltd-hlf-misses-q3-215504060.html?.tsrc=rss",
+   "published_at": "2026-11-02T21:55:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:03:37Z",
+   "fingerprint": "8a331f11c4805321",
+   "primary_source": false,
+   "cluster_id": "255710fb9b7769ab",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "1fd72d2ae57efe70",
    "symbols": [

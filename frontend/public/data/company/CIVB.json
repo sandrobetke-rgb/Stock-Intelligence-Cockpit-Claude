@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T22:24:38Z",
+ "generated_at": "2026-11-06T06:01:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -173,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 9.8,
+   "score": 26.2,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -191,11 +193,11 @@
   "social": null,
   "insider": {
    "window_days": 90,
-   "open_market_buys": 0,
+   "open_market_buys": 1,
    "open_market_sells": 0,
-   "buy_value": 0,
+   "buy_value": 6056.82,
    "sell_value": 0,
-   "distinct_buyers": 0,
+   "distinct_buyers": 1,
    "other_transactions": 0
   },
   "superinvestors": {
@@ -216,7 +218,7 @@
     "confirmed": true,
     "source": "Nasdaq-Dividendenkalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/civb/dividend-history",
-    "days_until": -2
+    "days_until": -3
    }
   ],
   "politicians": null,
@@ -599,16 +601,16 @@
   ]
  },
  "intelligence_detail": {
-  "score": 9.8,
+  "score": 26.2,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 55.5,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 30
   },
   "windows": {
    "24h": {
@@ -621,26 +623,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 12,
-    "independent": 12,
+    "signals": 13,
+    "independent": 13,
     "duplicates": 0,
-    "sources": 3,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -659,6 +663,28 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "bdc2038f5294b0b6",
+   "symbols": [
+    "CIVB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Civista Bancshares: 2 Key Takeaways for Long-Term Investors",
+   "summary": "Strong earnings growth and organic loan production show how disciplined deposit management fuels shareholder returns.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/takeaways/2026/11/01/civista-bancshares-2-key-takeaways-for-long-term-investors/?.tsrc=rss",
+   "published_at": "2026-11-01T19:20:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:01:46Z",
+   "fingerprint": "809253b8f65a9b04",
+   "primary_source": false,
+   "cluster_id": "bdc2038f5294b0b6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "00e1cb38ff185293",
    "symbols": [
@@ -1083,7 +1109,29 @@
    "feed": "yahoo_rss"
   }
  ],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "4ac38bbae7ae5464",
+   "symbol": "CIVB",
+   "insider": "Macioce Mark J.",
+   "owner_cik": 1974623,
+   "role": "Director",
+   "transaction_code": "P",
+   "transaction_kind": "buy",
+   "transaction_label": "Kauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-11-04",
+   "filed_at": "2026-11-05",
+   "reporting_delay_days": 1,
+   "shares": 209.0,
+   "price": 28.98,
+   "value": 6056.82,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/944745/000197462326000006/0001974623-26-000006-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "big_stakes": [],

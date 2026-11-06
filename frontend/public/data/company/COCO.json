@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T22:24:38Z",
+ "generated_at": "2026-11-06T06:01:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -171,11 +171,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 4.5,
+   "score": 20.6,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -190,11 +192,11 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 2,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 385000.0,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 1
   },
   "superinvestors": {
    "holders": 2,
@@ -671,16 +673,16 @@
   ]
  },
  "intelligence_detail": {
-  "score": 4.5,
+  "score": 20.6,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 25.5,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 20
   },
   "windows": {
    "24h": {
@@ -693,17 +695,17 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 19,
-    "independent": 19,
+    "signals": 20,
+    "independent": 20,
     "duplicates": 0,
     "sources": 4,
     "primary": 0,
@@ -712,7 +714,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -731,6 +735,30 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "74e80ef7535813dc",
+   "symbols": [
+    "COCO",
+    "VRT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Undervalued Stocks To Own In November 2026",
+   "summary": "Energy prices have become a political story again after the US midterm elections, with expectations of tougher oversight for AI data centers and fresh support for renewables shifting where capital flows. When policy attention whipsaws like this, solid businesses that quietly gene",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-undervalued-stocks-own-november-052121936.html?.tsrc=rss",
+   "published_at": "2026-11-05T05:21:21Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T06:05:19Z",
+   "fingerprint": "a4262b5b9b6a36f8",
+   "primary_source": false,
+   "cluster_id": "74e80ef7535813dc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "3 Unterbewertete Aktien zu besitzen Im November 2026"
+  },
   {
    "id": "61888fdf6b3a9edd",
    "symbols": [
@@ -1155,7 +1183,71 @@
    "feed": "yahoo_rss"
   }
  ],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "d1bd68da43bcf6cb",
+   "symbol": "COCO",
+   "insider": "Baker Corey",
+   "owner_cik": 1969153,
+   "role": "Chief Financial Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-11-03",
+   "filed_at": "2026-11-05",
+   "reporting_delay_days": 2,
+   "shares": 1000.0,
+   "price": 60.0,
+   "value": 60000.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1482981/000148298126000187/0001482981-26-000187-index.htm"
+  },
+  {
+   "id": "df2889125f146690",
+   "symbol": "COCO",
+   "insider": "Baker Corey",
+   "owner_cik": 1969153,
+   "role": "Chief Financial Officer",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-11-04",
+   "filed_at": "2026-11-05",
+   "reporting_delay_days": 1,
+   "shares": 5000.0,
+   "price": 16.91,
+   "value": 84550.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1482981/000148298126000187/0001482981-26-000187-index.htm"
+  },
+  {
+   "id": "5c7d408c043cd7b0",
+   "symbol": "COCO",
+   "insider": "Baker Corey",
+   "owner_cik": 1969153,
+   "role": "Chief Financial Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-11-04",
+   "filed_at": "2026-11-05",
+   "reporting_delay_days": 1,
+   "shares": 5000.0,
+   "price": 65.0,
+   "value": 325000.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1482981/000148298126000187/0001482981-26-000187-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [
   {

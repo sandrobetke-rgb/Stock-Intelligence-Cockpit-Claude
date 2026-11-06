@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T22:24:38Z",
+ "generated_at": "2026-11-06T06:01:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -173,12 +173,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 17.6,
+   "score": 65.9,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 7,
+   "independent_24h": 5
   },
   "political": {
    "relevance": 0,
@@ -217,7 +219,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/cnr/earnings",
-    "days_until": 0
+    "days_until": -1
    }
   ],
   "politicians": null,
@@ -686,11 +688,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 17.6,
+  "score": 65.9,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 100.0,
@@ -699,35 +701,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 5,
+    "independent": 5,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 7,
+    "independent": 7,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 11,
-    "independent": 11,
+    "signals": 18,
+    "independent": 18,
     "duplicates": 0,
-    "sources": 1,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -746,6 +750,162 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "e5af5022640c0cf9",
+   "symbols": [
+    "CNR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Core Natural (CNR) Q3 2026 Earnings Call Transcript",
+   "summary": "Mining variability shaped the quarter, yet shareholder returns stayed robust.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/11/05/core-natural-cnr-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-11-05T21:50:16Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:02:07Z",
+   "fingerprint": "f390550407e5efa4",
+   "primary_source": false,
+   "cluster_id": "e5af5022640c0cf9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "087534942fdaeb23",
+   "symbols": [
+    "CNR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Core Natural Resources (CNR) Lags Q3 Earnings Estimates",
+   "summary": "Core Natural Resources (CNR) delivered earnings and revenue surprises of -66.04% and +5.26%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/core-natural-resources-cnr-lags-133510299.html?.tsrc=rss",
+   "published_at": "2026-11-05T13:35:10Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:02:07Z",
+   "fingerprint": "a45cdc49f0a7d493",
+   "primary_source": false,
+   "cluster_id": "087534942fdaeb23",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "d5277db1453d5104",
+   "symbols": [
+    "CNR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Core Natural Resources (NYSE:CNR) reports Q3 2026 in line with expectations",
+   "summary": "Coal producer Core Natural Resources (NYSE:CNR) met Wall Street’s revenue expectations in Q3 2026, with revenue up 14.2% year on year to $1.15 billion. Its GAAP profit of $0.18 per share was 71.6% below analysts’ consensus estimates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/core-natural-resources-nyse-cnr-123450801.html?.tsrc=rss",
+   "published_at": "2026-11-05T12:34:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:02:07Z",
+   "fingerprint": "32ffc5f814b3da3a",
+   "primary_source": false,
+   "cluster_id": "d5277db1453d5104",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Core Natural Resources (NYSE: CNR) meldet Q3 2026 im Einklang mit den Erwartungen"
+  },
+  {
+   "id": "94cc69263239c0f2",
+   "symbols": [
+    "CNR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Core Natural Resources: Q3 Earnings Snapshot",
+   "summary": "(AP) — Core Natural Resources, Inc. (CNR) on Thursday reported earnings of $9 million in its third quarter.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/core-natural-resources-q3-earnings-121500739.html?.tsrc=rss",
+   "published_at": "2026-11-05T12:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:02:07Z",
+   "fingerprint": "e5a0a134ef66eab5",
+   "primary_source": false,
+   "cluster_id": "94cc69263239c0f2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0f683a191684ac23",
+   "symbols": [
+    "CNR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Core Natural Resources Reports Third Quarter 2026 Results",
+   "summary": "Today, Core Natural Resources, Inc. (NYSE: CNR) (\"Core\" or the \"company\") reported net income of $9.0 million, or $0.18 per diluted share, in the third quarter of 2026. Additionally, Core reported adjusted EBITDA1 of $165.2 million in the quarter, which included nine months of di",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/core-natural-resources-reports-third-115500718.html?.tsrc=rss",
+   "published_at": "2026-11-05T11:55:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:02:07Z",
+   "fingerprint": "35df071cf68409a9",
+   "primary_source": false,
+   "cluster_id": "0f683a191684ac23",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "88d54d306f62845b",
+   "symbols": [
+    "BTU",
+    "CNR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Peabody Energy (BTU) Reports Q3 Loss, Beats Revenue Estimates",
+   "summary": "Peabody Energy (BTU) delivered earnings and revenue surprises of -237.50% and +10.95%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/peabody-energy-btu-reports-q3-125503953.html?.tsrc=rss",
+   "published_at": "2026-11-04T12:55:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-05T22:28:54Z",
+   "fingerprint": "e2723ad7ce769c63",
+   "primary_source": false,
+   "cluster_id": "88d54d306f62845b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "60c2729edee35eab",
+   "symbols": [
+    "CNR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Why Core Natural Resources, Inc. (CNR) Could Be Resilient to AI Disruption",
+   "summary": "Greenlight Capital, an investment management firm, recently released its Q3 2026 investor letter. A copy of the letter can be downloaded here. The funds returned -3.3% in the third quarter of 2026, compared with a 2.3% gain for the S&amp;P 500, bringing their year-to-date return ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-core-natural-resources-inc-190018258.html?.tsrc=rss",
+   "published_at": "2026-11-03T19:00:18Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:02:07Z",
+   "fingerprint": "24101100ccc6ee4a",
+   "primary_source": false,
+   "cluster_id": "60c2729edee35eab",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "12cae35504a516a7",
    "symbols": [

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T22:24:38Z",
+ "generated_at": "2026-11-06T06:01:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -173,12 +173,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 7.5,
+   "score": 37.0,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 2,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -211,7 +213,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/cnne/earnings",
-    "days_until": 4
+    "days_until": 3
    }
   ],
   "politicians": null,
@@ -680,11 +682,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 7.5,
+  "score": 37.0,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 68.2,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 42.5,
@@ -693,24 +695,6 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
-    "primary": 0,
-    "analyst_changes": 0,
-    "verified": 0
-   },
-   "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
-    "primary": 0,
-    "analyst_changes": 0,
-    "verified": 0
-   },
-   "30d": {
     "signals": 1,
     "independent": 1,
     "duplicates": 0,
@@ -718,10 +702,30 @@
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
+   },
+   "7d": {
+    "signals": 2,
+    "independent": 2,
+    "duplicates": 1,
+    "sources": 1,
+    "primary": 0,
+    "analyst_changes": 0,
+    "verified": 0
+   },
+   "30d": {
+    "signals": 3,
+    "independent": 3,
+    "duplicates": 1,
+    "sources": 1,
+    "primary": 0,
+    "analyst_changes": 0,
+    "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -740,6 +744,52 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "845f3dd874a1268d",
+   "symbols": [
+    "CNNE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cannae Holdings, Inc. Announces Reduction in the Size of Its Board of Directors to Ten Members",
+   "summary": "LAS VEGAS, November 06, 2026--Cannae Holdings, Inc. (NYSE: CNNE) (\"Cannae\" or the \"Company\") today announced that Woodrow (\"Woody\") Tyler and Mark Linehan each notified the Board of Directors that they will not stand for re-election at Cannae’s December 11, 2026 Annual Meeting of",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cannae-holdings-inc-announces-reduction-010500360.html?.tsrc=rss",
+   "published_at": "2026-11-06T01:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:02:05Z",
+   "fingerprint": "3b111b958fe15394",
+   "primary_source": false,
+   "cluster_id": "845f3dd874a1268d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Cannae Holdings, Inc. kündigt Reduzierung der Größe seines Board of Directors auf zehn Mitglieder an"
+  },
+  {
+   "id": "4d12c94e275c80c0",
+   "symbols": [
+    "CNNE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cannae Holdings, Inc. Announces Quarterly Cash Dividend of $0.15",
+   "summary": "LAS VEGAS, November 04, 2026--Cannae Holdings, Inc. (NYSE: CNNE) (\"Cannae\" or the \"Company\") today announced that its Board of Directors has declared a quarterly cash dividend of $0.15 per share. The dividend will be payable December 31, 2026, to shareholders of record as of Dece",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cannae-holdings-inc-announces-quarterly-220800923.html?.tsrc=rss",
+   "published_at": "2026-11-04T22:08:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:02:05Z",
+   "fingerprint": "2f469a87f2d0e257",
+   "primary_source": false,
+   "cluster_id": "6671b85b7a21ece8",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Cannae Holdings, Inc. gibt vierteljährliche Cash-Dividende von 0,15 US-Dollar bekannt"
+  },
   {
    "id": "159472669d5e2bc3",
    "symbols": [
@@ -1045,7 +1095,7 @@
    "primary_source": false,
    "cluster_id": "6671b85b7a21ece8",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   },
   {
@@ -1161,15 +1211,14 @@
  "attention": {
   "title": "Bill Foley (businessman)",
   "url": "https://en.wikipedia.org/wiki/Bill_Foley_%28businessman%29",
-  "date": "2026-11-04",
-  "views_1d": 298,
-  "avg_7d": 318,
-  "avg_30d": 557,
-  "ratio_1d": 0.54,
-  "ratio_7d": 0.57,
+  "date": "2026-11-05",
+  "views_1d": 331,
+  "avg_7d": 315,
+  "avg_30d": 471,
+  "ratio_1d": 0.7,
+  "ratio_7d": 0.67,
   "spike": false,
   "series": [
-   254,
    261,
    220,
    256,
@@ -1198,7 +1247,8 @@
    371,
    256,
    244,
-   298
+   298,
+   331
   ]
  },
  "history": []
