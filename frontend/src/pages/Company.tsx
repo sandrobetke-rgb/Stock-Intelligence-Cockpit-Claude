@@ -1,5 +1,6 @@
 import { DRIVER_LABEL, INDEX_NAMES, MENTION_LABEL, SI_ACTION, SI_TONE, fmt, researchLinks, useData } from "../data";
 import type { CompanyDetail } from "../types";
+import { TvChart } from "../chart";
 import { Axes, EventBadges, WatchStar, DataTable, Translated, Direction, Empty, Gate, IndexTags, Page, Panel, Src, Tag, Verif, riskLabel, stockAxes } from "../ui";
 
 const BASIS: Record<string, string> = { data: "Daten", proxy: "Proxy", manual: "Manuell belegt", unknown: "unbekannt", not_applicable: "nicht anwendbar" };
@@ -22,51 +23,13 @@ function CompanyView({ d }: { d: CompanyDetail }) {
         <span className="muted small">Weiter recherchieren:</span>
         {researchLinks(p.symbol, p.region).map((l) => <a key={l.label} href={l.url} target="_blank" rel="noopener noreferrer">{l.label}</a>)}
       </nav>
+      <Panel className="chart-panel"><TvChart symbol={p.symbol} region={p.region} /></Panel>
       <Panel className="axes-panel">
         <Axes {...stockAxes(p)} />
         <p className="note">Vier getrennte Dimensionen. Sie werden bewusst nicht zu einem Gesamtwert verrechnet; ein hoher Market- oder Political-Wert ist keine Kaufempfehlung.</p>
       </Panel>
 
-      <div className="grid-2">
-        <Panel title={`Company Quality ${fmt.num(d.quality_detail.score, 0)}`}
-          note={<>Datenabdeckung {d.quality_detail.coverage_pct} %, Modell {d.quality_detail.model}. Quelle: <Src url={d.quality_detail.source_url} label={d.quality_detail.source} />, Stand {fmt.dt(d.quality_detail.as_of)}, Geschäftsjahr bis {fmt.date(d.quality_detail.fiscal_year_end)}{d.quality_detail.currency ? `, Währung ${d.quality_detail.currency}` : ""}. {d.quality_detail.note}</>}>
-          <div className="dims">
-            {d.quality_detail.dimensions.map((dim) => (
-              <details key={dim.key} className="dim">
-                <summary>
-                  <span className="dim-name">{dim.label} <span className="muted small">{Math.round(dim.weight * 100)} %</span></span>
-                  <span className="axis-track"><span className={dim.score == null ? "axis-unknown" : "axis-fill q"} style={dim.score == null ? undefined : { width: `${dim.score}%` }} /></span>
-                  <span className="dim-val">{fmt.num(dim.score, 0)}</span>
-                  <span className={`basis b-${dim.basis}`}>{BASIS[dim.basis]}</span>
-                </summary>
-                {dim.metrics.length ? (
-                  <table className="data compact">
-                    <tbody>{dim.metrics.map((mt) => (
-                      <tr key={mt.key}><td>{mt.label}</td><td className="num">{mt.value == null ? "unbekannt" : `${fmt.num(mt.value, mt.unit === "x" ? 2 : 1)} ${mt.unit === "bool" ? "" : mt.unit}`}</td><td className="num muted">{mt.points == null ? "–" : `${fmt.num(mt.points, 0)} P.`}</td></tr>
-                    ))}</tbody>
-                  </table>
-                ) : <p className="small muted">Für dieses Branchenmodell nicht vorgesehen.</p>}
-              </details>
-            ))}
-          </div>
-        </Panel>
-
-        <Panel title={`Risk Score ${fmt.num(d.risk_detail.score, 0)} (${riskLabel(d.risk_detail.level)})`}
-          note={<>Abdeckung {d.risk_detail.coverage_pct} %. Hohe Aufmerksamkeit senkt das Risiko nicht.{d.risk_detail.unknown_factors.length ? ` Nicht kostenlos erfasst: ${d.risk_detail.unknown_factors.join(", ")}.` : ""}</>}>
-          <table className="data compact">
-            <tbody>
-              {d.risk_detail.factors.map((f) => (
-                <tr key={f.key}>
-                  <td>{f.label}{f.description ? <div className="small muted">{f.description} (<Src url={f.source} />)</div> : null}</td>
-                  <td className="num">{f.value == null ? "" : f.unit === "Whg" ? fmt.big(f.value, p.currency) : `${fmt.num(f.value, 2)} ${f.unit}`}</td>
-                  <td className="col-axes"><span className="axis-track"><span className={f.severity == null ? "axis-unknown" : "axis-fill r"} style={f.severity == null ? undefined : { width: `${f.severity}%` }} /></span></td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </Panel>
-      </div>
-
+      <h2 className="sec-head">Setup &amp; Kurs</h2>
       {p.swing ? (
         <Panel title="Swing-Setups (S01–S04)" note="Erfüllte Kriterien je Setup auf Tagesbasis. Einstieg erst nach deiner 1H-Regel im Chart.">
           <div className="setup-grid">
@@ -134,6 +97,97 @@ function CompanyView({ d }: { d: CompanyDetail }) {
         </Panel>
       </div>
 
+      <h2 className="sec-head">Fundamentaldaten</h2>
+      <div className="grid-2">
+        <Panel title={`Company Quality ${fmt.num(d.quality_detail.score, 0)}`}
+          note={<>Datenabdeckung {d.quality_detail.coverage_pct} %, Modell {d.quality_detail.model}. Quelle: <Src url={d.quality_detail.source_url} label={d.quality_detail.source} />, Stand {fmt.dt(d.quality_detail.as_of)}, Geschäftsjahr bis {fmt.date(d.quality_detail.fiscal_year_end)}{d.quality_detail.currency ? `, Währung ${d.quality_detail.currency}` : ""}. {d.quality_detail.note}</>}>
+          <div className="dims">
+            {d.quality_detail.dimensions.map((dim) => (
+              <details key={dim.key} className="dim">
+                <summary>
+                  <span className="dim-name">{dim.label} <span className="muted small">{Math.round(dim.weight * 100)} %</span></span>
+                  <span className="axis-track"><span className={dim.score == null ? "axis-unknown" : "axis-fill q"} style={dim.score == null ? undefined : { width: `${dim.score}%` }} /></span>
+                  <span className="dim-val">{fmt.num(dim.score, 0)}</span>
+                  <span className={`basis b-${dim.basis}`}>{BASIS[dim.basis]}</span>
+                </summary>
+                {dim.metrics.length ? (
+                  <table className="data compact">
+                    <tbody>{dim.metrics.map((mt) => (
+                      <tr key={mt.key}><td>{mt.label}</td><td className="num">{mt.value == null ? "unbekannt" : `${fmt.num(mt.value, mt.unit === "x" ? 2 : 1)} ${mt.unit === "bool" ? "" : mt.unit}`}</td><td className="num muted">{mt.points == null ? "–" : `${fmt.num(mt.points, 0)} P.`}</td></tr>
+                    ))}</tbody>
+                  </table>
+                ) : <p className="small muted">Für dieses Branchenmodell nicht vorgesehen.</p>}
+              </details>
+            ))}
+          </div>
+        </Panel>
+
+        <Panel title={`Risk Score ${fmt.num(d.risk_detail.score, 0)} (${riskLabel(d.risk_detail.level)})`}
+          note={<>Abdeckung {d.risk_detail.coverage_pct} %. Hohe Aufmerksamkeit senkt das Risiko nicht.{d.risk_detail.unknown_factors.length ? ` Nicht kostenlos erfasst: ${d.risk_detail.unknown_factors.join(", ")}.` : ""}</>}>
+          <table className="data compact">
+            <tbody>
+              {d.risk_detail.factors.map((f) => (
+                <tr key={f.key}>
+                  <td>{f.label}{f.description ? <div className="small muted">{f.description} (<Src url={f.source} />)</div> : null}</td>
+                  <td className="num">{f.value == null ? "" : f.unit === "Whg" ? fmt.big(f.value, p.currency) : `${fmt.num(f.value, 2)} ${f.unit}`}</td>
+                  <td className="col-axes"><span className="axis-track"><span className={f.severity == null ? "axis-unknown" : "axis-fill r"} style={f.severity == null ? undefined : { width: `${f.severity}%` }} /></span></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </Panel>
+      </div>
+
+      <h2 className="sec-head">Smart Money</h2>
+        <Panel title="Insider">
+          <DataTable rows={d.insiders} rowKey={(r) => r.id} empty="Keine Insidermeldungen." limit={20}
+            cols={[
+              { key: "d", label: "Datum", render: (r) => fmt.date(r.transaction_date), sort: (r) => r.transaction_date },
+              { key: "w", label: "Person", render: (r) => <>{r.insider}<div className="small muted">{r.role}</div></> },
+              { key: "k", label: "Art", render: (r) => <Tag tone={r.open_market ? (r.transaction_kind === "buy" ? "ok" : "err") : undefined}>{r.transaction_label}</Tag> },
+              { key: "v", label: "Volumen", num: true, render: (r) => fmt.big(r.value, r.currency), sort: (r) => r.value },
+              { key: "s", label: "Quelle", render: (r) => <Src url={r.source_url} /> },
+            ]} />
+        </Panel>
+      <Panel title="Superinvestoren (13F)" note="Bestände laut SEC-Pflichtmeldung zum Quartalsende, bis zu 45 Tage verzögert. Veränderung gegenüber dem Vorquartal.">
+        {d.superinvestors?.length ? (
+          <DataTable rows={d.superinvestors} rowKey={(r) => r.manager} initialSort={{ key: "w", dir: -1 }} limit={30}
+            cols={[
+              { key: "m", label: "Investor", render: (r) => <><strong>{r.manager}</strong><div className="small muted">{r.fund}</div></>, sort: (r) => r.manager },
+              { key: "a", label: "Aktion", render: (r) => <Tag tone={SI_TONE[r.action]}>{SI_ACTION[r.action]}</Tag>, sort: (r) => r.action },
+              { key: "c", label: "Stückzahl Δ", num: true, render: (r) => r.action === "new" ? "neu" : fmt.pct(r.shares_change_pct, 0), sort: (r) => r.shares_change_pct },
+              { key: "w", label: "Depotanteil", num: true, render: (r) => `${fmt.num(r.weight_pct, 2)} %`, sort: (r) => r.weight_pct },
+              { key: "v", label: "Wert", num: true, render: (r) => fmt.big(r.value, "USD"), sort: (r) => r.value },
+              { key: "q", label: "Stichtag", render: (r) => fmt.date(r.report_date) },
+            ]} />
+        ) : <Empty>Kein beobachteter Superinvestor meldet diese Aktie.</Empty>}
+      </Panel>
+
+      {(d.political_trades?.length || d.big_stakes?.length) ? (
+        <div className="grid-2">
+          <Panel title="Politiker-Trades (US-Kongress)" note="Offizielle Meldungen, bis 45 Tage Verzug, Beträge als Bandbreite.">
+            <DataTable rows={d.political_trades ?? []} rowKey={(r) => r.id} initialSort={{ key: "d", dir: -1 }} limit={15} empty="Keine Meldungen."
+              cols={[
+                { key: "p", label: "Person", render: (r) => <><strong>{r.politician}</strong><div className="small muted">{r.chamber}</div></> },
+                { key: "t", label: "Art", render: (r) => <Tag tone={r.transaction_type === "purchase" ? "ok" : r.transaction_type.startsWith("sale") ? "err" : undefined}>{({ purchase: "Kauf", sale: "Verkauf", sale_partial: "Teilverkauf", exchange: "Tausch" } as Record<string, string>)[r.transaction_type] ?? r.transaction_type}</Tag> },
+                { key: "a", label: "Betrag", num: true, render: (r) => r.amount_range[1] ? `${fmt.big(r.amount_range[0])}–${fmt.big(r.amount_range[1])} $` : "–" },
+                { key: "d", label: "Gemeldet", render: (r) => fmt.date(r.disclosure_date), sort: (r) => r.disclosure_date },
+                { key: "q", label: "Quelle", render: (r) => <Src url={r.source_url} label="Meldung" /> },
+              ]} />
+          </Panel>
+          <Panel title="Großbeteiligungen (13D/13G)" note="Beteiligungen über 5 % der beobachteten Superinvestoren.">
+            <DataTable rows={d.big_stakes ?? []} rowKey={(r) => r.id} initialSort={{ key: "d", dir: -1 }} empty="Keine Meldungen."
+              cols={[
+                { key: "d", label: "Gemeldet", render: (r) => fmt.date(r.filed_at), sort: (r) => r.filed_at },
+                { key: "m", label: "Investor", render: (r) => r.manager },
+                { key: "f", label: "Art", render: (r) => <Tag>{r.form}</Tag> },
+                { key: "q", label: "Quelle", render: (r) => <Src url={r.url} label="SEC" /> },
+              ]} />
+          </Panel>
+        </div>
+      ) : null}
+
+      <h2 className="sec-head">Politik &amp; Nachrichten</h2>
       <Panel title="Political Intelligence">
         <p>Relevanz {d.political_detail.relevance}, Wirkungsrichtung <Direction d={d.political_detail.direction} />,
           {d.political_detail.trump_bonus_active ? <> aktiver Trump-Bonus +{d.political_detail.trump_bonus} bis {fmt.dt(d.political_detail.next_expiry)}.</> : " kein aktiver Trump-Bonus."}</p>
@@ -165,56 +219,8 @@ function CompanyView({ d }: { d: CompanyDetail }) {
         ) : <Empty>Keine Signale erfasst.</Empty>}
       </Panel>
 
-      {(d.political_trades?.length || d.big_stakes?.length) ? (
-        <div className="grid-2">
-          <Panel title="Politiker-Trades (US-Kongress)" note="Offizielle Meldungen, bis 45 Tage Verzug, Beträge als Bandbreite.">
-            <DataTable rows={d.political_trades ?? []} rowKey={(r) => r.id} initialSort={{ key: "d", dir: -1 }} limit={15} empty="Keine Meldungen."
-              cols={[
-                { key: "p", label: "Person", render: (r) => <><strong>{r.politician}</strong><div className="small muted">{r.chamber}</div></> },
-                { key: "t", label: "Art", render: (r) => <Tag tone={r.transaction_type === "purchase" ? "ok" : r.transaction_type.startsWith("sale") ? "err" : undefined}>{({ purchase: "Kauf", sale: "Verkauf", sale_partial: "Teilverkauf", exchange: "Tausch" } as Record<string, string>)[r.transaction_type] ?? r.transaction_type}</Tag> },
-                { key: "a", label: "Betrag", num: true, render: (r) => r.amount_range[1] ? `${fmt.big(r.amount_range[0])}–${fmt.big(r.amount_range[1])} $` : "–" },
-                { key: "d", label: "Gemeldet", render: (r) => fmt.date(r.disclosure_date), sort: (r) => r.disclosure_date },
-                { key: "q", label: "Quelle", render: (r) => <Src url={r.source_url} label="Meldung" /> },
-              ]} />
-          </Panel>
-          <Panel title="Großbeteiligungen (13D/13G)" note="Beteiligungen über 5 % der beobachteten Superinvestoren.">
-            <DataTable rows={d.big_stakes ?? []} rowKey={(r) => r.id} initialSort={{ key: "d", dir: -1 }} empty="Keine Meldungen."
-              cols={[
-                { key: "d", label: "Gemeldet", render: (r) => fmt.date(r.filed_at), sort: (r) => r.filed_at },
-                { key: "m", label: "Investor", render: (r) => r.manager },
-                { key: "f", label: "Art", render: (r) => <Tag>{r.form}</Tag> },
-                { key: "q", label: "Quelle", render: (r) => <Src url={r.url} label="SEC" /> },
-              ]} />
-          </Panel>
-        </div>
-      ) : null}
-
-      <Panel title="Superinvestoren (13F)" note="Bestände laut SEC-Pflichtmeldung zum Quartalsende, bis zu 45 Tage verzögert. Veränderung gegenüber dem Vorquartal.">
-        {d.superinvestors?.length ? (
-          <DataTable rows={d.superinvestors} rowKey={(r) => r.manager} initialSort={{ key: "w", dir: -1 }} limit={30}
-            cols={[
-              { key: "m", label: "Investor", render: (r) => <><strong>{r.manager}</strong><div className="small muted">{r.fund}</div></>, sort: (r) => r.manager },
-              { key: "a", label: "Aktion", render: (r) => <Tag tone={SI_TONE[r.action]}>{SI_ACTION[r.action]}</Tag>, sort: (r) => r.action },
-              { key: "c", label: "Stückzahl Δ", num: true, render: (r) => r.action === "new" ? "neu" : fmt.pct(r.shares_change_pct, 0), sort: (r) => r.shares_change_pct },
-              { key: "w", label: "Depotanteil", num: true, render: (r) => `${fmt.num(r.weight_pct, 2)} %`, sort: (r) => r.weight_pct },
-              { key: "v", label: "Wert", num: true, render: (r) => fmt.big(r.value, "USD"), sort: (r) => r.value },
-              { key: "q", label: "Stichtag", render: (r) => fmt.date(r.report_date) },
-            ]} />
-        ) : <Empty>Kein beobachteter Superinvestor meldet diese Aktie.</Empty>}
-      </Panel>
-
-      <div className="grid-2">
-        <Panel title="Insider">
-          <DataTable rows={d.insiders} rowKey={(r) => r.id} empty="Keine Insidermeldungen." limit={20}
-            cols={[
-              { key: "d", label: "Datum", render: (r) => fmt.date(r.transaction_date), sort: (r) => r.transaction_date },
-              { key: "w", label: "Person", render: (r) => <>{r.insider}<div className="small muted">{r.role}</div></> },
-              { key: "k", label: "Art", render: (r) => <Tag tone={r.open_market ? (r.transaction_kind === "buy" ? "ok" : "err") : undefined}>{r.transaction_label}</Tag> },
-              { key: "v", label: "Volumen", num: true, render: (r) => fmt.big(r.value, r.currency), sort: (r) => r.value },
-              { key: "s", label: "Quelle", render: (r) => <Src url={r.source_url} /> },
-            ]} />
-        </Panel>
-        <Panel title="Indexzugehörigkeit und Historie">
+      <details className="more-block"><summary>Indexzugehörigkeit und Historie</summary>
+        <Panel>
           <table className="data compact">
             <thead><tr><th>Index</th><th>Seit</th><th>Bis</th><th>Datumsbasis</th></tr></thead>
             <tbody>{d.memberships.map((x, i) => (
@@ -224,7 +230,7 @@ function CompanyView({ d }: { d: CompanyDetail }) {
           </table>
           {d.history.length ? <ul className="plain small">{d.history.map((h, i) => <li key={i}>{fmt.date(h.date)}: {h.from} zu {h.to} ({h.reason ?? "–"})</li>)}</ul> : null}
         </Panel>
-      </div>
+      </details>
     </Page>
   );
 }

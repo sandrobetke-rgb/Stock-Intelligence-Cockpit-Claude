@@ -20,23 +20,13 @@ import { SocialPage } from "./pages/Social";
 import { FactCheck } from "./pages/FactCheck";
 import { RiskOverview } from "./pages/Risk";
 
-const NAV = [
-  ["report", "Tagesbericht"],
-  ["dashboard", "Dashboard"],
-  ["watchlist", "Watchlist & Alarme"],
-  ["swing", "Swing-Setups"],
-  ["confluence", "Signal-Zusammenfluss"],
-  ["radar", "Opportunity Radar"],
-  ["trump", "Trump Mention Radar"],
-  ["ticker", "Markt- & Wirtschaftsticker"],
-  ["quality", "Quality Stocks"],
-  ["superinvestors", "Superinvestoren"],
-  ["politicians", "Politiker-Trades"],
-  ["insider", "Insider & Institutionen"],
-  ["social", "Social Media"],
-  ["factcheck", "Fact-Checking"],
-  ["risk", "Risk Overview"],
-] as const;
+const NAV_GROUPS: [string, [string, string][]][] = [
+  ["Überblick", [["report", "Tagesbericht"], ["watchlist", "Watchlist & Alarme"], ["dashboard", "Dashboard"]]],
+  ["Trading", [["swing", "Swing-Setups"], ["confluence", "Signal-Zusammenfluss"], ["radar", "Opportunity Radar"]]],
+  ["Smart Money", [["insider", "Insider"], ["superinvestors", "Superinvestoren"], ["politicians", "Politiker-Trades"], ["trump", "Trump-Nennungen"]]],
+  ["Stimmung & Markt", [["social", "Social Media"], ["ticker", "Wirtschaftsticker"]]],
+  ["Bewertung", [["quality", "Qualität"], ["risk", "Risiko"], ["factcheck", "Fact-Checking"]]],
+];
 
 function useRoute() {
   const get = () => window.location.hash.replace(/^#\/?/, "") || "dashboard";
@@ -104,9 +94,14 @@ function App() {
           <span>Stock Intelligence<br />Cockpit</span>
         </a>
         <nav aria-label="Bereiche">
-          {NAV.map(([k, label]) => (
-            <a key={k} href={`#/${k}`} className={section === k || (k === "quality" && section === "company") ? "active" : ""}
-              aria-current={section === k ? "page" : undefined}>{label}</a>
+          {NAV_GROUPS.map(([g, items]) => (
+            <div key={g} className="nav-sec">
+              <span className="nav-group">{g}</span>
+              {items.map(([k, label]) => (
+                <a key={k} href={`#/${k}`} className={section === k ? "active" : ""}
+                  aria-current={section === k ? "page" : undefined}>{label}</a>
+              ))}
+            </div>
           ))}
         </nav>
         <p className="side-foot">
