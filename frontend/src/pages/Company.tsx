@@ -13,7 +13,7 @@ function CompanyView({ d }: { d: CompanyDetail }) {
   const p = d.profile;
   const m = d.market_detail;
   return (
-    <Page title={`${p.symbol} ${p.name}`}
+    <Page helpKey="company" title={`${p.symbol} ${p.name}`}
       intro={<>{p.sector ?? "Branche unbekannt"}{p.industry ? `, ${p.industry}` : ""}, {p.region}, {p.currency}. <IndexTags idx={p.indexes} /> <EventBadges events={p.events} max={3} />
         {p.status === "archived" ? <> <Tag tone="warn">archiviert seit {fmt.date(p.archived_at)} ({p.status_reason})</Tag></> : null}</>}
       actions={<span className="head-actions"><WatchStar symbol={p.symbol} /> <a className="back" href="#/quality">Zur Übersicht</a></span>}>

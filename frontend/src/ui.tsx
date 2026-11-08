@@ -1,4 +1,5 @@
 import { ReactNode, useMemo, useState } from "react";
+import { PageHelp, helpFor } from "./help";
 import { DIRECTION_LABEL, Loaded, VERIFICATION_LABEL, fmt, qualityGrade, useQuality, useWatchlist } from "./data";
 import type { CorpEvent, StockRow } from "./types";
 
@@ -168,7 +169,8 @@ export function Src({ url, label }: { url?: string | null; label?: string }) {
 }
 
 // ---------------------------------------------------------------- Layout --
-export function Page({ title, intro, children, actions }: { title: string; intro?: ReactNode; children: ReactNode; actions?: ReactNode }) {
+export function Page({ title, intro, children, actions, helpKey }: { title: string; intro?: ReactNode; children: ReactNode; actions?: ReactNode; helpKey?: string }) {
+  const help = helpFor(title, helpKey);
   return (
     <section className="page">
       <header className="page-head">
@@ -178,6 +180,7 @@ export function Page({ title, intro, children, actions }: { title: string; intro
         </div>
         {actions}
       </header>
+      {help ? <PageHelp content={help} /> : null}
       {children}
     </section>
   );
