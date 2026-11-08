@@ -10,6 +10,21 @@ type SI = Meta & {
 
 const FRESH_DAYS = 28;
 
+/** Quartal aus dem 13F-Stichtag, z. B. 2026-06-30 -> "Q2/26" und Zeitraum 01.04.–30.06.2026. */
+function quarter(reportDate: string) {
+  const d = new Date(reportDate + "T00:00:00Z");
+  const q = Math.floor(d.getUTCMonth() / 3) + 1;
+  const start = new Date(Date.UTC(d.getUTCFullYear(), (q - 1) * 3, 1));
+  return { label: `Q${q}/${String(d.getUTCFullYear()).slice(2)}`, range: `${fmt.date(start.toISOString().slice(0, 10))}–${fmt.date(reportDate)}` };
+}
+
+function NextEarnings({ events }: { events?: CorpEvent[] }) {
+  const e = (events ?? []).find((x) => x.type === "earnings" && x.days_until >= -1);
+  if (!e) return <span className="muted small" title="Kein Termin in den nächsten 30 Tagen bekannt">–</span>;
+  const when = e.days_until === 0 ? "heute" : e.days_until === 1 ? "morgen" : e.days_until === -1 ? "gestern" : `in ${e.days_until} T.`;
+  return <span className={e.days_until <= 7 ? "warn-text" : ""} title={`${e.time ?? ""} – Quelle: ${e.source}`}>{fmt.date(e.date)}<div className="small muted">{when}</div></span>;
+}
+
 function Stock({ s }: { s: { symbol: string | null; issuer: string; in_universe: boolean; events?: CorpEvent[] } }) {
   return (
     <>
@@ -66,13 +81,15 @@ function Overview({ d }: { d: SI }) {
     if (view === "sells") return st.filter((x) => x.sellers > 0).sort((a, b) => b.sellers - a.sellers || b.sold_out - a.sold_out);
     return [...st].sort((a, b) => b.holders - a.holders || b.value - a.value);
   }, [stocks, view, passQ]);
-  const quarter = d.managers.filter((m) => !m.stale).map((m) => m.report_date).sort().pop();
+  const quarterEnd = d.managers.filter((m) => !m.stale).map((m) => m.report_date).sort().pop();
+  const filed = new Map(d.managers.map((m) => [m.manager, m.filed_at] as const));
+  const pick = (r: SiStock) => r.managers.filter((m) => view === "held" ? m.action !== "sold_out" : view === "buys" ? ["new", "increased"].includes(m.action) : ["reduced", "sold_out"].includes(m.action));
   const stakes = (d.stakes ?? []).filter((s) => s.filed_at >= cutoff || !fresh);
   const trades = (d.insider_trades ?? []).filter((t) => (t.filed_at ?? "") >= cutoff || !fresh);
   return (
     <Page title="Superinvestoren"
       intro={<>Was große Investoren laut ihren Pflichtmeldungen bei der SEC halten, kaufen und verkaufen. Quartalsdepots (13F) zeigen den Stand
-        zum Quartalsende mit bis zu 45 Tagen Verzug (jüngster Stichtag {fmt.date(quarter)}). Schneller sind Großbeteiligungen über 5 % (13D/13G, 5–10 Tage)
+        zum Quartalsende mit bis zu 45 Tagen Verzug (jüngster Stichtag {fmt.date(quarterEnd)}). Schneller sind Großbeteiligungen über 5 % (13D/13G, 5–10 Tage)
         und Direktkäufe von Großaktionären (Form 4, 2 Tage), beide weiter unten.</>}>
       <Panel>
         <div className="filters inline" role="tablist">
@@ -90,8 +107,16 @@ function Overview({ d }: { d: SI }) {
             { key: "h", label: "Halter", num: true, render: (r) => r.holders, sort: (r) => r.holders },
             { key: "b", label: "Käufer", num: true, render: (r) => r.buyers ? <span className="pos">{r.buyers}{r.new_buyers ? ` (${r.new_buyers} neu)` : ""}</span> : "–", sort: (r) => r.buyers },
             { key: "v", label: "Verkäufer", num: true, render: (r) => r.sellers ? <span className="neg">{r.sellers}{r.sold_out ? ` (${r.sold_out} komplett)` : ""}</span> : "–", sort: (r) => r.sellers },
-            { key: "m", label: "Wer", render: (r) => r.managers.filter((m) => view === "held" ? m.action !== "sold_out" : view === "buys" ? ["new", "increased"].includes(m.action) : ["reduced", "sold_out"].includes(m.action))
-                .slice(0, 6).map((m) => <Tag key={m.manager} tone={SI_TONE[m.action]}>{m.manager}{m.weight_pct >= 1 ? ` ${fmt.num(m.weight_pct, 1)} %` : ""}</Tag>) },
+            { key: "m", label: "Wer (Quartal des Kaufs/Verkaufs)", render: (r) => pick(r).slice(0, 6).map((m) => {
+                const q = quarter(m.report_date);
+                return <span key={m.manager} title={`${SI_ACTION[m.action] ?? m.action} im Zeitraum ${q.range}, gemeldet am ${fmt.date(filed.get(m.manager) ?? "")} (genaues Handelsdatum nennt die 13F-Meldung nicht)`}>
+                  <Tag tone={SI_TONE[m.action]}>{m.manager}{m.weight_pct >= 1 ? ` ${fmt.num(m.weight_pct, 1)} %` : ""} · {q.label}</Tag></span>;
+              }) },
+            { key: "g", label: "Gemeldet", render: (r) => { const f = pick(r).map((m) => filed.get(m.manager) ?? "").sort().pop();
+                return f ? <>{fmt.date(f)}<div className="small muted">zuletzt</div></> : "–"; },
+              sort: (r) => pick(r).map((m) => filed.get(m.manager) ?? "").sort().pop() ?? "" },
+            { key: "e", label: "Nächste Zahlen", render: (r) => <NextEarnings events={r.events} />,
+              sort: (r) => -((r.events ?? []).find((x) => x.type === "earnings" && x.days_until >= -1)?.days_until ?? 999) },
             { key: "w", label: "Wert gesamt", num: true, render: (r) => fmt.big(r.value, "USD"), sort: (r) => r.value },
           ]} />
         <p className="note">Termin-Hinweise: „Zahlen in X T.“ = nächste Quartalszahlen, „Ex-Div.“ = Dividendenabschlag. Mit der Maus darüber (am Handy antippen) stehen Datum, Uhrzeit und Quelle.</p>
