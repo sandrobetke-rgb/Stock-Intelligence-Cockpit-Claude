@@ -13,14 +13,16 @@ export function TvChart({ symbol, region }: { symbol: string; region?: string })
   useEffect(() => {
     const el = box.current;
     if (!el) return;
-    el.innerHTML = '<div class="tradingview-widget-container__widget" style="height:100%;width:100%"></div>';
+    const h = window.innerWidth < 700 ? 480 : 780;
+    el.style.height = `${h}px`;
+    el.innerHTML = `<div class="tradingview-widget-container__widget" style="height:${h}px;width:100%"></div>`;
     const dark = window.matchMedia?.("(prefers-color-scheme: dark)").matches;
     const sc = document.createElement("script");
     sc.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
     sc.async = true;
     sc.type = "text/javascript";
     sc.innerHTML = JSON.stringify({
-      autosize: true, symbol: sym, interval: "D", range: "12M", timezone: "Europe/Berlin", theme: dark ? "dark" : "light",
+      autosize: false, width: "100%", height: h, symbol: sym, interval: "D", range: "12M", timezone: "Europe/Berlin", theme: dark ? "dark" : "light",
       style: "1", locale: "de_DE", allow_symbol_change: true, hide_side_toolbar: false, withdateranges: true,
       studies: [
         { id: "MAExp@tv-basicstudies", inputs: { length: 20 } },
