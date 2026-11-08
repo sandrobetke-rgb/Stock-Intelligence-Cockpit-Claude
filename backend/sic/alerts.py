@@ -135,7 +135,9 @@ def generate(*, stocks: list[dict], insiders: list[dict], clusters: list[dict], 
     if cands:
         lines = [f"{c['symbol']} {'/'.join(c['swing']['hits'])} RelVol {c['swing']['tech']['rvol']:.1f}" for c in cands[:10]]
         note = " Morgen ist Freitag: laut Regel keine neuen Trades." if today.weekday() == 3 else ""
-        out.append(_a("digest", today.isoformat(), None, f"{len(cands)} Swing-Kandidaten für den nächsten Handelstag",
+        # Schlüssel = Kursdatum: am Wochenende/bei Läufen ohne neue Kurse keine Wiederholung
+        pdate = max((c["market"].get("price_date") or "") for c in cands) or today.isoformat()
+        out.append(_a("digest", pdate, None, f"{len(cands)} Swing-Kandidaten für den nächsten Handelstag",
                       "; ".join(lines) + note, None, 2))
     return out
 
