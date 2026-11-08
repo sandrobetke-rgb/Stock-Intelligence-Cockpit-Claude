@@ -8,6 +8,8 @@ type Ins = Meta & { cluster_buys: ClusterBuy[]; insiders: Insider[]; institution
 export function InsiderPage() {
   const s = useData<Ins>("insider.json");
   const [onlyOpen, setOnlyOpen] = useState(true);
+  const [kind, setKind] = useState<"all" | "buy" | "sell">("buy");
+  const [noPlan, setNoPlan] = useState(false);
   const [minQ, setMinQ] = useState(0);
   const passQ = useQualityFilter(minQ);
   return (
@@ -27,8 +29,15 @@ export function InsiderPage() {
               ]} />
           </Panel>
           <Panel title="Unternehmensinsider" note="Käufe und Verkäufe am offenen Markt sind von Optionsausübungen, Vergütung und Steuereinbehalt getrennt.">
-            <div className="filters inline"><label className="check"><input type="checkbox" checked={onlyOpen} onChange={(e) => setOnlyOpen(e.target.checked)} /> Nur Käufe/Verkäufe am offenen Markt</label><QualitySelect value={minQ} onChange={setMinQ} /></div>
-            <DataTable rows={d.insiders.filter((x) => (!onlyOpen || x.open_market) && passQ(x.symbol))} rowKey={(r) => r.id} initialSort={{ key: "filed", dir: -1 }} limit={50}
+            <div className="filters inline">
+              <label>Art<select value={kind} onChange={(e) => setKind(e.target.value as "all" | "buy" | "sell")}>
+                <option value="buy">nur Käufe</option><option value="sell">nur Verkäufe</option><option value="all">alle</option>
+              </select></label>
+              <label className="check"><input type="checkbox" checked={onlyOpen} onChange={(e) => setOnlyOpen(e.target.checked)} /> Nur am offenen Markt</label>
+              <label className="check"><input type="checkbox" checked={noPlan} onChange={(e) => setNoPlan(e.target.checked)} /> Ohne 10b5-1-Pläne (vorab geplante Geschäfte)</label>
+              <QualitySelect value={minQ} onChange={setMinQ} /></div>
+            <DataTable rows={d.insiders.filter((x) => (!onlyOpen || x.open_market) && (kind === "all" || x.transaction_kind === kind)
+              && (!noPlan || !x.rule_10b5_1_plan) && passQ(x.symbol))} rowKey={(r) => r.id} initialSort={{ key: "filed", dir: -1 }} limit={50}
               empty="Keine Insidermeldungen im Zeitraum."
               cols={[
                 { key: "sym", label: "Aktie", render: (r) => <CompanyLink symbol={r.symbol} />, sort: (r) => r.symbol },
