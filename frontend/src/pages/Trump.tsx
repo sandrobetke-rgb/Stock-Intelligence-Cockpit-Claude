@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MENTION_LABEL, fmt, useData } from "../data";
 import type { Meta, TrumpMention } from "../types";
-import { CompanyLink, Direction, Empty, Gate, Page, Panel, Src, Tag, Verif } from "../ui";
+import { CompanyLink, DataTable, Direction, Empty, Gate, Page, Panel, Src, Tag, Verif } from "../ui";
 
 type TM = Meta & { rule: { max_age_days: number; bonus_levels: Record<string, number>; text: string }; mentions: TrumpMention[] };
 
@@ -43,33 +43,37 @@ function MentionCard({ m, maxDays }: { m: TrumpMention; maxDays: number }) {
 
 export function Trump() {
   const s = useData<TM>("trump-mentions.json");
-  const [showHistory, setShowHistory] = useState(false);
+  const [showGeneral, setShowGeneral] = useState(false);
   return (
     <Gate s={s}>
       {(d) => {
-        const active = d.mentions.filter((m) => m.bonus.active);
-        const watch = d.mentions.filter((m) => !m.bonus.active && m.bonus.age_days != null && m.bonus.age_days <= d.rule.max_age_days);
-        const history = d.mentions.filter((m) => !active.includes(m) && !watch.includes(m));
+        const max = d.rule.max_age_days;
+        const stocks = d.mentions.filter((m) => m.symbol && m.mapping_verified);
+        const general = d.mentions.filter((m) => !m.symbol || !m.mapping_verified);
+        const inWindow = stocks.filter((m) => m.bonus.age_days != null && m.bonus.age_days <= max).length;
         return (
-          <Page title="Trump Mention Radar" intro={d.rule.text}>
-            <div className="rule">
-              <div><b>{d.rule.max_age_days}</b><span>Kalendertage ab Originalaussage</span></div>
-              {Object.entries(d.rule.bonus_levels).map(([k, v]) => (
-                <div key={k}><b>{v ? `+${v}` : "0"}</b><span>{MENTION_LABEL[k]}</span></div>
-              ))}
-            </div>
-            <Panel title={`Aktiver Sonderbonus (${active.length})`}>
-              {active.length ? <div className="mentions">{active.map((m) => <MentionCard key={m.id} m={m} maxDays={d.rule.max_age_days} />)}</div>
-                : <Empty>Keine verifizierte Unternehmensnennung der letzten {d.rule.max_age_days} Tage.</Empty>}
+          <Page title="Trump Mention Radar" intro={`Aktien, die Trump bzw. das Weiße Haus genannt hat. Sonderbonus nur bei verifizierter Nennung innerhalb von ${max} Kalendertagen ab Originalaussage (direkt +${d.rule.bonus_levels.direct ?? 30}, eindeutig indirekt +${d.rule.bonus_levels.indirect ?? 15}). Erhöht nie den Company Quality Score.`}>
+            <Panel title={`Genannte Aktien (${stocks.length}, davon ${inWindow} in der ${max}-Tage-Frist)`}>
+              <DataTable rows={stocks} rowKey={(m) => m.id} initialSort={{ key: "t", dir: -1 }}
+                empty="In den letzten 90 Tagen wurde keine Aktie aus dem Universum gesichert genannt."
+                cols={[
+                  { key: "sym", label: "Aktie", render: (m) => <CompanyLink symbol={m.symbol!} />, sort: (m) => m.symbol },
+                  { key: "t", label: "Aussage vom", render: (m) => fmt.dt(m.statement_at, m.date_only), sort: (m) => m.statement_at },
+                  { key: "dir", label: "Richtung", render: (m) => <Direction d={m.direction} />, sort: (m) => m.direction },
+                  { key: "typ", label: "Art", render: (m) => MENTION_LABEL[m.mention_type], sort: (m) => m.mention_type },
+                  { key: "b", label: "Bonus", render: (m) => m.bonus.active
+                      ? <span className="bonus">+{m.bonus.value} · noch {fmt.num(Math.max(0, max - (m.bonus.age_days ?? max)), 1)} T.</span>
+                      : <span className="muted small">{m.bonus.age_days != null && m.bonus.age_days > max ? "verfallen" : "kein Bonus"}</span>,
+                    sort: (m) => (m.bonus.active ? m.bonus.value : 0) },
+                  { key: "v", label: "Prüfung", render: (m) => <><Verif v={m.verification} /></> },
+                  { key: "q", label: "Quelle", render: (m) => <span title={m.quote_de ?? m.quote}><Src url={m.source_url} label={m.source_name} /></span> },
+                ]} />
             </Panel>
-            <Panel title={`Innerhalb der Frist, ohne Bonus (${watch.length})`} note="Branchen- und allgemeine Aussagen, unbestätigte Quellen oder ungeprüfte Zuordnungen erhalten keinen Unternehmensbonus.">
-              {watch.length ? <div className="mentions">{watch.map((m) => <MentionCard key={m.id} m={m} maxDays={d.rule.max_age_days} />)}</div> : <Empty>Keine weiteren Aussagen in der Frist.</Empty>}
-            </Panel>
-            <Panel title={`Historie (${history.length})`} note="Verfallene Aussagen bleiben für die Recherche sichtbar, zählen aber nicht mehr als aktuelles Sondersignal.">
-              {history.length ? (
-                showHistory ? <div className="mentions">{history.map((m) => <MentionCard key={m.id} m={m} maxDays={d.rule.max_age_days} />)}</div>
-                  : <button className="more" onClick={() => setShowHistory(true)}>Historie anzeigen</button>
-              ) : <Empty>Noch keine Historie.</Empty>}
+            <Panel title={`Aussagen ohne gesicherten Aktienbezug (${general.length})`} note="Allgemeine und Branchen-Aussagen sowie ungeprüfte Wortzufälle (z. B. „news“, „gold“) – ausgeblendet.">
+              {general.length ? (showGeneral
+                ? <div className="mentions">{general.map((m) => <MentionCard key={m.id} m={m} maxDays={max} />)}</div>
+                : <button className="more" onClick={() => setShowGeneral(true)}>Trotzdem anzeigen</button>)
+                : <Empty>Keine.</Empty>}
             </Panel>
           </Page>
         );
