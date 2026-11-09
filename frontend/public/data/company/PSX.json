@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-09T06:11:09Z",
+ "generated_at": "2026-11-09T22:22:21Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -17,35 +17,35 @@
   "data_status": "ok",
   "data_flags": [],
   "market": {
-   "last_close": 245.72000122070312,
-   "price_date": "2026-11-06",
-   "perf_20d": -11.668700952519707,
-   "perf_63d": 14.617748687182953,
-   "adr20": 3.8019249071607795,
-   "rvol": 1.0527294493763806,
-   "ema10": 265.35041154927717,
-   "ema21": 270.7888077375446,
-   "sma50": 268.1608010864258,
-   "sma200": 200.6589649963379
+   "last_close": 253.02000427246094,
+   "price_date": "2026-11-09",
+   "perf_20d": -10.107647999736313,
+   "perf_63d": 13.37267370197841,
+   "adr20": 3.9441963556144897,
+   "rvol": 1.0550929730006748,
+   "ema10": 263.10851931712875,
+   "ema21": 269.17346196797695,
+   "sma50": 268.3410012817383,
+   "sma200": 201.23087341308593
   },
   "market_cap": 110324154368.0,
   "market_cap_currency": "USD",
   "swing": {
    "tech": {
-    "close": 245.72000122070312,
-    "change_pct": -0.5343232275353937,
-    "ema20": 270.6823875474187,
-    "ema50": 263.0979118334202,
-    "ema200": 211.46382157763443,
-    "sma50": 268.1608010864258,
-    "rsi14": 33.35837720685153,
-    "rsi_min5": 33.35837720685153,
-    "atr14": 10.71824094963467,
-    "atr_pct": 4.361973342173175,
-    "rvol": 1.0527294493763806,
-    "vol30": 2736778.6333333333,
-    "dist_ema200_pct": 16.19954628054061,
-    "dist_52w_high_pct": 17.926454057179253,
+    "close": 253.02000427246094,
+    "change_pct": 2.9708623699708614,
+    "ema20": 269.00025580693847,
+    "ema50": 262.7026997626846,
+    "ema200": 211.88527454582328,
+    "sma50": 268.3410012817383,
+    "rsi14": 39.29739415353989,
+    "rsi_min5": 33.35837720524873,
+    "atr14": 10.855663164956859,
+    "atr_pct": 4.2904367171170765,
+    "rvol": 1.0550929730006748,
+    "vol30": 2719849.2666666666,
+    "dist_ema200_pct": 19.413680263911726,
+    "dist_52w_high_pct": 15.488161965063242,
     "high_52w": 299.3900146484375,
     "macd_above_signal": false,
     "obv_rising": false,
@@ -54,18 +54,18 @@
     "higher_low": true,
     "last_higher_high": 294.5,
     "hammer": false,
-    "bull_engulfing": false,
-    "green": false,
-    "day_high": 250.1300048828125,
-    "day_low": 243.02000427246094,
+    "bull_engulfing": true,
+    "green": true,
+    "day_high": 253.47000122070312,
+    "day_low": 240.92999267578125,
     "history_ok": true,
-    "rsi2": 2.837602372309604,
-    "adx14": 24.302009633636377,
-    "ema10": 265.35041154927717,
-    "sma200": 200.6589649963379,
-    "perf_63d": 14.617748687182953,
-    "adr20_pct": 3.8019249071607795,
-    "range10_pct": 19.43869540173122,
+    "rsi2": 56.18035974305025,
+    "adx14": 24.519519514778032,
+    "ema10": 263.10851931712875,
+    "sma200": 201.23087341308593,
+    "perf_63d": 13.37267370197841,
+    "adr20_pct": 3.9441963556144897,
+    "range10_pct": 21.183439561552508,
     "high10_prev": 294.5,
     "pullback_ema20": true,
     "trend": "up"
@@ -73,7 +73,7 @@
    "criteria": {
     "S01": {
      "RSI zuletzt < 35": true,
-     "Umkehrkerze (Hammer/Engulfing)": false
+     "Umkehrkerze (Hammer/Engulfing)": true
     },
     "S02": {
      "Kurs > EMA 200": true,
@@ -85,7 +85,7 @@
      "Marktkap. > 1 Mrd.": true,
      "Volumen 30T > 1 Mio.": true,
      "Kurs > 10": true,
-     "Tag positiv": false
+     "Tag positiv": true
     },
     "S03": {
      "0–5 % unter 52W-Hoch": false,
@@ -102,14 +102,14 @@
     "DSM": {
      "EMA 20 > EMA 50 > EMA 200": true,
      "Rücksetzer an EMA 20 (3 T.)": true,
-     "Schluss über Vortageshoch": false,
+     "Schluss über Vortageshoch": true,
      "ATR% 1,5–5": true,
      "RelVol ≥ 1": true,
      "ADX ≥ 20": true
     },
     "RSI2": {
      "über SMA 200": true,
-     "RSI(2) < 10": true,
+     "RSI(2) < 10": false,
      "unter EMA 10": true
     },
     "QM": {
@@ -122,19 +122,20 @@
     }
    },
    "hits": [
-    "RSI2"
+    "S01",
+    "DSM"
    ],
    "near": {
-    "S01": 0.5,
-    "S02": 0.7,
+    "S01": 1.0,
+    "S02": 0.8,
     "S03": 0.3333333333333333,
     "S04": 0.4,
-    "DSM": 0.8333333333333334,
-    "RSI2": 1.0,
+    "DSM": 1.0,
+    "RSI2": 0.6666666666666666,
     "QM": 0.16666666666666666
    },
    "filter": {
-    "Tag grün": false,
+    "Tag grün": true,
     "RelVol ≥ 1.2": false,
     "RSI ≤ 65": true,
     "ATR% 1.5–5.0": true,
@@ -142,11 +143,11 @@
    },
    "filter_pass": false,
    "plan": {
-    "trigger": 250.1300048828125,
-    "entry_max": 255.13260498046876,
-    "stop": 234.0526434583605,
-    "risk_per_share": 16.077361424451993,
-    "target_1": 282.2847277317165,
+    "trigger": 253.47000122070312,
+    "entry_max": 258.5394012451172,
+    "stop": 237.18650647326783,
+    "risk_per_share": 16.2834947474353,
+    "target_1": 286.0369907155737,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   },
@@ -165,7 +166,7 @@
    }
   },
   "risk": {
-   "score": 26.2,
+   "score": 26.1,
    "level": "moderat",
    "coverage_pct": 100,
    "top_factors": [
@@ -175,13 +176,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 39.6,
+   "score": 36.0,
    "drivers": [
     "news_flow",
-    "source_diversity",
-    "social_attention"
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 13,
+   "independent_7d": 5,
    "independent_24h": 0
   },
   "political": {
@@ -193,10 +194,10 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 1,
+   "mentions_7d": 0,
    "manipulation_risk": "unauffällig",
    "mentions_24h": 0,
-   "sentiment_7d": 1.0,
+   "sentiment_7d": null,
    "bullish_7d": 0,
    "bearish_7d": 0
   },
@@ -232,35 +233,35 @@
  ],
  "market_detail": {
   "flags": [],
-  "last_close": 245.72000122070312,
-  "price_date": "2026-11-06",
-  "perf_20d": -11.668700952519707,
-  "perf_63d": 14.617748687182953,
-  "adr20": 3.8019249071607795,
-  "rvol": 1.0527294493763806,
-  "ema10": 265.35041154927717,
-  "ema21": 270.7888077375446,
-  "sma50": 268.1608010864258,
-  "sma200": 200.6589649963379,
-  "volatility_ann": 34.82136053230802,
-  "avg_dollar_volume_20d": 807218477.8573258,
-  "move_zscore": -0.24358951370766502,
+  "last_close": 253.02000427246094,
+  "price_date": "2026-11-09",
+  "perf_20d": -10.107647999736313,
+  "perf_63d": 13.37267370197841,
+  "adr20": 3.9441963556144897,
+  "rvol": 1.0550929730006748,
+  "ema10": 263.10851931712875,
+  "ema21": 269.17346196797695,
+  "sma50": 268.3410012817383,
+  "sma200": 201.23087341308593,
+  "volatility_ann": 34.38239715316407,
+  "avg_dollar_volume_20d": 823601040.0226456,
+  "move_zscore": 1.3716605579293402,
   "swing": {
    "tech": {
-    "close": 245.72000122070312,
-    "change_pct": -0.5343232275353937,
-    "ema20": 270.6823875474187,
-    "ema50": 263.0979118334202,
-    "ema200": 211.46382157763443,
-    "sma50": 268.1608010864258,
-    "rsi14": 33.35837720685153,
-    "rsi_min5": 33.35837720685153,
-    "atr14": 10.71824094963467,
-    "atr_pct": 4.361973342173175,
-    "rvol": 1.0527294493763806,
-    "vol30": 2736778.6333333333,
-    "dist_ema200_pct": 16.19954628054061,
-    "dist_52w_high_pct": 17.926454057179253,
+    "close": 253.02000427246094,
+    "change_pct": 2.9708623699708614,
+    "ema20": 269.00025580693847,
+    "ema50": 262.7026997626846,
+    "ema200": 211.88527454582328,
+    "sma50": 268.3410012817383,
+    "rsi14": 39.29739415353989,
+    "rsi_min5": 33.35837720524873,
+    "atr14": 10.855663164956859,
+    "atr_pct": 4.2904367171170765,
+    "rvol": 1.0550929730006748,
+    "vol30": 2719849.2666666666,
+    "dist_ema200_pct": 19.413680263911726,
+    "dist_52w_high_pct": 15.488161965063242,
     "high_52w": 299.3900146484375,
     "macd_above_signal": false,
     "obv_rising": false,
@@ -269,18 +270,18 @@
     "higher_low": true,
     "last_higher_high": 294.5,
     "hammer": false,
-    "bull_engulfing": false,
-    "green": false,
-    "day_high": 250.1300048828125,
-    "day_low": 243.02000427246094,
+    "bull_engulfing": true,
+    "green": true,
+    "day_high": 253.47000122070312,
+    "day_low": 240.92999267578125,
     "history_ok": true,
-    "rsi2": 2.837602372309604,
-    "adx14": 24.302009633636377,
-    "ema10": 265.35041154927717,
-    "sma200": 200.6589649963379,
-    "perf_63d": 14.617748687182953,
-    "adr20_pct": 3.8019249071607795,
-    "range10_pct": 19.43869540173122,
+    "rsi2": 56.18035974305025,
+    "adx14": 24.519519514778032,
+    "ema10": 263.10851931712875,
+    "sma200": 201.23087341308593,
+    "perf_63d": 13.37267370197841,
+    "adr20_pct": 3.9441963556144897,
+    "range10_pct": 21.183439561552508,
     "high10_prev": 294.5,
     "pullback_ema20": true,
     "trend": "up"
@@ -288,7 +289,7 @@
    "criteria": {
     "S01": {
      "RSI zuletzt < 35": true,
-     "Umkehrkerze (Hammer/Engulfing)": false
+     "Umkehrkerze (Hammer/Engulfing)": true
     },
     "S02": {
      "Kurs > EMA 200": true,
@@ -300,7 +301,7 @@
      "Marktkap. > 1 Mrd.": true,
      "Volumen 30T > 1 Mio.": true,
      "Kurs > 10": true,
-     "Tag positiv": false
+     "Tag positiv": true
     },
     "S03": {
      "0–5 % unter 52W-Hoch": false,
@@ -317,14 +318,14 @@
     "DSM": {
      "EMA 20 > EMA 50 > EMA 200": true,
      "Rücksetzer an EMA 20 (3 T.)": true,
-     "Schluss über Vortageshoch": false,
+     "Schluss über Vortageshoch": true,
      "ATR% 1,5–5": true,
      "RelVol ≥ 1": true,
      "ADX ≥ 20": true
     },
     "RSI2": {
      "über SMA 200": true,
-     "RSI(2) < 10": true,
+     "RSI(2) < 10": false,
      "unter EMA 10": true
     },
     "QM": {
@@ -337,19 +338,20 @@
     }
    },
    "hits": [
-    "RSI2"
+    "S01",
+    "DSM"
    ],
    "near": {
-    "S01": 0.5,
-    "S02": 0.7,
+    "S01": 1.0,
+    "S02": 0.8,
     "S03": 0.3333333333333333,
     "S04": 0.4,
-    "DSM": 0.8333333333333334,
-    "RSI2": 1.0,
+    "DSM": 1.0,
+    "RSI2": 0.6666666666666666,
     "QM": 0.16666666666666666
    },
    "filter": {
-    "Tag grün": false,
+    "Tag grün": true,
     "RelVol ≥ 1.2": false,
     "RSI ≤ 65": true,
     "ATR% 1.5–5.0": true,
@@ -357,11 +359,11 @@
    },
    "filter_pass": false,
    "plan": {
-    "trigger": 250.1300048828125,
-    "entry_max": 255.13260498046876,
-    "stop": 234.0526434583605,
-    "risk_per_share": 16.077361424451993,
-    "target_1": 282.2847277317165,
+    "trigger": 253.47000122070312,
+    "entry_max": 258.5394012451172,
+    "stop": 237.18650647326783,
+    "risk_per_share": 16.2834947474353,
+    "target_1": 286.0369907155737,
     "trigger_basis": "Tageshoch (Vortageshoch für morgen)"
    }
   }
@@ -570,7 +572,7 @@
   "note": "Startmodell; Gewichte und Schwellen sind zu validieren. Proxys sind gekennzeichnet."
  },
  "risk_detail": {
-  "score": 26.2,
+  "score": 26.1,
   "level": "moderat",
   "coverage_pct": 100,
   "factors": [
@@ -631,16 +633,16 @@
    {
     "key": "volatility",
     "label": "Volatilität (63T, annualisiert)",
-    "value": 34.82,
+    "value": 34.38,
     "unit": "%",
-    "severity": 24.7,
+    "severity": 24.0,
     "weight": 0.12,
     "status": "ok"
    },
    {
     "key": "trading_liquidity",
     "label": "Handelsliquidität (Umsatz 20T)",
-    "value": 807218477.86,
+    "value": 823601040.02,
     "unit": "Whg",
     "severity": 0.0,
     "weight": 0.07,
@@ -685,15 +687,15 @@
   ]
  },
  "intelligence_detail": {
-  "score": 39.6,
+  "score": 36.0,
   "components": {
    "news_flow": 100.0,
    "freshness": 0,
-   "source_diversity": 60,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
-   "price_volume_anomaly": 7.3,
-   "social_attention": 25.0,
+   "price_volume_anomaly": 41.1,
+   "social_attention": 0.0,
    "insider_activity": null
   },
   "windows": {
@@ -707,10 +709,10 @@
     "verified": 0
    },
    "7d": {
-    "signals": 13,
-    "independent": 13,
+    "signals": 5,
+    "independent": 5,
     "duplicates": 0,
-    "sources": 3,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -727,8 +729,8 @@
   },
   "drivers": [
    "news_flow",
-   "source_diversity",
-   "social_attention"
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -1470,52 +1472,34 @@
  ],
  "social_detail": {
   "mentions_24h": 0,
-  "mentions_7d": 1,
+  "mentions_7d": 0,
   "mentions_30d": 1,
   "change_vs_baseline_pct": -100,
-  "engagement_7d": 0.0,
-  "sentiment_7d": 1.0,
+  "engagement_7d": 0,
+  "sentiment_7d": null,
   "sentiment_basis": "algorithmisch (Lexikon)",
   "bullish_7d": 0,
   "bearish_7d": 0,
-  "by_platform_7d": {
-   "reddit": 1
-  },
-  "communities_7d": {
-   "r/StockMarket": 1
-  },
+  "by_platform_7d": {},
+  "communities_7d": {},
   "platforms": [
    "reddit"
   ],
   "manipulation_flags": [],
   "manipulation_risk": "unauffällig",
-  "top_posts": [
-   {
-    "platform": "reddit",
-    "community": "r/StockMarket",
-    "author": "BeVeracious",
-    "posted_at": "2026-11-02T17:49:02Z",
-    "url": "https://www.reddit.com/r/StockMarket/comments/1xm431w/valero_vs_phillips_66_wars_rewarded_the_refiner/",
-    "text": "Valero vs. Phillips 66: War(s) Rewarded the Refiner That Kept It Simple                  If refining stays unusually profitable, Valero gives investors more of it. But if the world gets better at ending wars or routing oil around them, Phillips 66’s pipelines, chemicals and marketing value mix looking less like distractions and more like the point. Will Elliott Management strong-arm Phillips 66 aw",
-    "engagement": 0.0,
-    "sentiment_label": null
-   }
-  ]
+  "top_posts": []
  },
  "attention": {
   "title": "Phillips 66",
   "url": "https://en.wikipedia.org/wiki/Phillips_66",
-  "date": "2026-11-05",
-  "views_1d": 236,
-  "avg_7d": 228,
-  "avg_30d": 275,
-  "ratio_1d": 0.86,
-  "ratio_7d": 0.83,
+  "date": "2026-11-08",
+  "views_1d": 209,
+  "avg_7d": 216,
+  "avg_30d": 269,
+  "ratio_1d": 0.78,
+  "ratio_7d": 0.8,
   "spike": false,
   "series": [
-   264,
-   327,
-   339,
    252,
    263,
    297,
@@ -1542,7 +1526,10 @@
    244,
    212,
    224,
-   236
+   236,
+   224,
+   161,
+   209
   ]
  },
  "history": []
