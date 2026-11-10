@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-09T22:22:21Z",
+ "generated_at": "2026-11-10T05:57:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -173,9 +173,11 @@
    ]
   },
   "market_intelligence": {
-   "score": 6.7,
+   "score": 8.7,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "social_attention",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -188,13 +190,20 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 1,
+   "manipulation_risk": "unauffällig",
+   "mentions_24h": 0,
+   "sentiment_7d": 0.0,
+   "bullish_7d": 0,
+   "bearish_7d": 0
+  },
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 1,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 7513.16,
    "distinct_buyers": 0,
    "other_transactions": 6
   },
@@ -666,7 +675,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.7,
+  "score": 8.7,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -674,8 +683,8 @@
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 38.0,
-   "social_attention": null,
-   "insider_activity": null
+   "social_attention": 25.0,
+   "insider_activity": 10
   },
   "windows": {
    "24h": {
@@ -707,7 +716,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "social_attention",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -1103,6 +1114,27 @@
  ],
  "insiders": [
   {
+   "id": "b67131e2dbe15453",
+   "symbol": "UP",
+   "insider": "Wells Meaghan Danielle",
+   "owner_cik": 2074657,
+   "role": "Chief Growth Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-11-09",
+   "filed_at": "2026-11-09",
+   "reporting_delay_days": 0,
+   "shares": 2573.0,
+   "price": 2.92,
+   "value": 7513.16,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1819516/000110465926124676/0001104659-26-124676-index.htm"
+  },
+  {
    "id": "103ff4a045fdb77a",
    "symbol": "UP",
    "insider": "Wells Meaghan Danielle",
@@ -1233,7 +1265,40 @@
  "political_trades": [],
  "big_stakes": [],
  "superinvestors": [],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 0,
+  "mentions_7d": 1,
+  "mentions_30d": 1,
+  "change_vs_baseline_pct": -100,
+  "engagement_7d": 2.0,
+  "sentiment_7d": 0.0,
+  "sentiment_basis": "algorithmisch (Lexikon)",
+  "bullish_7d": 0,
+  "bearish_7d": 0,
+  "by_platform_7d": {
+   "stocktwits": 1
+  },
+  "communities_7d": {
+   "StockTwits": 1
+  },
+  "platforms": [
+   "stocktwits"
+  ],
+  "manipulation_flags": [],
+  "manipulation_risk": "unauffällig",
+  "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "Rayvio_News_Filter",
+    "posted_at": "2026-11-05T11:57:58Z",
+    "url": "https://stocktwits.com/Rayvio_News_Filter/message/668239110",
+    "text": "$UP · $DAL 💰 \n\nDelta Air Lines, Inc. provided Wheels Up Experience Inc. with an additional $100 million revolving credit facility to support the next phase of its business transformation. \n\nCurated for market relevance",
+    "engagement": 2.0,
+    "sentiment_label": null
+   }
+  ]
+ },
  "attention": null,
  "history": []
 }

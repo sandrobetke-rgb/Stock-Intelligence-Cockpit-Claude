@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-09T22:22:21Z",
+ "generated_at": "2026-11-10T05:57:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -171,11 +171,13 @@
    "top_factors": []
   },
   "market_intelligence": {
-   "score": 7.3,
+   "score": 33.6,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "analyst_activity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -190,9 +192,9 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 1,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 107200.0,
    "distinct_buyers": 0,
    "other_transactions": 0
   },
@@ -668,16 +670,16 @@
   ]
  },
  "intelligence_detail": {
-  "score": 7.3,
+  "score": 33.6,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
-   "analyst_activity": 0,
+   "analyst_activity": 35,
    "price_volume_anomaly": 41.4,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 10
   },
   "windows": {
    "24h": {
@@ -690,26 +692,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    },
    "30d": {
-    "signals": 20,
-    "independent": 20,
+    "signals": 22,
+    "independent": 22,
     "duplicates": 0,
     "sources": 4,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "analyst_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -728,6 +732,50 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "e7979c8405a4c3cc",
+   "symbols": [
+    "OSIS"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "OSI (OSIS) Upgraded to Buy: Here's Why",
+   "summary": "OSI (OSIS) has been upgraded to a Zacks Rank #2 (Buy), reflecting growing optimism about the company's earnings prospects. This might drive the stock higher in the near term.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/osi-osis-upgraded-buy-heres-160002363.html?.tsrc=rss",
+   "published_at": "2026-11-04T16:00:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-10T05:58:40Z",
+   "fingerprint": "a84d7ce1c669556a",
+   "primary_source": false,
+   "cluster_id": "e7979c8405a4c3cc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2eaf1029e36951de",
+   "symbols": [
+    "OSIS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wall Street Analysts Believe OSI (OSIS) Could Rally 31.62%: Here's is How to Trade",
+   "summary": "The average of price targets set by Wall Street analysts indicates a potential upside of 31.6% in OSI (OSIS). While the effectiveness of this highly sought-after metric is questionable, the positive trend in earnings estimate revisions might translate into an upside in the stock.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-believe-osi-135502823.html?.tsrc=rss",
+   "published_at": "2026-11-04T13:55:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-10T05:58:40Z",
+   "fingerprint": "5cb0e181a17311ef",
+   "primary_source": false,
+   "cluster_id": "2eaf1029e36951de",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "b9acafe6b6c0d898",
    "symbols": [
@@ -1172,7 +1220,29 @@
    "feed": "yahoo_rss"
   }
  ],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "96c94a4bcfca7d44",
+   "symbol": "OSIS",
+   "insider": "Morben Paul Keith",
+   "owner_cik": 1628328,
+   "role": "PRES., OPTOELECTRONICS DIV",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-11-09",
+   "filed_at": "2026-11-09",
+   "reporting_delay_days": 0,
+   "shares": 536.0,
+   "price": 200.0,
+   "value": 107200.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1039065/000162832826000011/0001628328-26-000011-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "big_stakes": [],

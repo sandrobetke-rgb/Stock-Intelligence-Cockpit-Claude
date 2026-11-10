@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-09T22:22:21Z",
+ "generated_at": "2026-11-10T05:57:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -175,12 +175,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 15.8,
+   "score": 52.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 3,
+   "independent_24h": 2
   },
   "political": {
    "relevance": 0,
@@ -220,7 +222,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/prax/earnings",
-    "days_until": 0
+    "days_until": -1
    }
   ],
   "politicians": {
@@ -694,11 +696,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 15.8,
+  "score": 52.1,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 86.0,
+   "freshness": 100.0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 100.0,
@@ -707,27 +709,27 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 2,
+    "independent": 2,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 3,
+    "independent": 3,
+    "duplicates": 2,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 5,
-    "independent": 5,
-    "duplicates": 0,
+    "signals": 8,
+    "independent": 8,
+    "duplicates": 2,
     "sources": 1,
     "primary": 0,
     "analyst_changes": 1,
@@ -735,7 +737,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -754,6 +758,74 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "68fb5938d4842956",
+   "symbols": [
+    "PRAX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Praxis Precision Medicines (PRAX) Stock Looks Rich Against Its Book Value",
+   "summary": "Praxis Precision Medicines has delivered very strong multi year gains, and the latest move leaves investors asking whether the current share price still lines up with what its book value can support. With the story increasingly shaped by expectations rather than cash flow today, ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/praxis-precision-medicines-prax-stock-001619281.html?.tsrc=rss",
+   "published_at": "2026-11-10T00:16:19Z",
+   "date_only": false,
+   "captured_at": "2026-11-10T05:59:43Z",
+   "fingerprint": "5d167469ef264a5c",
+   "primary_source": false,
+   "cluster_id": "68fb5938d4842956",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Praxis Precision Medicines (PRAX) Stock sieht reich aus gegen seinen Buchwert"
+  },
+  {
+   "id": "99efc35a0d67b3a8",
+   "symbols": [
+    "PRAX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Praxis Precision Medicines Provides Corporate Update and Reports Third Quarter 2026 Financial Results",
+   "summary": "FDA reviews of relutrigine, with PDUFA target action date of December 27, 2026, and ulixacaltamide HCI, with PDUFA target action date of January 29, 2027, are ongoing Topline results from the EMERALD study of relutrigine in broad developmental and epileptic encephalopathies (DEEs",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/praxis-precision-medicines-provides-corporate-120000799.html?.tsrc=rss",
+   "published_at": "2026-11-09T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-10T05:59:43Z",
+   "fingerprint": "7e7c3a3dbfc0f398",
+   "primary_source": false,
+   "cluster_id": "5b6ce2832e219abc",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Praxis Precision Medicines bietet Unternehmensaktualisierung und Berichte des dritten Quartals 2026 Finanzergebnisse"
+  },
+  {
+   "id": "3a94f071efa2d810",
+   "symbols": [
+    "PRAX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Praxis Precision Medicines, Inc. Announces Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+   "summary": "BOSTON, Nov. 04, 2026 (GLOBE NEWSWIRE) -- Praxis Precision Medicines, Inc. (Nasdaq: PRAX), a fully integrated, leading central nervous system (CNS) precision neuroscience biopharmaceutical company, today announced that on November 2, 2026, the Compensation Committee of Praxis’ Bo",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/praxis-precision-medicines-inc-announces-210100943.html?.tsrc=rss",
+   "published_at": "2026-11-04T21:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-10T05:59:43Z",
+   "fingerprint": "213ff829714f9537",
+   "primary_source": false,
+   "cluster_id": "2d8d486dd77a434a",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "57ebe741dd2dd5b5",
    "symbols": [
@@ -890,7 +962,7 @@
    "primary_source": false,
    "cluster_id": "2d8d486dd77a434a",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   },
   {
@@ -1088,7 +1160,7 @@
    "primary_source": false,
    "cluster_id": "5b6ce2832e219abc",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   },
   {

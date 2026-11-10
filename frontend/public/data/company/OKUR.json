@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-09T22:22:21Z",
+ "generated_at": "2026-11-10T05:57:50Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -173,11 +173,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 14.2,
+   "score": 30.4,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "news_flow",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -672,11 +674,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 14.2,
+  "score": 30.4,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 80.7,
@@ -694,26 +696,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 1,
+    "independent": 1,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 1,
+    "independent": 1,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "news_flow",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -732,6 +736,28 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "3ce1b6dad526b0e3",
+   "symbols": [
+    "OKUR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "OnKure Therapeutics Reports Third Quarter 2026 Financial Results and Provides Business Highlights",
+   "summary": "-- Announces PANORAMA, an OnKure-sponsored, large-scale, multiregional registry designed to characterize the natural disease course and treatment patterns of people living with vascular anomalies -- Executing IND-enabling activities for next-generation PI3Kα pan-mutant-selective ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/onkure-therapeutics-reports-third-quarter-210500953.html?.tsrc=rss",
+   "published_at": "2026-11-04T21:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-10T05:58:21Z",
+   "fingerprint": "cbc580eae806e212",
+   "primary_source": false,
+   "cluster_id": "22ead324004c16d3",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "501b3b421dee002e",
    "symbols": [
@@ -773,7 +799,7 @@
    "primary_source": false,
    "cluster_id": "22ead324004c16d3",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   },
   {
