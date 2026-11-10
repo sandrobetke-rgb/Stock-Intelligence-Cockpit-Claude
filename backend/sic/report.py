@@ -15,6 +15,7 @@ from datetime import date, timedelta
 
 import requests
 
+from . import setups
 from .util import iso, utcnow
 
 log = logging.getLogger("sic.report")
@@ -49,7 +50,7 @@ def confluence_row(s: dict) -> dict | None:
         pos.append(("quality", f"Quality {round(q)}"))
     sw = s.get("swing") or {}
     if sw.get("hits"):
-        pos.append(("setup", "Setup " + "/".join(sw["hits"]) + (" + Abendfilter" if sw.get("filter_pass") else "")))
+        pos.append(("setup", "Setup " + "/".join(sw["hits"]) + (" + Abendfilter" if setups.screener_pass(sw) else "")))
     soc = s.get("social") or {}
     if soc.get("mentions_7d", 0) >= 10 and (soc.get("sentiment_7d") or 0) >= 0.2 and soc.get("manipulation_risk") != "hoch":
         pos.append(("social", f"Social positiv ({soc['mentions_7d']} Beiträge)"))

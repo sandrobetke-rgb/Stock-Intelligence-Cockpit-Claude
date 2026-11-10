@@ -40,7 +40,8 @@ function CompanyView({ d }: { d: CompanyDetail }) {
               </div>
             ))}
           </div>
-          <p className="small">Abendfilter: {Object.entries(p.swing.filter).map(([n, ok]) => <Tag key={n} tone={ok ? "ok" : "err"}>{n}</Tag>)}</p>
+          <p className="small">Abendfilter S02–S04: {Object.entries(p.swing.filter).map(([n, ok]) => <Tag key={n} tone={ok ? "ok" : "err"}>{n}</Tag>)}</p>
+          {p.swing.filter_s01 ? <p className="small">Abendfilter S01: {Object.entries(p.swing.filter_s01).map(([n, ok]) => <Tag key={n} tone={ok ? "ok" : "err"}>{n}</Tag>)}</p> : null}
           <p className="small">Plan nächster Handelstag: Auslöser <strong>{fmt.num(p.swing.plan.trigger, 2)}</strong> ({p.swing.plan.trigger_basis}), Einstieg max. {fmt.num(p.swing.plan.entry_max, 2)}, Stopp <span className="neg">{fmt.num(p.swing.plan.stop, 2)}</span>, Ziel 1 <span className="pos">{fmt.num(p.swing.plan.target_1, 2)}</span>.</p>
         </Panel>
       ) : null}

@@ -23,7 +23,7 @@ export const HELP: Record<string, ReactNode> = {
   </ul>,
   "Swing-Setups": <ul>
     <li>Deine Screener S01–S04 und Strategien (Daily Swing Master, Überdehnter Rücksetzer, Qullamaggie) auf Tagesbasis nach US-Börsenschluss.</li>
-    <li><b>Abendfilter</b> (Haken): grüne Kerze, RelVol ≥ 1,2, RSI ≤ 65, ATR% 1,5–5, über EMA 200. Er siebt stark – 0 Kandidaten ist ein gültiges Ergebnis. Haken weg = alle Treffer.</li>
+    <li><b>Abendfilter</b> (Haken) für S02–S04: grüne Kerze, RelVol ≥ 1,2, RSI ≤ 65, ATR% 1,5–5, über EMA 200. <b>S01 (Rebound)</b> hat einen eigenen: grüne Kerze, RelVol ≥ 1,2, ATR% 1,5–8, Qualität ≥ 50 – weil ein Rebound meist unter der EMA 200 startet. 0 Kandidaten ist ein gültiges Ergebnis. Haken weg = alle Treffer.</li>
     <li><b>Auslöser</b> = Kurs, über dem die 1H-Kerze schließen muss; <b>bis</b> = höchstens 2 % darüber einsteigen. <b>Stopp</b> = Auslöser − 1,5 × ATR, <b>Ziel 1</b> = 2 : 1.</li>
     <li>Kapital eintragen → Stückzahl bei 1 % Risiko (höchstens Kapital ÷ 3). Das Kapital bleibt nur in deinem Browser.</li>
     <li>Strategien sind Annäherungen an deine Pine-Skripte – immer im Chart gegenprüfen. Freitags keine neuen Trades.</li>

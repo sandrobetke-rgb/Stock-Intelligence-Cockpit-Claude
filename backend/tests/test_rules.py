@@ -709,3 +709,15 @@ def test_mastodon_text_and_reddit_shutdown(monkeypatch):
     monkeypatch.delenv("REDDIT_CLIENT_ID", raising=False)
     posts, stat = social.fetch_reddit(lambda t: [], datetime(2026, 11, 14, tzinfo=timezone.utc))
     assert posts == [] and stat["status"] == "off"
+
+
+def test_s01_eigener_abendfilter():
+    from sic import setups
+    tech = {"green": True, "rvol": 1.5, "atr_pct": 7.0, "dist_ema200_pct": -25}
+    f = setups.s01_filter(tech, 60)
+    assert all(f.values())
+    sw = {"hits": ["S01"], "filter_pass": False, "filter_pass_s01": True}
+    assert setups.screener_pass(sw) == ["S01"]              # unter EMA 200, trotzdem Kandidat
+    assert not all(setups.s01_filter(tech, 40).values())    # Qualität zu niedrig
+    assert not all(setups.s01_filter({**tech, "atr_pct": 9}, 60).values())
+    assert setups.screener_pass({"hits": ["S03"], "filter_pass": False, "filter_pass_s01": True}) == []

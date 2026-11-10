@@ -76,23 +76,31 @@ export function Politicians() {
 
 function Ranking({ rows }: { rows: PoliticalTrade[] }) {
   const rank = useMemo(() => {
-    const m = new Map<string, { symbol: string; in_universe: boolean; buyers: Set<string>; sellers: Set<string>; asset: string }>();
+    type Agg = { symbol: string; in_universe: boolean; buyers: Map<string, string>; sellers: Map<string, string>; asset: string };
+    const m = new Map<string, Agg>();
+    const latest = (mp: Map<string, string>, who: string, d: string) => { if ((mp.get(who) ?? "") < d) mp.set(who, d); };
     for (const t of rows) {
-      const a = m.get(t.symbol) ?? { symbol: t.symbol, in_universe: !!t.in_universe, buyers: new Set(), sellers: new Set(), asset: t.asset ?? "" };
-      if (t.transaction_type === "purchase") a.buyers.add(t.politician);
-      else if (t.transaction_type.startsWith("sale")) a.sellers.add(t.politician);
+      const a = m.get(t.symbol) ?? { symbol: t.symbol, in_universe: !!t.in_universe, buyers: new Map(), sellers: new Map(), asset: t.asset ?? "" };
+      const d = t.transaction_date ?? t.disclosure_date ?? "";
+      if (t.transaction_type === "purchase") latest(a.buyers, t.politician, d);
+      else if (t.transaction_type.startsWith("sale")) latest(a.sellers, t.politician, d);
       m.set(t.symbol, a);
     }
     return [...m.values()].filter((a) => a.buyers.size + a.sellers.size > 0);
   }, [rows]);
+  const last = (mp: Map<string, string>) => [...mp.values()].sort().pop() ?? "";
+  const chips = (mp: Map<string, string>, tone: "ok" | "err") => [...mp.entries()].sort((a, b) => b[1].localeCompare(a[1])).slice(0, 5)
+    .map(([who, d]) => <Tag key={who} tone={tone}>{who}{d ? ` · ${fmt.date(d).slice(0, 6)}` : ""}</Tag>);
   return (
-    <Panel title="Meistgehandelt" note="Anzahl verschiedener Personen, die gekauft bzw. verkauft haben.">
+    <Panel title="Meistgehandelt" note="Anzahl verschiedener Personen, die gekauft bzw. verkauft haben. Datum am Namen = Tag des Geschäfts (bei mehreren das jüngste); gemeldet wird oft Wochen später.">
       <DataTable rows={rank} rowKey={(r) => r.symbol} initialSort={{ key: "b", dir: -1 }} limit={15} empty="Keine Geschäfte im Zeitraum."
         cols={[
           { key: "s", label: "Aktie", render: (r) => <>{r.in_universe ? <CompanyLink symbol={r.symbol} /> : <strong>{r.symbol}</strong>}<div className="small muted">{r.asset}</div></>, sort: (r) => r.symbol },
           { key: "b", label: "Käufer", num: true, render: (r) => r.buyers.size ? <span className="pos">{r.buyers.size}</span> : "–", sort: (r) => r.buyers.size },
           { key: "v", label: "Verkäufer", num: true, render: (r) => r.sellers.size ? <span className="neg">{r.sellers.size}</span> : "–", sort: (r) => r.sellers.size },
-          { key: "w", label: "Wer kauft", render: (r) => [...r.buyers].slice(0, 5).map((x) => <Tag key={x} tone="ok">{x}</Tag>) },
+          { key: "lk", label: "Letzter Kauf", render: (r) => r.buyers.size ? fmt.date(last(r.buyers)) : "–", sort: (r) => last(r.buyers) },
+          { key: "w", label: "Wer kauft (Datum)", render: (r) => chips(r.buyers, "ok") },
+          { key: "x", label: "Wer verkauft (Datum)", render: (r) => chips(r.sellers, "err") },
         ]} />
     </Panel>
   );

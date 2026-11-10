@@ -23,6 +23,15 @@ export function SwingPage() {
   return <Gate s={s}>{(d) => <Gate s={m}>{(meta) => <SwingView rows={d.stocks} meta={meta} />}</Gate>}</Gate>;
 }
 
+const SCREENERS = ["S01", "S02", "S03", "S04"];
+/** Abendfilter je Setup: S01 hat einen eigenen (Rebound), S02–S04 den allgemeinen; Strategien ohne Filter. */
+function passes(r: StockRow, setup: string) {
+  const sw = r.swing!;
+  const ok = (h: string) => sw.hits.includes(h) && (h === "S01" ? !!sw.filter_pass_s01 : sw.filter_pass);
+  if (setup === "ALL") return SCREENERS.some(ok) || sw.hits.some((h) => !SCREENERS.includes(h));
+  return SCREENERS.includes(setup) ? ok(setup) : true;
+}
+
 function SwingView({ rows, meta }: { rows: StockRow[]; meta: SwingMeta }) {
   const [setup, setSetup] = useState<string>("ALL");
   const [onlyFilter, setOnlyFilter] = useState(true);
@@ -31,7 +40,7 @@ function SwingView({ rows, meta }: { rows: StockRow[]; meta: SwingMeta }) {
   const [capital, setCapital] = useState(readCap);
   const list = useMemo(() => rows.filter((r) => r.status === "active" && r.swing?.hits.length
     && (setup === "ALL" || r.swing.hits.includes(setup))
-    && (!onlyFilter || r.swing.filter_pass || (setup !== "ALL" && !setup.startsWith("S0")))
+    && (!onlyFilter || passes(r, setup))
     && (!noEarnings || !(r.events ?? []).some((e) => e.type === "earnings" && e.days_until >= 0 && e.days_until <= 5))
     && (!minQ || (r.quality.score ?? -1) >= minQ)), [rows, setup, onlyFilter, noEarnings, minQ]);
   const counts = useMemo(() => Object.fromEntries(Object.keys(meta.setups).map((k) => [k, rows.filter((r) => r.swing?.hits.includes(k)).length])), [rows, meta]);
@@ -50,7 +59,8 @@ function SwingView({ rows, meta }: { rows: StockRow[]; meta: SwingMeta }) {
             <button key={k} role="tab" aria-selected={setup === k} className={`tab ${setup === k ? "sel" : ""}`} onClick={() => setSetup(k)} title={v.text}>{v.name} ({counts[k]})</button>
           ))}
         </div>
-        <label className="check"><input type="checkbox" checked={onlyFilter} onChange={(e) => setOnlyFilter(e.target.checked)} /> Abendfilter für S01–S04 (grün, RelVol ≥ {fmt.num(f.rvol_min, 1)}, RSI ≤ {f.rsi_max}, ATR% {fmt.num(f.atr_pct_min, 1)}–{fmt.num(f.atr_pct_max, 0)}, über EMA 200)</label>
+        <label className="check"><input type="checkbox" checked={onlyFilter} onChange={(e) => setOnlyFilter(e.target.checked)} /> Abendfilter – S02–S04: grün, RelVol ≥ {fmt.num(f.rvol_min, 1)}, RSI ≤ {f.rsi_max}, ATR% {fmt.num(f.atr_pct_min, 1)}–{fmt.num(f.atr_pct_max, 0)}, über EMA 200
+          {meta.filter_s01 ? <> · S01: grün, RelVol ≥ {fmt.num(meta.filter_s01.rvol_min, 1)}, ATR% {fmt.num(meta.filter_s01.atr_pct_min, 1)}–{fmt.num(meta.filter_s01.atr_pct_max, 0)}, Qualität ≥ {meta.filter_s01.quality_min}</> : null}</label>
         <label className="check"><input type="checkbox" checked={noEarnings} onChange={(e) => setNoEarnings(e.target.checked)} /> Keine Zahlen in den nächsten 5 Tagen</label>
         <label>Quality ab<input type="number" min={0} max={100} step={10} value={minQ} onChange={(e) => setMinQ(Number(e.target.value))} /></label>
         <label>Kapital (für Stückzahl)<input type="number" min={0} step={1000} value={capital || ""} placeholder="z. B. 25000"

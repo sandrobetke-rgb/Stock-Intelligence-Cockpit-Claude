@@ -20,7 +20,7 @@ from email.mime.text import MIMEText
 
 import requests
 
-from . import config
+from . import config, setups
 from .util import iso, read_json, utcnow, write_json_atomic
 
 log = logging.getLogger("sic.alerts")
@@ -59,7 +59,7 @@ def candidates(stocks: list[dict]) -> list[dict]:
     out = []
     for s in stocks:
         sw = s.get("swing") or {}
-        if s["status"] != "active" or not set(sw.get("hits") or []) & {"S01", "S02", "S03", "S04"} or not sw.get("filter_pass"):
+        if s["status"] != "active" or not setups.screener_pass(sw):
             continue
         if any(e["type"] == "earnings" and 0 <= e["days_until"] <= 5 for e in s.get("events") or []):
             continue
@@ -118,7 +118,7 @@ def generate(*, stocks: list[dict], insiders: list[dict], clusters: list[dict], 
         sw = s.get("swing") or {}
         for h in sw.get("hits") or []:
             out.append(_a("setup", f"{sym}:{s['market'].get('price_date')}:{h}", sym, f"{sym}: Setup {h}",
-                          f"Auslöser {sw['plan']['trigger']:.2f}, Stopp {sw['plan']['stop']:.2f}" + ("" if sw.get("filter_pass") else " (Abendfilter nicht erfüllt)"), None, 2))
+                          f"Auslöser {sw['plan']['trigger']:.2f}, Stopp {sw['plan']['stop']:.2f}" + ("" if setups.passes(sw, h) or h not in ("S01", "S02", "S03", "S04") else " (Abendfilter nicht erfüllt)"), None, 2))
         soc = social_stats.get(sym)
         if soc and soc["mentions_24h"] >= 10 and (soc.get("change_vs_baseline_pct") or 0) >= 200:
             out.append(_a("social_spike", f"{sym}:{today}", sym, f"{sym}: Social-Media-Anstieg",
@@ -133,7 +133,7 @@ def generate(*, stocks: list[dict], insiders: list[dict], clusters: list[dict], 
             out.append(_a("trump", t["id"], t["symbol"], f"{t['symbol']}: Trump-Erwähnung ({t['direction']})", t["quote"][:140], t.get("source_url"), 1))
     cands = candidates(stocks)
     if cands:
-        lines = [f"{c['symbol']} {'/'.join(c['swing']['hits'])} RelVol {c['swing']['tech']['rvol']:.1f}" for c in cands[:10]]
+        lines = [f"{c['symbol']} {'/'.join(setups.screener_pass(c['swing']) + [h for h in c['swing']['hits'] if h not in ('S01', 'S02', 'S03', 'S04')])} RelVol {c['swing']['tech']['rvol']:.1f}" for c in cands[:10]]
         note = " Morgen ist Freitag: laut Regel keine neuen Trades." if today.weekday() == 3 else ""
         # Schlüssel = Kursdatum: am Wochenende/bei Läufen ohne neue Kurse keine Wiederholung
         pdate = max((c["market"].get("price_date") or "") for c in cands) or today.isoformat()

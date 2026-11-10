@@ -165,11 +165,13 @@ export interface Swing {
   criteria: Record<string, Record<string, boolean>>;
   hits: string[]; near: Record<string, number>;
   filter: Record<string, boolean>; filter_pass: boolean;
+  filter_s01?: Record<string, boolean>; filter_pass_s01?: boolean;
   plan: { trigger: number; entry_max: number; stop: number; risk_per_share: number; target_1: number; trigger_basis: string };
 }
 export interface SwingMeta extends Meta {
   setups: Record<string, { name: string; text: string }>;
   filter: { rvol_min: number; rsi_max: number; atr_pct_min: number; atr_pct_max: number };
+  filter_s01?: { rvol_min: number; atr_pct_min: number; atr_pct_max: number; quality_min: number };
   entry: { max_above_trigger_pct: number; stop_atr: number; rrr: number; risk_pct: number; max_positions: number };
   candidates: string[];
 }

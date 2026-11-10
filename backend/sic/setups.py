@@ -17,6 +17,27 @@ from .util import clean_number
 
 # Regelwerk (Stand Memory/Projekt "Meine Aktienstrategie")
 FILTER = {"rvol_min": 1.2, "rsi_max": 65, "atr_pct_min": 1.5, "atr_pct_max": 5.0}
+# Eigener Abendfilter für S01 (Rebound kommt aus überverkaufter Lage: meist unter EMA 200 und volatiler).
+# Qualität ersetzt die Trendbedingung, damit kein "fallendes Messer" durchrutscht.
+FILTER_S01 = {"rvol_min": 1.2, "atr_pct_min": 1.5, "atr_pct_max": 8.0, "quality_min": 50}
+
+
+def s01_filter(tech: dict, quality_score: float | None) -> dict[str, bool]:
+    a = tech.get("atr_pct") or 0
+    return {"Tag grün": bool(tech.get("green")), f"RelVol ≥ {FILTER_S01['rvol_min']}": (tech.get("rvol") or 0) >= FILTER_S01["rvol_min"],
+            f"ATR% {FILTER_S01['atr_pct_min']}–{FILTER_S01['atr_pct_max']:.0f}": FILTER_S01["atr_pct_min"] <= a <= FILTER_S01["atr_pct_max"],
+            f"Qualität ≥ {FILTER_S01['quality_min']}": quality_score is not None and quality_score >= FILTER_S01["quality_min"]}
+
+
+def passes(sw: dict | None, setup: str) -> bool:
+    """Erfüllt die Aktie das Setup inkl. des passenden Abendfilters? (nur S01–S04)"""
+    if not sw or setup not in (sw.get("hits") or []):
+        return False
+    return bool(sw.get("filter_pass_s01")) if setup == "S01" else bool(sw.get("filter_pass"))
+
+
+def screener_pass(sw: dict | None) -> list[str]:
+    return [h for h in ("S01", "S02", "S03", "S04") if passes(sw, h)]
 ENTRY = {"max_above_trigger_pct": 2.0, "stop_atr": 1.5, "rrr": 2.0, "risk_pct": 1.0, "max_positions": 3}
 
 SETUP_INFO = {
