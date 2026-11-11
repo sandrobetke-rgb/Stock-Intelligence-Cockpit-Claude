@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-10T22:19:02Z",
+ "generated_at": "2026-11-11T06:03:02Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -178,12 +178,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 4.1,
+   "score": 19.9,
    "drivers": [
-    "price_volume_anomaly",
-    "insider_activity"
+    "news_flow",
+    "source_diversity",
+    "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -198,11 +199,11 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 2,
+   "open_market_sells": 3,
    "buy_value": 0,
-   "sell_value": 114908.0,
+   "sell_value": 163008.0,
    "distinct_buyers": 0,
-   "other_transactions": 3
+   "other_transactions": 4
   },
   "superinvestors": {
    "holders": 1,
@@ -222,7 +223,7 @@
     "confirmed": true,
     "source": "Nasdaq-Dividendenkalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/tsbk/dividend-history",
-    "days_until": 2
+    "days_until": 1
    }
   ],
   "politicians": null,
@@ -603,16 +604,16 @@
   ]
  },
  "intelligence_detail": {
-  "score": 4.1,
+  "score": 19.9,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 17.9,
    "social_attention": null,
-   "insider_activity": 20
+   "insider_activity": 30
   },
   "windows": {
    "24h": {
@@ -625,17 +626,17 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 3,
-    "independent": 3,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
@@ -644,8 +645,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly",
-   "insider_activity"
+   "news_flow",
+   "source_diversity",
+   "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -664,6 +666,28 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "2a6627453c8a665a",
+   "symbols": [
+    "TSBK"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Timberland's Q4 Earnings Decline Y/Y on Higher Credit Costs",
+   "summary": "TSBK's fiscal Q4 earnings per share are dampened by increased credit costs and operating expenses, partly offset by expanding net interest margins, solid loan growth and higher net interest income.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/timberlands-q4-earnings-decline-y-171900285.html?.tsrc=rss",
+   "published_at": "2026-11-05T17:19:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-11T06:03:33Z",
+   "fingerprint": "5422bc560913df01",
+   "primary_source": false,
+   "cluster_id": "2a6627453c8a665a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "5c1a1c0a803ee044",
    "symbols": [
@@ -976,6 +1000,48 @@
   }
  ],
  "insiders": [
+  {
+   "id": "c5e83740f13760f3",
+   "symbol": "TSBK",
+   "insider": "Suter Kelly",
+   "owner_cik": 1827633,
+   "role": "Director",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-11-09",
+   "filed_at": "2026-11-10",
+   "reporting_delay_days": 1,
+   "shares": 1000.0,
+   "price": 28.23,
+   "value": 28230.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1046050/000093905726000304/0000939057-26-000304-index.htm"
+  },
+  {
+   "id": "abe62cc8b7c10c89",
+   "symbol": "TSBK",
+   "insider": "Suter Kelly",
+   "owner_cik": 1827633,
+   "role": "Director",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-11-09",
+   "filed_at": "2026-11-10",
+   "reporting_delay_days": 1,
+   "shares": 1000.0,
+   "price": 48.1,
+   "value": 48100.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1046050/000093905726000304/0000939057-26-000304-index.htm"
+  },
   {
    "id": "42235da66b34507f",
    "symbol": "TSBK",

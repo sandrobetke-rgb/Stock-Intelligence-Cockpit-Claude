@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-10T22:19:02Z",
+ "generated_at": "2026-11-11T06:03:02Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -176,13 +176,14 @@
    "top_factors": []
   },
   "market_intelligence": {
-   "score": 6.5,
+   "score": 46.5,
    "drivers": [
-    "price_volume_anomaly",
-    "social_attention"
+    "news_flow",
+    "freshness",
+    "price_volume_anomaly"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 6,
+   "independent_24h": 3
   },
   "political": {
    "relevance": 0,
@@ -216,7 +217,18 @@
    "sellers": 0,
    "sold_out": 0
   },
-  "events": [],
+  "events": [
+   {
+    "symbol": "TXT",
+    "type": "ex_dividend",
+    "date": "2026-12-11",
+    "time": "Uhrzeit offen",
+    "confirmed": true,
+    "source": "Yahoo Finance",
+    "source_url": "https://finance.yahoo.com/quote/TXT",
+    "days_until": 30
+   }
+  ],
   "politicians": null,
   "first_seen": "2026-10-31",
   "archived_at": null,
@@ -679,11 +691,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.5,
+  "score": 46.5,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 24.2,
@@ -692,26 +704,26 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 6,
+    "independent": 6,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 19,
-    "independent": 19,
+    "signals": 25,
+    "independent": 25,
     "duplicates": 0,
     "sources": 5,
     "primary": 0,
@@ -720,8 +732,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly",
-   "social_attention"
+   "news_flow",
+   "freshness",
+   "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -740,6 +753,145 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "910c1320b1adb0dc",
+   "symbols": [
+    "TXT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Ondas Plans U.S. Manufacturing Push to Scale ULTRA Aircraft Output",
+   "summary": "ONDS plans to scale ULTRA aircraft output to 10 units monthly by 2028, backed by a Stemme buyout and new U.S. production facilities to meet rising ISR demand.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ondas-plans-u-manufacturing-push-182300667.html?.tsrc=rss",
+   "published_at": "2026-11-10T18:23:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-11T06:03:44Z",
+   "fingerprint": "4caeb817848c0ff3",
+   "primary_source": false,
+   "cluster_id": "910c1320b1adb0dc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Ondas plant US-Fertigungsschub zur Skalierung der ULTRA-Flugzeugproduktion"
+  },
+  {
+   "id": "35cc687d3f4b1257",
+   "symbols": [
+    "RTX",
+    "TXT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Embraer Q3 Earnings Miss Estimates, Revenues Beat, Outlook Raised",
+   "summary": "EMBJ's Q3 earnings miss estimates despite 17.2% revenue growth, while record backlog, higher aircraft deliveries and stronger cash flow drive an upbeat outlook.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/embraer-q3-earnings-miss-estimates-180000429.html?.tsrc=rss",
+   "published_at": "2026-11-10T18:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-10T22:26:27Z",
+   "fingerprint": "65d4f237c00e1be7",
+   "primary_source": false,
+   "cluster_id": "35cc687d3f4b1257",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "33191f4e66a8ecef",
+   "symbols": [
+    "TDG",
+    "TDY",
+    "TXT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "TransDigm's Q4 Earnings Surpass Estimates, Sales Increase Y/Y",
+   "summary": "TDG beats Q4 earnings and revenue estimates as organic sales rise 14%, while acquisitions, margin pressure and debt shape its fiscal 2027 outlook.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/transdigms-q4-earnings-surpass-estimates-175400856.html?.tsrc=rss",
+   "published_at": "2026-11-10T17:54:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-10T22:28:18Z",
+   "fingerprint": "23422f29e1af4cbe",
+   "primary_source": false,
+   "cluster_id": "33191f4e66a8ecef",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "25749cb66c64dd03",
+   "symbols": [
+    "NOC",
+    "RTX",
+    "TXT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Kratos Defense Q3 Earnings Outpace Estimates, Revenues Increase Y/Y",
+   "summary": "KTOS' Q3 earnings beat estimates as revenues surge 35.7%, driven by Government Solutions growth, while a rising backlog supports its outlook.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/kratos-defense-q3-earnings-outpace-150700204.html?.tsrc=rss",
+   "published_at": "2026-11-06T15:07:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-09T22:34:26Z",
+   "fingerprint": "9e49ecb5c81959b7",
+   "primary_source": false,
+   "cluster_id": "25749cb66c64dd03",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8d58982448d20bf3",
+   "symbols": [
+    "JOBY",
+    "TXT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Global eVTOL Aircraft Market Report 2026: Trends and Forecast to 2030 | Capitalize on 44.1% CAGR as Airbus, Joby Aviation, Archer Aviation, and Wisk Aero Scale Urban Air Mobility",
+   "summary": "Profiles Airbus, Textron, Embraer, Wisk Aero and Volocopter, covering their eVTOL aircraft, technologies, product innovation and competitive positioning.Dublin, Nov. 05, 2026 (GLOBE NEWSWIRE) -- \"eVTOL Aircraft Market Global Report 2026\" has been added to ResearchAndMarkets.com's",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/global-evtol-aircraft-market-report-154300891.html?.tsrc=rss",
+   "published_at": "2026-11-05T15:43:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-09T06:13:05Z",
+   "fingerprint": "a32b983ca1f4616b",
+   "primary_source": false,
+   "cluster_id": "8d58982448d20bf3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "904890f489ddda21",
+   "symbols": [
+    "TXT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Light-Sport Aircraft Global Market Report 2026 | Capitalize on Electric Propulsion and Flight Training as Textron, CubCrafters, TECNAM, and Diamond Aircraft Target $2B by 2030",
+   "summary": "Boost ROI with lightweight designs, electric propulsion, simplified maintenance, and multiuse aircraft for training, recreation, and tourism.Dublin, Nov. 05, 2026 (GLOBE NEWSWIRE) -- \"Light-sport Aircraft Market Global Report 2026\" has been added to ResearchAndMarkets.com's offer",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/light-sport-aircraft-global-market-151500050.html?.tsrc=rss",
+   "published_at": "2026-11-05T15:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-11T06:03:44Z",
+   "fingerprint": "07b18c19ccffcee5",
+   "primary_source": false,
+   "cluster_id": "904890f489ddda21",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "b692b5a35e2d6665",
    "symbols": [

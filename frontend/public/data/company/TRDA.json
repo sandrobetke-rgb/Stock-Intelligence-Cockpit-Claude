@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-10T22:19:02Z",
+ "generated_at": "2026-11-11T06:03:02Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,11 +180,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 11.2,
+   "score": 34.7,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -679,11 +681,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 11.2,
+  "score": 34.7,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 63.3,
@@ -701,18 +703,18 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 2,
+    "independent": 2,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 4,
-    "independent": 4,
-    "duplicates": 0,
+    "signals": 6,
+    "independent": 6,
+    "duplicates": 1,
     "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
@@ -720,7 +722,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -739,6 +743,51 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "e9f0a0f9610a8051",
+   "symbols": [
+    "PRME",
+    "TRDA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Entrada Therapeutics, Inc. (TRDA) Reports Q3 Loss, Misses Revenue Estimates",
+   "summary": "Entrada Therapeutics (TRDA) delivered earnings and revenue surprises of +4.08% and -88.35%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/entrada-therapeutics-inc-trda-reports-133507524.html?.tsrc=rss",
+   "published_at": "2026-11-05T13:35:07Z",
+   "date_only": false,
+   "captured_at": "2026-11-10T05:59:49Z",
+   "fingerprint": "11823053cbc6d694",
+   "primary_source": false,
+   "cluster_id": "68946a1dfb4f1152",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1dbef07e3e1742cc",
+   "symbols": [
+    "TRDA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Entrada Therapeutics Reports Third Quarter 2026 Financial Results",
+   "summary": "-- All ELEVATE-44-201 Cohort 1 participants have completed open-label dosing, with data expected to be received by year-end 2026 -- -- Company on track to report ELEVATE-44-201 Cohort 2 data in Q1 2027 – -- ELEVATE-45-201 Cohort 1 data reported in October 2026 met the primary obj",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/entrada-therapeutics-reports-third-quarter-120000765.html?.tsrc=rss",
+   "published_at": "2026-11-05T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-11T06:03:24Z",
+   "fingerprint": "f581d52ddcf30fe9",
+   "primary_source": false,
+   "cluster_id": "1dbef07e3e1742cc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "015a0a65edea986e",
    "symbols": [
@@ -1089,7 +1138,7 @@
    "primary_source": false,
    "cluster_id": "68946a1dfb4f1152",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   },
   {

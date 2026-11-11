@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-10T22:19:02Z",
+ "generated_at": "2026-11-11T06:03:02Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,12 +180,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.3,
+   "score": 31.8,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "freshness",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 2,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -679,11 +681,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.3,
+  "score": 31.8,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 68.2,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 13.2,
@@ -692,26 +694,26 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 20,
-    "independent": 20,
+    "signals": 22,
+    "independent": 22,
     "duplicates": 0,
     "sources": 7,
     "primary": 0,
@@ -720,7 +722,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "freshness",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -739,6 +743,52 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "fe4d7d16be50684d",
+   "symbols": [
+    "XRX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "The Promise to His Father That Changed a Future CEO’s Life",
+   "summary": "ServiceNow Chairman and CEO Bill McDermott recalls how, as a young man, he landed his first job at Xerox. He recounts the promise he made to his father, the unconventional job interview that followed and the moment that changed the course of his career. McDermott shared the story",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/video/promise-father-changed-future-ceo-210200447.html?.tsrc=rss",
+   "published_at": "2026-11-10T21:02:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-11T06:05:25Z",
+   "fingerprint": "865378e5781e1156",
+   "primary_source": false,
+   "cluster_id": "fe4d7d16be50684d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Das Versprechen an seinen Vater, das das Leben eines zukünftigen CEO verändert hat"
+  },
+  {
+   "id": "6510571fdcc81e39",
+   "symbols": [
+    "XRX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Investing in Xerox (XRX)? Don't Miss Assessing Its International Revenue Trends",
+   "summary": "Examine the evolution of Xerox's (XRX) overseas revenue trends and their effects on Wall Street's forecasts and the stock's prospects.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/investing-xerox-xrx-dont-miss-131502861.html?.tsrc=rss",
+   "published_at": "2026-11-09T13:15:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-11T06:05:25Z",
+   "fingerprint": "7c3d2d9f88bfe34f",
+   "primary_source": false,
+   "cluster_id": "6510571fdcc81e39",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Investieren in Xerox (XRX)? Verpassen Sie nicht, seine internationalen Umsatztrends zu bewerten"
+  },
   {
    "id": "80330f53b0a5f595",
    "symbols": [
@@ -1203,15 +1253,14 @@
  "attention": {
   "title": "Xerox",
   "url": "https://en.wikipedia.org/wiki/Xerox",
-  "date": "2026-11-09",
-  "views_1d": 633,
-  "avg_7d": 558,
-  "avg_30d": 480,
-  "ratio_1d": 1.32,
-  "ratio_7d": 1.16,
+  "date": "2026-11-10",
+  "views_1d": 559,
+  "avg_7d": 562,
+  "avg_30d": 482,
+  "ratio_1d": 1.16,
+  "ratio_7d": 1.17,
   "spike": false,
   "series": [
-   397,
    504,
    452,
    462,
@@ -1240,7 +1289,8 @@
    751,
    516,
    448,
-   633
+   633,
+   559
   ]
  },
  "history": []

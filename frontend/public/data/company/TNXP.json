@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-10T22:19:02Z",
+ "generated_at": "2026-11-11T06:03:02Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,14 +180,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 28.8,
+   "score": 62.1,
    "drivers": [
-    "price_volume_anomaly",
     "news_flow",
-    "source_diversity"
+    "source_diversity",
+    "price_volume_anomaly"
    ],
-   "independent_7d": 1,
-   "independent_24h": 0
+   "independent_7d": 7,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -220,7 +220,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/tnxp/earnings",
-    "days_until": -1
+    "days_until": -2
    }
   ],
   "politicians": null,
@@ -689,11 +689,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 28.8,
+  "score": 62.1,
   "components": {
-   "news_flow": 43.0,
-   "freshness": 0,
-   "source_diversity": 20,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 80,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 71.8,
@@ -702,15 +702,6 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
-    "primary": 0,
-    "analyst_changes": 0,
-    "verified": 0
-   },
-   "7d": {
     "signals": 1,
     "independent": 1,
     "duplicates": 0,
@@ -719,20 +710,29 @@
     "analyst_changes": 0,
     "verified": 0
    },
-   "30d": {
+   "7d": {
     "signals": 7,
     "independent": 7,
     "duplicates": 0,
-    "sources": 2,
+    "sources": 4,
+    "primary": 0,
+    "analyst_changes": 0,
+    "verified": 0
+   },
+   "30d": {
+    "signals": 13,
+    "independent": 13,
+    "duplicates": 0,
+    "sources": 5,
     "primary": 0,
     "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly",
    "news_flow",
-   "source_diversity"
+   "source_diversity",
+   "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -751,6 +751,141 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "0392d2acc2002441",
+   "symbols": [
+    "TNXP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Tonix Pharmaceuticals’ TONMYA Sales Jump 37% as Insurance Coverage Expands",
+   "summary": "Tonix Pharmaceuticals (NASDAQ:TNXP) said sales of its fibromyalgia treatment TONMYA rose 37% in the third quarter, as the company expanded insurance access and increased its sales force. Chief Executive Seth Lederman told biopharma analyst Vamil Divan at the Guggenheim Healthcare",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/event-tonix-pharmaceuticals-tonmya-sales-jump-37-as-insurance-coverage-expands-2026-11-10/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-11-11T03:14:34Z",
+   "date_only": false,
+   "captured_at": "2026-11-11T06:03:19Z",
+   "fingerprint": "74e5bba3cc474364",
+   "primary_source": false,
+   "cluster_id": "0392d2acc2002441",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "TONMYA-Umsatz von Tonix Pharmaceuticals steigt um 37%, da die Versicherungsdeckung wächst"
+  },
+  {
+   "id": "4a9c3e0be5c42d2f",
+   "symbols": [
+    "TNXP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Tonix Pharmaceuticals Holding Corp. Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Tonix Pharmaceuticals Holding Corp.'s Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-tonix-pharmaceuticals-holding-corp-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-11-09T22:13:19Z",
+   "date_only": false,
+   "captured_at": "2026-11-11T06:03:19Z",
+   "fingerprint": "403b6e3cda176302",
+   "primary_source": false,
+   "cluster_id": "4a9c3e0be5c42d2f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "030fa18e4bab9201",
+   "symbols": [
+    "TNXP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Tonix Pharmaceuticals (TNXP) Q3 2026 Earnings Call Transcript",
+   "summary": "TONMYA sales climbed 37% sequentially as payer coverage and sales reach expanded.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/11/09/tonix-pharmaceuticals-tnxp-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-11-09T21:44:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-11T06:03:19Z",
+   "fingerprint": "971b96a62fb44d25",
+   "primary_source": false,
+   "cluster_id": "030fa18e4bab9201",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0ed45edb4046b6b0",
+   "symbols": [
+    "TNXP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Tonix Pharmaceuticals Holding Corp (TNXP) Q3 2026 Earnings Call Highlights: Tonmya Sales Surge ...",
+   "summary": "Tonix Pharmaceuticals Holding Corp (TNXP) posted strong Tonmya prescription growth and expanding payer coverage, but faces a Dr. Reddy's patent challenge and a cash runway into early Q3 2027.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/tonix-pharmaceuticals-holding-corp-tnxp-210647291.html?.tsrc=rss",
+   "published_at": "2026-11-09T21:06:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-11T06:03:19Z",
+   "fingerprint": "e9b4a069ff9b3921",
+   "primary_source": false,
+   "cluster_id": "0ed45edb4046b6b0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "573deff10778d9f5",
+   "symbols": [
+    "TNXP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What Tonix Pharmaceuticals (TNXP) Said on Its Q3 Earnings Call",
+   "summary": "Tonix Pharmaceuticals (NASDAQ:TNXP) reported approximately $15 million in third-quarter sales of its fibromyalgia drug TONMYA, up 37% from the previous quarter, as insurance coverage expanded and prescriptions increased. Total net product revenue rose to approximately $17.2 milli",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-tonix-pharmaceuticals-tnxp-said-on-its-q3-earnings-call-2026-11-09/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-11-09T18:14:56Z",
+   "date_only": false,
+   "captured_at": "2026-11-11T06:03:19Z",
+   "fingerprint": "286a820a646e52fb",
+   "primary_source": false,
+   "cluster_id": "573deff10778d9f5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Was Tonix Pharmaceuticals (TNXP) auf seinem Q3-Gewinnaufruf sagte"
+  },
+  {
+   "id": "6e5656b1f525f06f",
+   "symbols": [
+    "TNXP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Tonix Pharmaceuticals Reports Third Quarter 2026 Financial Results and Operational Highlights",
+   "summary": "Third quarter TONMYA® net sales of approximately $15 million, up 37% from the second quarter Approximately $163 million in cash and cash equivalents as of September 30, 2026 Strategic focus on supporting TONMYA growth and advancing core clinical programs Conference call today at ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/tonix-pharmaceuticals-reports-third-quarter-120000718.html?.tsrc=rss",
+   "published_at": "2026-11-09T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-11T06:03:19Z",
+   "fingerprint": "df36a37ac557d72f",
+   "primary_source": false,
+   "cluster_id": "6e5656b1f525f06f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Tonix Pharmaceuticals berichtet über Finanzergebnisse und operative Highlights des dritten Quartals 2026"
+  },
   {
    "id": "860eda035dcb0c31",
    "symbols": [
@@ -1223,15 +1358,14 @@
  "attention": {
   "title": "Tonix Pharmaceuticals",
   "url": "https://en.wikipedia.org/wiki/Tonix_Pharmaceuticals",
-  "date": "2026-11-09",
-  "views_1d": 34,
-  "avg_7d": 13,
-  "avg_30d": 14,
-  "ratio_1d": 2.34,
-  "ratio_7d": 0.88,
+  "date": "2026-11-10",
+  "views_1d": 24,
+  "avg_7d": 14,
+  "avg_30d": 15,
+  "ratio_1d": 1.63,
+  "ratio_7d": 0.92,
   "spike": false,
   "series": [
-   12,
    19,
    12,
    7,
@@ -1260,7 +1394,8 @@
    13,
    4,
    6,
-   34
+   34,
+   24
   ]
  },
  "history": []
