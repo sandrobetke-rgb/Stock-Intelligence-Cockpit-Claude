@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-11T06:03:02Z",
+ "generated_at": "2026-11-12T06:07:01Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -179,13 +179,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 8.9,
+   "score": 35.3,
    "drivers": [
-    "price_volume_anomaly",
-    "social_attention"
+    "news_flow",
+    "freshness",
+    "price_volume_anomaly"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 2,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -225,7 +226,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/bbw/earnings",
-    "days_until": 22
+    "days_until": 21
    }
   ],
   "politicians": null,
@@ -693,11 +694,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 8.9,
+  "score": 35.3,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 68.2,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 30.1,
@@ -706,27 +707,27 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 1,
+    "independent": 1,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 2,
+    "independent": 2,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 5,
-    "independent": 5,
-    "duplicates": 0,
+    "signals": 7,
+    "independent": 7,
+    "duplicates": 1,
     "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
@@ -734,8 +735,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly",
-   "social_attention"
+   "news_flow",
+   "freshness",
+   "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -754,6 +756,53 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "10627da188b863da",
+   "symbols": [
+    "BBW"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Build-A-Bear Workshop, Inc. Announces Quarterly Cash Dividend",
+   "summary": "ST. LOUIS, November 11, 2026--Build-A-Bear Workshop, Inc. (NYSE: BBW) announced today that its Board of Directors declared a quarterly cash dividend of $0.23 per share of issued and outstanding common stock. The dividend will be paid on January 7, 2027, to all stockholders of rec",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/build-bear-workshop-inc-announces-210500904.html?.tsrc=rss",
+   "published_at": "2026-11-11T21:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:09:27Z",
+   "fingerprint": "0b1b9314a43ad212",
+   "primary_source": false,
+   "cluster_id": "bd4634d1bbd8544b",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Build-A-Bear Workshop, Inc. kündigt vierteljährliche Cash-Dividende an"
+  },
+  {
+   "id": "a81102de094b0fde",
+   "symbols": [
+    "BBW",
+    "SBH"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Sally Beauty (SBH) Surpasses Q4 Earnings and Revenue Estimates",
+   "summary": "Sally Beauty (SBH) delivered earnings and revenue surprises of +3.33% and +0.45%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/sally-beauty-sbh-surpasses-q4-115501092.html?.tsrc=rss",
+   "published_at": "2026-11-10T11:55:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-10T22:26:44Z",
+   "fingerprint": "5a2df4590a2ff2e5",
+   "primary_source": false,
+   "cluster_id": "a81102de094b0fde",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Sally Beauty (SBH) übertrifft Q4-Ergebnisse und Einnahmenschätzungen"
+  },
   {
    "id": "82196af158c87731",
    "symbols": [
@@ -1128,7 +1177,7 @@
    "primary_source": false,
    "cluster_id": "bd4634d1bbd8544b",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   },
   {

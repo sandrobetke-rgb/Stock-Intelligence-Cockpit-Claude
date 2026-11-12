@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-11T06:03:02Z",
+ "generated_at": "2026-11-12T06:07:01Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,12 +180,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 0.3,
+   "score": 29.7,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "freshness",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 2,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -221,7 +223,7 @@
     "confirmed": true,
     "source": "Yahoo Finance",
     "source_url": "https://finance.yahoo.com/quote/AURA",
-    "days_until": -2
+    "days_until": -3
    }
   ],
   "politicians": null,
@@ -690,11 +692,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 0.3,
+  "score": 29.7,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 68.2,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 1.6,
@@ -703,27 +705,27 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 2,
+    "independent": 2,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 1,
-    "independent": 1,
-    "duplicates": 1,
+    "signals": 3,
+    "independent": 3,
+    "duplicates": 2,
     "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
@@ -731,7 +733,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "freshness",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -750,6 +754,52 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "aa4e05386f7858e6",
+   "symbols": [
+    "AURA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wall Street Analysts Believe Aura Biosciences (AURA) Could Rally 119.61%: Here's is How to Trade",
+   "summary": "The average of price targets set by Wall Street analysts indicates a potential upside of 119.6% in Aura Biosciences (AURA). While the effectiveness of this highly sought-after metric is questionable, the positive trend in earnings estimate revisions might translate into an upside",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-believe-aura-201945361.html?.tsrc=rss",
+   "published_at": "2026-11-11T20:19:45Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:09:03Z",
+   "fingerprint": "e6617bda9e3c7e2c",
+   "primary_source": false,
+   "cluster_id": "aa4e05386f7858e6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Wall Street Analysten glauben, dass Aura Biosciences (AURA) 119,61% erreichen könnte: Hier ist, wie man handelt"
+  },
+  {
+   "id": "73184a1f4dc0a373",
+   "symbols": [
+    "AURA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Aura Biosciences Reports Third Quarter 2026 Financial Results and Recent Business Highlights",
+   "summary": "Phase 3 CoMpass trial on track for topline data in 2H 2027; all participants have completed treatment visits Established relationship with industry-leading CDMO providing designated manufacturing capacity for bel-sar Early choroidal melanoma investor and analyst virtual event pla",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/aura-biosciences-reports-third-quarter-120000362.html?.tsrc=rss",
+   "published_at": "2026-11-09T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:09:03Z",
+   "fingerprint": "4dde106c5bb7490e",
+   "primary_source": false,
+   "cluster_id": "06b1f2b259581969",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Aura Biosciences berichtet über Finanzergebnisse und aktuelle Geschäftshighlights des dritten Quartals 2026"
+  },
   {
    "id": "089a162318ea3d11",
    "symbols": [
@@ -857,7 +907,7 @@
    "primary_source": false,
    "cluster_id": "06b1f2b259581969",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   },
   {

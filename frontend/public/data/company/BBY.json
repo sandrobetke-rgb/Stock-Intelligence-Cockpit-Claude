@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-11T06:03:02Z",
+ "generated_at": "2026-11-12T06:07:01Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -178,14 +178,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 32.7,
+   "score": 53.5,
    "drivers": [
     "news_flow",
-    "price_volume_anomaly",
-    "source_diversity"
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 3,
-   "independent_24h": 0
+   "independent_7d": 16,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -195,7 +195,14 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 1,
+   "manipulation_risk": "unauffällig",
+   "mentions_24h": 1,
+   "sentiment_7d": 1.0,
+   "bullish_7d": 0,
+   "bearish_7d": 0
+  },
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
@@ -224,7 +231,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/bby/earnings",
-    "days_until": 13
+    "days_until": 12
    }
   ],
   "politicians": null,
@@ -691,41 +698,41 @@
   ]
  },
  "intelligence_detail": {
-  "score": 32.7,
+  "score": 53.5,
   "components": {
-   "news_flow": 86.0,
-   "freshness": 0,
-   "source_diversity": 20,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 100.0,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 22.2,
-   "social_attention": null,
+   "social_attention": 25.0,
    "insider_activity": null
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
-    "primary": 0,
-    "analyst_changes": 0,
-    "verified": 0
-   },
-   "7d": {
-    "signals": 3,
-    "independent": 3,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
-   "30d": {
-    "signals": 15,
-    "independent": 15,
+   "7d": {
+    "signals": 16,
+    "independent": 16,
     "duplicates": 0,
     "sources": 5,
+    "primary": 0,
+    "analyst_changes": 0,
+    "verified": 0
+   },
+   "30d": {
+    "signals": 30,
+    "independent": 30,
+    "duplicates": 0,
+    "sources": 8,
     "primary": 0,
     "analyst_changes": 1,
     "verified": 0
@@ -733,8 +740,8 @@
   },
   "drivers": [
    "news_flow",
-   "price_volume_anomaly",
-   "source_diversity"
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -754,8 +761,355 @@
  "political_events": [],
  "signals": [
   {
+   "id": "e9375975dcafab5c",
+   "symbols": [
+    "BBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "5-star analyst flags surprise Micron stock catalyst after CoreWeave rally",
+   "summary": "One unexpected trend is catching Wall Street’s attention.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "thestreet.com",
+   "url": "https://www.thestreet.com/investing/stocks/micron-keybanc-server-demand?.tsrc=rss",
+   "published_at": "2026-11-12T02:03:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:09:27Z",
+   "fingerprint": "ca76ddfb093bf176",
+   "primary_source": false,
+   "cluster_id": "e9375975dcafab5c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "5-Sterne-Analysten-Flaggen überraschen Micron-Aktienkatalysator nach CoreWeave-Rallye"
+  },
+  {
+   "id": "3b3d089d095df9e8",
+   "symbols": [
+    "BBY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "3 Dividend Stocks To Watch After Hot US Inflation Data",
+   "summary": "Inflation just surprised on the hot side again, and that kind of CPI print tends to reshuffle which stocks feel more pressure from higher rates and which ones hold their ground. Income-focused investors watching the Fed debate might sense that sitting still could mean missing cha",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-dividend-stocks-watch-hot-201126340.html?.tsrc=rss",
+   "published_at": "2026-11-10T20:11:26Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:09:27Z",
+   "fingerprint": "a741443c570c0a00",
+   "primary_source": false,
+   "cluster_id": "3b3d089d095df9e8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "3 Dividendenaktien, die nach heißen US-Inflationsdaten zu beobachten sind"
+  },
+  {
+   "id": "60c1576e832c949e",
+   "symbols": [
+    "BBY",
+    "UBER"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Uber Joins with Amazon on Food Delivery: A Major Growth Catalyst?",
+   "summary": "UBER partners with Amazon to offer Prime members free restaurant delivery on eligible orders, expanding Uber Eats' reach and creating new growth opportunities.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/uber-joins-amazon-food-delivery-181000408.html?.tsrc=rss",
+   "published_at": "2026-11-10T18:10:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-11T06:03:48Z",
+   "fingerprint": "73b81825c38d2a61",
+   "primary_source": false,
+   "cluster_id": "60c1576e832c949e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Uber schließt sich Amazon bei der Lieferung von Lebensmitteln an: Ein wichtiger Wachstumskatalysator?"
+  },
+  {
+   "id": "b771d64b5c0237c7",
+   "symbols": [
+    "BBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Best Buy Co., Inc. (BBY) Hits Fresh High: Is There Still Room to Run?",
+   "summary": "Best Buy (BBY) is at a 52-week high, but can investors hope for more gains in the future? We take a look at the company's fundamentals for clues.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-buy-co-inc-bby-131501668.html?.tsrc=rss",
+   "published_at": "2026-11-10T13:15:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:09:27Z",
+   "fingerprint": "4b2dff332632a2a8",
+   "primary_source": false,
+   "cluster_id": "b771d64b5c0237c7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Best Buy Co., Inc. (BBY) Hits Fresh High: Gibt es noch Platz zum Laufen?"
+  },
+  {
+   "id": "6476af8c44174254",
+   "symbols": [
+    "BBY",
+    "SPGI",
+    "TGT",
+    "WMT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What Moved Best Buy Stock?",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/bby/articles/624103/what-moved-best-buy-stock/2026-11-10?.tsrc=rss",
+   "published_at": "2026-11-10T13:11:24Z",
+   "date_only": false,
+   "captured_at": "2026-11-10T22:27:35Z",
+   "fingerprint": "8be6a1635556a5ab",
+   "primary_source": false,
+   "cluster_id": "6476af8c44174254",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Was bewegte Best Buy Stock?"
+  },
+  {
+   "id": "00baf68b82322c82",
+   "symbols": [
+    "BBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Best Buy (BBY) Stock Looks Cheap Based On Future Cash Flow",
+   "summary": "Best Buy has delivered a strong share price run, and the question now is whether the current US$106.28 level lines up with the cash flows investors can reasonably expect from the business. With the stock back in focus, the key issue is how those cash flows stack up against the in",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-buy-bby-stock-looks-111053080.html?.tsrc=rss",
+   "published_at": "2026-11-10T11:10:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:09:27Z",
+   "fingerprint": "949eb5e6d4234bc2",
+   "primary_source": false,
+   "cluster_id": "00baf68b82322c82",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Best Buy (BBY) Stock sieht billig aus, basierend auf zukünftigem Cash Flow"
+  },
+  {
+   "id": "2b208f6889f40da5",
+   "symbols": [
+    "BBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Best Buy Stock Gets Fresh Analyst Support as Value Appeal Draws Investor Interest",
+   "summary": "Best Buy is attracting attention as a dividend payer, with a 3.85% yield and a track record of multiple dividend increases over the past five years, alongside expectations for solid earnings in the current fiscal year. The combination of relatively low valuation metrics, such as ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-buy-stock-gets-fresh-070657553.html?.tsrc=rss",
+   "published_at": "2026-11-10T07:06:57Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:09:27Z",
+   "fingerprint": "6f2403df35c7f2db",
+   "primary_source": false,
+   "cluster_id": "2b208f6889f40da5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Best Buy Stock erhält frischen Analysten-Support, da Value Appeal das Interesse der Anleger anzieht"
+  },
+  {
+   "id": "de79e96f90049d7c",
+   "symbols": [
+    "BBY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Is Best Buy (BBY) Undervalued As Value Metrics And Earnings Views Draw Fresh Interest?",
+   "summary": "Recent research coverage has put Best Buy (BBY) back on investors’ screens, highlighting its Zacks Rank #2 rating, value-focused grades, and valuation metrics such as forward P/E and PEG that suggest a discount to its retail peers. The recent move in Best Buy’s share price has be",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-buy-bby-undervalued-value-061158710.html?.tsrc=rss",
+   "published_at": "2026-11-10T06:11:58Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:09:27Z",
+   "fingerprint": "93ac31b744d94680",
+   "primary_source": false,
+   "cluster_id": "de79e96f90049d7c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Ist Best Buy (BBY) unterbewertet, da Wertmetriken und Gewinnsichten frisches Interesse anziehen?"
+  },
+  {
+   "id": "e352c4a0d41a8cf9",
+   "symbols": [
+    "BBY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Why Best Buy (BBY) is a Top Dividend Stock for Your Portfolio",
+   "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does Best Buy (BBY) have what it takes? Let's find out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-best-buy-bby-top-154501318.html?.tsrc=rss",
+   "published_at": "2026-11-09T15:45:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:09:27Z",
+   "fingerprint": "5549d30865e62e3b",
+   "primary_source": false,
+   "cluster_id": "e352c4a0d41a8cf9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Warum Best Buy (BBY) eine Top-Dividende für Ihr Portfolio ist"
+  },
+  {
+   "id": "7890a57583dd8180",
+   "symbols": [
+    "BBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Should Value Investors Buy Best Buy (BBY) Stock?",
+   "summary": "Here at Zacks, our focus is on the proven Zacks Rank system, which emphasizes earnings estimates and estimate revisions to find great stocks. Nevertheless, we are always paying attention to the latest value, growth, and momentum trends to underscore strong picks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/value-investors-buy-best-buy-134003138.html?.tsrc=rss",
+   "published_at": "2026-11-09T13:40:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:09:27Z",
+   "fingerprint": "75a735e46aa578ee",
+   "primary_source": false,
+   "cluster_id": "7890a57583dd8180",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Sollten Value-Investoren Best Buy (BBY) Aktien kaufen?"
+  },
+  {
+   "id": "c7e7352b817f8e53",
+   "symbols": [
+    "BBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Best Buy (BBY) Outperforming Other Retail-Wholesale Stocks This Year?",
+   "summary": "Here is how Best Buy (BBY) and Casey's General Stores (CASY) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-buy-bby-outperforming-other-134002685.html?.tsrc=rss",
+   "published_at": "2026-11-09T13:40:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:09:27Z",
+   "fingerprint": "04e6eb530b360dbc",
+   "primary_source": false,
+   "cluster_id": "c7e7352b817f8e53",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Ist Best Buy (BBY) in diesem Jahr besser als andere Einzelhandels-Großhandelsaktien?"
+  },
+  {
+   "id": "f91c9d1516e08a64",
+   "symbols": [
+    "BBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "PS5 Pro is Sold Out Everywhere as GTA VI Pre-Load Starts Next Week",
+   "summary": "The PS5 Pro is sold out at major US retailers as GTA 6 pre-downloads open Nov. 10 with a 212GB storage need, while Sony stock slipped Friday.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "beincrypto.com",
+   "url": "https://beincrypto.com/ps5-pro-sold-out-gta-6-pre-downloads/?.tsrc=rss",
+   "published_at": "2026-11-07T11:31:59Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:09:27Z",
+   "fingerprint": "53ba5482a5b69272",
+   "primary_source": false,
+   "cluster_id": "f91c9d1516e08a64",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e7f5ec0ce7afe6a9",
+   "symbols": [
+    "BBY"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Best Buy’s Dividend Is Barely Growing. Should Income Investors Be Worried?",
+   "summary": "Best Buy once boosted its payout by more than 25% a year. Now the raises barely register, a new CEO is spending on other priorities, and the next dividend declaration could reveal where income investors rank.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/11/06/best-buys-dividend-is-barely-growing-should-income-investors-be-worried/?.tsrc=rss",
+   "published_at": "2026-11-06T12:47:27Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:09:27Z",
+   "fingerprint": "420c458dbb582dfa",
+   "primary_source": false,
+   "cluster_id": "e7f5ec0ce7afe6a9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "06865ddd49108061",
+   "symbols": [
+    "BBY",
+    "GS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Goldman Sachs Equal Weight (GSEW) Adds HF Sinclair and Rubrik on Nov. 4",
+   "summary": "The $2.26 billion ETF bought $354.9 million of stock, added five new positions and exited five others.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/goldman-sachs-equal-weight-gsew-110516274.html?.tsrc=rss",
+   "published_at": "2026-11-06T11:05:16Z",
+   "date_only": false,
+   "captured_at": "2026-11-09T06:11:14Z",
+   "fingerprint": "9e0a1d17ab78f73d",
+   "primary_source": false,
+   "cluster_id": "06865ddd49108061",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8019a8990c529492",
+   "symbols": [
+    "BBY"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Best Buy Store Rollout Could Change The Case For Zip Co (ASX:ZIP)",
+   "summary": "Zip Co announced that its partnership with Best Buy has expanded nationwide into physical stores, allowing eligible shoppers to use Zip’s tap to pay app at the register alongside existing online options. The rollout into Best Buy locations comes as Zip reports in-store purchases ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-buy-store-rollout-could-032706354.html?.tsrc=rss",
+   "published_at": "2026-11-06T03:27:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:09:27Z",
+   "fingerprint": "84c2b3c000d08027",
+   "primary_source": false,
+   "cluster_id": "8019a8990c529492",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
    "id": "aa7aaf938c5ecc0d",
    "symbols": [
+    "ALH",
     "ANF",
     "BBY"
    ],
@@ -1162,19 +1516,51 @@
    "report_date": "2026-06-30"
   }
  ],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 1,
+  "mentions_7d": 1,
+  "mentions_30d": 1,
+  "change_vs_baseline_pct": null,
+  "engagement_7d": 0.0,
+  "sentiment_7d": 1.0,
+  "sentiment_basis": "algorithmisch (Lexikon)",
+  "bullish_7d": 0,
+  "bearish_7d": 0,
+  "by_platform_7d": {
+   "mastodon": 1
+  },
+  "communities_7d": {
+   "Mastodon": 1
+  },
+  "platforms": [
+   "mastodon"
+  ],
+  "manipulation_flags": [],
+  "manipulation_risk": "unauffällig",
+  "top_posts": [
+   {
+    "platform": "mastodon",
+    "community": "Mastodon",
+    "author": "life@wakoka.com",
+    "posted_at": "2026-11-11T19:18:04Z",
+    "url": "https://wakoka.com/@life/117599416154053600",
+    "text": "https://www.  wacoca.com/life/489055/     Paul Tudor Jones’s Best Buy Is Already Up 43%. Is It Too Late to Follow Him?  # investment    # toshi    # 投資",
+    "engagement": 0.0,
+    "sentiment_label": null
+   }
+  ]
+ },
  "attention": {
   "title": "Best Buy",
   "url": "https://en.wikipedia.org/wiki/Best_Buy",
-  "date": "2026-11-10",
-  "views_1d": 683,
-  "avg_7d": 612,
-  "avg_30d": 587,
-  "ratio_1d": 1.16,
-  "ratio_7d": 1.04,
+  "date": "2026-11-11",
+  "views_1d": 565,
+  "avg_7d": 615,
+  "avg_30d": 586,
+  "ratio_1d": 0.96,
+  "ratio_7d": 1.05,
   "spike": false,
   "series": [
-   670,
    603,
    657,
    650,
@@ -1203,7 +1589,8 @@
    572,
    560,
    660,
-   683
+   683,
+   565
   ]
  },
  "history": []

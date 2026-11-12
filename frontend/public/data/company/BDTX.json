@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-11T06:03:02Z",
+ "generated_at": "2026-11-12T06:07:01Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,11 +180,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 16.3,
+   "score": 45.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 3,
    "independent_24h": 0
   },
   "political": {
@@ -216,15 +218,12 @@
    {
     "symbol": "BDTX",
     "type": "earnings",
-    "date": "2026-11-12",
+    "date": "2026-11-10",
     "time": "Uhrzeit offen",
-    "fiscal_quarter": "Sep/2026",
-    "eps_forecast": -0.03,
-    "estimates": 5,
     "confirmed": true,
-    "source": "Nasdaq-Earnings-Kalender",
-    "source_url": "https://www.nasdaq.com/market-activity/stocks/bdtx/earnings",
-    "days_until": 1
+    "source": "Yahoo Finance",
+    "source_url": "https://finance.yahoo.com/quote/BDTX",
+    "days_until": -2
    }
   ],
   "politicians": null,
@@ -693,11 +692,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 16.3,
+  "score": 45.1,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 86.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 92.5,
@@ -715,26 +714,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -753,6 +754,74 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "fbf6bc887cdf0054",
+   "symbols": [
+    "BDTX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Black Diamond: Q3 Earnings Snapshot",
+   "summary": "(AP) — Black Diamond Therapeutics, Inc. (BDTX) on Tuesday reported a loss of $10 million in its third quarter.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/black-diamond-q3-earnings-snapshot-113720079.html?.tsrc=rss",
+   "published_at": "2026-11-10T11:37:20Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:09:33Z",
+   "fingerprint": "2868b2f8209b4450",
+   "primary_source": false,
+   "cluster_id": "fbf6bc887cdf0054",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "11fa717b1e6dafeb",
+   "symbols": [
+    "BDTX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Black Diamond Therapeutics Announces Positive Updated Silevertinib Phase 2 Results, FDA Feedback Supporting a Clear Path to Potential Registration in 1L EGFR-NCM NSCLC, and Provides Corporate Update",
+   "summary": "Updated Phase 2 results demonstrate robust CNS activity, including 86% CNS-ORR and mPFS double that of currently available EGFR TKIs, in patients with untreated brain metastasesRecent End-of-Phase 2 meeting with the FDA supports pivotal development in all 1L EGFR-NCM NSCLC patien",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/black-diamond-therapeutics-announces-positive-113000728.html?.tsrc=rss",
+   "published_at": "2026-11-10T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:09:33Z",
+   "fingerprint": "205520d72c0e1fc6",
+   "primary_source": false,
+   "cluster_id": "11fa717b1e6dafeb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Black Diamond Therapeutics kündigt positive aktualisierte Silevertinib Phase-2-Ergebnisse an, FDA-Feedback unterstützt einen klaren Weg zur potenziellen Registrierung in 1L EGFR-NCM NSCLC und bietet Corporate Update"
+  },
+  {
+   "id": "18be9c3aa106e48a",
+   "symbols": [
+    "BDTX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Black Diamond Therapeutics to Host Webcast Highlighting Updated Silevertinib Phase 2 Data and FDA Feedback Supporting a Clear Phase 3 Path to Potential Accelerated Approval in 1L EGFR-NCM NSCLC",
+   "summary": "Webcast will be held Tuesday, November 10, 2026, at 7:30 a.m. ET CAMBRIDGE, Mass., Nov. 09, 2026 (GLOBE NEWSWIRE) -- Black Diamond Therapeutics, Inc. (Nasdaq: BDTX), a clinical-stage oncology company developing MasterKey therapies that target families of oncogenic mutations in pa",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/black-diamond-therapeutics-host-webcast-210100374.html?.tsrc=rss",
+   "published_at": "2026-11-09T21:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:09:33Z",
+   "fingerprint": "c6a746073a7fda62",
+   "primary_source": false,
+   "cluster_id": "18be9c3aa106e48a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Black Diamond Therapeutics wird Webcast mit aktualisierten Silevertinib-Phase-2-Daten und FDA-Feedback hosten, die einen klaren Phase-3-Weg zu einer potenziellen beschleunigten Zulassung in 1L EGFR-NCM NSCLC unterstützen"
+  },
   {
    "id": "f4ef9146008976dc",
    "symbols": [

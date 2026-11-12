@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-11T06:03:02Z",
+ "generated_at": "2026-11-12T06:07:01Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -182,12 +182,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 6.5,
+   "score": 36.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 2,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -230,7 +232,7 @@
     "confirmed": true,
     "source": "Yahoo Finance",
     "source_url": "https://finance.yahoo.com/quote/ASC",
-    "days_until": 16
+    "days_until": 15
    }
   ],
   "politicians": null,
@@ -701,11 +703,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.5,
+  "score": 36.1,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 68.2,
+   "freshness": 50,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 41.4,
@@ -714,35 +716,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 8,
-    "independent": 8,
+    "signals": 10,
+    "independent": 10,
     "duplicates": 1,
-    "sources": 4,
+    "sources": 5,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -761,6 +765,53 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "258012e7589eddc6",
+   "symbols": [
+    "ASC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Energy Shippers Report Their Quarters Amid Ongoing Tightness in the Global Tanker Market",
+   "summary": "Oil Market Daily News Commentary - Crude oil futures were higher on Wednesday morning. As of 11:34 a.m. ET, the December NYMEX West Texas Intermediate contract was at $88.26 a barrel, up $2.22, or 2.58%, from Tuesday's settlement of $86.04, and the January ICE Brent contract was ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/energy-shippers-report-quarters-amid-175600159.html?.tsrc=rss",
+   "published_at": "2026-11-11T17:56:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:08:49Z",
+   "fingerprint": "4b0caee18fdd46aa",
+   "primary_source": false,
+   "cluster_id": "258012e7589eddc6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Energieversender berichten ihre Quartale inmitten der anhaltenden Enge auf dem globalen Tankermarkt"
+  },
+  {
+   "id": "8fa414ee14e01986",
+   "symbols": [
+    "ASC",
+    "STNG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "TORM Yields Nearly 13% and Trades at Just 6 Times Earnings. What’s the Catch?",
+   "summary": "A double-digit yield, a modest payout ratio, and a rock-bottom valuation should calm any income investor. So why did TORM shares tumble in a week, and what hidden number actually decides whether the next dividend lands?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/11/10/torm-yields-nearly-13-and-trades-at-just-6-times-earnings-whats-the-catch/?.tsrc=rss",
+   "published_at": "2026-11-10T12:47:55Z",
+   "date_only": false,
+   "captured_at": "2026-11-10T22:27:51Z",
+   "fingerprint": "8918568420caeb1c",
+   "primary_source": false,
+   "cluster_id": "8fa414ee14e01986",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "TORM erwirtschaftet fast 13% und handelt mit nur 6-fachem Gewinn."
+  },
   {
    "id": "8b117aeb25909773",
    "symbols": [

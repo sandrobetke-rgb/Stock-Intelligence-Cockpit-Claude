@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-11T06:03:02Z",
+ "generated_at": "2026-11-12T06:07:01Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,14 +180,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 19.8,
+   "score": 41.8,
    "drivers": [
     "news_flow",
-    "price_volume_anomaly",
-    "source_diversity"
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 1,
-   "independent_24h": 0
+   "independent_7d": 3,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -226,7 +226,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/anro/earnings",
-    "days_until": 0
+    "days_until": -1
    }
   ],
   "politicians": null,
@@ -695,11 +695,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 19.8,
+  "score": 41.8,
   "components": {
-   "news_flow": 43.0,
-   "freshness": 0,
-   "source_diversity": 20,
+   "news_flow": 86.0,
+   "freshness": 50,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 20.4,
@@ -708,15 +708,6 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
-    "primary": 0,
-    "analyst_changes": 0,
-    "verified": 0
-   },
-   "7d": {
     "signals": 1,
     "independent": 1,
     "duplicates": 0,
@@ -725,11 +716,20 @@
     "analyst_changes": 0,
     "verified": 0
    },
-   "30d": {
-    "signals": 4,
-    "independent": 4,
+   "7d": {
+    "signals": 3,
+    "independent": 3,
     "duplicates": 1,
-    "sources": 1,
+    "sources": 2,
+    "primary": 0,
+    "analyst_changes": 0,
+    "verified": 0
+   },
+   "30d": {
+    "signals": 7,
+    "independent": 7,
+    "duplicates": 2,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -737,8 +737,8 @@
   },
   "drivers": [
    "news_flow",
-   "price_volume_anomaly",
-   "source_diversity"
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -757,6 +757,75 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "1ae46b9f03fb0624",
+   "symbols": [
+    "ANRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Alto Neuroscience faces pivotal 2027 as Jefferies flags three clinical catalysts",
+   "summary": "Alto Neuroscience Inc (NASDAQ:ANRO) could have several clinical catalysts in 2027, with Jefferies highlighting the potential for positive Phase IIb trial results across three experimental depression and psychiatric treatments. In a research note following the company's third-quar",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "proactiveinvestors.com",
+   "url": "https://www.proactiveinvestors.com/companies/news/1101624/alto-neuroscience-faces-pivotal-2027-as-jefferies-flags-three-clinical-catalysts-1101624.html?.tsrc=rss",
+   "published_at": "2026-11-11T20:44:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:08:26Z",
+   "fingerprint": "88de3efa74839ff7",
+   "primary_source": false,
+   "cluster_id": "1ae46b9f03fb0624",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Alto Neuroscience steht vor dem Dreh- und Angelpunkt 2027, als Jefferies drei klinische Katalysatoren auszeichnet"
+  },
+  {
+   "id": "db7d39dcb377e948",
+   "symbols": [
+    "ANRO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Alto Neuroscience Reports Third Quarter 2026 Financial Results and Recent Business Highlights",
+   "summary": "MOUNTAIN VIEW, Calif., November 10, 2026--Alto Neuroscience, Inc. (\"Alto\") (NYSE: ANRO), a clinical-stage biopharmaceutical company focused on the development of novel precision medicines for neuropsychiatric disorders, today reported financial results for the quarter ended Septe",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/alto-neuroscience-reports-third-quarter-210500708.html?.tsrc=rss",
+   "published_at": "2026-11-10T21:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:08:26Z",
+   "fingerprint": "7831cb6cda1b8348",
+   "primary_source": false,
+   "cluster_id": "a5a6a447f5010f20",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Alto Neuroscience meldet drittes Quartal 2026 Finanzergebnisse und aktuelle Geschäftshighlights"
+  },
+  {
+   "id": "727db42f61187b1d",
+   "symbols": [
+    "ANRO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Alto Neuroscience (ANRO) Stock Looks Fully Priced On Book Value",
+   "summary": "Alto Neuroscience has seen its share price move sharply over the past year, which puts a spotlight on whether that market value lines up with the strength of its balance sheet. With the stock now well above levels seen earlier in the year, investors are asking how much of that sh",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/alto-neuroscience-anro-stock-looks-081004437.html?.tsrc=rss",
+   "published_at": "2026-11-10T08:10:04Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:08:26Z",
+   "fingerprint": "59ee62ae7a563848",
+   "primary_source": false,
+   "cluster_id": "727db42f61187b1d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Alto Neuroscience (ANRO) Stock sieht voll auf Buchwert preislich"
+  },
   {
    "id": "990a3cd7a5d2ea4e",
    "symbols": [
@@ -974,7 +1043,7 @@
    "primary_source": false,
    "cluster_id": "a5a6a447f5010f20",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   },
   {

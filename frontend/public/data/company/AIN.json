@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-11T06:03:02Z",
+ "generated_at": "2026-11-12T06:07:01Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -181,12 +181,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 3.0,
+   "score": 32.5,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "freshness",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 2,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -681,11 +683,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 3.0,
+  "score": 32.5,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 68.2,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 17.1,
@@ -694,26 +696,26 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 17,
-    "independent": 17,
+    "signals": 19,
+    "independent": 19,
     "duplicates": 0,
     "sources": 4,
     "primary": 0,
@@ -722,7 +724,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "freshness",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -741,6 +745,52 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "6a3095ac545d6b4d",
+   "symbols": [
+    "AIN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Albany International (AIN) Stock Outpacing Its Industrial Products Peers This Year?",
+   "summary": "Here is how Albany International (AIN) and Parker-Hannifin (PH) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/albany-international-ain-stock-outpacing-200711783.html?.tsrc=rss",
+   "published_at": "2026-11-11T20:07:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:07:46Z",
+   "fingerprint": "f88d4e9260adef05",
+   "primary_source": false,
+   "cluster_id": "6a3095ac545d6b4d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Ist Albany International (AIN) Stock seine Industrieprodukte Peers in diesem Jahr?"
+  },
+  {
+   "id": "9d46432fa0102845",
+   "symbols": [
+    "AIN",
+    "CXT"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Solid Stocks to Grab as Manufacturing Activity Hits 3-Month High",
+   "summary": "Manufacturing activity hits a three-month high, driven by robust demand and rising production. Discover why AIT, CR and AIN stand out.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/3-solid-stocks-grab-manufacturing-133900676.html?.tsrc=rss",
+   "published_at": "2026-11-05T13:39:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-06T06:03:00Z",
+   "fingerprint": "dd0e78df19085dbd",
+   "primary_source": false,
+   "cluster_id": "9d46432fa0102845",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "54b3f503d6d96bcc",
    "symbols": [
@@ -1142,16 +1192,14 @@
  "attention": {
   "title": "Albany International",
   "url": "https://en.wikipedia.org/wiki/Albany_International",
-  "date": "2026-11-09",
-  "views_1d": 12,
-  "avg_7d": 11,
+  "date": "2026-11-11",
+  "views_1d": 13,
+  "avg_7d": 12,
   "avg_30d": 15,
-  "ratio_1d": 0.81,
-  "ratio_7d": 0.71,
+  "ratio_1d": 0.88,
+  "ratio_7d": 0.81,
   "spike": false,
   "series": [
-   12,
-   16,
    19,
    14,
    12,
@@ -1179,7 +1227,9 @@
    12,
    3,
    10,
-   12
+   12,
+   15,
+   13
   ]
  },
  "history": []
