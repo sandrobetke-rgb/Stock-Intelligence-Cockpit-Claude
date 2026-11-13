@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T22:24:57Z",
+ "generated_at": "2026-11-13T06:04:02Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,12 +180,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.6,
+   "score": 66.2,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 20,
+   "independent_24h": 2
   },
   "political": {
    "relevance": 0,
@@ -221,7 +223,7 @@
     "confirmed": true,
     "source": "Yahoo Finance",
     "source_url": "https://finance.yahoo.com/quote/DK",
-    "days_until": -2
+    "days_until": -3
    }
   ],
   "politicians": null,
@@ -690,48 +692,50 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.6,
+  "score": 66.2,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 80,
    "primary_sources": 0,
-   "analyst_activity": 0,
+   "analyst_activity": 70,
    "price_volume_anomaly": 15.0,
    "social_attention": null,
    "insider_activity": null
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 20,
+    "independent": 20,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 2,
     "verified": 0
    },
    "30d": {
-    "signals": 31,
-    "independent": 31,
+    "signals": 51,
+    "independent": 51,
     "duplicates": 0,
-    "sources": 3,
+    "sources": 5,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 2,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -750,6 +754,464 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "7be1819cf6c69847",
+   "symbols": [
+    "DK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Patterson-UTI Expects Higher Rig Demand as 2027 Outlook Improves",
+   "summary": "PTEN expects higher U.S. rig activity, rising dayrates and stronger demand for advanced drilling equipment to fuel growth into 2027.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/patterson-uti-expects-higher-rig-122400146.html?.tsrc=rss",
+   "published_at": "2026-11-12T12:24:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:50Z",
+   "fingerprint": "5fc1153c663a026b",
+   "primary_source": false,
+   "cluster_id": "7be1819cf6c69847",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Patterson-UTI erwartet höhere Nachfrage nach Rig, da sich der Ausblick für 2027 verbessert"
+  },
+  {
+   "id": "cf65b95a9a482f0e",
+   "symbols": [
+    "DK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Halliburton Expands Geothermal Footprint With Sage Geosystems Deal",
+   "summary": "HAL expands its geothermal footprint through Sage Geosystems' Project Vector, bringing its well construction and stimulation expertise to advanced energy.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/halliburton-expands-geothermal-footprint-sage-122200542.html?.tsrc=rss",
+   "published_at": "2026-11-12T12:22:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:50Z",
+   "fingerprint": "a7fc4ada9b270af0",
+   "primary_source": false,
+   "cluster_id": "cf65b95a9a482f0e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Halliburton erweitert geothermischen Fußabdruck mit Sage Geosystems Deal"
+  },
+  {
+   "id": "ec926831581db77d",
+   "symbols": [
+    "APA",
+    "DK"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "APA Raises 2026 Free Cash Flow Forecast to $2.9B After Q3 Results",
+   "summary": "APA raises its 2026 free cash flow outlook to $2.9 billion as stronger U.S. oil production, higher prices and cost controls boost shareholder returns and debt reduction.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/apa-raises-2026-free-cash-153800098.html?.tsrc=rss",
+   "published_at": "2026-11-11T15:38:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:08:30Z",
+   "fingerprint": "cbeac68af470602f",
+   "primary_source": false,
+   "cluster_id": "ec926831581db77d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "APA erhöht die Free Cash Flow Prognose für 2026 auf 2,9 Milliarden US-Dollar nach Q3-Ergebnissen"
+  },
+  {
+   "id": "5cf0b1cab9a92e08",
+   "symbols": [
+    "DK",
+    "FANG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Diamondback and KKR to Acquire Five Point's 70% Stake in Deep Blue",
+   "summary": "FANG's proposed deal with KKR would secure water infrastructure capacity through joint ownership of Deep Blue, serving Midland Basin operators.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/diamondback-kkr-acquire-five-points-153400389.html?.tsrc=rss",
+   "published_at": "2026-11-11T15:34:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:50Z",
+   "fingerprint": "79fea33135067d20",
+   "primary_source": false,
+   "cluster_id": "5cf0b1cab9a92e08",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Diamondback und KKR übernehmen 70% des Anteils von Five Point an Deep Blue"
+  },
+  {
+   "id": "b759927ee7c3fbc5",
+   "symbols": [
+    "DK"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Delek US rises as Freedom Broker upgrades to Buy on refining strength",
+   "summary": "Investing.com -- Shares of Delek US Holdings Inc (NYSE:DK) gained 4% in early trading Wednesday after Freedom Broker upgraded the independent refiner to Buy from Hold, citing an exceptionally strong operational backdrop and an attractive entry point following a recent pullback. A",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/delek-us-rises-freedom-broker-151459648.html?.tsrc=rss",
+   "published_at": "2026-11-11T15:14:59Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:50Z",
+   "fingerprint": "23977483255f3b80",
+   "primary_source": false,
+   "cluster_id": "b759927ee7c3fbc5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Delek US steigt, da Freedom Broker Upgrades auf Kauf auf Raffineriestärke"
+  },
+  {
+   "id": "d3e99948e0bc9648",
+   "symbols": [
+    "AKAM",
+    "DK"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Buy, Sell, or Hold? Wednesday’s Top Upgrades and Downgrades: Akamai Technologies, Apple, BILL Holdings, Corning, Form Factor, Guidewire Software, NVIDIA, Riot Platforms, Toast, and More",
+   "summary": "Hot inflation data rattled Tuesday's close, and now one chip giant faces a Baird downgrade tied to concerns about its CEO. Which analyst calls, from Apple's upgrade to a steep Akamai cut, deserve your attention before the bell?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/11/11/buy-sell-or-hold-wednesdays-top-upgrades-and-downgrades-akamai-technologies-apple-bill-holdings-corning-form-factor-guidewire-software-nvidia-riot-platforms-toast-and-more/?.tsrc=rss",
+   "published_at": "2026-11-11T12:57:12Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:07:51Z",
+   "fingerprint": "9d1246f3949e7a1c",
+   "primary_source": false,
+   "cluster_id": "d3e99948e0bc9648",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Kaufen, verkaufen oder halten? Mittwochs Top-Upgrades und -Downgrades: Akamai Technologies, Apple, BILL Holdings, Corning, Form Factor, Guidewire Software, NVIDIA, Riot Platforms, Toast und mehr"
+  },
+  {
+   "id": "b85ca6985cb8ef02",
+   "symbols": [
+    "CVI",
+    "DK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Zacks Investment Ideas feature highlights: CVR Energy, Delek US, Northern Oil and Gas and Marathon Petroleum",
+   "summary": "CVI, DK and NOG crushed Q3 earnings expectations, with strong cash flows, improving profitability and shareholder returns making their stock pullbacks worth watching.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/zacks-investment-ideas-feature-highlights-053300546.html?.tsrc=rss",
+   "published_at": "2026-11-11T05:33:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:18Z",
+   "fingerprint": "cbeb18333ecb2bf7",
+   "primary_source": false,
+   "cluster_id": "b85ca6985cb8ef02",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Zacks Investment Ideas Feature Highlights: CVR Energy, Delek US, Northern Oil and Gas und Marathon Petroleum"
+  },
+  {
+   "id": "613b6ee447261c8a",
+   "symbols": [
+    "CVI",
+    "DK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Oil Stocks to Buy on the Dip After Crushing Q3 Expectations: CVI, DK, NOG",
+   "summary": "Here are three highly ranked oil stocks worth buying on the dip after crushing Q3 earnings expectations amid continued volatility in crude prices.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/3-oil-stocks-buy-dip-185500685.html?.tsrc=rss",
+   "published_at": "2026-11-10T18:55:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:18Z",
+   "fingerprint": "260c9b8651fb3dbd",
+   "primary_source": false,
+   "cluster_id": "613b6ee447261c8a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "3 Ölaktien auf dem Dip zu kaufen, nachdem Q3 Erwartungen zerkleinert: CVI, DK, NOG"
+  },
+  {
+   "id": "f72cc43c91b99dc2",
+   "symbols": [
+    "DK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Chevron Expands Namibia Ties With QatarEnergy Offshore Stake Deal",
+   "summary": "CVX is selling a 25% stake in Namibia's PEL82 offshore license to QatarEnergy, sharing exploration costs while retaining control and growth potential.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/chevron-expands-namibia-ties-qatarenergy-181600970.html?.tsrc=rss",
+   "published_at": "2026-11-10T18:16:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:50Z",
+   "fingerprint": "d669535435ebe7b2",
+   "primary_source": false,
+   "cluster_id": "f72cc43c91b99dc2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Chevron baut Beziehungen zu Namibia mit QatarEnergy Offshore Stake Deal aus"
+  },
+  {
+   "id": "ab617317717b9b03",
+   "symbols": [
+    "DK"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "DK Q3 Earnings Call Highlights Cash Returns & Refining Outlook",
+   "summary": "Delek beats Q3 earnings and revenue estimates, raises its cash flow improvement target to $250M, and outlines plans for higher buybacks and debt reduction.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/dk-q3-earnings-call-highlights-153900623.html?.tsrc=rss",
+   "published_at": "2026-11-09T15:39:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:50Z",
+   "fingerprint": "cfe51434e3dd0ff4",
+   "primary_source": false,
+   "cluster_id": "ab617317717b9b03",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "845e18438e2c2c88",
+   "symbols": [
+    "DK",
+    "MPC",
+    "PBF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Delek Targets Another $1 Per Barrel at El Dorado: Can Margins Climb?",
+   "summary": "DK targets $30 million in annual refining-margin gains at El Dorado as optimization efforts, rising earnings estimates and valuation bolster its appeal.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/delek-targets-another-1-per-125400155.html?.tsrc=rss",
+   "published_at": "2026-11-09T12:54:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-09T22:33:32Z",
+   "fingerprint": "2095917bec3e8696",
+   "primary_source": false,
+   "cluster_id": "845e18438e2c2c88",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2f3a1c6409e484a9",
+   "symbols": [
+    "DK",
+    "MPC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Petrobras Signs 3-Year Deal With RINA for Subsea Asset Management",
+   "summary": "PBR signs a deal with RINA to improve subsea asset reliability, manage aging offshore infrastructure and support its $9.7 billion retirement program.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/petrobras-signs-3-deal-rina-125200224.html?.tsrc=rss",
+   "published_at": "2026-11-09T12:52:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-09T22:33:32Z",
+   "fingerprint": "b941dd6576e27faf",
+   "primary_source": false,
+   "cluster_id": "2f3a1c6409e484a9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "92f0cfc4f7efcdf2",
+   "symbols": [
+    "DK",
+    "MPC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Diamondback Energy Sees New Revenue Potential in AI Power Boom",
+   "summary": "FANG eyes new revenue opportunities from AI data center power demand and LNG markets, leveraging its Permian assets and natural gas resources.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/diamondback-energy-sees-revenue-potential-125000581.html?.tsrc=rss",
+   "published_at": "2026-11-09T12:50:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-09T22:33:32Z",
+   "fingerprint": "5cba470633021f7f",
+   "primary_source": false,
+   "cluster_id": "92f0cfc4f7efcdf2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4b01021d00e96cdd",
+   "symbols": [
+    "DK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Delek US Holdings (DK) Stock Looks About Right Following Its 310% Run",
+   "summary": "Delek US Holdings has delivered a powerful run over the past few years, and the recent pullback puts fresh focus on whether that climb still lines up with what its earnings can support. The question now is how much of the past performance story is already embedded in today's pric",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/delek-us-holdings-dk-stock-111130885.html?.tsrc=rss",
+   "published_at": "2026-11-08T11:11:30Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:50Z",
+   "fingerprint": "4a70e9d5ae96e9f3",
+   "primary_source": false,
+   "cluster_id": "4b01021d00e96cdd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1dda6174291e3173",
+   "symbols": [
+    "DK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "What Delek US Holders Bought Into Before A 118% Run",
+   "summary": "If you had backed Delek US at the very start of 2026, the outcome by early November would have been hard to ignore. Holding Delek US from the start of the year would have returned 118.2%, including dividends. That result landed after a flood of headlines about Supreme Court exemp",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/delek-us-holders-bought-118-031440621.html?.tsrc=rss",
+   "published_at": "2026-11-08T03:14:40Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:50Z",
+   "fingerprint": "3c5a8dfe57ed4c3e",
+   "primary_source": false,
+   "cluster_id": "1dda6174291e3173",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "5cd21ba84a997373",
+   "symbols": [
+    "DK"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Delek US Holdings (DK) Beats On Earnings And Guidance, Is More Upside Still Left?",
+   "summary": "Delek US Holdings (DK) just put up a very strong third quarter, with earnings and sales well ahead of Wall Street expectations, and paired those results with richer logistics guidance and higher planned cash flow improvements. The latest move in Delek US Holdings’ share price tel",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/delek-us-holdings-dk-beats-231259447.html?.tsrc=rss",
+   "published_at": "2026-11-07T23:12:59Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:50Z",
+   "fingerprint": "15dd6015307e5f57",
+   "primary_source": false,
+   "cluster_id": "5cd21ba84a997373",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f04838e288d16fd0",
+   "symbols": [
+    "DK"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Delek US Q3 Earnings Call Highlights",
+   "summary": "Delek US (NYSE:DK) reported third-quarter net income of approximately $1.13 billion and raised its dividend, as stronger refining margins and higher capture rates helped drive results. The company also increased its enterprise optimization target and outlined plans for further sh",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-delek-us-q3-earnings-call-highlights-2026-11-07/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-11-07T08:17:12Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:50Z",
+   "fingerprint": "84fb923c12b0510d",
+   "primary_source": false,
+   "cluster_id": "f04838e288d16fd0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "335e9b2ae44e8077",
+   "symbols": [
+    "DK"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Delek US Holdings Inc (DK) (Q3 2026) Earnings Call Highlights: Record Net Income, Raised EOP ...",
+   "summary": "Delek US Holdings Inc (DK) posted ~$1.13 billion in Q3 2026 net income, lifted its Enterprise Optimization Plan target to at least $250 million, and expects ~$425 million in SRE proceeds in Q4.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/delek-us-holdings-inc-dk-080032004.html?.tsrc=rss",
+   "published_at": "2026-11-07T08:00:32Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:50Z",
+   "fingerprint": "e28b98f01c4b2ffc",
+   "primary_source": false,
+   "cluster_id": "335e9b2ae44e8077",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a983a20e6c1588df",
+   "symbols": [
+    "DK"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Delek US Holdings (DK) Q3 2026 Earnings Call Transcript",
+   "summary": "Management outlines a balance sheet shift and a raised logistics outlook heading into year-end.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/11/06/delek-us-holdings-dk-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-11-06T21:03:41Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:50Z",
+   "fingerprint": "31f49796ede27587",
+   "primary_source": false,
+   "cluster_id": "a983a20e6c1588df",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "dea63f3fd1f122c8",
+   "symbols": [
+    "DK"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Compared to Estimates, Delek US Holdings (DK) Q3 Earnings: A Look at Key Metrics",
+   "summary": "While the top- and bottom-line numbers for Delek US Holdings (DK) give a sense of how the business performed in the quarter ended September 2026, it could be worth looking at how some of its key metrics compare to Wall Street estimates and year-ago values.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/compared-estimates-delek-us-holdings-210002471.html?.tsrc=rss",
+   "published_at": "2026-11-06T21:00:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:50Z",
+   "fingerprint": "212e29ff268eb22b",
+   "primary_source": false,
+   "cluster_id": "dea63f3fd1f122c8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "3626bf59b744f188",
    "symbols": [

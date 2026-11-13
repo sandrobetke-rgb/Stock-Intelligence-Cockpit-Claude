@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T22:24:57Z",
+ "generated_at": "2026-11-13T06:04:02Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,14 +180,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 29.9,
+   "score": 69.3,
    "drivers": [
     "news_flow",
-    "price_volume_anomaly",
-    "source_diversity"
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 2,
-   "independent_24h": 0
+   "independent_7d": 8,
+   "independent_24h": 4
   },
   "political": {
    "relevance": 0,
@@ -223,7 +223,7 @@
     "confirmed": true,
     "source": "Yahoo Finance",
     "source_url": "https://finance.yahoo.com/quote/ED",
-    "days_until": 6
+    "days_until": 5
    }
   ],
   "politicians": null,
@@ -692,50 +692,50 @@
   ]
  },
  "intelligence_detail": {
-  "score": 29.9,
+  "score": 69.3,
   "components": {
-   "news_flow": 68.2,
-   "freshness": 0,
-   "source_diversity": 20,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 100.0,
    "primary_sources": 0,
-   "analyst_activity": 0,
+   "analyst_activity": 35,
    "price_volume_anomaly": 35.9,
    "social_attention": null,
    "insider_activity": null
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    },
    "7d": {
-    "signals": 2,
-    "independent": 2,
-    "duplicates": 0,
-    "sources": 1,
+    "signals": 8,
+    "independent": 8,
+    "duplicates": 1,
+    "sources": 5,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    },
    "30d": {
-    "signals": 31,
-    "independent": 31,
-    "duplicates": 0,
-    "sources": 5,
+    "signals": 38,
+    "independent": 37,
+    "duplicates": 1,
+    "sources": 7,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
    "news_flow",
-   "price_volume_anomaly",
-   "source_diversity"
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -754,6 +754,169 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "1ed2a96a3c5f0d04",
+   "symbols": [
+    "ED"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ConEd joins utilities seeking to loosen New York restrictions on owning generation",
+   "summary": "The company says reforms would boost renewables and help it achieve resource adequacy and environmental compliance targets. It has also asked regulators to expand distribution and transmission-connected storage options.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "utilitydive.com",
+   "url": "https://www.utilitydive.com/news/coned-says-resource-adequacy-environmental-compliance-drive-planning/874511/?.tsrc=rss",
+   "published_at": "2026-11-12T16:05:13Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:05:18Z",
+   "fingerprint": "9c1f37554b2ea055",
+   "primary_source": false,
+   "cluster_id": "1ed2a96a3c5f0d04",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "ConEd schließt sich Dienstprogrammen an, die New Yorker Beschränkungen für den Besitz von Generation lockern wollen"
+  },
+  {
+   "id": "39296f3fa160b9f5",
+   "symbols": [
+    "ED"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Common Energy Crosses 1GW of Community Solar Projects; 500MW of Live Renewable Energy Assets",
+   "summary": "NEW YORK, November 12, 2026--Common Energy crosses 1GW of community solar projects under management, with 500MW of live projects helping people save on electricity costs.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/common-energy-crosses-1gw-community-140400254.html?.tsrc=rss",
+   "published_at": "2026-11-12T14:04:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:05:18Z",
+   "fingerprint": "857a773d16f11e6d",
+   "primary_source": false,
+   "cluster_id": "39296f3fa160b9f5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Common Energy kreuzt 1 GW Gemeinschafts-Solarprojekte; 500 MW Live Renewable Energy Assets"
+  },
+  {
+   "id": "7377c617ca4bff59",
+   "symbols": [
+    "ED"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Consolidated Edison Stock: Analyst Estimates & Ratings",
+   "summary": "Despite rallying the broader market over the past year, analysts remain unsure about Consolidated Edison's prospects.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "barchart.com",
+   "url": "https://www.barchart.com/story/news/8800485/consolidated-edison-stock-analyst-estimates-ratings?.tsrc=rss",
+   "published_at": "2026-11-12T13:40:44Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:05:18Z",
+   "fingerprint": "7911787173832174",
+   "primary_source": false,
+   "cluster_id": "7377c617ca4bff59",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Konsolidierte Edison Stock: Analystenschätzungen & Ratings"
+  },
+  {
+   "id": "87334a350eb8413b",
+   "symbols": [
+    "ED"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ETFs Are Net Sellers of Consolidated Edison (ED) on Tuesday",
+   "summary": "Consolidated Edison (ED) saw $18.6 million in net ETF selling on Tuesday, Nov. 10.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/etfs-net-sellers-consolidated-edison-110314904.html?.tsrc=rss",
+   "published_at": "2026-11-12T11:03:14Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:05:18Z",
+   "fingerprint": "6e3336913347cdcd",
+   "primary_source": false,
+   "cluster_id": "87334a350eb8413b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "ETFs sind Nettoverkäufer von Consolidated Edison (ED) am Dienstag"
+  },
+  {
+   "id": "331cff867c883233",
+   "symbols": [
+    "ED"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are Utilities Stocks Lagging  Consolidated Edison (ED) This Year?",
+   "summary": "Here is how Consolidated Edison (ED) and MYR Group (MYRG) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/utilities-stocks-lagging-consolidated-edison-200711036.html?.tsrc=rss",
+   "published_at": "2026-11-11T20:07:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:05:18Z",
+   "fingerprint": "53f9f83c4cc70da3",
+   "primary_source": false,
+   "cluster_id": "6c06c9357d022aac",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Sind Versorgungsunternehmen Aktien Lagging Consolidated Edison (ED) in diesem Jahr?"
+  },
+  {
+   "id": "12d19c1c1404f1da",
+   "symbols": [
+    "AEP",
+    "DUK",
+    "ED"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "How Many Shares of Consolidated Edison, Duke Energy or AEP Pay $1,000 a Month in Dividends?",
+   "summary": "Key TakeawaysAt today’s prices, $1,000 a month in dividends takes 3,381 shares of Consolidated Edison, 2,765 of Duke Energy or 3,093 of American Electric Power. Duke Energy’s 3.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/how-many-shares-of-consolidated-edison-duke-energy-or-aep-pay-1000-a-month-in-dividends?ref=yahoofinancedividend&tlnk=yf-261110-58663xrq&.tsrc=rss",
+   "published_at": "2026-11-10T22:20:41Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:07:37Z",
+   "fingerprint": "12387db34e9257b6",
+   "primary_source": false,
+   "cluster_id": "12d19c1c1404f1da",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Wie viele Aktien von Consolidated Edison, Duke Energy oder AEP zahlen 1.000 US-Dollar pro Monat in Dividenden?"
+  },
+  {
+   "id": "7ce599261e62560c",
+   "symbols": [
+    "ED"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "1 Utility Stock Quietly Paying a 3% Yield Investors Keep Overlooking",
+   "summary": "For whatever reason(s), Consolidated Edison is a quiet utility stock, but it probably shouldn't be.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/11/10/utility-stock-quietly-pay-3-yield-overlook-ed/?.tsrc=rss",
+   "published_at": "2026-11-10T09:50:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:05:18Z",
+   "fingerprint": "1091147e3ae8536f",
+   "primary_source": false,
+   "cluster_id": "7ce599261e62560c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "1 Utility Stock Ruhig zahlen eine 3% Yield Investoren halten Overview"
+  },
   {
    "id": "45daeda474fec832",
    "symbols": [
@@ -1522,15 +1685,14 @@
  "attention": {
   "title": "Consolidated Edison",
   "url": "https://en.wikipedia.org/wiki/Consolidated_Edison",
-  "date": "2026-11-11",
-  "views_1d": 177,
-  "avg_7d": 180,
-  "avg_30d": 188,
-  "ratio_1d": 0.94,
-  "ratio_7d": 0.96,
+  "date": "2026-11-12",
+  "views_1d": 195,
+  "avg_7d": 178,
+  "avg_30d": 187,
+  "ratio_1d": 1.04,
+  "ratio_7d": 0.95,
   "spike": false,
   "series": [
-   169,
    184,
    195,
    183,
@@ -1559,7 +1721,8 @@
    140,
    190,
    183,
-   177
+   177,
+   195
   ]
  },
  "history": []

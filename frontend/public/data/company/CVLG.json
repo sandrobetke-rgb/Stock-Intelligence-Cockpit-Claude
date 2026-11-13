@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T22:24:57Z",
+ "generated_at": "2026-11-13T06:04:02Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -182,11 +182,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 4.2,
+   "score": 20.3,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -683,11 +685,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 4.2,
+  "score": 20.3,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 23.6,
@@ -705,18 +707,18 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 1,
+    "independent": 1,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 11,
-    "independent": 11,
-    "duplicates": 0,
+    "signals": 12,
+    "independent": 12,
+    "duplicates": 1,
     "sources": 4,
     "primary": 0,
     "analyst_changes": 1,
@@ -724,7 +726,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -743,6 +747,29 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "7d612bff019074c2",
+   "symbols": [
+    "CVLG"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Implied Volatility Surging for Covenant Logistics Stock Options",
+   "summary": "Investors need to pay close attention to CVLG stock based on the movements in the options market lately.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/options/articles/implied-volatility-surging-covenant-logistics-163600709.html?.tsrc=rss",
+   "published_at": "2026-11-11T16:36:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:18Z",
+   "fingerprint": "2cf012fa75af0d45",
+   "primary_source": false,
+   "cluster_id": "367aec1ee3e3a058",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Implizite Volatilitätserhöhung für Covenant Logistics Stock Options"
+  },
   {
    "id": "57e3c4b85fe81cce",
    "symbols": [
@@ -1182,7 +1209,7 @@
    "primary_source": false,
    "cluster_id": "367aec1ee3e3a058",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   }
  ],

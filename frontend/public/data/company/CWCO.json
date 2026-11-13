@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T22:24:57Z",
+ "generated_at": "2026-11-13T06:04:02Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -179,12 +179,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 5.6,
+   "score": 55.0,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 8,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -211,21 +213,7 @@
    "sellers": 1,
    "sold_out": 0
   },
-  "events": [
-   {
-    "symbol": "CWCO",
-    "type": "earnings",
-    "date": "2026-11-09",
-    "time": "nach Börsenschluss",
-    "fiscal_quarter": "Sep/2026",
-    "eps_forecast": 0.24,
-    "estimates": 2,
-    "confirmed": true,
-    "source": "Nasdaq-Earnings-Kalender",
-    "source_url": "https://www.nasdaq.com/market-activity/stocks/cwco/earnings",
-    "days_until": -3
-   }
-  ],
+  "events": [],
   "politicians": null,
   "first_seen": "2026-10-31",
   "archived_at": null,
@@ -691,11 +679,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 5.6,
+  "score": 55.0,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 80,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 31.6,
@@ -704,35 +692,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 8,
+    "independent": 8,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 15,
-    "independent": 15,
+    "signals": 23,
+    "independent": 23,
     "duplicates": 0,
-    "sources": 2,
+    "sources": 5,
     "primary": 0,
     "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -751,6 +741,186 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "7b0e623ac6363ca6",
+   "symbols": [
+    "CWCO",
+    "EVRG"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "CWCO Q3 Earnings Miss Estimates on Services & Manufacturing Weakness",
+   "summary": "Consolidated Water's Q3 earnings and revenues miss estimates as services and manufacturing slump, despite bulk water growth and new project wins.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cwco-q3-earnings-miss-estimates-150600352.html?.tsrc=rss",
+   "published_at": "2026-11-12T15:06:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:22Z",
+   "fingerprint": "1b3e0062f0d90faa",
+   "primary_source": false,
+   "cluster_id": "7b0e623ac6363ca6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "CWCO Q3 Ergebnisfehlschätzungen zu Dienstleistungen und Fertigungsschwäche"
+  },
+  {
+   "id": "38b3cd8334e5a638",
+   "symbols": [
+    "CWCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Consolidated Water (CWCO) Q3 2026 Earnings Call Transcript",
+   "summary": "Key segments softened, but the balance sheet remains debt-free.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/11/10/consolidated-water-cwco-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-11-10T20:03:39Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:22Z",
+   "fingerprint": "91638120ea92bccc",
+   "primary_source": false,
+   "cluster_id": "38b3cd8334e5a638",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "e6b5a5aaa944c520",
+   "symbols": [
+    "CWCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Consolidated Water Q3 Earnings Call Highlights",
+   "summary": "Consolidated Water (NASDAQ:CWCO) reported lower third-quarter revenue and earnings as declines in construction, operations and maintenance, and manufacturing outweighed growth in its retail and bulk water businesses. Management pointed to a new California water reuse contract and",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-consolidated-water-q3-earnings-call-highlights-2026-11-10/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-11-10T17:15:14Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:22Z",
+   "fingerprint": "7d0d4d9d4c0182bc",
+   "primary_source": false,
+   "cluster_id": "e6b5a5aaa944c520",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "cd5069e8e65411d2",
+   "symbols": [
+    "CWCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Consolidated Water Co. Ltd. Q3 2026 Earnings Call Summary",
+   "summary": "Moby summary of Consolidated Water Co. Ltd.'s Q3 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-consolidated-water-co-ltd-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-11-10T13:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:22Z",
+   "fingerprint": "689548f61aa092ba",
+   "primary_source": false,
+   "cluster_id": "cd5069e8e65411d2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "643c28572bad1a03",
+   "symbols": [
+    "CWCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Consolidated Water (CWCO) Q3 Earnings: How Key Metrics Compare to Wall Street Estimates",
+   "summary": "While the top- and bottom-line numbers for Consolidated Water (CWCO) give a sense of how the business performed in the quarter ended September 2026, it could be worth looking at how some of its key metrics compare to Wall Street estimates and year-ago values.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/consolidated-water-cwco-q3-earnings-230002891.html?.tsrc=rss",
+   "published_at": "2026-11-09T23:00:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:22Z",
+   "fingerprint": "95ec65fb88725aca",
+   "primary_source": false,
+   "cluster_id": "643c28572bad1a03",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "9f3c29175b9a701e",
+   "symbols": [
+    "CWCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Consolidated Water: Q3 Earnings Snapshot",
+   "summary": "GRAND CAYMAN, Cayman Islands (AP) — GRAND CAYMAN, Cayman Islands (AP) — Consolidated Water Co. (CWCO) on Monday reported net income of $2.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/consolidated-water-q3-earnings-snapshot-222130397.html?.tsrc=rss",
+   "published_at": "2026-11-09T22:21:30Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:22Z",
+   "fingerprint": "4239e104dc74c4a6",
+   "primary_source": false,
+   "cluster_id": "9f3c29175b9a701e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1bec80427fd19a01",
+   "symbols": [
+    "CWCO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Consolidated Water Reports Third Quarter 2026 Results",
+   "summary": "GEORGE TOWN, Cayman Islands, Nov. 09, 2026 (GLOBE NEWSWIRE) -- Consolidated Water Co. Ltd. (NASDAQ Global Select Market: CWCO), a leading designer, builder and operator of advanced water treatment plants, reported results for the third quarter ended September 30, 2026. All compar",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/consolidated-water-reports-third-quarter-220000462.html?.tsrc=rss",
+   "published_at": "2026-11-09T22:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:22Z",
+   "fingerprint": "dfac3bb309ede165",
+   "primary_source": false,
+   "cluster_id": "1bec80427fd19a01",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "f5f5d20fa239fc17",
+   "symbols": [
+    "CWCO",
+    "PPL",
+    "SR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "PPL Q3 Earnings Beat Estimates on Higher Rates, Sales Volumes",
+   "summary": "PPL beats Q3 earnings and revenue estimates on higher rates and sales volumes, while raising its long-term EPS growth target and unveiling a $25B investment plan.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ppl-q3-earnings-beat-estimates-171300630.html?.tsrc=rss",
+   "published_at": "2026-11-06T17:13:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-10T05:59:41Z",
+   "fingerprint": "97a0db6617f70115",
+   "primary_source": false,
+   "cluster_id": "f5f5d20fa239fc17",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "6ec3547252eababb",
    "symbols": [

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T22:24:57Z",
+ "generated_at": "2026-11-13T06:04:02Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,12 +180,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 0.4,
+   "score": 33.4,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 2,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -679,11 +681,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 0.4,
+  "score": 33.4,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 68.2,
+   "freshness": 50,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 2.1,
@@ -692,26 +694,26 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 24,
-    "independent": 24,
+    "signals": 26,
+    "independent": 26,
     "duplicates": 0,
     "sources": 7,
     "primary": 0,
@@ -720,7 +722,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -739,6 +743,54 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "35f8225a07fa32e1",
+   "symbols": [
+    "FE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "FirstEnergy: 3 Key Takeaways for Long-Term Investors",
+   "summary": "The utility is allocating infrastructure costs to data center operators, protecting existing customers from financial strain as grid expansion accelerates.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/takeaways/2026/11/12/firstenergy-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+   "published_at": "2026-11-13T04:49:42Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:06:15Z",
+   "fingerprint": "b501e6163d5e6919",
+   "primary_source": false,
+   "cluster_id": "35f8225a07fa32e1",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "FirstEnergy: 3 wichtige Takeaways für langfristige Investoren"
+  },
+  {
+   "id": "520a5097a2223bdb",
+   "symbols": [
+    "EVRG",
+    "FE",
+    "VST"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "VST Q3 Earnings Beat on Strong Power Pricing, Revenues Rise Y/Y",
+   "summary": "Vistra's Q3 earnings surge 84.6% on stronger power pricing and retail margins, while revenues climb 27.7%, prompting higher 2026 EBITDA guidance.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/vst-q3-earnings-beat-strong-180600034.html?.tsrc=rss",
+   "published_at": "2026-11-10T18:06:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-11T06:04:40Z",
+   "fingerprint": "6547d05f2218e0e2",
+   "primary_source": false,
+   "cluster_id": "520a5097a2223bdb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "VST Q3 Ergebnisse schlagen auf starke Strompreise, Einnahmen steigen Y / Y"
+  },
   {
    "id": "2f8942c5f9224399",
    "symbols": [
@@ -1365,15 +1417,14 @@
  "attention": {
   "title": "FirstEnergy",
   "url": "https://en.wikipedia.org/wiki/FirstEnergy",
-  "date": "2026-11-11",
-  "views_1d": 101,
-  "avg_7d": 104,
-  "avg_30d": 117,
-  "ratio_1d": 0.86,
-  "ratio_7d": 0.89,
+  "date": "2026-11-12",
+  "views_1d": 103,
+  "avg_7d": 101,
+  "avg_30d": 118,
+  "ratio_1d": 0.87,
+  "ratio_7d": 0.86,
   "spike": false,
   "series": [
-   106,
    125,
    111,
    101,
@@ -1402,7 +1453,8 @@
    75,
    143,
    103,
-   101
+   101,
+   103
   ]
  },
  "history": []

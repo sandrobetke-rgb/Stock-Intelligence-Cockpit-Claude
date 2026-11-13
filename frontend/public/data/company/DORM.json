@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T22:24:57Z",
+ "generated_at": "2026-11-13T06:04:02Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -178,12 +178,14 @@
    "top_factors": []
   },
   "market_intelligence": {
-   "score": 6.2,
+   "score": 32.4,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 1,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -669,48 +671,50 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.2,
+  "score": 32.4,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 43.0,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
-   "analyst_activity": 0,
+   "analyst_activity": 35,
    "price_volume_anomaly": 35.3,
    "social_attention": null,
    "insider_activity": null
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    },
    "30d": {
-    "signals": 12,
-    "independent": 12,
+    "signals": 13,
+    "independent": 13,
     "duplicates": 0,
     "sources": 4,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -729,6 +733,32 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "a703db562249ed07",
+   "symbols": [
+    "CARS",
+    "COP",
+    "DORM",
+    "DVN",
+    "FANG"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Nvidia downgraded, AMD upgraded: Wall Street's top analyst calls",
+   "summary": "Nvidia downgraded, AMD upgraded: Wall Street's top analyst calls",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/amd-under-armour-downgraded-wall-133533194.html?.tsrc=rss",
+   "published_at": "2026-11-12T14:44:01Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T22:34:20Z",
+   "fingerprint": "09d01f786150c97e",
+   "primary_source": false,
+   "cluster_id": "a703db562249ed07",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "8a9f04d13991aa00",
    "symbols": [
@@ -1190,15 +1220,14 @@
  "attention": {
   "title": "Dorman Products",
   "url": "https://en.wikipedia.org/wiki/Dorman_Products",
-  "date": "2026-11-11",
-  "views_1d": 22,
-  "avg_7d": 15,
+  "date": "2026-11-12",
+  "views_1d": 18,
+  "avg_7d": 16,
   "avg_30d": 17,
-  "ratio_1d": 1.28,
-  "ratio_7d": 0.85,
+  "ratio_1d": 1.07,
+  "ratio_7d": 0.93,
   "spike": false,
   "series": [
-   25,
    21,
    33,
    18,
@@ -1227,7 +1256,8 @@
    20,
    7,
    17,
-   22
+   22,
+   18
   ]
  },
  "history": []

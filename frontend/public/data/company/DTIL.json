@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T22:24:57Z",
+ "generated_at": "2026-11-13T06:04:02Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -183,9 +183,10 @@
    ]
   },
   "market_intelligence": {
-   "score": 11.4,
+   "score": 11.3,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -202,9 +203,9 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 1,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 27504.75,
    "distinct_buyers": 0,
    "other_transactions": 0
   },
@@ -685,7 +686,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 11.4,
+  "score": 11.3,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -694,7 +695,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 64.6,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 10
   },
   "windows": {
    "24h": {
@@ -716,8 +717,8 @@
     "verified": 0
    },
    "30d": {
-    "signals": 6,
-    "independent": 6,
+    "signals": 7,
+    "independent": 7,
     "duplicates": 1,
     "sources": 1,
     "primary": 0,
@@ -726,7 +727,8 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -745,6 +747,28 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "c3c940f04a821cf0",
+   "symbols": [
+    "DTIL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Precision BioSciences prices 10.24M shares at $7.75 in underwritten offering",
+   "summary": "Precision BioSciences (DTIL) announced the pricing of an underwritten offering of 10,235,077 shares of its common stock at a price of $7.75 per share and, in lieu of common stock to certain investors, pre-funded warrants to purchase up to 5,893,964 shares of its common stock at a",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/precision-biosciences-prices-10-24m-212756188.html?.tsrc=rss",
+   "published_at": "2026-11-05T21:27:56Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:05:06Z",
+   "fingerprint": "264c1bcd668e4ad2",
+   "primary_source": false,
+   "cluster_id": "c3c940f04a821cf0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "22ec2424fb1664b6",
    "symbols": [
@@ -1100,6 +1124,28 @@
    "feed": "yahoo_rss"
   },
   {
+   "id": "2397cc2913112531",
+   "symbols": [
+    "DTIL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Precision BioSciences to Host Investor Webcast to Discuss Late-Breaking PBGENE-HBV Data from ELIMINATE-B Trial Presented at European Association for the Study of the Liver Congress 2026",
+   "summary": "DURHAM, N.C., May 21, 2026--Precision BioSciences, Inc. (Nasdaq: DTIL), a clinical stage gene editing company utilizing its novel proprietary ARCUS® platform to develop in vivo gene editing therapies for high unmet need diseases, today announced that it will host an investor webc",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/sectors/healthcare/articles/precision-biosciences-host-investor-webcast-110100452.html?.tsrc=rss",
+   "published_at": "2026-05-21T11:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:05:06Z",
+   "fingerprint": "43b5effbbd4e79d0",
+   "primary_source": false,
+   "cluster_id": "2397cc2913112531",
+   "independence": "original",
+   "verification": "Outdated",
+   "feed": "yahoo_rss"
+  },
+  {
    "id": "1231318eeb68866a",
    "symbols": [
     "DTIL"
@@ -1144,7 +1190,29 @@
    "feed": "yahoo_rss"
   }
  ],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "43f3c6252fd516c2",
+   "symbol": "DTIL",
+   "insider": "Scimeca Dario",
+   "owner_cik": 1779581,
+   "role": "Chief Legal Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-11-10",
+   "filed_at": "2026-11-12",
+   "reporting_delay_days": 2,
+   "shares": 2821.0,
+   "price": 9.75,
+   "value": 27504.75,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1357874/000162828026073391/0001628280-26-073391-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "big_stakes": [],

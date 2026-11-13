@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T22:24:57Z",
+ "generated_at": "2026-11-13T06:04:02Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -178,11 +178,11 @@
    ]
   },
   "market_intelligence": {
-   "score": 50.5,
+   "score": 58.4,
    "drivers": [
     "news_flow",
     "source_diversity",
-    "price_volume_anomaly"
+    "social_attention"
    ],
    "independent_7d": 6,
    "independent_24h": 0
@@ -196,12 +196,12 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 1,
-   "manipulation_risk": "unauffällig",
-   "mentions_24h": 0,
-   "sentiment_7d": 0.0,
-   "bullish_7d": 0,
-   "bearish_7d": 0
+   "mentions_7d": 31,
+   "manipulation_risk": "auffaellig",
+   "mentions_24h": 30,
+   "sentiment_7d": 0.1,
+   "bullish_7d": 6,
+   "bearish_7d": 4
   },
   "insider": {
    "window_days": 90,
@@ -210,7 +210,7 @@
    "buy_value": 0,
    "sell_value": 0,
    "distinct_buyers": 0,
-   "other_transactions": 0
+   "other_transactions": 1
   },
   "superinvestors": {
    "holders": 2,
@@ -598,7 +598,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 50.5,
+  "score": 58.4,
   "components": {
    "news_flow": 100.0,
    "freshness": 0,
@@ -606,7 +606,7 @@
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 56.8,
-   "social_attention": 25.0,
+   "social_attention": 100.0,
    "insider_activity": null
   },
   "windows": {
@@ -641,7 +641,7 @@
   "drivers": [
    "news_flow",
    "source_diversity",
-   "price_volume_anomaly"
+   "social_attention"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -686,6 +686,7 @@
   {
    "id": "825400206c21120b",
    "symbols": [
+    "FICO",
     "UPST"
    ],
    "category": "market",
@@ -1741,7 +1742,29 @@
    "feed": "yahoo_rss"
   }
  ],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "1d9b6643f4d50a27",
+   "symbol": "UPST",
+   "insider": "Mirgorodskaya Natalia",
+   "owner_cik": 1833851,
+   "role": "See Remarks",
+   "transaction_code": "M",
+   "transaction_kind": "option_exercise",
+   "transaction_label": "Optionsausübung",
+   "open_market": false,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-11-06",
+   "filed_at": "2026-11-12",
+   "reporting_delay_days": 6,
+   "shares": 3650.0,
+   "price": 2.15,
+   "value": 7847.5,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1647639/000183385126000023/0001833851-26-000023-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "big_stakes": [],
@@ -1766,27 +1789,49 @@
   }
  ],
  "social_detail": {
-  "mentions_24h": 0,
-  "mentions_7d": 1,
-  "mentions_30d": 35,
-  "change_vs_baseline_pct": -100,
-  "engagement_7d": 5.0,
-  "sentiment_7d": 0.0,
-  "sentiment_basis": "algorithmisch (Lexikon)",
-  "bullish_7d": 0,
-  "bearish_7d": 0,
+  "mentions_24h": 30,
+  "mentions_7d": 31,
+  "mentions_30d": 65,
+  "change_vs_baseline_pct": 10400,
+  "engagement_7d": 40.0,
+  "sentiment_7d": 0.1,
+  "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
+  "bullish_7d": 6,
+  "bearish_7d": 4,
   "by_platform_7d": {
-   "stocktwits": 1
+   "stocktwits": 31
   },
   "communities_7d": {
-   "StockTwits": 1
+   "StockTwits": 31
   },
   "platforms": [
    "stocktwits"
   ],
-  "manipulation_flags": [],
-  "manipulation_risk": "unauffällig",
+  "manipulation_flags": [
+   "Plötzlicher Erwähnungsanstieg (>5x Basis)"
+  ],
+  "manipulation_risk": "auffaellig",
   "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "Bears_be_gone",
+    "posted_at": "2026-11-12T20:40:49Z",
+    "url": "https://stocktwits.com/Bears_be_gone/message/668976991",
+    "text": "$UPST priced for bk even though company is in the best shape ever. Infuriating , man",
+    "engagement": 5.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "longshort168",
+    "posted_at": "2026-11-12T20:06:24Z",
+    "url": "https://stocktwits.com/longshort168/message/668971841",
+    "text": "$UPST Revenue at ALH but stock price at ATL, make it make sense",
+    "engagement": 5.0,
+    "sentiment_label": null
+   },
    {
     "platform": "stocktwits",
     "community": "StockTwits",
@@ -1796,21 +1841,40 @@
     "text": "$UPST can we please squeeze these assholes?!? $SPY $RDDT",
     "engagement": 5.0,
     "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "ERQ",
+    "posted_at": "2026-11-12T20:40:08Z",
+    "url": "https://stocktwits.com/ERQ/message/668976876",
+    "text": "$UPST WOW. Right through long term Suport at 20 without even putting up a fight. Fuck me.",
+    "engagement": 4.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "Bears_be_gone",
+    "posted_at": "2026-11-12T19:08:44Z",
+    "url": "https://stocktwits.com/Bears_be_gone/message/668963826",
+    "text": "$UPST trump is a dikhead. The longer he keeps this bs war up, the longer we suffer. Oil and yield wont come down even with rate hikes.",
+    "engagement": 4.0,
+    "sentiment_label": null
    }
   ]
  },
  "attention": {
   "title": "Upstart Holdings",
   "url": "https://en.wikipedia.org/wiki/Upstart_Holdings",
-  "date": "2026-11-11",
-  "views_1d": 42,
-  "avg_7d": 39,
-  "avg_30d": 44,
-  "ratio_1d": 0.96,
-  "ratio_7d": 0.89,
+  "date": "2026-11-12",
+  "views_1d": 37,
+  "avg_7d": 41,
+  "avg_30d": 43,
+  "ratio_1d": 0.86,
+  "ratio_7d": 0.95,
   "spike": false,
   "series": [
-   43,
    59,
    54,
    34,
@@ -1839,7 +1903,8 @@
    33,
    55,
    63,
-   42
+   42,
+   37
   ]
  },
  "history": []

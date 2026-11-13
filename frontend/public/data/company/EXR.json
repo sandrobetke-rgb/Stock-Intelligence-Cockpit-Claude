@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T22:24:57Z",
+ "generated_at": "2026-11-13T06:04:02Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -179,12 +179,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.8,
+   "score": 16.5,
    "drivers": [
-    "price_volume_anomaly",
-    "insider_activity"
+    "news_flow",
+    "source_diversity",
+    "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -685,11 +686,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.8,
+  "score": 16.5,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 15.1,
@@ -707,27 +708,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 21,
-    "independent": 21,
+    "signals": 22,
+    "independent": 22,
     "duplicates": 0,
-    "sources": 6,
+    "sources": 7,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly",
-   "insider_activity"
+   "news_flow",
+   "source_diversity",
+   "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -746,6 +748,29 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "9aa1c1e940959679",
+   "symbols": [
+    "EXR",
+    "PSA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Better Dividend Stock: Public Storage vs. Extra Space Storage",
+   "summary": "Key TakeawaysPublic Storage and Extra Space Storage both raised their 2026 Core FFO guidance in late October, and neither has raised its dividend since fiscal 2023. Extra Space yields 4%, against 3.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "tikr.com",
+   "url": "https://www.tikr.com/blog/better-dividend-stock-public-storage-vs-extra-space-storage?ref=yahoofinancedividend&tlnk=yf-261109-x566frfh&.tsrc=rss",
+   "published_at": "2026-11-06T21:54:31Z",
+   "date_only": false,
+   "captured_at": "2026-11-10T05:59:52Z",
+   "fingerprint": "54c9dd613550ffbd",
+   "primary_source": false,
+   "cluster_id": "9aa1c1e940959679",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "ca1d66350385b792",
    "symbols": [
@@ -1277,15 +1302,14 @@
  "attention": {
   "title": "Extra Space Storage",
   "url": "https://en.wikipedia.org/wiki/Extra_Space_Storage",
-  "date": "2026-11-11",
-  "views_1d": 43,
-  "avg_7d": 36,
+  "date": "2026-11-12",
+  "views_1d": 31,
+  "avg_7d": 34,
   "avg_30d": 40,
-  "ratio_1d": 1.09,
-  "ratio_7d": 0.9,
+  "ratio_1d": 0.78,
+  "ratio_7d": 0.86,
   "spike": false,
   "series": [
-   70,
    36,
    26,
    36,
@@ -1314,7 +1338,8 @@
    49,
    28,
    30,
-   43
+   43,
+   31
   ]
  },
  "history": []

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T22:24:57Z",
+ "generated_at": "2026-11-13T06:04:02Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,12 +180,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 0.7,
+   "score": 38.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 3,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -222,7 +224,7 @@
     "confirmed": true,
     "source": "Yahoo Finance",
     "source_url": "https://finance.yahoo.com/quote/DEC",
-    "days_until": 20
+    "days_until": 19
    }
   ],
   "politicians": null,
@@ -691,11 +693,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 0.7,
+  "score": 38.1,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 86.0,
+   "freshness": 50,
+   "source_diversity": 60,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 4.4,
@@ -704,35 +706,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 1,
+    "independent": 1,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 3,
+    "independent": 3,
+    "duplicates": 1,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 10,
-    "independent": 10,
-    "duplicates": 0,
-    "sources": 1,
+    "signals": 13,
+    "independent": 13,
+    "duplicates": 1,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -751,6 +755,73 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "7c6cc6ea235d1506",
+   "symbols": [
+    "DEC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Transaction in Own Shares",
+   "summary": "DIVERSIFIED ENERGY COMPANY (\"Diversified\", or the \"Company\") DIVERSIFIED ENERGY COMPANY (NYSE:DEC; LSE:DEC) announces that, in accordance with the terms of its share buyback program announced on February 25, 2026 that, during the period between November 5 2026 and November 11 202",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/transaction-own-shares-070000657.html?.tsrc=rss",
+   "published_at": "2026-11-12T07:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:39Z",
+   "fingerprint": "589d27c5034e57ef",
+   "primary_source": false,
+   "cluster_id": "69ec40b37b787310",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Transaktion mit eigenen Aktien"
+  },
+  {
+   "id": "6df40a0888601e51",
+   "symbols": [
+    "DEC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What Diversified Energy (DEC) Said on Its Q3 Earnings Call",
+   "summary": "Diversified Energy (NYSE:DEC) reported $256 million in adjusted EBITDA and $153 million in adjusted free cash flow for the third quarter of 2026, while reiterating its full-year outlook ahead of the expected closing of its Birch Resources acquisition. The company expects the Birc",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-diversified-energy-dec-said-on-its-q3-earnings-call-2026-11-07/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-11-07T08:16:55Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:39Z",
+   "fingerprint": "37f90b5a16310880",
+   "primary_source": false,
+   "cluster_id": "6df40a0888601e51",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "0395e4012d2b9c01",
+   "symbols": [
+    "DEC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Diversified Energy (DEC) Q3 2026 Earnings Call Transcript",
+   "summary": "Birch deal could double free cash flow as Oklahoma workovers restore output.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/11/06/diversified-energy-dec-q3-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-11-06T15:33:23Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:04:39Z",
+   "fingerprint": "bd81a0267c622188",
+   "primary_source": false,
+   "cluster_id": "0395e4012d2b9c01",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "e0ac31b139baf31c",
    "symbols": [
@@ -1149,7 +1220,7 @@
    "primary_source": false,
    "cluster_id": "69ec40b37b787310",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   },
   {

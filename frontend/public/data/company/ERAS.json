@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T22:24:57Z",
+ "generated_at": "2026-11-13T06:04:02Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -178,12 +178,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 7.4,
+   "score": 36.8,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 2,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -222,7 +224,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/eras/earnings",
-    "days_until": -1
+    "days_until": -2
    }
   ],
   "politicians": null,
@@ -689,11 +691,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 7.4,
+  "score": 36.8,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 68.2,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 41.7,
@@ -702,27 +704,27 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 1,
+    "independent": 1,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 2,
+    "independent": 2,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 6,
-    "independent": 6,
-    "duplicates": 0,
+    "signals": 8,
+    "independent": 8,
+    "duplicates": 1,
     "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
@@ -730,7 +732,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -749,6 +753,52 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "4562b5711db55a93",
+   "symbols": [
+    "ERAS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Erasca Reports Third Quarter 2026 Business Updates and Financial Results",
+   "summary": "ERAS-0015 granted FDA Fast Track Designation for metastatic pancreatic adenocarcinoma; advancing toward three potentially registration-enabling trials in pancreatic and lung cancers Updated ERAS-0015 monotherapy and nonclinical ERAS-0015/ERAS-4001 combination data to be presented",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/erasca-reports-third-quarter-2026-210100092.html?.tsrc=rss",
+   "published_at": "2026-11-12T21:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:05:41Z",
+   "fingerprint": "150e47fb9aa58dfb",
+   "primary_source": false,
+   "cluster_id": "bf841f707e470d12",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Erasca meldet drittes Quartal 2026 Business Updates und Finanzergebnisse"
+  },
+  {
+   "id": "7908eb99e61a995f",
+   "symbols": [
+    "ERAS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Erasca Stock In Focus As Combination Trial Begins",
+   "summary": "Tango Therapeutics and Erasca recently began a Phase 1/2 trial of vopimetostat with ERAS-0015 in MTAP-deleted pancreatic cancer and RAS-mutant non-small cell lung cancer, focused on dose finding, safety, pharmacokinetics, and early antitumor activity. The collaboration extends Er",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/erasca-stock-focus-combination-trial-031308647.html?.tsrc=rss",
+   "published_at": "2026-11-12T03:13:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:05:41Z",
+   "fingerprint": "1e2cdef54f9d4560",
+   "primary_source": false,
+   "cluster_id": "7908eb99e61a995f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Erasca-Aktie im Fokus als Kombinationsstudie beginnt"
+  },
   {
    "id": "7546fcd5629ae4a9",
    "symbols": [
@@ -1035,7 +1085,7 @@
    "primary_source": false,
    "cluster_id": "bf841f707e470d12",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   },
   {

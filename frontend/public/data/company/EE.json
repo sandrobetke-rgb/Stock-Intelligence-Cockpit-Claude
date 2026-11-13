@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T22:24:57Z",
+ "generated_at": "2026-11-13T06:04:02Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,12 +180,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 0.5,
+   "score": 41.6,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 6,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -199,9 +201,9 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 2,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 240052.08,
    "distinct_buyers": 0,
    "other_transactions": 1
   },
@@ -221,7 +223,7 @@
     "confirmed": true,
     "source": "Yahoo Finance",
     "source_url": "https://finance.yahoo.com/quote/EE",
-    "days_until": 6
+    "days_until": 5
    }
   ],
   "politicians": null,
@@ -690,48 +692,50 @@
   ]
  },
  "intelligence_detail": {
-  "score": 0.5,
+  "score": 41.6,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 2.7,
    "social_attention": null,
-   "insider_activity": null
+   "insider_activity": 20
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 6,
+    "independent": 6,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 18,
-    "independent": 18,
+    "signals": 24,
+    "independent": 24,
     "duplicates": 0,
-    "sources": 3,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -750,6 +754,142 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "cad9f78d24892b3b",
+   "symbols": [
+    "EE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are Oils-Energy Stocks Lagging  Excelerate Energy (EE) This Year?",
+   "summary": "Here is how Excelerate Energy (EE) and Granite Ridge Resources, Inc. (GRNT) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/oils-energy-stocks-lagging-excelerate-134003288.html?.tsrc=rss",
+   "published_at": "2026-11-12T13:40:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:05:19Z",
+   "fingerprint": "cc5341ca706b957d",
+   "primary_source": false,
+   "cluster_id": "cad9f78d24892b3b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Sind Öl-Energie-Aktien Lagging Excelerate Energie (EE) in diesem Jahr?"
+  },
+  {
+   "id": "2b7596a3dc74240c",
+   "symbols": [
+    "EE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Golar LNG Stock And The Shipping Bottleneck Retail Investors Should Watch",
+   "summary": "Energy markets have been rewired this year as Strait of Hormuz disruption tightens LNG supply, pushes Brent toward triple digits and puts shipping routes under the spotlight. That kind of shock can punish some stocks and open the door for others, especially businesses tied to LNG",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/golar-lng-stock-shipping-bottleneck-191302389.html?.tsrc=rss",
+   "published_at": "2026-11-11T19:13:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:05:19Z",
+   "fingerprint": "eb5963b4a50d1bd5",
+   "primary_source": false,
+   "cluster_id": "2b7596a3dc74240c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Golar LNG-Aktien und der Versand-Flaschenhals Kleinanleger sollten aufpassen"
+  },
+  {
+   "id": "258012e7589eddc6",
+   "symbols": [
+    "ASC",
+    "EE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Energy Shippers Report Their Quarters Amid Ongoing Tightness in the Global Tanker Market",
+   "summary": "Oil Market Daily News Commentary - Crude oil futures were higher on Wednesday morning. As of 11:34 a.m. ET, the December NYMEX West Texas Intermediate contract was at $88.26 a barrel, up $2.22, or 2.58%, from Tuesday's settlement of $86.04, and the January ICE Brent contract was ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/news/energy-shippers-report-quarters-amid-175600159.html?.tsrc=rss",
+   "published_at": "2026-11-11T17:56:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-12T06:08:49Z",
+   "fingerprint": "4b0caee18fdd46aa",
+   "primary_source": false,
+   "cluster_id": "258012e7589eddc6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Energieversender berichten ihre Quartale inmitten der anhaltenden Enge auf dem globalen Tankermarkt"
+  },
+  {
+   "id": "0a44e0f94d40ec9d",
+   "symbols": [
+    "EE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Excelerate Energy Inc (EE) (Q3 2026) Earnings Call Highlights: Record EBITDA, Bahamas LNG ...",
+   "summary": "Excelerate Energy Inc (EE) posts its highest-ever quarterly adjusted EBITDA of about $133 million and lays out a path to $250 million-$300 million in incremental EBITDA by 2029.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/excelerate-energy-inc-ee-q3-110225224.html?.tsrc=rss",
+   "published_at": "2026-11-09T11:02:25Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:05:19Z",
+   "fingerprint": "0c7ca6fd4bd44c53",
+   "primary_source": false,
+   "cluster_id": "0a44e0f94d40ec9d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "27db84d7a76d6dfa",
+   "symbols": [
+    "EE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "5 must-read analyst questions from Excelerate Energy’s Q3 2026 earnings call",
+   "summary": "Excelerate Energy’s third quarter results drew a significant positive response from the market, despite a steep year-on-year revenue decline. Management attributed the quarter’s resilience to its portfolio of long-term, take-or-pay contracts, which helped support earnings even as",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/5-must-read-analyst-questions-055736467.html?.tsrc=rss",
+   "published_at": "2026-11-09T05:57:36Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:05:19Z",
+   "fingerprint": "a5667a04cef1c13c",
+   "primary_source": false,
+   "cluster_id": "27db84d7a76d6dfa",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "8d60da963b9bef2b",
+   "symbols": [
+    "EE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "What Excelerate Energy (EE) Said on Its Q3 Earnings Call",
+   "summary": "Excelerate Energy (NYSE:EE) reported record quarterly adjusted EBITDA in the third quarter of 2026 and outlined plans for a Bahamas liquefied natural gas hub, as the company advances infrastructure projects in the Caribbean, Iraq and Colombia. The LNG infrastructure provider repo",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-excelerate-energy-ee-said-on-its-q3-earnings-call-2026-11-07/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-11-07T06:15:05Z",
+   "date_only": false,
+   "captured_at": "2026-11-13T06:05:19Z",
+   "fingerprint": "2ea55d4e4518fa00",
+   "primary_source": false,
+   "cluster_id": "8d60da963b9bef2b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "46d27a37061b2b43",
    "symbols": [
@@ -1404,6 +1544,48 @@
   }
  ],
  "insiders": [
+  {
+   "id": "a6d30955494be989",
+   "symbol": "EE",
+   "insider": "Newman Hood Alisa",
+   "owner_cik": 1907215,
+   "role": "See Remarks",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-11-11",
+   "filed_at": "2026-11-12",
+   "reporting_delay_days": 1,
+   "shares": 2200.0,
+   "price": 38.24,
+   "value": 84128.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1888447/000119312526458674/0001193125-26-458674-index.htm"
+  },
+  {
+   "id": "a5dc32eb5eadf448",
+   "symbol": "EE",
+   "insider": "Newman Hood Alisa",
+   "owner_cik": 1907215,
+   "role": "See Remarks",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": false,
+   "transaction_date": "2026-11-11",
+   "filed_at": "2026-11-12",
+   "reporting_delay_days": 1,
+   "shares": 4069.0,
+   "price": 38.32,
+   "value": 155924.08,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1888447/000119312526458674/0001193125-26-458674-index.htm"
+  },
   {
    "id": "688a5300ca5e3da4",
    "symbol": "EE",
