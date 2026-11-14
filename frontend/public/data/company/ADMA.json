@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T08:35:05Z",
+ "generated_at": "2026-11-14T09:07:52Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -22,7 +22,7 @@
    "perf_20d": 28.08988683779465,
    "perf_63d": 46.46681029641504,
    "adr20": 5.159398992313458,
-   "rvol": 1.0198135878334307,
+   "rvol": 1.0201174087678946,
    "ema10": 12.636578980695838,
    "ema21": 11.924536573179699,
    "sma50": 10.574999961853027,
@@ -42,8 +42,8 @@
     "rsi_min5": 64.67127061557025,
     "atr14": 0.6637671350562614,
     "atr_pct": 4.852098832228296,
-    "rvol": 1.0198135878334307,
-    "vol30": 3738278.7,
+    "rvol": 1.0201174087678946,
+    "vol30": 3738320.0,
     "dist_ema200_pct": 20.852853441652954,
     "dist_52w_high_pct": 33.131292488339426,
     "high_52w": 20.45800018310547,
@@ -179,11 +179,11 @@
    ]
   },
   "market_intelligence": {
-   "score": 27.2,
+   "score": 34.7,
    "drivers": [
     "news_flow",
-    "price_volume_anomaly",
-    "source_diversity"
+    "social_attention",
+    "price_volume_anomaly"
    ],
    "independent_7d": 2,
    "independent_24h": 0
@@ -197,11 +197,11 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 1,
-   "manipulation_risk": "unauffällig",
-   "mentions_24h": 0,
-   "sentiment_7d": 1.0,
-   "bullish_7d": 0,
+   "mentions_7d": 30,
+   "manipulation_risk": "auffaellig",
+   "mentions_24h": 23,
+   "sentiment_7d": 0.67,
+   "bullish_7d": 16,
    "bearish_7d": 0
   },
   "insider": {
@@ -241,13 +241,13 @@
   "perf_20d": 28.08988683779465,
   "perf_63d": 46.46681029641504,
   "adr20": 5.159398992313458,
-  "rvol": 1.0198135878334307,
+  "rvol": 1.0201174087678946,
   "ema10": 12.636578980695838,
   "ema21": 11.924536573179699,
   "sma50": 10.574999961853027,
   "sma200": 10.725125007629394,
   "volatility_ann": 65.77785988492951,
-  "avg_dollar_volume_20d": 49188242.3114357,
+  "avg_dollar_volume_20d": 49189089.787454605,
   "move_zscore": 0.8020210315522975,
   "swing": {
    "tech": {
@@ -261,8 +261,8 @@
     "rsi_min5": 64.67127061557025,
     "atr14": 0.6637671350562614,
     "atr_pct": 4.852098832228296,
-    "rvol": 1.0198135878334307,
-    "vol30": 3738278.7,
+    "rvol": 1.0201174087678946,
+    "vol30": 3738320.0,
     "dist_ema200_pct": 20.852853441652954,
     "dist_52w_high_pct": 33.131292488339426,
     "high_52w": 20.45800018310547,
@@ -642,7 +642,7 @@
    {
     "key": "trading_liquidity",
     "label": "Handelsliquidität (Umsatz 20T)",
-    "value": 49188242.31,
+    "value": 49189089.79,
     "unit": "Whg",
     "severity": 1.7,
     "weight": 0.07,
@@ -686,7 +686,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 27.2,
+  "score": 34.7,
   "components": {
    "news_flow": 68.2,
    "freshness": 0,
@@ -694,7 +694,7 @@
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 24.1,
-   "social_attention": 25.0,
+   "social_attention": 100.0,
    "insider_activity": 20
   },
   "windows": {
@@ -728,8 +728,8 @@
   },
   "drivers": [
    "news_flow",
-   "price_volume_anomaly",
-   "source_diversity"
+   "social_attention",
+   "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -1566,37 +1566,81 @@
   }
  ],
  "social_detail": {
-  "mentions_24h": 0,
-  "mentions_7d": 1,
-  "mentions_30d": 31,
-  "change_vs_baseline_pct": -100,
-  "engagement_7d": 0.0,
-  "sentiment_7d": 1.0,
-  "sentiment_basis": "algorithmisch (Lexikon)",
-  "bullish_7d": 0,
+  "mentions_24h": 23,
+  "mentions_7d": 30,
+  "mentions_30d": 60,
+  "change_vs_baseline_pct": 2200,
+  "engagement_7d": 116.0,
+  "sentiment_7d": 0.67,
+  "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
+  "bullish_7d": 16,
   "bearish_7d": 0,
   "by_platform_7d": {
+   "stocktwits": 29,
    "reddit": 1
   },
   "communities_7d": {
+   "StockTwits": 29,
    "r/pennystocks": 1
   },
   "platforms": [
    "reddit",
    "stocktwits"
   ],
-  "manipulation_flags": [],
-  "manipulation_risk": "unauffällig",
+  "manipulation_flags": [
+   "Plötzlicher Erwähnungsanstieg (>5x Basis)"
+  ],
+  "manipulation_risk": "auffaellig",
   "top_posts": [
    {
-    "platform": "reddit",
-    "community": "r/pennystocks",
-    "author": "Babette_CH",
-    "posted_at": "2026-11-07T12:11:12Z",
-    "url": "https://www.reddit.com/r/pennystocks/comments/1xq4x4v/adma_the_1_billion_revenue_opportunity_is_still/",
-    "text": "$ADMA: The $1 billion revenue opportunity is still alive. Deep-dive!    These are my own investment ideas. I used AI to help with the calculations and wording.   Despite the guidance cut earlier this year, I believe ADMA’s long-term growth story remains intact. Here’s why.     The path to $1 billion     ADMA expects at least $530M in revenue for 2026. Reaching $1B by 2030 would require only 17.2% ",
-    "engagement": 0.0,
-    "sentiment_label": null
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "SausageKingOfScranton",
+    "posted_at": "2026-11-13T09:01:11Z",
+    "url": "https://stocktwits.com/SausageKingOfScranton/message/669020901",
+    "text": "$ADMA \n\nThe ACAAI Annual Scientific Meeting\nADMA&#39;s 127-patient study\nSunday, November 15, 2026\n12:45 p.m.\nPhoenix time — 1:45 p.m. Central\nPoster ID: R224\n\nhttps://annualmeeting.acaai.org/livestream.cfm#",
+    "engagement": 10.0,
+    "sentiment_label": "Bullish"
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "BeefStewart",
+    "posted_at": "2026-11-12T18:28:52Z",
+    "url": "https://stocktwits.com/BeefStewart/message/668958540",
+    "text": "$ADMA I know I&#39;ve said it before, but I have to wonder about the prospect of a buyout.\n\nI would think that anyone analyzing this company must take the resilience of ASCENIV into account whilst the overall IVIG market struggles due to competition for less differentiated products (i.e. BIVIGAM and it&#39;s competitors, even though BIVIGAM may be competitively advantageous, from what I believe Ad",
+    "engagement": 10.0,
+    "sentiment_label": "Bullish"
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "BabetteCH",
+    "posted_at": "2026-11-13T15:41:52Z",
+    "url": "https://stocktwits.com/BabetteCH/message/669056327",
+    "text": "$ADMA\n\nSomething is brewing… and I have a feeling things are about to get VERY interesting.\n\nCan’t wait to see what Rubric Capital and Caligan Partners report in their Q3 13F filings!",
+    "engagement": 9.0,
+    "sentiment_label": "Bullish"
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "BabetteCH",
+    "posted_at": "2026-11-13T15:33:05Z",
+    "url": "https://stocktwits.com/BabetteCH/message/669054411",
+    "text": "$ADMA First Trust Advisors increased the ADMA-position by 29% to 10 m shares in Q3!",
+    "engagement": 7.0,
+    "sentiment_label": "Bullish"
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "BeefStewart",
+    "posted_at": "2026-11-12T18:55:05Z",
+    "url": "https://stocktwits.com/BeefStewart/message/668962089",
+    "text": "$ADMA The mini dip is being bought! I repeat: the mini dip is being bought! 🥹",
+    "engagement": 7.0,
+    "sentiment_label": "Bullish"
    }
   ]
  },

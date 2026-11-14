@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T08:35:05Z",
+ "generated_at": "2026-11-14T09:07:52Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -22,7 +22,7 @@
    "perf_20d": 17.710747021753125,
    "perf_63d": 12.076578218566404,
    "adr20": 3.3931816091755422,
-   "rvol": 0.971513271556463,
+   "rvol": 0.9715459923564211,
    "ema10": 88.92323956140197,
    "ema21": 85.63601844935403,
    "sma50": 80.3218000793457,
@@ -42,8 +42,8 @@
     "rsi_min5": 63.76452738013325,
     "atr14": 3.3153640109260936,
     "atr_pct": 3.630490606663898,
-    "rvol": 0.971513271556463,
-    "vol30": 709955.8333333334,
+    "rvol": 0.9715459923564211,
+    "vol30": 709956.6666666666,
     "dist_ema200_pct": 22.639153928937226,
     "dist_52w_high_pct": 8.110281526815545,
     "high_52w": 99.37999725341797,
@@ -54,7 +54,7 @@
     "higher_low": true,
     "last_higher_high": 99.37999725341797,
     "hammer": false,
-    "bull_engulfing": false,
+    "bull_engulfing": true,
     "green": true,
     "day_high": 92.30999755859375,
     "day_low": 88.62999725341797,
@@ -73,7 +73,7 @@
    "criteria": {
     "S01": {
      "RSI zuletzt < 35": false,
-     "Umkehrkerze (Hammer/Engulfing)": false
+     "Umkehrkerze (Hammer/Engulfing)": true
     },
     "S02": {
      "Kurs > EMA 200": true,
@@ -125,7 +125,7 @@
     "S04"
    ],
    "near": {
-    "S01": 0.0,
+    "S01": 0.5,
     "S02": 0.6,
     "S03": 0.3333333333333333,
     "S04": 1.0,
@@ -180,10 +180,11 @@
    ]
   },
   "market_intelligence": {
-   "score": 6.3,
+   "score": 6.5,
    "drivers": [
     "social_attention",
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -207,9 +208,9 @@
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 1,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 227275.0,
    "distinct_buyers": 0,
    "other_transactions": 0
   },
@@ -241,13 +242,13 @@
   "perf_20d": 17.710747021753125,
   "perf_63d": 12.076578218566404,
   "adr20": 3.3931816091755422,
-  "rvol": 0.971513271556463,
+  "rvol": 0.9715459923564211,
   "ema10": 88.92323956140197,
   "ema21": 85.63601844935403,
   "sma50": 80.3218000793457,
   "sma200": 74.18117506027221,
   "volatility_ann": 43.622889735881515,
-  "avg_dollar_volume_20d": 66440907.713251114,
+  "avg_dollar_volume_20d": 66441021.86325073,
   "move_zscore": 0.4518542836558596,
   "swing": {
    "tech": {
@@ -261,8 +262,8 @@
     "rsi_min5": 63.76452738013325,
     "atr14": 3.3153640109260936,
     "atr_pct": 3.630490606663898,
-    "rvol": 0.971513271556463,
-    "vol30": 709955.8333333334,
+    "rvol": 0.9715459923564211,
+    "vol30": 709956.6666666666,
     "dist_ema200_pct": 22.639153928937226,
     "dist_52w_high_pct": 8.110281526815545,
     "high_52w": 99.37999725341797,
@@ -273,7 +274,7 @@
     "higher_low": true,
     "last_higher_high": 99.37999725341797,
     "hammer": false,
-    "bull_engulfing": false,
+    "bull_engulfing": true,
     "green": true,
     "day_high": 92.30999755859375,
     "day_low": 88.62999725341797,
@@ -292,7 +293,7 @@
    "criteria": {
     "S01": {
      "RSI zuletzt < 35": false,
-     "Umkehrkerze (Hammer/Engulfing)": false
+     "Umkehrkerze (Hammer/Engulfing)": true
     },
     "S02": {
      "Kurs > EMA 200": true,
@@ -344,7 +345,7 @@
     "S04"
    ],
    "near": {
-    "S01": 0.0,
+    "S01": 0.5,
     "S02": 0.6,
     "S03": 0.3333333333333333,
     "S04": 1.0,
@@ -644,7 +645,7 @@
    {
     "key": "trading_liquidity",
     "label": "Handelsliquidität (Umsatz 20T)",
-    "value": 66440907.71,
+    "value": 66441021.86,
     "unit": "Whg",
     "severity": 0.0,
     "weight": 0.07,
@@ -687,7 +688,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.3,
+  "score": 6.5,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -696,7 +697,7 @@
    "analyst_activity": 0,
    "price_volume_anomaly": 13.6,
    "social_attention": 39.6,
-   "insider_activity": null
+   "insider_activity": 10
   },
   "windows": {
    "24h": {
@@ -729,7 +730,8 @@
   },
   "drivers": [
    "social_attention",
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -1361,7 +1363,29 @@
    "feed": "yahoo_rss"
   }
  ],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "84562da21ecbdc0d",
+   "symbol": "LIVN",
+   "insider": "Shvartsburg Alex",
+   "owner_cik": 1830830,
+   "role": "Chief Financial Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-11-12",
+   "filed_at": "2026-11-13",
+   "reporting_delay_days": 1,
+   "shares": 2500.0,
+   "price": 90.91,
+   "value": 227275.0,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1639691/000163969126000120/0001639691-26-000120-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "big_stakes": [],
@@ -1423,15 +1447,14 @@
  "attention": {
   "title": "LivaNova",
   "url": "https://en.wikipedia.org/wiki/LivaNova",
-  "date": "2026-11-12",
-  "views_1d": 33,
-  "avg_7d": 19,
-  "avg_30d": 23,
-  "ratio_1d": 1.45,
-  "ratio_7d": 0.86,
+  "date": "2026-11-13",
+  "views_1d": 18,
+  "avg_7d": 20,
+  "avg_30d": 22,
+  "ratio_1d": 0.82,
+  "ratio_7d": 0.91,
   "spike": false,
   "series": [
-   32,
    25,
    13,
    24,
@@ -1460,7 +1483,8 @@
    24,
    21,
    25,
-   33
+   33,
+   18
   ]
  },
  "history": []

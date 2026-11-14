@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T08:35:05Z",
+ "generated_at": "2026-11-14T09:07:52Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -22,7 +22,7 @@
    "perf_20d": 19.821819374088044,
    "perf_63d": -31.17271273118163,
    "adr20": 6.217476737410059,
-   "rvol": 0.7152862058368034,
+   "rvol": 0.7152886162449457,
    "ema10": 15.53882514155578,
    "ema21": 15.172932906868954,
    "sma50": 15.322999973297119,
@@ -42,8 +42,8 @@
     "rsi_min5": 56.19298656111658,
     "atr14": 0.9680427719775659,
     "atr_pct": 5.9977869181236185,
-    "rvol": 0.7152862058368034,
-    "vol30": 884656.6,
+    "rvol": 0.7152886162449457,
+    "vol30": 884656.6666666666,
     "dist_ema200_pct": -12.818786402682314,
     "dist_52w_high_pct": 42.35714503696987,
     "high_52w": 28.0,
@@ -53,7 +53,7 @@
     "higher_high": true,
     "higher_low": true,
     "last_higher_high": 15.4399995803833,
-    "hammer": false,
+    "hammer": true,
     "bull_engulfing": false,
     "green": false,
     "day_high": 16.360000610351562,
@@ -73,7 +73,7 @@
    "criteria": {
     "S01": {
      "RSI zuletzt < 35": false,
-     "Umkehrkerze (Hammer/Engulfing)": false
+     "Umkehrkerze (Hammer/Engulfing)": true
     },
     "S02": {
      "Kurs > EMA 200": false,
@@ -125,7 +125,7 @@
     "S04"
    ],
    "near": {
-    "S01": 0.0,
+    "S01": 0.5,
     "S02": 0.4,
     "S03": 0.3333333333333333,
     "S04": 1.0,
@@ -182,12 +182,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.6,
+   "score": 24.7,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "freshness",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 1,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -249,13 +251,13 @@
   "perf_20d": 19.821819374088044,
   "perf_63d": -31.17271273118163,
   "adr20": 6.217476737410059,
-  "rvol": 0.7152862058368034,
+  "rvol": 0.7152886162449457,
   "ema10": 15.53882514155578,
   "ema21": 15.172932906868954,
   "sma50": 15.322999973297119,
   "sma200": 18.227299990653993,
   "volatility_ann": 54.13961325987765,
-  "avg_dollar_volume_20d": 12077051.982291603,
+  "avg_dollar_volume_20d": 12077053.596291542,
   "move_zscore": 0.4988513641178841,
   "swing": {
    "tech": {
@@ -269,8 +271,8 @@
     "rsi_min5": 56.19298656111658,
     "atr14": 0.9680427719775659,
     "atr_pct": 5.9977869181236185,
-    "rvol": 0.7152862058368034,
-    "vol30": 884656.6,
+    "rvol": 0.7152886162449457,
+    "vol30": 884656.6666666666,
     "dist_ema200_pct": -12.818786402682314,
     "dist_52w_high_pct": 42.35714503696987,
     "high_52w": 28.0,
@@ -280,7 +282,7 @@
     "higher_high": true,
     "higher_low": true,
     "last_higher_high": 15.4399995803833,
-    "hammer": false,
+    "hammer": true,
     "bull_engulfing": false,
     "green": false,
     "day_high": 16.360000610351562,
@@ -300,7 +302,7 @@
    "criteria": {
     "S01": {
      "RSI zuletzt < 35": false,
-     "Umkehrkerze (Hammer/Engulfing)": false
+     "Umkehrkerze (Hammer/Engulfing)": true
     },
     "S02": {
      "Kurs > EMA 200": false,
@@ -352,7 +354,7 @@
     "S04"
    ],
    "near": {
-    "S01": 0.0,
+    "S01": 0.5,
     "S02": 0.4,
     "S03": 0.3333333333333333,
     "S04": 1.0,
@@ -652,7 +654,7 @@
    {
     "key": "trading_liquidity",
     "label": "Handelsliquidität (Umsatz 20T)",
-    "value": 12077051.98,
+    "value": 12077053.6,
     "unit": "Whg",
     "severity": 77.4,
     "weight": 0.07,
@@ -697,11 +699,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.6,
+  "score": 24.7,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 43.0,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 15.0,
@@ -710,27 +712,27 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 1,
+    "independent": 1,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 1,
+    "independent": 1,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 2,
-    "independent": 2,
-    "duplicates": 1,
+    "signals": 3,
+    "independent": 3,
+    "duplicates": 2,
     "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
@@ -738,7 +740,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "freshness",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -757,6 +761,29 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "4083f7748efa1059",
+   "symbols": [
+    "JBIO"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Jade Biosciences Reports Third Quarter 2026 Financial Results and Provides Corporate Update",
+   "summary": "JADE101 Phase 3 registrational trial in IgA nephropathy (EVERGREEN) expected to initiate in the fourth quarter of 2026JADE101 Phase 2 clinical trial in IgA nephropathy (JUNIPER) ongoing; interim data expected in the second quarter of 2027JADE201 Phase 1 clinical trial in rheumato",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/jade-biosciences-reports-third-quarter-120000204.html?.tsrc=rss",
+   "published_at": "2026-11-13T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-14T09:15:43Z",
+   "fingerprint": "bdae94b72bb6a880",
+   "primary_source": false,
+   "cluster_id": "d3025cccbe72c0c0",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Jade Biosciences berichtet über Finanzergebnisse des dritten Quartals 2026 und stellt Unternehmensaktualisierung bereit"
+  },
   {
    "id": "f00e3efcc64d7b97",
    "symbols": [
@@ -1062,7 +1089,7 @@
    "primary_source": false,
    "cluster_id": "d3025cccbe72c0c0",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   },
   {

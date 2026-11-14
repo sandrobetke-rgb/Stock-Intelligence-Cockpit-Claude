@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T08:35:05Z",
+ "generated_at": "2026-11-14T09:07:52Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -22,7 +22,7 @@
    "perf_20d": 29.667641331086013,
    "perf_63d": 171.32748580635652,
    "adr20": 6.649953320646044,
-   "rvol": 1.1241485135901979,
+   "rvol": 1.1245063637100603,
    "ema10": 104.19061412919434,
    "ema21": 97.7953574201167,
    "sma50": 76.71959968566894,
@@ -42,8 +42,8 @@
     "rsi_min5": 66.8544423770249,
     "atr14": 6.630467508505817,
     "atr_pct": 5.963186764025724,
-    "rvol": 1.1241485135901979,
-    "vol30": 1139349.7,
+    "rvol": 1.1245063637100603,
+    "vol30": 1139360.0,
     "dist_ema200_pct": 116.55565780147144,
     "dist_52w_high_pct": 1.4185641112986591,
     "high_52w": 112.79000091552734,
@@ -182,13 +182,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 5.9,
+   "score": 38.9,
    "drivers": [
-    "insider_activity",
-    "price_volume_anomaly"
+    "news_flow",
+    "freshness",
+    "insider_activity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 4,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -257,13 +258,13 @@
   "perf_20d": 29.667641331086013,
   "perf_63d": 171.32748580635652,
   "adr20": 6.649953320646044,
-  "rvol": 1.1241485135901979,
+  "rvol": 1.1245063637100603,
   "ema10": 104.19061412919434,
   "ema21": 97.7953574201167,
   "sma50": 76.71959968566894,
   "sma200": 45.92514992713928,
   "volatility_ann": 361.2837312485716,
-  "avg_dollar_volume_20d": 83455328.80376282,
+  "avg_dollar_volume_20d": 83457046.68930054,
   "move_zscore": 0.11933604785209731,
   "swing": {
    "tech": {
@@ -277,8 +278,8 @@
     "rsi_min5": 66.8544423770249,
     "atr14": 6.630467508505817,
     "atr_pct": 5.963186764025724,
-    "rvol": 1.1241485135901979,
-    "vol30": 1139349.7,
+    "rvol": 1.1245063637100603,
+    "vol30": 1139360.0,
     "dist_ema200_pct": 116.55565780147144,
     "dist_52w_high_pct": 1.4185641112986591,
     "high_52w": 112.79000091552734,
@@ -660,7 +661,7 @@
    {
     "key": "trading_liquidity",
     "label": "Handelsliquidität (Umsatz 20T)",
-    "value": 83455328.8,
+    "value": 83457046.69,
     "unit": "Whg",
     "severity": 0.0,
     "weight": 0.07,
@@ -705,11 +706,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 5.9,
+  "score": 38.9,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 99.8,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 6.2,
@@ -718,26 +719,26 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 1,
-    "independent": 1,
+    "signals": 5,
+    "independent": 5,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
@@ -746,8 +747,9 @@
    }
   },
   "drivers": [
-   "insider_activity",
-   "price_volume_anomaly"
+   "news_flow",
+   "freshness",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -766,6 +768,97 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "b693ac5751668fcf",
+   "symbols": [
+    "KOD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Kodiak Q3 Loss Wider Than Expected, Pipeline Development in Focus",
+   "summary": "KOD reports a wider-than-expected Q3 loss, while positive phase III results for Zenkuda and pipeline progress fuel its upcoming regulatory plans.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/kodiak-q3-loss-wider-expected-154100185.html?.tsrc=rss",
+   "published_at": "2026-11-13T15:41:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-14T09:16:09Z",
+   "fingerprint": "864c5cd56f3a7854",
+   "primary_source": false,
+   "cluster_id": "b693ac5751668fcf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Kodiak Q3 verliert weiter als erwartet, Pipeline-Entwicklung im Fokus"
+  },
+  {
+   "id": "b0ee0f1024c1d8ee",
+   "symbols": [
+    "KOD"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Kodiak Sciences Announces Recent Business Highlights and Third Quarter 2026 Financial Results",
+   "summary": "Kodiak Sciences Inc. (Nasdaq: KOD), today reported recent business highlights and financial results for the third quarter ended September 30, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/kodiak-sciences-announces-recent-business-210000384.html?.tsrc=rss",
+   "published_at": "2026-11-12T21:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-14T09:16:09Z",
+   "fingerprint": "7b01f238c0e94d3f",
+   "primary_source": false,
+   "cluster_id": "b0ee0f1024c1d8ee",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Kodiak Sciences kündigt aktuelle Geschäftshighlights und Finanzergebnisse des dritten Quartals 2026 an"
+  },
+  {
+   "id": "ba597c128b4e6a60",
+   "symbols": [
+    "KOD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Kodiak Sciences to Present at Three Upcoming Investor Conferences",
+   "summary": "Kodiak Sciences Inc. (Nasdaq: KOD), a precommercial retina-focused biotechnology company committed to researching, developing and commercializing transformative therapeutics, today announced that Victor Perlroth, M.D., Chief Executive Officer, will present at the following invest",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/kodiak-sciences-present-three-upcoming-234300773.html?.tsrc=rss",
+   "published_at": "2026-11-11T23:43:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-14T09:16:09Z",
+   "fingerprint": "be04c9dd301cd935",
+   "primary_source": false,
+   "cluster_id": "ba597c128b4e6a60",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Kodiak Sciences präsentiert sich auf drei bevorstehenden Investorenkonferenzen"
+  },
+  {
+   "id": "a2972ab4a0c17de0",
+   "symbols": [
+    "KOD"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Kodiak Sciences (KOD) Stock Looks At A Premium On Its Huge 3 Year Run",
+   "summary": "Kodiak Sciences has seen its share price move sharply in recent years, which naturally puts the spotlight on whether that US$107.10 closing level has outpaced what its book value can reasonably support. For anyone considering the stock today, the key issue is how that market pric",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/kodiak-sciences-kod-stock-looks-021047451.html?.tsrc=rss",
+   "published_at": "2026-11-10T02:10:47Z",
+   "date_only": false,
+   "captured_at": "2026-11-14T09:16:09Z",
+   "fingerprint": "3eba53e656fa81ac",
+   "primary_source": false,
+   "cluster_id": "a2972ab4a0c17de0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "99e0430ef3482d07",
    "symbols": [
