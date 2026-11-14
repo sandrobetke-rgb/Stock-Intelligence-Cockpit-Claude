@@ -166,6 +166,9 @@ def send_report(rep: dict, cockpit_url: str | None) -> bool:
     qmap = rep.get("q") or {}
     g = lambda sym: f"{sym}[{grade(qmap.get(sym))}]"  # noqa: E731  Qualitätsnote A–E hinter dem Kürzel
     lines = []
+    if rep.get("regime") and rep["regime"].get("overall"):
+        icon = {"green": "🟢", "yellow": "🟡", "red": "🔴"}[rep["regime"]["overall"]]
+        lines.append(f"Marktampel {icon} {rep['regime']['label']}: {rep['regime']['hint']}")
     if rep.get("rule_note"):
         lines.append(rep["rule_note"])
     if rep.get("insider_buys") or rep.get("clusters"):

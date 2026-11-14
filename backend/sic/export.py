@@ -51,6 +51,7 @@ SCHEMAS: dict[str, dict] = {
     "quality-map.json": {**_meta, "required": [*_meta["required"], "q"]},
     "confluence.json": {**_meta, "required": [*_meta["required"], "rows"]},
     "report.json": {**_meta, "required": [*_meta["required"], "report_date", "candidates", "earnings", "macro"]},
+    "regime.json": {**_meta, "required": [*_meta["required"], "overall", "lights"]},
     "swing.json": {**_meta, "required": [*_meta["required"], "setups", "filter", "entry", "candidates"]},
     "superinvestors.json": {**_meta, "required": [*_meta["required"], "managers", "stocks"],
                             "properties": {"managers": _list_of(["cik", "manager", "fund", "report_date", "filing_url", "positions"]),
@@ -58,7 +59,7 @@ SCHEMAS: dict[str, dict] = {
 }
 
 
-OPTIONAL = {"alerts.json", "swing.json", "confluence.json", "report.json", "quality-map.json"}   # entstehen erst im Live-Lauf
+OPTIONAL = {"alerts.json", "swing.json", "confluence.json", "report.json", "quality-map.json", "regime.json"}   # entstehen erst im Live-Lauf
 
 
 def publish(payloads: dict[str, dict], company_details: dict[str, dict], out_dir: Path | None = None) -> dict:

@@ -116,6 +116,10 @@ export function researchLinks(symbol: string, region: string) {
     us && { label: "SEC EDGAR", url: `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${encodeURIComponent(s)}&type=&dateb=&owner=include&count=40` },
     { label: "Yahoo Finance", url: `https://finance.yahoo.com/quote/${encodeURIComponent(symbol)}` },
     { label: "Macrotrends", url: `https://www.macrotrends.net/stocks/charts/${encodeURIComponent(s)}/` },
+    us && { label: "Stock Analysis", url: `https://stockanalysis.com/stocks/${encodeURIComponent(s.toLowerCase().replace("-", "."))}/` },
+    us && { label: "13F.info", url: `https://13f.info/search?q=${encodeURIComponent(s)}` },
+    us && { label: "Capitol Trades", url: `https://www.capitoltrades.com/issuers?search=${encodeURIComponent(s)}` },
+    { label: "CompaniesMarketCap", url: `https://companiesmarketcap.com/search.php?query=${encodeURIComponent(s)}` },
   ].filter(Boolean) as { label: string; url: string }[];
 }
 

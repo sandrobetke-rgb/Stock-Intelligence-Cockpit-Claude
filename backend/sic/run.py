@@ -17,7 +17,7 @@ import traceback
 from collections import Counter
 from datetime import datetime
 
-from . import alerts, attention, config, report, congress, corporate_events, events, insider, news, politics, social, superinvestors, translate, universe
+from . import alerts, attention, config, regime, report, congress, corporate_events, events, insider, news, politics, social, superinvestors, translate, universe
 from .export import publish
 from .intelligence import market_intelligence
 from .market import fetch_prices, load_fundamentals, refresh_fundamentals
@@ -376,8 +376,12 @@ def run(fetch: bool = True, skip_fundamentals: bool = False, skip_insider: bool 
     payloads["swing.json"] = {"generated_at": iso(now), "schema_version": SCHEMA_VERSION, "mode": "live",
                               "setups": SETUP_INFO, "filter": FILTER, "filter_s01": FILTER_S01, "entry": ENTRY,
                               "candidates": [s["symbol"] for s in alerts.candidates(payloads["stocks.json"]["stocks"])]}
-    # Signal-Zusammenfluss und Tagesbericht
+    # Signal-Zusammenfluss, Marktampel und Tagesbericht
     stocks_out = payloads["stocks.json"]["stocks"]
+    reg = rl.step("regime", regime.build, stocks_out, fetch_new=fetch, now=now)
+    reg_view = reg[0] if reg else None
+    if reg_view:
+        payloads["regime.json"] = {"generated_at": iso(now), "schema_version": SCHEMA_VERSION, "mode": "live", **reg_view}
     conf = report.confluence(stocks_out)
     payloads["confluence.json"] = {"generated_at": iso(now), "schema_version": SCHEMA_VERSION, "mode": "live", "rows": conf}
     rep = rl.step("report", report.build_report, stocks=stocks_out, candidates=alerts.candidates(stocks_out),
@@ -386,6 +390,7 @@ def run(fetch: bool = True, skip_fundamentals: bool = False, skip_insider: bool 
                   watchlist=al.get("watchlist", []), conf=conf, now=now, insiders=insiders,
                   trending=sinfo.get("stocktwits_trending", []), attention=att_stats)
     if rep:
+        rep["regime"] = {k: reg_view[k] for k in ("overall", "label", "hint", "score_pct")} if reg_view else None
         rep["sent"] = report.send_report(rep, os.environ.get("COCKPIT_URL")) if morning else False
         payloads["report.json"] = {"generated_at": iso(now), "schema_version": SCHEMA_VERSION, "mode": "live", **rep}
     payloads["quality-map.json"] = {"generated_at": iso(now), "schema_version": SCHEMA_VERSION, "mode": "live",

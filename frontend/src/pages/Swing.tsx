@@ -1,3 +1,4 @@
+import { MarketLight } from "../regime";
 import { useMemo, useState } from "react";
 import { fmt, useData } from "../data";
 import type { StockRow, SwingMeta } from "../types";
@@ -51,6 +52,7 @@ function SwingView({ rows, meta }: { rows: StockRow[]; meta: SwingMeta }) {
     <Page title="Swing-Setups"
       intro={<>Deine Screener S01–S04 und deine Strategien (Daily Swing Master, Überdehnter Rücksetzer, Momentum-Breakout; regelbasierte Annäherung, bitte im Chart gegenprüfen) auf Tagesbasis nach US-Börsenschluss ({fmt.date(rows.find((r) => r.market.price_date)?.market.price_date)}), mit Abendfilter und Einstiegsplan für den nächsten Handelstag.
         Der Einstieg selbst bleibt deine Regel im Chart: 1H-Kerze schließt ab 16:00 MEZ über dem Auslöser, höchstens {meta.entry.max_above_trigger_pct} % darüber.</>}>
+      <MarketLight compact />
       {tomorrowFriday || isFriday ? <p className="state state-warn">{isFriday ? "Heute ist Freitag" : "Morgen ist Freitag"}: laut deinen Regeln keine neuen Trades. Die Liste gilt dann für Montag.</p> : null}
       <div className="filters">
         <div className="tabs" role="tablist">

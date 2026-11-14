@@ -1,3 +1,4 @@
+import { MarketLight } from "../regime";
 import { STATUS_LABEL, fmt, useData } from "../data";
 import type { Report } from "../types";
 import { CompanyLink, Direction, Empty, Gate, Page, Panel, Tag } from "../ui";
@@ -9,6 +10,7 @@ export function ReportPage() {
       {(r) => (
         <Page title={`Tagesbericht ${r.weekday}, ${fmt.date(r.report_date)}`}
           intro={<>Erstellt {fmt.dt(r.created_at)}. Alles Wichtige für den Handelstag auf einen Blick. Hinweise, keine Anlageberatung.</>}>
+          <MarketLight />
           {r.rule_note ? <p className="state state-warn">{r.rule_note}</p> : null}
           <div className="grid-2">
             <Panel title="Insiderkäufe (letzte 3 Tage)" note="Käufe am offenen Markt laut SEC Form 4, größte zuerst. Cluster = mehrere Insider derselben Firma.">

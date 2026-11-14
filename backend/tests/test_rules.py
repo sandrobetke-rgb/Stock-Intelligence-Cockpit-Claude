@@ -721,3 +721,17 @@ def test_s01_eigener_abendfilter():
     assert not all(setups.s01_filter(tech, 40).values())    # Qualität zu niedrig
     assert not all(setups.s01_filter({**tech, "atr_pct": 9}, 60).values())
     assert setups.screener_pass({"hits": ["S03"], "filter_pass": False, "filter_pass_s01": True}) == []
+
+
+def test_marktampel():
+    from sic import regime
+    up = {"close": 110, "date": "2026-11-13", "ema50": 105, "ema200": 100, "dist_ema200_pct": 10, "ema50_rising": True}
+    down = {**up, "close": 90, "dist_ema200_pct": -10, "ema50_rising": False}
+    stocks = [{"status": "active", "swing": {"tech": {"dist_ema200_pct": 5 if i < 150 else -5}}} for i in range(250)]
+    g = regime.evaluate({"^GSPC": up, "^NDX": up, "^GDAXI": up, "^VIX": {"close": 15, "date": "x"},
+                         "^TNX": {"close": 4.2, "date": "x"}, "^IRX": {"close": 3.8, "date": "x"}}, stocks)
+    assert g["overall"] == "green" and any(l["key"] == "breadth" and l["level"] == "green" for l in g["lights"])
+    r = regime.evaluate({"^GSPC": down, "^NDX": down, "^GDAXI": down, "^VIX": {"close": 35, "date": "x"},
+                         "^TNX": {"close": 3.5, "date": "x"}, "^IRX": {"close": 4.5, "date": "x"}}, [])
+    assert r["overall"] == "red" and r["label"] == "Gegenwind"
+    assert regime.evaluate({}, [])["overall"] is None

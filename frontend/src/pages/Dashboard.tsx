@@ -1,3 +1,4 @@
+import { MarketLight } from "../regime";
 import { INDEX_NAMES, VERIFICATION_LABEL, fmt, useData } from "../data";
 import type { Summary } from "../types";
 import { Gate, Page, Panel, Tag } from "../ui";
@@ -12,6 +13,7 @@ export function Dashboard() {
         const vtotal = Object.values(d.verification_counts).reduce((a, b) => a + b, 0) || 1;
         return (
           <Page title="Dashboard" intro={<>Universum, Datenabdeckung und Zustand des letzten Laufs. {d.disclaimer}</>}>
+            <MarketLight />
             <div className="kpis">
               <div className="kpi"><b>{fmt.num(d.universe.active, 0)}</b><span>Aktien im aktiven Universum</span>
                 <small>{fmt.num(d.universe.index_positions, 0)} Indexpositionen, {fmt.num(d.universe.archived, 0)} archiviert</small></div>

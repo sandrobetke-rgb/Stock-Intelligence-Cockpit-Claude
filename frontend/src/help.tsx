@@ -8,6 +8,7 @@ export const HELP: Record<string, ReactNode> = {
   Tagesbericht: <ul>
     <li>Zusammenfassung für den Handelstag, kommt jeden Morgen auch als Push aufs Handy.</li>
     <li>Reihenfolge nach Wichtigkeit: Insiderkäufe → Politiker-Käufe → Trump-Nennungen → Social Media → Termine → deine Watchlist → Signal-Zusammenfluss → Swing-Kandidaten → Superinvestoren.</li>
+    <li><b>Marktampel</b> oben: Rückenwind (🟢), gemischt (🟡) oder Gegenwind (🔴) für neue Long-Swings – aus S&amp;P 500, Nasdaq 100 und DAX (über/unter EMA 200), VIX, Zinskurve und Marktbreite. Bei Gelb nur die besten Setups, bei Rot sehr selektiv.</li>
     <li>Jeder Eintrag ist ein Hinweis zum Selbstprüfen, keine Kaufempfehlung. Klick auf das Kürzel öffnet die Aktienseite.</li>
     {MARKS}
   </ul>,
@@ -25,6 +26,7 @@ export const HELP: Record<string, ReactNode> = {
     <li>Deine Screener S01–S04 und Strategien (Daily Swing Master, Überdehnter Rücksetzer, Qullamaggie) auf Tagesbasis nach US-Börsenschluss.</li>
     <li><b>Abendfilter</b> (Haken) für S02–S04: grüne Kerze, RelVol ≥ 1,2, RSI ≤ 65, ATR% 1,5–5, über EMA 200. <b>S01 (Rebound)</b> hat einen eigenen: grüne Kerze, RelVol ≥ 1,2, ATR% 1,5–8, Qualität ≥ 50 – weil ein Rebound meist unter der EMA 200 startet. 0 Kandidaten ist ein gültiges Ergebnis. Haken weg = alle Treffer.</li>
     <li><b>Auslöser</b> = Kurs, über dem die 1H-Kerze schließen muss; <b>bis</b> = höchstens 2 % darüber einsteigen. <b>Stopp</b> = Auslöser − 1,5 × ATR, <b>Ziel 1</b> = 2 : 1.</li>
+    <li><b>Marktampel</b> oben (aufklappbar): zeigt, ob das Gesamtumfeld gerade Rückenwind oder Gegenwind für Long-Trades gibt.</li>
     <li>Kapital eintragen → Stückzahl bei 1 % Risiko (höchstens Kapital ÷ 3). Das Kapital bleibt nur in deinem Browser.</li>
     <li>Strategien sind Annäherungen an deine Pine-Skripte – immer im Chart gegenprüfen. Freitags keine neuen Trades.</li>
   </ul>,
