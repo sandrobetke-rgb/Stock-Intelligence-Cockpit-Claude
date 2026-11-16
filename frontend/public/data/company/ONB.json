@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T09:07:52Z",
+ "generated_at": "2026-11-16T06:17:12Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -178,12 +178,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.2,
+   "score": 24.5,
    "drivers": [
-    "price_volume_anomaly",
-    "insider_activity"
+    "news_flow",
+    "source_diversity",
+    "price_volume_anomaly"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -220,7 +221,7 @@
     "confirmed": true,
     "source": "Yahoo Finance",
     "source_url": "https://finance.yahoo.com/quote/ONB",
-    "days_until": 20
+    "days_until": 18
    }
   ],
   "politicians": null,
@@ -601,11 +602,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.2,
+  "score": 24.5,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 10.1,
@@ -623,17 +624,17 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 20,
-    "independent": 20,
+    "signals": 21,
+    "independent": 21,
     "duplicates": 0,
     "sources": 5,
     "primary": 0,
@@ -642,8 +643,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly",
-   "insider_activity"
+   "news_flow",
+   "source_diversity",
+   "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -662,6 +664,51 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "a745a308c0e71f6d",
+   "symbols": [
+    "ONB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Old National Bancorp Announces Quarterly Dividends",
+   "summary": "EVANSVILLE, Ind., Nov. 12, 2026 (GLOBE NEWSWIRE) -- (NASDAQ: ONB) – Old National Bancorp (the “Company” or “Old National”) today announced that its Board of Directors declared a quarterly cash dividend of $0.145 per share on the Company’s outstanding shares of common stock. This ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/old-national-bancorp-announces-quarterly-140000399.html?.tsrc=rss",
+   "published_at": "2026-11-12T14:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-16T06:18:45Z",
+   "fingerprint": "ec2ce621842b658b",
+   "primary_source": false,
+   "cluster_id": "a745a308c0e71f6d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "023e931381bdfc9f",
+   "symbols": [
+    "ONB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Old National Bank Celebrates the Military Community, Earns 2027 Military Friendly® Employer Designation",
+   "summary": "EVANSVILLE, Ind., Nov. 11, 2026 (GLOBE NEWSWIRE) -- (NASDAQ: ONB) – Old National announced today that it has earned the 2027 Military Friendly® Employer designation, underscoring the company’s commitment to supporting veterans, service members and military families in the workpla",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/old-national-bank-celebrates-military-164500067.html?.tsrc=rss",
+   "published_at": "2026-11-11T16:45:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-16T06:18:45Z",
+   "fingerprint": "3164f479d0b2ae03",
+   "primary_source": false,
+   "cluster_id": "023e931381bdfc9f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Alte Nationalbank feiert die Militärgemeinschaft, verdient 2027 Military Friendly® Arbeitgeberbezeichnung"
+  },
   {
    "id": "382e4414fede180d",
    "symbols": [
@@ -1105,7 +1152,7 @@
    "primary_source": false,
    "cluster_id": "2090043ad0cfd103",
    "independence": "original",
-   "verification": "Unverified",
+   "verification": "Outdated",
    "feed": "yahoo_rss"
   }
  ],

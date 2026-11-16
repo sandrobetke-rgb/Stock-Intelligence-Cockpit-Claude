@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T09:07:52Z",
+ "generated_at": "2026-11-16T06:17:12Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,11 +180,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 1.6,
+   "score": 29.3,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "analyst_activity",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -679,13 +681,13 @@
   ]
  },
  "intelligence_detail": {
-  "score": 1.6,
+  "score": 29.3,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
-   "analyst_activity": 0,
+   "analyst_activity": 35,
    "price_volume_anomaly": 9.0,
    "social_attention": null,
    "insider_activity": null
@@ -701,26 +703,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 2,
+    "independent": 2,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    },
    "30d": {
-    "signals": 5,
-    "independent": 5,
-    "duplicates": 2,
+    "signals": 6,
+    "independent": 6,
+    "duplicates": 3,
     "sources": 1,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "analyst_activity",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -739,6 +743,50 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "f59bc3572f7fe336",
+   "symbols": [
+    "OLMA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Olema Oncology Announces Corporate Name Change",
+   "summary": "SAN FRANCISCO, Nov. 12, 2026 (GLOBE NEWSWIRE) -- Olema Oncology, Inc. (formerly Olema Pharmaceuticals, Inc.) (“Olema” or “Olema Oncology”, Nasdaq: OLMA), a clinical-stage biopharmaceutical company focused on the discovery, development, and commercialization of targeted therapies ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/olema-oncology-announces-corporate-name-140000434.html?.tsrc=rss",
+   "published_at": "2026-11-12T14:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-16T06:18:41Z",
+   "fingerprint": "e5a9fc0e81f7bc4b",
+   "primary_source": false,
+   "cluster_id": "f59bc3572f7fe336",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2892ce0eb5c8470b",
+   "symbols": [
+    "OLMA"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "Olema Oncology Reports Third Quarter 2026 Financial and Operating Results",
+   "summary": "On track to announce top-line data from the pivotal Phase 3 OPERA-01 trial in the first quarter of 2027Continued strong enrollment in the pivotal Phase 3 OPERA-02 trial and the Phase 1b/2 study of OP-3136Appointed Jason O’Byrne, MBA, as Chief Financial OfficerEnded the third quar",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/olema-oncology-reports-third-quarter-120000006.html?.tsrc=rss",
+   "published_at": "2026-11-10T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-16T06:18:41Z",
+   "fingerprint": "727a611dcc861bc2",
+   "primary_source": false,
+   "cluster_id": "12e0ac07454724f6",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "145da686c3558c01",
    "symbols": [
@@ -1003,7 +1051,7 @@
    "primary_source": false,
    "cluster_id": "12e0ac07454724f6",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   },
   {

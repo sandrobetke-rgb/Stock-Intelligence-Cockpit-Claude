@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T09:07:52Z",
+ "generated_at": "2026-11-16T06:17:12Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -181,12 +181,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 5.8,
+   "score": 54.0,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "freshness",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 5,
+   "independent_24h": 2
   },
   "political": {
    "relevance": 0,
@@ -225,7 +227,7 @@
     "confirmed": true,
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/njr/earnings",
-    "days_until": 4
+    "days_until": 2
    }
   ],
   "politicians": null,
@@ -695,11 +697,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 5.8,
+  "score": 54.0,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 32.8,
@@ -708,35 +710,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 5,
+    "independent": 5,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 5,
-    "independent": 5,
+    "signals": 10,
+    "independent": 10,
     "duplicates": 0,
-    "sources": 1,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "freshness",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -755,6 +759,123 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "6fab77282f24a8c8",
+   "symbols": [
+    "NJR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "New Jersey Resources (NJR) Stock Looks About Right On Earnings",
+   "summary": "New Jersey Resources has delivered solid share price gains in recent years, and that puts fresh attention on whether the current tag near US$55 reflects what its earnings actually support. For anyone looking at the utility today, the real puzzle is how that track record lines up ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/jersey-resources-njr-stock-looks-081021798.html?.tsrc=rss",
+   "published_at": "2026-11-15T08:10:21Z",
+   "date_only": false,
+   "captured_at": "2026-11-16T06:17:53Z",
+   "fingerprint": "28b7ec1c19ad0e8e",
+   "primary_source": false,
+   "cluster_id": "6fab77282f24a8c8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "New Jersey Resources (NJR) Stock sieht Recht auf Einnahmen"
+  },
+  {
+   "id": "823eba513c758b77",
+   "symbols": [
+    "NJR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Is New Jersey Resources (NJR) Still Undervalued After Its Latest Dividend Decision?",
+   "summary": "New Jersey Resources (NJR) put income policy back in focus after its board unanimously approved a quarterly dividend of $0.50 per share, payable on January 4, 2027, for holders of record on December 14, 2026. For context, New Jersey Resources’ recent moves come after a strong run",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/jersey-resources-njr-still-undervalued-070742367.html?.tsrc=rss",
+   "published_at": "2026-11-15T07:07:42Z",
+   "date_only": false,
+   "captured_at": "2026-11-16T06:17:53Z",
+   "fingerprint": "cb08e8d21aa6a7bf",
+   "primary_source": false,
+   "cluster_id": "823eba513c758b77",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Ist New Jersey Resources (NJR) nach seiner letzten Dividendenentscheidung immer noch unterbewertet?"
+  },
+  {
+   "id": "6ac041362cb2dc32",
+   "symbols": [
+    "NJR",
+    "NWN",
+    "OGS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Millions of Homes Heat With Natural Gas, and $90,000 Across These 3 Gas Utilities Pays $3,203 a Year",
+   "summary": "Winter bills squeeze households, but the local monopolies behind the gas pipes collect checks every quarter. Three regulated utilities pay different rates, and one pending rate case could reshape the income for years.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/11/14/millions-of-homes-heat-with-natural-gas-and-90000-across-these-3-gas-utilities-pays-3203-a-year/?.tsrc=rss",
+   "published_at": "2026-11-14T20:52:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-16T06:17:53Z",
+   "fingerprint": "e6c087603b2a39f8",
+   "primary_source": false,
+   "cluster_id": "6ac041362cb2dc32",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Millionen von Häusern heizen mit Erdgas und $ 90.000 für diese 3 Gasversorgungsunternehmen zahlen $ 3.203 pro Jahr"
+  },
+  {
+   "id": "aa2dcf6eae8bee39",
+   "symbols": [
+    "NJR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Earnings Preview: New Jersey Resources (NJR) Q4 Earnings Expected to Decline",
+   "summary": "New Jersey Resources (NJR) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/earnings-preview-jersey-resources-njr-200900249.html?.tsrc=rss",
+   "published_at": "2026-11-11T20:09:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-16T06:17:53Z",
+   "fingerprint": "04d637b0b9482c32",
+   "primary_source": false,
+   "cluster_id": "aa2dcf6eae8bee39",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Gewinnvorschau: New Jersey Resources (NJR) Q4 Gewinn erwartet sinken"
+  },
+  {
+   "id": "9ce6c0089ed0171c",
+   "symbols": [
+    "NJR"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "New Jersey Resources Board of Directors Declares Quarterly Dividend",
+   "summary": "WALL, N.J., November 11, 2026--The board of directors (the \"Board\") of New Jersey Resources Corporation (NYSE: NJR) unanimously declared a quarterly dividend on its common stock of $0.50 per share. The dividend will be payable on January 4, 2027, to shareowners of record as of De",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/jersey-resources-board-directors-declares-183800442.html?.tsrc=rss",
+   "published_at": "2026-11-11T18:38:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-16T06:17:53Z",
+   "fingerprint": "6c18b3010fed2020",
+   "primary_source": false,
+   "cluster_id": "9ce6c0089ed0171c",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "New Jersey Resources Board of Directors erklärt vierteljährliche Dividende"
+  },
   {
    "id": "11dcadb07a6fd2cd",
    "symbols": [

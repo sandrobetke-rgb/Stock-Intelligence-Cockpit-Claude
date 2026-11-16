@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T09:07:52Z",
+ "generated_at": "2026-11-16T06:17:12Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -182,11 +182,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 7.1,
+   "score": 23.2,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -223,7 +225,7 @@
     "confirmed": true,
     "source": "Yahoo Finance",
     "source_url": "https://finance.yahoo.com/quote/OGS",
-    "days_until": 2
+    "days_until": 0
    }
   ],
   "politicians": null,
@@ -694,11 +696,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 7.1,
+  "score": 23.2,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 40.0,
@@ -716,26 +718,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 14,
-    "independent": 14,
+    "signals": 15,
+    "independent": 15,
     "duplicates": 0,
-    "sources": 4,
+    "sources": 5,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -754,6 +758,31 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "6ac041362cb2dc32",
+   "symbols": [
+    "NJR",
+    "NWN",
+    "OGS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Millions of Homes Heat With Natural Gas, and $90,000 Across These 3 Gas Utilities Pays $3,203 a Year",
+   "summary": "Winter bills squeeze households, but the local monopolies behind the gas pipes collect checks every quarter. Three regulated utilities pay different rates, and one pending rate case could reshape the income for years.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/11/14/millions-of-homes-heat-with-natural-gas-and-90000-across-these-3-gas-utilities-pays-3203-a-year/?.tsrc=rss",
+   "published_at": "2026-11-14T20:52:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-16T06:17:53Z",
+   "fingerprint": "e6c087603b2a39f8",
+   "primary_source": false,
+   "cluster_id": "6ac041362cb2dc32",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Millionen von Häusern heizen mit Erdgas und $ 90.000 für diese 3 Gasversorgungsunternehmen zahlen $ 3.203 pro Jahr"
+  },
   {
    "id": "50de1ae8ed800f3e",
    "symbols": [
@@ -1086,7 +1115,7 @@
    "primary_source": false,
    "cluster_id": "16f4c5ea954fbcf3",
    "independence": "original",
-   "verification": "Unverified",
+   "verification": "Outdated",
    "feed": "yahoo_rss"
   },
   {

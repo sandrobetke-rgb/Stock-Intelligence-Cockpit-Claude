@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T09:07:52Z",
+ "generated_at": "2026-11-16T06:17:12Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -182,14 +182,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 53.7,
+   "score": 38.4,
    "drivers": [
     "news_flow",
-    "freshness",
+    "price_volume_anomaly",
     "source_diversity"
    ],
-   "independent_7d": 8,
-   "independent_24h": 5
+   "independent_7d": 7,
+   "independent_24h": 0
   },
   "political": {
    "relevance": 0,
@@ -216,7 +216,18 @@
    "sellers": 0,
    "sold_out": 0
   },
-  "events": [],
+  "events": [
+   {
+    "symbol": "GTN",
+    "type": "ex_dividend",
+    "date": "2026-12-15",
+    "time": "Uhrzeit offen",
+    "confirmed": true,
+    "source": "Yahoo Finance",
+    "source_url": "https://finance.yahoo.com/quote/GTN",
+    "days_until": 29
+   }
+  ],
   "politicians": null,
   "first_seen": "2026-10-31",
   "archived_at": null,
@@ -685,11 +696,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 53.7,
+  "score": 38.4,
   "components": {
    "news_flow": 100.0,
-   "freshness": 100.0,
-   "source_diversity": 40,
+   "freshness": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 31.2,
@@ -698,26 +709,26 @@
   },
   "windows": {
    "24h": {
-    "signals": 5,
-    "independent": 5,
+    "signals": 0,
+    "independent": 0,
+    "duplicates": 0,
+    "sources": 0,
+    "primary": 0,
+    "analyst_changes": 0,
+    "verified": 0
+   },
+   "7d": {
+    "signals": 7,
+    "independent": 7,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
-   "7d": {
-    "signals": 8,
-    "independent": 8,
-    "duplicates": 0,
-    "sources": 2,
-    "primary": 0,
-    "analyst_changes": 0,
-    "verified": 0
-   },
    "30d": {
-    "signals": 30,
-    "independent": 30,
+    "signals": 28,
+    "independent": 28,
     "duplicates": 0,
     "sources": 3,
     "primary": 0,
@@ -727,7 +738,7 @@
   },
   "drivers": [
    "news_flow",
-   "freshness",
+   "price_volume_anomaly",
    "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
@@ -750,7 +761,8 @@
   {
    "id": "b0d505a80aee79f4",
    "symbols": [
-    "GTN"
+    "GTN",
+    "NFLX"
    ],
    "category": "market",
    "signal_type": "news",
@@ -1414,7 +1426,7 @@
    "primary_source": false,
    "cluster_id": "140475df0122d6eb",
    "independence": "original",
-   "verification": "Unverified",
+   "verification": "Outdated",
    "feed": "yahoo_rss"
   },
   {
@@ -1436,7 +1448,7 @@
    "primary_source": false,
    "cluster_id": "d12898b150563205",
    "independence": "original",
-   "verification": "Unverified",
+   "verification": "Outdated",
    "feed": "yahoo_rss"
   },
   {
@@ -1636,17 +1648,14 @@
  "attention": {
   "title": "Gray Media",
   "url": "https://en.wikipedia.org/wiki/Gray_Media",
-  "date": "2026-11-12",
-  "views_1d": 147,
-  "avg_7d": 146,
-  "avg_30d": 190,
-  "ratio_1d": 0.78,
+  "date": "2026-11-15",
+  "views_1d": 98,
+  "avg_7d": 137,
+  "avg_30d": 178,
+  "ratio_1d": 0.55,
   "ratio_7d": 0.77,
   "spike": false,
   "series": [
-   207,
-   221,
-   167,
    129,
    133,
    149,
@@ -1673,7 +1682,10 @@
    138,
    151,
    158,
-   147
+   147,
+   143,
+   122,
+   98
   ]
  },
  "history": []
