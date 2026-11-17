@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T22:26:31Z",
+ "generated_at": "2026-11-17T14:19:38Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -179,10 +179,11 @@
    ]
   },
   "market_intelligence": {
-   "score": 14.6,
+   "score": 13.8,
    "drivers": [
     "social_attention",
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "insider_activity"
    ],
    "independent_7d": 0,
    "independent_24h": 0
@@ -196,19 +197,19 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 19,
+   "mentions_7d": 11,
    "manipulation_risk": "auffaellig",
    "mentions_24h": 0,
-   "sentiment_7d": 0.25,
-   "bullish_7d": 2,
+   "sentiment_7d": 0.45,
+   "bullish_7d": 1,
    "bearish_7d": 0
   },
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
-   "open_market_sells": 0,
+   "open_market_sells": 2,
    "buy_value": 0,
-   "sell_value": 0,
+   "sell_value": 259530.44,
    "distinct_buyers": 0,
    "other_transactions": 0
   },
@@ -599,7 +600,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 14.6,
+  "score": 13.8,
   "components": {
    "news_flow": 0.0,
    "freshness": 0,
@@ -607,8 +608,8 @@
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 25.8,
-   "social_attention": 100.0,
-   "insider_activity": null
+   "social_attention": 89.6,
+   "insider_activity": 20
   },
   "windows": {
    "24h": {
@@ -641,7 +642,8 @@
   },
   "drivers": [
    "social_attention",
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -1270,7 +1272,50 @@
    "feed": "yahoo_rss"
   }
  ],
- "insiders": [],
+ "insiders": [
+  {
+   "id": "e3ff7963d5f29fea",
+   "symbol": "ROOT",
+   "insider": "Allison Jonathan",
+   "owner_cik": 1977858,
+   "role": "Chief Administrative Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-11-12",
+   "filed_at": "2026-11-16",
+   "reporting_delay_days": 4,
+   "shares": 2962.0,
+   "price": 44.03,
+   "value": 130416.86,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1788882/000162828026074176/0001628280-26-074176-index.htm"
+  },
+  {
+   "id": "b8bdb1f17a347768",
+   "symbol": "ROOT",
+   "insider": "Allison Jonathan",
+   "owner_cik": 1977858,
+   "role": "Chief Administrative Officer",
+   "transaction_code": "S",
+   "transaction_kind": "sell",
+   "transaction_label": "Verkauf am offenen Markt",
+   "open_market": true,
+   "rule_10b5_1_plan": true,
+   "transaction_date": "2026-11-13",
+   "filed_at": "2026-11-16",
+   "reporting_delay_days": 3,
+   "shares": 2962.0,
+   "price": 43.59,
+   "value": 129113.58,
+   "currency": "USD",
+   "source": "SEC EDGAR Form 4",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1788882/000162828026074176/0001628280-26-074176-index.htm"
+  }
+ ],
  "institutions": [],
  "political_trades": [],
  "big_stakes": [],
@@ -1287,21 +1332,21 @@
  ],
  "social_detail": {
   "mentions_24h": 0,
-  "mentions_7d": 19,
+  "mentions_7d": 11,
   "mentions_30d": 147,
   "change_vs_baseline_pct": -100,
-  "engagement_7d": 19.0,
-  "sentiment_7d": 0.25,
+  "engagement_7d": 8.0,
+  "sentiment_7d": 0.45,
   "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
-  "bullish_7d": 2,
+  "bullish_7d": 1,
   "bearish_7d": 0,
   "by_platform_7d": {
-   "stocktwits": 15,
-   "mastodon": 4
+   "stocktwits": 10,
+   "mastodon": 1
   },
   "communities_7d": {
-   "StockTwits": 15,
-   "Mastodon": 4
+   "StockTwits": 10,
+   "Mastodon": 1
   },
   "platforms": [
    "mastodon",
@@ -1312,16 +1357,6 @@
   ],
   "manipulation_risk": "auffaellig",
   "top_posts": [
-   {
-    "platform": "stocktwits",
-    "community": "StockTwits",
-    "author": "MemeThis",
-    "posted_at": "2026-11-10T03:58:23Z",
-    "url": "https://stocktwits.com/MemeThis/message/668644872",
-    "text": "$ROOT Slow climb back toward high 50s over the next few months.   Then we have 1 more earnings with limited growth.  I think that Timm will announce a focus on growth for 27 on the 4th quarter call.  This will cause the price to settle around 70 and if they deliver after the first quarter with meaningful pif growth we will sky rocket.  just faith in an honest company with strong balance sheet.",
-    "engagement": 4.0,
-    "sentiment_label": "Bullish"
-   },
    {
     "platform": "stocktwits",
     "community": "StockTwits",
@@ -1343,22 +1378,32 @@
     "sentiment_label": null
    },
    {
-    "platform": "mastodon",
-    "community": "Mastodon",
-    "author": "vibewire@mastodon.au",
-    "posted_at": "2026-11-10T06:06:18Z",
-    "url": "https://mastodon.au/@vibewire/117590640460926367",
-    "text": "Breaking the Gray-Zone Shield: Finland Jails Cargo Ship Officers in Landmark Subsea Cable Sabotage Conviction   http://  dlvr.it/TWGTMZ      # Featured    # Insights    # ROOT    # SubseaCableNews",
-    "engagement": 2.0,
-    "sentiment_label": null
-   },
-   {
     "platform": "stocktwits",
     "community": "StockTwits",
     "author": "DonCornelious82",
     "posted_at": "2026-11-12T18:35:32Z",
     "url": "https://stocktwits.com/DonCornelious82/message/668959427",
     "text": "$ROOT  @ValueInvestingEasily want&#39;s to convince you that buybacks in mid 50s that are now at this level were a good idea and that there should even be more.",
+    "engagement": 1.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "DonCornelious82",
+    "posted_at": "2026-11-12T17:40:30Z",
+    "url": "https://stocktwits.com/DonCornelious82/message/668952460",
+    "text": "$ROOT  @brenjerman, If you need Ai to subtract three numbers from another, you probably shouln&#39;t invest your triple digit Robinhood account in stocks.  You are like Timm and @ValueInvestingEasily , using artificial intelligence instead of ACTUAL intelligence. \nSo, show the board YOUR analysis of what deployable, unrestricted, non-statutory reserve cash runway is and exactly how you arrive at t",
+    "engagement": 1.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "MemeThis",
+    "posted_at": "2026-11-11T02:16:27Z",
+    "url": "https://stocktwits.com/MemeThis/message/668753734",
+    "text": "$ROOT A person’s steps are directed by the Lord. How then can anyone understand their own way?",
     "engagement": 1.0,
     "sentiment_label": null
    }

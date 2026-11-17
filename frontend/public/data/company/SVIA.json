@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T22:26:31Z",
+ "generated_at": "2026-11-17T14:19:38Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,12 +180,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 9.6,
+   "score": 44.3,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 3,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -593,11 +595,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 9.6,
+  "score": 44.3,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 86.0,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 54.5,
@@ -606,35 +608,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -653,6 +657,75 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "bffb53e7abc9e395",
+   "symbols": [
+    "PLTR",
+    "SVIA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Direxion and Anthony Pompliano's Silvia Join Forces to Help Investors Rethink Income",
+   "summary": "Direxion, a leading provider of specialized ETFs with approximately $70.8 billion in assets under management (as of September 30, 2026), today announced a partnership with Silvia, Inc. (Nasdaq: SVIA), the first publicly traded agentic finance firm.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/options/articles/direxion-anthony-pomplianos-silvia-join-210300213.html?.tsrc=rss",
+   "published_at": "2026-11-16T21:03:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-16T22:34:56Z",
+   "fingerprint": "30e3e5bfeb13b3d6",
+   "primary_source": false,
+   "cluster_id": "bffb53e7abc9e395",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Direxion und Silvia von Anthony Pompliano bündeln ihre Kräfte, um Investoren dabei zu helfen, ihr Einkommen zu überdenken"
+  },
+  {
+   "id": "834548ea7c806aeb",
+   "symbols": [
+    "SVIA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Silvia, Inc. Launches Pilot Partnership with Direxion to Deliver Educational Content on Income Strategies to Its User Base",
+   "summary": "NEW YORK, November 16, 2026--Silvia, Inc. (Nasdaq: SVIA) (\"Silvia\" or the \"Company\"), the first publicly traded agentic finance firm, today announced a pilot partnership with Direxion, a leading provider of specialized ETFs with close to $70 billion in assets under management (as",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/options/articles/silvia-inc-launches-pilot-partnership-120000641.html?.tsrc=rss",
+   "published_at": "2026-11-16T12:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-17T14:20:12Z",
+   "fingerprint": "e63170ca2a74785b",
+   "primary_source": false,
+   "cluster_id": "834548ea7c806aeb",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Silvia, Inc. startet Pilot-Partnerschaft mit Direxion zur Bereitstellung von Bildungsinhalten zu Einkommensstrategien für seine Benutzerbasis"
+  },
+  {
+   "id": "f0539c9a5ba824b9",
+   "symbols": [
+    "SVIA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Cohen & Company Reports Third Quarter 2026 Financial Results",
+   "summary": "Board Declares Quarterly Dividend of $0.25 per SharePHILADELPHIA and NEW YORK, Nov. 12, 2026 (GLOBE NEWSWIRE) -- Cohen & Company Inc. (NYSE American: COHN) (“Cohen & Company” or the “Company”) today reported financial results for its third quarter ended September 30, 2026. In a s",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cohen-company-reports-third-quarter-130100739.html?.tsrc=rss",
+   "published_at": "2026-11-12T13:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-17T14:20:12Z",
+   "fingerprint": "cfa087f6c1cc22e9",
+   "primary_source": false,
+   "cluster_id": "f0539c9a5ba824b9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "d8ae8c88393fa47d",
    "symbols": [
