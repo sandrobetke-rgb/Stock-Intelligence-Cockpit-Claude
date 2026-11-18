@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T03:07:28Z",
+ "generated_at": "2026-11-18T13:54:12Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,11 +180,11 @@
    ]
   },
   "market_intelligence": {
-   "score": 30.1,
+   "score": 34.3,
    "drivers": [
     "news_flow",
-    "source_diversity",
-    "price_volume_anomaly"
+    "social_attention",
+    "source_diversity"
    ],
    "independent_7d": 4,
    "independent_24h": 0
@@ -198,12 +198,12 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 0,
-   "manipulation_risk": "unauffällig",
-   "mentions_24h": 0,
-   "sentiment_7d": null,
-   "bullish_7d": 0,
-   "bearish_7d": 0
+   "mentions_7d": 53,
+   "manipulation_risk": "hoch",
+   "mentions_24h": 15,
+   "sentiment_7d": 0.21,
+   "bullish_7d": 13,
+   "bearish_7d": 1
   },
   "insider": {
    "window_days": 90,
@@ -688,7 +688,7 @@
   ]
  },
  "intelligence_detail": {
-  "score": 30.1,
+  "score": 34.3,
   "components": {
    "news_flow": 99.8,
    "freshness": 0,
@@ -696,7 +696,7 @@
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 4.0,
-   "social_attention": 0.0,
+   "social_attention": 40.0,
    "insider_activity": null
   },
   "windows": {
@@ -719,8 +719,8 @@
     "verified": 0
    },
    "30d": {
-    "signals": 26,
-    "independent": 26,
+    "signals": 25,
+    "independent": 25,
     "duplicates": 0,
     "sources": 5,
     "primary": 0,
@@ -730,8 +730,8 @@
   },
   "drivers": [
    "news_flow",
-   "source_diversity",
-   "price_volume_anomaly"
+   "social_attention",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -1705,23 +1705,85 @@
   }
  ],
  "social_detail": {
-  "mentions_24h": 0,
-  "mentions_7d": 0,
-  "mentions_30d": 2,
-  "change_vs_baseline_pct": null,
-  "engagement_7d": 0,
-  "sentiment_7d": null,
-  "sentiment_basis": "algorithmisch (Lexikon)",
-  "bullish_7d": 0,
-  "bearish_7d": 0,
-  "by_platform_7d": {},
-  "communities_7d": {},
+  "mentions_24h": 15,
+  "mentions_7d": 53,
+  "mentions_30d": 62,
+  "change_vs_baseline_pct": 133,
+  "engagement_7d": 69.0,
+  "sentiment_7d": 0.21,
+  "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
+  "bullish_7d": 13,
+  "bearish_7d": 1,
+  "by_platform_7d": {
+   "stocktwits": 21,
+   "mastodon": 32
+  },
+  "communities_7d": {
+   "Mastodon": 32,
+   "StockTwits": 21
+  },
   "platforms": [
-   "reddit"
+   "mastodon",
+   "reddit",
+   "stocktwits"
   ],
-  "manipulation_flags": [],
-  "manipulation_risk": "unauffällig",
-  "top_posts": []
+  "manipulation_flags": [
+   "Koordinierte Wiederholungen (nahezu identische Beiträge)",
+   "Wenige Accounts erzeugen Großteil der Erwähnungen"
+  ],
+  "manipulation_risk": "hoch",
+  "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "mrsports90210",
+    "posted_at": "2026-11-11T15:22:21Z",
+    "url": "https://stocktwits.com/mrsports90210/message/668792001",
+    "text": "$GEO if your Short here, your on a Fast Collision  course to no where land...",
+    "engagement": 6.0,
+    "sentiment_label": "Bullish"
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "Kabooki",
+    "posted_at": "2026-11-11T20:28:21Z",
+    "url": "https://stocktwits.com/Kabooki/message/668832750",
+    "text": "$GEO dont you fools realize that they are buying stock back? Why are you selling?",
+    "engagement": 4.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "mrsports90210",
+    "posted_at": "2026-11-16T23:42:18Z",
+    "url": "https://stocktwits.com/mrsports90210/message/669287604",
+    "text": "$GEO Hardly a Predictor But HUGE RED Market day Today  &amp; this Didnt Sell off,,If that Don&#39;t tell you Something...Not to say it Wont Sell off ((Fundamentals intact &amp; GEO has Never been in Better Shape)) but that&#39;s a Big difference from OVERALL trends today in Market...Keep piling in Shorts, Grow a Pair 1st your Gonna Need it...!!!---All be waiting For a Dip haven&#39;t had one for a",
+    "engagement": 3.0,
+    "sentiment_label": "Bullish"
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "mrsports90210",
+    "posted_at": "2026-11-16T18:23:15Z",
+    "url": "https://stocktwits.com/mrsports90210/message/669250775",
+    "text": "$GEO 52 WEEK HIGH INCOMING.. BIG BASE IN FRONT (A lot of Accumulation here)) \nSHOULD PUSH THROUGH ON A NICE GREEN MARKET DAY... \nMarket is Shi**ing the Bed Today..Hilarrious \n(Cant get in front  of it to Add Bla For know))",
+    "engagement": 3.0,
+    "sentiment_label": "Bullish"
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "allinbitcoin",
+    "posted_at": "2026-11-13T17:45:30Z",
+    "url": "https://stocktwits.com/allinbitcoin/message/669075976",
+    "text": "$GEO NEXT! \nhttps://finance.yahoo.com/economy/policy/articles/democratic-us-senator-probes-corecivic-160930866.html",
+    "engagement": 3.0,
+    "sentiment_label": null
+   }
+  ]
  },
  "attention": {
   "title": "GEO Group",

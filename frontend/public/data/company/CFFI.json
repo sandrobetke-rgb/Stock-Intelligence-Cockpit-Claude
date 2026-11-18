@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T03:07:28Z",
+ "generated_at": "2026-11-18T13:54:12Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -179,12 +179,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 8.5,
+   "score": 23.8,
    "drivers": [
+    "news_flow",
     "price_volume_anomaly",
-    "insider_activity"
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -212,7 +213,20 @@
    "sellers": 1,
    "sold_out": 0
   },
-  "events": [],
+  "events": [
+   {
+    "symbol": "CFFI",
+    "type": "ex_dividend",
+    "date": "2026-12-14",
+    "payment_date": "2027-01-01",
+    "amount": 0.5,
+    "annual": 1.92,
+    "confirmed": true,
+    "source": "Nasdaq-Dividendenkalender",
+    "source_url": "https://www.nasdaq.com/market-activity/stocks/cffi/dividend-history",
+    "days_until": 26
+   }
+  ],
   "politicians": null,
   "first_seen": "2026-10-31",
   "archived_at": null,
@@ -592,11 +606,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 8.5,
+  "score": 23.8,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 47.7,
@@ -614,18 +628,18 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 1,
+    "independent": 1,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 3,
-    "independent": 3,
-    "duplicates": 0,
+    "signals": 4,
+    "independent": 4,
+    "duplicates": 1,
     "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
@@ -633,8 +647,9 @@
    }
   },
   "drivers": [
+   "news_flow",
    "price_volume_anomaly",
-   "insider_activity"
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -653,6 +668,29 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "aa8a3e2a075323ca",
+   "symbols": [
+    "CFFI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "C&F Financial Corporation Announces Increase in Quarterly Dividend",
+   "summary": "TOANO, Va., Nov. 13, 2026 (GLOBE NEWSWIRE) -- The Board of Directors of C&amp;F Financial Corporation (NASDAQ:CFFI) (the Corporation) has declared a regular cash dividend of 50 cents per share, which is payable January 1, 2027 to shareholders of record on December 14, 2026. This ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/c-f-financial-corporation-announces-171500316.html?.tsrc=rss",
+   "published_at": "2026-11-13T17:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-18T13:56:40Z",
+   "fingerprint": "5cd682b3a7f99d9d",
+   "primary_source": false,
+   "cluster_id": "5ea2d11d1228a5d7",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "C&F Financial Corporation meldet Erhöhung der Quartalsdividende"
+  },
   {
    "id": "8377c496ce0973d7",
    "symbols": [
@@ -805,7 +843,7 @@
    "primary_source": false,
    "cluster_id": "5ea2d11d1228a5d7",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   },
   {

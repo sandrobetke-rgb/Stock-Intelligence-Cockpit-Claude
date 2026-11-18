@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T03:07:28Z",
+ "generated_at": "2026-11-18T13:54:12Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -178,13 +178,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 4.6,
+   "score": 25.4,
    "drivers": [
-    "insider_activity",
-    "price_volume_anomaly"
+    "news_flow",
+    "freshness",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 1,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -676,11 +677,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 4.6,
+  "score": 25.4,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 43.0,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 7.6,
@@ -689,26 +690,26 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 24,
-    "independent": 24,
+    "signals": 25,
+    "independent": 25,
     "duplicates": 0,
     "sources": 5,
     "primary": 0,
@@ -717,8 +718,9 @@
    }
   },
   "drivers": [
-   "insider_activity",
-   "price_volume_anomaly"
+   "news_flow",
+   "freshness",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -737,6 +739,29 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "b7a9519e3643250a",
+   "symbols": [
+    "ARHS"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Arhaus Announces Participation in the Morgan Stanley Global Consumer & Retail Conference in New York City",
+   "summary": "BOSTON HEIGHTS, Ohio, Nov. 17, 2026 (GLOBE NEWSWIRE) -- Arhaus, Inc. (“Arhaus” or the “Company”) (NASDAQ: ARHS), a premium home furnishing brand known for responsibly sourced, artisan-crafted products and heirloom-quality design, today announced that it will participate in the Mo",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/arhaus-announces-participation-morgan-stanley-210100720.html?.tsrc=rss",
+   "published_at": "2026-11-17T21:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-18T13:54:22Z",
+   "fingerprint": "4fa36883d2ab0498",
+   "primary_source": false,
+   "cluster_id": "b7a9519e3643250a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Arhaus gibt Teilnahme an der Morgan Stanley Global Consumer & Retail Conference in New York bekannt"
+  },
   {
    "id": "abcf042e233a773f",
    "symbols": [
@@ -1695,15 +1720,14 @@
  "attention": {
   "title": "Arhaus",
   "url": "https://en.wikipedia.org/wiki/Arhaus",
-  "date": "2026-11-16",
-  "views_1d": 38,
-  "avg_7d": 40,
+  "date": "2026-11-17",
+  "views_1d": 34,
+  "avg_7d": 39,
   "avg_30d": 37,
-  "ratio_1d": 1.02,
+  "ratio_1d": 0.92,
   "ratio_7d": 1.06,
   "spike": false,
   "series": [
-   28,
    51,
    47,
    33,
@@ -1732,7 +1756,8 @@
    38,
    36,
    30,
-   38
+   38,
+   34
   ]
  },
  "history": []

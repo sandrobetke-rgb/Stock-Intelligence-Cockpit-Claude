@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T03:07:28Z",
+ "generated_at": "2026-11-18T13:54:12Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -178,14 +178,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 18.2,
+   "score": 38.5,
    "drivers": [
     "news_flow",
-    "price_volume_anomaly",
-    "source_diversity"
+    "freshness",
+    "price_volume_anomaly"
    ],
-   "independent_7d": 1,
-   "independent_24h": 0
+   "independent_7d": 4,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -612,10 +612,10 @@
   ]
  },
  "intelligence_detail": {
-  "score": 18.2,
+  "score": 38.5,
   "components": {
-   "news_flow": 43.0,
-   "freshness": 0,
+   "news_flow": 99.8,
+   "freshness": 50,
    "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
@@ -625,15 +625,6 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
-    "primary": 0,
-    "analyst_changes": 0,
-    "verified": 0
-   },
-   "7d": {
     "signals": 1,
     "independent": 1,
     "duplicates": 0,
@@ -642,9 +633,18 @@
     "analyst_changes": 0,
     "verified": 0
    },
+   "7d": {
+    "signals": 4,
+    "independent": 4,
+    "duplicates": 0,
+    "sources": 1,
+    "primary": 0,
+    "analyst_changes": 0,
+    "verified": 0
+   },
    "30d": {
-    "signals": 36,
-    "independent": 36,
+    "signals": 39,
+    "independent": 39,
     "duplicates": 1,
     "sources": 5,
     "primary": 0,
@@ -654,8 +654,8 @@
   },
   "drivers": [
    "news_flow",
-   "price_volume_anomaly",
-   "source_diversity"
+   "freshness",
+   "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -674,6 +674,75 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "ce653f9a73539f5d",
+   "symbols": [
+    "CBOE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "After IPO Day: Executing as a Public Company, 6th Palm Beach CorpGov Forum",
+   "summary": "CorpGov hosted the sixth annual Palm Beach CorpGov Forum on Nov. 4-5, 2026, at the Palm Beach Lake Pavilion and The Cove Club, both located waterfront with sweeping views of Palm Beach Island, along with a reception at Cucina Palm Beach. The panel called “After IPO Day: Executing",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ipo-day-executing-public-company-195033529.html?.tsrc=rss",
+   "published_at": "2026-11-17T19:50:33Z",
+   "date_only": false,
+   "captured_at": "2026-11-18T13:56:22Z",
+   "fingerprint": "52ad368e2f3aeccf",
+   "primary_source": false,
+   "cluster_id": "ce653f9a73539f5d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Nach dem IPO-Tag: Ausführung als Aktiengesellschaft, 6. Palm Beach CorpGov Forum"
+  },
+  {
+   "id": "a3f00fb80ebd7a78",
+   "symbols": [
+    "CBOE",
+    "VCTR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Cboe In Buy Zone As It Expands Into Prediction Markets",
+   "summary": "Best known as the leading U.S. options exchange, Cboe is expanding into prediction markets for specific indexes or stocks.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/m/b69ad625-20ad-3e81-b008-7a86b4ec09f0/cboe-in-buy-zone-as-it.html?.tsrc=rss",
+   "published_at": "2026-11-13T18:28:21Z",
+   "date_only": false,
+   "captured_at": "2026-11-17T14:21:52Z",
+   "fingerprint": "b4162b0598538807",
+   "primary_source": false,
+   "cluster_id": "a3f00fb80ebd7a78",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Cboe in Buy Zone, während es in Prognosemärkte expandiert"
+  },
+  {
+   "id": "843218ded843dde9",
+   "symbols": [
+    "CBOE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wall Street panics, Cboe profits: Why the stock jumped 10% this month",
+   "summary": "Investing.com and Yahoo Finance LLC may earn commission or revenue on some items through the links below.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-panics-cboe-profits-072950401.html?.tsrc=rss",
+   "published_at": "2026-11-13T07:29:50Z",
+   "date_only": false,
+   "captured_at": "2026-11-18T13:56:22Z",
+   "fingerprint": "3d87a8d3b47c248e",
+   "primary_source": false,
+   "cluster_id": "843218ded843dde9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "cb843893c629860a",
    "symbols": [
@@ -1711,15 +1780,14 @@
  "attention": {
   "title": "Cboe Global Markets",
   "url": "https://en.wikipedia.org/wiki/Cboe_Global_Markets",
-  "date": "2026-11-16",
-  "views_1d": 113,
-  "avg_7d": 106,
-  "avg_30d": 132,
-  "ratio_1d": 0.86,
-  "ratio_7d": 0.8,
+  "date": "2026-11-17",
+  "views_1d": 116,
+  "avg_7d": 105,
+  "avg_30d": 133,
+  "ratio_1d": 0.87,
+  "ratio_7d": 0.79,
   "spike": false,
   "series": [
-   67,
    191,
    147,
    215,
@@ -1748,7 +1816,8 @@
    107,
    73,
    71,
-   113
+   113,
+   116
   ]
  },
  "history": []

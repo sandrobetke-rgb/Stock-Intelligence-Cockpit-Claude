@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T03:07:28Z",
+ "generated_at": "2026-11-18T13:54:12Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,11 +180,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 6.7,
+   "score": 23.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -195,7 +197,14 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 1,
+   "manipulation_risk": "unauffällig",
+   "mentions_24h": 1,
+   "sentiment_7d": 1.0,
+   "bullish_7d": 1,
+   "bearish_7d": 0
+  },
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
@@ -679,15 +688,15 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.7,
+  "score": 23.1,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 37.8,
-   "social_attention": null,
+   "social_attention": 25.0,
    "insider_activity": null
   },
   "windows": {
@@ -701,17 +710,17 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 3,
-    "independent": 3,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
@@ -720,7 +729,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -739,6 +750,28 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "c6c032ea69ccd43d",
+   "symbols": [
+    "BDTX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Black Diamond Therapeutics to Participate in Upcoming Investor Conferences",
+   "summary": "CAMBRIDGE, Mass., Nov. 12, 2026 (GLOBE NEWSWIRE) -- Black Diamond Therapeutics, Inc. (Nasdaq: BDTX), a clinical-stage oncology company developing MasterKey therapies that target families of oncogenic mutations in patients with cancer, including silevertinib, a potential best-in-c",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/black-diamond-therapeutics-participate-upcoming-210100255.html?.tsrc=rss",
+   "published_at": "2026-11-12T21:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-18T13:55:14Z",
+   "fingerprint": "0cf3f7bb2106767b",
+   "primary_source": false,
+   "cluster_id": "c6c032ea69ccd43d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "fbf6bc887cdf0054",
    "symbols": [
@@ -1261,7 +1294,40 @@
    "report_date": "2026-09-30"
   }
  ],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 1,
+  "mentions_7d": 1,
+  "mentions_30d": 1,
+  "change_vs_baseline_pct": null,
+  "engagement_7d": 3.0,
+  "sentiment_7d": 1.0,
+  "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
+  "bullish_7d": 1,
+  "bearish_7d": 0,
+  "by_platform_7d": {
+   "stocktwits": 1
+  },
+  "communities_7d": {
+   "StockTwits": 1
+  },
+  "platforms": [
+   "stocktwits"
+  ],
+  "manipulation_flags": [],
+  "manipulation_risk": "unauffällig",
+  "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "superalby",
+    "posted_at": "2026-11-18T05:26:21Z",
+    "url": "https://stocktwits.com/superalby/message/669438442",
+    "text": "$BDTX management now have to focus about partnership.  \n\n​A partner isn’t just about non-dilutive cash—a Big Pharma&#39;s global oncology network can save 6–12 months off enrolling the 400-patient Phase 3 trial for #silevertinib.\n\n No dilution risk, faster clinical readouts  \n\n​With a massive patent cliff looming, Big Pharma needs high-potential oncology assets to replenish their pipelines. Sileve",
+    "engagement": 3.0,
+    "sentiment_label": "Bullish"
+   }
+  ]
+ },
  "attention": null,
  "history": []
 }

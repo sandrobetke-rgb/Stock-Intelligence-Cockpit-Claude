@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T03:07:28Z",
+ "generated_at": "2026-11-18T13:54:12Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,11 +180,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 17.5,
+   "score": 41.0,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -679,11 +681,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 17.5,
+  "score": 41.0,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 98.9,
@@ -701,18 +703,18 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 2,
+    "independent": 2,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 3,
-    "independent": 3,
-    "duplicates": 0,
+    "signals": 5,
+    "independent": 5,
+    "duplicates": 1,
     "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
@@ -720,7 +722,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -739,6 +743,50 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "07180bf7bd5a688d",
+   "symbols": [
+    "ARMP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Armata Pharmaceuticals, Inc. (ARMP) Reports Q3 Loss, Beats Revenue Estimates",
+   "summary": "Armata Pharmaceuticals (ARMP) delivered earnings and revenue surprises of +57.90% and +252.33%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/armata-pharmaceuticals-inc-armp-reports-220502237.html?.tsrc=rss",
+   "published_at": "2026-11-12T22:05:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-18T13:54:25Z",
+   "fingerprint": "82fdca0b87b6e428",
+   "primary_source": false,
+   "cluster_id": "07180bf7bd5a688d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "a145b70a1ebf8277",
+   "symbols": [
+    "ARMP"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Armata Pharmaceuticals Announces Financial Results for the Third Quarter 2026 and Provides Corporate Update",
+   "summary": "Armata Pharmaceuticals, Inc. (NYSE American: ARMP) (\"Armata\" or the \"Company\"), a late clinical-stage biotechnology company focused on the development of high-purity and potent, pathogen-specific bacteriophage therapeutics for the treatment of antibiotic-resistant and difficult-t",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/armata-pharmaceuticals-announces-financial-results-210500599.html?.tsrc=rss",
+   "published_at": "2026-11-12T21:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-18T13:54:25Z",
+   "fingerprint": "af8bff0168189be1",
+   "primary_source": false,
+   "cluster_id": "8741f2167446d99d",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "86730ca597a975b4",
    "symbols": [
@@ -1003,7 +1051,7 @@
    "primary_source": false,
    "cluster_id": "8741f2167446d99d",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   },
   {
