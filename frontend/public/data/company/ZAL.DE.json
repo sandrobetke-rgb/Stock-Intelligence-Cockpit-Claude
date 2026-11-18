@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-17T14:19:38Z",
+ "generated_at": "2026-11-18T03:07:28Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -22,7 +22,7 @@
    "perf_20d": 8.182172333918958,
    "perf_63d": 24.246459885608118,
    "adr20": 3.870520084744114,
-   "rvol": 0.6628749843757545,
+   "rvol": 0.6639464747628443,
    "ema10": 27.75935048098404,
    "ema21": 26.90401807058906,
    "sma50": 24.494199905395508,
@@ -42,8 +42,8 @@
     "rsi_min5": 60.14905908655451,
     "atr14": 1.011503442680994,
     "atr_pct": 3.6086458005793425,
-    "rvol": 0.6628749843757545,
-    "vol30": 1188640.1333333333,
+    "rvol": 0.6639464747628443,
+    "vol30": 1188685.0666666667,
     "dist_ema200_pct": 14.186945014577358,
     "dist_52w_high_pct": 7.886952331453189,
     "high_52w": 30.43000030517578,
@@ -180,12 +180,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 3.4,
+   "score": 41.6,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 3,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -227,13 +229,13 @@
   "perf_20d": 8.182172333918958,
   "perf_63d": 24.246459885608118,
   "adr20": 3.870520084744114,
-  "rvol": 0.6628749843757545,
+  "rvol": 0.6639464747628443,
   "ema10": 27.75935048098404,
   "ema21": 26.90401807058906,
   "sma50": 24.494199905395508,
   "sma200": 23.52079998970032,
   "volatility_ann": 38.25267117506976,
-  "avg_dollar_volume_20d": 33735456.28228521,
+  "avg_dollar_volume_20d": 33737345.50433149,
   "move_zscore": -0.6413607338139372,
   "swing": {
    "tech": {
@@ -247,8 +249,8 @@
     "rsi_min5": 60.14905908655451,
     "atr14": 1.011503442680994,
     "atr_pct": 3.6086458005793425,
-    "rvol": 0.6628749843757545,
-    "vol30": 1188640.1333333333,
+    "rvol": 0.6639464747628443,
+    "vol30": 1188685.0666666667,
     "dist_ema200_pct": 14.186945014577358,
     "dist_52w_high_pct": 7.886952331453189,
     "high_52w": 30.43000030517578,
@@ -628,7 +630,7 @@
    {
     "key": "trading_liquidity",
     "label": "Handelsliquidität (Umsatz 20T)",
-    "value": 33735456.28,
+    "value": 33737345.5,
     "unit": "Whg",
     "severity": 33.2,
     "weight": 0.07,
@@ -673,11 +675,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 3.4,
+  "score": 41.6,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 86.0,
+   "freshness": 50,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 19.2,
@@ -686,26 +688,26 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 10,
-    "independent": 10,
+    "signals": 13,
+    "independent": 13,
     "duplicates": 0,
     "sources": 5,
     "primary": 0,
@@ -714,7 +716,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -733,6 +737,74 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "a6330e017f54d1c0",
+   "symbols": [
+    "ZAL.DE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "ChannelEngine Selected by Philips to Support Marketplace Growth",
+   "summary": "ChannelEngine, a global marketplace integration and automation platform, announced that Philips has selected its technology and services to strengthen and expand marketplace operations across Europe. The collaboration supports Philips' Personal Health business in strengthening it",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/small-business/articles/channelengine-selected-philips-support-marketplace-142900119.html?.tsrc=rss",
+   "published_at": "2026-11-17T14:29:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-18T03:15:02Z",
+   "fingerprint": "ed8f212d9996caa3",
+   "primary_source": false,
+   "cluster_id": "a6330e017f54d1c0",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "ChannelEngine von Philips ausgewählt, um das Marktwachstum zu unterstützen"
+  },
+  {
+   "id": "b891bda7a7905656",
+   "symbols": [
+    "ZAL.DE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "EXCLUSIVE: Zalando’s New Retail Media Boss Wants to Give Fashion Brands Data ‘Superpower’",
+   "summary": "Ray Cao, the newly appointed senior vice president for Zalando’s retail media business, spoke to WWD about how he plans to use the e-commerce giant’s trove of shopping data to empower brands and make the platform money.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "wwd.com",
+   "url": "https://wwd.com/business-news/retail/exclusive-zalandos-new-hire-wants-to-give-brands-data-superpower-1239417600/?.tsrc=rss",
+   "published_at": "2026-11-16T19:58:20Z",
+   "date_only": false,
+   "captured_at": "2026-11-18T03:15:02Z",
+   "fingerprint": "25e4f960517e193c",
+   "primary_source": false,
+   "cluster_id": "b891bda7a7905656",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "EXKLUSIV: Zalandos neuer Medienchef will Modemarken Daten \"Superpower\" geben"
+  },
+  {
+   "id": "e639c47f0207eb91",
+   "symbols": [
+    "ZAL.DE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Is Zalando (XTRA:ZAL) Getting Too Rich For Its Earnings?",
+   "summary": "Zalando shares have climbed over the past year, yet the stock is still carrying a five year decline that leaves investors asking whether the current price is properly supported by the earnings the business generates today. After a fresh set of results and a recent run in the shar",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zalando-xtra-zal-getting-too-061808334.html?.tsrc=rss",
+   "published_at": "2026-11-11T06:18:08Z",
+   "date_only": false,
+   "captured_at": "2026-11-18T03:15:02Z",
+   "fingerprint": "217799cfc631426f",
+   "primary_source": false,
+   "cluster_id": "e639c47f0207eb91",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "16adc2f269fcae08",
    "symbols": [
@@ -1318,16 +1390,14 @@
  "attention": {
   "title": "Zalando",
   "url": "https://en.wikipedia.org/wiki/Zalando",
-  "date": "2026-11-15",
-  "views_1d": 131,
-  "avg_7d": 141,
-  "avg_30d": 150,
-  "ratio_1d": 0.88,
+  "date": "2026-11-17",
+  "views_1d": 169,
+  "avg_7d": 142,
+  "avg_30d": 151,
+  "ratio_1d": 1.12,
   "ratio_7d": 0.94,
   "spike": false,
   "series": [
-   124,
-   132,
    150,
    175,
    150,
@@ -1355,7 +1425,9 @@
    166,
    139,
    106,
-   131
+   131,
+   173,
+   169
   ]
  },
  "history": []
