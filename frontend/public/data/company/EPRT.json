@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-19T02:47:35Z",
+ "generated_at": "2026-11-19T14:23:13Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -179,12 +179,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 7.3,
+   "score": 19.1,
    "drivers": [
+    "news_flow",
     "price_volume_anomaly",
-    "social_attention"
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -196,10 +197,10 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 1,
+   "mentions_7d": 0,
    "manipulation_risk": "unauffällig",
    "mentions_24h": 0,
-   "sentiment_7d": 0.0,
+   "sentiment_7d": null,
    "bullish_7d": 0,
    "bearish_7d": 0
   },
@@ -679,15 +680,15 @@
   ]
  },
  "intelligence_detail": {
-  "score": 7.3,
+  "score": 19.1,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 29.6,
-   "social_attention": 25.0,
+   "social_attention": 0.0,
    "insider_activity": null
   },
   "windows": {
@@ -701,17 +702,17 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 15,
-    "independent": 15,
+    "signals": 16,
+    "independent": 16,
     "duplicates": 0,
     "sources": 5,
     "primary": 0,
@@ -720,8 +721,9 @@
    }
   },
   "drivers": [
+   "news_flow",
    "price_volume_anomaly",
-   "social_attention"
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -740,6 +742,29 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "abc8fee7578bf869",
+   "symbols": [
+    "EPRT"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "How Much Does a 56-Year-Old Need Invested to Replace a $145,000 Salary With Dividends?",
+   "summary": "Replacing a paycheck with dividends sounds simple until you see the price tag at different yields. Then a few overlooked details, from taxes to payroll deductions, quietly shrink the target, and one risky shortcut could cost you the most.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/personal-finance/2026/11/16/how-much-does-a-56-year-old-need-invested-to-replace-a-145000-salary-with-dividends/?.tsrc=rss",
+   "published_at": "2026-11-16T18:39:59Z",
+   "date_only": false,
+   "captured_at": "2026-11-19T14:23:18Z",
+   "fingerprint": "c1b3a67cf037d368",
+   "primary_source": false,
+   "cluster_id": "abc8fee7578bf869",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Wie viel muss ein 56-Jähriger investieren, um ein Gehalt von 145.000 USD durch Dividenden zu ersetzen?"
+  },
   {
    "id": "7c641c8540be4c0c",
    "symbols": [
@@ -1316,38 +1341,23 @@
  "superinvestors": [],
  "social_detail": {
   "mentions_24h": 0,
-  "mentions_7d": 1,
+  "mentions_7d": 0,
   "mentions_30d": 2,
   "change_vs_baseline_pct": -100,
-  "engagement_7d": 0.0,
-  "sentiment_7d": 0.0,
+  "engagement_7d": 0,
+  "sentiment_7d": null,
   "sentiment_basis": "algorithmisch (Lexikon)",
   "bullish_7d": 0,
   "bearish_7d": 0,
-  "by_platform_7d": {
-   "mastodon": 1
-  },
-  "communities_7d": {
-   "Mastodon": 1
-  },
+  "by_platform_7d": {},
+  "communities_7d": {},
   "platforms": [
    "mastodon",
    "reddit"
   ],
   "manipulation_flags": [],
   "manipulation_risk": "unauffällig",
-  "top_posts": [
-   {
-    "platform": "mastodon",
-    "community": "Mastodon",
-    "author": "hugovalters",
-    "posted_at": "2026-11-12T05:00:18Z",
-    "url": "https://mastodon.social/@hugovalters/117601705568114172",
-    "text": "CVE-2026-18869: IBM i 7.3-7.6 lets authenticated attackers bypass security via FTP PORT/EPRT validation flaws, reaching internal network services. CVSS 6.4, no patch confirmed. Check exposure and restrict FTP access now.  # CVE    # infosec    # IBM     https://www.  valtersit.com/cve/CVE-2026-188  69/",
-    "engagement": 0.0,
-    "sentiment_label": null
-   }
-  ]
+  "top_posts": []
  },
  "attention": null,
  "history": []

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-19T02:47:35Z",
+ "generated_at": "2026-11-19T14:23:13Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,11 +180,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 4.5,
+   "score": 21.3,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -195,14 +197,7 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": {
-   "mentions_7d": 0,
-   "manipulation_risk": "unauffällig",
-   "mentions_24h": 0,
-   "sentiment_7d": null,
-   "bullish_7d": 0,
-   "bearish_7d": 0
-  },
+  "social": null,
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
@@ -686,15 +681,15 @@
   ]
  },
  "intelligence_detail": {
-  "score": 4.5,
+  "score": 21.3,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 28.8,
-   "social_attention": 0.0,
+   "social_attention": null,
    "insider_activity": null
   },
   "windows": {
@@ -708,17 +703,17 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 10,
-    "independent": 10,
+    "signals": 11,
+    "independent": 11,
     "duplicates": 1,
     "sources": 6,
     "primary": 0,
@@ -727,7 +722,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -746,6 +743,28 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "684e3136aa835789",
+   "symbols": [
+    "HE"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Treasuries Now Yield 5.1%. These High-Yield Dividend Stocks Could Be in Trouble",
+   "summary": "With Treasuries paying real money and zero stock risk, four big yields face a harsh test. One of them still shows up on screens even though the checks stopped years ago. Which payouts can survive, and which are already gone?",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "247wallst.com",
+   "url": "https://247wallst.com/investing/2026/11/14/treasuries-now-yield-5-1-these-high-yield-dividend-stocks-could-be-in-trouble/?.tsrc=rss",
+   "published_at": "2026-11-14T15:22:46Z",
+   "date_only": false,
+   "captured_at": "2026-11-19T14:25:33Z",
+   "fingerprint": "0937563f2d495db9",
+   "primary_source": false,
+   "cluster_id": "684e3136aa835789",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "4b5d2ece9886673f",
    "symbols": [
@@ -985,7 +1004,7 @@
    "primary_source": false,
    "cluster_id": "9932583b2f8de0b8",
    "independence": "original",
-   "verification": "Unverified",
+   "verification": "Outdated",
    "feed": "yahoo_rss"
   },
   {
@@ -1277,37 +1296,18 @@
    "report_date": "2026-09-30"
   }
  ],
- "social_detail": {
-  "mentions_24h": 0,
-  "mentions_7d": 0,
-  "mentions_30d": 1,
-  "change_vs_baseline_pct": null,
-  "engagement_7d": 0,
-  "sentiment_7d": null,
-  "sentiment_basis": "algorithmisch (Lexikon)",
-  "bullish_7d": 0,
-  "bearish_7d": 0,
-  "by_platform_7d": {},
-  "communities_7d": {},
-  "platforms": [
-   "stocktwits"
-  ],
-  "manipulation_flags": [],
-  "manipulation_risk": "unauffällig",
-  "top_posts": []
- },
+ "social_detail": null,
  "attention": {
   "title": "Hawaiian Electric Industries",
   "url": "https://en.wikipedia.org/wiki/Hawaiian_Electric_Industries",
-  "date": "2026-11-17",
-  "views_1d": 32,
-  "avg_7d": 20,
+  "date": "2026-11-18",
+  "views_1d": 18,
+  "avg_7d": 18,
   "avg_30d": 20,
-  "ratio_1d": 1.64,
-  "ratio_7d": 1.04,
+  "ratio_1d": 0.9,
+  "ratio_7d": 0.91,
   "spike": false,
   "series": [
-   24,
    26,
    28,
    22,
@@ -1336,7 +1336,8 @@
    11,
    9,
    18,
-   32
+   32,
+   18
   ]
  },
  "history": []

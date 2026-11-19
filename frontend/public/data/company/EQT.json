@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-19T02:47:35Z",
+ "generated_at": "2026-11-19T14:23:13Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -179,12 +179,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 1.7,
+   "score": 31.3,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 2,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -687,11 +689,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 1.7,
+  "score": 31.3,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 68.2,
+   "freshness": 50,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 11.0,
@@ -700,26 +702,26 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 23,
-    "independent": 23,
+    "signals": 25,
+    "independent": 25,
     "duplicates": 0,
     "sources": 6,
     "primary": 0,
@@ -728,7 +730,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -747,6 +751,55 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "59b364783a25b791",
+   "symbols": [
+    "EQT",
+    "EXE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Can Expand Energy Stock Hit $120?",
+   "summary": "Today's big story: Could Anthropic Stock Fall 25.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "trefis.com",
+   "url": "https://www.trefis.com/stock/exe/articles/626799/can-expand-energy-stock-hit-120/2026-11-19?.tsrc=rss",
+   "published_at": "2026-11-19T11:30:44Z",
+   "date_only": false,
+   "captured_at": "2026-11-19T14:23:20Z",
+   "fingerprint": "e5449deb78b76eff",
+   "primary_source": false,
+   "cluster_id": "59b364783a25b791",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Kann Energieaktie 120 $ erreichen?"
+  },
+  {
+   "id": "8670b295a44a0e3e",
+   "symbols": [
+    "EQT",
+    "EXE",
+    "WMB"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "How These 6 Natural Gas Stocks Make Money",
+   "summary": "Where a company operates along the natural gas value chain impacts how it makes money from the fuel.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/investing/2026/11/15/how-these-6-natural-gas-stocks-make-money/?.tsrc=rss",
+   "published_at": "2026-11-15T15:33:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-18T03:14:35Z",
+   "fingerprint": "3fdcc3a7c76cd799",
+   "primary_source": false,
+   "cluster_id": "8670b295a44a0e3e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Wie diese 6 Erdgasaktien Geld verdienen"
+  },
   {
    "id": "69eb625c437f7502",
    "symbols": [
@@ -1336,15 +1389,14 @@
  "attention": {
   "title": "EQT Corporation",
   "url": "https://en.wikipedia.org/wiki/EQT_Corporation",
-  "date": "2026-11-17",
-  "views_1d": 74,
-  "avg_7d": 53,
-  "avg_30d": 87,
-  "ratio_1d": 0.85,
-  "ratio_7d": 0.6,
+  "date": "2026-11-18",
+  "views_1d": 47,
+  "avg_7d": 49,
+  "avg_30d": 88,
+  "ratio_1d": 0.53,
+  "ratio_7d": 0.56,
   "spike": false,
   "series": [
-   61,
    73,
    86,
    87,
@@ -1373,7 +1425,8 @@
    25,
    30,
    54,
-   74
+   74,
+   47
   ]
  },
  "history": []

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-19T02:47:35Z",
+ "generated_at": "2026-11-19T14:23:13Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -179,11 +179,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 4.6,
+   "score": 28.2,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -677,11 +679,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 4.6,
+  "score": 28.2,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 26.2,
@@ -699,17 +701,17 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 8,
-    "independent": 8,
+    "signals": 10,
+    "independent": 10,
     "duplicates": 0,
     "sources": 4,
     "primary": 0,
@@ -718,7 +720,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -737,6 +741,54 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "9acc38d62fc31b35",
+   "symbols": [
+    "ERII"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Energy Recovery's PX Technology to Cut Energy Use at New Municipal Brackish Water Plant in Southern Italy",
+   "summary": "SAN LEANDRO, Calif., November 17, 2026--Energy Recovery (Nasdaq: ERII), a global leader in energy-efficient technology enabling affordable, reliable water and reduced emissions, today announced that its PX® Pressure Exchanger® (PX) technology will reduce the energy needed to prod",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/energy-recoverys-px-technology-cut-140000860.html?.tsrc=rss",
+   "published_at": "2026-11-17T14:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-19T14:23:22Z",
+   "fingerprint": "77706538c98602f8",
+   "primary_source": false,
+   "cluster_id": "9acc38d62fc31b35",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "PX-Technologie von Energy Recovery senkt den Energieverbrauch in einem neuen kommunalen Brackwasserkraftwerk in Süditalien"
+  },
+  {
+   "id": "053183dfb3377832",
+   "symbols": [
+    "CDZI",
+    "CWCO",
+    "ERII",
+    "PCYO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "RAIN to Merge with Tensor Networks, Start Colorado Upper Yampa Project",
+   "summary": "By Karen Roman Rain Enhancement Technologies Holdco, Inc. (Nasdaq: RAIN) said it entered into an agreement to merge with predictive AI technology company Tensor Networks, with the latter becoming a fully owned subsidiary of RAIN upon closure, expected in February 2027. RAIN will ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/rain-merge-tensor-networks-start-212731178.html?.tsrc=rss",
+   "published_at": "2026-11-13T21:27:31Z",
+   "date_only": false,
+   "captured_at": "2026-11-16T06:19:23Z",
+   "fingerprint": "c71baf73af091dde",
+   "primary_source": false,
+   "cluster_id": "053183dfb3377832",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "9648479dbc1b92df",
    "symbols": [
@@ -1357,15 +1409,14 @@
  "attention": {
   "title": "Energy Recovery",
   "url": "https://en.wikipedia.org/wiki/Energy_Recovery",
-  "date": "2026-11-17",
-  "views_1d": 12,
+  "date": "2026-11-18",
+  "views_1d": 5,
   "avg_7d": 5,
   "avg_30d": 4,
-  "ratio_1d": 2.93,
-  "ratio_7d": 1.29,
+  "ratio_1d": 1.27,
+  "ratio_7d": 1.38,
   "spike": false,
   "series": [
-   5,
    9,
    6,
    4,
@@ -1394,7 +1445,8 @@
    1,
    1,
    8,
-   12
+   12,
+   5
   ]
  },
  "history": []
