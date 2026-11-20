@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-20T02:34:38Z",
+ "generated_at": "2026-11-20T13:58:40Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -179,12 +179,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 1.1,
+   "score": 30.6,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "freshness",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 2,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -205,7 +207,20 @@
    "other_transactions": 6
   },
   "superinvestors": null,
-  "events": [],
+  "events": [
+   {
+    "symbol": "MBIN",
+    "type": "ex_dividend",
+    "date": "2026-12-15",
+    "payment_date": "2027-01-04",
+    "amount": 0.11,
+    "annual": 0.44,
+    "confirmed": true,
+    "source": "Nasdaq-Dividendenkalender",
+    "source_url": "https://www.nasdaq.com/market-activity/stocks/mbin/dividend-history",
+    "days_until": 25
+   }
+  ],
   "politicians": null,
   "first_seen": "2026-10-31",
   "archived_at": null,
@@ -585,11 +600,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 1.1,
+  "score": 30.6,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 68.2,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 6.2,
@@ -598,26 +613,26 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 17,
-    "independent": 17,
+    "signals": 18,
+    "independent": 18,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
@@ -626,7 +641,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "freshness",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -645,6 +662,52 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "e9c2c1eaf0b4876a",
+   "symbols": [
+    "MBIN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Merchants Capital to Acquire Remaining Interest in VIUM Capital, Expanding Its Seniors Housing and Healthcare Lending Platform",
+   "summary": "Merchants Bancorp (\"Merchants\") (Nasdaq: MBIN) today announced that its wholly owned subsidiary, Merchants Capital Corp. (\"MCC\") has entered into a definitive agreement to acquire the remaining ownership interest in VIUM Capital, LLC (\"VIUM\") that MCC does not currently own. VIUM",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/merchants-capital-acquire-remaining-interest-210500800.html?.tsrc=rss",
+   "published_at": "2026-11-19T21:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-20T13:59:00Z",
+   "fingerprint": "8b8c15ca0cf0601a",
+   "primary_source": false,
+   "cluster_id": "e9c2c1eaf0b4876a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Merchants Capital erwirbt verbleibende Beteiligung an VIUM Capital und erweitert Seniorenplattform für Wohnungsbau und Gesundheitswesen"
+  },
+  {
+   "id": "693b8377d746f6f3",
+   "symbols": [
+    "MBIN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Merchants Bancorp Declares Quarterly Common and Preferred Dividends",
+   "summary": "Merchants Bancorp (\"Merchants\") (Nasdaq: MBIN), parent company and registered bank holding company of Merchants Bank of Indiana (\"Merchants Bank\"), today announced that its Board of Directors declared the following quarterly cash dividends for the fourth quarter of 2026, in each ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/merchants-bancorp-declares-quarterly-common-210500237.html?.tsrc=rss",
+   "published_at": "2026-11-18T21:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-20T13:59:00Z",
+   "fingerprint": "1fdcef495bdbcf32",
+   "primary_source": false,
+   "cluster_id": "693b8377d746f6f3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Merchants Bancorp erklärt vierteljährliche gemeinsame und bevorzugte Dividenden"
+  },
   {
    "id": "e2d80059399d2670",
    "symbols": [

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-20T02:34:38Z",
+ "generated_at": "2026-11-20T13:58:40Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,13 +180,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 64.0,
+   "score": 27.5,
    "drivers": [
-    "news_flow",
     "price_volume_anomaly",
-    "source_diversity"
+    "social_attention",
+    "insider_activity"
    ],
-   "independent_7d": 4,
+   "independent_7d": 0,
    "independent_24h": 0
   },
   "political": {
@@ -198,10 +198,10 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 6,
-   "manipulation_risk": "unauffällig",
+   "mentions_7d": 7,
+   "manipulation_risk": "auffaellig",
    "mentions_24h": 2,
-   "sentiment_7d": 0.33,
+   "sentiment_7d": 0.43,
    "bullish_7d": 1,
    "bearish_7d": 0
   },
@@ -688,15 +688,15 @@
   ]
  },
  "intelligence_detail": {
-  "score": 64.0,
+  "score": 27.5,
   "components": {
-   "news_flow": 99.8,
+   "news_flow": 0.0,
    "freshness": 0,
-   "source_diversity": 80,
+   "source_diversity": 0,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 100.0,
-   "social_attention": 70.2,
+   "social_attention": 75.0,
    "insider_activity": 100.0
   },
   "windows": {
@@ -710,10 +710,10 @@
     "verified": 0
    },
    "7d": {
-    "signals": 4,
-    "independent": 4,
-    "duplicates": 1,
-    "sources": 4,
+    "signals": 0,
+    "independent": 0,
+    "duplicates": 0,
+    "sources": 0,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -729,9 +729,9 @@
    }
   },
   "drivers": [
-   "news_flow",
    "price_volume_anomaly",
-   "source_diversity"
+   "social_attention",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -1470,27 +1470,39 @@
  ],
  "social_detail": {
   "mentions_24h": 2,
-  "mentions_7d": 6,
-  "mentions_30d": 12,
-  "change_vs_baseline_pct": 75,
+  "mentions_7d": 7,
+  "mentions_30d": 13,
+  "change_vs_baseline_pct": 56,
   "engagement_7d": 0.0,
-  "sentiment_7d": 0.33,
+  "sentiment_7d": 0.43,
   "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
   "bullish_7d": 1,
   "bearish_7d": 0,
   "by_platform_7d": {
-   "stocktwits": 6
+   "stocktwits": 7
   },
   "communities_7d": {
-   "StockTwits": 6
+   "StockTwits": 7
   },
   "platforms": [
    "mastodon",
    "stocktwits"
   ],
-  "manipulation_flags": [],
-  "manipulation_risk": "unauffällig",
+  "manipulation_flags": [
+   "Wenige Accounts erzeugen Großteil der Erwähnungen"
+  ],
+  "manipulation_risk": "auffaellig",
   "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "stockchancellor",
+    "posted_at": "2026-11-20T04:59:26Z",
+    "url": "https://stocktwits.com/stockchancellor/message/669691528",
+    "text": "$PAL more insider buying in open market . 5 buyers and big trades in 2 days",
+    "engagement": 0.0,
+    "sentiment_label": null
+   },
    {
     "platform": "stocktwits",
     "community": "StockTwits",
@@ -1528,16 +1540,6 @@
     "posted_at": "2026-11-18T14:06:41Z",
     "url": "https://stocktwits.com/LALC_Capital/message/669457173",
     "text": "$PAL Proficient Auto Logistics insiders bought about 253K of stock on the open market on 16 and 17 Nov, none under a pre-set trading plan. Director Rohit Lal bought 70,000 shares at about 2.56 (about 179K), nearly doubling his direct holding. Director James Gattoni added 25,000 at about 2.60, and the President and COO 3,400 at 2.52. \n \nLal&#39;s Form 4: https://www.sec.gov/Archives/edgar/data/1998",
-    "engagement": 0.0,
-    "sentiment_label": null
-   },
-   {
-    "platform": "stocktwits",
-    "community": "StockTwits",
-    "author": "d_risk",
-    "posted_at": "2026-11-17T22:47:42Z",
-    "url": "https://stocktwits.com/d_risk/message/669412632",
-    "text": "$PAL - Proficient Auto Logistics, Inc. - 10Q - Updated Risk Factors \n \nProficient added that counterparties to its 2026 capped calls could default, fail to perform or exercise termination rights. \n \n#riskfactors #secfilings \n🟢 Added 🟠 Removed \nhttps://d-risk.ai/PAL?filing=h0skJtKrr-0Gm_tkmuEyb",
     "engagement": 0.0,
     "sentiment_label": null
    }

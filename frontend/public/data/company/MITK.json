@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-20T02:34:38Z",
+ "generated_at": "2026-11-20T13:58:40Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,11 +180,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 8.1,
+   "score": 24.2,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -693,11 +695,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 8.1,
+  "score": 24.2,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 45.7,
@@ -715,17 +717,17 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 1,
-    "independent": 1,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
@@ -734,7 +736,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -753,6 +757,29 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "8d2d6318099a1b35",
+   "symbols": [
+    "MITK"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Mitek Appoints Laura Apel as Chief Marketing Officer",
+   "summary": "SAN DIEGO, November 18, 2026--Mitek Systems, Inc. (NASDAQ: MITK), a global leader in digital identity verification and fraud prevention, today announced the appointment of Laura Apel as Chief Marketing Officer, effective November 16, 2026. Reporting directly to Chief Executive Of",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/articles/mitek-appoints-laura-apel-chief-211500936.html?.tsrc=rss",
+   "published_at": "2026-11-18T23:01:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-20T13:59:22Z",
+   "fingerprint": "66469c745d40d392",
+   "primary_source": false,
+   "cluster_id": "8d2d6318099a1b35",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Mitek ernennt Laura Apel zum Chief Marketing Officer"
+  },
   {
    "id": "e3f33432d064b99e",
    "symbols": [
@@ -1280,19 +1307,18 @@
  "attention": {
   "title": "Mitek Systems",
   "url": "https://en.wikipedia.org/wiki/Mitek_Systems",
-  "date": "2026-11-18",
-  "views_1d": 22,
+  "date": "2026-11-19",
+  "views_1d": 9,
   "avg_7d": 13,
   "avg_30d": 11,
-  "ratio_1d": 1.95,
+  "ratio_1d": 0.83,
   "ratio_7d": 1.18,
   "spike": false,
   "series": [
-   12,
-   11,
+   8,
    10,
-   20,
-   10,
+   17,
+   7,
    6,
    13,
    10,
@@ -1317,7 +1343,8 @@
    7,
    19,
    12,
-   22
+   22,
+   9
   ]
  },
  "history": []

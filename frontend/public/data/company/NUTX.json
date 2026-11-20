@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-20T02:34:38Z",
+ "generated_at": "2026-11-20T13:58:40Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -179,12 +179,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 1.4,
+   "score": 30.8,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "freshness",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 2,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -684,11 +686,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 1.4,
+  "score": 30.8,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 68.2,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 7.7,
@@ -697,26 +699,26 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 10,
-    "independent": 10,
+    "signals": 12,
+    "independent": 12,
     "duplicates": 0,
     "sources": 4,
     "primary": 0,
@@ -725,7 +727,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "freshness",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -744,6 +748,51 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "ca4b94e2e8cf3ba5",
+   "symbols": [
+    "NUTX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Nutex Health (NUTX) Stock Dropped, So What Is Driving Attention Now?",
+   "summary": "Nutex Health’s special dividend moves cash directly to shareholders Nutex Health (NUTX) has announced its first cash dividend as a public company, declaring a one time special payment of US$2.00 per share. This immediately puts cash returns on the table for existing investors. Re",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nutex-health-nutx-stock-dropped-001557643.html?.tsrc=rss",
+   "published_at": "2026-11-20T00:15:57Z",
+   "date_only": false,
+   "captured_at": "2026-11-20T14:00:44Z",
+   "fingerprint": "e3170adf0cb1856a",
+   "primary_source": false,
+   "cluster_id": "ca4b94e2e8cf3ba5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Nutex Health (NUTX) Aktie gefallen, also was treibt Aufmerksamkeit jetzt?"
+  },
+  {
+   "id": "069f3497ee5fffe5",
+   "symbols": [
+    "NUTX"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Nutex Health Declares First Dividend as a Public Company",
+   "summary": "Nutex Health Inc. (\"Nutex Health\" or the \"Company\") (Nasdaq Global Market and Nasdaq Texas: NUTX), today announced that its Board of Directors (the \"Board\"), acting by unanimous approval of its independent directors, has declared a special cash dividend of $2.00 per share of the ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nutex-health-declares-first-dividend-103000447.html?.tsrc=rss",
+   "published_at": "2026-11-17T10:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-20T14:00:44Z",
+   "fingerprint": "c76d9a79c61e5d8c",
+   "primary_source": false,
+   "cluster_id": "069f3497ee5fffe5",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "b9f2e591c781b60d",
    "symbols": [
@@ -1397,19 +1446,18 @@
  "attention": {
   "title": "Nutex Health",
   "url": "https://en.wikipedia.org/wiki/Nutex_Health",
-  "date": "2026-11-18",
-  "views_1d": 5,
+  "date": "2026-11-19",
+  "views_1d": 4,
   "avg_7d": 4,
   "avg_30d": 5,
-  "ratio_1d": 1.06,
-  "ratio_7d": 0.85,
+  "ratio_1d": 0.88,
+  "ratio_7d": 0.88,
   "spike": false,
   "series": [
-   7,
-   7,
+   6,
    7,
    3,
-   1,
+   0,
    3,
    7,
    5,
@@ -1434,7 +1482,8 @@
    2,
    3,
    4,
-   5
+   5,
+   4
   ]
  },
  "history": []

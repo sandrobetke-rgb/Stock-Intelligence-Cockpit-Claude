@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-20T02:34:38Z",
+ "generated_at": "2026-11-20T13:58:40Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -179,12 +179,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 3.4,
+   "score": 25.5,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "freshness",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 1,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -677,11 +679,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 3.4,
+  "score": 25.5,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 43.0,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 19.5,
@@ -690,27 +692,27 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 1,
+    "independent": 1,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 1,
+    "independent": 1,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 9,
-    "independent": 9,
-    "duplicates": 0,
+    "signals": 10,
+    "independent": 10,
+    "duplicates": 1,
     "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
@@ -718,7 +720,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "freshness",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -737,6 +741,28 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "adfce87e894bd621",
+   "symbols": [
+    "MRTN"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "MARTEN TRANSPORT DECLARES QUARTERLY DIVIDEND",
+   "summary": "MONDOVI, Wis., Nov. 19, 2026 (GLOBE NEWSWIRE) -- Marten Transport, Ltd. (Nasdaq/GS:MRTN) announced today that its Board of Directors has declared a regular quarterly cash dividend of $0.06 per share of common stock. The dividend will be payable on December 30, 2026 to stockholder",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/marten-transport-declares-quarterly-dividend-210200816.html?.tsrc=rss",
+   "published_at": "2026-11-19T21:02:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-20T13:59:42Z",
+   "fingerprint": "9735a9683f218adb",
+   "primary_source": false,
+   "cluster_id": "06b2284be00f6146",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "65ace04a709efeeb",
    "symbols": [
@@ -956,7 +982,7 @@
    "primary_source": false,
    "cluster_id": "74517f0adf9f28e5",
    "independence": "original",
-   "verification": "Unverified",
+   "verification": "Outdated",
    "feed": "yahoo_rss"
   },
   {
@@ -1112,7 +1138,7 @@
    "primary_source": false,
    "cluster_id": "06b2284be00f6146",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   },
   {
@@ -1223,20 +1249,19 @@
  "attention": {
   "title": "Marten Transport",
   "url": "https://en.wikipedia.org/wiki/Marten_Transport",
-  "date": "2026-11-18",
-  "views_1d": 6,
-  "avg_7d": 8,
-  "avg_30d": 8,
-  "ratio_1d": 0.8,
-  "ratio_7d": 1.07,
+  "date": "2026-11-19",
+  "views_1d": 2,
+  "avg_7d": 7,
+  "avg_30d": 7,
+  "ratio_1d": 0.28,
+  "ratio_7d": 1.01,
   "spike": false,
   "series": [
-   6,
-   4,
-   13,
+   3,
    12,
-   8,
-   9,
+   12,
+   7,
+   7,
    5,
    5,
    9,
@@ -1260,7 +1285,8 @@
    5,
    6,
    9,
-   6
+   6,
+   2
   ]
  },
  "history": []

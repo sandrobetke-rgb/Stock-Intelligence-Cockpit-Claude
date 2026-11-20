@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-20T02:34:38Z",
+ "generated_at": "2026-11-20T13:58:40Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -179,11 +179,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 5.2,
+   "score": 21.4,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -205,7 +207,20 @@
    "other_transactions": 0
   },
   "superinvestors": null,
-  "events": [],
+  "events": [
+   {
+    "symbol": "MVBF",
+    "type": "ex_dividend",
+    "date": "2026-12-01",
+    "payment_date": "2026-12-15",
+    "amount": 0.17,
+    "annual": 0.68,
+    "confirmed": true,
+    "source": "Nasdaq-Dividendenkalender",
+    "source_url": "https://www.nasdaq.com/market-activity/stocks/mvbf/dividend-history",
+    "days_until": 11
+   }
+  ],
   "politicians": null,
   "first_seen": "2026-10-31",
   "archived_at": null,
@@ -585,11 +600,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 5.2,
+  "score": 21.4,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 29.6,
@@ -607,17 +622,17 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 14,
-    "independent": 14,
+    "signals": 15,
+    "independent": 15,
     "duplicates": 0,
     "sources": 4,
     "primary": 0,
@@ -626,7 +641,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -645,6 +662,28 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "5c1b60ec91610f65",
+   "symbols": [
+    "MVBF"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "MVB Financial Corp. Declares Fourth Quarter 2026 Dividend",
+   "summary": "FAIRMONT, W.Va., November 18, 2026--MVB Financial Corp. (NASDAQ: MVBF) (\"MVB\" or the \"Company\") today announced that its Board of Directors has declared a quarterly cash dividend of $0.17 per share, consistent with the previous quarter’s dividend. The dividend is payable on Decem",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/mvb-financial-corp-declares-fourth-213000416.html?.tsrc=rss",
+   "published_at": "2026-11-18T21:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-20T13:59:54Z",
+   "fingerprint": "4be259756b46e29e",
+   "primary_source": false,
+   "cluster_id": "5c1b60ec91610f65",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "d2cd90720b37803b",
    "symbols": [
