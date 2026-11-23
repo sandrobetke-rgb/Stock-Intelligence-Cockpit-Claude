@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-21T02:48:47Z",
+ "generated_at": "2026-11-23T15:55:03Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,13 +180,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 3.8,
+   "score": 36.3,
    "drivers": [
-    "price_volume_anomaly",
-    "insider_activity"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 3,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -229,7 +230,7 @@
     "confirmed": true,
     "source": "Yahoo Finance",
     "source_url": "https://finance.yahoo.com/quote/SMA",
-    "days_until": 9
+    "days_until": 7
    }
   ],
   "politicians": null,
@@ -698,11 +699,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 3.8,
+  "score": 36.3,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 86.0,
+   "freshness": 50,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 18.5,
@@ -711,27 +712,27 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 3,
+    "independent": 3,
+    "duplicates": 1,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 12,
-    "independent": 12,
-    "duplicates": 3,
+    "signals": 15,
+    "independent": 15,
+    "duplicates": 4,
     "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
@@ -739,8 +740,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly",
-   "insider_activity"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -759,6 +761,74 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "41702a8da77657e8",
+   "symbols": [
+    "SMA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "SmartStop Self Storage REIT, Inc. Expands Presence in Asheville MSA With Acquisition of Woodfin Facility",
+   "summary": "LADERA RANCH, Calif., November 23, 2026--SmartStop Self Storage REIT, Inc. Grows Presence in Asheville MSA With Acquisition of Woodfin Facility",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/smartstop-self-storage-reit-inc-102700611.html?.tsrc=rss",
+   "published_at": "2026-11-23T10:27:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-23T15:55:54Z",
+   "fingerprint": "7e8daf56b9060aca",
+   "primary_source": false,
+   "cluster_id": "41702a8da77657e8",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "SmartStop Self Storage REIT, Inc. erweitert seine Präsenz in Asheville MSA mit der Übernahme der Woodfin-Anlage"
+  },
+  {
+   "id": "42041a311be278bf",
+   "symbols": [
+    "SMA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "SmartStop Self Storage REIT: 3 Key Takeaways for Long-Term Investors",
+   "summary": "Rate cuts are one lever; the other is selling noncore stores to fund dense clusters, a trade-off investors should weigh.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/takeaways/2026/11/20/smartstop-self-storage-reit-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+   "published_at": "2026-11-20T16:07:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-23T15:55:54Z",
+   "fingerprint": "caf220bf302d0105",
+   "primary_source": false,
+   "cluster_id": "42041a311be278bf",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "SmartStop Self Storage REIT: 3 wichtige Takeaways für langfristige Investoren"
+  },
+  {
+   "id": "4455727fbbe7ef9c",
+   "symbols": [
+    "SMA"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Strategic Storage Trust VI, Inc. Reports Third Quarter 2026 Results",
+   "summary": "LADERA RANCH, Calif., November 19, 2026--Strategic Storage Trust VI, Inc. (\"SST VI\"), a publicly registered non-traded real estate investment trust sponsored by an affiliate of SmartStop Self Storage REIT, Inc. (\"SmartStop\") (NYSE: SMA), announced operating results for the three ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/strategic-storage-trust-vi-inc-214100039.html?.tsrc=rss",
+   "published_at": "2026-11-19T21:41:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-23T15:55:54Z",
+   "fingerprint": "eee036860be1b795",
+   "primary_source": false,
+   "cluster_id": "da924ce9f46221e3",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "f652d824add2adcf",
    "symbols": [
@@ -1197,7 +1267,7 @@
    "primary_source": false,
    "cluster_id": "da924ce9f46221e3",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   },
   {
