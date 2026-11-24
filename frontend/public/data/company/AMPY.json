@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T05:29:54Z",
+ "generated_at": "2026-11-24T15:48:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,11 +180,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 8.5,
+   "score": 24.7,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -679,11 +681,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 8.5,
+  "score": 24.7,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 48.3,
@@ -701,17 +703,17 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 3,
-    "independent": 3,
+    "signals": 4,
+    "independent": 4,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
@@ -720,7 +722,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -739,6 +743,30 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "b709e54ce1ccdd32",
+   "symbols": [
+    "AMPY",
+    "TALO"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "3 Upstream Oil Stocks Retail Investors Are Watching As Brent Prices Slide",
+   "summary": "Oil markets are being pulled in opposite directions right now, with renewed Houthi attacks near Riyadh pushing geopolitical risk higher while traders still focus on potential supply surplus and a third straight weekly decline for Brent and WTI. That mix can punish some stocks and",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/energy/articles/3-upstream-oil-stocks-retail-051849309.html?.tsrc=rss",
+   "published_at": "2026-11-20T05:18:49Z",
+   "date_only": false,
+   "captured_at": "2026-11-23T15:56:44Z",
+   "fingerprint": "98122294d095ab89",
+   "primary_source": false,
+   "cluster_id": "b709e54ce1ccdd32",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "3 Upstream-Ölaktien Kleinanleger beobachten, wie Brent Preise Slide"
+  },
   {
    "id": "8b1ba8790bf3f5eb",
    "symbols": [
@@ -1195,15 +1223,14 @@
  "attention": {
   "title": "Amplify Energy",
   "url": "https://en.wikipedia.org/wiki/Amplify_Energy",
-  "date": "2026-11-22",
-  "views_1d": 0,
+  "date": "2026-11-23",
+  "views_1d": 2,
   "avg_7d": 3,
   "avg_30d": 3,
-  "ratio_1d": 0.0,
-  "ratio_7d": 0.83,
+  "ratio_1d": 0.64,
+  "ratio_7d": 0.82,
   "spike": false,
   "series": [
-   1,
    2,
    8,
    8,
@@ -1232,7 +1259,8 @@
    5,
    3,
    0,
-   0
+   0,
+   2
   ]
  },
  "history": []

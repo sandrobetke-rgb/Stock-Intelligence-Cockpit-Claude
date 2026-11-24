@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T05:29:54Z",
+ "generated_at": "2026-11-24T15:48:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,12 +180,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 14.1,
+   "score": 45.2,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 2,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -195,14 +197,7 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": {
-   "mentions_7d": 0,
-   "manipulation_risk": "unauffällig",
-   "mentions_24h": 0,
-   "sentiment_7d": null,
-   "bullish_7d": 0,
-   "bearish_7d": 0
-  },
+  "social": null,
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
@@ -686,39 +681,39 @@
   ]
  },
  "intelligence_detail": {
-  "score": 14.1,
+  "score": 45.2,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 68.2,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 89.3,
-   "social_attention": 0.0,
+   "social_attention": null,
    "insider_activity": null
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 10,
-    "independent": 10,
+    "signals": 12,
+    "independent": 12,
     "duplicates": 0,
     "sources": 4,
     "primary": 0,
@@ -727,7 +722,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -746,6 +743,52 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "5b6ce5f0a3e46a8a",
+   "symbols": [
+    "BLZE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Backblaze Jumps 16% With No Company News Behind Move on Nov. 23",
+   "summary": "Backblaze shares rose 16.0% without company-specific news as the broader market rallied.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/backblaze-jumps-16-no-company-170334683.html?.tsrc=rss",
+   "published_at": "2026-11-23T17:03:34Z",
+   "date_only": false,
+   "captured_at": "2026-11-24T15:50:25Z",
+   "fingerprint": "4993de9d6ed4c234",
+   "primary_source": false,
+   "cluster_id": "5b6ce5f0a3e46a8a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Backblaze springt 16% ohne Unternehmensnachrichten hinter Bewegung am 23. November"
+  },
+  {
+   "id": "45b1a9667901af92",
+   "symbols": [
+    "BLZE"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Nine in 10 Enterprises Say AI Data Growth is Changing Their Storage Management Strategy",
+   "summary": "SAN FRANCISCO, November 23, 2026--Backblaze, Inc. (Nasdaq: BLZE), the high-performance capacity tier for AI, today released The Storage Impact of AI, a survey conducted by Dimensional Research of more than 400 cloud storage decision makers with more than 250 TB of data in the pub",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/technology/ai/articles/nine-10-enterprises-ai-data-140000442.html?.tsrc=rss",
+   "published_at": "2026-11-23T14:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-24T15:50:25Z",
+   "fingerprint": "37a64fc7e32fbd1c",
+   "primary_source": false,
+   "cluster_id": "45b1a9667901af92",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Neun von zehn Unternehmen sagen, dass das Wachstum von KI-Daten ihre Speichermanagementstrategie verändert"
+  },
   {
    "id": "5838fbd0c3442a5c",
    "symbols": [
@@ -1463,37 +1506,18 @@
    "report_date": "2026-09-30"
   }
  ],
- "social_detail": {
-  "mentions_24h": 0,
-  "mentions_7d": 0,
-  "mentions_30d": 2,
-  "change_vs_baseline_pct": null,
-  "engagement_7d": 0,
-  "sentiment_7d": null,
-  "sentiment_basis": "algorithmisch (Lexikon)",
-  "bullish_7d": 0,
-  "bearish_7d": 0,
-  "by_platform_7d": {},
-  "communities_7d": {},
-  "platforms": [
-   "stocktwits"
-  ],
-  "manipulation_flags": [],
-  "manipulation_risk": "unauffällig",
-  "top_posts": []
- },
+ "social_detail": null,
  "attention": {
   "title": "Backblaze",
   "url": "https://en.wikipedia.org/wiki/Backblaze",
-  "date": "2026-11-22",
-  "views_1d": 48,
-  "avg_7d": 61,
-  "avg_30d": 57,
-  "ratio_1d": 0.84,
-  "ratio_7d": 1.07,
+  "date": "2026-11-23",
+  "views_1d": 53,
+  "avg_7d": 60,
+  "avg_30d": 58,
+  "ratio_1d": 0.91,
+  "ratio_7d": 1.03,
   "spike": false,
   "series": [
-   45,
    44,
    55,
    49,
@@ -1522,7 +1546,8 @@
    49,
    53,
    83,
-   48
+   48,
+   53
   ]
  },
  "history": []

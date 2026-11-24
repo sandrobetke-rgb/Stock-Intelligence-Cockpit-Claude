@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T05:29:54Z",
+ "generated_at": "2026-11-24T15:48:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -182,12 +182,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 9.4,
+   "score": 44.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 5,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -690,11 +692,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 9.4,
+  "score": 44.1,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 59.5,
@@ -703,26 +705,26 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 5,
+    "independent": 5,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 16,
-    "independent": 16,
+    "signals": 21,
+    "independent": 21,
     "duplicates": 0,
     "sources": 3,
     "primary": 0,
@@ -731,7 +733,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -750,6 +754,124 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "527f87fe779557b3",
+   "symbols": [
+    "AGL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "agilon health to Participate in Upcoming Conference",
+   "summary": "WESTERVILLE, Ohio, November 23, 2026--agilon health, inc. (NYSE: AGL), the trusted partner empowering physicians to transform health care in our communities, today announced that members of its management team will participate in a fireside chat at the 9th Annual Evercore Healthc",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/agilon-health-participate-upcoming-conference-210500826.html?.tsrc=rss",
+   "published_at": "2026-11-23T21:05:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-24T15:48:11Z",
+   "fingerprint": "a8a675f8e83a93ba",
+   "primary_source": false,
+   "cluster_id": "527f87fe779557b3",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "agilon health nimmt an der bevorstehenden Konferenz teil"
+  },
+  {
+   "id": "6e6c3792281b7507",
+   "symbols": [
+    "AGL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Wall Street Analysts Predict a 36.39% Upside in Agilon (AGL): Here's  What You Should Know",
+   "summary": "The average of price targets set by Wall Street analysts indicates a potential upside of 36.4% in Agilon (AGL). While the effectiveness of this highly sought-after metric is questionable, the positive trend in earnings estimate revisions might translate into an upside in the stoc",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-predict-36-135502609.html?.tsrc=rss",
+   "published_at": "2026-11-23T13:55:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-24T15:48:11Z",
+   "fingerprint": "d44f10cb3bbf116f",
+   "primary_source": false,
+   "cluster_id": "6e6c3792281b7507",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Wall Street Analysten prognostizieren einen Anstieg von 36,39% in Agilon (AGL): Hier ist, was Sie wissen sollten"
+  },
+  {
+   "id": "eec6d7a0fe99889b",
+   "symbols": [
+    "AGL",
+    "AIZ",
+    "KROS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Best Momentum Stocks to Buy for November 19th",
+   "summary": "AGL, AIZ and KROS made it to the Zacks Rank #1 (Strong Buy) momentum stocks list on November 19th, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/best-momentum-stocks-buy-november-140000421.html?.tsrc=rss",
+   "published_at": "2026-11-19T14:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-20T02:43:11Z",
+   "fingerprint": "a8dc869406bc5e3e",
+   "primary_source": false,
+   "cluster_id": "eec6d7a0fe99889b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Beste Momentum-Aktien zum Kaufen für den 19. November"
+  },
+  {
+   "id": "7ad623339880864f",
+   "symbols": [
+    "AGL",
+    "AIZ",
+    "KROS",
+    "PANL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "New Strong Buy Stocks for November 19th",
+   "summary": "KROS, AIZ, AGL, EQNR and PANL have been added to the Zacks Rank #1 (Strong Buy) List on November 19th, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/strong-buy-stocks-november-19th-082800722.html?.tsrc=rss",
+   "published_at": "2026-11-19T08:28:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-20T02:43:11Z",
+   "fingerprint": "e955219ff30acd25",
+   "primary_source": false,
+   "cluster_id": "7ad623339880864f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "2c2030a943a9ab36",
+   "symbols": [
+    "AGL"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is agilon health (AGL) Still Reasonable After Its Huge Run?",
+   "summary": "agilon health has logged an extremely strong share price run over the past year, which now puts a spotlight on whether the current market value is in line with the company’s sales. With that kind of move already in the rear-view mirror, the stock’s latest pullback leaves investor",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/agilon-health-agl-still-reasonable-232337610.html?.tsrc=rss",
+   "published_at": "2026-11-18T23:23:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-24T15:48:11Z",
+   "fingerprint": "7138eff5d199a097",
+   "primary_source": false,
+   "cluster_id": "2c2030a943a9ab36",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "47fe5bbc4d3020a8",
    "symbols": [

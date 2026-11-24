@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T05:29:54Z",
+ "generated_at": "2026-11-24T15:48:04Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,14 +180,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 36.4,
+   "score": 49.0,
    "drivers": [
-    "price_volume_anomaly",
     "news_flow",
-    "insider_activity"
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 1,
-   "independent_24h": 0
+   "independent_7d": 2,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -681,10 +681,10 @@
   ]
  },
  "intelligence_detail": {
-  "score": 36.4,
+  "score": 49.0,
   "components": {
-   "news_flow": 43.0,
-   "freshness": 0,
+   "news_flow": 68.2,
+   "freshness": 50,
    "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
@@ -694,15 +694,6 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
-    "primary": 0,
-    "analyst_changes": 0,
-    "verified": 0
-   },
-   "7d": {
     "signals": 1,
     "independent": 1,
     "duplicates": 0,
@@ -711,9 +702,18 @@
     "analyst_changes": 0,
     "verified": 0
    },
+   "7d": {
+    "signals": 2,
+    "independent": 2,
+    "duplicates": 0,
+    "sources": 1,
+    "primary": 0,
+    "analyst_changes": 0,
+    "verified": 0
+   },
    "30d": {
-    "signals": 16,
-    "independent": 16,
+    "signals": 18,
+    "independent": 18,
     "duplicates": 0,
     "sources": 4,
     "primary": 0,
@@ -722,9 +722,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly",
    "news_flow",
-   "insider_activity"
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -743,6 +743,51 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "44d29f82dce5a2a4",
+   "symbols": [
+    "AIP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Arteris Jumps 15.4% as Chip Stocks Rally on Nvidia News on Monday",
+   "summary": "Shares rose 15.4% as chip stocks rallied after Nvidia reinstated Jensen Huang as CEO.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/arteris-jumps-15-4-chip-170326307.html?.tsrc=rss",
+   "published_at": "2026-11-23T17:03:26Z",
+   "date_only": false,
+   "captured_at": "2026-11-24T15:48:17Z",
+   "fingerprint": "3ded370bba6786c9",
+   "primary_source": false,
+   "cluster_id": "44d29f82dce5a2a4",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Arteris springt um 15,4%, da Chip-Aktien am Montag auf Nvidia News ansteigen"
+  },
+  {
+   "id": "8a95a89a7c3f72c9",
+   "symbols": [
+    "AIP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Arteris (AIP) Stock Fair Value Moves Lower As Analysts Weigh Royalty Growth Timing",
+   "summary": "Arteris is back in focus after a reset in valuation assumptions, with a fair value estimate moving from US$37.29 to US$33.00. Recent analyst commentary combines optimism about Arteris execution and royalty potential with more cautious views on how quickly that story might transla",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/arteris-aip-stock-fair-value-043337390.html?.tsrc=rss",
+   "published_at": "2026-11-19T04:33:37Z",
+   "date_only": false,
+   "captured_at": "2026-11-24T15:48:17Z",
+   "fingerprint": "06bb284493301b97",
+   "primary_source": false,
+   "cluster_id": "8a95a89a7c3f72c9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "f8aa151124f34e76",
    "symbols": [
@@ -2077,15 +2122,14 @@
  "attention": {
   "title": "Arteris",
   "url": "https://en.wikipedia.org/wiki/Arteris",
-  "date": "2026-11-22",
-  "views_1d": 8,
-  "avg_7d": 8,
+  "date": "2026-11-23",
+  "views_1d": 10,
+  "avg_7d": 9,
   "avg_30d": 13,
-  "ratio_1d": 0.61,
-  "ratio_7d": 0.65,
+  "ratio_1d": 0.77,
+  "ratio_7d": 0.67,
   "spike": false,
   "series": [
-   7,
    5,
    11,
    18,
@@ -2114,7 +2158,8 @@
    8,
    11,
    4,
-   8
+   8,
+   10
   ]
  },
  "history": []
