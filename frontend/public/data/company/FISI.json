@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-25T04:34:17Z",
+ "generated_at": "2026-11-25T15:32:05Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -178,12 +178,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 3.3,
+   "score": 19.5,
    "drivers": [
-    "insider_activity",
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "insider_activity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -195,10 +196,10 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 0,
+   "mentions_7d": 1,
    "manipulation_risk": "unauffällig",
-   "mentions_24h": 0,
-   "sentiment_7d": null,
+   "mentions_24h": 1,
+   "sentiment_7d": 1.0,
    "bullish_7d": 0,
    "bearish_7d": 0
   },
@@ -610,15 +611,15 @@
   ]
  },
  "intelligence_detail": {
-  "score": 3.3,
+  "score": 19.5,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 1.9,
-   "social_attention": 0.0,
+   "social_attention": 25.0,
    "insider_activity": 60
   },
   "windows": {
@@ -632,18 +633,18 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 1,
+    "independent": 1,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 8,
-    "independent": 8,
-    "duplicates": 0,
+    "signals": 9,
+    "independent": 9,
+    "duplicates": 1,
     "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
@@ -651,8 +652,9 @@
    }
   },
   "drivers": [
-   "insider_activity",
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "insider_activity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -671,6 +673,28 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "525716b742548085",
+   "symbols": [
+    "FISI"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Financial Institutions, Inc. Announces Quarterly Cash Dividend",
+   "summary": "WARSAW, N.Y., Nov. 19, 2026 (GLOBE NEWSWIRE) -- Financial Institutions, Inc. (NASDAQ: FISI) (the “Company”), parent company of Five Star Bank and Courier Capital, LLC, announced that on November 18, 2026, its Board of Directors approved a quarterly cash dividend of $0.32 per outs",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/financial-institutions-inc-announces-quarterly-211500550.html?.tsrc=rss",
+   "published_at": "2026-11-19T21:15:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-25T15:33:52Z",
+   "fingerprint": "51ae29cb00a5931b",
+   "primary_source": false,
+   "cluster_id": "1cb1abac79559c9d",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "7cc79a06221630ee",
    "symbols": [
@@ -1089,7 +1113,7 @@
    "primary_source": false,
    "cluster_id": "1cb1abac79559c9d",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   }
  ],
@@ -1152,36 +1176,51 @@
   }
  ],
  "social_detail": {
-  "mentions_24h": 0,
-  "mentions_7d": 0,
-  "mentions_30d": 7,
+  "mentions_24h": 1,
+  "mentions_7d": 1,
+  "mentions_30d": 8,
   "change_vs_baseline_pct": null,
-  "engagement_7d": 0,
-  "sentiment_7d": null,
+  "engagement_7d": 0.0,
+  "sentiment_7d": 1.0,
   "sentiment_basis": "algorithmisch (Lexikon)",
   "bullish_7d": 0,
   "bearish_7d": 0,
-  "by_platform_7d": {},
-  "communities_7d": {},
+  "by_platform_7d": {
+   "stocktwits": 1
+  },
+  "communities_7d": {
+   "StockTwits": 1
+  },
   "platforms": [
-   "mastodon"
+   "mastodon",
+   "stocktwits"
   ],
   "manipulation_flags": [],
   "manipulation_risk": "unauffällig",
-  "top_posts": []
+  "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "openmarketalerts",
+    "posted_at": "2026-11-25T14:11:56Z",
+    "url": "https://stocktwits.com/openmarketalerts/message/670157511",
+    "text": "Cluster buys filed Tue, Nov 24 \n \n$USEA United Maritime — 2 insiders bought $176K (Nov 13–23) \n$FISI Financial Institutions — 2 insiders bought $102K (Nov 2–23) \n$KMT Kennametal — 3 insiders bought $323K (Nov 5–23) \n$MPB Mid Penn Bancorp — 2 insiders bought $735K (Nov 10–20) \n$NPCE NeuroPace — 4 insiders bought $399K (Nov 17–24) \n \nOpen-market purchases from SEC filings. No stock grants, no option",
+    "engagement": 0.0,
+    "sentiment_label": null
+   }
+  ]
  },
  "attention": {
   "title": "Financial institution",
   "url": "https://en.wikipedia.org/wiki/Financial_institution",
-  "date": "2026-11-23",
-  "views_1d": 126,
-  "avg_7d": 111,
-  "avg_30d": 120,
-  "ratio_1d": 1.05,
-  "ratio_7d": 0.93,
+  "date": "2026-11-24",
+  "views_1d": 117,
+  "avg_7d": 108,
+  "avg_30d": 121,
+  "ratio_1d": 0.97,
+  "ratio_7d": 0.89,
   "spike": false,
   "series": [
-   101,
    132,
    139,
    163,
@@ -1210,7 +1249,8 @@
    114,
    89,
    89,
-   126
+   126,
+   117
   ]
  },
  "history": []

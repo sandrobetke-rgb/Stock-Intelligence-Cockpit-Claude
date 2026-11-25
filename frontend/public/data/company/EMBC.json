@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-25T04:34:17Z",
+ "generated_at": "2026-11-25T15:32:05Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,12 +180,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 17.6,
+   "score": 72.9,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 7,
+   "independent_24h": 3
   },
   "political": {
    "relevance": 0,
@@ -225,6 +227,18 @@
     "source": "Nasdaq-Earnings-Kalender",
     "source_url": "https://www.nasdaq.com/market-activity/stocks/embc/earnings",
     "days_until": -1
+   },
+   {
+    "symbol": "EMBC",
+    "type": "ex_dividend",
+    "date": "2026-12-04",
+    "payment_date": "2026-12-18",
+    "amount": 0.01,
+    "annual": 0.04,
+    "confirmed": true,
+    "source": "Nasdaq-Dividendenkalender",
+    "source_url": "https://www.nasdaq.com/market-activity/stocks/embc/dividend-history",
+    "days_until": 9
    }
   ],
   "politicians": null,
@@ -693,11 +707,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 17.6,
+  "score": 72.9,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 100.0,
+   "source_diversity": 80,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 100.0,
@@ -706,35 +720,37 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 8,
+    "independent": 7,
+    "duplicates": 2,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 1,
-    "independent": 1,
-    "duplicates": 0,
-    "sources": 1,
+    "signals": 9,
+    "independent": 8,
+    "duplicates": 2,
+    "sources": 4,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -753,6 +769,186 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "71eec1b129d78e9b",
+   "symbols": [
+    "EMBC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Embecta (EMBC) Stock Is Down 9.8% Today After Earnings Surge, Market Selloff",
+   "summary": "Embecta shares fell 9.8% on Wednesday, Nov. 25, without company-specific news, as the market sold off a day after a 40.6% earnings-driven jump.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/embecta-embc-stock-down-9-150038364.html?.tsrc=rss",
+   "published_at": "2026-11-25T15:00:38Z",
+   "date_only": false,
+   "captured_at": "2026-11-25T15:32:57Z",
+   "fingerprint": "af5d12e0638632fb",
+   "primary_source": false,
+   "cluster_id": "71eec1b129d78e9b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Embecta (EMBC) Aktie ist heute um 9,8% gesunken, nachdem der Gewinnanstieg, Marktverkauf"
+  },
+  {
+   "id": "76e739c93321e1b6",
+   "symbols": [
+    "EMBC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Embecta Corp. Q4 2026 Earnings Call Summary",
+   "summary": "Moby summary of Embecta Corp.'s Q4 2026 earnings call",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "app.moby.co",
+   "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-embecta-corp-q4-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+   "published_at": "2026-11-24T21:54:23Z",
+   "date_only": false,
+   "captured_at": "2026-11-25T15:32:57Z",
+   "fingerprint": "28cd021c6acb8f6d",
+   "primary_source": false,
+   "cluster_id": "76e739c93321e1b6",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "68bd286bad35b21a",
+   "symbols": [
+    "EMBC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Embecta (EMBC) Q4 2026 Earnings Call Transcript",
+   "summary": "Acquisition gains offset U.S. share losses, but margin guidance tells a more cautious story.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/11/24/embecta-embc-q4-2026-earnings-call-transcript/?.tsrc=rss",
+   "published_at": "2026-11-24T19:18:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-25T15:32:57Z",
+   "fingerprint": "1da778bbae177dba",
+   "primary_source": false,
+   "cluster_id": "68bd286bad35b21a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "4c74ef9a0747ae2e",
+   "symbols": [
+    "EMBC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Embecta Q4 Earnings Call Highlights",
+   "summary": "Embecta (NASDAQ:EMBC) reported fiscal fourth-quarter revenue growth and earnings above its latest full-year guidance, but forecast lower organic revenue and a narrower adjusted operating margin in fiscal 2027 as it contends with U.S. market pressure and higher costs. The diabetes",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "marketbeat.com",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-embecta-q4-earnings-call-highlights-2026-11-24/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "published_at": "2026-11-24T15:14:55Z",
+   "date_only": false,
+   "captured_at": "2026-11-25T15:32:57Z",
+   "fingerprint": "32e97db3f9c19b85",
+   "primary_source": false,
+   "cluster_id": "4c74ef9a0747ae2e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "1155ba996efbfddc",
+   "symbols": [
+    "EMBC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Embecta (EMBC) Stock Is Up 28.7% Today: Q4 Earnings Beat Estimates",
+   "summary": "On Tuesday, Nov. 24, shares rose 28.7% after Embecta reported Q4 results that beat estimates, according to GuruFocus.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/embecta-embc-stock-28-7-150035346.html?.tsrc=rss",
+   "published_at": "2026-11-24T15:00:35Z",
+   "date_only": false,
+   "captured_at": "2026-11-25T15:32:57Z",
+   "fingerprint": "4e44eab2d530b675",
+   "primary_source": false,
+   "cluster_id": "1155ba996efbfddc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Embecta (EMBC) Aktie steigt heute um 28,7%: Q4-Ergebnis schlägt Schätzungen"
+  },
+  {
+   "id": "8402e6f32c2b1403",
+   "symbols": [
+    "EMBC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Embecta Reports Fiscal Fourth Quarter and Full Year 2026 Financial Results",
+   "summary": "PARSIPPANY, N.J., Nov. 24, 2026 (GLOBE NEWSWIRE) -- Embecta Corp. (“embecta”) (Nasdaq: EMBC), a global company that is advancing its 100-year legacy in insulin delivery to become a broad-based medical supplies company, today reported its fiscal fourth quarter and full year 2026 f",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/embecta-reports-fiscal-fourth-quarter-113000604.html?.tsrc=rss",
+   "published_at": "2026-11-24T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-25T15:32:57Z",
+   "fingerprint": "617ba1b20c130569",
+   "primary_source": false,
+   "cluster_id": "b3383396fba4487f",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Embecta meldet Finanzergebnisse des vierten Quartals und des Gesamtjahres 2026"
+  },
+  {
+   "id": "cec2982d1350d864",
+   "symbols": [
+    "EMBC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Embecta Announces Quarterly Cash Dividend",
+   "summary": "PARSIPPANY, N.J., Nov. 24, 2026 (GLOBE NEWSWIRE) -- The Board of Directors of Embecta Corp. (“embecta”) (Nasdaq: EMBC) has declared a quarterly cash dividend of $0.01 for each issued and outstanding share of the Company’s common stock. The dividend is payable on December 18, 2026",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/embecta-announces-quarterly-cash-dividend-113000383.html?.tsrc=rss",
+   "published_at": "2026-11-24T11:30:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-25T15:32:57Z",
+   "fingerprint": "b08511f161413430",
+   "primary_source": false,
+   "cluster_id": "809ac69c6303d6c1",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "b3383396fba4487f",
+   "symbols": [
+    "EMBC"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "embecta to Report Fiscal Fourth Quarter and Full Year 2026 Financial Results",
+   "summary": "PARSIPPANY, N.J., Nov. 20, 2026 (GLOBE NEWSWIRE) -- Embecta Corp. (“embecta”) (Nasdaq: EMBC), a global company that is advancing its 100-year legacy in insulin delivery to become a broad-based medical supplies company, will host a conference call to discuss its fiscal fourth quar",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/embecta-report-fiscal-fourth-quarter-182200303.html?.tsrc=rss",
+   "published_at": "2026-11-20T18:22:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-25T15:32:57Z",
+   "fingerprint": "ac755efb622d5706",
+   "primary_source": false,
+   "cluster_id": "b3383396fba4487f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "embecta zum Bericht Fiskalisches viertes Quartal und Gesamtjahr 2026 Finanzergebnisse"
+  },
   {
    "id": "ab59f3f52a0dc152",
    "symbols": [
@@ -971,7 +1167,7 @@
    "primary_source": false,
    "cluster_id": "809ac69c6303d6c1",
    "independence": "original",
-   "verification": "Outdated",
+   "verification": "Unverified",
    "feed": "yahoo_rss"
   },
   {

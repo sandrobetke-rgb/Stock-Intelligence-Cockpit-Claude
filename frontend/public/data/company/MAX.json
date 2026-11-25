@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-25T04:34:17Z",
+ "generated_at": "2026-11-25T15:32:05Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -182,13 +182,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 23.4,
+   "score": 9.8,
    "drivers": [
-    "news_flow",
     "insider_activity",
-    "source_diversity"
+    "social_attention",
+    "price_volume_anomaly"
    ],
-   "independent_7d": 1,
+   "independent_7d": 0,
    "independent_24h": 0
   },
   "political": {
@@ -199,7 +199,14 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 1,
+   "manipulation_risk": "unauffällig",
+   "mentions_24h": 1,
+   "sentiment_7d": 0.0,
+   "bullish_7d": 0,
+   "bearish_7d": 0
+  },
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
@@ -685,15 +692,15 @@
   ]
  },
  "intelligence_detail": {
-  "score": 23.4,
+  "score": 9.8,
   "components": {
-   "news_flow": 43.0,
+   "news_flow": 0.0,
    "freshness": 0,
-   "source_diversity": 20,
+   "source_diversity": 0,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 15.2,
-   "social_attention": null,
+   "social_attention": 25.0,
    "insider_activity": 100.0
   },
   "windows": {
@@ -707,10 +714,10 @@
     "verified": 0
    },
    "7d": {
-    "signals": 1,
-    "independent": 1,
+    "signals": 0,
+    "independent": 0,
     "duplicates": 0,
-    "sources": 1,
+    "sources": 0,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -726,9 +733,9 @@
    }
   },
   "drivers": [
-   "news_flow",
    "insider_activity",
-   "source_diversity"
+   "social_attention",
+   "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -2357,7 +2364,40 @@
    "report_date": "2026-09-30"
   }
  ],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 1,
+  "mentions_7d": 1,
+  "mentions_30d": 1,
+  "change_vs_baseline_pct": null,
+  "engagement_7d": 0.0,
+  "sentiment_7d": 0.0,
+  "sentiment_basis": "algorithmisch (Lexikon)",
+  "bullish_7d": 0,
+  "bearish_7d": 0,
+  "by_platform_7d": {
+   "mastodon": 1
+  },
+  "communities_7d": {
+   "Mastodon": 1
+  },
+  "platforms": [
+   "mastodon"
+  ],
+  "manipulation_flags": [],
+  "manipulation_risk": "unauffällig",
+  "top_posts": [
+   {
+    "platform": "mastodon",
+    "community": "Mastodon",
+    "author": "habr@zhub.link",
+    "posted_at": "2026-11-25T06:42:15Z",
+    "url": "https://zhub.link/@habr/117675716500994966",
+    "text": "Готовая CRM давала мне час в сутки на мои же данные. Я ушла и написала свою\n У меня четыре магазина: рыба из Астрахани, одежда со своими принтами, украшения с гравировкой и металлические карты. Продаю почти всё в переписке — ВКонтакте, MAX, Telegram. Рассказывать буду на примере рыбы: там больше 60 тысяч клиентов и посылки каждый день. Долго я работала в готовой CRM для соцсетей. Вокруг неё за это",
+    "engagement": 0.0,
+    "sentiment_label": null
+   }
+  ]
+ },
  "attention": null,
  "history": []
 }
