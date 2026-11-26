@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T03:45:33Z",
+ "generated_at": "2026-11-26T15:06:52Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,12 +180,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 0.6,
+   "score": 39.4,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "freshness",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 5,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -679,11 +681,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 0.6,
+  "score": 39.4,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 3.2,
@@ -692,27 +694,27 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 5,
+    "independent": 5,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 13,
-    "independent": 13,
-    "duplicates": 0,
+    "signals": 18,
+    "independent": 18,
+    "duplicates": 1,
     "sources": 5,
     "primary": 0,
     "analyst_changes": 0,
@@ -720,7 +722,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "freshness",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -739,6 +743,122 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "1c3d04100487209b",
+   "symbols": [
+    "MTRN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Critical Metals (CRML) Stock Is Down 16.7% Today Amid Market Selloff",
+   "summary": "Critical Metals shares fell 16.7% on Wednesday, Nov. 25, as an AI-led market selloff hit stocks, with no company-specific news.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/critical-metals-crml-stock-down-170022558.html?.tsrc=rss",
+   "published_at": "2026-11-25T17:00:22Z",
+   "date_only": false,
+   "captured_at": "2026-11-26T15:08:56Z",
+   "fingerprint": "03d66f76b8e005c0",
+   "primary_source": false,
+   "cluster_id": "1c3d04100487209b",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Critical Metals (CRML) Aktie ist heute um 16,7% gesunken"
+  },
+  {
+   "id": "774e251adb90cbd9",
+   "symbols": [
+    "MTRN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Materion (MTRN) Stock Is Down 9.8% Today Without Company News",
+   "summary": "On Tuesday, Nov. 24, the shares fell 9.8% without company-specific news",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/materion-mtrn-stock-down-9-160125778.html?.tsrc=rss",
+   "published_at": "2026-11-24T16:01:25Z",
+   "date_only": false,
+   "captured_at": "2026-11-26T15:08:56Z",
+   "fingerprint": "3fbb681f36732947",
+   "primary_source": false,
+   "cluster_id": "774e251adb90cbd9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Materion (MTRN) Aktie ist heute ohne Unternehmensnachrichten um 9,8% gesunken"
+  },
+  {
+   "id": "ed6db03da582debc",
+   "symbols": [
+    "MTRN",
+    "USAR"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Materion Stock Jumps 11% Without Company-Specific News on Nov. 23",
+   "summary": "Materion shares rose 11.0% by 12:02 p.m. ET, with no company-specific news explaining the move.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/materion-stock-jumps-11-without-170256379.html?.tsrc=rss",
+   "published_at": "2026-11-23T17:02:56Z",
+   "date_only": false,
+   "captured_at": "2026-11-24T05:37:01Z",
+   "fingerprint": "54b13be4ae0f43fa",
+   "primary_source": false,
+   "cluster_id": "ed6db03da582debc",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Materion Stock springt 11% ohne firmenspezifische Nachrichten am 23. November"
+  },
+  {
+   "id": "83b862e3eabbf41e",
+   "symbols": [
+    "FTK",
+    "MTRN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Flotek Industries (FTK) Stock Outpacing Its Basic Materials Peers This Year?",
+   "summary": "Here is how Flotek Industries (FTK) and Materion (MTRN) have performed compared to their sector so far this year.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/flotek-industries-ftk-stock-outpacing-134002566.html?.tsrc=rss",
+   "published_at": "2026-11-23T13:40:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-25T15:34:19Z",
+   "fingerprint": "d3be7fd61cfafd3c",
+   "primary_source": false,
+   "cluster_id": "e37f627d683c2d34",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Ist Flotek Industries (FTK) Stock Outpacing seine Grundwerkstoffe Peers in diesem Jahr?"
+  },
+  {
+   "id": "d0b4d480c9f1b65e",
+   "symbols": [
+    "MTRN"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Materion (MTRN) Reasonable, Or Are Cash Flow Hopes Stretched?",
+   "summary": "Materion has delivered a powerful run over the past several years, yet the recent pullback raises a simple question for you as a shareholder or potential buyer: Is the current price still supported by the cash the business can generate, or has the share chart moved further than i",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/materion-mtrn-reasonable-cash-flow-231653951.html?.tsrc=rss",
+   "published_at": "2026-11-20T23:16:53Z",
+   "date_only": false,
+   "captured_at": "2026-11-26T15:08:56Z",
+   "fingerprint": "f36c9ca030d0c8c4",
+   "primary_source": false,
+   "cluster_id": "d0b4d480c9f1b65e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "195a91ecbce4d47c",
    "symbols": [

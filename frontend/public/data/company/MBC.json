@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T03:45:33Z",
+ "generated_at": "2026-11-26T15:06:52Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,12 +180,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 10.1,
+   "score": 32.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 1,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -679,11 +681,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 10.1,
+  "score": 32.1,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 43.0,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 57.1,
@@ -692,26 +694,26 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 10,
-    "independent": 10,
+    "signals": 11,
+    "independent": 11,
     "duplicates": 0,
     "sources": 4,
     "primary": 0,
@@ -720,7 +722,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -739,6 +743,29 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "2b4088d76faeceb7",
+   "symbols": [
+    "MBC"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "MasterBrand (MBC) Stock Is Up 9.4% Today Without Company News",
+   "summary": "On Wednesday, Nov. 25, the shares rose 9.4% without company-specific news",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/masterbrand-mbc-stock-9-4-191516985.html?.tsrc=rss",
+   "published_at": "2026-11-25T19:15:16Z",
+   "date_only": false,
+   "captured_at": "2026-11-26T15:08:06Z",
+   "fingerprint": "31e5ed4a1a4a8d0f",
+   "primary_source": false,
+   "cluster_id": "2b4088d76faeceb7",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "MasterBrand (MBC) Aktie steigt heute um 9,4% ohne Unternehmensnachrichten"
+  },
   {
    "id": "578db6d2650a80e0",
    "symbols": [
@@ -980,7 +1007,7 @@
    "primary_source": false,
    "cluster_id": "fe2afcbbdf7dbe2f",
    "independence": "original",
-   "verification": "Unverified",
+   "verification": "Outdated",
    "feed": "yahoo_rss"
   },
   {
@@ -1002,7 +1029,7 @@
    "primary_source": false,
    "cluster_id": "6e4100194726479e",
    "independence": "original",
-   "verification": "Unverified",
+   "verification": "Outdated",
    "feed": "yahoo_rss"
   },
   {

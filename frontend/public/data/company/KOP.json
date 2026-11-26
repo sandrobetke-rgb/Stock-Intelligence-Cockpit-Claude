@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T03:45:33Z",
+ "generated_at": "2026-11-26T15:06:52Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,11 +180,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 3.7,
+   "score": 19.9,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -684,11 +686,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 3.7,
+  "score": 19.9,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 21.0,
@@ -706,17 +708,17 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 13,
-    "independent": 13,
+    "signals": 14,
+    "independent": 14,
     "duplicates": 1,
     "sources": 4,
     "primary": 0,
@@ -725,7 +727,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -744,6 +748,29 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "6e77dc2472014e46",
+   "symbols": [
+    "KOP"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Koppers Management Participating in BofA Securities Leveraged Finance Conference",
+   "summary": "Koppers Holdings Inc. (NYSE: KOP) today announced that the company will host meetings with the investment community as part of its participation in the BofA Securities Leveraged Finance Conference, which will be in-person in Boca Raton, Florida, on December 1, 2026.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/koppers-management-participating-bofa-securities-125500081.html?.tsrc=rss",
+   "published_at": "2026-11-25T12:55:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-26T15:07:02Z",
+   "fingerprint": "d4763a9982b46bae",
+   "primary_source": false,
+   "cluster_id": "6e77dc2472014e46",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Koppers Management nimmt an BofA Securities Leveraged Finance Conference teil"
+  },
   {
    "id": "0a54867ad05e3602",
    "symbols": [
@@ -1374,15 +1401,14 @@
  "attention": {
   "title": "Koppers",
   "url": "https://en.wikipedia.org/wiki/Koppers",
-  "date": "2026-11-24",
-  "views_1d": 26,
-  "avg_7d": 19,
+  "date": "2026-11-25",
+  "views_1d": 12,
+  "avg_7d": 16,
   "avg_30d": 24,
-  "ratio_1d": 1.08,
-  "ratio_7d": 0.77,
+  "ratio_1d": 0.49,
+  "ratio_7d": 0.64,
   "spike": false,
   "series": [
-   27,
    33,
    28,
    27,
@@ -1411,7 +1437,8 @@
    11,
    13,
    11,
-   26
+   26,
+   12
   ]
  },
  "history": []
