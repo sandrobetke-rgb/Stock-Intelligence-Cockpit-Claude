@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T03:46:47Z",
+ "generated_at": "2026-11-27T14:58:45Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -178,13 +178,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 6.8,
+   "score": 45.2,
    "drivers": [
-    "price_volume_anomaly",
-    "social_attention"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 6,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -195,10 +196,10 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 1,
+   "mentions_7d": 0,
    "manipulation_risk": "unauffällig",
    "mentions_24h": 0,
-   "sentiment_7d": 1.0,
+   "sentiment_7d": null,
    "bullish_7d": 0,
    "bearish_7d": 0
   },
@@ -597,49 +598,50 @@
   ]
  },
  "intelligence_detail": {
-  "score": 6.8,
+  "score": 45.2,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 100.0,
+   "freshness": 50,
+   "source_diversity": 60,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 26.3,
-   "social_attention": 25.0,
+   "social_attention": 0.0,
    "insider_activity": null
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 6,
+    "independent": 6,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 3,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 32,
-    "independent": 32,
+    "signals": 38,
+    "independent": 38,
     "duplicates": 0,
-    "sources": 9,
+    "sources": 10,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly",
-   "social_attention"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -658,6 +660,146 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "6a655dae9894a02d",
+   "symbols": [
+    "RJF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Uniti Group (UNIT) Stock Fair Value Falls As Analysts Weigh Fiber Gains And Leverage",
+   "summary": "Uniti Group now faces a lower assessed fair value, with the price target moving from US$9.66 to US$7.97, a cut of about 17%. This shift lines up with recent analyst commentary that highlights both improving fiber momentum and ongoing questions around leverage, free cash flow, and",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/uniti-group-unit-stock-fair-021329882.html?.tsrc=rss",
+   "published_at": "2026-11-27T02:13:29Z",
+   "date_only": false,
+   "captured_at": "2026-11-27T14:59:25Z",
+   "fingerprint": "bcbabbcbd22e1434",
+   "primary_source": false,
+   "cluster_id": "6a655dae9894a02d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Uniti Group (UNIT) Stock Fair Value sinkt, da Analysten Fasergewinne und -hebel wiegen"
+  },
+  {
+   "id": "6b63524085b04325",
+   "symbols": [
+    "RJF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Is Wall Street Bullish or Bearish on Raymond James Financial Stock?",
+   "summary": "While Raymond James Financial has lagged behind the broader market over the past year, Wall Street analysts remain moderately optimistic about the stock’s prospects.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "barchart.com",
+   "url": "https://www.barchart.com/story/news/9004953/is-wall-street-bullish-or-bearish-on-raymond-james-financial-stock?.tsrc=rss",
+   "published_at": "2026-11-25T15:16:06Z",
+   "date_only": false,
+   "captured_at": "2026-11-27T14:59:25Z",
+   "fingerprint": "b5171b31d54627db",
+   "primary_source": false,
+   "cluster_id": "6b63524085b04325",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Ist Wall Street Bullish oder Bearish auf Raymond James Financial Stock?"
+  },
+  {
+   "id": "6c75c2fe2432aded",
+   "symbols": [
+    "MS",
+    "RJF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Deals & Moves: Raymond James Snags $320M Team from Morgan Stanley",
+   "summary": "Also, LPL Financial adds a $605M firm that was previously with Wells Fargo, Carson Group acquires a near-$1B RIA, and Mercer Advisors adds to its Kentucky footprint.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "wealthmanagement.com",
+   "url": "https://www.wealthmanagement.com/ibd-news/deals-moves-raymond-james-snags-320m-team-from-morgan-stanley?.tsrc=rss",
+   "published_at": "2026-11-25T15:14:11Z",
+   "date_only": false,
+   "captured_at": "2026-11-26T15:08:51Z",
+   "fingerprint": "d46443ade1668309",
+   "primary_source": false,
+   "cluster_id": "6c75c2fe2432aded",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Deals & Moves: Raymond James Snags $ 320M Team von Morgan Stanley"
+  },
+  {
+   "id": "19facf89eb70adc9",
+   "symbols": [
+    "RJF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Are Options Traders Betting on a Big Move in Raymond James Financial Stock?",
+   "summary": "Investors need to pay close attention to RJF stock based on the movements in the options market lately.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/options/articles/options-traders-betting-big-move-120600310.html?.tsrc=rss",
+   "published_at": "2026-11-25T12:06:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-27T14:59:25Z",
+   "fingerprint": "c033eed06b0db130",
+   "primary_source": false,
+   "cluster_id": "19facf89eb70adc9",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Sind Options Trader Wetten auf einen großen Schritt in Raymond James Financial Stock?"
+  },
+  {
+   "id": "a56a0a797e0964b2",
+   "symbols": [
+    "ALRM",
+    "RJF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Alarm.com (ALRM) Stock Gets Fair Value Bump After Split Analyst Revisions",
+   "summary": "The latest update for Alarm.com Holdings lifts the fair value estimate from US$70 to US$73, which feeds into a cluster of Street price targets that now runs from around US$70 to US$80, alongside JPMorgan’s lower US$50 view. This spread reflects different opinions on how much sect",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/alarm-com-alrm-stock-gets-091203776.html?.tsrc=rss",
+   "published_at": "2026-11-24T09:12:03Z",
+   "date_only": false,
+   "captured_at": "2026-11-24T15:48:34Z",
+   "fingerprint": "7f35fbd3d6c8dfc9",
+   "primary_source": false,
+   "cluster_id": "a56a0a797e0964b2",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Alarm.com (ALRM) Aktie erhält Fair Value Bump nach Split Analyst Revisionen"
+  },
+  {
+   "id": "e9712eb1a0b79fbd",
+   "symbols": [
+    "EWTX",
+    "RJF"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Edgewise Therapeutics (EWTX) Stock Fair Value Edges Higher After EDG 7500 Analyst Updates",
+   "summary": "The fair value estimate for Edgewise Therapeutics has shifted from US$54.00 to about US$56.17 per share, putting fresh attention on how analysts are updating their models. Much of this reflects new Street work on EDG-7500 in hypertrophic cardiomyopathy, along with clearer plans f",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/healthcare/articles/edgewise-therapeutics-ewtx-stock-fair-020638116.html?.tsrc=rss",
+   "published_at": "2026-11-22T02:06:38Z",
+   "date_only": false,
+   "captured_at": "2026-11-25T15:33:24Z",
+   "fingerprint": "bc16d5db42b50328",
+   "primary_source": false,
+   "cluster_id": "e9712eb1a0b79fbd",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "2d9cd4300932666d",
    "symbols": [
@@ -1416,7 +1558,7 @@
    "primary_source": false,
    "cluster_id": "08f55d2b5a51e0a7",
    "independence": "original",
-   "verification": "Unverified",
+   "verification": "Outdated",
    "feed": "yahoo_rss"
   },
   {
@@ -1491,37 +1633,22 @@
  ],
  "social_detail": {
   "mentions_24h": 0,
-  "mentions_7d": 1,
+  "mentions_7d": 0,
   "mentions_30d": 1,
   "change_vs_baseline_pct": -100,
-  "engagement_7d": 0.0,
-  "sentiment_7d": 1.0,
+  "engagement_7d": 0,
+  "sentiment_7d": null,
   "sentiment_basis": "algorithmisch (Lexikon)",
   "bullish_7d": 0,
   "bearish_7d": 0,
-  "by_platform_7d": {
-   "stocktwits": 1
-  },
-  "communities_7d": {
-   "StockTwits": 1
-  },
+  "by_platform_7d": {},
+  "communities_7d": {},
   "platforms": [
    "stocktwits"
   ],
   "manipulation_flags": [],
   "manipulation_risk": "unauffällig",
-  "top_posts": [
-   {
-    "platform": "stocktwits",
-    "community": "StockTwits",
-    "author": "AdamBrennan2",
-    "posted_at": "2026-11-20T14:25:59Z",
-    "url": "https://stocktwits.com/AdamBrennan2/message/669722603",
-    "text": "goldman sachs $GS has spent more cash on buybacks over the last ten years than on anything else, and the share count has come down a lot since 2016 \n \na good chunk of that only offset stock comp, so the net shrinking is smaller than the headline. but fewer shares is still fewer shares for the owners \n \nthe return on what they reinvest in the business looks pretty modest to me. is buying back stock",
-    "engagement": 0.0,
-    "sentiment_label": null
-   }
-  ]
+  "top_posts": []
  },
  "attention": {
   "title": "Raymond James Financial",

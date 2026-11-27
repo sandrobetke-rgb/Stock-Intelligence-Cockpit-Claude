@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T03:46:47Z",
+ "generated_at": "2026-11-27T14:58:45Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,11 +180,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 8.0,
+   "score": 31.6,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 2,
    "independent_24h": 0
   },
   "political": {
@@ -679,11 +681,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 8.0,
+  "score": 31.6,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 68.2,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 45.4,
@@ -701,18 +703,18 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
-    "duplicates": 0,
-    "sources": 0,
+    "signals": 2,
+    "independent": 2,
+    "duplicates": 1,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 26,
-    "independent": 26,
-    "duplicates": 0,
+    "signals": 28,
+    "independent": 27,
+    "duplicates": 1,
     "sources": 8,
     "primary": 0,
     "analyst_changes": 0,
@@ -720,7 +722,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -739,6 +743,52 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "27a3d0df7dace35d",
+   "symbols": [
+    "DPZ",
+    "PZZA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Domino's Pizza franchisee files for Chapter 11 bankruptcy",
+   "summary": "Performance Pizza filed for bankruptcy protection on November 23.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "thestreet.com",
+   "url": "https://www.thestreet.com/restaurants/dominos-pizza-franchisee-files-for-chapter-11-bankruptcy?.tsrc=rss",
+   "published_at": "2026-11-24T17:19:28Z",
+   "date_only": false,
+   "captured_at": "2026-11-25T15:32:28Z",
+   "fingerprint": "68bf1cfba3f6249c",
+   "primary_source": false,
+   "cluster_id": "27a3d0df7dace35d",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Domino's Pizza Franchisenehmer Dateien für Chapter 11 Konkurs"
+  },
+  {
+   "id": "48923b0aafd2505d",
+   "symbols": [
+    "PZZA"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Pizza franchisee files Chapter 11 bankruptcy, chain cut 381 units",
+   "summary": "Cici’s Pizza franchisee Mulhern & Co. has not announced closings.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "thestreet.com",
+   "url": "https://www.thestreet.com/restaurants/cicis-pizza-franchisee-mulhern-files-chapter-11-bankruptcy?.tsrc=rss",
+   "published_at": "2026-11-22T18:17:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-27T14:58:51Z",
+   "fingerprint": "b3806da9f4880338",
+   "primary_source": false,
+   "cluster_id": "85ee88454966cec3",
+   "independence": "copy",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "a62163ca0b69558d",
    "symbols": [
@@ -1724,15 +1774,14 @@
  "attention": {
   "title": "Papa John's",
   "url": "https://en.wikipedia.org/wiki/Papa_John%27s",
-  "date": "2026-11-25",
-  "views_1d": 624,
-  "avg_7d": 627,
-  "avg_30d": 912,
-  "ratio_1d": 0.68,
-  "ratio_7d": 0.69,
+  "date": "2026-11-26",
+  "views_1d": 689,
+  "avg_7d": 625,
+  "avg_30d": 762,
+  "ratio_1d": 0.9,
+  "ratio_7d": 0.82,
   "spike": false,
   "series": [
-   612,
    631,
    586,
    632,
@@ -1761,7 +1810,8 @@
    669,
    642,
    596,
-   624
+   624,
+   689
   ]
  },
  "history": []

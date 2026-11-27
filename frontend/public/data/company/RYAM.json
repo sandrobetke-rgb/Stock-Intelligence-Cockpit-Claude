@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T03:46:47Z",
+ "generated_at": "2026-11-27T14:58:45Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -180,11 +180,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 13.0,
+   "score": 29.1,
    "drivers": [
-    "price_volume_anomaly"
+    "price_volume_anomaly",
+    "news_flow",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -679,11 +681,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 13.0,
+  "score": 29.1,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 73.5,
@@ -701,17 +703,17 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 9,
-    "independent": 9,
+    "signals": 8,
+    "independent": 8,
     "duplicates": 1,
     "sources": 3,
     "primary": 0,
@@ -720,7 +722,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "price_volume_anomaly",
+   "news_flow",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -739,6 +743,29 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "cf813ace59d835fa",
+   "symbols": [
+    "RYAM"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Rayonier Advanced Materials (RYAM) Stock Is Up 8.5% Today Without Company News",
+   "summary": "Rayonier Advanced Materials shares rose 8.5% on Wednesday, Nov. 25, without company-specific news, as materials and chemical stocks gained.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/rayonier-advanced-materials-ryam-stock-193013894.html?.tsrc=rss",
+   "published_at": "2026-11-25T19:30:13Z",
+   "date_only": false,
+   "captured_at": "2026-11-27T14:59:48Z",
+   "fingerprint": "b3d00d0e10e3cb04",
+   "primary_source": false,
+   "cluster_id": "cf813ace59d835fa",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Rayonier Advanced Materials (RYAM) Aktien sind heute ohne Unternehmensnachrichten um 8,5 % gestiegen"
+  },
   {
    "id": "c3b31e64bbd8eedd",
    "symbols": [
@@ -1340,15 +1367,14 @@
  "attention": {
   "title": "Rayonier Advanced Materials",
   "url": "https://en.wikipedia.org/wiki/Rayonier_Advanced_Materials",
-  "date": "2026-11-25",
-  "views_1d": 14,
+  "date": "2026-11-26",
+  "views_1d": 17,
   "avg_7d": 13,
   "avg_30d": 14,
-  "ratio_1d": 0.99,
-  "ratio_7d": 0.93,
+  "ratio_1d": 1.18,
+  "ratio_7d": 0.91,
   "spike": false,
   "series": [
-   17,
    11,
    4,
    11,
@@ -1377,7 +1403,8 @@
    11,
    11,
    17,
-   14
+   14,
+   17
   ]
  },
  "history": []

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T03:46:47Z",
+ "generated_at": "2026-11-27T14:58:45Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -178,12 +178,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 3.2,
+   "score": 25.2,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "freshness",
+    "source_diversity"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 1,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -675,11 +677,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 3.2,
+  "score": 25.2,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 43.0,
+   "freshness": 50,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 18.0,
@@ -688,26 +690,26 @@
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 5,
-    "independent": 5,
+    "signals": 6,
+    "independent": 6,
     "duplicates": 0,
     "sources": 1,
     "primary": 0,
@@ -716,7 +718,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "freshness",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -735,6 +739,30 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "b34200a93723179e",
+   "symbols": [
+    "RUSHA",
+    "RUSHB"
+   ],
+   "category": "market",
+   "signal_type": "company_news",
+   "title": "Is Rush Enterprises (RUSH.A) Priced About Right on Earnings?",
+   "summary": "Rush Enterprises has delivered a powerful run for shareholders in recent years, which naturally puts today’s valuation under the microscope. With that kind of share price record, the live question is whether the current market price is still in line with what the business earns. ",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/rush-enterprises-rush-priced-earnings-100657140.html?.tsrc=rss",
+   "published_at": "2026-11-27T10:06:57Z",
+   "date_only": false,
+   "captured_at": "2026-11-27T14:59:43Z",
+   "fingerprint": "f7c15f3528ff52d8",
+   "primary_source": false,
+   "cluster_id": "b34200a93723179e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Ist Rush Enterprises (RUSH.A) ungefähr richtig auf Einnahmen?"
+  },
   {
    "id": "e012093009e99e7e",
    "symbols": [
@@ -1202,15 +1230,14 @@
  "attention": {
   "title": "Rush Enterprises",
   "url": "https://en.wikipedia.org/wiki/Rush_Enterprises",
-  "date": "2026-11-25",
-  "views_1d": 8,
-  "avg_7d": 9,
+  "date": "2026-11-26",
+  "views_1d": 6,
+  "avg_7d": 8,
   "avg_30d": 10,
-  "ratio_1d": 0.83,
-  "ratio_7d": 0.98,
+  "ratio_1d": 0.61,
+  "ratio_7d": 0.83,
   "spike": false,
   "series": [
-   19,
    12,
    10,
    8,
@@ -1239,7 +1266,8 @@
    4,
    9,
    8,
-   8
+   8,
+   6
   ]
  },
  "history": []

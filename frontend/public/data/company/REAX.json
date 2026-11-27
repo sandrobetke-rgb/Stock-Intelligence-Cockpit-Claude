@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T03:46:47Z",
+ "generated_at": "2026-11-27T14:58:45Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -179,11 +179,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 2.6,
+   "score": 35.6,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "analyst_activity",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 3,
    "independent_24h": 0
   },
   "political": {
@@ -677,13 +679,13 @@
   ]
  },
  "intelligence_detail": {
-  "score": 2.6,
+  "score": 35.6,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 86.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
-   "analyst_activity": 0,
+   "analyst_activity": 35,
    "price_volume_anomaly": 14.9,
    "social_attention": null,
    "insider_activity": null
@@ -699,26 +701,28 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 3,
+    "independent": 3,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    },
    "30d": {
-    "signals": 12,
-    "independent": 12,
+    "signals": 15,
+    "independent": 15,
     "duplicates": 0,
     "sources": 3,
     "primary": 0,
-    "analyst_changes": 0,
+    "analyst_changes": 1,
     "verified": 0
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "analyst_activity",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -737,6 +741,84 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "b8d81a8c7bd1d71e",
+   "symbols": [
+    "REAX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Real REMAX Group’s Monthly Agent Survey: Buyer Leverage Reaches Record High as Home Sale Cancellations Rise",
+   "summary": "MIAMI, November 25, 2026--Real REMAX Group’s Monthly Agent Survey: Buyer Leverage Reaches Record High as Home Sale Cancellations Rise",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/real-remax-group-monthly-agent-130000423.html?.tsrc=rss",
+   "published_at": "2026-11-25T13:00:00Z",
+   "date_only": false,
+   "captured_at": "2026-11-27T14:59:10Z",
+   "fingerprint": "691e43d517d1cac5",
+   "primary_source": false,
+   "cluster_id": "b8d81a8c7bd1d71e",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Monatliche Agentenumfrage der Real REMAX Group: Käuferhebel erreicht Rekordhoch, da die Stornierungen von Eigenheimverkäufen steigen"
+  },
+  {
+   "id": "f5361a2cbd2c751f",
+   "symbols": [
+    "REAX"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Real REMAX Share Gains Could Continue Despite Weak Housing Market, Oppenheimer Says",
+   "summary": "Real REMAX Group (REAX) is positioned to gain market share even in a \"weak\" housing market, with att",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/real-estate/articles/real-remax-share-gains-could-163923135.html?.tsrc=rss",
+   "published_at": "2026-11-23T16:39:23Z",
+   "date_only": false,
+   "captured_at": "2026-11-27T14:59:10Z",
+   "fingerprint": "ad42c0bc52bf0778",
+   "primary_source": false,
+   "cluster_id": "f5361a2cbd2c751f",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
+  {
+   "id": "c189f9d5ba800017",
+   "symbols": [
+    "CL",
+    "FIS",
+    "FISV",
+    "GPN",
+    "MET",
+    "PODD",
+    "REAX",
+    "SPCX",
+    "TXN",
+    "VRT",
+    "VVX",
+    "ZBH"
+   ],
+   "category": "market",
+   "signal_type": "analyst_change",
+   "title": "DraftKings downgraded, Dollar General upgraded: Wall Street's top analyst calls",
+   "summary": "DraftKings downgraded, Dollar General upgraded: Wall Street's top analyst calls",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/apple-upgraded-qualcomm-downgraded-wall-133634577.html?.tsrc=rss",
+   "published_at": "2026-11-23T14:45:20Z",
+   "date_only": false,
+   "captured_at": "2026-11-23T15:56:07Z",
+   "fingerprint": "86387870e912d2ac",
+   "primary_source": false,
+   "cluster_id": "c189f9d5ba800017",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "db7a7a92cb4992b0",
    "symbols": [
@@ -1020,7 +1102,7 @@
    "primary_source": false,
    "cluster_id": "7a4d54b657ef1a91",
    "independence": "original",
-   "verification": "Unverified",
+   "verification": "Outdated",
    "feed": "yahoo_rss"
   },
   {
