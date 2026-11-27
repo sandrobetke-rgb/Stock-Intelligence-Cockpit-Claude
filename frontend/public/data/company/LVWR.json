@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T15:06:52Z",
+ "generated_at": "2026-11-27T03:46:47Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -22,7 +22,7 @@
    "perf_20d": 24.37499874271454,
    "perf_63d": 46.32352857389665,
    "adr20": 41.707157936649494,
-   "rvol": 0.7200017938381659,
+   "rvol": 0.7275757772052998,
    "ema10": 1.0865498740793864,
    "ema21": 0.9724866788839301,
    "sma50": 1.2269599956274033,
@@ -42,8 +42,8 @@
     "rsi_min5": 42.91403180689539,
     "atr14": 0.28911264305263795,
     "atr_pct": 14.528273450608737,
-    "rvol": 0.7200017938381659,
-    "vol30": 5590466.666666667,
+    "rvol": 0.7275757772052998,
+    "vol30": 5592493.333333333,
     "dist_ema200_pct": 21.057853529919047,
     "dist_52w_high_pct": 61.20857767751494,
     "high_52w": 5.130000114440918,
@@ -180,14 +180,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 23.8,
+   "score": 16.0,
    "drivers": [
     "news_flow",
-    "freshness",
-    "source_diversity"
+    "source_diversity",
+    "price_volume_anomaly"
    ],
    "independent_7d": 1,
-   "independent_24h": 1
+   "independent_24h": 0
   },
   "political": {
    "relevance": 0,
@@ -197,7 +197,14 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 0,
+   "manipulation_risk": "unauffällig",
+   "mentions_24h": 0,
+   "sentiment_7d": null,
+   "bullish_7d": 0,
+   "bearish_7d": 0
+  },
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
@@ -235,13 +242,13 @@
   "perf_20d": 24.37499874271454,
   "perf_63d": 46.32352857389665,
   "adr20": 41.707157936649494,
-  "rvol": 0.7200017938381659,
+  "rvol": 0.7275757772052998,
   "ema10": 1.0865498740793864,
   "ema21": 0.9724866788839301,
   "sma50": 1.2269599956274033,
   "sma200": 1.3920799966156483,
   "volatility_ann": 308.47947771508774,
-  "avg_dollar_volume_20d": 8664491.030733883,
+  "avg_dollar_volume_20d": 8670540.630762875,
   "move_zscore": 0.3302278135972859,
   "swing": {
    "tech": {
@@ -255,8 +262,8 @@
     "rsi_min5": 42.91403180689539,
     "atr14": 0.28911264305263795,
     "atr_pct": 14.528273450608737,
-    "rvol": 0.7200017938381659,
-    "vol30": 5590466.666666667,
+    "rvol": 0.7275757772052998,
+    "vol30": 5592493.333333333,
     "dist_ema200_pct": 21.057853529919047,
     "dist_52w_high_pct": 61.20857767751494,
     "high_52w": 5.130000114440918,
@@ -636,9 +643,9 @@
    {
     "key": "trading_liquidity",
     "label": "Handelsliquidität (Umsatz 20T)",
-    "value": 8664491.03,
+    "value": 8670540.63,
     "unit": "Whg",
-    "severity": 84.4,
+    "severity": 84.3,
     "weight": 0.07,
     "status": "ok"
    },
@@ -681,23 +688,23 @@
   ]
  },
  "intelligence_detail": {
-  "score": 23.8,
+  "score": 16.0,
   "components": {
    "news_flow": 43.0,
-   "freshness": 50,
+   "freshness": 0,
    "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 9.9,
-   "social_attention": null,
+   "social_attention": 0.0,
    "insider_activity": null
   },
   "windows": {
    "24h": {
-    "signals": 1,
-    "independent": 1,
-    "duplicates": 1,
-    "sources": 1,
+    "signals": 0,
+    "independent": 0,
+    "duplicates": 0,
+    "sources": 0,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -712,10 +719,10 @@
     "verified": 0
    },
    "30d": {
-    "signals": 5,
-    "independent": 4,
+    "signals": 4,
+    "independent": 3,
     "duplicates": 2,
-    "sources": 2,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -723,8 +730,8 @@
   },
   "drivers": [
    "news_flow",
-   "freshness",
-   "source_diversity"
+   "source_diversity",
+   "price_volume_anomaly"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -771,7 +778,8 @@
    "id": "4c69f3807d707c54",
    "symbols": [
     "HOG",
-    "LVWR"
+    "LVWR",
+    "PII"
    ],
    "category": "market",
    "signal_type": "news",
@@ -1137,7 +1145,25 @@
    "report_date": "2026-09-30"
   }
  ],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 0,
+  "mentions_7d": 0,
+  "mentions_30d": 1,
+  "change_vs_baseline_pct": -100,
+  "engagement_7d": 0,
+  "sentiment_7d": null,
+  "sentiment_basis": "algorithmisch (Lexikon)",
+  "bullish_7d": 0,
+  "bearish_7d": 0,
+  "by_platform_7d": {},
+  "communities_7d": {},
+  "platforms": [
+   "stocktwits"
+  ],
+  "manipulation_flags": [],
+  "manipulation_risk": "unauffällig",
+  "top_posts": []
+ },
  "attention": null,
  "history": []
 }

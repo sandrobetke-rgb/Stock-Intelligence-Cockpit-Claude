@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T15:06:52Z",
+ "generated_at": "2026-11-27T03:46:47Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -179,13 +179,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 8.1,
+   "score": 37.9,
    "drivers": [
-    "insider_activity",
-    "price_volume_anomaly"
+    "news_flow",
+    "source_diversity",
+    "freshness"
    ],
-   "independent_7d": 0,
-   "independent_24h": 0
+   "independent_7d": 2,
+   "independent_24h": 1
   },
   "political": {
    "relevance": 0,
@@ -195,7 +196,14 @@
    "negative_signals_30d": 0,
    "positive_signals_30d": 0
   },
-  "social": null,
+  "social": {
+   "mentions_7d": 1,
+   "manipulation_risk": "unauffällig",
+   "mentions_24h": 0,
+   "sentiment_7d": 1.0,
+   "bullish_7d": 0,
+   "bearish_7d": 0
+  },
   "insider": {
    "window_days": 90,
    "open_market_buys": 0,
@@ -586,39 +594,39 @@
   ]
  },
  "intelligence_detail": {
-  "score": 8.1,
+  "score": 37.9,
   "components": {
-   "news_flow": 0.0,
-   "freshness": 0,
-   "source_diversity": 0,
+   "news_flow": 68.2,
+   "freshness": 50,
+   "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 15.5,
-   "social_attention": null,
+   "social_attention": 25.0,
    "insider_activity": 100.0
   },
   "windows": {
    "24h": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 2,
+    "independent": 2,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 2,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 10,
-    "independent": 10,
+    "signals": 12,
+    "independent": 12,
     "duplicates": 1,
     "sources": 4,
     "primary": 0,
@@ -627,8 +635,9 @@
    }
   },
   "drivers": [
-   "insider_activity",
-   "price_volume_anomaly"
+   "news_flow",
+   "source_diversity",
+   "freshness"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -647,6 +656,52 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "0d64f973ab3e5a70",
+   "symbols": [
+    "PRCH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Declining Reinsurance Costs and Capital Building Support Multi-Year Growth for Porch Group (PRCH)",
+   "summary": "Granahan Investment Management, an investment management company, released its third-quarter 2026 investor letter for its “Focused Growth Strategy”. The letter can be downloaded here. In Q3 2026, the Granahan Focused Growth portfolio returned -6.9%, outperforming the Russell 2000",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "finance.yahoo.com",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/declining-reinsurance-costs-capital-building-160416426.html?.tsrc=rss",
+   "published_at": "2026-11-26T16:04:16Z",
+   "date_only": false,
+   "captured_at": "2026-11-27T03:55:21Z",
+   "fingerprint": "9eef21633b227b37",
+   "primary_source": false,
+   "cluster_id": "0d64f973ab3e5a70",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Sinkende Rückversicherungskosten und Kapitalaufbau unterstützen mehrjähriges Wachstum für die Porch Group (PRCH)"
+  },
+  {
+   "id": "fee6a7600e10fcce",
+   "symbols": [
+    "PRCH"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "Porch: 3 Key Takeaways for Long-Term Investors",
+   "summary": "Proprietary property data and capital reserves m position the company to scale underwriting while maintaining disciplined risk selection.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/takeaways/2026/11/24/porch-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+   "published_at": "2026-11-24T18:44:49Z",
+   "date_only": false,
+   "captured_at": "2026-11-27T03:55:21Z",
+   "fingerprint": "15cbf4096ecee1fc",
+   "primary_source": false,
+   "cluster_id": "fee6a7600e10fcce",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss",
+   "title_de": "Veranda: 3 wichtige Takeaways für langfristige Investoren"
+  },
   {
    "id": "fc61ba28f548ef2e",
    "symbols": [
@@ -1706,7 +1761,40 @@
  "political_trades": [],
  "big_stakes": [],
  "superinvestors": [],
- "social_detail": null,
+ "social_detail": {
+  "mentions_24h": 0,
+  "mentions_7d": 1,
+  "mentions_30d": 1,
+  "change_vs_baseline_pct": -100,
+  "engagement_7d": 0.0,
+  "sentiment_7d": 1.0,
+  "sentiment_basis": "algorithmisch (Lexikon)",
+  "bullish_7d": 0,
+  "bearish_7d": 0,
+  "by_platform_7d": {
+   "stocktwits": 1
+  },
+  "communities_7d": {
+   "StockTwits": 1
+  },
+  "platforms": [
+   "stocktwits"
+  ],
+  "manipulation_flags": [],
+  "manipulation_risk": "unauffällig",
+  "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "StockConsultant",
+    "posted_at": "2026-11-24T20:46:04Z",
+    "url": "https://stocktwits.com/StockConsultant/message/670104142",
+    "text": "Before the close, breakout stocks \n \nDid a quick scan for some good trending breakout stocks to watch: APPN $AVPT EXLS $MGM $PRCH $REPL $SHAK and TASK at https://www.stockconsultant.com",
+    "engagement": 0.0,
+    "sentiment_label": null
+   }
+  ]
+ },
  "attention": null,
  "history": []
 }

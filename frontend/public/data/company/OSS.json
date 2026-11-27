@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T15:06:52Z",
+ "generated_at": "2026-11-27T03:46:47Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -22,7 +22,7 @@
    "perf_20d": -31.519996643066406,
    "perf_63d": -62.19080984811978,
    "adr20": 9.483561049375268,
-   "rvol": 0.621243519971078,
+   "rvol": 0.6291841780773278,
    "ema10": 4.350758218141855,
    "ema21": 4.805809355671058,
    "sma50": 6.448599977493286,
@@ -42,8 +42,8 @@
     "rsi_min5": 31.937508920250067,
     "atr14": 0.4762616227651331,
     "atr_pct": 11.12760746304868,
-    "rvol": 0.621243519971078,
-    "vol30": 1364650.0,
+    "rvol": 0.6291841780773278,
+    "vol30": 1365060.0,
     "dist_ema200_pct": -53.207658526603055,
     "dist_52w_high_pct": 79.50191388009993,
     "high_52w": 20.8799991607666,
@@ -182,11 +182,13 @@
    ]
   },
   "market_intelligence": {
-   "score": 4.6,
+   "score": 19.1,
    "drivers": [
-    "price_volume_anomaly"
+    "news_flow",
+    "price_volume_anomaly",
+    "source_diversity"
    ],
-   "independent_7d": 0,
+   "independent_7d": 1,
    "independent_24h": 0
   },
   "political": {
@@ -242,13 +244,13 @@
   "perf_20d": -31.519996643066406,
   "perf_63d": -62.19080984811978,
   "adr20": 9.483561049375268,
-  "rvol": 0.621243519971078,
+  "rvol": 0.6291841780773278,
   "ema10": 4.350758218141855,
   "ema21": 4.805809355671058,
   "sma50": 6.448599977493286,
   "sma200": 10.752874982357024,
   "volatility_ann": 87.89693030750374,
-  "avg_dollar_volume_20d": 6271264.3977069855,
+  "avg_dollar_volume_20d": 6273896.597836018,
   "move_zscore": 0.9786417577141978,
   "swing": {
    "tech": {
@@ -262,8 +264,8 @@
     "rsi_min5": 31.937508920250067,
     "atr14": 0.4762616227651331,
     "atr_pct": 11.12760746304868,
-    "rvol": 0.621243519971078,
-    "vol30": 1364650.0,
+    "rvol": 0.6291841780773278,
+    "vol30": 1365060.0,
     "dist_ema200_pct": -53.207658526603055,
     "dist_52w_high_pct": 79.50191388009993,
     "high_52w": 20.8799991607666,
@@ -645,7 +647,7 @@
    {
     "key": "trading_liquidity",
     "label": "Handelsliquidität (Umsatz 20T)",
-    "value": 6271264.4,
+    "value": 6273896.6,
     "unit": "Whg",
     "severity": 89.2,
     "weight": 0.07,
@@ -690,11 +692,11 @@
   ]
  },
  "intelligence_detail": {
-  "score": 4.6,
+  "score": 19.1,
   "components": {
-   "news_flow": 0.0,
+   "news_flow": 43.0,
    "freshness": 0,
-   "source_diversity": 0,
+   "source_diversity": 20,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 29.4,
@@ -712,17 +714,17 @@
     "verified": 0
    },
    "7d": {
-    "signals": 0,
-    "independent": 0,
+    "signals": 1,
+    "independent": 1,
     "duplicates": 0,
-    "sources": 0,
+    "sources": 1,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
    },
    "30d": {
-    "signals": 9,
-    "independent": 9,
+    "signals": 10,
+    "independent": 10,
     "duplicates": 1,
     "sources": 4,
     "primary": 0,
@@ -731,7 +733,9 @@
    }
   },
   "drivers": [
-   "price_volume_anomaly"
+   "news_flow",
+   "price_volume_anomaly",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -750,6 +754,28 @@
  "trump_mentions": [],
  "political_events": [],
  "signals": [
+  {
+   "id": "1ef44fe77a47854a",
+   "symbols": [
+    "OSS"
+   ],
+   "category": "market",
+   "signal_type": "news",
+   "title": "One Stop: 3 Key Takeaways for Long-Term Investors",
+   "summary": "Qualifying its systems within established vendor ecosystems could open scalable commercial opportunities beyond custom builds.",
+   "source": "Yahoo Finance RSS",
+   "source_domain": "fool.com",
+   "url": "https://www.fool.com/earnings/takeaways/2026/11/22/one-stop-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+   "published_at": "2026-11-22T21:05:02Z",
+   "date_only": false,
+   "captured_at": "2026-11-27T03:54:20Z",
+   "fingerprint": "81400f239bb7693f",
+   "primary_source": false,
+   "cluster_id": "1ef44fe77a47854a",
+   "independence": "original",
+   "verification": "Unverified",
+   "feed": "yahoo_rss"
+  },
   {
    "id": "fad37aa5d9618ba1",
    "symbols": [
@@ -968,7 +994,7 @@
    "primary_source": false,
    "cluster_id": "f85087b14c141fe8",
    "independence": "original",
-   "verification": "Unverified",
+   "verification": "Outdated",
    "feed": "yahoo_rss"
   },
   {
@@ -990,7 +1016,7 @@
    "primary_source": false,
    "cluster_id": "47b32cbae1d57ac2",
    "independence": "original",
-   "verification": "Unverified",
+   "verification": "Outdated",
    "feed": "yahoo_rss"
   },
   {

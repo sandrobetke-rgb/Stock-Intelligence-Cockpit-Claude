@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T15:06:52Z",
+ "generated_at": "2026-11-27T03:46:47Z",
  "schema_version": "1.1.0",
  "mode": "live",
  "profile": {
@@ -182,14 +182,14 @@
    ]
   },
   "market_intelligence": {
-   "score": 39.8,
+   "score": 44.8,
    "drivers": [
     "news_flow",
-    "source_diversity",
-    "freshness"
+    "social_attention",
+    "source_diversity"
    ],
    "independent_7d": 6,
-   "independent_24h": 1
+   "independent_24h": 0
   },
   "political": {
    "relevance": 0,
@@ -200,11 +200,11 @@
    "positive_signals_30d": 0
   },
   "social": {
-   "mentions_7d": 0,
+   "mentions_7d": 19,
    "manipulation_risk": "unauffällig",
-   "mentions_24h": 0,
-   "sentiment_7d": null,
-   "bullish_7d": 0,
+   "mentions_24h": 3,
+   "sentiment_7d": 0.32,
+   "bullish_7d": 1,
    "bearish_7d": 0
   },
   "insider": {
@@ -692,23 +692,23 @@
   ]
  },
  "intelligence_detail": {
-  "score": 39.8,
+  "score": 44.8,
   "components": {
    "news_flow": 100.0,
-   "freshness": 50,
+   "freshness": 0,
    "source_diversity": 40,
    "primary_sources": 0,
    "analyst_activity": 0,
    "price_volume_anomaly": 11.7,
-   "social_attention": 0.0,
+   "social_attention": 100.0,
    "insider_activity": 40
   },
   "windows": {
    "24h": {
-    "signals": 1,
-    "independent": 1,
+    "signals": 0,
+    "independent": 0,
     "duplicates": 0,
-    "sources": 1,
+    "sources": 0,
     "primary": 0,
     "analyst_changes": 0,
     "verified": 0
@@ -734,8 +734,8 @@
   },
   "drivers": [
    "news_flow",
-   "source_diversity",
-   "freshness"
+   "social_attention",
+   "source_diversity"
   ],
   "note": "Aufmerksamkeit ist keine Qualitäts- oder Kursaussage."
  },
@@ -828,6 +828,7 @@
    "id": "3b6cc758aeb7df74",
    "symbols": [
     "MGM",
+    "PENN",
     "WYNN"
    ],
    "category": "market",
@@ -851,7 +852,8 @@
   {
    "id": "35b2f634faede613",
    "symbols": [
-    "MGM"
+    "MGM",
+    "PENN"
    ],
    "category": "market",
    "signal_type": "news",
@@ -868,8 +870,7 @@
    "cluster_id": "35b2f634faede613",
    "independence": "original",
    "verification": "Unverified",
-   "feed": "yahoo_rss",
-   "title_de": "Warum fällt DraftKings Stock?"
+   "feed": "yahoo_rss"
   },
   {
    "id": "0e81fc42cdfd228f",
@@ -2774,23 +2775,81 @@
   }
  ],
  "social_detail": {
-  "mentions_24h": 0,
-  "mentions_7d": 0,
-  "mentions_30d": 1,
-  "change_vs_baseline_pct": null,
-  "engagement_7d": 0,
-  "sentiment_7d": null,
-  "sentiment_basis": "algorithmisch (Lexikon)",
-  "bullish_7d": 0,
+  "mentions_24h": 3,
+  "mentions_7d": 19,
+  "mentions_30d": 44,
+  "change_vs_baseline_pct": 24,
+  "engagement_7d": 9.0,
+  "sentiment_7d": 0.32,
+  "sentiment_basis": "Nutzerkennzeichnung (StockTwits) + Lexikon",
+  "bullish_7d": 1,
   "bearish_7d": 0,
-  "by_platform_7d": {},
-  "communities_7d": {},
+  "by_platform_7d": {
+   "stocktwits": 15,
+   "mastodon": 4
+  },
+  "communities_7d": {
+   "StockTwits": 15,
+   "Mastodon": 4
+  },
   "platforms": [
+   "mastodon",
    "stocktwits"
   ],
   "manipulation_flags": [],
   "manipulation_risk": "unauffällig",
-  "top_posts": []
+  "top_posts": [
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "MandalayBay",
+    "posted_at": "2026-11-21T06:17:07Z",
+    "url": "https://stocktwits.com/MandalayBay/message/669846258",
+    "text": "$MGM \nA double vodka and Red Bull costs $46.80 at MGM bars.",
+    "engagement": 2.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "AdamBrennan2",
+    "posted_at": "2026-11-20T10:22:20Z",
+    "url": "https://stocktwits.com/AdamBrennan2/message/669699591",
+    "text": "draftkings $DKNG has been diluting its shareholders for years \n \nshares outstanding are up 188.2% since 2018, and the buybacks of 1.4 billion mostly just offset stock comp, which is pay handed out in shares \n \nso the company pays people in stock and then spends cash to soak up part of it. the sportsbook and casino platform costs a lot to keep building \n \ngrowth is real, but owners paid for it with",
+    "engagement": 2.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "Moneybagsknocks3times",
+    "posted_at": "2026-11-27T03:42:47Z",
+    "url": "https://stocktwits.com/Moneybagsknocks3times/message/670265184",
+    "text": "$PENN $DKNG $FLUT $CZR $MGM https://nypost.com/2026/11/25/business/carl-icahns-wealth-drops-to-30-year-low-as-corporate-raider-gets-battered-by-losing-bets/",
+    "engagement": 1.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "stocktwits",
+    "community": "StockTwits",
+    "author": "OGbobbypoppin",
+    "posted_at": "2026-11-23T23:05:24Z",
+    "url": "https://stocktwits.com/OGbobbypoppin/message/670013146",
+    "text": "$DKNG Kalshi argument is it&#39;s a peer to peer exchange where they take a transaction fee.  \n \nThat is similar to peer-to-peer daily fantasy sports games, which ironically still requires a license, permit, or registration to run on a state-by-state basis, KYC, age verification, geolocation, AML rules and oversight.  \n \nI think prediction markets will be treated closer to daily fantasy sports. \n ",
+    "engagement": 1.0,
+    "sentiment_label": null
+   },
+   {
+    "platform": "mastodon",
+    "community": "Mastodon",
+    "author": "indiegenius",
+    "posted_at": "2026-11-23T03:11:54Z",
+    "url": "https://mastodon.social/@indiegenius/117663564735608638",
+    "text": "Movie TV Tech Geeks  # TVNews    # From    # MGM    # Netflix   The Best Sci-Fi Thriller on TV Is Officially the No. 1 Series in the World   http://  dlvr.it/TWRBct",
+    "engagement": 1.0,
+    "sentiment_label": null
+   }
+  ]
  },
  "attention": {
   "title": "MGM Resorts International",
